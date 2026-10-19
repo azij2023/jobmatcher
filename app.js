@@ -179,6 +179,9 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
+            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and skill breakdown">
+              🔍 Details
+            </button>
             <a href="${escapeHTML(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Search & Apply on LinkedIn">
               <span>Apply on LinkedIn ↗</span>
             </a>
@@ -196,13 +199,128 @@ document.addEventListener("DOMContentLoaded", () => {
     // Attach copy buttons
     document.querySelectorAll(".copy-btn").forEach(btn => {
       btn.addEventListener("click", (e) => {
+        e.stopPropagation();
         const text = e.currentTarget.getAttribute("data-info");
         navigator.clipboard.writeText(text).then(() => {
           showToast(`Copied: ${text.split(' - ')[0]}`);
         });
       });
     });
+
+    // Attach Details buttons & card clicks
+    document.querySelectorAll(".view-details-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const jobUrl = e.currentTarget.getAttribute("data-job-url");
+        const found = jobs.find(j => j.url === jobUrl);
+        if (found) openJobModal(found);
+      });
+    });
+
+    document.querySelectorAll(".job-card").forEach(card => {
+      card.addEventListener("click", (e) => {
+        // Prevent opening if clicking an <a> tag or copy button
+        if (e.target.closest("a") || e.target.closest(".copy-btn")) return;
+        const cardId = card.id;
+        const found = jobs.find(j => cardId.includes(j.company.replace(/\s+/g, '-').toLowerCase()));
+        if (found) openJobModal(found);
+      });
+    });
   }
+
+  // ==========================================================================
+  // Modal Management
+  // ==========================================================================
+  const modalOverlay = document.getElementById("job-modal-overlay");
+  const modalCloseBtn = document.getElementById("modal-close-btn");
+  const modalJobTitle = document.getElementById("modal-job-title");
+  const modalTierBadge = document.getElementById("modal-tier-badge");
+  const modalCompany = document.getElementById("modal-company");
+  const modalLocation = document.getElementById("modal-location");
+  const modalScoreVal = document.getElementById("modal-score-val");
+  const modalDescription = document.getElementById("modal-description");
+  const modalSkillsMatched = document.getElementById("modal-skills-matched");
+  const modalSkillsMissing = document.getElementById("modal-skills-missing");
+  const modalStrategyAdvice = document.getElementById("modal-strategy-advice");
+  const modalApplyLinkedin = document.getElementById("modal-apply-linkedin");
+  const modalApplyGoogle = document.getElementById("modal-apply-google");
+  const modalCopyBtn = document.getElementById("modal-copy-btn");
+
+  function openJobModal(job) {
+    if (!job) return;
+
+    const scorePct = Math.round(job.score * 100);
+    modalJobTitle.textContent = job.title;
+    modalCompany.textContent = job.company;
+    modalLocation.textContent = `📍 ${job.location || 'India / Remote'}`;
+    modalScoreVal.textContent = `${scorePct}%`;
+    modalTierBadge.textContent = `${job.badge || '📌'} Tier ${job.tier} • ${job.category} (${job.priority || 'Standard'})`;
+    modalTierBadge.className = `job-tier-badge ${getTierBadgeClass(job.tier)}`;
+    modalDescription.textContent = job.description || "Entry-level position aligned with your target role category.";
+
+    // Render skills
+    const matched = (job.matched_skills || []);
+    const missing = (job.missing_skills || []);
+
+    modalSkillsMatched.innerHTML = matched.length > 0
+      ? `<strong>Matched (${matched.length}):</strong> ` + matched.map(s => `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`).join(" ")
+      : "<span style='color:var(--text-dim)'>No exact skills matched yet</span>";
+
+    modalSkillsMissing.innerHTML = missing.length > 0
+      ? `<strong>Missing / Gaps (${missing.length}):</strong> ` + missing.map(s => `<span class="skill-tag missing">✗ ${s.replace(/_/g, ' ')}</span>`).join(" ")
+      : "";
+
+    // Strategy advice based on Tier
+    let advice = "";
+    if (job.tier === 1) advice = "Top Priority Tier: Tailor your resume to highlight PyTorch, deep learning model architectures, and applied research/thesis work.";
+    else if (job.tier === 2) advice = "Top Priority Tier: Emphasize A/B testing methodologies, SQL analytics pipelines, product metrics, and business experimentation.";
+    else if (job.tier === 3) advice = "Top Priority Tier: Showcase statistical hypothesis testing, decision trees, modeling, and data-driven optimization.";
+    else if (job.tier === 4) advice = "Secondary Priority Tier: Highlight linear programming (PuLP/SciPy), operations research algorithms, and constraint optimization.";
+    else if (job.tier === 5) advice = "Secondary Priority Tier: Feature deployed ML models, FastAPI REST APIs, Docker containerization, and scikit-learn.";
+    else if (job.tier === 6) advice = "Secondary Priority Tier: Highlight ARIMA, Prophet, time-series feature engineering, and demand forecasting projects.";
+    else advice = "Strategic Adjacent Role: Highlight analytical problem-solving, stakeholder communication, and domain knowledge.";
+
+    modalStrategyAdvice.textContent = advice;
+
+    // Apply links
+    let applyUrl = job.url;
+    if (!applyUrl || applyUrl.includes("example.com")) {
+      const query = `${job.title} ${job.location || 'India'}`.trim();
+      applyUrl = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(query)}`;
+    }
+    const googleJobsUrl = `https://www.google.com/search?q=${encodeURIComponent(job.title + ' jobs in ' + (job.location || 'India'))}`;
+
+    modalApplyLinkedin.href = applyUrl;
+    modalApplyGoogle.href = googleJobsUrl;
+
+    modalCopyBtn.onclick = () => {
+      const copyText = `${job.title} at ${job.company} (Tier ${job.tier} - Match: ${scorePct}%)\nApply: ${applyUrl}`;
+      navigator.clipboard.writeText(copyText).then(() => {
+        showToast("Copied role information!");
+      });
+    };
+
+    modalOverlay.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeJobModal() {
+    modalOverlay.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeJobModal);
+  if (modalOverlay) {
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target === modalOverlay) closeJobModal();
+    });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modalOverlay.classList.contains("open")) {
+      closeJobModal();
+    }
+  });
 
   // ==========================================================================
   // 5. Filter Listeners

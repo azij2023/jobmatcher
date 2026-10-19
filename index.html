@@ -389,6 +389,58 @@
     </div>
   </footer>
 
+  <!-- Job Details Modal Dialog -->
+  <div class="modal-overlay" id="job-modal-overlay">
+    <div class="modal-card" id="job-modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-job-title">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">✕</button>
+      <div class="modal-header">
+        <div>
+          <span class="job-tier-badge" id="modal-tier-badge">🥇 Tier 1 • Applied ML</span>
+          <h2 class="modal-title" id="modal-job-title">Job Title</h2>
+          <div class="job-company-loc" style="margin-top: 0.35rem;">
+            <span class="job-company" id="modal-company">Company</span>
+            <span>•</span>
+            <span class="job-location" id="modal-location">📍 Location</span>
+          </div>
+        </div>
+        <div class="score-badge-circle" id="modal-score-circle">
+          <span class="score-badge-val" id="modal-score-val">95%</span>
+          <span class="score-badge-label">FIT</span>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-section">
+          <h4>Job Description & Role Summary</h4>
+          <p id="modal-description" class="modal-text"></p>
+        </div>
+
+        <div class="modal-section">
+          <h4>Skills Match Analysis</h4>
+          <div id="modal-skills-matched" class="skills-tags" style="margin-bottom: 0.75rem;"></div>
+          <div id="modal-skills-missing" class="skills-tags"></div>
+        </div>
+
+        <div class="modal-section" id="modal-strategy-advice-section">
+          <h4>Recommended Application Strategy</h4>
+          <p id="modal-strategy-advice" class="modal-text"></p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-apply-linkedin">
+          <span>Apply on LinkedIn ↗</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-apply-google">
+          <span>Search Google Jobs ↗</span>
+        </a>
+        <button class="btn btn-secondary" id="modal-copy-btn">
+          <span>📋 Copy Info</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification Container -->
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
