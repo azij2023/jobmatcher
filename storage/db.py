@@ -12,6 +12,9 @@ def init_db():
             tier INTEGER,
             category TEXT,
             priority TEXT,
+            posted_at TEXT,
+            hours_ago INTEGER,
+            source_domain TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         )
     """)
@@ -33,12 +36,37 @@ def save_job(job: dict, scored_result):
     else:
         score, tier, category, priority = 0.0, None, None, None
 
+    # Safe column additions if table already exists
+    try:
+        c.execute("ALTER TABLE jobs ADD COLUMN posted_at TEXT")
+    except Exception:
+        pass
+    try:
+        c.execute("ALTER TABLE jobs ADD COLUMN hours_ago INTEGER")
+    except Exception:
+        pass
+    try:
+        c.execute("ALTER TABLE jobs ADD COLUMN source_domain TEXT")
+    except Exception:
+        pass
+
     c.execute(
         """
-        INSERT OR REPLACE INTO jobs (url, title, company, score, tier, category, priority)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
+        INSERT OR REPLACE INTO jobs (url, title, company, score, tier, category, priority, posted_at, hours_ago, source_domain)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         """,
-        (job.get("url"), job.get("title"), job.get("company"), score, tier, category, priority)
+        (
+            job.get("url"),
+            job.get("title"),
+            job.get("company"),
+            score,
+            tier,
+            category,
+            priority,
+            job.get("posted_at"),
+            job.get("hours_ago"),
+            job.get("source_domain")
+        )
     )
     conn.commit()
     conn.close()

@@ -95,16 +95,24 @@ SKILL_SYNONYMS = {
 }
 
 def normalize_location(location: str) -> str:
+    if not location or not isinstance(location, str):
+        return ""
     loc = location.lower().strip()
     return LOCATION_MAP.get(loc, loc)
 
 def normalize_seniority(seniority: str) -> str:
+    if not seniority or not isinstance(seniority, str):
+        return "junior"
     sen = seniority.lower().strip()
     return SENIORITY_MAP.get(sen, sen)
 
 def normalize_skills(skills: list[str]) -> list[str]:
+    if not skills or not isinstance(skills, list):
+        return []
     out = []
     for s in skills:
+        if not s or not isinstance(s, str):
+            continue
         s = s.lower().strip()
         out.append(SKILL_SYNONYMS.get(s, s.replace(" ", "_").replace("-", "_")))
     return list(dict.fromkeys(out))

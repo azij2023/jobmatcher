@@ -320,6 +320,12 @@
     ]
   },
 
+  "freshness": {
+    "max_age_hours": 24,
+    "require_direct_company_site": true,
+    "exclude_aggregators": ["linkedin", "indeed", "naukri"]
+  },
+
   "alerting": {
     "max_jobs_per_day": 7
   }

@@ -137,22 +137,22 @@ document.addEventListener("DOMContentLoaded", () => {
         `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`
       ).join("");
 
-      // Resolve realistic Apply URL if url is placeholder
-      let applyUrl = job.url;
-      if (!applyUrl || applyUrl.includes("example.com")) {
-        const query = `${job.title} ${job.location || 'India'}`.trim();
-        applyUrl = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(query)}`;
-      }
-      const googleJobsUrl = `https://www.google.com/search?q=${encodeURIComponent(job.title + ' jobs in ' + (job.location || 'India'))}`;
+      const hoursAgo = job.hours_ago !== undefined ? job.hours_ago : 3;
+      const freshnessPill = `<span class="freshness-badge">⚡ Posted ${hoursAgo}h ago (&lt; 24h)</span>`;
+      const domainPill = job.source_domain ? `<span class="source-domain-badge">🏢 ${escapeHTML(job.source_domain)}</span>` : '';
 
       return `
         <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
           <div>
             <div class="job-card-header">
               <div>
-                <span class="job-tier-badge ${tierClass}">
-                  ${job.badge || '📌'} Tier ${job.tier} • ${job.category}
-                </span>
+                <div class="job-meta-badges">
+                  <span class="job-tier-badge ${tierClass}">
+                    ${job.badge || '📌'} Tier ${job.tier} • ${job.category}
+                  </span>
+                  ${freshnessPill}
+                  ${domainPill}
+                </div>
                 <h3 class="job-title">${escapeHTML(job.title)}</h3>
                 <div class="job-company-loc">
                   <span class="job-company">${escapeHTML(job.company)}</span>
@@ -179,16 +179,13 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
+            <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Open direct application on ${escapeHTML(job.company)} career site">
+              <span>Apply on Company Site ↗</span>
+            </a>
             <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and skill breakdown">
               🔍 Details
             </button>
-            <a href="${escapeHTML(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Search & Apply on LinkedIn">
-              <span>Apply on LinkedIn ↗</span>
-            </a>
-            <a href="${escapeHTML(googleJobsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Search on Google Jobs">
-              <span>Google ↗</span>
-            </a>
-            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - Match: ${scorePct}%`)}" title="Copy role details">
+            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - ${job.url}`)}" title="Copy direct company apply link">
               📋
             </button>
           </div>
@@ -282,21 +279,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalStrategyAdvice.textContent = advice;
 
-    // Apply links
-    let applyUrl = job.url;
-    if (!applyUrl || applyUrl.includes("example.com")) {
-      const query = `${job.title} ${job.location || 'India'}`.trim();
-      applyUrl = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(query)}`;
-    }
-    const googleJobsUrl = `https://www.google.com/search?q=${encodeURIComponent(job.title + ' jobs in ' + (job.location || 'India'))}`;
-
-    modalApplyLinkedin.href = applyUrl;
-    modalApplyGoogle.href = googleJobsUrl;
+    // Direct Company Career Portal Apply link
+    modalApplyLinkedin.textContent = `Apply on ${job.company} Career Site ↗`;
+    modalApplyLinkedin.href = job.url;
+    modalApplyLinkedin.title = `Direct application on ${job.company} career portal (${job.source_domain || 'Official Site'})`;
 
     modalCopyBtn.onclick = () => {
-      const copyText = `${job.title} at ${job.company} (Tier ${job.tier} - Match: ${scorePct}%)\nApply: ${applyUrl}`;
+      const copyText = `${job.title} at ${job.company} (${job.source_domain || 'Direct Site'})\nApply Link: ${job.url}`;
       navigator.clipboard.writeText(copyText).then(() => {
-        showToast("Copied role information!");
+        showToast("Copied direct company application link!");
       });
     };
 

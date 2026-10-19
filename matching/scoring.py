@@ -57,6 +57,27 @@ def score_job(job: dict, profile: dict) -> dict:
     title = job.get("title", "").lower()
     seniority = job.get("seniority", "").lower()
     min_exp = job.get("min_years_experience")
+    hours_ago = job.get("hours_ago")
+    url = job.get("url", "").lower()
+
+    # 0. Check Freshness Filter (Within 24 Hours / 1 Day)
+    max_age_hours = profile.get("freshness", {}).get("max_age_hours", 24)
+    if hours_ago is not None and hours_ago > max_age_hours:
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"Job posted {hours_ago}h ago (older than {max_age_hours}h limit)"
+        }
+
+    # 0b. Exclude Aggregators like LinkedIn (Only allow direct company sites)
+    exclude_aggs = profile.get("freshness", {}).get("exclude_aggregators", ["linkedin"])
+    for agg in exclude_aggs:
+        if agg in url:
+            return {
+                "rejected": True,
+                "final_score": 0.0,
+                "rejection_reason": f"Aggregator '{agg}' excluded. Only direct individual company websites allowed."
+            }
 
     # 1. Check Hard Exclusion Keywords (Title) using word boundaries
     for bad in profile.get("job_filters", {}).get("exclude_keywords", []):

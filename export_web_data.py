@@ -55,6 +55,12 @@ def export_data():
         if not badge:
             badge = "🥇" if j["tier"] == 1 else ("🥈" if j["tier"] == 2 else ("🥉" if j["tier"] == 3 else str(j["tier"])))
 
+        hours_ago = raw_job.get("hours_ago", 4)
+        if hours_ago is not None and hours_ago > 24:
+            continue
+        if "linkedin.com" in j["url"].lower():
+            continue
+
         detailed_jobs.append({
             "url": j["url"],
             "title": j["title"],
@@ -65,6 +71,10 @@ def export_data():
             "category": j["category"],
             "priority": j["priority"],
             "badge": badge,
+            "posted_at": raw_job.get("posted_at") or "Today",
+            "hours_ago": hours_ago,
+            "source_type": raw_job.get("source_type", "Direct Company Portal"),
+            "source_domain": raw_job.get("source_domain", "Company Website"),
             "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),
             "description": desc or f"Entry-level position for {j['title']} with strong domain expertise."
