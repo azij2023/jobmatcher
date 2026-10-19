@@ -1,13 +1,16 @@
 import os
 from dotenv import load_dotenv
-from groq import Groq
+try:
+    from groq import Groq
+except ImportError:
+    Groq = None
 
 load_dotenv()
 
 class GroqClient:
     def __init__(self, model: str = None):
         api_key = os.getenv("GROQ_API_KEY")
-        self.is_configured = bool(api_key and not api_key.startswith("your_"))
+        self.is_configured = bool(api_key and not api_key.startswith("your_") and Groq is not None)
         self.model = model or os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 
         if self.is_configured:

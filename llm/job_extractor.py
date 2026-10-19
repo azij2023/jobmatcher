@@ -34,11 +34,11 @@ class JobExtractor:
     def __init__(self, model: str = None):
         self.llm = GroqClient(model=model)
 
-    def extract(self, text: str) -> dict:
+    def extract(self, text: str, title: str = "") -> dict:
         # Use Groq LLM if key is configured
         if self.llm.is_configured:
             try:
-                prompt = f"Extract structured information from this job description:\n\n{text}"
+                prompt = f"Extract structured information from this job title: '{title}' and description:\n\n{text}"
                 raw_output = self.llm.chat(SYSTEM_PROMPT, prompt)
                 cleaned = raw_output.strip()
                 if "```" in cleaned:
@@ -50,21 +50,26 @@ class JobExtractor:
                 print(f"[!] Groq LLM extraction warning: {e}. Falling back to rule-based parser.")
 
         # Heuristic fallback parser
-        return self._heuristic_extract(text)
+        return self._heuristic_extract(text, title=title)
 
-    def _heuristic_extract(self, text: str) -> dict:
+    def _heuristic_extract(self, text: str, title: str = "") -> dict:
         t_lower = text.lower()
+        title_lower = title.lower()
 
-        # Seniority extraction
+        # Seniority extraction - prioritize title indicators
         seniority = "junior"
-        if any(w in t_lower for w in ["intern", "internship"]):
+        if any(w in title_lower for w in ["intern", "internship", "apprentice", "trainee"]):
             seniority = "intern"
-        elif any(w in t_lower for w in ["fresher", "new grad", "graduate", "entry level", "entry-level"]):
+        elif any(w in title_lower for w in ["fresher", "new grad", "graduate", "entry level", "entry-level", "early career"]):
             seniority = "fresher"
-        elif any(w in t_lower for w in ["associate"]):
+        elif any(w in title_lower for w in ["associate", "analyst", "coordinator", "specialist"]):
             seniority = "associate"
-        elif any(w in t_lower for w in ["senior", "lead", "staff", "principal", "manager"]):
+        elif any(w in title_lower for w in ["senior", "sr.", "sr ", "staff", "principal", "director", "head", "vp"]):
             seniority = "senior"
+        elif any(w in t_lower for w in ["intern", "internship", "apprentice", "trainee"]):
+            seniority = "intern"
+        elif any(w in t_lower for w in ["associate", "analyst"]):
+            seniority = "associate"
 
         # Years of experience extraction
         min_exp = 0
@@ -79,23 +84,26 @@ class JobExtractor:
             if re.search(pattern, t_lower):
                 found_skills.append(s)
 
-        # Role Category detection (order matters: specific phrases before generic ones)
+        # Role Category detection using both title and body
+        combined = f"{title_lower} {t_lower}"
         role_cat = "Data Science"
-        if any(w in t_lower for w in ["operations research", "linear programming", "or scientist", "optimization scientist", "pulp"]):
-            role_cat = "OR / Optimization"
-        elif any(w in t_lower for w in ["decision scientist", "decision analysis", "analytics scientist"]):
-            role_cat = "Decision Science"
-        elif any(w in t_lower for w in ["applied scientist", "applied ml", "ml research", "research scientist"]):
+        if any(w in title_lower for w in ["ai agent", "applied ai", "applied scientist", "ai research"]) or any(w in t_lower for w in ["applied scientist", "applied ml", "ml research", "research scientist"]):
             role_cat = "Applied ML / Research"
-        elif any(w in t_lower for w in ["forecasting", "time series", "demand forecasting", "arima", "prophet"]):
-            role_cat = "Forecasting"
-        elif any(w in t_lower for w in ["machine learning engineer", "ml engineer", "mlops"]):
+        elif any(w in title_lower for w in ["credit risk", "risk data science", "risk analytics", "data scientist", "data science"]):
+            role_cat = "Data Science"
+        elif any(w in title_lower for w in ["benefits analyst", "decision scientist", "quantitative analyst"]) or any(w in t_lower for w in ["decision scientist", "decision analysis", "analytics scientist", "quantitative analyst"]):
+            role_cat = "Decision Science"
+        elif any(w in title_lower for w in ["procurement", "optimization"]) or any(w in t_lower for w in ["operations research", "linear programming", "or scientist", "optimization scientist", "pulp"]):
+            role_cat = "OR / Optimization"
+        elif any(w in title_lower for w in ["ux & systems", "systems engineer", "ml engineer", "machine learning engineer"]) or any(w in t_lower for w in ["machine learning engineer", "ml engineer", "mlops"]):
             role_cat = "ML Engineering"
-        elif any(w in t_lower for w in ["associate product manager", "apm", "product analyst", "product manager"]):
+        elif any(w in title_lower for w in ["account specialist", "ads analytics", "forecasting", "demand planning"]) or any(w in t_lower for w in ["forecasting", "time series", "demand forecasting", "arima", "prophet"]):
+            role_cat = "Forecasting"
+        elif any(w in title_lower for w in ["product research", "associate product manager", "apm", "product analyst"]) or any(w in t_lower for w in ["product analyst", "product manager", "user telemetry"]):
             role_cat = "Product"
-        elif any(w in t_lower for w in ["strategy analyst", "business operations", "bizops", "program analyst"]):
+        elif any(w in title_lower for w in ["revenue operations", "operations associate", "employer brand", "coordinator", "customer success", "accounts payable", "strategy"]) or any(w in t_lower for w in ["strategy analyst", "business operations", "bizops", "program analyst", "revenue operations"]):
             role_cat = "Strategy / Programs"
-        elif any(w in t_lower for w in ["analytics engineer", "dbt", "data engineer"]):
+        elif any(w in title_lower for w in ["data platform", "content & analytics", "data engineering", "software engineer intern"]) or any(w in t_lower for w in ["analytics engineer", "dbt", "data engineer", "data platform"]):
             role_cat = "Data Engineering Adjacent"
 
         return {

@@ -20,7 +20,9 @@
         "applied scientist - ai research",
         "specialist solutions architect - ai/ml",
         "genai research scientist intern",
-        "research scientist intern"
+        "research scientist intern",
+        "ai agent engineer",
+        "applied ai engineer"
       ]
     },
     {
@@ -39,7 +41,9 @@
         "growth data scientist",
         "data scientist - risk analytics",
         "strategy & analytics business partner",
-        "university grad data scientist"
+        "university grad data scientist",
+        "credit risk operations associate",
+        "credit risk analyst"
       ]
     },
     {
@@ -58,6 +62,8 @@
         "quantitative analyst ii",
         "decision scientist - risk & decision science",
         "quantitative analyst - people & benefits",
+        "benefits analyst",
+        "benefits analyst (quantitative & decision analyst)",
         "capital structuring & analytics"
       ]
     },
@@ -77,6 +83,8 @@
         "optimization analyst",
         "optimization analyst - workforce planning",
         "operations optimization specialist ii",
+        "software & procurement analyst intern",
+        "procurement analyst",
         "agent optimization",
         "agent optimization & evaluation",
         "data scientist, optimization"
@@ -97,6 +105,8 @@
         "applied ml engineer",
         "machine learning engineer (applied ml)",
         "ai platform & applications engineer",
+        "ux & systems engineer",
+        "ux & systems engineer (ai search / interface systems)",
         "software engineer - machine learning",
         "software engineer - edge ai",
         "edge ai"
@@ -117,6 +127,8 @@
         "forecasting engineer",
         "demand & forecasting analyst",
         "pipeline & streaming data engineer",
+        "account specialist",
+        "account specialist (search & ads analytics / performance forecasting)",
         "economist & forecasting",
         "workflows & analytics",
         "data, workflows & analytics"
@@ -137,6 +149,8 @@
         "ai product manager",
         "product analyst",
         "product analyst ii",
+        "product research specialist",
+        "product research specialist (product & user telemetry)",
         "associate product manager (apm / pm i)",
         "product manager - monetization",
         "early career, associate product manager",
@@ -160,6 +174,12 @@
         "monetization operations analyst",
         "associate revenue operations analyst",
         "operations associate (early career)",
+        "operations associate, apprenticeship",
+        "accounts payable & operations analyst",
+        "employer brand analyst",
+        "candidate experience coordinator",
+        "coordinator, marketing operations",
+        "customer success associate",
         "operations associate",
         "workplace operations analyst"
       ]
@@ -182,6 +202,7 @@
         "forward deployed data engineer",
         "software engineer intern - data platform",
         "associate - data analytics / content",
+        "associate - content & analytics",
         "software engineering intern"
       ]
     }

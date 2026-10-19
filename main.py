@@ -25,7 +25,7 @@ def main():
 
     for job in fetch_api_jobs():
         text = clean_text(job["raw_description"])
-        extracted = extractor.extract(text)
+        extracted = extractor.extract(text, title=job["title"])
 
         extracted["title"] = job["title"]
         extracted["url"] = job["url"]
