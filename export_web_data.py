@@ -61,15 +61,20 @@ def export_data():
         if "linkedin.com" in j["url"].lower():
             continue
 
+        final_tier = scored.get("tier") or j.get("tier")
+        final_cat = scored.get("category") or j.get("category")
+        final_priority = scored.get("priority") or j.get("priority")
+        final_score = scored.get("final_score") or j.get("score")
+
         detailed_jobs.append({
             "url": j["url"],
             "title": j["title"],
             "company": j["company"],
             "location": loc,
-            "score": j["score"],
-            "tier": j["tier"],
-            "category": j["category"],
-            "priority": j["priority"],
+            "score": round(final_score, 3),
+            "tier": final_tier,
+            "category": final_cat,
+            "priority": final_priority,
             "badge": badge,
             "posted_at": raw_job.get("posted_at") or "Today",
             "hours_ago": hours_ago,

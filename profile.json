@@ -15,7 +15,10 @@
         "associate applied scientist",
         "applied scientist intern",
         "ml research scientist",
-        "research scientist"
+        "research scientist",
+        "ai applied scientist",
+        "genai research scientist intern",
+        "research scientist intern"
       ]
     },
     {
@@ -31,7 +34,8 @@
         "data science intern",
         "product data scientist",
         "decision data scientist",
-        "growth data scientist"
+        "growth data scientist",
+        "university grad data scientist"
       ]
     },
     {
@@ -46,7 +50,9 @@
         "junior decision scientist",
         "associate decision scientist",
         "decision science intern",
-        "quantitative analyst"
+        "quantitative analyst",
+        "quantitative analyst ii",
+        "capital structuring & analytics"
       ]
     },
     {
@@ -61,7 +67,10 @@
         "operations research scientist",
         "junior optimization scientist",
         "operations research analyst",
-        "optimization engineer"
+        "optimization engineer",
+        "agent optimization",
+        "agent optimization & evaluation",
+        "data scientist, optimization"
       ]
     },
     {
@@ -76,7 +85,10 @@
         "junior machine learning engineer",
         "associate ml engineer",
         "ml engineer intern",
-        "applied ml engineer"
+        "applied ml engineer",
+        "software engineer - machine learning",
+        "software engineer - edge ai",
+        "edge ai"
       ]
     },
     {
@@ -91,7 +103,10 @@
         "forecasting analyst",
         "time series analyst",
         "demand forecasting specialist",
-        "forecasting engineer"
+        "forecasting engineer",
+        "economist & forecasting",
+        "workflows & analytics",
+        "data, workflows & analytics"
       ]
     },
     {
@@ -107,7 +122,9 @@
         "technical product manager",
         "data product manager",
         "ai product manager",
-        "product analyst"
+        "product analyst",
+        "early career, associate product manager",
+        "associate product manager, new grad"
       ]
     },
     {
@@ -122,7 +139,9 @@
         "bizops analyst",
         "program analyst",
         "strategy associate",
-        "strategic planning analyst"
+        "strategic planning analyst",
+        "finance & strategy analyst",
+        "workplace operations analyst"
       ]
     },
     {
@@ -137,7 +156,8 @@
         "junior data engineer",
         "associate data engineer",
         "bi engineer",
-        "data engineer intern"
+        "data engineer intern",
+        "software engineer, new grad"
       ]
     }
   ],

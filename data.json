@@ -15,7 +15,10 @@
           "associate applied scientist",
           "applied scientist intern",
           "ml research scientist",
-          "research scientist"
+          "research scientist",
+          "ai applied scientist",
+          "genai research scientist intern",
+          "research scientist intern"
         ]
       },
       {
@@ -31,7 +34,8 @@
           "data science intern",
           "product data scientist",
           "decision data scientist",
-          "growth data scientist"
+          "growth data scientist",
+          "university grad data scientist"
         ]
       },
       {
@@ -46,7 +50,9 @@
           "junior decision scientist",
           "associate decision scientist",
           "decision science intern",
-          "quantitative analyst"
+          "quantitative analyst",
+          "quantitative analyst ii",
+          "capital structuring & analytics"
         ]
       },
       {
@@ -61,7 +67,10 @@
           "operations research scientist",
           "junior optimization scientist",
           "operations research analyst",
-          "optimization engineer"
+          "optimization engineer",
+          "agent optimization",
+          "agent optimization & evaluation",
+          "data scientist, optimization"
         ]
       },
       {
@@ -76,7 +85,10 @@
           "junior machine learning engineer",
           "associate ml engineer",
           "ml engineer intern",
-          "applied ml engineer"
+          "applied ml engineer",
+          "software engineer - machine learning",
+          "software engineer - edge ai",
+          "edge ai"
         ]
       },
       {
@@ -91,7 +103,10 @@
           "forecasting analyst",
           "time series analyst",
           "demand forecasting specialist",
-          "forecasting engineer"
+          "forecasting engineer",
+          "economist & forecasting",
+          "workflows & analytics",
+          "data, workflows & analytics"
         ]
       },
       {
@@ -107,7 +122,9 @@
           "technical product manager",
           "data product manager",
           "ai product manager",
-          "product analyst"
+          "product analyst",
+          "early career, associate product manager",
+          "associate product manager, new grad"
         ]
       },
       {
@@ -122,7 +139,9 @@
           "bizops analyst",
           "program analyst",
           "strategy associate",
-          "strategic planning analyst"
+          "strategic planning analyst",
+          "finance & strategy analyst",
+          "workplace operations analyst"
         ]
       },
       {
@@ -137,7 +156,8 @@
           "junior data engineer",
           "associate data engineer",
           "bi engineer",
-          "data engineer intern"
+          "data engineer intern",
+          "software engineer, new grad"
         ]
       }
     ],
@@ -334,183 +354,408 @@
   },
   "jobs": [
     {
-      "url": "https://boards.greenhouse.io/databricks/jobs/junior-applied-scientist",
-      "title": "Junior Applied Scientist",
-      "company": "Databricks",
-      "location": "Bangalore",
+      "url": "https://www.pinterestcareers.com/jobs/8140389/masters-university-grad-data-scientist-usa/",
+      "title": "University Grad Data Scientist",
+      "company": "Pinterest",
+      "location": "San Francisco, CA / Remote",
+      "score": 0.959,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-19 15:17",
+      "hours_ago": 7,
+      "source_type": "Direct Company Portal",
+      "source_domain": "pinterestcareers.com",
+      "matched_skills": [
+        "python",
+        "sql",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Pinterest University Grad Data Scientist opportunity. Focus on organic discovery and user modeling using Machine Learning, SQL, Python, A/B Testing, and Statistical Modeling. Early career (0-1 years)."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/figma/jobs/5707966004?gh_jid=5707966004",
+      "title": "AI Applied Scientist",
+      "company": "Figma",
+      "location": "San Francisco, CA / Remote",
       "score": 0.955,
       "tier": 1,
       "category": "Applied ML / Research",
       "priority": "Primary",
       "badge": "\ud83e\udd47",
-      "posted_at": "2026-10-19 18:47",
+      "posted_at": "2026-10-19 20:17",
       "hours_ago": 2,
       "source_type": "Direct Career Portal (Greenhouse ATS)",
-      "source_domain": "boards.greenhouse.io/databricks",
-      "matched_skills": [],
+      "source_domain": "job-boards.greenhouse.io/figma",
+      "matched_skills": [
+        "python",
+        "pytorch",
+        "machine_learning",
+        "deep_learning"
+      ],
       "missing_skills": [],
-      "description": "We are seeking a Junior Applied Scientist with strong Python, PyTorch, Deep Learning, and Machine Learning foundation to join our AI research team in Bangalore. 0-1 years experience or fresh post-graduates welcome."
+      "description": "We are looking for an AI Applied Scientist to develop state-of-the-art machine learning models for intelligent creative workflows. Requirements: Python, PyTorch, Deep Learning, Transformer models, Machine Learning research, and strong statistical foundation. 0-2 years experience."
     },
     {
-      "url": "https://jobs.ashbyhq.com/postman/applied-ml-engineer-entry",
-      "title": "Junior Machine Learning Engineer (Applied)",
-      "company": "Postman",
-      "location": "Bangalore",
-      "score": 0.94,
+      "url": "https://www.databricks.com/company/careers/university-recruiting---engineering/phd-genai-research-scientist-intern-7011263002?gh_jid=7011263002",
+      "title": "PhD GenAI Research Scientist Intern",
+      "company": "Databricks",
+      "location": "San Francisco, CA / Remote",
+      "score": 0.944,
       "tier": 1,
       "category": "Applied ML / Research",
       "priority": "Primary",
       "badge": "\ud83e\udd47",
-      "posted_at": "2026-10-19 09:47",
-      "hours_ago": 11,
-      "source_type": "Direct Career Portal (Ashby ATS)",
-      "source_domain": "jobs.ashbyhq.com/postman",
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Seeking an entry-level Applied ML Engineer. Required skills: Python, Scikit-learn, Machine Learning, Docker, and FastAPI."
-    },
-    {
-      "url": "https://careers.swiggy.com/jobs/product-data-scientist-growth",
-      "title": "Product Data Scientist - Growth",
-      "company": "Swiggy",
-      "location": "Bangalore",
-      "score": 0.938,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "\ud83e\udd48",
-      "posted_at": "2026-10-19 16:47",
+      "posted_at": "2026-10-19 18:17",
       "hours_ago": 4,
       "source_type": "Direct Company Portal",
-      "source_domain": "careers.swiggy.com",
-      "matched_skills": [],
+      "source_domain": "databricks.com/careers",
+      "matched_skills": [
+        "python",
+        "pytorch",
+        "machine_learning",
+        "deep_learning",
+        "llms"
+      ],
       "missing_skills": [],
-      "description": "Looking for an entry level Product Data Scientist to drive consumer growth. Key skills: Python, SQL, Experimentation, A/B Testing, and Product Analytics. 0-2 years experience."
+      "description": "Databricks Mosaic AI is seeking a GenAI Research Scientist Intern to work on large-scale foundation models. Skills: Python, PyTorch, Deep Learning, LLMs, Distributed Training, and Machine Learning research. Early career researchers welcome."
     },
     {
-      "url": "https://boards.greenhouse.io/o9solutions/jobs/time-series-forecasting-analyst",
-      "title": "Time Series Forecasting Analyst",
-      "company": "o9 Solutions",
-      "location": "Bangalore",
-      "score": 0.886,
-      "tier": 6,
-      "category": "Forecasting",
-      "priority": "Secondary",
-      "badge": "6",
-      "posted_at": "2026-10-19 06:47",
-      "hours_ago": 14,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
-      "source_domain": "boards.greenhouse.io/o9solutions",
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Entry-level Forecasting Analyst specializing in demand planning. Skills: Python, Time Series, Forecasting, Pandas, and ARIMA."
-    },
-    {
-      "url": "https://careers.fractal.ai/opportunities/associate-decision-scientist",
-      "title": "Associate Decision Scientist",
-      "company": "Fractal Analytics",
-      "location": "Remote - India",
-      "score": 0.842,
+      "url": "https://job-boards.greenhouse.io/affirm/jobs/7815954003",
+      "title": "Quantitative Analyst II (Capital Structuring & Analytics)",
+      "company": "Affirm",
+      "location": "Remote - US / Canada",
+      "score": 0.932,
       "tier": 3,
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "\ud83e\udd49",
-      "posted_at": "2026-10-19 14:47",
-      "hours_ago": 6,
-      "source_type": "Direct Company Portal",
-      "source_domain": "careers.fractal.ai",
-      "matched_skills": [],
+      "posted_at": "2026-10-19 14:17",
+      "hours_ago": 8,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/affirm",
+      "matched_skills": [
+        "python",
+        "sql",
+        "decision_analysis"
+      ],
       "missing_skills": [],
-      "description": "Entry-level Associate Decision Scientist to develop decision models. Skills needed: SQL, Python, Statistical Modeling, and Decision Analysis. Freshers welcome."
+      "description": "Affirm is seeking a Quantitative Analyst for Capital Analytics and decision science. Build quantitative models, decision pipelines, and statistical analysis. Skills: Python, SQL, Statistical Modeling, Decision Analysis, and financial modeling. 0-2 years experience."
     },
     {
-      "url": "https://careers.phonepe.com/openings/associate-product-manager",
-      "title": "Associate Product Manager (APM)",
-      "company": "PhonePe",
-      "location": "Bangalore",
-      "score": 0.84,
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8275745",
+      "title": "Software Engineer, Agent Optimization & Evaluation",
+      "company": "Reddit",
+      "location": "Remote - Worldwide / US",
+      "score": 0.907,
+      "tier": 4,
+      "category": "OR / Optimization",
+      "priority": "Secondary",
+      "badge": "4",
+      "posted_at": "2026-10-19 12:17",
+      "hours_ago": 10,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/reddit",
+      "matched_skills": [
+        "python",
+        "linear_programming",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "Reddit is seeking an Optimization and Evaluation Engineer for autonomous agent systems. Focus on Optimization algorithms, Linear Programming, constraint modeling, Python, and benchmarking."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/figma/jobs/5552580004?gh_jid=5552580004",
+      "title": "Data Scientist",
+      "company": "Figma",
+      "location": "San Francisco, CA \u2022 New York, NY",
+      "score": 0.896,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-19 17:17",
+      "hours_ago": 5,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/figma",
+      "matched_skills": [
+        "python",
+        "sql",
+        "experimentation",
+        "causal_inference"
+      ],
+      "missing_skills": [],
+      "description": "Figma is hiring a Data Scientist to partner with product and growth teams. You will drive Experimentation, A/B Testing, causal inference, and statistical modeling. Requirements: Python, SQL, Experimentation, Hypothesis Testing, and Data Science."
+    },
+    {
+      "url": "https://app.careerpuck.com/job-board/lyft/job/8746134002?gh_jid=8746134002",
+      "title": "Data Scientist, Optimization - Real-Time Supply Management",
+      "company": "Lyft",
+      "location": "San Francisco, CA / Remote",
+      "score": 0.896,
+      "tier": 4,
+      "category": "OR / Optimization",
+      "priority": "Secondary",
+      "badge": "4",
+      "posted_at": "2026-10-19 11:17",
+      "hours_ago": 11,
+      "source_type": "Direct Company Portal",
+      "source_domain": "app.careerpuck.com/lyft",
+      "matched_skills": [
+        "python",
+        "operations_research",
+        "linear_programming",
+        "optimization",
+        "pulp"
+      ],
+      "missing_skills": [],
+      "description": "Lyft Supply Optimization team is looking for a Data Scientist specializing in Operations Research and Optimization. Requirements: Linear Programming, Optimization, Python, PuLP/SciPy, and dynamic dispatch models."
+    },
+    {
+      "url": "https://www.instacart.careers/job?gh_jid=8157738",
+      "title": "Machine Learning Engineer, Economist & Forecasting",
+      "company": "Instacart",
+      "location": "Remote / Hybrid",
+      "score": 0.874,
+      "tier": 6,
+      "category": "Forecasting",
+      "priority": "Secondary",
+      "badge": "6",
+      "posted_at": "2026-10-19 08:17",
+      "hours_ago": 14,
+      "source_type": "Direct Company Portal",
+      "source_domain": "instacart.careers",
+      "matched_skills": [
+        "python",
+        "time_series",
+        "forecasting",
+        "arima",
+        "prophet"
+      ],
+      "missing_skills": [],
+      "description": "Instacart Marketplace team is hiring an ML Engineer / Forecasting Economist. Develop Demand Planning, Time Series models, ARIMA, Prophet, and statistical forecasting algorithms in Python."
+    },
+    {
+      "url": "https://stripe.com/careers/listing/finance-strategy-analyst/8231575?gh_jid=8231575",
+      "title": "Finance & Strategy Analyst",
+      "company": "Stripe",
+      "location": "San Francisco, CA / Seattle, WA / Remote",
+      "score": 0.838,
+      "tier": 8,
+      "category": "Strategy / Programs",
+      "priority": "Management / Adjacent",
+      "badge": "8",
+      "posted_at": "2026-10-19 04:17",
+      "hours_ago": 18,
+      "source_type": "Direct Company Portal",
+      "source_domain": "stripe.com/careers",
+      "matched_skills": [
+        "sql",
+        "excel",
+        "problem_solving"
+      ],
+      "missing_skills": [],
+      "description": "Stripe Strategic Finance team is seeking a Strategy Analyst to evaluate new product monetization and corporate strategy. Skills: Financial Modeling, SQL, Strategic Planning, Excel, and analytical problem solving."
+    },
+    {
+      "url": "https://www.databricks.com/company/careers/university-recruiting---product/associate-product-manager-new-grad-2027-start-7586263002?gh_jid=7586263002",
+      "title": "Associate Product Manager, New Grad",
+      "company": "Databricks",
+      "location": "Mountain View, CA / Remote",
+      "score": 0.835,
       "tier": 7,
       "category": "Product",
       "priority": "Management / Adjacent",
       "badge": "7",
-      "posted_at": "2026-10-19 04:47",
-      "hours_ago": 16,
+      "posted_at": "2026-10-19 05:17",
+      "hours_ago": 17,
       "source_type": "Direct Company Portal",
-      "source_domain": "careers.phonepe.com",
-      "matched_skills": [],
+      "source_domain": "databricks.com/careers",
+      "matched_skills": [
+        "sql",
+        "product_analytics",
+        "communication"
+      ],
       "missing_skills": [],
-      "description": "Early career Associate Product Manager. Key requirements: Product Analytics, SQL, Problem Solving, and Communication."
+      "description": "Databricks APM New Grad rotational program. Lead feature development across Data Intelligence, Lakehouse, and AI platforms. Requirements: Product Analytics, SQL, technical roadmap, and communication."
     },
     {
-      "url": "https://www.flipkartcareers.com/jobs/strategy-analyst-entry",
-      "title": "Business Operations & Strategy Analyst",
-      "company": "Flipkart",
-      "location": "Bangalore",
+      "url": "https://jobs.lever.co/palantir/e6be4159-c8d1-481d-ad15-13274861b795",
+      "title": "Workplace Operations Analyst",
+      "company": "Palantir",
+      "location": "New York, NY / Remote",
       "score": 0.833,
       "tier": 8,
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-19 01:47",
+      "posted_at": "2026-10-19 03:17",
       "hours_ago": 19,
-      "source_type": "Direct Company Portal",
-      "source_domain": "flipkartcareers.com",
-      "matched_skills": [],
+      "source_type": "Direct Career Portal (Lever ATS)",
+      "source_domain": "jobs.lever.co/palantir",
+      "matched_skills": [
+        "sql",
+        "excel",
+        "problem_solving",
+        "communication"
+      ],
       "missing_skills": [],
-      "description": "Strategy & Programs Analyst for strategic growth initiatives. Skills: Analytical Thinking, Excel, Problem Solving, and Communication."
+      "description": "Palantir Workplace Operations & Strategy Analyst. Analyze operational data, drive process efficiency, and manage cross-functional projects. Skills: Analytics, Problem Solving, Communication, and Excel/SQL."
     },
     {
-      "url": "https://careers.delhivery.com/jobs/operations-research-scientist",
-      "title": "Junior Operations Research Scientist",
-      "company": "Delhivery",
-      "location": "Gurgaon",
-      "score": 0.812,
-      "tier": 4,
-      "category": "OR / Optimization",
+      "url": "https://jobs.lever.co/palantir/2458ba08-de79-4e8f-b553-060f9568727e",
+      "title": "Software Engineer, New Grad",
+      "company": "Palantir",
+      "location": "Denver, CO / Remote",
+      "score": 0.833,
+      "tier": 9,
+      "category": "Data Engineering Adjacent",
+      "priority": "Optional",
+      "badge": "9",
+      "posted_at": "2026-10-19 00:17",
+      "hours_ago": 22,
+      "source_type": "Direct Career Portal (Lever ATS)",
+      "source_domain": "jobs.lever.co/palantir",
+      "matched_skills": [
+        "python",
+        "sql",
+        "problem_solving"
+      ],
+      "missing_skills": [],
+      "description": "Palantir New Grad Software Engineer to build distributed platforms, backend services, and analytics infrastructure. Skills: Python, Java/Go, Distributed Systems, SQL, and problem solving."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/figma/jobs/5551532004?gh_jid=5551532004",
+      "title": "Software Engineer - Machine Learning",
+      "company": "Figma",
+      "location": "San Francisco, CA \u2022 New York, NY",
+      "score": 0.832,
+      "tier": 5,
+      "category": "ML Engineering",
       "priority": "Secondary",
-      "badge": "4",
-      "posted_at": "2026-10-19 11:47",
-      "hours_ago": 9,
-      "source_type": "Direct Company Portal",
-      "source_domain": "careers.delhivery.com",
-      "matched_skills": [],
+      "badge": "5",
+      "posted_at": "2026-10-19 10:17",
+      "hours_ago": 12,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/figma",
+      "matched_skills": [
+        "python",
+        "docker",
+        "fastapi",
+        "machine_learning"
+      ],
       "missing_skills": [],
-      "description": "Junior Optimization & Operations Research Scientist. Strong knowledge of Linear Programming, Optimization algorithms, Python, and PuLP."
+      "description": "Seeking an early-career ML Software Engineer to build and deploy generative design models into production. Skills: Python, Docker, FastAPI, Scikit-learn, Machine Learning, and MLOps infrastructure."
     },
     {
-      "url": "https://jobs.lever.co/groww/junior-analytics-engineer",
-      "title": "Junior Analytics Engineer",
-      "company": "Groww",
-      "location": "Bangalore",
+      "url": "https://job-boards.greenhouse.io/canonical/jobs/2614095",
+      "title": "Software Engineer - Edge AI",
+      "company": "Canonical",
+      "location": "Home based - Worldwide",
+      "score": 0.827,
+      "tier": 5,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "5",
+      "posted_at": "2026-10-19 09:17",
+      "hours_ago": 13,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/canonical",
+      "matched_skills": [
+        "python",
+        "c",
+        "docker",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Canonical is seeking an Edge AI Software Engineer to deploy lightweight machine learning models on Ubuntu Linux. Skills: Python, Linux, Machine Learning, Docker, and C++."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/figma/jobs/6180116004?gh_jid=6180116004",
+      "title": "Early Career, Associate Product Manager (APM)",
+      "company": "Figma",
+      "location": "San Francisco, CA",
+      "score": 0.802,
+      "tier": 7,
+      "category": "Product",
+      "priority": "Management / Adjacent",
+      "badge": "7",
+      "posted_at": "2026-10-19 06:17",
+      "hours_ago": 16,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/figma",
+      "matched_skills": [
+        "sql",
+        "product_analytics",
+        "problem_solving"
+      ],
+      "missing_skills": [],
+      "description": "Figma APM Program (Associate Product Manager). Looking for early-career builders with passion for product design, metrics, SQL, Product Analytics, user empathy, and problem solving. 0-2 years experience."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/figma/jobs/6178851004?gh_jid=6178851004",
+      "title": "Data Engineer Intern",
+      "company": "Figma",
+      "location": "San Francisco, CA \u2022 New York, NY",
+      "score": 0.773,
+      "tier": 9,
+      "category": "Data Engineering Adjacent",
+      "priority": "Optional",
+      "badge": "9",
+      "posted_at": "2026-10-19 01:17",
+      "hours_ago": 21,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/figma",
+      "matched_skills": [
+        "python",
+        "sql",
+        "etl"
+      ],
+      "missing_skills": [],
+      "description": "Figma Data Platform team seeks a Data Engineer Intern. Build reliable data pipelines, transformation models, and data infrastructure. Skills: Python, SQL, distributed data systems, and ETL pipelines."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/reddit/jobs/8282760",
+      "title": "Analytics Engineer",
+      "company": "Reddit",
+      "location": "Remote - United States",
       "score": 0.77,
       "tier": 9,
       "category": "Data Engineering Adjacent",
       "priority": "Optional",
       "badge": "9",
-      "posted_at": "2026-10-18 22:47",
-      "hours_ago": 22,
-      "source_type": "Direct Career Portal (Lever ATS)",
-      "source_domain": "jobs.lever.co/groww",
-      "matched_skills": [],
+      "posted_at": "2026-10-19 02:17",
+      "hours_ago": 20,
+      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_domain": "job-boards.greenhouse.io/reddit",
+      "matched_skills": [
+        "sql",
+        "analytics_engineering",
+        "dbt",
+        "data_modeling"
+      ],
       "missing_skills": [],
-      "description": "Entry-level Analytics Engineer to build modern data transformation models. Skills: SQL, dbt, Data Modeling, and Analytics Engineering."
+      "description": "Reddit is seeking an Analytics Engineer to build robust data transformation models and pipelines. Requirements: SQL, dbt, Data Modeling, Snowflake/BigQuery, and Analytics Engineering best practices."
     }
   ],
   "stats": {
-    "total_matches": 9,
-    "primary_matches": 4,
-    "secondary_matches": 2,
-    "adjacent_matches": 3,
-    "avg_score": 0.868,
+    "total_matches": 17,
+    "primary_matches": 5,
+    "secondary_matches": 5,
+    "adjacent_matches": 7,
+    "avg_score": 0.865,
     "top_categories": [
-      "Applied ML / Research",
       "Data Science",
-      "Forecasting",
+      "Applied ML / Research",
       "Decision Science",
-      "Product",
-      "Strategy / Programs",
       "OR / Optimization",
-      "Data Engineering Adjacent"
+      "Forecasting",
+      "Strategy / Programs",
+      "Product",
+      "Data Engineering Adjacent",
+      "ML Engineering"
     ]
   }
 }

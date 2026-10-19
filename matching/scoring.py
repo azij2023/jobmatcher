@@ -132,6 +132,16 @@ def score_job(job: dict, profile: dict) -> dict:
     required_skills = [s.lower().strip() for s in job.get("required_skills", [])]
     nice_to_have = [s.lower().strip() for s in job.get("nice_to_have", [])]
 
+    # If required_skills not pre-extracted, automatically discover matching skills from raw_description
+    desc = job.get("raw_description", "").lower()
+    if not required_skills and desc:
+        found_skills = []
+        for s in profile_skills.keys():
+            s_clean = s.replace("_", " ")
+            if re.search(rf"\b{re.escape(s_clean)}\b", desc):
+                found_skills.append(s)
+        required_skills = found_skills
+
     if required_skills:
         matched_required = [s for s in required_skills if s in profile_skills]
         missing_required = [s for s in required_skills if s not in profile_skills]

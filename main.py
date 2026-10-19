@@ -31,6 +31,7 @@ def main():
         extracted["url"] = job["url"]
         extracted["hours_ago"] = job.get("hours_ago")
         extracted["posted_at"] = job.get("posted_at")
+        extracted["raw_description"] = job["raw_description"]
         extracted["location"] = normalize_location(job["location"])
         extracted["seniority"] = normalize_seniority(extracted.get("seniority", "junior"))
         extracted["required_skills"] = normalize_skills(extracted.get("required_skills", []))
