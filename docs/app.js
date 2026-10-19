@@ -137,6 +137,14 @@ document.addEventListener("DOMContentLoaded", () => {
         `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`
       ).join("");
 
+      // Resolve realistic Apply URL if url is placeholder
+      let applyUrl = job.url;
+      if (!applyUrl || applyUrl.includes("example.com")) {
+        const query = `${job.title} ${job.location || 'India'}`.trim();
+        applyUrl = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(query)}`;
+      }
+      const googleJobsUrl = `https://www.google.com/search?q=${encodeURIComponent(job.title + ' jobs in ' + (job.location || 'India'))}`;
+
       return `
         <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
           <div>
@@ -171,10 +179,13 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
-            <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-              <span>Apply Now ↗</span>
+            <a href="${escapeHTML(applyUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Search & Apply on LinkedIn">
+              <span>Apply on LinkedIn ↗</span>
             </a>
-            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - Match: ${scorePct}% (${job.url})`)}" title="Copy role details">
+            <a href="${escapeHTML(googleJobsUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Search on Google Jobs">
+              <span>Google ↗</span>
+            </a>
+            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - Match: ${scorePct}%`)}" title="Copy role details">
               📋
             </button>
           </div>
