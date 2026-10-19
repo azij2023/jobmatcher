@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TargetMatch AI | Entry-Level Job Matching Engine</title>
+  <meta name="description" content="Precision entry-level job matching and priority scoring system for Applied ML, Data Science, Decision Science, OR Optimization, and Forecasting roles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-logo">
+          <span class="logo-icon">🎯</span>
+          <div class="logo-pulse"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">TargetMatch<span class="brand-accent">.AI</span></span>
+          <span class="brand-badge">Entry-Level Career Engine</span>
+        </div>
+      </div>
+
+      <nav class="nav-tabs" id="nav-tabs" aria-label="Main Navigation">
+        <button class="nav-tab active" data-tab="jobs" id="tab-btn-jobs">
+          <span class="tab-icon">💼</span> Matched Jobs (<span id="nav-job-count">0</span>)
+        </button>
+        <button class="nav-tab" data-tab="strategy" id="tab-btn-strategy">
+          <span class="tab-icon">🗺️</span> 9-Tier Strategy
+        </button>
+        <button class="nav-tab" data-tab="skills" id="tab-btn-skills">
+          <span class="tab-icon">⚡</span> Skill Matrix
+        </button>
+        <button class="nav-tab" data-tab="tester" id="tab-btn-tester">
+          <span class="tab-icon">🧪</span> Live Job Scorer
+        </button>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="system-status" title="Active Groq Model: gpt-oss-120b">
+          <span class="status-dot"></span>
+          <span class="status-text">LLM Evaluated</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-badge">
+        <span class="sparkle">✨</span> Prioritized Entry-Level Job Pipeline (0–2 Years Experience)
+      </div>
+      <h1 class="hero-title">
+        Targeted Job Matcher & <span class="gradient-text">Priority Engine</span>
+      </h1>
+      <p class="hero-subtitle">
+        Automated parsing, hard entry-level seniority gates, and multi-tier priority scoring for 
+        <strong>Applied ML, Data Science, Decision Science, Operations Research, Forecasting, and Adjacent Roles</strong>.
+      </p>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid" id="stats-grid">
+        <div class="stat-card" id="stat-primary">
+          <div class="stat-header">
+            <span class="stat-badge badge-primary">Primary Tier (1–3)</span>
+            <span class="stat-icon">🥇</span>
+          </div>
+          <div class="stat-value" id="stat-primary-val">0</div>
+          <div class="stat-label">Applied ML, DS & Decision Science</div>
+        </div>
+
+        <div class="stat-card" id="stat-secondary">
+          <div class="stat-header">
+            <span class="stat-badge badge-secondary">Secondary Tier (4–6)</span>
+            <span class="stat-icon">🥈</span>
+          </div>
+          <div class="stat-value" id="stat-secondary-val">0</div>
+          <div class="stat-label">OR Optimization, MLE & Forecasting</div>
+        </div>
+
+        <div class="stat-card" id="stat-adjacent">
+          <div class="stat-header">
+            <span class="stat-badge badge-adjacent">Adjacent Tier (7–9)</span>
+            <span class="stat-icon">🥉</span>
+          </div>
+          <div class="stat-value" id="stat-adjacent-val">0</div>
+          <div class="stat-label">Product (APM), Strategy & DE</div>
+        </div>
+
+        <div class="stat-card" id="stat-score">
+          <div class="stat-header">
+            <span class="stat-badge badge-highlight">Top Match Score</span>
+            <span class="stat-icon">⭐</span>
+          </div>
+          <div class="stat-value" id="stat-avg-score-val">0%</div>
+          <div class="stat-label">Weighted Profile Fit Rate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 1: Matched Jobs Board -->
+    <section class="tab-content active" id="view-jobs">
+      <!-- Controls Toolbar -->
+      <div class="controls-toolbar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-input" placeholder="Search by role, company, or skill (e.g. PyTorch, SQL, Linear Programming)...">
+          <button class="clear-search" id="clear-search-btn" title="Clear search" style="display:none;">✕</button>
+        </div>
+
+        <div class="filter-controls">
+          <div class="control-group">
+            <label for="tier-select">Category / Tier:</label>
+            <select id="tier-select">
+              <option value="all">All Tiers (1–9)</option>
+              <option value="primary">🥇 Primary Roles (Tiers 1, 2, 3)</option>
+              <option value="secondary">🥈 Secondary Roles (Tiers 4, 5, 6)</option>
+              <option value="adjacent">🥉 Management & Adjacent (Tiers 7, 8, 9)</option>
+              <option value="1">Tier 1: Applied ML / Research</option>
+              <option value="2">Tier 2: Data Science</option>
+              <option value="3">Tier 3: Decision Science</option>
+              <option value="4">Tier 4: OR / Optimization</option>
+              <option value="5">Tier 5: ML Engineering</option>
+              <option value="6">Tier 6: Forecasting</option>
+              <option value="7">Tier 7: Product (APM)</option>
+              <option value="8">Tier 8: Strategy / Programs</option>
+              <option value="9">Tier 9: Data Engineering Adjacent</option>
+            </select>
+          </div>
+
+          <div class="control-group">
+            <label for="score-slider">Min Match: <span id="score-slider-val" class="slider-val">60%</span></label>
+            <input type="range" id="score-slider" min="50" max="95" step="1" value="60">
+          </div>
+
+          <div class="control-group">
+            <label for="sort-select">Sort By:</label>
+            <select id="sort-select">
+              <option value="score-desc">Highest Match Score</option>
+              <option value="tier-asc">Priority Tier (1 to 9)</option>
+              <option value="company-asc">Company Name (A–Z)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Tier Filter Chips -->
+      <div class="tier-chips" id="tier-chips">
+        <button class="chip active" data-chip="all">All Roles</button>
+        <button class="chip" data-chip="1">🥇 Tier 1: Applied ML</button>
+        <button class="chip" data-chip="2">🥈 Tier 2: Data Science</button>
+        <button class="chip" data-chip="3">🥉 Tier 3: Decision Science</button>
+        <button class="chip" data-chip="4">4 Tier 4: OR / Optimization</button>
+        <button class="chip" data-chip="5">5 Tier 5: ML Engineering</button>
+        <button class="chip" data-chip="6">6 Tier 6: Forecasting</button>
+        <button class="chip" data-chip="7">7 Tier 7: Product (APM)</button>
+        <button class="chip" data-chip="8">8 Tier 8: Strategy</button>
+        <button class="chip" data-chip="9">9 Tier 9: Data Eng</button>
+      </div>
+
+      <!-- Results Info -->
+      <div class="results-header">
+        <span class="results-count" id="results-count">Showing 0 matching jobs</span>
+        <span class="active-filter-indicator" id="active-filter-indicator"></span>
+      </div>
+
+      <!-- Jobs Grid -->
+      <div class="jobs-grid" id="jobs-grid">
+        <!-- Rendered via JS -->
+      </div>
+      
+      <!-- Empty State -->
+      <div class="empty-state" id="empty-state" style="display:none;">
+        <span class="empty-icon">🔎</span>
+        <h3>No jobs matched your current filters</h3>
+        <p>Try lowering the minimum match score or clearing your search query.</p>
+        <button class="btn btn-outline" id="reset-filters-btn">Reset All Filters</button>
+      </div>
+    </section>
+
+    <!-- TAB 2: 9-Tier Strategy & Role Mapping -->
+    <section class="tab-content" id="view-strategy">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">9-Tier Role Mapping & Application Strategy</h2>
+            <p class="section-desc">Your curated career strategy for targeting entry-level positions across high-impact data domains.</p>
+          </div>
+        </div>
+
+        <div class="strategy-table-container">
+          <table class="strategy-table">
+            <thead>
+              <tr>
+                <th>Tier</th>
+                <th>Priority</th>
+                <th>Role Category</th>
+                <th>Target Roles (Entry-Level)</th>
+                <th>Core Competencies</th>
+                <th>Weight</th>
+              </tr>
+            </thead>
+            <tbody id="strategy-table-body">
+              <!-- Dynamically Populated -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="strategy-guidelines">
+          <div class="guideline-card">
+            <span class="guideline-icon">🛡️</span>
+            <h4>Strict Entry-Level Gate</h4>
+            <p>Titles containing <code>senior</code>, <code>staff</code>, <code>lead</code>, <code>director</code>, <code>principal</code>, or requiring &gt;2 years experience are rejected immediately.</p>
+          </div>
+          <div class="guideline-card">
+            <span class="guideline-icon">🎯</span>
+            <h4>Composite Scoring Formula</h4>
+            <p><code>Final Score = 40% Skills + 35% Role Priority + 15% Entry Seniority + 10% Location + Nice-to-Have Bonus</code></p>
+          </div>
+          <div class="guideline-card">
+            <span class="guideline-icon">📍</span>
+            <h4>Location Preference</h4>
+            <p>Prioritizes India tech hubs (Bangalore, Hyderabad, Gurgaon, Pune, Kolkata, Mumbai) and Remote India positions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: Skill Matrix Inspector -->
+    <section class="tab-content" id="view-skills">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Candidate Skill Matrix & Proficiency Weights</h2>
+            <p class="section-desc">Profile skills and weights defined in <code>profile.json</code> used to calculate job alignment.</p>
+          </div>
+        </div>
+
+        <div class="skills-category-grid" id="skills-category-grid">
+          <!-- Dynamically Populated from profile.json -->
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: Live Job Scorer / Tester -->
+    <section class="tab-content" id="view-tester">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Interactive Job Match Simulator</h2>
+            <p class="section-desc">Paste any job title, role category, and skills to test the client-side scoring engine in real time.</p>
+          </div>
+        </div>
+
+        <div class="tester-layout">
+          <form class="tester-form" id="tester-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="test-title">Job Title <span class="req">*</span></label>
+                <input type="text" id="test-title" placeholder="e.g. Junior Applied Scientist" required>
+              </div>
+              <div class="form-group">
+                <label for="test-company">Company</label>
+                <input type="text" id="test-company" placeholder="e.g. Innovate AI" value="Innovate AI">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="test-category">Role Category</label>
+                <select id="test-category">
+                  <option value="Applied ML / Research">Tier 1: Applied ML / Research</option>
+                  <option value="Data Science">Tier 2: Data Science</option>
+                  <option value="Decision Science">Tier 3: Decision Science</option>
+                  <option value="OR / Optimization">Tier 4: OR / Optimization</option>
+                  <option value="ML Engineering">Tier 5: ML Engineering</option>
+                  <option value="Forecasting">Tier 6: Forecasting</option>
+                  <option value="Product">Tier 7: Product</option>
+                  <option value="Strategy / Programs">Tier 8: Strategy / Programs</option>
+                  <option value="Data Engineering Adjacent">Tier 9: Data Engineering Adjacent</option>
+                  <option value="Software Engineering">Other: Software Engineering (Out of scope)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="test-seniority">Seniority / Level</label>
+                <select id="test-seniority">
+                  <option value="junior">Junior (Entry-Level)</option>
+                  <option value="fresher">Fresher / Graduate</option>
+                  <option value="intern">Intern / Internship</option>
+                  <option value="associate">Associate</option>
+                  <option value="mid">Mid-Level</option>
+                  <option value="senior">Senior (Exclusion Test)</option>
+                  <option value="lead">Lead / Staff (Exclusion Test)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="test-exp">Years of Experience Required</label>
+                <input type="number" id="test-exp" value="0" min="0" max="10">
+              </div>
+              <div class="form-group">
+                <label for="test-location">Location</label>
+                <input type="text" id="test-location" value="Bangalore" placeholder="e.g. Bangalore, Hyderabad, Remote">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="test-skills">Required Skills (Comma separated)</label>
+              <input type="text" id="test-skills" value="python, pytorch, machine_learning, deep_learning" placeholder="e.g. python, sql, linear_programming, forecasting">
+              <span class="form-hint">Tip: Use skill aliases like machine_learning, linear_programming, time_series, sql, ab_testing</span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="btn-run-test">
+                <span>⚡ Run Live Evaluation</span>
+              </button>
+              <button type="button" class="btn btn-secondary" id="btn-load-preset">
+                <span>🔄 Load Sample Presets</span>
+              </button>
+            </div>
+          </form>
+
+          <!-- Evaluation Result Card -->
+          <div class="tester-result-panel" id="tester-result-panel">
+            <div class="result-placeholder" id="result-placeholder">
+              <span class="placeholder-icon">📊</span>
+              <h4>Evaluation Ready</h4>
+              <p>Fill out the form and click "Run Live Evaluation" to preview matching score, tier classification, and rejection triggers.</p>
+            </div>
+
+            <div class="result-card" id="result-card" style="display:none;">
+              <div class="result-header">
+                <span class="result-status-pill" id="result-status-pill">ACCEPTED</span>
+                <span class="result-tier-badge" id="result-tier-badge">🥇 Tier 1</span>
+              </div>
+              <div class="result-score-block">
+                <div class="score-circle">
+                  <span class="score-num" id="result-score-num">0%</span>
+                  <span class="score-tag">Match Score</span>
+                </div>
+                <div class="score-breakdown">
+                  <div class="breakdown-item">
+                    <span>Role Fit Weight:</span>
+                    <strong id="result-role-weight">-</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Skill Match Rate:</span>
+                    <strong id="result-skill-rate">-</strong>
+                  </div>
+                  <div class="breakdown-item">
+                    <span>Seniority Filter:</span>
+                    <strong id="result-seniority-status">Passed</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="result-details" id="result-details">
+                <!-- Injected via JS -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <strong>TargetMatch AI</strong> — Intelligent Career Engine for Entry-Level Data Professionals.
+      </div>
+      <div class="footer-right">
+        <span>Hosted via <strong>GitHub Pages</strong></span>
+        <span class="separator">•</span>
+        <span id="footer-update-time">Pipeline Active</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast" id="toast">Details copied to clipboard!</div>
+
+  <!-- Data & Logic Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
