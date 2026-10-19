@@ -129,8 +129,8 @@ def score_job(job: dict, profile: dict) -> dict:
 
     # 5. Calculate Skill Alignment Score
     profile_skills = flatten_skills(profile.get("skills", {}))
-    required_skills = [s.lower().strip() for s in job.get("required_skills", [])]
-    nice_to_have = [s.lower().strip() for s in job.get("nice_to_have", [])]
+    required_skills = [s.lower().strip().replace(" ", "_").replace("-", "_") for s in job.get("required_skills", [])]
+    nice_to_have = [s.lower().strip().replace(" ", "_").replace("-", "_") for s in job.get("nice_to_have", [])]
 
     # If required_skills not pre-extracted, automatically discover matching skills from raw_description
     desc = job.get("raw_description", "").lower()
@@ -162,17 +162,31 @@ def score_job(job: dict, profile: dict) -> dict:
     else:
         seniority_score = 0.80
 
-    # 7. Location Fit Score
+    # 7. Location Filter & Fit Score (India-focused)
     job_location = job.get("location", "").lower()
-    preferred_cities = set(profile.get("locations", {}).get("preferred_cities", []))
-    acceptable_locs = set(profile.get("locations", {}).get("acceptable", []))
+    preferred_cities = [c.lower() for c in profile.get("locations", {}).get("preferred_cities", [])]
+    acceptable_locs = [c.lower() for c in profile.get("locations", {}).get("acceptable", [])]
 
-    if any(city in job_location for city in preferred_cities) or "remote" in job_location:
+    is_india = (
+        any(city in job_location for city in preferred_cities) or
+        any(acc in job_location for acc in acceptable_locs) or
+        "india" in job_location
+    )
+
+    if profile.get("locations", {}).get("require_india_only", True):
+        if not is_india:
+            return {
+                "rejected": True,
+                "final_score": 0.0,
+                "rejection_reason": f"Location '{job.get('location')}' is outside India (India-based jobs requested)."
+            }
+
+    if any(city in job_location for city in preferred_cities):
         location_score = 1.0
-    elif any(acc in job_location for acc in acceptable_locs):
-        location_score = 0.85
+    elif is_india:
+        location_score = 0.95
     else:
-        location_score = 0.60
+        location_score = 0.50
 
     # 8. Composite Weighted Final Score Calculation
     # Weights: Skills (40%), Role Category Priority (35%), Seniority (15%), Location (10%)

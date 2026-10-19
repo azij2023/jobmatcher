@@ -532,6 +532,17 @@ document.addEventListener("DOMContentLoaded", () => {
       };
     }
 
+    // 3b. Location Check (Strict India-based)
+    const locLower = (input.location || "").toLowerCase();
+    const indiaTerms = ["bangalore", "bengaluru", "hyderabad", "pune", "gurgaon", "gurugram", "noida", "mumbai", "delhi", "chennai", "kolkata", "india"];
+    if (locLower && !indiaTerms.some(term => locLower.includes(term))) {
+      return {
+        rejected: true,
+        reason: `Location '${input.location}' is outside India (User requested India-based jobs only)`,
+        score: 0
+      };
+    }
+
     // 4. Role Mapping Tier Match
     let matchedTier = null;
     const roleMapping = profile.role_mapping || [];

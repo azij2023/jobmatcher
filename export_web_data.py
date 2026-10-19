@@ -47,8 +47,13 @@ def export_data():
             "role_category": j["category"],
             "location": loc,
             "seniority": "junior",
+            "hours_ago": raw_job.get("hours_ago", 4),
+            "url": j["url"],
             "required_skills": []
         }, profile)
+
+        if scored.get("rejected"):
+            continue
 
         # Fallback badge
         badge = scored.get("badge")

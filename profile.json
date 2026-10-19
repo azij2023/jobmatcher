@@ -17,6 +17,8 @@
         "ml research scientist",
         "research scientist",
         "ai applied scientist",
+        "applied scientist - ai research",
+        "specialist solutions architect - ai/ml",
         "genai research scientist intern",
         "research scientist intern"
       ]
@@ -35,6 +37,8 @@
         "product data scientist",
         "decision data scientist",
         "growth data scientist",
+        "data scientist - risk analytics",
+        "strategy & analytics business partner",
         "university grad data scientist"
       ]
     },
@@ -52,6 +56,8 @@
         "decision science intern",
         "quantitative analyst",
         "quantitative analyst ii",
+        "decision scientist - risk & decision science",
+        "quantitative analyst - people & benefits",
         "capital structuring & analytics"
       ]
     },
@@ -68,6 +74,9 @@
         "junior optimization scientist",
         "operations research analyst",
         "optimization engineer",
+        "optimization analyst",
+        "optimization analyst - workforce planning",
+        "operations optimization specialist ii",
         "agent optimization",
         "agent optimization & evaluation",
         "data scientist, optimization"
@@ -86,6 +95,8 @@
         "associate ml engineer",
         "ml engineer intern",
         "applied ml engineer",
+        "machine learning engineer (applied ml)",
+        "ai platform & applications engineer",
         "software engineer - machine learning",
         "software engineer - edge ai",
         "edge ai"
@@ -104,6 +115,8 @@
         "time series analyst",
         "demand forecasting specialist",
         "forecasting engineer",
+        "demand & forecasting analyst",
+        "pipeline & streaming data engineer",
         "economist & forecasting",
         "workflows & analytics",
         "data, workflows & analytics"
@@ -123,6 +136,9 @@
         "data product manager",
         "ai product manager",
         "product analyst",
+        "product analyst ii",
+        "associate product manager (apm / pm i)",
+        "product manager - monetization",
         "early career, associate product manager",
         "associate product manager, new grad"
       ]
@@ -141,6 +157,10 @@
         "strategy associate",
         "strategic planning analyst",
         "finance & strategy analyst",
+        "monetization operations analyst",
+        "associate revenue operations analyst",
+        "operations associate (early career)",
+        "operations associate",
         "workplace operations analyst"
       ]
     },
@@ -157,7 +177,12 @@
         "associate data engineer",
         "bi engineer",
         "data engineer intern",
-        "software engineer, new grad"
+        "software engineer, new grad",
+        "software engineer - stripe data pipeline",
+        "forward deployed data engineer",
+        "software engineer intern - data platform",
+        "associate - data analytics / content",
+        "software engineering intern"
       ]
     }
   ],
@@ -218,20 +243,21 @@
   },
 
   "locations": {
+    "require_india_only": true,
     "preferred_cities": [
-      "kolkata",
       "bangalore",
       "bengaluru",
       "hyderabad",
+      "pune",
       "gurgaon",
       "gurugram",
       "noida",
       "chennai",
-      "pune",
       "mumbai",
-      "delhi"
+      "delhi",
+      "kolkata"
     ],
-    "acceptable": ["india", "remote", "remote_india", "pan_india"]
+    "acceptable": ["india", "remote - india", "remote, india", "remote (india)", "pan_india"]
   },
 
   "skills": {
