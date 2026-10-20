@@ -37,6 +37,14 @@ document.addEventListener("DOMContentLoaded", () => {
     sortBy: "score-desc"
   };
 
+  let currentPage = 1;
+  let pageSize = 8;
+
+  const paginationContainer = document.getElementById("pagination-container");
+  const paginationInfo = document.getElementById("pagination-info");
+  const paginationButtons = document.getElementById("pagination-buttons");
+  const pageSizeSelect = document.getElementById("page-size-select");
+
   // ==========================================================================
   // 2. Initial Setup & Stats Display
   // ==========================================================================
@@ -120,18 +128,32 @@ document.addEventListener("DOMContentLoaded", () => {
       return 0;
     });
 
-    // Update results header
-    resultsCount.textContent = `Showing ${filtered.length} matching jobs`;
+    const totalJobs = filtered.length;
 
     // Render cards
-    if (filtered.length === 0) {
+    if (totalJobs === 0) {
       jobsGrid.innerHTML = "";
       emptyState.style.display = "block";
+      resultsCount.textContent = `Showing 0 matching jobs`;
+      if (paginationContainer) paginationContainer.style.display = "none";
       return;
     }
 
     emptyState.style.display = "none";
-    jobsGrid.innerHTML = filtered.map(job => {
+
+    // Pagination calculations
+    const totalPages = Math.ceil(totalJobs / pageSize) || 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+    if (currentPage < 1) currentPage = 1;
+
+    const startIndex = (currentPage - 1) * pageSize;
+    const endIndex = Math.min(startIndex + pageSize, totalJobs);
+    const pagedJobs = filtered.slice(startIndex, endIndex);
+
+    // Update results header
+    resultsCount.textContent = `Showing ${startIndex + 1}–${endIndex} of ${totalJobs} matching jobs (Page ${currentPage} of ${totalPages})`;
+
+    jobsGrid.innerHTML = pagedJobs.map(job => {
       const tierClass = getTierBadgeClass(job.tier);
       const scorePct = Math.round(job.score * 100);
       const matchedTags = (job.matched_skills || []).map(s => 
@@ -208,7 +230,12 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Open direct application on ${escapeHTML(job.source_type || 'Job Portal')}">
               <span>${applyBtnText}</span>
             </a>
-            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and skill breakdown">
+            ${job.company_url ? `
+              <a href="${escapeHTML(job.company_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-company-site" title="Visit official careers portal for ${escapeHTML(job.company)}">
+                <span>🏢 Careers ↗</span>
+              </a>
+            ` : ''}
+            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and multi-channel apply links">
               🔍 Details
             </button>
             <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - ${job.url}`)}" title="Copy direct apply link">
@@ -249,6 +276,72 @@ document.addEventListener("DOMContentLoaded", () => {
         if (found) openJobModal(found);
       });
     });
+
+    // Render Pagination Controls ("Many Pages")
+    renderPagination(totalJobs, totalPages);
+  }
+
+  function renderPagination(totalJobs, totalPages) {
+    if (!paginationContainer) return;
+    if (totalJobs <= pageSize) {
+      paginationContainer.style.display = "none";
+      return;
+    }
+
+    paginationContainer.style.display = "flex";
+    const startNum = (currentPage - 1) * pageSize + 1;
+    const endNum = Math.min(currentPage * pageSize, totalJobs);
+    if (paginationInfo) {
+      paginationInfo.textContent = `Showing ${startNum}–${endNum} of ${totalJobs} jobs (Page ${currentPage} of ${totalPages})`;
+    }
+
+    if (!paginationButtons) return;
+
+    let buttonsHTML = '';
+    // Previous button
+    buttonsHTML += `<button class="pagination-btn" id="pg-prev" ${currentPage === 1 ? 'disabled' : ''} title="Previous Page">‹ Prev</button>`;
+
+    // Page buttons
+    for (let p = 1; p <= totalPages; p++) {
+      if (totalPages > 7) {
+        if (p > 1 && p < currentPage - 1 && p === 2) {
+          buttonsHTML += `<span style="padding:0 0.3rem;color:var(--text-dim)">...</span>`;
+          continue;
+        }
+        if (p > currentPage + 1 && p < totalPages && p === totalPages - 1) {
+          buttonsHTML += `<span style="padding:0 0.3rem;color:var(--text-dim)">...</span>`;
+          continue;
+        }
+        if (p !== 1 && p !== totalPages && Math.abs(p - currentPage) > 1) {
+          continue;
+        }
+      }
+      buttonsHTML += `<button class="pagination-btn ${p === currentPage ? 'active' : ''}" data-page="${p}">${p}</button>`;
+    }
+
+    // Next button
+    buttonsHTML += `<button class="pagination-btn" id="pg-next" ${currentPage === totalPages ? 'disabled' : ''} title="Next Page">Next ›</button>`;
+
+    paginationButtons.innerHTML = buttonsHTML;
+
+    // Attach listeners
+    paginationButtons.querySelectorAll(".pagination-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        if (btn.id === "pg-prev" && currentPage > 1) {
+          currentPage--;
+          renderJobs();
+          jobsGrid.scrollIntoView({ behavior: 'smooth' });
+        } else if (btn.id === "pg-next" && currentPage < totalPages) {
+          currentPage++;
+          renderJobs();
+          jobsGrid.scrollIntoView({ behavior: 'smooth' });
+        } else if (btn.hasAttribute("data-page")) {
+          currentPage = parseInt(btn.getAttribute("data-page"), 10);
+          renderJobs();
+          jobsGrid.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   }
 
   // ==========================================================================
@@ -266,6 +359,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalSkillsMissing = document.getElementById("modal-skills-missing");
   const modalStrategyAdvice = document.getElementById("modal-strategy-advice");
   const modalApplyLinkedin = document.getElementById("modal-apply-linkedin");
+  const modalApplyCompany = document.getElementById("modal-apply-company");
   const modalApplyGoogle = document.getElementById("modal-apply-google");
   const modalCopyBtn = document.getElementById("modal-copy-btn");
 
@@ -305,15 +399,46 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalStrategyAdvice.textContent = advice;
 
-    // Direct Company Career Portal Apply link
-    modalApplyLinkedin.textContent = `Apply on ${job.company} Career Site ↗`;
+    // Direct Application button
+    const urlLower = (job.url || '').toLowerCase();
+    const sourceLower = (job.source_type || '').toLowerCase();
+    let applyLabel = 'Apply Online ↗';
+    let applyClass = 'btn btn-primary';
+
+    if (urlLower.includes('linkedin.com') || sourceLower.includes('linkedin')) {
+      applyLabel = 'Apply on LinkedIn ↗';
+      applyClass = 'btn btn-primary btn-linkedin';
+    } else if (urlLower.includes('naukri.com') || sourceLower.includes('naukri')) {
+      applyLabel = 'Apply on Naukri ↗';
+      applyClass = 'btn btn-primary btn-naukri';
+    } else if (urlLower.includes('indeed.com') || sourceLower.includes('indeed')) {
+      applyLabel = 'Apply on Indeed ↗';
+    } else {
+      applyLabel = `Apply on ${job.company} Career Site ↗`;
+    }
+
+    modalApplyLinkedin.textContent = applyLabel;
     modalApplyLinkedin.href = job.url;
-    modalApplyLinkedin.title = `Direct application on ${job.company} career portal (${job.source_domain || 'Official Site'})`;
+    modalApplyLinkedin.className = applyClass;
+    modalApplyLinkedin.title = `Direct application via ${job.source_type || 'Job Portal'}`;
+
+    if (modalApplyCompany) {
+      const compTarget = job.company_url || (job.source_domain ? `https://${job.source_domain}` : job.url);
+      modalApplyCompany.href = compTarget;
+      modalApplyCompany.style.display = "inline-flex";
+      modalApplyCompany.textContent = `🏢 ${job.company} Careers Portal ↗`;
+      modalApplyCompany.title = `Official careers portal for ${job.company}`;
+    }
+
+    if (modalApplyGoogle) {
+      modalApplyGoogle.href = `https://www.google.com/search?q=${encodeURIComponent(job.title + ' ' + job.company + ' fresher jobs india')}`;
+      modalApplyGoogle.title = `Search active listings for ${job.title} at ${job.company} on Google Jobs`;
+    }
 
     modalCopyBtn.onclick = () => {
-      const copyText = `${job.title} at ${job.company} (${job.source_domain || 'Direct Site'})\nApply Link: ${job.url}`;
+      const copyText = `${job.title} at ${job.company} (${job.source_domain || 'Direct Site'})\nApply Link: ${job.url}${job.company_url ? `\nCareers Portal: ${job.company_url}` : ''}`;
       navigator.clipboard.writeText(copyText).then(() => {
-        showToast("Copied direct company application link!");
+        showToast("Copied application & careers links!");
       });
     };
 
@@ -346,6 +471,7 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("input", (e) => {
     currentFilter.search = e.target.value.trim();
     clearSearchBtn.style.display = currentFilter.search ? "block" : "none";
+    currentPage = 1;
     renderJobs();
   });
 
@@ -353,12 +479,14 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.value = "";
     currentFilter.search = "";
     clearSearchBtn.style.display = "none";
+    currentPage = 1;
     renderJobs();
   });
 
   tierSelect.addEventListener("change", (e) => {
     currentFilter.tier = e.target.value;
     updateChipSelection(e.target.value);
+    currentPage = 1;
     renderJobs();
   });
 
@@ -366,11 +494,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const val = parseInt(e.target.value, 10);
     currentFilter.minScore = val / 100;
     scoreSliderVal.textContent = `${val}%`;
+    currentPage = 1;
     renderJobs();
   });
 
   sortSelect.addEventListener("change", (e) => {
     currentFilter.sortBy = e.target.value;
+    currentPage = 1;
     renderJobs();
   });
 
@@ -385,6 +515,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tierSelect.value = "all";
     clearSearchBtn.style.display = "none";
     updateChipSelection("all");
+    currentPage = 1;
     renderJobs();
   });
 
@@ -395,9 +526,18 @@ document.addEventListener("DOMContentLoaded", () => {
       currentFilter.tier = chipVal;
       tierSelect.value = chipVal;
       updateChipSelection(chipVal);
+      currentPage = 1;
       renderJobs();
     }
   });
+
+  if (pageSizeSelect) {
+    pageSizeSelect.addEventListener("change", (e) => {
+      pageSize = parseInt(e.target.value, 10);
+      currentPage = 1;
+      renderJobs();
+    });
+  }
 
   function updateChipSelection(val) {
     document.querySelectorAll(".chip").forEach(chip => {

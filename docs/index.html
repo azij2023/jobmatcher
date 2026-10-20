@@ -177,6 +177,23 @@
         <!-- Rendered via JS -->
       </div>
       
+      <!-- Pagination Controls ("Many Pages") -->
+      <div class="pagination-container" id="pagination-container" style="display:none;">
+        <div class="pagination-info" id="pagination-info">Showing 1–8 of 24 jobs (Page 1 of 3)</div>
+        <div class="pagination-buttons" id="pagination-buttons">
+          <!-- Rendered via JS -->
+        </div>
+        <div class="pagination-size">
+          <label for="page-size-select">Per page:</label>
+          <select id="page-size-select">
+            <option value="6">6 jobs</option>
+            <option value="8" selected>8 jobs</option>
+            <option value="12">12 jobs</option>
+            <option value="24">24 jobs</option>
+          </select>
+        </div>
+      </div>
+
       <!-- Empty State -->
       <div class="empty-state" id="empty-state" style="display:none;">
         <span class="empty-icon">🔎</span>
@@ -434,7 +451,13 @@
 
       <div class="modal-footer">
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-apply-linkedin">
-          <span>Apply on Company Career Site ↗</span>
+          <span>Apply on Platform ↗</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-apply-company">
+          <span>🏢 Company Careers Portal ↗</span>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="modal-apply-google">
+          <span>🔍 Google Jobs Search ↗</span>
         </a>
         <button class="btn btn-secondary" id="modal-copy-btn">
           <span>📋 Copy Info</span>

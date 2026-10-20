@@ -1460,3 +1460,100 @@ input[type="range"] {
   flex-wrap: wrap;
 }
 
+/* Pagination Controls ("Many Pages") */
+.pagination-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-card);
+  backdrop-filter: var(--backdrop-blur);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.pagination-info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.pagination-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pagination-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 38px;
+  height: 38px;
+  padding: 0 0.75rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-input);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background: #334155;
+  color: #fff;
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.pagination-btn.active {
+  background: var(--brand-primary);
+  color: #fff;
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+.pagination-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.pagination-size {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.pagination-size select {
+  background: var(--bg-input);
+  color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.65rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-company-site {
+  background: rgba(30, 41, 59, 0.9) !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(148, 163, 184, 0.3) !important;
+  font-size: 0.8rem !important;
+  padding: 0.6rem 0.85rem !important;
+}
+
+.btn-company-site:hover {
+  background: #334155 !important;
+  color: #fff !important;
+  border-color: rgba(99, 102, 241, 0.5) !important;
+}
+
+

@@ -85,6 +85,7 @@ def export_data():
             "source_type": scored.get("platform") or raw_job.get("source_type", "Job Portal"),
             "source_domain": raw_job.get("source_domain") or ("linkedin.com" if "linkedin" in j["url"] else ("naukri.com" if "naukri" in j["url"] else "Company Website")),
             "is_fresher": scored.get("is_fresher", True),
+            "company_url": raw_job.get("company_url", ""),
             "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),
             "description": desc or f"Fresher level opportunity for {j['title']} with strong analytical foundation."
