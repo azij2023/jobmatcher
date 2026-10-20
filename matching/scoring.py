@@ -94,7 +94,8 @@ def score_job(job: dict, profile: dict) -> dict:
                 "rejection_reason": f"Platform '{agg}' excluded by profile configuration."
             }
 
-    # 1. Check Hard Exclusion Keywords (Title) using word boundaries
+    # 1. Check Hard Exclusion Keywords (Title & Description) using word boundaries
+    raw_desc = job.get('raw_description', '').lower()
     for bad in profile.get("job_filters", {}).get("exclude_keywords", []):
         bad_lower = bad.lower().strip()
         
@@ -110,6 +111,15 @@ def score_job(job: dict, profile: dict) -> dict:
                 "final_score": 0.0,
                 "rejection_reason": f"Title contains excluded keyword: '{bad}'"
             }
+        
+        # For domain-specific or stale keywords (accounting, bookkeeping, 2 weeks ago, etc.), reject if in description
+        if any(term in bad_lower for term in ["accounting", "bookkeeping", "fixed asset", "taxation", "bank charges", "weeks ago", "month ago"]):
+            if re.search(pattern, raw_desc):
+                return {
+                    "rejected": True,
+                    "final_score": 0.0,
+                    "rejection_reason": f"Description contains excluded domain/stale keyword: '{bad}'"
+                }
 
     # 2. Check Experience Limit for Entry Level (Strict 0-1 year limit)
     max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 1)

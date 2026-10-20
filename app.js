@@ -34,7 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
     search: "",
     tier: "all",
     minScore: 0.60,
-    sortBy: "score-desc"
+    sortBy: "score-desc",
+    maxAgeHours: 24
   };
 
   let currentPage = 1;
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginationInfo = document.getElementById("pagination-info");
   const paginationButtons = document.getElementById("pagination-buttons");
   const pageSizeSelect = document.getElementById("page-size-select");
+  const freshnessSelect = document.getElementById("freshness-select");
 
   // ==========================================================================
   // 2. Initial Setup & Stats Display
@@ -116,6 +118,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const skillMatch = (job.matched_skills || []).some(s => s.toLowerCase().includes(q));
         if (!titleMatch && !compMatch && !catMatch && !sourceMatch && !skillMatch) return false;
       }
+
+      // Freshness filter: Strictly exclude jobs older than selected hours (e.g. 24h, no 2-week-old posts!)
+      if (job.hours_ago !== undefined && job.hours_ago > currentFilter.maxAgeHours) return false;
 
       return true;
     });
@@ -509,15 +514,25 @@ document.addEventListener("DOMContentLoaded", () => {
     currentFilter.search = "";
     currentFilter.tier = "all";
     currentFilter.minScore = 0.60;
+    currentFilter.maxAgeHours = 24;
     scoreSlider.value = 60;
     scoreSliderVal.textContent = "60%";
     sortSelect.value = "score-desc";
     tierSelect.value = "all";
+    if (freshnessSelect) freshnessSelect.value = "24";
     clearSearchBtn.style.display = "none";
     updateChipSelection("all");
     currentPage = 1;
     renderJobs();
   });
+
+  if (freshnessSelect) {
+    freshnessSelect.addEventListener("change", (e) => {
+      currentFilter.maxAgeHours = parseInt(e.target.value, 10);
+      currentPage = 1;
+      renderJobs();
+    });
+  }
 
   // Quick Chips
   tierChipsContainer.addEventListener("click", (e) => {

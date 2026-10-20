@@ -429,11 +429,28 @@ window.JOB_MATCHER_DATA = {
         "6+ years",
         "7+ years",
         "8+ years",
-        "10+ years"
+        "10+ years",
+        "accounting",
+        "accounts payable",
+        "accounts receivable",
+        "bookkeeping",
+        "fixed asset",
+        "taxation",
+        "bank charges",
+        "clerk",
+        "auditor",
+        "2 weeks ago",
+        "3 weeks ago",
+        "1 month ago",
+        "30+ days ago"
       ]
     },
     "freshness": {
-      "max_age_hours": 72,
+      "max_age_hours": 24,
+      "max_display_age_hours": 72,
+      "exclude_stale_jobs": true,
+      "filter_param_naukri_days": 1,
+      "filter_param_linkedin_tpr": "r86400",
       "allow_job_boards": true,
       "supported_platforms": [
         "LinkedIn",
@@ -451,7 +468,7 @@ window.JOB_MATCHER_DATA = {
   },
   "jobs": [
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=PhonePe+Associate+Data+Scientist&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=PhonePe+Associate+Data+Scientist&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Associate Data Scientist (Fresher Batch 2025/2026)",
       "company": "PhonePe",
       "location": "Bengaluru, Karnataka, India",
@@ -460,7 +477,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "\ud83e\udd48",
-      "posted_at": "2026-10-20 13:24",
+      "posted_at": "2026-10-20 14:03",
       "hours_ago": 3,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -474,7 +491,7 @@ window.JOB_MATCHER_DATA = {
       "description": "PhonePe is hiring an Associate Data Scientist for their user intelligence and payment analytics team in Bengaluru. Build statistical predictive models, evaluate transactional risk indicators, and write high-performance SQL and Python scripts. 0-1 year experience / campus freshers welcome."
     },
     {
-      "url": "https://www.naukri.com/fresher-data-scientist-jobs-in-bengaluru?k=mu+sigma+data+scientist&experience=0",
+      "url": "https://www.naukri.com/fresher-data-scientist-jobs-in-bengaluru?k=mu+sigma+data+scientist&experience=0&days=1&sortBy=date",
       "title": "Fresher Data Scientist (0-1 Yrs)",
       "company": "Mu Sigma",
       "location": "Bengaluru, Karnataka, India",
@@ -483,8 +500,8 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "\ud83e\udd48",
-      "posted_at": "2026-10-20 12:24",
-      "hours_ago": 4,
+      "posted_at": "2026-10-20 14:03",
+      "hours_ago": 3,
       "source_type": "Naukri",
       "source_domain": "naukri.com",
       "is_fresher": true,
@@ -498,7 +515,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Mu Sigma is actively hiring Fresher Data Scientists (Trainee Decision Scientists) in Bengaluru. 0 to 1 years experience. Work with Python, SQL, exploratory data analysis, predictive statistical modeling, and business problem solving."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Observe.AI+Applied+AI+Engineer&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Observe.AI+Applied+AI+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "AI Agent Engineer (Applied AI / LLM Systems)",
       "company": "Observe.AI",
       "location": "Hyderabad, Telangana, India",
@@ -507,7 +524,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Applied ML / Research",
       "priority": "Primary",
       "badge": "\ud83e\udd47",
-      "posted_at": "2026-10-20 14:24",
+      "posted_at": "2026-10-20 15:03",
       "hours_ago": 2,
       "source_type": "LinkedIn",
       "source_domain": "observe.ai",
@@ -520,7 +537,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Observe.AI Hyderabad is hiring an AI Agent Engineer to design, deploy, and optimize autonomous LLM agents, prompt engineering, RAG pipelines, and conversational AI integrations. Hands-on delivery with Python, LangChain, API integrations, and vector databases. 0 years experience / early career welcome."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Fraud+Operations+Associate&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Fraud+Operations+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment)",
       "company": "Stripe",
       "location": "Bengaluru, India",
@@ -529,7 +546,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "\ud83e\udd48",
-      "posted_at": "2026-10-20 13:24",
+      "posted_at": "2026-10-20 14:03",
       "hours_ago": 3,
       "source_type": "LinkedIn",
       "source_domain": "stripe.com",
@@ -542,7 +559,29 @@ window.JOB_MATCHER_DATA = {
       "description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Fractal+Analytics+Decision+Science+Fresher&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fivetran+Operations+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "title": "Data Operations & Systems Analyst",
+      "company": "Fivetran",
+      "location": "Bengaluru, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-20 06:03",
+      "hours_ago": 11,
+      "source_type": "LinkedIn",
+      "source_domain": "fivetran.com",
+      "is_fresher": true,
+      "company_url": "https://fivetran.com/careers",
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Fivetran Bengaluru is hiring an Operations & Systems Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and analytics systems."
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fractal+Analytics+Decision+Science+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Decision Science Analyst (Campus / Fresher)",
       "company": "Fractal Analytics",
       "location": "Mumbai / Gurugram, India",
@@ -551,7 +590,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "\ud83e\udd49",
-      "posted_at": "2026-10-20 12:24",
+      "posted_at": "2026-10-20 13:03",
       "hours_ago": 4,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -566,7 +605,30 @@ window.JOB_MATCHER_DATA = {
       "description": "Fractal Analytics is hiring Decision Science Analysts across Mumbai and Gurugram. Leverage decision trees, statistical hypothesis testing, A/B testing experimentation, and Python/SQL to drive enterprise decision making. 0 years experience required."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Microsoft+Applied+ML+Research+Intern&location=India&f_E=1%2C2",
+      "url": "https://www.naukri.com/decision-scientist-jobs-in-noida?k=EXL+Decision+Scientist&experience=0&days=1&sortBy=date",
+      "title": "Quantitative Decision Analyst - Trainee",
+      "company": "EXL Service",
+      "location": "Noida / Gurugram, India",
+      "score": 0.982,
+      "tier": 3,
+      "category": "Decision Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd49",
+      "posted_at": "2026-10-20 13:03",
+      "hours_ago": 4,
+      "source_type": "Naukri",
+      "source_domain": "naukri.com",
+      "is_fresher": true,
+      "company_url": "https://www.exlservice.com/careers",
+      "matched_skills": [
+        "sql",
+        "excel"
+      ],
+      "missing_skills": [],
+      "description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct decision science modeling, statistical hypothesis testing, regression analysis, SQL queries, and KPI reporting in Advanced Excel."
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Microsoft+Applied+ML+Research+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "AI / Applied ML Research Intern",
       "company": "Microsoft",
       "location": "Bengaluru, Karnataka, India",
@@ -575,7 +637,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Applied ML / Research",
       "priority": "Primary",
       "badge": "\ud83e\udd47",
-      "posted_at": "2026-10-20 14:24",
+      "posted_at": "2026-10-20 15:03",
       "hours_ago": 2,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -589,7 +651,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Microsoft Research India in Bengaluru is hiring an Applied ML Research Intern. Work on state-of-the-art deep learning, LLM fine-tuning, PyTorch implementations, and novel AI architectures. 0 years experience required (open to final year students and 2025/2026 fresh graduates)."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=GitLab+Quantitative+Analyst&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=GitLab+Quantitative+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Benefits Analyst (Quantitative & Decision Analyst)",
       "company": "GitLab",
       "location": "Bangalore, India",
@@ -598,7 +660,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "\ud83e\udd49",
-      "posted_at": "2026-10-20 12:24",
+      "posted_at": "2026-10-20 13:03",
       "hours_ago": 4,
       "source_type": "LinkedIn",
       "source_domain": "gitlab.com",
@@ -612,31 +674,7 @@ window.JOB_MATCHER_DATA = {
       "description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome."
     },
     {
-      "url": "https://www.naukri.com/quantitative-decision-analyst-jobs-in-noida?k=exl+analyst&experience=0",
-      "title": "Quantitative Decision Analyst - Trainee",
-      "company": "EXL Service",
-      "location": "Noida / Gurugram, India",
-      "score": 0.969,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "\ud83e\udd49",
-      "posted_at": "2026-10-20 11:24",
-      "hours_ago": 5,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.exlservice.com/careers",
-      "matched_skills": [
-        "sql",
-        "excel",
-        "decision_analysis"
-      ],
-      "missing_skills": [],
-      "description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct financial decision analysis, regression modeling, SQL queries, and KPI reporting in Advanced Excel."
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Thoughtworks+Analyst+Intern&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Thoughtworks+Analyst+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Software & Procurement Analyst Intern (Operations Optimization)",
       "company": "Thoughtworks",
       "location": "Gurgaon / Pune, India",
@@ -645,7 +683,7 @@ window.JOB_MATCHER_DATA = {
       "category": "OR / Optimization",
       "priority": "Secondary",
       "badge": "4",
-      "posted_at": "2026-10-20 11:24",
+      "posted_at": "2026-10-20 12:03",
       "hours_ago": 5,
       "source_type": "LinkedIn",
       "source_domain": "thoughtworks.com",
@@ -660,7 +698,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship)."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Delhivery+Operations+Research+Trainee&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Delhivery+Operations+Research+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Operations Research & Network Optimization Trainee",
       "company": "Delhivery",
       "location": "Gurugram, Haryana, India",
@@ -669,7 +707,7 @@ window.JOB_MATCHER_DATA = {
       "category": "OR / Optimization",
       "priority": "Secondary",
       "badge": "4",
-      "posted_at": "2026-10-20 11:24",
+      "posted_at": "2026-10-20 12:03",
       "hours_ago": 5,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -687,7 +725,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Delhivery is hiring an Operations Research Trainee in Gurugram. Solve supply chain routing optimization, linear programming models, facility allocation constraints, and integer programming in Python and PuLP. 0 years experience required (graduate trainee)."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Elastic+Machine+Learning+Engineer&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Elastic+Machine+Learning+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "UX & Systems Engineer (AI Search / Interface Systems)",
       "company": "Elastic",
       "location": "Bangalore, India",
@@ -696,7 +734,7 @@ window.JOB_MATCHER_DATA = {
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "5",
-      "posted_at": "2026-10-20 10:24",
+      "posted_at": "2026-10-20 11:03",
       "hours_ago": 6,
       "source_type": "LinkedIn",
       "source_domain": "elastic.co",
@@ -710,7 +748,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Elastic Bangalore is hiring an Engineer for AI search interfaces and evaluation pipelines. Implement telemetry tracking, neural search interface evaluation, Python scripts, Docker workflows, and interactive model diagnostics."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Jio+AI+Machine+Learning+Engineer+Fresher&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Jio+AI+Machine+Learning+Engineer+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Machine Learning Engineer - Fresher / New Grad",
       "company": "Jio AI COE",
       "location": "Bengaluru, Karnataka, India",
@@ -719,7 +757,7 @@ window.JOB_MATCHER_DATA = {
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "5",
-      "posted_at": "2026-10-20 10:24",
+      "posted_at": "2026-10-20 11:03",
       "hours_ago": 6,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -735,7 +773,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=InMobi+People+Analytics+Intern&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=InMobi+People+Analytics+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Intern - Creative & Communications, People Team (Talent Analytics)",
       "company": "InMobi",
       "location": "Bangalore, India",
@@ -744,7 +782,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Forecasting",
       "priority": "Secondary",
       "badge": "6",
-      "posted_at": "2026-10-20 09:24",
+      "posted_at": "2026-10-20 10:03",
       "hours_ago": 7,
       "source_type": "LinkedIn",
       "source_domain": "inmobi.com",
@@ -758,7 +796,7 @@ window.JOB_MATCHER_DATA = {
       "description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship)."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Flipkart+Demand+Forecasting+Analyst&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Flipkart+Demand+Forecasting+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Demand Forecasting & Inventory Analyst",
       "company": "Flipkart",
       "location": "Bengaluru, Karnataka, India",
@@ -767,7 +805,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Forecasting",
       "priority": "Secondary",
       "badge": "6",
-      "posted_at": "2026-10-20 09:24",
+      "posted_at": "2026-10-20 10:03",
       "hours_ago": 7,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -785,7 +823,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Flipkart Supply Chain Analytics is hiring a Demand Forecasting Analyst in Bengaluru. Build time series models (ARIMA, Prophet, XGBoost), analyze demand seasonality, write SQL queries, and optimize safety stock parameters. Freshers and 0-1 year graduates welcome."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Swiggy+Associate+Product+Manager+Intern&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Swiggy+Associate+Product+Manager+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Associate Product Manager (APM Intern)",
       "company": "Swiggy",
       "location": "Bengaluru, Karnataka, India",
@@ -794,7 +832,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Product",
       "priority": "Management / Adjacent",
       "badge": "7",
-      "posted_at": "2026-10-20 08:24",
+      "posted_at": "2026-10-20 09:03",
       "hours_ago": 8,
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
@@ -807,7 +845,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Swiggy is hiring an Associate Product Manager Intern in Bengaluru. Drive user journey analytics, track telemetry metrics, coordinate A/B testing rollouts, and write SQL queries for product KPI dashboards. 0 years experience required (internship)."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Software+Engineer+Intern+Bengaluru&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Software+Engineer+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Software Engineer Intern - Data Platform",
       "company": "Stripe",
       "location": "Bengaluru, India",
@@ -816,7 +854,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Engineering Adjacent",
       "priority": "Optional",
       "badge": "9",
-      "posted_at": "2026-10-20 03:24",
+      "posted_at": "2026-10-20 04:03",
       "hours_ago": 13,
       "source_type": "LinkedIn",
       "source_domain": "stripe.com",
@@ -830,7 +868,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity for university students to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL. 0 years experience required."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Associate+Bengaluru&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Associate+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Verifications Operations Associate (Compliance & User Operations)",
       "company": "Stripe",
       "location": "Bengaluru, India",
@@ -839,7 +877,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 06:24",
+      "posted_at": "2026-10-20 07:03",
       "hours_ago": 10,
       "source_type": "LinkedIn",
       "source_domain": "stripe.com",
@@ -852,29 +890,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Stripe Bengaluru is hiring a Verifications Operations Associate. Synthesize customer risk data, audit operational verification processes, and write SQL queries for tracking user compliance metrics. Early career welcome."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Fivetran+Operations+Analyst&location=India&f_E=1%2C2",
-      "title": "Accounts Payable & Operations Analyst",
-      "company": "Fivetran",
-      "location": "Bengaluru, India",
-      "score": 0.888,
-      "tier": 8,
-      "category": "Strategy / Programs",
-      "priority": "Management / Adjacent",
-      "badge": "8",
-      "posted_at": "2026-10-20 05:24",
-      "hours_ago": 11,
-      "source_type": "LinkedIn",
-      "source_domain": "fivetran.com",
-      "is_fresher": true,
-      "company_url": "https://fivetran.com/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [],
-      "description": "Fivetran Bengaluru is hiring an Operations & Accounts Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and financial systems."
-    },
-    {
-      "url": "https://www.naukri.com/strategy-operations-jobs-in-bengaluru?k=zepto+operations&experience=0",
+      "url": "https://www.naukri.com/operations-associate-jobs-in-bengaluru?k=zepto+operations+analytics&experience=0&days=1&sortBy=date",
       "title": "Strategy & Operations Associate (Fresher)",
       "company": "Zepto",
       "location": "Bengaluru, Karnataka, India",
@@ -883,8 +899,8 @@ window.JOB_MATCHER_DATA = {
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 10:24",
-      "hours_ago": 6,
+      "posted_at": "2026-10-20 12:03",
+      "hours_ago": 5,
       "source_type": "Naukri",
       "source_domain": "naukri.com",
       "is_fresher": true,
@@ -897,7 +913,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Zepto Quick Commerce is hiring a Strategy and Operations Associate in Bengaluru. 0 to 1 years experience. Manage operational metrics tracking, process optimization, SQL reports, and cross-functional programs. Freshers welcome."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Associate&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Associate - Content & Analytics (Data Transformation)",
       "company": "Groww",
       "location": "Bengaluru, India",
@@ -906,7 +922,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Engineering Adjacent",
       "priority": "Optional",
       "badge": "9",
-      "posted_at": "2026-10-20 02:24",
+      "posted_at": "2026-10-20 03:03",
       "hours_ago": 14,
       "source_type": "LinkedIn",
       "source_domain": "groww.in",
@@ -923,7 +939,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role."
     },
     {
-      "url": "https://www.naukri.com/junior-data-engineer-jobs-in-chennai?k=latentview+data+engineer&experience=0",
+      "url": "https://www.naukri.com/data-engineer-jobs-in-chennai?k=latentview+data+engineer&experience=0&days=1&sortBy=date",
       "title": "Junior Data Engineer / ETL Trainee",
       "company": "LatentView Analytics",
       "location": "Chennai / Bengaluru, India",
@@ -932,8 +948,8 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Engineering Adjacent",
       "priority": "Optional",
       "badge": "9",
-      "posted_at": "2026-10-20 09:24",
-      "hours_ago": 7,
+      "posted_at": "2026-10-20 11:03",
+      "hours_ago": 6,
       "source_type": "Naukri",
       "source_domain": "naukri.com",
       "is_fresher": true,
@@ -948,7 +964,7 @@ window.JOB_MATCHER_DATA = {
       "description": "LatentView Analytics is hiring a Junior Data Engineer / ETL Trainee across Chennai and Bengaluru. 0 to 1 years experience. Build SQL transformations, dbt data models, Python ETL pipelines, and warehouse schemas."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Intern&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Video Editor & Media Intern (Product Telemetry & User Growth)",
       "company": "Groww",
       "location": "Bengaluru, India",
@@ -957,7 +973,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Product",
       "priority": "Management / Adjacent",
       "badge": "7",
-      "posted_at": "2026-10-20 08:24",
+      "posted_at": "2026-10-20 09:03",
       "hours_ago": 8,
       "source_type": "LinkedIn",
       "source_domain": "groww.in",
@@ -968,7 +984,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship)."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Apprenticeship&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Apprenticeship&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Operations Associate, Apprenticeship (Early Career)",
       "company": "Stripe",
       "location": "Bengaluru, India",
@@ -977,7 +993,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 07:24",
+      "posted_at": "2026-10-20 08:03",
       "hours_ago": 9,
       "source_type": "LinkedIn",
       "source_domain": "stripe.com",
@@ -988,7 +1004,7 @@ window.JOB_MATCHER_DATA = {
       "description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required."
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=MongoDB+Associate+Recruiter&location=India&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=MongoDB+Associate+Recruiter&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
       "title": "Associate Recruiter (Talent Operations & Sourcing)",
       "company": "MongoDB",
       "location": "Gurugram, India",
@@ -997,7 +1013,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 04:24",
+      "posted_at": "2026-10-20 05:03",
       "hours_ago": 12,
       "source_type": "LinkedIn",
       "source_domain": "mongodb.com",
@@ -1010,10 +1026,10 @@ window.JOB_MATCHER_DATA = {
   ],
   "stats": {
     "total_matches": 24,
-    "primary_matches": 8,
+    "primary_matches": 9,
     "secondary_matches": 6,
-    "adjacent_matches": 10,
-    "avg_score": 0.921,
+    "adjacent_matches": 9,
+    "avg_score": 0.926,
     "top_categories": [
       "Data Science",
       "Applied ML / Research",

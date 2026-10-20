@@ -428,12 +428,29 @@
       "6+ years",
       "7+ years",
       "8+ years",
-      "10+ years"
+      "10+ years",
+      "accounting",
+      "accounts payable",
+      "accounts receivable",
+      "bookkeeping",
+      "fixed asset",
+      "taxation",
+      "bank charges",
+      "clerk",
+      "auditor",
+      "2 weeks ago",
+      "3 weeks ago",
+      "1 month ago",
+      "30+ days ago"
     ]
   },
 
   "freshness": {
-    "max_age_hours": 72,
+    "max_age_hours": 24,
+    "max_display_age_hours": 72,
+    "exclude_stale_jobs": true,
+    "filter_param_naukri_days": 1,
+    "filter_param_linkedin_tpr": "r86400",
     "allow_job_boards": true,
     "supported_platforms": [
       "LinkedIn",
