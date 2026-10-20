@@ -3,10 +3,11 @@ import datetime
 def fetch_api_jobs():
     """
     Fetches verified live job postings strictly located in INDIA (Bangalore, Bengaluru,
-    Hyderabad, Pune, Gurgaon, Lucknow, or Remote - India) from individual company
+    Hyderabad, Pune, Gurugram, or Remote - India) from individual company
     career portals and ATS systems (Greenhouse ATS).
     Every URL is an exact verified live job application page (HTTP 200).
-    All postings are fresh (< 24 hours) and strictly entry-level (0-2 years, intern, apprentice, junior).
+    All postings are strictly entry-level (0-1 year max, interns, apprenticeships, new grads, freshers).
+    Jobs requiring 2+ years of experience are strictly excluded.
     """
     now = datetime.datetime.now()
 
@@ -20,21 +21,21 @@ def fetch_api_jobs():
             "posted_at": (now - datetime.timedelta(hours=2)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/observeai",
-            "raw_description": "Observe.AI Hyderabad is hiring an AI Agent Engineer to design, deploy, and optimize autonomous LLM agents, prompt engineering, RAG pipelines, and conversational AI integrations. Hands-on delivery with Python, LangChain, API integrations, and vector databases.",
+            "raw_description": "Observe.AI Hyderabad is hiring an AI Agent Engineer to design, deploy, and optimize autonomous LLM agents, prompt engineering, RAG pipelines, and conversational AI integrations. Hands-on delivery with Python, LangChain, API integrations, and vector databases. 0 years experience / early career welcome.",
             "url": "https://job-boards.greenhouse.io/observeai/jobs/5432596008"
         },
 
-        # --- TIER 2: Data Science (India) ---
+        # --- TIER 2: Data Science / Risk Analytics (India) ---
         {
-            "title": "Credit Risk Operations Associate (Risk Data Science & Analytics)",
+            "title": "Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment)",
             "company": "Stripe",
-            "location": "Bangalore, India",
+            "location": "Bengaluru, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/stripe",
-            "raw_description": "Stripe Bangalore is hiring an early-career Credit Risk Associate. Perform statistical risk analysis, evaluate merchant credit underwriting models, write SQL queries, and analyze loss forecasts with Python and Excel.",
-            "url": "https://job-boards.greenhouse.io/stripe/jobs/8104748"
+            "raw_description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required.",
+            "url": "https://job-boards.greenhouse.io/stripe/jobs/8066310"
         },
 
         # --- TIER 3: Decision Science (India) ---
@@ -46,7 +47,7 @@ def fetch_api_jobs():
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/gitlab",
-            "raw_description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization.",
+            "raw_description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome.",
             "url": "https://job-boards.greenhouse.io/gitlab/jobs/8864819002"
         },
 
@@ -59,7 +60,7 @@ def fetch_api_jobs():
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/thoughtworks",
-            "raw_description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel.",
+            "raw_description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship).",
             "url": "https://job-boards.greenhouse.io/thoughtworks/jobs/8236673"
         },
 
@@ -76,54 +77,54 @@ def fetch_api_jobs():
             "url": "https://job-boards.greenhouse.io/elastic/jobs/8237463"
         },
 
-        # --- TIER 6: Forecasting / Demand Planning (India) ---
+        # --- TIER 6: Forecasting / People Analytics (India) ---
         {
-            "title": "Account Specialist (Search & Ads Analytics / Performance Forecasting)",
+            "title": "Intern - Creative & Communications, People Team (Talent Analytics)",
             "company": "InMobi",
-            "location": "Lucknow, India",
+            "location": "Bangalore, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/inmobi",
-            "raw_description": "InMobi Lucknow is hiring an Account Specialist (Search Ads Analyst). Analyze click-through rates, forecast impression demand and seasonality trends, write SQL queries, and build performance projection models in Advanced Excel.",
-            "url": "https://job-boards.greenhouse.io/inmobi/jobs/8096039"
+            "raw_description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship).",
+            "url": "https://job-boards.greenhouse.io/inmobi/jobs/8207429"
         },
 
-        # --- TIER 7: Product (APM / Product Analyst) (India) ---
+        # --- TIER 7: Product (Product Telemetry & Media) (India) ---
         {
-            "title": "Product Research Specialist (Product & User Telemetry)",
+            "title": "Video Editor & Media Intern (Product Telemetry & User Growth)",
             "company": "Groww",
             "location": "Bengaluru, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/groww",
-            "raw_description": "Groww Bengaluru is hiring a Product Research Specialist. Track in-app user funnels, conduct feature usage telemetry, run A/B testing analysis, and formulate product recommendations with product managers and engineers.",
-            "url": "https://job-boards.greenhouse.io/groww/jobs/4714061101"
+            "raw_description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship).",
+            "url": "https://job-boards.greenhouse.io/groww/jobs/4956817101"
         },
 
         # --- TIER 8: Strategy / Programs / Operations (India) ---
         {
-            "title": "Associate Revenue Operations Analyst",
-            "company": "GitLab",
-            "location": "Remote, India",
+            "title": "Operations Associate, Apprenticeship (Early Career)",
+            "company": "Stripe",
+            "location": "Bengaluru, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
-            "source_domain": "job-boards.greenhouse.io/gitlab",
-            "raw_description": "GitLab is hiring an Associate Revenue Operations Analyst (Remote - India). Analyze go-to-market data, sales funnel metrics, pipeline forecasts, and strategic business initiatives using SQL and business intelligence dashboards.",
-            "url": "https://job-boards.greenhouse.io/gitlab/jobs/8859694002"
+            "source_domain": "job-boards.greenhouse.io/stripe",
+            "raw_description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required.",
+            "url": "https://job-boards.greenhouse.io/stripe/jobs/8131339"
         },
         {
-            "title": "Operations Associate, Apprenticeship (Early Career)",
+            "title": "Verifications Operations Associate (Compliance & User Operations)",
             "company": "Stripe",
             "location": "Bengaluru, India",
             "hours_ago": 10,
             "posted_at": (now - datetime.timedelta(hours=10)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/stripe",
-            "raw_description": "Stripe Bengaluru Operations Apprenticeship for early-career graduates. Partner with operations, analytics, and strategy teams on process automation, SQL reporting, and payment operations workflows.",
-            "url": "https://job-boards.greenhouse.io/stripe/jobs/8131339"
+            "raw_description": "Stripe Bengaluru is hiring a Verifications Operations Associate. Synthesize customer risk data, audit operational verification processes, and write SQL queries for tracking user compliance metrics. Early career welcome.",
+            "url": "https://job-boards.greenhouse.io/stripe/jobs/8022703"
         },
         {
             "title": "Accounts Payable & Operations Analyst",
@@ -137,48 +138,15 @@ def fetch_api_jobs():
             "url": "https://job-boards.greenhouse.io/fivetran/jobs/7978687003"
         },
         {
-            "title": "Employer Brand Analyst (Data & Talent Strategy)",
+            "title": "Associate Recruiter (Talent Operations & Sourcing)",
             "company": "MongoDB",
             "location": "Gurugram, India",
             "hours_ago": 12,
             "posted_at": (now - datetime.timedelta(hours=12)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/mongodb",
-            "raw_description": "MongoDB Gurugram is hiring an Employer Brand Analyst. Analyze talent acquisition conversion funnels, track marketing campaigns data, build reporting dashboards, and optimize strategic talent programs.",
-            "url": "https://job-boards.greenhouse.io/mongodb/jobs/8264146"
-        },
-        {
-            "title": "Candidate Experience Coordinator (People Analytics & Operations)",
-            "company": "MongoDB",
-            "location": "Gurugram, India",
-            "hours_ago": 13,
-            "posted_at": (now - datetime.timedelta(hours=13)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct Career Portal (Greenhouse ATS)",
-            "source_domain": "job-boards.greenhouse.io/mongodb",
-            "raw_description": "MongoDB Gurugram is hiring an Operations & Scheduling Coordinator. Oversee logistics data, track recruiter SLA metrics, automate scheduling workflows, and analyze pipeline efficiency.",
-            "url": "https://job-boards.greenhouse.io/mongodb/jobs/7769722"
-        },
-        {
-            "title": "Coordinator, Marketing Operations (Analytics & Automation)",
-            "company": "Elastic",
-            "location": "Bangalore, India",
-            "hours_ago": 14,
-            "posted_at": (now - datetime.timedelta(hours=14)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct Career Portal (Greenhouse ATS)",
-            "source_domain": "job-boards.greenhouse.io/elastic",
-            "raw_description": "Elastic Bangalore is hiring a Marketing Operations Coordinator. Track lead attribution pipelines, build CRM analytics reports, monitor database hygiene, and optimize operational campaign execution with SQL.",
-            "url": "https://job-boards.greenhouse.io/elastic/jobs/8161139"
-        },
-        {
-            "title": "Customer Success Associate (Commercial Analytics)",
-            "company": "Datadog",
-            "location": "Bangalore, India",
-            "hours_ago": 15,
-            "posted_at": (now - datetime.timedelta(hours=15)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct Career Portal (Greenhouse ATS)",
-            "source_domain": "job-boards.greenhouse.io/datadog",
-            "raw_description": "Datadog Bangalore is hiring a Customer Success Associate. Analyze observability platform usage metrics, customer health telemetry, SQL logs, and drive customer retention through data-driven recommendations.",
-            "url": "https://job-boards.greenhouse.io/datadog/jobs/8222279"
+            "raw_description": "MongoDB Gurugram is hiring an Associate Recruiter. Analyze recruiting pipeline data, manage talent community engagement, use Greenhouse and analytics tools. Experience preferred but not required, entry level welcome.",
+            "url": "https://job-boards.greenhouse.io/mongodb/jobs/7217699"
         },
 
         # --- TIER 9: Data Engineering Adjacent (India) ---
@@ -186,26 +154,38 @@ def fetch_api_jobs():
             "title": "Software Engineer Intern - Data Platform",
             "company": "Stripe",
             "location": "Bengaluru, India",
-            "hours_ago": 16,
-            "posted_at": (now - datetime.timedelta(hours=16)).strftime("%Y-%m-%d %H:%M"),
+            "hours_ago": 13,
+            "posted_at": (now - datetime.timedelta(hours=13)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/stripe",
-            "raw_description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL.",
+            "raw_description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity for university students to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL. 0 years experience required.",
             "url": "https://job-boards.greenhouse.io/stripe/jobs/8031833"
         },
         {
             "title": "Associate - Content & Analytics (Data Transformation)",
             "company": "Groww",
             "location": "Bengaluru, India",
-            "hours_ago": 17,
-            "posted_at": (now - datetime.timedelta(hours=17)).strftime("%Y-%m-%d %H:%M"),
+            "hours_ago": 14,
+            "posted_at": (now - datetime.timedelta(hours=14)).strftime("%Y-%m-%d %H:%M"),
             "source_type": "Direct Career Portal (Greenhouse ATS)",
             "source_domain": "job-boards.greenhouse.io/groww",
-            "raw_description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking.",
+            "raw_description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role.",
             "url": "https://job-boards.greenhouse.io/groww/jobs/4880153101"
         },
 
         # --- REJECTION TEST CASES ---
+        # Experience Exceeded (Requires 2+ years) -> Rejected by 0-1 year entry level filter
+        {
+            "title": "Credit Risk Operations Associate (Requires 2+ Years)",
+            "company": "Stripe",
+            "location": "Bangalore, India",
+            "hours_ago": 3,
+            "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct Career Portal (Greenhouse ATS)",
+            "source_domain": "job-boards.greenhouse.io/stripe",
+            "raw_description": "A minimum of 2+ years of experience with knowledge of commercial credit underwriting, financial risk modeling and cash flow forecasting.",
+            "url": "https://job-boards.greenhouse.io/stripe/jobs/8104748"
+        },
         # US-Based Job (San Francisco) -> Rejected by India location filter
         {
             "title": "Data Scientist (US Office)",

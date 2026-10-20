@@ -43,7 +43,10 @@
         "strategy & analytics business partner",
         "university grad data scientist",
         "credit risk operations associate",
-        "credit risk analyst"
+        "credit risk analyst",
+        "fraud operations associate",
+        "fraud operations associate sdc",
+        "fraud operations associate (risk analytics)"
       ]
     },
     {
@@ -131,7 +134,11 @@
         "account specialist (search & ads analytics / performance forecasting)",
         "economist & forecasting",
         "workflows & analytics",
-        "data, workflows & analytics"
+        "data, workflows & analytics",
+        "intern - creative & communications",
+        "talent analytics intern",
+        "creative & communications intern",
+        "people analytics intern"
       ]
     },
     {
@@ -154,7 +161,11 @@
         "associate product manager (apm / pm i)",
         "product manager - monetization",
         "early career, associate product manager",
-        "associate product manager, new grad"
+        "associate product manager, new grad",
+        "video editor intern",
+        "media intern",
+        "product telemetry intern",
+        "product & media intern"
       ]
     },
     {
@@ -181,7 +192,11 @@
         "coordinator, marketing operations",
         "customer success associate",
         "operations associate",
-        "workplace operations analyst"
+        "workplace operations analyst",
+        "associate recruiter",
+        "talent operations associate",
+        "verifications operations associate",
+        "operations associate, apprenticeship (early career)"
       ]
     },
     {
@@ -362,7 +377,8 @@
   "job_filters": {
     "minimum_match_score": 0.60,
     "require_entry_level": true,
-    "max_experience_years": 2,
+    "max_experience_years": 1,
+    "reject_if_requires_two_plus_years": true,
     "exclude_keywords": [
       "senior",
       "sr.",
@@ -377,6 +393,15 @@
       "manager",
       "architect",
       "phd required",
+      "2+ years",
+      "2 years",
+      "minimum 2 years",
+      "minimum of 2 years",
+      "at least 2 years",
+      "2-3 years",
+      "2-4 years",
+      "2-5 years",
+      "2-8 years",
       "3+ years",
       "4+ years",
       "5+ years",

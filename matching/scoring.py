@@ -96,13 +96,23 @@ def score_job(job: dict, profile: dict) -> dict:
                 "rejection_reason": f"Title contains excluded keyword: '{bad}'"
             }
 
-    # 2. Check Experience Limit for Entry Level
-    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 2)
+    # 2. Check Experience Limit for Entry Level (Strict 0-1 year limit)
+    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 1)
     if min_exp is not None and min_exp > max_allowed_exp:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp})"
+            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} year for entry-level)"
+        }
+
+    # 2b. Check Description for explicit 2+ years requirement
+    full_text = f"{title} {job.get('raw_description', '')}".lower()
+    two_plus_match = re.search(r"(?:minimum(?:\s+of)?|at\s+least|\b)\s*([2-9]|\d{2,})\+?\s*(?:-\s*\d+)?\s*years?", full_text)
+    if two_plus_match:
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"Job demands '{two_plus_match.group(0).strip()}' (exceeds 0-1 year entry-level limit)"
         }
 
     # 3. Check Seniority / Level Filter
