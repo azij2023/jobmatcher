@@ -82,29 +82,29 @@
       <div class="stats-grid" id="stats-grid">
         <div class="stat-card" id="stat-primary">
           <div class="stat-header">
-            <span class="stat-badge badge-primary">Primary Tier (1–4)</span>
+            <span class="stat-badge badge-primary">Primary Tiers (1–7)</span>
             <span class="stat-icon">🥇</span>
           </div>
           <div class="stat-value" id="stat-primary-val">0</div>
-          <div class="stat-label">Applied ML, DS, Decision & OR</div>
+          <div class="stat-label">ML, DS, OR, Product, Strategy, Forecasting</div>
         </div>
 
         <div class="stat-card" id="stat-secondary">
           <div class="stat-header">
-            <span class="stat-badge badge-secondary">Secondary Tier (5–6)</span>
+            <span class="stat-badge badge-secondary">Secondary Tier (8)</span>
             <span class="stat-icon">🥈</span>
           </div>
           <div class="stat-value" id="stat-secondary-val">0</div>
-          <div class="stat-label">ML Engineering & Forecasting</div>
+          <div class="stat-label">ML Engineering (Applied MLE)</div>
         </div>
 
         <div class="stat-card" id="stat-adjacent">
           <div class="stat-header">
-            <span class="stat-badge badge-adjacent">Adjacent Tier (7–9)</span>
+            <span class="stat-badge badge-adjacent">Optional Tier (9)</span>
             <span class="stat-icon">🥉</span>
           </div>
           <div class="stat-value" id="stat-adjacent-val">0</div>
-          <div class="stat-label">Product (APM), Strategy & DE</div>
+          <div class="stat-label">Data Engineering Adjacent</div>
         </div>
 
         <div class="stat-card" id="stat-score">
@@ -133,18 +133,18 @@
             <label for="tier-select">Category / Tier:</label>
             <select id="tier-select">
               <option value="all">All Tiers (1–9)</option>
-              <option value="primary">🥇 Primary Roles (Tiers 1, 2, 3, 4)</option>
-              <option value="secondary">🥈 Secondary Roles (Tiers 5, 6)</option>
-              <option value="adjacent">🥉 Management & Adjacent (Tiers 7, 8, 9)</option>
+              <option value="primary">🥇 Primary Roles (Tiers 1–7)</option>
+              <option value="secondary">🥈 Secondary Roles (Tier 8: ML Engineering)</option>
+              <option value="adjacent">⚡ Optional Roles (Tier 9: Data Engineering)</option>
               <option value="1">Tier 1: Applied ML / Research</option>
               <option value="2">Tier 2: Data Science</option>
               <option value="3">Tier 3: Decision Science</option>
               <option value="4">🏅 Tier 4: OR / Optimization (Primary)</option>
-              <option value="5">Tier 5: ML Engineering</option>
-              <option value="6">Tier 6: Forecasting</option>
-              <option value="7">Tier 7: Product (APM)</option>
-              <option value="8">Tier 8: Strategy / Programs</option>
-              <option value="9">Tier 9: Data Engineering Adjacent</option>
+              <option value="5">Tier 5: Product (Management) (Primary)</option>
+              <option value="6">Tier 6: Strategy (Management) (Primary)</option>
+              <option value="7">Tier 7: Forecasting (Primary)</option>
+              <option value="8">Tier 8: ML Engineering (Secondary)</option>
+              <option value="9">Tier 9: Data Engineering Adjacent (Optional)</option>
             </select>
           </div>
 
@@ -176,17 +176,17 @@
       <!-- Quick Tier Filter Chips -->
       <div class="tier-chips" id="tier-chips">
         <button class="chip active" data-chip="all">All Roles</button>
-        <button class="chip" data-chip="primary">🥇 Primary (1–4)</button>
-        <button class="chip" data-chip="secondary">🥈 Secondary (5–6)</button>
-        <button class="chip" data-chip="adjacent">⚡ Adjacent (7–9)</button>
+        <button class="chip" data-chip="primary">🥇 Primary (1–7)</button>
+        <button class="chip" data-chip="secondary">🥈 Secondary (Tier 8)</button>
+        <button class="chip" data-chip="adjacent">⚡ Optional (Tier 9)</button>
         <button class="chip" data-chip="1">🥇 Tier 1: Applied ML</button>
         <button class="chip" data-chip="2">🥈 Tier 2: Data Science</button>
         <button class="chip" data-chip="3">🥉 Tier 3: Decision Science</button>
         <button class="chip" data-chip="4">🏅 Tier 4: OR / Optimization</button>
-        <button class="chip" data-chip="5">5 Tier 5: ML Engineering</button>
-        <button class="chip" data-chip="6">6 Tier 6: Forecasting</button>
-        <button class="chip" data-chip="7">7 Tier 7: Product (APM)</button>
-        <button class="chip" data-chip="8">8 Tier 8: Strategy</button>
+        <button class="chip" data-chip="5">5 Tier 5: Product (Mgmt)</button>
+        <button class="chip" data-chip="6">6 Tier 6: Strategy (Mgmt)</button>
+        <button class="chip" data-chip="7">7 Tier 7: Forecasting</button>
+        <button class="chip" data-chip="8">8 Tier 8: ML Engineering</button>
         <button class="chip" data-chip="9">9 Tier 9: Data Eng</button>
       </div>
 
@@ -323,15 +323,15 @@
               <div class="form-group">
                 <label for="test-category">Role Category</label>
                 <select id="test-category">
-                  <option value="Applied ML / Research">Tier 1: Applied ML / Research</option>
-                  <option value="Data Science">Tier 2: Data Science</option>
-                  <option value="Decision Science">Tier 3: Decision Science</option>
+                  <option value="Applied ML / Research">Tier 1: Applied ML / Research (Primary)</option>
+                  <option value="Data Science">Tier 2: Data Science (Primary)</option>
+                  <option value="Decision Science">Tier 3: Decision Science (Primary)</option>
                   <option value="OR / Optimization">Tier 4: OR / Optimization (Primary)</option>
-                  <option value="ML Engineering">Tier 5: ML Engineering</option>
-                  <option value="Forecasting">Tier 6: Forecasting</option>
-                  <option value="Product">Tier 7: Product</option>
-                  <option value="Strategy / Programs">Tier 8: Strategy / Programs</option>
-                  <option value="Data Engineering Adjacent">Tier 9: Data Engineering Adjacent</option>
+                  <option value="Product">Tier 5: Product (Management) (Primary)</option>
+                  <option value="Strategy / Programs">Tier 6: Strategy (Management) (Primary)</option>
+                  <option value="Forecasting">Tier 7: Forecasting (Primary)</option>
+                  <option value="ML Engineering">Tier 8: ML Engineering (Secondary)</option>
+                  <option value="Data Engineering Adjacent">Tier 9: Data Engineering Adjacent (Optional)</option>
                   <option value="Software Engineering">Other: Software Engineering (Out of scope)</option>
                 </select>
               </div>

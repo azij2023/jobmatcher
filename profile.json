@@ -1,6 +1,5 @@
 {
   "target_level": "fresher",
-
   "role_mapping": [
     {
       "tier": 1,
@@ -84,7 +83,7 @@
       "priority": "Primary",
       "badge": "🏅",
       "category": "OR / Optimization",
-      "weight": 0.92,
+      "weight": 0.9,
       "roles": [
         "optimization scientist",
         "or scientist",
@@ -106,61 +105,10 @@
     },
     {
       "tier": 5,
-      "priority": "Secondary",
+      "priority": "Primary",
       "badge": "5",
-      "category": "ML Engineering",
-      "weight": 0.82,
-      "roles": [
-        "machine learning engineer",
-        "applied machine learning engineer",
-        "junior machine learning engineer",
-        "associate ml engineer",
-        "ml engineer intern",
-        "applied ml engineer",
-        "machine learning engineer (applied ml)",
-        "ai platform & applications engineer",
-        "ux & systems engineer",
-        "ux & systems engineer (ai search / interface systems)",
-        "software engineer - machine learning",
-        "software engineer - edge ai",
-        "edge ai",
-        "machine learning engineer - fresher",
-        "machine learning engineer - fresher / new grad"
-      ]
-    },
-    {
-      "tier": 6,
-      "priority": "Secondary",
-      "badge": "6",
-      "category": "Forecasting",
-      "weight": 0.80,
-      "roles": [
-        "time series scientist",
-        "forecasting scientist",
-        "forecasting analyst",
-        "time series analyst",
-        "demand forecasting specialist",
-        "forecasting engineer",
-        "demand & forecasting analyst",
-        "pipeline & streaming data engineer",
-        "account specialist",
-        "account specialist (search & ads analytics / performance forecasting)",
-        "economist & forecasting",
-        "workflows & analytics",
-        "data, workflows & analytics",
-        "intern - creative & communications",
-        "talent analytics intern",
-        "creative & communications intern",
-        "people analytics intern",
-        "demand forecasting & inventory analyst"
-      ]
-    },
-    {
-      "tier": 7,
-      "priority": "Management / Adjacent",
-      "badge": "7",
       "category": "Product",
-      "weight": 0.70,
+      "weight": 0.88,
       "roles": [
         "associate product manager",
         "apm",
@@ -185,11 +133,11 @@
       ]
     },
     {
-      "tier": 8,
-      "priority": "Management / Adjacent",
-      "badge": "8",
+      "tier": 6,
+      "priority": "Primary",
+      "badge": "6",
       "category": "Strategy / Programs",
-      "weight": 0.65,
+      "weight": 0.86,
       "roles": [
         "strategy analyst",
         "business operations analyst",
@@ -217,11 +165,62 @@
       ]
     },
     {
+      "tier": 7,
+      "priority": "Primary",
+      "badge": "7",
+      "category": "Forecasting",
+      "weight": 0.84,
+      "roles": [
+        "time series scientist",
+        "forecasting scientist",
+        "forecasting analyst",
+        "time series analyst",
+        "demand forecasting specialist",
+        "forecasting engineer",
+        "demand & forecasting analyst",
+        "pipeline & streaming data engineer",
+        "account specialist",
+        "account specialist (search & ads analytics / performance forecasting)",
+        "economist & forecasting",
+        "workflows & analytics",
+        "data, workflows & analytics",
+        "intern - creative & communications",
+        "talent analytics intern",
+        "creative & communications intern",
+        "people analytics intern",
+        "demand forecasting & inventory analyst"
+      ]
+    },
+    {
+      "tier": 8,
+      "priority": "Secondary",
+      "badge": "8",
+      "category": "ML Engineering",
+      "weight": 0.78,
+      "roles": [
+        "machine learning engineer",
+        "applied machine learning engineer",
+        "junior machine learning engineer",
+        "associate ml engineer",
+        "ml engineer intern",
+        "applied ml engineer",
+        "machine learning engineer (applied ml)",
+        "ai platform & applications engineer",
+        "ux & systems engineer",
+        "ux & systems engineer (ai search / interface systems)",
+        "software engineer - machine learning",
+        "software engineer - edge ai",
+        "edge ai",
+        "machine learning engineer - fresher",
+        "machine learning engineer - fresher / new grad"
+      ]
+    },
+    {
       "tier": 9,
       "priority": "Optional",
       "badge": "9",
       "category": "Data Engineering Adjacent",
-      "weight": 0.60,
+      "weight": 0.65,
       "roles": [
         "analytics engineer",
         "junior analytics engineer",
@@ -242,7 +241,6 @@
       ]
     }
   ],
-
   "target_roles": [
     "applied scientist",
     "applied ml scientist",
@@ -267,7 +265,6 @@
     "analytics engineer",
     "junior data engineer"
   ],
-
   "seniority": {
     "level": "entry_level",
     "acceptable": [
@@ -297,7 +294,6 @@
       "architect"
     ]
   },
-
   "locations": {
     "require_india_only": true,
     "preferred_cities": [
@@ -313,9 +309,14 @@
       "delhi",
       "kolkata"
     ],
-    "acceptable": ["india", "remote - india", "remote, india", "remote (india)", "pan_india"]
+    "acceptable": [
+      "india",
+      "remote - india",
+      "remote, india",
+      "remote (india)",
+      "pan_india"
+    ]
   },
-
   "skills": {
     "languages": {
       "python": 1.0,
@@ -393,9 +394,8 @@
       "communication": 0.85
     }
   },
-
   "job_filters": {
-    "minimum_match_score": 0.60,
+    "minimum_match_score": 0.6,
     "require_entry_level": true,
     "max_experience_years": 1,
     "reject_if_requires_two_plus_years": true,
@@ -444,7 +444,6 @@
       "30+ days ago"
     ]
   },
-
   "freshness": {
     "max_age_hours": 24,
     "max_display_age_hours": 72,
@@ -462,7 +461,6 @@
     ],
     "exclude_aggregators": []
   },
-
   "alerting": {
     "max_jobs_per_day": 10
   }

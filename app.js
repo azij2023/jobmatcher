@@ -52,9 +52,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
 
   function initStats() {
-    const primaryCount = jobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4].includes(j.tier)).length;
-    const secondaryCount = jobs.filter(j => j.priority === "Secondary" || [5, 6].includes(j.tier)).length;
-    const adjacentCount = jobs.filter(j => [7, 8, 9].includes(j.tier)).length;
+    const primaryCount = jobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4, 5, 6, 7].includes(j.tier)).length;
+    const secondaryCount = jobs.filter(j => j.priority === "Secondary" || j.tier === 8).length;
+    const adjacentCount = jobs.filter(j => j.tier === 9).length;
 
     document.getElementById("stat-primary-val").textContent = stats.primary_matches !== undefined ? stats.primary_matches : primaryCount;
     document.getElementById("stat-secondary-val").textContent = stats.secondary_matches !== undefined ? stats.secondary_matches : secondaryCount;
@@ -96,7 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (tier === 2) return "tier-badge-2";
     if (tier === 3) return "tier-badge-3";
     if (tier === 4) return "tier-badge-4";
-    if (tier >= 5 && tier <= 6) return "tier-badge-secondary";
+    if (tier === 5) return "tier-badge-5";
+    if (tier === 6) return "tier-badge-6";
+    if (tier === 7) return "tier-badge-7";
+    if (tier === 8) return "tier-badge-secondary";
     return "tier-badge-adjacent";
   }
 
@@ -107,9 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Tier filter
       if (currentFilter.tier !== "all") {
-        if (currentFilter.tier === "primary" && ![1, 2, 3, 4].includes(job.tier)) return false;
-        if (currentFilter.tier === "secondary" && ![5, 6].includes(job.tier)) return false;
-        if (currentFilter.tier === "adjacent" && ![7, 8, 9].includes(job.tier)) return false;
+        if (currentFilter.tier === "primary" && ![1, 2, 3, 4, 5, 6, 7].includes(job.tier)) return false;
+        if (currentFilter.tier === "secondary" && job.tier !== 8) return false;
+        if ((currentFilter.tier === "adjacent" || currentFilter.tier === "optional") && job.tier !== 9) return false;
         if (!isNaN(currentFilter.tier) && job.tier !== parseInt(currentFilter.tier, 10)) return false;
       }
 
@@ -586,11 +589,11 @@ document.addEventListener("DOMContentLoaded", () => {
       if (tier.tier === 1) competencies = "PyTorch, Deep Learning, ML Research, Math";
       else if (tier.tier === 2) competencies = "A/B Testing, SQL, Product Analytics, Causal Inference";
       else if (tier.tier === 3) competencies = "Decision Analysis, Statistical Inference, Modeling";
-      else if (tier.tier === 4) competencies = "Linear Programming, PuLP, Optimization, OR";
-      else if (tier.tier === 5) competencies = "MLOps, Docker, FastAPI, Scikit-learn, Deployments";
-      else if (tier.tier === 6) competencies = "ARIMA, Prophet, Time Series, Demand Planning";
-      else if (tier.tier === 7) competencies = "APM, Roadmap, Product Analytics, SQL, Metrics";
-      else if (tier.tier === 8) competencies = "BizOps, Strategic Modeling, Program KPIs";
+      else if (tier.tier === 4) competencies = "Linear Programming, PuLP, Optimization, OR, Supply Chain";
+      else if (tier.tier === 5) competencies = "APM, Roadmap, Product Analytics, SQL, Metrics";
+      else if (tier.tier === 6) competencies = "BizOps, Strategic Modeling, Program KPIs";
+      else if (tier.tier === 7) competencies = "ARIMA, Prophet, Time Series, Demand Planning";
+      else if (tier.tier === 8) competencies = "MLOps, Docker, FastAPI, Scikit-learn, Deployments";
       else if (tier.tier === 9) competencies = "dbt, SQL, Data Modeling, Modern Data Stack";
 
       return `
