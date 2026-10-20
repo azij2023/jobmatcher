@@ -955,6 +955,49 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 2800);
   }
 
+  // ==========================================================================
+  // 10. Theme Switcher (White / Dark Background Toggle)
+  // ==========================================================================
+  const themeToggleBtn = document.getElementById("theme-toggle-btn");
+  const themeIconIndicator = document.getElementById("theme-icon-indicator");
+  const themeModeText = document.getElementById("theme-mode-text");
+
+  function applyTheme(theme, persist = true) {
+    document.documentElement.setAttribute("data-theme", theme);
+    if (persist) {
+      try {
+        localStorage.setItem("targetmatch_theme", theme);
+      } catch (e) {}
+    }
+    if (themeToggleBtn && themeIconIndicator && themeModeText) {
+      if (theme === "dark") {
+        themeIconIndicator.textContent = "☀️";
+        themeModeText.textContent = "Light Mode";
+        themeToggleBtn.setAttribute("title", "Switch to White / Light Background");
+      } else {
+        themeIconIndicator.textContent = "🌙";
+        themeModeText.textContent = "Dark Mode";
+        themeToggleBtn.setAttribute("title", "Switch to Dark Background");
+      }
+    }
+  }
+
+  // Initialize theme from storage or default to light
+  let currentTheme = "light";
+  try {
+    currentTheme = localStorage.getItem("targetmatch_theme") || "light";
+  } catch (e) {}
+  applyTheme(currentTheme, false);
+
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener("click", () => {
+      const active = document.documentElement.getAttribute("data-theme") || "light";
+      const nextTheme = active === "dark" ? "light" : "dark";
+      applyTheme(nextTheme, true);
+      showToast(nextTheme === "dark" ? "🌙 Dark theme activated" : "☀️ Clean white theme activated");
+    });
+  }
+
   // Initial Runs
   initStats();
   renderJobs();

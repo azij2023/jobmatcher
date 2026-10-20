@@ -9,6 +9,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('targetmatch_theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -42,6 +50,10 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Background" aria-label="Toggle theme">
+          <span class="theme-icon-indicator" id="theme-icon-indicator">🌙</span>
+          <span class="theme-mode-text" id="theme-mode-text">Dark Mode</span>
+        </button>
         <div class="system-status" title="Active Groq Model: gpt-oss-120b">
           <span class="status-dot"></span>
           <span class="status-text">LLM Evaluated</span>
