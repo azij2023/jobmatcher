@@ -104,8 +104,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const titleMatch = job.title.toLowerCase().includes(q);
         const compMatch = job.company.toLowerCase().includes(q);
         const catMatch = job.category.toLowerCase().includes(q);
+        const sourceMatch = (job.source_type || '').toLowerCase().includes(q) || (job.source_domain || '').toLowerCase().includes(q);
         const skillMatch = (job.matched_skills || []).some(s => s.toLowerCase().includes(q));
-        if (!titleMatch && !compMatch && !catMatch && !skillMatch) return false;
+        if (!titleMatch && !compMatch && !catMatch && !sourceMatch && !skillMatch) return false;
       }
 
       return true;
@@ -138,8 +139,32 @@ document.addEventListener("DOMContentLoaded", () => {
       ).join("");
 
       const hoursAgo = job.hours_ago !== undefined ? job.hours_ago : 3;
-      const freshnessPill = `<span class="freshness-badge">⚡ Posted ${hoursAgo}h ago (&lt; 24h)</span>`;
-      const domainPill = job.source_domain ? `<span class="source-domain-badge">🏢 ${escapeHTML(job.source_domain)}</span>` : '';
+      const freshnessPill = `<span class="freshness-badge">⚡ Posted ${hoursAgo}h ago</span>`;
+
+      const urlLower = (job.url || '').toLowerCase();
+      const domainLower = (job.source_domain || '').toLowerCase();
+      const typeLower = (job.source_type || '').toLowerCase();
+
+      let platformPill = '';
+      let applyBtnText = 'Apply on Company Site ↗';
+      let applyBtnClass = 'btn btn-primary';
+
+      if (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) {
+        platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn</span>`;
+        applyBtnText = 'Apply on LinkedIn ↗';
+        applyBtnClass = 'btn btn-primary btn-linkedin';
+      } else if (urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri')) {
+        platformPill = `<span class="source-domain-badge source-naukri">🔷 Naukri</span>`;
+        applyBtnText = 'Apply on Naukri ↗';
+        applyBtnClass = 'btn btn-primary btn-naukri';
+      } else if (urlLower.includes('indeed.com') || domainLower.includes('indeed')) {
+        platformPill = `<span class="source-domain-badge">🎯 Indeed</span>`;
+        applyBtnText = 'Apply on Indeed ↗';
+      } else if (job.source_domain) {
+        platformPill = `<span class="source-domain-badge source-direct">🏢 ${escapeHTML(job.source_domain)}</span>`;
+      }
+
+      const fresherPill = `<span class="fresher-badge">🎓 Fresher (0-1 Yr)</span>`;
 
       return `
         <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
@@ -150,8 +175,9 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span class="job-tier-badge ${tierClass}">
                     ${job.badge || '📌'} Tier ${job.tier} • ${job.category}
                   </span>
+                  ${fresherPill}
                   ${freshnessPill}
-                  ${domainPill}
+                  ${platformPill}
                 </div>
                 <h3 class="job-title">${escapeHTML(job.title)}</h3>
                 <div class="job-company-loc">
@@ -179,13 +205,13 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
-            <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" title="Open direct application on ${escapeHTML(job.company)} career site">
-              <span>Apply on Company Site ↗</span>
+            <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Open direct application on ${escapeHTML(job.source_type || 'Job Portal')}">
+              <span>${applyBtnText}</span>
             </a>
             <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and skill breakdown">
               🔍 Details
             </button>
-            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - ${job.url}`)}" title="Copy direct company apply link">
+            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - ${job.url}`)}" title="Copy direct apply link">
               📋
             </button>
           </div>
@@ -514,11 +540,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // 2. Experience check
-    if (exp > 2) {
+    // 2. Experience check (Fresher limit ≤ 1 year)
+    if (exp > 1) {
       return {
         rejected: true,
-        reason: `Requires ${exp} years experience (entry-level threshold is ≤ 2 years)`,
+        reason: `Requires ${exp} years experience (fresher threshold is ≤ 1 year; 2+ years excluded)`,
         score: 0
       };
     }
@@ -594,10 +620,12 @@ document.addEventListener("DOMContentLoaded", () => {
       skillScore = matchedSum / reqSkills.length;
     }
 
-    // 6. Seniority fit
-    const isEntry = ["intern", "fresher", "junior", "associate"].includes(seniority) || 
-                    ["intern", "junior", "associate"].some(w => title.includes(w));
+    // 6. Seniority fit & Fresher bonus
+    const isEntry = ["intern", "fresher", "junior", "associate", "trainee"].includes(seniority) || 
+                    ["intern", "fresher", "junior", "associate", "trainee", "campus", "new grad"].some(w => title.includes(w)) ||
+                    exp === 0;
     const seniorityScore = isEntry ? 1.0 : 0.80;
+    const fresherBonus = isEntry ? 0.05 : 0.0;
 
     // 7. Location fit
     const locScore = 1.0;
@@ -607,7 +635,8 @@ document.addEventListener("DOMContentLoaded", () => {
       skillScore * 0.40 +
       matchedTier.weight * 0.35 +
       seniorityScore * 0.15 +
-      locScore * 0.10
+      locScore * 0.10 +
+      fresherBonus
     );
 
     const roundedScore = Math.round(finalScore * 1000) / 1000;
@@ -696,31 +725,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Preset Rotator
+  // Preset Rotator with LinkedIn, Naukri and ATS Presets
   const presets = [
     {
-      title: "Junior Applied Scientist",
+      title: "AI / Applied ML Research Intern (LinkedIn)",
       category: "Applied ML / Research",
-      seniority: "junior",
-      exp: 1,
+      seniority: "intern",
+      exp: 0,
       skills: "python, pytorch, deep_learning, machine_learning, statistics"
     },
     {
-      title: "Associate Decision Scientist",
-      category: "Decision Science",
-      seniority: "associate",
+      title: "Fresher Data Scientist (0-1 Yrs) (Naukri)",
+      category: "Data Science",
+      seniority: "fresher",
       exp: 0,
-      skills: "sql, python, statistical_modeling, decision_analysis, power_bi"
+      skills: "python, sql, predictive_modeling, machine_learning, pandas"
     },
     {
-      title: "Junior Operations Research Scientist",
+      title: "Associate Decision Scientist (Campus / Fresher)",
+      category: "Decision Science",
+      seniority: "fresher",
+      exp: 0,
+      skills: "sql, python, statistical_modeling, decision_analysis, ab_testing"
+    },
+    {
+      title: "Operations Research Trainee (LinkedIn)",
       category: "OR / Optimization",
-      seniority: "junior",
+      seniority: "trainee",
       exp: 0,
       skills: "python, operations_research, linear_programming, optimization, pulp"
     },
     {
-      title: "Senior Staff Applied Scientist (Rejection Test)",
+      title: "Senior Staff Applied Scientist (Rejection Test - 8 Yrs)",
       category: "Applied ML / Research",
       seniority: "senior",
       exp: 8,

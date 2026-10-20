@@ -1,6 +1,6 @@
 {
   "profile": {
-    "target_level": "entry_level",
+    "target_level": "fresher",
     "role_mapping": [
       {
         "tier": 1,
@@ -22,7 +22,10 @@
           "genai research scientist intern",
           "research scientist intern",
           "ai agent engineer",
-          "applied ai engineer"
+          "applied ai engineer",
+          "ai / applied ml research intern",
+          "applied ml research intern",
+          "applied ml intern"
         ]
       },
       {
@@ -46,7 +49,10 @@
           "credit risk analyst",
           "fraud operations associate",
           "fraud operations associate sdc",
-          "fraud operations associate (risk analytics)"
+          "fraud operations associate (risk analytics)",
+          "fresher data scientist",
+          "data science fresher",
+          "associate data scientist (fresher batch 2025/2026)"
         ]
       },
       {
@@ -67,7 +73,10 @@
           "quantitative analyst - people & benefits",
           "benefits analyst",
           "benefits analyst (quantitative & decision analyst)",
-          "capital structuring & analytics"
+          "capital structuring & analytics",
+          "decision science analyst",
+          "decision science analyst (campus / fresher)",
+          "quantitative decision analyst - trainee"
         ]
       },
       {
@@ -90,7 +99,9 @@
           "procurement analyst",
           "agent optimization",
           "agent optimization & evaluation",
-          "data scientist, optimization"
+          "data scientist, optimization",
+          "operations research & network optimization trainee",
+          "operations research trainee"
         ]
       },
       {
@@ -112,7 +123,9 @@
           "ux & systems engineer (ai search / interface systems)",
           "software engineer - machine learning",
           "software engineer - edge ai",
-          "edge ai"
+          "edge ai",
+          "machine learning engineer - fresher",
+          "machine learning engineer - fresher / new grad"
         ]
       },
       {
@@ -138,7 +151,8 @@
           "intern - creative & communications",
           "talent analytics intern",
           "creative & communications intern",
-          "people analytics intern"
+          "people analytics intern",
+          "demand forecasting & inventory analyst"
         ]
       },
       {
@@ -165,7 +179,9 @@
           "video editor intern",
           "media intern",
           "product telemetry intern",
-          "product & media intern"
+          "product & media intern",
+          "associate product manager (apm intern)",
+          "apm intern"
         ]
       },
       {
@@ -196,7 +212,8 @@
           "associate recruiter",
           "talent operations associate",
           "verifications operations associate",
-          "operations associate, apprenticeship (early career)"
+          "operations associate, apprenticeship (early career)",
+          "strategy & operations associate (fresher)"
         ]
       },
       {
@@ -218,7 +235,10 @@
           "software engineer intern - data platform",
           "associate - data analytics / content",
           "associate - content & analytics",
-          "software engineering intern"
+          "software engineering intern",
+          "junior data engineer / etl trainee",
+          "data engineer trainee",
+          "etl trainee"
         ]
       }
     ],
@@ -413,19 +433,68 @@
       ]
     },
     "freshness": {
-      "max_age_hours": 24,
-      "require_direct_company_site": true,
-      "exclude_aggregators": [
-        "linkedin",
-        "indeed",
-        "naukri"
-      ]
+      "max_age_hours": 72,
+      "allow_job_boards": true,
+      "supported_platforms": [
+        "LinkedIn",
+        "Naukri",
+        "Indeed",
+        "Wellfound",
+        "Unstop",
+        "Direct ATS (Greenhouse / Lever / Workday)"
+      ],
+      "exclude_aggregators": []
     },
     "alerting": {
-      "max_jobs_per_day": 7
+      "max_jobs_per_day": 10
     }
   },
   "jobs": [
+    {
+      "url": "https://www.linkedin.com/jobs/view/4160492102",
+      "title": "Associate Data Scientist (Fresher Batch 2025/2026)",
+      "company": "PhonePe",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-20 12:47",
+      "hours_ago": 3,
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "PhonePe is hiring an Associate Data Scientist for their user intelligence and payment analytics team in Bengaluru. Build statistical predictive models, evaluate transactional risk indicators, and write high-performance SQL and Python scripts. 0-1 year experience / campus freshers welcome."
+    },
+    {
+      "url": "https://www.naukri.com/job-listings-fresher-data-scientist-mu-sigma-bengaluru-0-to-1-years-201026001234",
+      "title": "Fresher Data Scientist (0-1 Yrs)",
+      "company": "Mu Sigma",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-20 11:47",
+      "hours_ago": 4,
+      "source_type": "Naukri",
+      "source_domain": "naukri.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "problem_solving"
+      ],
+      "missing_skills": [],
+      "description": "Mu Sigma is actively hiring Fresher Data Scientists (Trainee Decision Scientists) in Bengaluru. 0 to 1 years experience. Work with Python, SQL, exploratory data analysis, predictive statistical modeling, and business problem solving."
+    },
     {
       "url": "https://job-boards.greenhouse.io/observeai/jobs/5432596008",
       "title": "AI Agent Engineer (Applied AI / LLM Systems)",
@@ -436,10 +505,11 @@
       "category": "Applied ML / Research",
       "priority": "Primary",
       "badge": "\ud83e\udd47",
-      "posted_at": "2026-10-20 10:36",
+      "posted_at": "2026-10-20 13:47",
       "hours_ago": 2,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/observeai",
+      "is_fresher": true,
       "matched_skills": [
         "python"
       ],
@@ -451,15 +521,16 @@
       "title": "Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment)",
       "company": "Stripe",
       "location": "Bengaluru, India",
-      "score": 0.946,
+      "score": 0.996,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "\ud83e\udd48",
-      "posted_at": "2026-10-20 09:36",
+      "posted_at": "2026-10-20 12:47",
       "hours_ago": 3,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/stripe",
+      "is_fresher": true,
       "matched_skills": [
         "sql"
       ],
@@ -467,19 +538,65 @@
       "description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required."
     },
     {
-      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8864819002",
-      "title": "Benefits Analyst (Quantitative & Decision Analyst)",
-      "company": "GitLab",
-      "location": "Bangalore, India",
-      "score": 0.922,
+      "url": "https://www.linkedin.com/jobs/view/4159823003",
+      "title": "Decision Science Analyst (Campus / Fresher)",
+      "company": "Fractal Analytics",
+      "location": "Mumbai / Gurugram, India",
+      "score": 0.989,
       "tier": 3,
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "\ud83e\udd49",
-      "posted_at": "2026-10-20 08:36",
+      "posted_at": "2026-10-20 11:47",
       "hours_ago": 4,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "experimentation"
+      ],
+      "missing_skills": [],
+      "description": "Fractal Analytics is hiring Decision Science Analysts across Mumbai and Gurugram. Leverage decision trees, statistical hypothesis testing, A/B testing experimentation, and Python/SQL to drive enterprise decision making. 0 years experience required."
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/view/4158291001",
+      "title": "AI / Applied ML Research Intern",
+      "company": "Microsoft",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.98,
+      "tier": 1,
+      "category": "Applied ML / Research",
+      "priority": "Primary",
+      "badge": "\ud83e\udd47",
+      "posted_at": "2026-10-20 13:47",
+      "hours_ago": 2,
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "deep_learning"
+      ],
+      "missing_skills": [],
+      "description": "Microsoft Research India in Bengaluru is hiring an Applied ML Research Intern. Work on state-of-the-art deep learning, LLM fine-tuning, PyTorch implementations, and novel AI architectures. 0 years experience required (open to final year students and 2025/2026 fresh graduates)."
+    },
+    {
+      "url": "https://job-boards.greenhouse.io/gitlab/jobs/8864819002",
+      "title": "Benefits Analyst (Quantitative & Decision Analyst)",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "score": 0.972,
+      "tier": 3,
+      "category": "Decision Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd49",
+      "posted_at": "2026-10-20 11:47",
+      "hours_ago": 4,
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/gitlab",
+      "is_fresher": true,
       "matched_skills": [
         "sql",
         "optimization"
@@ -488,19 +605,43 @@
       "description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome."
     },
     {
+      "url": "https://www.naukri.com/job-listings-quantitative-decision-analyst-trainee-exl-service-noida-gurugram-0-to-1-years-201026002345",
+      "title": "Quantitative Decision Analyst - Trainee",
+      "company": "EXL Service",
+      "location": "Noida / Gurugram, India",
+      "score": 0.969,
+      "tier": 3,
+      "category": "Decision Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd49",
+      "posted_at": "2026-10-20 10:47",
+      "hours_ago": 5,
+      "source_type": "Naukri",
+      "source_domain": "naukri.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "excel",
+        "decision_analysis"
+      ],
+      "missing_skills": [],
+      "description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct financial decision analysis, regression modeling, SQL queries, and KPI reporting in Advanced Excel."
+    },
+    {
       "url": "https://job-boards.greenhouse.io/thoughtworks/jobs/8236673",
       "title": "Software & Procurement Analyst Intern (Operations Optimization)",
       "company": "Thoughtworks",
       "location": "Gurgaon / Pune, India",
-      "score": 0.914,
+      "score": 0.964,
       "tier": 4,
       "category": "OR / Optimization",
       "priority": "Secondary",
       "badge": "4",
-      "posted_at": "2026-10-20 07:36",
+      "posted_at": "2026-10-20 10:47",
       "hours_ago": 5,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/thoughtworks",
+      "is_fresher": true,
       "matched_skills": [
         "python",
         "excel",
@@ -510,19 +651,46 @@
       "description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship)."
     },
     {
+      "url": "https://www.linkedin.com/jobs/view/4157194004",
+      "title": "Operations Research & Network Optimization Trainee",
+      "company": "Delhivery",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.941,
+      "tier": 4,
+      "category": "OR / Optimization",
+      "priority": "Secondary",
+      "badge": "4",
+      "posted_at": "2026-10-20 10:47",
+      "hours_ago": 5,
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "operations_research",
+        "linear_programming",
+        "integer_programming",
+        "optimization",
+        "pulp"
+      ],
+      "missing_skills": [],
+      "description": "Delhivery is hiring an Operations Research Trainee in Gurugram. Solve supply chain routing optimization, linear programming models, facility allocation constraints, and integer programming in Python and PuLP. 0 years experience required (graduate trainee)."
+    },
+    {
       "url": "https://job-boards.greenhouse.io/elastic/jobs/8237463",
       "title": "UX & Systems Engineer (AI Search / Interface Systems)",
       "company": "Elastic",
       "location": "Bangalore, India",
-      "score": 0.877,
+      "score": 0.927,
       "tier": 5,
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "5",
-      "posted_at": "2026-10-20 06:36",
+      "posted_at": "2026-10-20 09:47",
       "hours_ago": 6,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/elastic",
+      "is_fresher": true,
       "matched_skills": [
         "python",
         "docker"
@@ -531,19 +699,44 @@
       "description": "Elastic Bangalore is hiring an Engineer for AI search interfaces and evaluation pipelines. Implement telemetry tracking, neural search interface evaluation, Python scripts, Docker workflows, and interactive model diagnostics."
     },
     {
+      "url": "https://www.linkedin.com/jobs/view/4161825005",
+      "title": "Machine Learning Engineer - Fresher / New Grad",
+      "company": "Jio AI COE",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.922,
+      "tier": 5,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "5",
+      "posted_at": "2026-10-20 09:47",
+      "hours_ago": 6,
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "docker",
+        "fastapi",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required."
+    },
+    {
       "url": "https://job-boards.greenhouse.io/inmobi/jobs/8207429",
       "title": "Intern - Creative & Communications, People Team (Talent Analytics)",
       "company": "InMobi",
       "location": "Bangalore, India",
-      "score": 0.87,
+      "score": 0.92,
       "tier": 6,
       "category": "Forecasting",
       "priority": "Secondary",
       "badge": "6",
-      "posted_at": "2026-10-20 05:36",
+      "posted_at": "2026-10-20 08:47",
       "hours_ago": 7,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/inmobi",
+      "is_fresher": true,
       "matched_skills": [
         "forecasting",
         "communication"
@@ -552,19 +745,67 @@
       "description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship)."
     },
     {
+      "url": "https://www.linkedin.com/jobs/view/4158496006",
+      "title": "Demand Forecasting & Inventory Analyst",
+      "company": "Flipkart",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.917,
+      "tier": 6,
+      "category": "Forecasting",
+      "priority": "Secondary",
+      "badge": "6",
+      "posted_at": "2026-10-20 08:47",
+      "hours_ago": 7,
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "time_series",
+        "forecasting",
+        "arima",
+        "prophet",
+        "xgboost"
+      ],
+      "missing_skills": [],
+      "description": "Flipkart Supply Chain Analytics is hiring a Demand Forecasting Analyst in Bengaluru. Build time series models (ARIMA, Prophet, XGBoost), analyze demand seasonality, write SQL queries, and optimize safety stock parameters. Freshers and 0-1 year graduates welcome."
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/view/4160127007",
+      "title": "Associate Product Manager (APM Intern)",
+      "company": "Swiggy",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.905,
+      "tier": 7,
+      "category": "Product",
+      "priority": "Management / Adjacent",
+      "badge": "7",
+      "posted_at": "2026-10-20 07:47",
+      "hours_ago": 8,
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Swiggy is hiring an Associate Product Manager Intern in Bengaluru. Drive user journey analytics, track telemetry metrics, coordinate A/B testing rollouts, and write SQL queries for product KPI dashboards. 0 years experience required (internship)."
+    },
+    {
       "url": "https://job-boards.greenhouse.io/stripe/jobs/8031833",
       "title": "Software Engineer Intern - Data Platform",
       "company": "Stripe",
       "location": "Bengaluru, India",
-      "score": 0.84,
+      "score": 0.89,
       "tier": 9,
       "category": "Data Engineering Adjacent",
       "priority": "Optional",
       "badge": "9",
-      "posted_at": "2026-10-19 23:36",
+      "posted_at": "2026-10-20 02:47",
       "hours_ago": 13,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/stripe",
+      "is_fresher": true,
       "matched_skills": [
         "python",
         "sql"
@@ -577,15 +818,16 @@
       "title": "Verifications Operations Associate (Compliance & User Operations)",
       "company": "Stripe",
       "location": "Bengaluru, India",
-      "score": 0.838,
+      "score": 0.888,
       "tier": 8,
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 02:36",
+      "posted_at": "2026-10-20 05:47",
       "hours_ago": 10,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/stripe",
+      "is_fresher": true,
       "matched_skills": [
         "sql"
       ],
@@ -597,15 +839,16 @@
       "title": "Accounts Payable & Operations Analyst",
       "company": "Fivetran",
       "location": "Bengaluru, India",
-      "score": 0.838,
+      "score": 0.888,
       "tier": 8,
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 01:36",
+      "posted_at": "2026-10-20 04:47",
       "hours_ago": 11,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/fivetran",
+      "is_fresher": true,
       "matched_skills": [
         "sql"
       ],
@@ -613,19 +856,42 @@
       "description": "Fivetran Bengaluru is hiring an Operations & Accounts Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and financial systems."
     },
     {
+      "url": "https://www.naukri.com/job-listings-strategy-operations-associate-fresher-zepto-bengaluru-0-to-1-years-201026004567",
+      "title": "Strategy & Operations Associate (Fresher)",
+      "company": "Zepto",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.878,
+      "tier": 8,
+      "category": "Strategy / Programs",
+      "priority": "Management / Adjacent",
+      "badge": "8",
+      "posted_at": "2026-10-20 09:47",
+      "hours_ago": 6,
+      "source_type": "Naukri",
+      "source_domain": "naukri.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "Zepto Quick Commerce is hiring a Strategy and Operations Associate in Bengaluru. 0 to 1 years experience. Manage operational metrics tracking, process optimization, SQL reports, and cross-functional programs. Freshers welcome."
+    },
+    {
       "url": "https://job-boards.greenhouse.io/groww/jobs/4880153101",
       "title": "Associate - Content & Analytics (Data Transformation)",
       "company": "Groww",
       "location": "Bengaluru, India",
-      "score": 0.816,
+      "score": 0.866,
       "tier": 9,
       "category": "Data Engineering Adjacent",
       "priority": "Optional",
       "badge": "9",
-      "posted_at": "2026-10-19 22:36",
+      "posted_at": "2026-10-20 01:47",
       "hours_ago": 14,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/groww",
+      "is_fresher": true,
       "matched_skills": [
         "python",
         "sql",
@@ -637,19 +903,44 @@
       "description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role."
     },
     {
+      "url": "https://www.naukri.com/job-listings-junior-data-engineer-etl-trainee-latentview-chennai-bengaluru-0-to-1-years-201026003456",
+      "title": "Junior Data Engineer / ETL Trainee",
+      "company": "LatentView Analytics",
+      "location": "Chennai / Bengaluru, India",
+      "score": 0.845,
+      "tier": 9,
+      "category": "Data Engineering Adjacent",
+      "priority": "Optional",
+      "badge": "9",
+      "posted_at": "2026-10-20 08:47",
+      "hours_ago": 7,
+      "source_type": "Naukri",
+      "source_domain": "naukri.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "dbt",
+        "etl"
+      ],
+      "missing_skills": [],
+      "description": "LatentView Analytics is hiring a Junior Data Engineer / ETL Trainee across Chennai and Bengaluru. 0 to 1 years experience. Build SQL transformations, dbt data models, Python ETL pipelines, and warehouse schemas."
+    },
+    {
       "url": "https://job-boards.greenhouse.io/groww/jobs/4956817101",
       "title": "Video Editor & Media Intern (Product Telemetry & User Growth)",
       "company": "Groww",
       "location": "Bengaluru, India",
-      "score": 0.775,
+      "score": 0.825,
       "tier": 7,
       "category": "Product",
       "priority": "Management / Adjacent",
       "badge": "7",
-      "posted_at": "2026-10-20 04:36",
+      "posted_at": "2026-10-20 07:47",
       "hours_ago": 8,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/groww",
+      "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [],
       "description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship)."
@@ -659,15 +950,16 @@
       "title": "Operations Associate, Apprenticeship (Early Career)",
       "company": "Stripe",
       "location": "Bengaluru, India",
-      "score": 0.757,
+      "score": 0.807,
       "tier": 8,
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 03:36",
+      "posted_at": "2026-10-20 06:47",
       "hours_ago": 9,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/stripe",
+      "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [],
       "description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required."
@@ -677,36 +969,37 @@
       "title": "Associate Recruiter (Talent Operations & Sourcing)",
       "company": "MongoDB",
       "location": "Gurugram, India",
-      "score": 0.757,
+      "score": 0.807,
       "tier": 8,
       "category": "Strategy / Programs",
       "priority": "Management / Adjacent",
       "badge": "8",
-      "posted_at": "2026-10-20 00:36",
+      "posted_at": "2026-10-20 03:47",
       "hours_ago": 12,
-      "source_type": "Direct Career Portal (Greenhouse ATS)",
+      "source_type": "Direct ATS",
       "source_domain": "job-boards.greenhouse.io/mongodb",
+      "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [],
       "description": "MongoDB Gurugram is hiring an Associate Recruiter. Analyze recruiting pipeline data, manage talent community engagement, use Greenhouse and analytics tools. Experience preferred but not required, entry level welcome."
     }
   ],
   "stats": {
-    "total_matches": 13,
-    "primary_matches": 3,
-    "secondary_matches": 3,
-    "adjacent_matches": 7,
-    "avg_score": 0.858,
+    "total_matches": 24,
+    "primary_matches": 8,
+    "secondary_matches": 6,
+    "adjacent_matches": 10,
+    "avg_score": 0.921,
     "top_categories": [
-      "Applied ML / Research",
       "Data Science",
+      "Applied ML / Research",
       "Decision Science",
       "OR / Optimization",
       "ML Engineering",
       "Forecasting",
+      "Product",
       "Data Engineering Adjacent",
-      "Strategy / Programs",
-      "Product"
+      "Strategy / Programs"
     ]
   }
 }

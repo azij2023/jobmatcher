@@ -87,23 +87,23 @@ class JobExtractor:
         # Role Category detection using both title and body
         combined = f"{title_lower} {t_lower}"
         role_cat = "Data Science"
-        if any(w in title_lower for w in ["ai agent", "applied ai", "applied scientist", "ai research"]) or any(w in t_lower for w in ["applied scientist", "applied ml", "ml research", "research scientist"]):
+        if any(w in title_lower for w in ["ai agent", "applied ai", "applied scientist", "ai research", "applied ml research", "applied ml intern", "research intern"]) or any(w in t_lower for w in ["applied scientist", "applied ml", "ml research", "research scientist"]):
             role_cat = "Applied ML / Research"
-        elif any(w in title_lower for w in ["fraud operations", "fraud analysis", "credit risk", "risk data science", "risk analytics", "data scientist", "data science"]):
+        elif any(w in title_lower for w in ["fresher data scientist", "fraud operations", "fraud analysis", "credit risk", "risk data science", "risk analytics", "data scientist", "data science"]):
             role_cat = "Data Science"
-        elif any(w in title_lower for w in ["benefits analyst", "decision scientist", "quantitative analyst"]) or any(w in t_lower for w in ["decision scientist", "decision analysis", "analytics scientist", "quantitative analyst"]):
+        elif any(w in title_lower for w in ["decision science analyst", "quantitative decision analyst", "benefits analyst", "decision scientist", "quantitative analyst"]) or any(w in t_lower for w in ["decision scientist", "decision analysis", "analytics scientist", "quantitative analyst"]):
             role_cat = "Decision Science"
-        elif any(w in title_lower for w in ["procurement", "optimization"]) or any(w in t_lower for w in ["operations research", "linear programming", "or scientist", "optimization scientist", "pulp"]):
+        elif any(w in title_lower for w in ["network optimization", "operations research", "procurement", "optimization"]) or any(w in t_lower for w in ["operations research", "linear programming", "or scientist", "optimization scientist", "pulp"]):
             role_cat = "OR / Optimization"
-        elif any(w in title_lower for w in ["ux & systems", "systems engineer", "ml engineer", "machine learning engineer"]) or any(w in t_lower for w in ["machine learning engineer", "ml engineer", "mlops"]):
+        elif any(w in title_lower for w in ["ml engineer - fresher", "machine learning engineer - fresher", "ux & systems", "systems engineer", "ml engineer", "machine learning engineer"]) or any(w in t_lower for w in ["machine learning engineer", "ml engineer", "mlops"]):
             role_cat = "ML Engineering"
-        elif any(w in title_lower for w in ["creative & communications", "talent analytics", "account specialist", "ads analytics", "forecasting", "demand planning"]) or any(w in t_lower for w in ["forecasting", "time series", "demand forecasting", "arima", "prophet"]):
+        elif any(w in title_lower for w in ["demand forecasting", "creative & communications", "talent analytics", "account specialist", "ads analytics", "forecasting", "demand planning"]) or any(w in t_lower for w in ["forecasting", "time series", "demand forecasting", "arima", "prophet"]):
             role_cat = "Forecasting"
-        elif any(w in title_lower for w in ["video editor", "media intern", "product telemetry", "product research", "associate product manager", "apm", "product analyst"]) or any(w in t_lower for w in ["product analyst", "product manager", "user telemetry"]):
+        elif any(w in title_lower for w in ["apm intern", "video editor", "media intern", "product telemetry", "product research", "associate product manager", "apm", "product analyst"]) or any(w in t_lower for w in ["product analyst", "product manager", "user telemetry"]):
             role_cat = "Product"
-        elif any(w in title_lower for w in ["recruiter", "verifications", "apprenticeship", "revenue operations", "operations associate", "employer brand", "coordinator", "customer success", "accounts payable", "strategy"]) or any(w in t_lower for w in ["strategy analyst", "business operations", "bizops", "program analyst", "revenue operations"]):
+        elif any(w in title_lower for w in ["strategy & operations", "recruiter", "verifications", "apprenticeship", "revenue operations", "operations associate", "employer brand", "coordinator", "customer success", "accounts payable", "strategy"]) or any(w in t_lower for w in ["strategy analyst", "business operations", "bizops", "program analyst", "revenue operations"]):
             role_cat = "Strategy / Programs"
-        elif any(w in title_lower for w in ["data platform", "content & analytics", "data engineering", "software engineer intern"]) or any(w in t_lower for w in ["analytics engineer", "dbt", "data engineer", "data platform"]):
+        elif any(w in title_lower for w in ["etl trainee", "data engineer trainee", "data platform", "content & analytics", "data engineering", "software engineer intern"]) or any(w in t_lower for w in ["analytics engineer", "dbt", "data engineer", "data platform"]):
             role_cat = "Data Engineering Adjacent"
 
         return {

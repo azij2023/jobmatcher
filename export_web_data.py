@@ -61,9 +61,8 @@ def export_data():
             badge = "🥇" if j["tier"] == 1 else ("🥈" if j["tier"] == 2 else ("🥉" if j["tier"] == 3 else str(j["tier"])))
 
         hours_ago = raw_job.get("hours_ago", 4)
-        if hours_ago is not None and hours_ago > 24:
-            continue
-        if "linkedin.com" in j["url"].lower():
+        max_age = profile.get("freshness", {}).get("max_age_hours", 72)
+        if hours_ago is not None and hours_ago > max_age:
             continue
 
         final_tier = scored.get("tier") or j.get("tier")
@@ -83,11 +82,12 @@ def export_data():
             "badge": badge,
             "posted_at": raw_job.get("posted_at") or "Today",
             "hours_ago": hours_ago,
-            "source_type": raw_job.get("source_type", "Direct Company Portal"),
-            "source_domain": raw_job.get("source_domain", "Company Website"),
+            "source_type": scored.get("platform") or raw_job.get("source_type", "Job Portal"),
+            "source_domain": raw_job.get("source_domain") or ("linkedin.com" if "linkedin" in j["url"] else ("naukri.com" if "naukri" in j["url"] else "Company Website")),
+            "is_fresher": scored.get("is_fresher", True),
             "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),
-            "description": desc or f"Entry-level position for {j['title']} with strong domain expertise."
+            "description": desc or f"Fresher level opportunity for {j['title']} with strong analytical foundation."
         })
 
     # Sort detailed jobs by score descending

@@ -69,14 +69,29 @@ def score_job(job: dict, profile: dict) -> dict:
             "rejection_reason": f"Job posted {hours_ago}h ago (older than {max_age_hours}h limit)"
         }
 
-    # 0b. Exclude Aggregators like LinkedIn (Only allow direct company sites)
-    exclude_aggs = profile.get("freshness", {}).get("exclude_aggregators", ["linkedin"])
+    # 0b. Platform Recognition (LinkedIn, Naukri, Indeed, Wellfound, Direct ATS)
+    platform = "Direct Company Portal"
+    if "linkedin.com" in url:
+        platform = "LinkedIn"
+    elif "naukri.com" in url:
+        platform = "Naukri"
+    elif "indeed.com" in url:
+        platform = "Indeed"
+    elif "wellfound.com" in url:
+        platform = "Wellfound"
+    elif "unstop.com" in url:
+        platform = "Unstop"
+    elif any(ats in url for ats in ["greenhouse.io", "lever.co", "workday", "smartrecruiters", "ashbyhq"]):
+        platform = "Direct ATS"
+
+    # Optional exclude check only if explicitly configured in profile
+    exclude_aggs = profile.get("freshness", {}).get("exclude_aggregators", [])
     for agg in exclude_aggs:
-        if agg in url:
+        if agg and agg in url:
             return {
                 "rejected": True,
                 "final_score": 0.0,
-                "rejection_reason": f"Aggregator '{agg}' excluded. Only direct individual company websites allowed."
+                "rejection_reason": f"Platform '{agg}' excluded by profile configuration."
             }
 
     # 1. Check Hard Exclusion Keywords (Title) using word boundaries
@@ -198,14 +213,30 @@ def score_job(job: dict, profile: dict) -> dict:
     else:
         location_score = 0.50
 
-    # 8. Composite Weighted Final Score Calculation
-    # Weights: Skills (40%), Role Category Priority (35%), Seniority (15%), Location (10%)
+    # 8. Fresher Level Alignment Bonus (+0.05)
+    fresher_indicators = [
+        "fresher", "freshers", "0 year", "0-1 year", "0 to 1 year",
+        "new grad", "new graduate", "graduate trainee", "campus",
+        "entry level", "entry-level", "intern", "internship", "apprentice",
+        "trainee", "associate", "batch 2024", "batch 2025", "batch 2026", "batch 2027"
+    ]
+    fresher_text = f"{title} {desc}".lower()
+    is_fresher = (
+        seniority in ["fresher", "intern", "associate", "trainee", "apprentice", "junior"] or
+        any(ind in fresher_text for ind in fresher_indicators) or
+        (min_exp is not None and min_exp == 0)
+    )
+    fresher_bonus = 0.05 if is_fresher else 0.0
+
+    # 9. Composite Weighted Final Score Calculation
+    # Weights: Skills (40%), Role Category Priority (35%), Seniority (15%), Location (10%) + bonuses
     final_score = (
         skill_score * 0.40 +
         role_priority_weight * 0.35 +
         seniority_score * 0.15 +
         location_score * 0.10 +
-        nice_bonus
+        nice_bonus +
+        fresher_bonus
     )
     final_score = round(min(1.0, max(0.0, final_score)), 3)
 
@@ -220,6 +251,8 @@ def score_job(job: dict, profile: dict) -> dict:
         "priority": role_match.get("priority"),
         "badge": role_match.get("badge"),
         "category": role_match.get("category"),
+        "platform": platform,
+        "is_fresher": is_fresher,
         "skill_match_rate": round(len(matched_required) / len(required_skills), 2) if required_skills else 1.0,
         "matched_skills": matched_required,
         "missing_skills": missing_required,

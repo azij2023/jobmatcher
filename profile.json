@@ -1,5 +1,5 @@
 {
-  "target_level": "entry_level",
+  "target_level": "fresher",
 
   "role_mapping": [
     {
@@ -22,7 +22,10 @@
         "genai research scientist intern",
         "research scientist intern",
         "ai agent engineer",
-        "applied ai engineer"
+        "applied ai engineer",
+        "ai / applied ml research intern",
+        "applied ml research intern",
+        "applied ml intern"
       ]
     },
     {
@@ -46,7 +49,10 @@
         "credit risk analyst",
         "fraud operations associate",
         "fraud operations associate sdc",
-        "fraud operations associate (risk analytics)"
+        "fraud operations associate (risk analytics)",
+        "fresher data scientist",
+        "data science fresher",
+        "associate data scientist (fresher batch 2025/2026)"
       ]
     },
     {
@@ -67,7 +73,10 @@
         "quantitative analyst - people & benefits",
         "benefits analyst",
         "benefits analyst (quantitative & decision analyst)",
-        "capital structuring & analytics"
+        "capital structuring & analytics",
+        "decision science analyst",
+        "decision science analyst (campus / fresher)",
+        "quantitative decision analyst - trainee"
       ]
     },
     {
@@ -90,7 +99,9 @@
         "procurement analyst",
         "agent optimization",
         "agent optimization & evaluation",
-        "data scientist, optimization"
+        "data scientist, optimization",
+        "operations research & network optimization trainee",
+        "operations research trainee"
       ]
     },
     {
@@ -112,7 +123,9 @@
         "ux & systems engineer (ai search / interface systems)",
         "software engineer - machine learning",
         "software engineer - edge ai",
-        "edge ai"
+        "edge ai",
+        "machine learning engineer - fresher",
+        "machine learning engineer - fresher / new grad"
       ]
     },
     {
@@ -138,7 +151,8 @@
         "intern - creative & communications",
         "talent analytics intern",
         "creative & communications intern",
-        "people analytics intern"
+        "people analytics intern",
+        "demand forecasting & inventory analyst"
       ]
     },
     {
@@ -165,7 +179,9 @@
         "video editor intern",
         "media intern",
         "product telemetry intern",
-        "product & media intern"
+        "product & media intern",
+        "associate product manager (apm intern)",
+        "apm intern"
       ]
     },
     {
@@ -196,7 +212,8 @@
         "associate recruiter",
         "talent operations associate",
         "verifications operations associate",
-        "operations associate, apprenticeship (early career)"
+        "operations associate, apprenticeship (early career)",
+        "strategy & operations associate (fresher)"
       ]
     },
     {
@@ -218,7 +235,10 @@
         "software engineer intern - data platform",
         "associate - data analytics / content",
         "associate - content & analytics",
-        "software engineering intern"
+        "software engineering intern",
+        "junior data engineer / etl trainee",
+        "data engineer trainee",
+        "etl trainee"
       ]
     }
   ],
@@ -413,12 +433,20 @@
   },
 
   "freshness": {
-    "max_age_hours": 24,
-    "require_direct_company_site": true,
-    "exclude_aggregators": ["linkedin", "indeed", "naukri"]
+    "max_age_hours": 72,
+    "allow_job_boards": true,
+    "supported_platforms": [
+      "LinkedIn",
+      "Naukri",
+      "Indeed",
+      "Wellfound",
+      "Unstop",
+      "Direct ATS (Greenhouse / Lever / Workday)"
+    ],
+    "exclude_aggregators": []
   },
 
   "alerting": {
-    "max_jobs_per_day": 7
+    "max_jobs_per_day": 10
   }
 }

@@ -623,6 +623,38 @@ input[type="range"] {
   border-radius: var(--radius-full);
 }
 
+.source-domain-badge.source-linkedin {
+  background: rgba(10, 102, 194, 0.18);
+  color: #60a5fa;
+  border: 1px solid rgba(10, 102, 194, 0.45);
+}
+
+.source-domain-badge.source-naukri {
+  background: rgba(30, 64, 175, 0.18);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.source-domain-badge.source-direct {
+  background: rgba(139, 92, 246, 0.18);
+  color: #c4b5fd;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.fresher-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
 .job-meta-badges {
   display: flex;
   flex-wrap: wrap;
@@ -773,6 +805,30 @@ input[type="range"] {
 
 .btn-primary:hover {
   background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.btn-linkedin {
+  background: linear-gradient(135deg, #0a66c2 0%, #004182 100%) !important;
+  border: 1px solid #0a66c2 !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(10, 102, 194, 0.4) !important;
+}
+
+.btn-linkedin:hover {
+  background: linear-gradient(135deg, #004182 0%, #002855 100%) !important;
+  transform: translateY(-1px);
+}
+
+.btn-naukri {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+  border: 1px solid #2563eb !important;
+  color: #fff !important;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4) !important;
+}
+
+.btn-naukri:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%) !important;
   transform: translateY(-1px);
 }
 
