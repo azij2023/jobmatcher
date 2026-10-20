@@ -7,7 +7,7 @@ if sys.platform.startswith("win"):
 
 from matching.scoring import score_job
 
-profile = json.load(open("profile.json"))
+profile = json.load(open("profile.json", encoding="utf-8"))
 
 test_jobs = [
     {

@@ -81,10 +81,10 @@
     },
     {
       "tier": 4,
-      "priority": "Secondary",
-      "badge": "4",
+      "priority": "Primary",
+      "badge": "🏅",
       "category": "OR / Optimization",
-      "weight": 0.85,
+      "weight": 0.92,
       "roles": [
         "optimization scientist",
         "or scientist",

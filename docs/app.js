@@ -52,9 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
 
   function initStats() {
-    document.getElementById("stat-primary-val").textContent = stats.primary_matches || 0;
-    document.getElementById("stat-secondary-val").textContent = stats.secondary_matches || 0;
-    document.getElementById("stat-adjacent-val").textContent = stats.adjacent_matches || 0;
+    const primaryCount = jobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4].includes(j.tier)).length;
+    const secondaryCount = jobs.filter(j => j.priority === "Secondary" || [5, 6].includes(j.tier)).length;
+    const adjacentCount = jobs.filter(j => [7, 8, 9].includes(j.tier)).length;
+
+    document.getElementById("stat-primary-val").textContent = stats.primary_matches !== undefined ? stats.primary_matches : primaryCount;
+    document.getElementById("stat-secondary-val").textContent = stats.secondary_matches !== undefined ? stats.secondary_matches : secondaryCount;
+    document.getElementById("stat-adjacent-val").textContent = stats.adjacent_matches !== undefined ? stats.adjacent_matches : adjacentCount;
     
     const topScore = jobs.length > 0 ? Math.max(...jobs.map(j => j.score)) : 0;
     document.getElementById("stat-avg-score-val").textContent = `${Math.round(topScore * 100)}%`;
@@ -91,7 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (tier === 1) return "tier-badge-1";
     if (tier === 2) return "tier-badge-2";
     if (tier === 3) return "tier-badge-3";
-    if (tier >= 4 && tier <= 6) return "tier-badge-secondary";
+    if (tier === 4) return "tier-badge-4";
+    if (tier >= 5 && tier <= 6) return "tier-badge-secondary";
     return "tier-badge-adjacent";
   }
 
@@ -102,8 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Tier filter
       if (currentFilter.tier !== "all") {
-        if (currentFilter.tier === "primary" && ![1, 2, 3].includes(job.tier)) return false;
-        if (currentFilter.tier === "secondary" && ![4, 5, 6].includes(job.tier)) return false;
+        if (currentFilter.tier === "primary" && ![1, 2, 3, 4].includes(job.tier)) return false;
+        if (currentFilter.tier === "secondary" && ![5, 6].includes(job.tier)) return false;
         if (currentFilter.tier === "adjacent" && ![7, 8, 9].includes(job.tier)) return false;
         if (!isNaN(currentFilter.tier) && job.tier !== parseInt(currentFilter.tier, 10)) return false;
       }
