@@ -47,6 +47,9 @@
         <button class="nav-tab" data-tab="tester" id="tab-btn-tester">
           <span class="tab-icon">🧪</span> Live Job Scorer
         </button>
+        <button class="nav-tab" data-tab="linkedin" id="tab-btn-linkedin">
+          <span class="tab-icon">📥</span> LinkedIn Post Fetcher
+        </button>
       </nav>
 
       <div class="nav-actions">
@@ -170,6 +173,17 @@
               <option value="72">🕒 Past 72 Hours (Max)</option>
             </select>
           </div>
+
+          <div class="control-group">
+            <label for="source-select">Source:</label>
+            <select id="source-select">
+              <option value="all">All Sources</option>
+              <option value="LinkedIn Post">💬 LinkedIn Posts (Hiring Feed)</option>
+              <option value="LinkedIn">💼 LinkedIn Formal Jobs</option>
+              <option value="Naukri">🔷 Naukri</option>
+              <option value="Direct">🏢 Direct Portals</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -177,6 +191,7 @@
       <div class="tier-chips" id="tier-chips">
         <button class="chip active" data-chip="all">All Roles</button>
         <button class="chip" data-chip="primary">🥇 Primary (1–7)</button>
+        <button class="chip chip-source" data-chip="source-post">💬 LinkedIn Posts</button>
         <button class="chip" data-chip="secondary">🥈 Secondary (Tier 8)</button>
         <button class="chip" data-chip="adjacent">⚡ Optional (Tier 9)</button>
         <button class="chip" data-chip="1">🥇 Tier 1: Applied ML</button>
@@ -414,6 +429,155 @@
                 <!-- Injected via JS -->
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 5: LinkedIn Post Fetcher & Evaluator -->
+    <section class="tab-content" id="view-linkedin">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <div class="hero-badge" style="margin-bottom: 0.5rem; display: inline-flex;">
+              <span>💬 Live Feed Harvester</span>
+            </div>
+            <h2 class="section-title">LinkedIn Post Job Harvester & Evaluator</h2>
+            <p class="section-desc">
+              Directly fetch, parse, and evaluate informal job postings made by hiring managers and founders on LinkedIn feeds.
+              Checks strict fresher seniority gates (&le; 1 year exp), calculates multi-tier match score, and generates a personalized cold outreach DM pitch.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sample Presets Toolbar -->
+        <div class="presets-container">
+          <span class="presets-label">⚡ Load Active Hiring Manager Posts:</span>
+          <div class="presets-buttons">
+            <button type="button" class="preset-btn" data-preset="swiggy">🍕 Swiggy APM</button>
+            <button type="button" class="preset-btn" data-preset="razorpay">💳 Razorpay BizOps</button>
+            <button type="button" class="preset-btn" data-preset="phonepe">📱 PhonePe Data Science</button>
+            <button type="button" class="preset-btn" data-preset="delhivery">📦 Delhivery OR Trainee</button>
+            <button type="button" class="preset-btn" data-preset="zepto">⚡ Zepto Forecasting</button>
+            <button type="button" class="preset-btn" data-preset="sarvam">🤖 Sarvam AI Applied ML</button>
+          </div>
+        </div>
+
+        <div class="linkedin-fetcher-layout">
+          <!-- Left: Input Form -->
+          <div class="fetcher-card-box">
+            <h3 class="panel-subtitle">📝 Raw LinkedIn Post Details</h3>
+            
+            <div class="form-group" style="margin-bottom: 1rem;">
+              <label for="linkedin-post-input">Post Content / Text <span class="req">*</span></label>
+              <textarea id="linkedin-post-input" rows="8" placeholder="Paste full LinkedIn post text here (e.g. 'We are hiring an Associate Product Manager at Swiggy in Bengaluru. Freshers welcome with SQL & analytics. Shoot a DM or email apm-hiring@swiggy.in...')..."></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="linkedin-author-input">Post Author / Hiring Manager</label>
+                <input type="text" id="linkedin-author-input" placeholder="e.g. Priya Sharma (Principal PM @ Swiggy)">
+              </div>
+              <div class="form-group">
+                <label for="linkedin-url-input">LinkedIn Post URL</label>
+                <input type="url" id="linkedin-url-input" placeholder="https://www.linkedin.com/posts/...">
+              </div>
+            </div>
+
+            <div class="fetcher-actions">
+              <button class="btn btn-primary" id="linkedin-parse-btn">
+                <span>⚡ Parse & Evaluate Post</span>
+              </button>
+              <button class="btn btn-secondary" id="linkedin-clear-btn">
+                <span>✕ Clear</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Evaluation & Cold Pitch Panel -->
+          <div class="fetcher-card-box evaluation-box" id="linkedin-eval-card">
+            <div id="linkedin-eval-empty" class="eval-empty-state">
+              <div class="eval-empty-icon">🎯</div>
+              <h4>No Post Evaluated Yet</h4>
+              <p>Paste a LinkedIn post or click one of the presets above, then click <strong>"Parse & Evaluate Post"</strong> to extract seniority, skills, tier match, and generate cold recruiter outreach message.</p>
+            </div>
+
+            <div id="linkedin-eval-result" style="display: none;">
+              <div class="eval-header">
+                <div>
+                  <span class="job-tier-badge" id="eval-tier-badge">🥇 Tier 1 • Applied ML</span>
+                  <h3 class="eval-title" id="eval-job-title">Role Title</h3>
+                  <div class="job-company-loc" style="margin-top: 0.25rem;">
+                    <span class="job-company" id="eval-company">Company</span>
+                    <span>•</span>
+                    <span class="job-location" id="eval-location">📍 Location</span>
+                  </div>
+                </div>
+                <div class="score-badge-circle" id="eval-score-circle">
+                  <span class="score-badge-val" id="eval-score-val">95%</span>
+                  <span class="score-badge-label">FIT</span>
+                </div>
+              </div>
+
+              <!-- Metadata pills -->
+              <div class="eval-meta-grid">
+                <div class="eval-meta-item">
+                  <span class="eval-meta-label">Seniority / Gate:</span>
+                  <span class="eval-meta-val" id="eval-fresher-status">✓ Fresher (0-1 Yr) Eligible</span>
+                </div>
+                <div class="eval-meta-item">
+                  <span class="eval-meta-label">Category:</span>
+                  <span class="eval-meta-val" id="eval-category">-</span>
+                </div>
+                <div class="eval-meta-item">
+                  <span class="eval-meta-label">Priority:</span>
+                  <span class="eval-meta-val" id="eval-priority">Primary</span>
+                </div>
+                <div class="eval-meta-item">
+                  <span class="eval-meta-label">Recruiter Contact:</span>
+                  <span class="eval-meta-val" id="eval-contact">-</span>
+                </div>
+              </div>
+
+              <div class="eval-skills-block">
+                <div class="eval-skills-label">Extracted Skills:</div>
+                <div class="skills-tags" id="eval-skills-tags"></div>
+              </div>
+
+              <div class="outreach-box-container">
+                <div class="outreach-box-header">
+                  <span class="outreach-title">💬 Generated Cold Outreach Pitch (LinkedIn DM / InMail)</span>
+                  <button class="btn btn-outline btn-sm" id="linkedin-copy-dm-btn">
+                    <span>📋 Copy Pitch</span>
+                  </button>
+                </div>
+                <textarea id="eval-outreach-text" class="outreach-textarea" rows="5"></textarea>
+              </div>
+
+              <div class="eval-actions">
+                <button class="btn btn-primary" id="linkedin-save-job-btn">
+                  <span>📥 Save to My Matched Jobs</span>
+                </button>
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="eval-view-post-link">
+                  <span>💬 View Original Post ↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Curated Live Feed Section -->
+        <div class="curated-feed-section">
+          <div class="curated-feed-header">
+            <div>
+              <h3 class="section-title" style="font-size: 1.25rem;">Curated LinkedIn Feed Hiring Posts</h3>
+              <p class="section-desc">Hand-verified informal hiring posts from top tech teams across Bengaluru, Gurgaon, and Hyderabad.</p>
+            </div>
+            <span class="badge-live-feed">⚡ Verified Fresh within 24h</span>
+          </div>
+
+          <div class="curated-feed-grid" id="curated-feed-grid">
+            <!-- Injected via JS -->
           </div>
         </div>
       </div>

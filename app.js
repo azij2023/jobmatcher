@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentFilter = {
     search: "",
     tier: "all",
+    source: "all",
     minScore: 0.60,
     sortBy: "score-desc",
     maxAgeHours: 24
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginationButtons = document.getElementById("pagination-buttons");
   const pageSizeSelect = document.getElementById("page-size-select");
   const freshnessSelect = document.getElementById("freshness-select");
+  const sourceSelect = document.getElementById("source-select");
 
   // ==========================================================================
   // 2. Initial Setup & Stats Display
@@ -130,6 +132,15 @@ document.addEventListener("DOMContentLoaded", () => {
       // Freshness filter: Strictly exclude jobs older than selected hours (e.g. 24h, no 2-week-old posts!)
       if (job.hours_ago !== undefined && job.hours_ago > currentFilter.maxAgeHours) return false;
 
+      // Source filter
+      if (currentFilter.source && currentFilter.source !== "all") {
+        const isPost = job.is_post || (job.source_type || '').toLowerCase().includes('post') || (job.url || '').includes('/posts/');
+        if (currentFilter.source === "LinkedIn Post" && !isPost) return false;
+        if (currentFilter.source === "LinkedIn" && (isPost || !(job.url || '').toLowerCase().includes('linkedin.com'))) return false;
+        if (currentFilter.source === "Naukri" && !(job.url || '').toLowerCase().includes('naukri.com')) return false;
+        if (currentFilter.source === "Direct" && ((job.url || '').toLowerCase().includes('linkedin.com') || (job.url || '').toLowerCase().includes('naukri.com') || isPost)) return false;
+      }
+
       return true;
     });
 
@@ -184,7 +195,17 @@ document.addEventListener("DOMContentLoaded", () => {
       let applyBtnText = 'Apply on Company Site ↗';
       let applyBtnClass = 'btn btn-primary';
 
-      if (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) {
+      const isPost = job.is_post || typeLower.includes('post') || urlLower.includes('/posts/');
+
+      if (isPost) {
+        platformPill = `<span class="source-domain-badge source-linkedin-post">💬 LinkedIn Post</span>`;
+        if (job.post_author) {
+          const authorShort = job.post_author.split('(')[0].trim();
+          platformPill += ` <span class="author-badge" title="${escapeHTML(job.post_author)}">👤 By: ${escapeHTML(authorShort)}</span>`;
+        }
+        applyBtnText = '💬 View Post & DM ↗';
+        applyBtnClass = 'btn btn-primary btn-linkedin-post';
+      } else if (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) {
         platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn</span>`;
         applyBtnText = 'Apply on LinkedIn ↗';
         applyBtnClass = 'btn btn-primary btn-linkedin';
@@ -243,6 +264,16 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Open direct application on ${escapeHTML(job.source_type || 'Job Portal')}">
               <span>${applyBtnText}</span>
             </a>
+            ${job.contact_email ? `
+              <a href="mailto:${escapeHTML(job.contact_email)}?subject=${encodeURIComponent(`Application for ${job.title} - Fresher/Early Career`)}&body=${encodeURIComponent(job.outreach_dm || `Hi ${job.post_author ? job.post_author.split('(')[0].trim() : 'Hiring Team'},\n\nI saw your LinkedIn post regarding the ${job.title} role at ${job.company}.`)}" class="btn btn-secondary" title="Email application & resume directly to recruiter">
+                <span>✉️ Email</span>
+              </a>
+            ` : ''}
+            ${job.outreach_dm ? `
+              <button class="btn btn-secondary copy-outreach-btn" data-outreach="${escapeHTML(job.outreach_dm)}" title="Copy personalized recruiter outreach DM pitch">
+                <span>💬 Pitch</span>
+              </button>
+            ` : ''}
             ${job.company_url ? `
               <a href="${escapeHTML(job.company_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-company-site" title="Visit official careers portal for ${escapeHTML(job.company)}">
                 <span>🏢 Careers ↗</span>
@@ -258,6 +289,17 @@ document.addEventListener("DOMContentLoaded", () => {
         </article>
       `;
     }).join("");
+
+    // Attach copy pitch buttons
+    document.querySelectorAll(".copy-outreach-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const pitch = e.currentTarget.getAttribute("data-outreach");
+        navigator.clipboard.writeText(pitch).then(() => {
+          showToast("📋 Personalized recruiter outreach pitch copied to clipboard!");
+        });
+      });
+    });
 
     // Attach copy buttons
     document.querySelectorAll(".copy-btn").forEach(btn => {
@@ -402,13 +444,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Strategy advice based on Tier
     let advice = "";
-    if (job.tier === 1) advice = "Top Priority Tier: Tailor your resume to highlight PyTorch, deep learning model architectures, and applied research/thesis work.";
-    else if (job.tier === 2) advice = "Top Priority Tier: Emphasize A/B testing methodologies, SQL analytics pipelines, product metrics, and business experimentation.";
-    else if (job.tier === 3) advice = "Top Priority Tier: Showcase statistical hypothesis testing, decision trees, modeling, and data-driven optimization.";
-    else if (job.tier === 4) advice = "Secondary Priority Tier: Highlight linear programming (PuLP/SciPy), operations research algorithms, and constraint optimization.";
-    else if (job.tier === 5) advice = "Secondary Priority Tier: Feature deployed ML models, FastAPI REST APIs, Docker containerization, and scikit-learn.";
-    else if (job.tier === 6) advice = "Secondary Priority Tier: Highlight ARIMA, Prophet, time-series feature engineering, and demand forecasting projects.";
-    else advice = "Strategic Adjacent Role: Highlight analytical problem-solving, stakeholder communication, and domain knowledge.";
+    if (job.is_post) {
+      advice = `Informal LinkedIn Hiring Post: Reach out directly to ${job.post_author || 'the hiring manager'} on LinkedIn DM or via email (${job.contact_email || 'the post link'}). Use the generated outreach pitch highlighting your relevant skills: ${matched.join(', ') || 'data & quantitative modeling'}.`;
+    } else if (job.tier === 1) advice = "Top Priority Tier 1: Tailor your resume to highlight PyTorch, deep learning foundation models/LLMs, and research projects.";
+    else if (job.tier === 2) advice = "Top Priority Tier 2: Emphasize A/B testing methodologies, SQL analytics pipelines, business experimentation, and predictive modeling.";
+    else if (job.tier === 3) advice = "Top Priority Tier 3: Showcase statistical modeling, hypothesis testing, causal inference, and decision optimization.";
+    else if (job.tier === 4) advice = "Top Priority Tier 4: Highlight linear programming (PuLP/SciPy), operations research algorithms, routing, and constraint optimization.";
+    else if (job.tier === 5) advice = "Top Priority Tier 5: Feature product teardowns, telemetry metrics, SQL analytics, and customer problem roadmaps.";
+    else if (job.tier === 6) advice = "Top Priority Tier 6: Highlight business operations, merchant growth financial modeling, market sizing, and board decks.";
+    else if (job.tier === 7) advice = "Top Priority Tier 7: Highlight Prophet, ARIMA, demand forecasting, time-series feature engineering, and inventory planning.";
+    else if (job.tier === 8) advice = "Secondary Priority Tier 8: Feature deployed ML models, FastAPI REST APIs, Docker containerization, and scikit-learn.";
+    else advice = "Strategic Adjacent Role Tier 9: Highlight data modeling, dbt pipelines, SQL transformations, and dimensional warehousing.";
 
     modalStrategyAdvice.textContent = advice;
 
@@ -418,7 +464,10 @@ document.addEventListener("DOMContentLoaded", () => {
     let applyLabel = 'Apply Online ↗';
     let applyClass = 'btn btn-primary';
 
-    if (urlLower.includes('linkedin.com') || sourceLower.includes('linkedin')) {
+    if (job.is_post || sourceLower.includes('post') || urlLower.includes('/posts/')) {
+      applyLabel = '💬 View Post & DM ↗';
+      applyClass = 'btn btn-primary btn-linkedin-post';
+    } else if (urlLower.includes('linkedin.com') || sourceLower.includes('linkedin')) {
       applyLabel = 'Apply on LinkedIn ↗';
       applyClass = 'btn btn-primary btn-linkedin';
     } else if (urlLower.includes('naukri.com') || sourceLower.includes('naukri')) {
@@ -521,6 +570,7 @@ document.addEventListener("DOMContentLoaded", () => {
     searchInput.value = "";
     currentFilter.search = "";
     currentFilter.tier = "all";
+    currentFilter.source = "all";
     currentFilter.minScore = 0.60;
     currentFilter.maxAgeHours = 24;
     scoreSlider.value = 60;
@@ -528,6 +578,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sortSelect.value = "score-desc";
     tierSelect.value = "all";
     if (freshnessSelect) freshnessSelect.value = "24";
+    if (sourceSelect) sourceSelect.value = "all";
     clearSearchBtn.style.display = "none";
     updateChipSelection("all");
     currentPage = 1;
@@ -542,12 +593,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  if (sourceSelect) {
+    sourceSelect.addEventListener("change", (e) => {
+      currentFilter.source = e.target.value;
+      if (e.target.value === "LinkedIn Post") {
+        updateChipSelection("source-post");
+      } else {
+        updateChipSelection("all");
+      }
+      currentPage = 1;
+      renderJobs();
+    });
+  }
+
   // Quick Chips
   tierChipsContainer.addEventListener("click", (e) => {
     if (e.target.classList.contains("chip")) {
       const chipVal = e.target.getAttribute("data-chip");
-      currentFilter.tier = chipVal;
-      tierSelect.value = chipVal;
+      if (chipVal === "source-post") {
+        currentFilter.source = "LinkedIn Post";
+        currentFilter.tier = "all";
+        tierSelect.value = "all";
+        if (sourceSelect) sourceSelect.value = "LinkedIn Post";
+      } else {
+        currentFilter.source = "all";
+        if (sourceSelect) sourceSelect.value = "all";
+        currentFilter.tier = chipVal;
+        tierSelect.value = chipVal;
+      }
       updateChipSelection(chipVal);
       currentPage = 1;
       renderJobs();
@@ -1006,9 +1079,463 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // ==========================================================================
+  // 11. LinkedIn Post Harvester & Intelligent Parser
+  // ==========================================================================
+  const linkedinPostInput = document.getElementById("linkedin-post-input");
+  const linkedinAuthorInput = document.getElementById("linkedin-author-input");
+  const linkedinUrlInput = document.getElementById("linkedin-url-input");
+  const linkedinParseBtn = document.getElementById("linkedin-parse-btn");
+  const linkedinClearBtn = document.getElementById("linkedin-clear-btn");
+  const linkedinSaveJobBtn = document.getElementById("linkedin-save-job-btn");
+  const linkedinCopyDmBtn = document.getElementById("linkedin-copy-dm-btn");
+  const evalEmptyState = document.getElementById("linkedin-eval-empty");
+  const evalResultCard = document.getElementById("linkedin-eval-result");
+  const evalOutreachText = document.getElementById("eval-outreach-text");
+  const curatedFeedGrid = document.getElementById("curated-feed-grid");
+
+  let lastParsedPostJob = null;
+
+  const LINKEDIN_SAMPLE_PRESETS = {
+    swiggy: {
+      author: "Priya Sharma (Principal PM, Consumer Marketplace @ Swiggy)",
+      url: "https://www.linkedin.com/posts/swiggy-apm-hiring-freshers-2025_activity-7254890123-x9aL",
+      text: "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in."
+    },
+    razorpay: {
+      author: "Arjun Mehta (VP Strategy & BizOps @ Razorpay)",
+      url: "https://www.linkedin.com/posts/razorpay-strategy-bizops-analyst-activity-7254881928-k8mQ",
+      text: "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume to bizops-talent@razorpay.com."
+    },
+    phonepe: {
+      author: "Ananya Sen (Director of Data Science @ PhonePe)",
+      url: "https://www.linkedin.com/posts/phonepe-data-science-fresher-bengaluru-activity-7254876612-p3wR",
+      text: "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me or send your resume to ds-careers@phonepe.com."
+    },
+    delhivery: {
+      author: "Kunal Singhal (Head of Network Optimization @ Delhivery)",
+      url: "https://www.linkedin.com/posts/delhivery-operations-research-trainee-activity-7254869910-q2zT",
+      text: "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via optimization-hiring@delhivery.com."
+    },
+    zepto: {
+      author: "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
+      url: "https://www.linkedin.com/posts/zepto-demand-forecasting-analyst-activity-7254854120-u7yM",
+      text: "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'."
+    },
+    sarvam: {
+      author: "Vivek Raghavan (Co-Founder @ Sarvam AI)",
+      url: "https://www.linkedin.com/posts/sarvam-ai-applied-ml-research-intern-activity-7254841902-v1xP",
+      text: "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM or email research@sarvam.ai with your top projects."
+    }
+  };
+
+  function parseLinkedInPostClient(rawText, author, postUrl) {
+    const text = (rawText || "").trim();
+    const lower = text.toLowerCase();
+
+    // 1. Detect Category & Tier
+    let category = "Applied ML / Research";
+    let tier = 1;
+    let badge = "🥇";
+    let priority = "Primary";
+    let weight = 1.0;
+    let title = "Early-Career Specialist";
+
+    const TIER_MAPPINGS = [
+      {
+        tier: 1, category: "Applied ML / Research", badge: "🥇", priority: "Primary", weight: 1.0,
+        patterns: ["applied scientist", "applied ml", "ml research", "research intern", "deep learning", "llm research", "ai research", "generative ai", "multimodal", "pytorch intern"],
+        defaultTitle: "Applied ML Research Intern"
+      },
+      {
+        tier: 2, category: "Data Science", badge: "🥈", priority: "Primary", weight: 0.96,
+        patterns: ["data scientist", "data science fresher", "junior data scientist", "associate data scientist", "growth data scientist", "risk analytics", "experimentation data"],
+        defaultTitle: "Fresher Data Scientist"
+      },
+      {
+        tier: 3, category: "Decision Science", badge: "🥉", priority: "Primary", weight: 0.93,
+        patterns: ["decision scientist", "decision science", "analytics scientist", "quantitative analyst", "statistical modeling", "decision analysis"],
+        defaultTitle: "Associate Decision Scientist"
+      },
+      {
+        tier: 4, category: "OR / Optimization", badge: "🏅", priority: "Primary", weight: 0.90,
+        patterns: ["optimization scientist", "operations research", "or scientist", "linear programming", "vehicle routing", "network optimization", "supply chain optimization", "pulp"],
+        defaultTitle: "Operations Research & Optimization Trainee"
+      },
+      {
+        tier: 5, category: "Product", badge: "5", priority: "Primary", weight: 0.88,
+        patterns: ["associate product manager", "apm", "junior product manager", "product analyst", "product management intern", "product manager fresher"],
+        defaultTitle: "Associate Product Manager (APM)"
+      },
+      {
+        tier: 6, category: "Strategy / Programs", badge: "6", priority: "Primary", weight: 0.85,
+        patterns: ["strategy analyst", "business operations", "bizops", "founder's office", "program analyst", "strategy associate", "strategic planning"],
+        defaultTitle: "Strategy & BizOps Analyst"
+      },
+      {
+        tier: 7, category: "Forecasting", badge: "7", priority: "Primary", weight: 0.82,
+        patterns: ["forecasting analyst", "time series", "demand forecasting", "forecasting scientist", "prophet", "arima", "demand prediction"],
+        defaultTitle: "Time Series Forecasting Analyst"
+      },
+      {
+        tier: 8, category: "ML Engineering", badge: "8", priority: "Secondary", weight: 0.78,
+        patterns: ["machine learning engineer", "ml engineer", "applied mle", "mlops", "ml platform", "fastapi"],
+        defaultTitle: "Junior ML Engineer"
+      },
+      {
+        tier: 9, category: "Data Engineering Adjacent", badge: "9", priority: "Optional", weight: 0.70,
+        patterns: ["analytics engineer", "dbt", "data modeling", "data engineer fresher", "pipeline engineer"],
+        defaultTitle: "Analytics & Data Engineer"
+      }
+    ];
+
+    for (const t of TIER_MAPPINGS) {
+      if (t.patterns.some(p => lower.includes(p))) {
+        tier = t.tier;
+        category = t.category;
+        badge = t.badge;
+        priority = t.priority;
+        weight = t.weight;
+        title = t.defaultTitle;
+        break;
+      }
+    }
+
+    // Try extracting custom title from text
+    const hiringMatch = text.match(/(?:hiring|looking for|seeking)\s+(?:an?\s+)?([A-Za-z\s/()\-]+?)(?:\s+(?:at|in|for|to|with)\b|[.,\n!])/i);
+    if (hiringMatch && hiringMatch[1] && hiringMatch[1].trim().length < 50) {
+      const cand = hiringMatch[1].trim();
+      if (!cand.toLowerCase().includes("someone") && !cand.toLowerCase().includes("candidate")) {
+        title = cand;
+      }
+    }
+
+    // 2. Company Name
+    let company = "Tech Venture (LinkedIn Post)";
+    const compMatch = text.match(/(?:at|@|joining|team at)\s+([A-Z][A-Za-z0-9&]{1,25})/);
+    if (compMatch && compMatch[1]) {
+      const candComp = compMatch[1].trim();
+      const skipWords = ["our", "my", "the", "bengaluru", "bangalore", "india", "hiring", "gurgaon", "hyderabad", "delhi", "pune", "we", "this"];
+      if (!skipWords.includes(candComp.toLowerCase())) {
+        company = candComp;
+      }
+    }
+    if (author && author.includes("@")) {
+      const authorComp = author.split("@")[1].trim().replace(/\)/g, "");
+      if (authorComp.length > 1 && authorComp.length < 30) {
+        company = authorComp;
+      }
+    }
+
+    // 3. Location
+    let location = "Bengaluru, Karnataka, India";
+    const cities = [
+      { name: "Bengaluru, Karnataka, India", match: ["bengaluru", "bangalore"] },
+      { name: "Gurugram, Haryana, India", match: ["gurugram", "gurgaon"] },
+      { name: "Hyderabad, Telangana, India", match: ["hyderabad"] },
+      { name: "Pune, Maharashtra, India", match: ["pune"] },
+      { name: "Mumbai, Maharashtra, India", match: ["mumbai"] },
+      { name: "Noida, Uttar Pradesh, India", match: ["noida"] },
+      { name: "Remote (India)", match: ["remote", "work from home", "wfh"] }
+    ];
+    for (const c of cities) {
+      if (c.match.some(m => lower.includes(m))) {
+        location = c.name;
+        break;
+      }
+    }
+
+    // 4. Fresher Eligibility Gate
+    let isFresher = true;
+    let minYears = 0;
+    const expMatch = lower.match(/(\d+)\+?\s*years?(?:\s+of)?\s+exp/);
+    if (expMatch) {
+      minYears = parseInt(expMatch[1], 10);
+      if (minYears > 1) isFresher = false;
+    }
+    if (lower.includes("fresher") || lower.includes("0-1") || lower.includes("fresh grad") || lower.includes("intern") || lower.includes("trainee") || lower.includes("batch")) {
+      isFresher = true;
+    }
+
+    // 5. Contact Email
+    const emailMatch = text.match(/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/);
+    const contactEmail = emailMatch ? emailMatch[0] : null;
+
+    // 6. Skills extraction
+    const SKILLS_LIST = [
+      "python", "sql", "pytorch", "tensorflow", "excel", "docker",
+      "fastapi", "machine_learning", "deep_learning", "ab_testing",
+      "linear_programming", "optimization", "pulp", "forecasting",
+      "prophet", "arima", "time_series", "dbt", "statistics", "pandas"
+    ];
+    const matchedSkills = SKILLS_LIST.filter(s => lower.includes(s.replace(/_/g, " ")) || lower.includes(s));
+
+    // 7. Match score
+    const skillBonus = Math.min(matchedSkills.length * 0.03, 0.15);
+    const score = Math.min(Math.round((weight * 0.85 + skillBonus) * 1000) / 1000, 0.98);
+
+    // 8. Generate personalized recruiter outreach pitch
+    const authorClean = author ? author.split("(")[0].trim() : "Hiring Team";
+    const skillsListStr = matchedSkills.length > 0
+      ? matchedSkills.slice(0, 3).map(s => s.replace(/_/g, " ").toUpperCase()).join(", ")
+      : "data analysis and applied quantitative modeling";
+
+    const outreachPitch = `Hi ${authorClean},
+
+I came across your LinkedIn post regarding the ${title} role at ${company}. As an early-career candidate with strong foundations in ${skillsListStr}, I have developed end-to-end practical projects tackling similar challenges.
+
+I would love to connect and share my resume for consideration!
+
+Best regards,
+[Your Name]`;
+
+    return {
+      title,
+      company,
+      location,
+      score,
+      tier,
+      priority,
+      badge,
+      category,
+      is_fresher: isFresher,
+      min_years_experience: minYears,
+      contact_email: contactEmail,
+      url: postUrl || "https://www.linkedin.com/feed/",
+      source_type: "LinkedIn Post",
+      source_domain: "linkedin.com",
+      is_post: true,
+      post_author: author || "Hiring Manager (LinkedIn Feed)",
+      matched_skills: matchedSkills,
+      missing_skills: [],
+      hours_ago: 1,
+      posted_at: "Just now",
+      raw_description: text,
+      description: text.length > 300 ? text.substring(0, 297) + "..." : text,
+      outreach_dm: outreachPitch
+    };
+  }
+
+  // Preset Buttons Listener
+  document.querySelectorAll(".preset-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const presetKey = btn.getAttribute("data-preset");
+      const preset = LINKEDIN_SAMPLE_PRESETS[presetKey];
+      if (!preset) return;
+
+      if (linkedinPostInput) linkedinPostInput.value = preset.text;
+      if (linkedinAuthorInput) linkedinAuthorInput.value = preset.author;
+      if (linkedinUrlInput) linkedinUrlInput.value = preset.url;
+
+      if (linkedinParseBtn) linkedinParseBtn.click();
+      showToast(`Loaded preset post: ${btn.textContent}`);
+    });
+  });
+
+  // Parse Button Listener
+  if (linkedinParseBtn) {
+    linkedinParseBtn.addEventListener("click", () => {
+      const rawText = linkedinPostInput ? linkedinPostInput.value.trim() : "";
+      if (!rawText) {
+        showToast("⚠️ Please paste some LinkedIn post text first!");
+        return;
+      }
+
+      const author = linkedinAuthorInput ? linkedinAuthorInput.value.trim() : "";
+      const postUrl = linkedinUrlInput ? linkedinUrlInput.value.trim() : "";
+
+      const job = parseLinkedInPostClient(rawText, author, postUrl);
+      lastParsedPostJob = job;
+
+      // Populate Evaluation Card
+      if (evalEmptyState) evalEmptyState.style.display = "none";
+      if (evalResultCard) evalResultCard.style.display = "block";
+
+      const evalTierBadge = document.getElementById("eval-tier-badge");
+      const evalJobTitle = document.getElementById("eval-job-title");
+      const evalCompany = document.getElementById("eval-company");
+      const evalLocation = document.getElementById("eval-location");
+      const evalScoreVal = document.getElementById("eval-score-val");
+      const evalFresherStatus = document.getElementById("eval-fresher-status");
+      const evalCategory = document.getElementById("eval-category");
+      const evalPriority = document.getElementById("eval-priority");
+      const evalContact = document.getElementById("eval-contact");
+      const evalSkillsTags = document.getElementById("eval-skills-tags");
+      const evalViewPostLink = document.getElementById("eval-view-post-link");
+
+      if (evalTierBadge) {
+        evalTierBadge.textContent = `${job.badge} Tier ${job.tier} • ${job.category} (${job.priority})`;
+        evalTierBadge.className = `job-tier-badge ${getTierBadgeClass(job.tier)}`;
+      }
+      if (evalJobTitle) evalJobTitle.textContent = job.title;
+      if (evalCompany) evalCompany.textContent = job.company;
+      if (evalLocation) evalLocation.textContent = `📍 ${job.location}`;
+      if (evalScoreVal) evalScoreVal.textContent = `${Math.round(job.score * 100)}%`;
+
+      if (evalFresherStatus) {
+        if (job.is_fresher) {
+          evalFresherStatus.innerHTML = `<span style="color:#10b981">✓ Approved (0–1 Yr Exp)</span>`;
+        } else {
+          evalFresherStatus.innerHTML = `<span style="color:#ef4444">✕ Ineligible (${job.min_years_experience}+ Yrs Exp)</span>`;
+        }
+      }
+
+      if (evalCategory) evalCategory.textContent = job.category;
+      if (evalPriority) evalPriority.textContent = job.priority;
+      if (evalContact) {
+        evalContact.innerHTML = job.contact_email
+          ? `<a href="mailto:${escapeHTML(job.contact_email)}" style="color:var(--brand-primary); font-weight:700;">✉️ ${escapeHTML(job.contact_email)}</a>`
+          : `<span style="color:var(--text-dim)">Direct DM on LinkedIn</span>`;
+      }
+
+      if (evalSkillsTags) {
+        evalSkillsTags.innerHTML = job.matched_skills.length > 0
+          ? job.matched_skills.map(s => `<span class="skill-tag matched">✓ ${s.replace(/_/g, " ")}</span>`).join(" ")
+          : `<span style="color:var(--text-dim)">General analytical problem-solving</span>`;
+      }
+
+      if (evalOutreachText) {
+        evalOutreachText.value = job.outreach_dm;
+      }
+
+      if (evalViewPostLink) {
+        evalViewPostLink.href = job.url;
+      }
+
+      showToast(`⚡ Evaluated: ${job.title} (${Math.round(job.score * 100)}% Match)`);
+    });
+  }
+
+  // Clear Button Listener
+  if (linkedinClearBtn) {
+    linkedinClearBtn.addEventListener("click", () => {
+      if (linkedinPostInput) linkedinPostInput.value = "";
+      if (linkedinAuthorInput) linkedinAuthorInput.value = "";
+      if (linkedinUrlInput) linkedinUrlInput.value = "";
+      if (evalEmptyState) evalEmptyState.style.display = "flex";
+      if (evalResultCard) evalResultCard.style.display = "none";
+      lastParsedPostJob = null;
+      showToast("Cleared inputs");
+    });
+  }
+
+  // Copy Outreach DM Button Listener
+  if (linkedinCopyDmBtn) {
+    linkedinCopyDmBtn.addEventListener("click", () => {
+      if (!evalOutreachText || !evalOutreachText.value) return;
+      navigator.clipboard.writeText(evalOutreachText.value).then(() => {
+        showToast("📋 Cold recruiter outreach pitch copied!");
+      });
+    });
+  }
+
+  // Save to Matched Jobs Listener
+  if (linkedinSaveJobBtn) {
+    linkedinSaveJobBtn.addEventListener("click", () => {
+      if (!lastParsedPostJob) {
+        showToast("⚠️ Please parse a post first!");
+        return;
+      }
+
+      const exists = jobs.some(j => j.url === lastParsedPostJob.url && j.title === lastParsedPostJob.title);
+      if (exists) {
+        showToast("ℹ️ This job is already in your matched catalog!");
+        return;
+      }
+
+      jobs.unshift(lastParsedPostJob);
+      initStats();
+      renderJobs();
+      renderCuratedFeed();
+      showToast(`✅ "${lastParsedPostJob.title}" saved to Matched Jobs board!`);
+
+      // Switch to jobs board tab
+      const tabBtnJobs = document.getElementById("tab-btn-jobs");
+      if (tabBtnJobs) tabBtnJobs.click();
+    });
+  }
+
+  // Render Curated Feed Section
+  function renderCuratedFeed() {
+    if (!curatedFeedGrid) return;
+    const postJobs = jobs.filter(j => j.is_post || j.source_type === "LinkedIn Post");
+    if (postJobs.length === 0) {
+      curatedFeedGrid.innerHTML = `<p style="color:var(--text-dim)">No curated LinkedIn feed posts found.</p>`;
+      return;
+    }
+
+    curatedFeedGrid.innerHTML = postJobs.map((p, idx) => {
+      const skillsTags = (p.matched_skills || []).map(s => `<span class="skill-tag matched" style="font-size:0.7rem">✓ ${s.replace(/_/g, " ")}</span>`).join(" ");
+      return `
+        <div class="curated-card">
+          <div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+              <span class="source-domain-badge source-linkedin-post">💬 LinkedIn Post</span>
+              <span class="freshness-badge">⚡ ${p.hours_ago || 2}h ago</span>
+            </div>
+            <h4 style="font-size:1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.25rem;">${escapeHTML(p.title)}</h4>
+            <div style="font-size:0.85rem; color:var(--brand-primary); font-weight:600; margin-bottom:0.4rem;">
+              ${escapeHTML(p.company)} • 📍 ${escapeHTML(p.location)}
+            </div>
+            ${p.post_author ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem;">👤 ${escapeHTML(p.post_author)}</div>` : ''}
+            <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.45; margin-bottom:0.75rem;">
+              ${escapeHTML(p.description)}
+            </p>
+            ${skillsTags ? `<div style="display:flex; flex-wrap:wrap; gap:0.25rem; margin-bottom:0.75rem;">${skillsTags}</div>` : ''}
+          </div>
+          <div style="display:flex; gap:0.5rem; flex-wrap:wrap; padding-top:0.75rem; border-top:1px solid var(--border-color);">
+            <button class="btn btn-secondary btn-sm load-preset-feed-btn" data-feed-index="${idx}" title="Load this post into parser for full evaluation">
+              ⚡ Load in Parser
+            </button>
+            <a href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-linkedin-post">
+              <span>💬 View & DM ↗</span>
+            </a>
+            ${p.contact_email ? `
+              <a href="mailto:${escapeHTML(p.contact_email)}?subject=${encodeURIComponent(`Application: ${p.title}`)}" class="btn btn-secondary btn-sm" title="Email Resume">
+                <span>✉️ Email</span>
+              </a>
+            ` : ''}
+            <button class="btn btn-secondary btn-sm copy-feed-pitch-btn" data-outreach="${escapeHTML(p.outreach_dm || '')}" title="Copy Outreach DM">
+              📋 DM
+            </button>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    // Attach load preset buttons
+    curatedFeedGrid.querySelectorAll(".load-preset-feed-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const idx = parseInt(btn.getAttribute("data-feed-index"), 10);
+        const p = postJobs[idx];
+        if (!p) return;
+        if (linkedinPostInput) linkedinPostInput.value = p.raw_description || p.description;
+        if (linkedinAuthorInput) linkedinAuthorInput.value = p.post_author || "";
+        if (linkedinUrlInput) linkedinUrlInput.value = p.url || "";
+        if (linkedinParseBtn) linkedinParseBtn.click();
+        showToast(`Loaded ${p.title} at ${p.company} into parser!`);
+        window.scrollTo({ top: document.getElementById("view-linkedin").offsetTop - 80, behavior: "smooth" });
+      });
+    });
+
+    // Attach copy pitch buttons
+    curatedFeedGrid.querySelectorAll(".copy-feed-pitch-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const text = e.currentTarget.getAttribute("data-outreach");
+        if (text) {
+          navigator.clipboard.writeText(text).then(() => {
+            showToast("📋 Recruiter outreach pitch copied to clipboard!");
+          });
+        }
+      });
+    });
+  }
+
   // Initial Runs
   initStats();
   renderJobs();
   renderStrategyTable();
   renderSkillMatrix();
+  renderCuratedFeed();
 });
+
