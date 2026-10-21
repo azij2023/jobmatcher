@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     tier: "all",
     source: "all",
     minScore: 0.60,
-    sortBy: "score-desc",
+    sortBy: "latest",
     maxAgeHours: 24
   };
 
@@ -144,12 +144,29 @@ document.addEventListener("DOMContentLoaded", () => {
       return true;
     });
 
-    // Sorting
+    // Sorting: Default is "latest" (latest to farthest / newest to oldest)
     filtered.sort((a, b) => {
-      if (currentFilter.sortBy === "score-desc") return b.score - a.score;
-      if (currentFilter.sortBy === "tier-asc") return (a.tier || 99) - (b.tier || 99);
+      const aHours = a.hours_ago !== undefined ? a.hours_ago : 999;
+      const bHours = b.hours_ago !== undefined ? b.hours_ago : 999;
+
+      if (currentFilter.sortBy === "latest") {
+        if (aHours !== bHours) return aHours - bHours; // lowest hours_ago (latest) first
+        return (b.score || 0) - (a.score || 0); // secondary tie-breaker: highest match score
+      }
+      if (currentFilter.sortBy === "farthest" || currentFilter.sortBy === "oldest") {
+        if (aHours !== bHours) return bHours - aHours; // highest hours_ago (farthest) first
+        return (b.score || 0) - (a.score || 0);
+      }
+      if (currentFilter.sortBy === "score-desc") {
+        if (b.score !== a.score) return b.score - a.score;
+        return aHours - bHours; // secondary: latest first
+      }
+      if (currentFilter.sortBy === "tier-asc") {
+        if (a.tier !== b.tier) return (a.tier || 99) - (b.tier || 99);
+        return aHours - bHours;
+      }
       if (currentFilter.sortBy === "company-asc") return a.company.localeCompare(b.company);
-      return 0;
+      return aHours - bHours;
     });
 
     const totalJobs = filtered.length;
@@ -572,10 +589,11 @@ document.addEventListener("DOMContentLoaded", () => {
     currentFilter.tier = "all";
     currentFilter.source = "all";
     currentFilter.minScore = 0.60;
+    currentFilter.sortBy = "latest";
     currentFilter.maxAgeHours = 24;
     scoreSlider.value = 60;
     scoreSliderVal.textContent = "60%";
-    sortSelect.value = "score-desc";
+    sortSelect.value = "latest";
     tierSelect.value = "all";
     if (freshnessSelect) freshnessSelect.value = "24";
     if (sourceSelect) sourceSelect.value = "all";
