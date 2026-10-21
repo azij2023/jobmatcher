@@ -85,11 +85,15 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
 
     # 2. Detect Company
     company = "Tech Startup (via LinkedIn)"
-    company_match = re.search(r"(?:at|@|joining|team at)\s+([A-Z][A-Za-z0-9&]{1,20})\b", clean_text)
-    if company_match:
-        cand = company_match.group(1).strip()
-        if not any(skip in cand.lower() for skip in ["our", "my", "the", "bengaluru", "bangalore", "india", "hiring", "gurgaon"]):
-            company = cand
+    first_line = clean_text.split("\n")[0].strip()
+    if " - " in first_line and len(first_line.split(" - ")[0].strip()) < 40:
+        company = first_line.split(" - ")[0].strip()
+    else:
+        company_match = re.search(r"(?:at|@|joining|team at)\s+([A-Z][A-Za-z0-9&]{1,20})\b", clean_text)
+        if company_match:
+            cand = company_match.group(1).strip()
+            if not any(skip in cand.lower() for skip in ["our", "my", "the", "bengaluru", "bangalore", "india", "hiring", "gurgaon"]):
+                company = cand
 
     # 3. Detect Location
     location = "Bengaluru, Karnataka, India"
@@ -154,12 +158,41 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
 
     now = datetime.datetime.now()
 
+    # 8. Detect relative time (e.g. "17 hours ago", "2 days ago", "17h ago")
+    detected_hours_ago = 2
+    detected_relative_time = "2 hours ago"
+    time_match = re.search(r"(?:posted\s*|·\s*)?(\d+)\s*(hours?|hrs?|h|days?|d|minutes?|mins?|m|weeks?|w)\s*ago", clean_text, re.IGNORECASE)
+    if time_match:
+        val = int(time_match.group(1))
+        unit = time_match.group(2).lower()
+        if unit.startswith('d'):
+            detected_hours_ago = val * 24
+            detected_relative_time = f"{val} days ago"
+        elif unit.startswith('w'):
+            detected_hours_ago = val * 168
+            detected_relative_time = f"{val} weeks ago"
+        elif unit.startswith('m'):
+            detected_hours_ago = max(1, round(val / 60))
+            detected_relative_time = f"{val} minutes ago"
+        else:
+            detected_hours_ago = val
+            detected_relative_time = f"{val} hours ago"
+
+    # 9. Detect Applicants Count (e.g. "Over 100 applicants")
+    app_match = re.search(r"(?:over\s+)?\d+\s+applicants", clean_text, re.IGNORECASE)
+    applicants_count = app_match.group(0).strip() if app_match else None
+
+    # 10. Detect Remote
+    is_remote = "remote" in lower
+
     return {
         "title": detected_title,
         "company": company,
         "location": location,
         "category": detected_category,
         "is_fresher": is_fresher,
+        "is_remote": is_remote,
+        "applicants_count": applicants_count,
         "min_years_experience": min_years,
         "contact_email": contact_email,
         "url": detected_link or "https://www.linkedin.com/feed/",
@@ -169,8 +202,9 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
         "post_author": author or "Hiring Manager (LinkedIn Feed)",
         "matched_skills": matched_skills,
         "missing_skills": [],
-        "hours_ago": 1,
-        "posted_at": now.strftime("%Y-%m-%d %H:%M"),
+        "hours_ago": detected_hours_ago,
+        "relative_time": detected_relative_time,
+        "posted_at": (now - datetime.timedelta(hours=detected_hours_ago)).strftime("%Y-%m-%d %H:%M"),
         "raw_description": clean_text,
         "description": clean_text[:280] + ("..." if len(clean_text) > 280 else ""),
         "outreach_dm": outreach_dm

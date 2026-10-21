@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Data Initialization
-  const data = window.JOB_MATCHER_DATA || {
+  const data = window.JOB_MATCHER_DATA || window.JOB_DATA || {
     jobs: [],
     profile: {},
     stats: {}
@@ -105,6 +105,47 @@ document.addEventListener("DOMContentLoaded", () => {
     return "tier-badge-adjacent";
   }
 
+  function getJobFreshness(job) {
+    if (!job) return { hours: 2, label: "2h ago", badgeText: "⚡ Posted 2h ago" };
+
+    // 1. Explicit relative time string (e.g. "17 hours ago", "17h ago")
+    if (job.relative_time) {
+      const match = String(job.relative_time).match(/(\d+)\s*(h|hr|hour|d|day|m|min|w|week)/i);
+      if (match) {
+        const num = parseInt(match[1], 10);
+        const unit = match[2].toLowerCase();
+        let hours = num;
+        if (unit.startsWith('d')) hours = num * 24;
+        else if (unit.startsWith('w')) hours = num * 168;
+        else if (unit.startsWith('m')) hours = Math.max(1, Math.round(num / 60));
+        const label = hours >= 24 ? `${Math.floor(hours / 24)}d ago` : `${hours}h ago`;
+        return { hours, label, badgeText: `⚡ Posted ${label}` };
+      }
+    }
+
+    // 2. Scan raw_description or description for LinkedIn timestamp like "17 hours ago"
+    const textToScan = `${job.raw_description || ''} ${job.description || ''}`;
+    const textTimeMatch = textToScan.match(/(?:posted\s*|·\s*)?(\d+)\s*(hours?|hrs?|h|days?|d|minutes?|mins?|m)\s*ago/i);
+    if (textTimeMatch) {
+      const num = parseInt(textTimeMatch[1], 10);
+      const unit = textTimeMatch[2].toLowerCase();
+      let hours = num;
+      if (unit.startsWith('d')) hours = num * 24;
+      else if (unit.startsWith('m')) hours = Math.max(1, Math.round(num / 60));
+      const label = hours >= 24 ? `${Math.floor(hours / 24)}d ago` : `${hours}h ago`;
+      return { hours, label, badgeText: `⚡ Posted ${label}` };
+    }
+
+    // 3. Fallback to job.hours_ago
+    const fallbackHours = job.hours_ago !== undefined ? job.hours_ago : 2;
+    const label = fallbackHours >= 24 ? `${Math.floor(fallbackHours / 24)}d ago` : `${fallbackHours}h ago`;
+    return {
+      hours: fallbackHours,
+      label,
+      badgeText: `⚡ Posted ${label}`
+    };
+  }
+
   function renderJobs() {
     let filtered = jobs.filter(job => {
       // Score filter
@@ -129,8 +170,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!titleMatch && !compMatch && !catMatch && !sourceMatch && !skillMatch) return false;
       }
 
-      // Freshness filter: Strictly exclude jobs older than selected hours (e.g. 24h, no 2-week-old posts!)
-      if (job.hours_ago !== undefined && job.hours_ago > currentFilter.maxAgeHours) return false;
+      // Freshness filter: Strictly exclude jobs older than selected hours
+      const freshness = getJobFreshness(job);
+      if (freshness.hours > currentFilter.maxAgeHours) return false;
 
       // Source filter
       if (currentFilter.source && currentFilter.source !== "all") {
@@ -144,17 +186,19 @@ document.addEventListener("DOMContentLoaded", () => {
       return true;
     });
 
-    // Sorting: Default is "latest" (latest to farthest / newest to oldest)
+    // Sorting: Default is "latest" (latest to farthest / newest to oldest based on dynamic elapsed time)
     filtered.sort((a, b) => {
-      const aHours = a.hours_ago !== undefined ? a.hours_ago : 999;
-      const bHours = b.hours_ago !== undefined ? b.hours_ago : 999;
+      const aFreshness = getJobFreshness(a);
+      const bFreshness = getJobFreshness(b);
+      const aHours = aFreshness.hours;
+      const bHours = bFreshness.hours;
 
       if (currentFilter.sortBy === "latest") {
-        if (aHours !== bHours) return aHours - bHours; // lowest hours_ago (latest) first
+        if (aHours !== bHours) return aHours - bHours; // lowest hours (latest) first
         return (b.score || 0) - (a.score || 0); // secondary tie-breaker: highest match score
       }
       if (currentFilter.sortBy === "farthest" || currentFilter.sortBy === "oldest") {
-        if (aHours !== bHours) return bHours - aHours; // highest hours_ago (farthest) first
+        if (aHours !== bHours) return bHours - aHours; // highest hours (farthest) first
         return (b.score || 0) - (a.score || 0);
       }
       if (currentFilter.sortBy === "score-desc") {
@@ -201,8 +245,8 @@ document.addEventListener("DOMContentLoaded", () => {
         `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`
       ).join("");
 
-      const hoursAgo = job.hours_ago !== undefined ? job.hours_ago : 3;
-      const freshnessPill = `<span class="freshness-badge">⚡ Posted ${hoursAgo}h ago</span>`;
+      const freshness = getJobFreshness(job);
+      const freshnessPill = `<span class="freshness-badge">⚡ Posted ${freshness.label}</span>`;
 
       const urlLower = (job.url || '').toLowerCase();
       const domainLower = (job.source_domain || '').toLowerCase();
@@ -238,6 +282,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       const fresherPill = `<span class="fresher-badge">🎓 Fresher (0-1 Yr)</span>`;
+      const remotePill = (job.is_remote || (job.location && job.location.toLowerCase().includes('remote')))
+        ? `<span class="remote-badge">🌐 Remote</span>`
+        : '';
+      const applicantPill = job.applicants_count
+        ? `<span class="applicant-badge">👥 ${escapeHTML(job.applicants_count)}</span>`
+        : '';
 
       return `
         <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
@@ -251,6 +301,8 @@ document.addEventListener("DOMContentLoaded", () => {
                   ${fresherPill}
                   ${freshnessPill}
                   ${platformPill}
+                  ${remotePill}
+                  ${applicantPill}
                 </div>
                 <h3 class="job-title">${escapeHTML(job.title)}</h3>
                 <div class="job-company-loc">
@@ -1256,6 +1308,11 @@ document.addEventListener("DOMContentLoaded", () => {
       author: "Vivek Raghavan (Co-Founder @ Sarvam AI)",
       url: "https://www.linkedin.com/search/results/content/?keywords=%22Sarvam%20AI%22%20%22research%20intern%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM or email research@sarvam.ai with your top projects."
+    },
+    ifi: {
+      author: "Hiring Lead @ India's Future Investors",
+      url: "https://www.linkedin.com/jobs/search/?keywords=%22India%27s+Future+Investors%22+%22Data+Scientist%22&location=India&f_TPR=r86400&sortBy=DD",
+      text: "India's Future Investors - Money Entertainment Reality Show\nData Scientist\nIndia · 17 hours ago · Over 100 applicants\nPromoted by hirer · Remote · Full-time\n\nLooking for an analytical Data Scientist to model entertainment viewership metrics, algorithmic audience scoring, and contestant engagement predictors using Python and SQL. Early career freshers (0-1 yrs exp) eligible. DM me or apply directly!"
     }
   };
 
@@ -1342,15 +1399,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 2. Company Name
     let company = "Tech Venture (LinkedIn Post)";
-    const compMatch = text.match(/(?:at|@|joining|team at)\s+([A-Z][A-Za-z0-9&]{1,25})/);
-    if (compMatch && compMatch[1]) {
-      const candComp = compMatch[1].trim();
-      const skipWords = ["our", "my", "the", "bengaluru", "bangalore", "india", "hiring", "gurgaon", "hyderabad", "delhi", "pune", "we", "this"];
-      if (!skipWords.includes(candComp.toLowerCase())) {
-        company = candComp;
+    const firstLine = text.split("\n")[0].trim();
+    if (firstLine.includes(" - ") && firstLine.split(" - ")[0].trim().length < 50) {
+      company = firstLine.split(" - ")[0].trim();
+    } else {
+      const compMatch = text.match(/(?:at|@|joining|team at)\s+([A-Z][A-Za-z0-9&]{1,25})/);
+      if (compMatch && compMatch[1]) {
+        const candComp = compMatch[1].trim();
+        const skipWords = ["our", "my", "the", "bengaluru", "bangalore", "india", "hiring", "gurgaon", "hyderabad", "delhi", "pune", "we", "this"];
+        if (!skipWords.includes(candComp.toLowerCase())) {
+          company = candComp;
+        }
       }
     }
-    if (author && author.includes("@")) {
+    if (author && author.includes("@") && company === "Tech Venture (LinkedIn Post)") {
       const authorComp = author.split("@")[1].trim().replace(/\)/g, "");
       if (authorComp.length > 1 && authorComp.length < 30) {
         company = authorComp;
@@ -1419,6 +1481,41 @@ I would love to connect and share my resume for consideration!
 Best regards,
 [Your Name]`;
 
+    // 9. Detect Relative Posting Time (e.g. "17 hours ago", "2 days ago", "17h ago")
+    let detectedHoursAgo = 2;
+    let detectedPostedAt = "Just now";
+    let detectedRelativeTime = "2 hours ago";
+    const timeRegex = /(?:posted\s*|·\s*)?(\d+)\s*(hours?|hrs?|h|days?|d|minutes?|mins?|m|weeks?|w)\s*ago/i;
+    const timeMatch = text.match(timeRegex);
+    if (timeMatch) {
+      const val = parseInt(timeMatch[1], 10);
+      const unit = timeMatch[2].toLowerCase();
+      if (unit.startsWith('d')) {
+        detectedHoursAgo = val * 24;
+        detectedPostedAt = `${val}d ago`;
+        detectedRelativeTime = `${val} days ago`;
+      } else if (unit.startsWith('w')) {
+        detectedHoursAgo = val * 168;
+        detectedPostedAt = `${val}w ago`;
+        detectedRelativeTime = `${val} weeks ago`;
+      } else if (unit.startsWith('m')) {
+        detectedHoursAgo = Math.max(1, Math.round(val / 60));
+        detectedPostedAt = `${val}m ago`;
+        detectedRelativeTime = `${val} minutes ago`;
+      } else {
+        detectedHoursAgo = val;
+        detectedPostedAt = `${val}h ago`;
+        detectedRelativeTime = `${val} hours ago`;
+      }
+    }
+
+    // 10. Detect Applicants Count (e.g. "Over 100 applicants")
+    const appMatch = text.match(/(?:over\s+)?\d+\s+applicants/i);
+    const applicantsCount = appMatch ? appMatch[0].trim() : null;
+
+    // 11. Detect Remote
+    const isRemote = lower.includes("remote");
+
     return {
       title,
       company,
@@ -1429,6 +1526,8 @@ Best regards,
       badge,
       category,
       is_fresher: isFresher,
+      is_remote: isRemote,
+      applicants_count: applicantsCount,
       min_years_experience: minYears,
       contact_email: contactEmail,
       url: postUrl || "https://www.linkedin.com/feed/",
@@ -1438,8 +1537,9 @@ Best regards,
       post_author: author || "Hiring Manager (LinkedIn Feed)",
       matched_skills: matchedSkills,
       missing_skills: [],
-      hours_ago: 1,
-      posted_at: "Just now",
+      hours_ago: detectedHoursAgo,
+      posted_at: detectedPostedAt,
+      relative_time: detectedRelativeTime,
       raw_description: text,
       description: text.length > 300 ? text.substring(0, 297) + "..." : text,
       outreach_dm: outreachPitch
