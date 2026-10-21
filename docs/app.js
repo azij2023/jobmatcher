@@ -14,6 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const profile = data.profile || {};
   const stats = data.stats || {};
 
+  // Load custom saved jobs from localStorage so they persist across page refreshes
+  try {
+    const savedCustomJobs = JSON.parse(localStorage.getItem("targetmatch_custom_jobs") || "[]");
+    savedCustomJobs.forEach(cj => {
+      if (!jobs.some(j => j.url === cj.url && j.title === cj.title)) {
+        jobs.unshift(cj);
+      }
+    });
+  } catch (e) {}
+
   // DOM Elements
   const jobsGrid = document.getElementById("jobs-grid");
   const emptyState = document.getElementById("empty-state");
@@ -1853,6 +1863,14 @@ Best regards,
       }
 
       jobs.unshift(lastParsedPostJob);
+      try {
+        const savedCustomJobs = JSON.parse(localStorage.getItem("targetmatch_custom_jobs") || "[]");
+        if (!savedCustomJobs.some(j => j.url === lastParsedPostJob.url && j.title === lastParsedPostJob.title)) {
+          savedCustomJobs.unshift(lastParsedPostJob);
+          localStorage.setItem("targetmatch_custom_jobs", JSON.stringify(savedCustomJobs));
+        }
+      } catch (e) {}
+
       initStats();
       renderJobs();
       renderCuratedFeed();
