@@ -275,6 +275,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
               </div>
             ` : ''}
+
+            ${job.missing_skills && job.missing_skills.length > 0 ? `
+              <div class="skills-container skill-gaps-container" style="margin-top: -0.5rem;">
+                <div class="skills-label gaps-label">⚡ Semantic Skill Gaps (${job.missing_skills.length}):</div>
+                <div class="skills-tags">
+                  ${job.missing_skills.slice(0, 3).map(s => `<span class="skill-tag missing">⚡ ${escapeHTML(s.replace(/_/g, ' '))}</span>`).join("")}
+                </div>
+              </div>
+            ` : ''}
           </div>
 
           <div class="card-actions">
@@ -291,6 +300,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span>💬 Pitch</span>
               </button>
             ` : ''}
+            <button class="btn btn-secondary btn-skill-gap view-gap-btn" data-job-url="${escapeHTML(job.url)}" title="View semantic skill gap analysis and 1-day portfolio project roadmap">
+              ⚡ Skill Gap
+            </button>
             ${job.company_url ? `
               <a href="${escapeHTML(job.company_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-company-site" title="Visit official careers portal for ${escapeHTML(job.company)}">
                 <span>🏢 Careers ↗</span>
@@ -329,13 +341,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // Attach Details buttons & card clicks
+    // Attach Details & Skill Gap buttons
     document.querySelectorAll(".view-details-btn").forEach(btn => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
         const jobUrl = e.currentTarget.getAttribute("data-job-url");
         const found = jobs.find(j => j.url === jobUrl);
         if (found) openJobModal(found);
+      });
+    });
+
+    document.querySelectorAll(".view-gap-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const jobUrl = e.currentTarget.getAttribute("data-job-url");
+        const found = jobs.find(j => j.url === jobUrl);
+        if (found) {
+          openJobModal(found);
+          setTimeout(() => {
+            const gapSec = document.getElementById("modal-semantic-gap-section");
+            if (gapSec) gapSec.scrollIntoView({ behavior: 'smooth' });
+          }, 100);
+        }
       });
     });
 
@@ -456,8 +483,60 @@ document.addEventListener("DOMContentLoaded", () => {
       : "<span style='color:var(--text-dim)'>No exact skills matched yet</span>";
 
     modalSkillsMissing.innerHTML = missing.length > 0
-      ? `<strong>Missing / Gaps (${missing.length}):</strong> ` + missing.map(s => `<span class="skill-tag missing">✗ ${s.replace(/_/g, ' ')}</span>`).join(" ")
-      : "";
+      ? `<strong>Missing / Gaps (${missing.length}):</strong> ` + missing.map(s => `<span class="skill-tag missing">⚡ ${s.replace(/_/g, ' ')}</span>`).join(" ")
+      : "<span style='color:var(--accent-emerald)'>✓ 0 critical gaps identified</span>";
+
+    // Populate Semantic Skill Gap & Bridge Roadmap
+    const gapData = job.semantic_skill_gap || null;
+    const modalGapFitTag = document.getElementById("modal-gap-fit-tag");
+    const modalGapItems = document.getElementById("modal-gap-items");
+    const modalGapBridgeText = document.getElementById("modal-gap-bridge-text");
+    const modalGapInterviewText = document.getElementById("modal-gap-interview-text");
+
+    if (modalGapFitTag) {
+      modalGapFitTag.textContent = gapData ? `${gapData.fit_percentage} • ${gapData.gap_percentage}` : `${scorePct}% Core Fit`;
+    }
+
+    if (modalGapItems) {
+      if (gapData && gapData.gaps && gapData.gaps.length > 0) {
+        modalGapItems.innerHTML = gapData.gaps.map(g => {
+          const impactClass = (g.impact || '').toLowerCase().includes('high') ? 'high' : 'medium';
+          return `
+            <div class="gap-item">
+              <div class="gap-item-top">
+                <span class="gap-skill-name">⚡ ${escapeHTML(g.skill)}</span>
+                <span class="impact-badge ${impactClass}">${escapeHTML(g.impact || 'Impact')}</span>
+              </div>
+              <p class="gap-action-text">${escapeHTML(g.action || '')}</p>
+            </div>
+          `;
+        }).join("");
+      } else if (missing.length > 0) {
+        modalGapItems.innerHTML = missing.map(s => `
+          <div class="gap-item">
+            <div class="gap-item-top">
+              <span class="gap-skill-name">⚡ ${escapeHTML(s)}</span>
+              <span class="impact-badge high">High Impact</span>
+            </div>
+            <p class="gap-action-text">Build a dedicated portfolio mini-project demonstrating practical hands-on application.</p>
+          </div>
+        `).join("");
+      } else {
+        modalGapItems.innerHTML = `<div style="color:var(--accent-emerald); font-size:0.85rem; font-weight:600;">✓ Excellent Semantic Fit: No critical skill gaps identified for your profile!</div>`;
+      }
+    }
+
+    if (modalGapBridgeText) {
+      modalGapBridgeText.textContent = gapData && gapData.bridge_roadmap
+        ? gapData.bridge_roadmap
+        : `Tailor your resume and portfolio for ${job.company} by building 1 dedicated project highlighting ${matched.slice(0, 2).join(' and ') || 'data analytics'}.`;
+    }
+
+    if (modalGapInterviewText) {
+      modalGapInterviewText.textContent = gapData && gapData.interview_talk_track
+        ? gapData.interview_talk_track
+        : `Frame your background by demonstrating strong core problem-solving and rapid learning agility in quantitative modeling.`;
+    }
 
     // Strategy advice based on Tier
     let advice = "";
@@ -1601,6 +1680,27 @@ Best regards,
         evalSkillsTags.innerHTML = job.matched_skills.length > 0
           ? job.matched_skills.map(s => `<span class="skill-tag matched">✓ ${s.replace(/_/g, " ")}</span>`).join(" ")
           : `<span style="color:var(--text-dim)">General analytical problem-solving</span>`;
+      }
+
+      // Populate Semantic Skill Gaps in Harvester
+      const evalSkillsGapsTags = document.getElementById("eval-skills-gaps-tags");
+      const evalGapBridgeBox = document.getElementById("eval-gap-bridge-box");
+      const evalGapBridgeText = document.getElementById("eval-gap-bridge-text");
+
+      const postGaps = job.missing_skills || [];
+      if (evalSkillsGapsTags) {
+        evalSkillsGapsTags.innerHTML = postGaps.length > 0
+          ? postGaps.map(g => `<span class="skill-tag missing">⚡ ${escapeHTML(g)}</span>`).join(" ")
+          : `<span class="skill-tag matched">✓ Strong Core Alignment</span>`;
+      }
+
+      if (evalGapBridgeBox && evalGapBridgeText) {
+        if (job.semantic_skill_gap && job.semantic_skill_gap.bridge_roadmap) {
+          evalGapBridgeText.textContent = job.semantic_skill_gap.bridge_roadmap;
+          evalGapBridgeBox.style.display = "block";
+        } else {
+          evalGapBridgeBox.style.display = "none";
+        }
       }
 
       if (evalOutreachText) {

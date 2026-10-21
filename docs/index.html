@@ -608,8 +608,18 @@
               </div>
 
               <div class="eval-skills-block">
-                <div class="eval-skills-label">Extracted Skills:</div>
+                <div class="eval-skills-label">Extracted Skills (Matched):</div>
                 <div class="skills-tags" id="eval-skills-tags"></div>
+              </div>
+
+              <div class="eval-skills-block" id="eval-skills-gaps-block" style="margin-top:0.6rem;">
+                <div class="eval-skills-label" style="color:#b45309;">⚡ Semantic Skill Gaps:</div>
+                <div class="skills-tags" id="eval-skills-gaps-tags"></div>
+              </div>
+
+              <div class="gap-bridge-box" id="eval-gap-bridge-box" style="margin-top:0.75rem; display:none;">
+                <strong class="gap-box-title">🛠️ Actionable 1–2 Day Bridge Project:</strong>
+                <p id="eval-gap-bridge-text" class="gap-box-desc"></p>
               </div>
 
               <div class="outreach-box-container">
@@ -697,6 +707,25 @@
           <h4>Skills Match Analysis</h4>
           <div id="modal-skills-matched" class="skills-tags" style="margin-bottom: 0.75rem;"></div>
           <div id="modal-skills-missing" class="skills-tags"></div>
+        </div>
+
+        <div class="modal-section" id="modal-semantic-gap-section">
+          <h4>⚡ Semantic Skill Gap & Bridge Roadmap</h4>
+          <div class="semantic-gap-card">
+            <div class="gap-card-header">
+              <span class="gap-card-title">Identified Skill Gaps & Priority Weights</span>
+              <span class="gap-fit-tag" id="modal-gap-fit-tag">85% Core Fit</span>
+            </div>
+            <div id="modal-gap-items" class="gap-items-grid"></div>
+            <div class="gap-bridge-box" id="modal-gap-bridge-box">
+              <strong class="gap-box-title">🛠️ Actionable 1–2 Day Bridge Project:</strong>
+              <p id="modal-gap-bridge-text" class="gap-box-desc"></p>
+            </div>
+            <div class="gap-interview-box" id="modal-gap-interview-box">
+              <strong class="gap-box-title">🎙️ Proactive Interview Talk-Track:</strong>
+              <p id="modal-gap-interview-text" class="gap-box-desc"></p>
+            </div>
+          </div>
         </div>
 
         <div class="modal-section" id="modal-strategy-advice-section">
