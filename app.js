@@ -1102,62 +1102,62 @@ document.addEventListener("DOMContentLoaded", () => {
   const LINKEDIN_SAMPLE_PRESETS = {
     swiggy: {
       author: "Priya Sharma (Principal PM, Consumer Marketplace @ Swiggy)",
-      url: "https://www.linkedin.com/posts/swiggy-apm-hiring-freshers-2025_activity-7254890123-x9aL",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Swiggy%22%20%22APM%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in."
     },
     flipkart: {
       author: "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)",
-      url: "https://www.linkedin.com/posts/flipkart-applied-scientist-intern-activity-7254832109-b7vC",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Flipkart%22%20%22Applied%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com."
     },
     razorpay: {
       author: "Arjun Mehta (VP Strategy & BizOps @ Razorpay)",
-      url: "https://www.linkedin.com/posts/razorpay-strategy-bizops-analyst-activity-7254881928-k8mQ",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Razorpay%22%20%22BizOps%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume to bizops-talent@razorpay.com."
     },
     phonepe: {
       author: "Ananya Sen (Director of Data Science @ PhonePe)",
-      url: "https://www.linkedin.com/posts/phonepe-data-science-fresher-bengaluru-activity-7254876612-p3wR",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22PhonePe%22%20%22Data%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me or send your resume to ds-careers@phonepe.com."
     },
     groww: {
       author: "Aakash Gupta (Head of Product @ Groww)",
-      url: "https://www.linkedin.com/posts/groww-associate-product-manager-activity-7254821105-m4zK",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Groww%22%20%22APM%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me."
     },
     cred: {
       author: "Tanvi Agarwal (Senior Decision Scientist @ CRED)",
-      url: "https://www.linkedin.com/posts/cred-decision-scientist-fresher-activity-7254819904-n9pL",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22CRED%22%20%22Decision%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club."
     },
     delhivery: {
       author: "Kunal Singhal (Head of Network Optimization @ Delhivery)",
-      url: "https://www.linkedin.com/posts/delhivery-operations-research-trainee-activity-7254869910-q2zT",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Delhivery%22%20%22Operations%20Research%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via optimization-hiring@delhivery.com."
     },
     zepto: {
       author: "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
-      url: "https://www.linkedin.com/posts/zepto-demand-forecasting-analyst-activity-7254854120-u7yM",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Zepto%22%20%22Forecasting%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'."
     },
     meesho: {
       author: "Vikramaditya Iyer (Director of Analytics @ Meesho)",
-      url: "https://www.linkedin.com/posts/meesho-fresher-data-scientist-activity-7254808819-x2pQ",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Meesho%22%20%22Data%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com."
     },
     inmobi: {
       author: "Neha Bansal (Lead Optimization Scientist @ InMobi)",
-      url: "https://www.linkedin.com/posts/inmobi-optimization-trainee-activity-7254796612-j5yT",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22InMobi%22%20%22Optimization%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com."
     },
     postman: {
       author: "Rajesh Menon (VP Engineering @ Postman)",
-      url: "https://www.linkedin.com/posts/postman-junior-ml-engineer-activity-7254784401-w8kL",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Postman%22%20%22ML%20Engineer%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn."
     },
     sarvam: {
       author: "Vivek Raghavan (Co-Founder @ Sarvam AI)",
-      url: "https://www.linkedin.com/posts/sarvam-ai-applied-ml-research-intern-activity-7254841902-v1xP",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22Sarvam%20AI%22%20%22research%20intern%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
       text: "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM or email research@sarvam.ai with your top projects."
     }
   };
@@ -1354,7 +1354,34 @@ Best regards,
     if (!url) return null;
     const cleanUrl = url.trim();
 
-    // 1. Check if matches pre-indexed curated individual posts
+    // 1. Handle live LinkedIn content search queries
+    if (cleanUrl.includes("/search/results/content/") || cleanUrl.includes("keywords=")) {
+      try {
+        const u = new URL(cleanUrl);
+        const kw = u.searchParams.get("keywords") || "";
+        const cleanKw = decodeURIComponent(kw).replace(/"/g, "");
+        const matchedJob = jobs.find(j => j.is_post && (cleanKw.toLowerCase().includes(j.company.toLowerCase()) || j.company.toLowerCase().includes(cleanKw.toLowerCase())));
+        if (matchedJob) {
+          return {
+            text: matchedJob.raw_description || matchedJob.description,
+            author: matchedJob.post_author || `Hiring Team @ ${matchedJob.company}`,
+            url: cleanUrl,
+            company: matchedJob.company,
+            title: matchedJob.title,
+            contact_email: matchedJob.contact_email
+          };
+        }
+        return {
+          text: `Live LinkedIn hiring search for: "${cleanKw}". Freshers & entry-level candidate posts from the past 24 hours.`,
+          author: `Hiring Leads for ${cleanKw}`,
+          url: cleanUrl
+        };
+      } catch (e) {
+        console.warn("Error parsing search URL:", e);
+      }
+    }
+
+    // 2. Check if matches pre-indexed curated individual posts
     const match = jobs.find(j => j.url === cleanUrl || cleanUrl.includes(j.url) || (j.url && j.url.includes(cleanUrl)));
     if (match) {
       return {
@@ -1367,7 +1394,7 @@ Best regards,
       };
     }
 
-    // 2. Try fetching OpenGraph metadata through CORS proxy
+    // 3. Try fetching OpenGraph metadata through CORS proxy
     try {
       const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(cleanUrl)}`;
       const controller = new AbortController();
@@ -1377,6 +1404,16 @@ Best regards,
 
       if (resp.ok) {
         const html = await resp.text();
+
+        // Detect LinkedIn's "Invalid post link" page
+        if (html.includes("Invalid post link") || html.includes("couldn't find a post at this URL") || html.includes("We couldn't find a post")) {
+          return {
+            isInvalidLink: true,
+            error: "Invalid post link: LinkedIn reported that no post exists at this URL (the link is invalid or the post was deleted/expired).",
+            url: cleanUrl
+          };
+        }
+
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
 
@@ -1384,6 +1421,14 @@ Best regards,
                        doc.querySelector('meta[name="description"]')?.getAttribute("content") || "";
         const ogTitle = doc.querySelector('meta[property="og:title"]')?.getAttribute("content") ||
                         doc.querySelector('title')?.textContent || "";
+
+        if (ogTitle.includes("Invalid post link") || ogDesc.includes("couldn't find a post")) {
+          return {
+            isInvalidLink: true,
+            error: "Invalid post link: LinkedIn reported that no post exists at this URL.",
+            url: cleanUrl
+          };
+        }
 
         let author = "";
         if (ogTitle.includes(" on LinkedIn:")) {
@@ -1404,7 +1449,7 @@ Best regards,
       console.warn("CORS fetch failed, using fallback:", e);
     }
 
-    // 3. Fallback extraction from URL slug
+    // 4. Fallback extraction from URL slug if plausible
     const slugMatch = cleanUrl.match(/\/posts\/([a-zA-Z0-9\-]+?)(?:_|-activity|$)/);
     let authorGuess = "LinkedIn Hiring Manager";
     if (slugMatch && slugMatch[1]) {
@@ -1432,6 +1477,15 @@ Best regards,
 
       try {
         const fetched = await fetchPostFromURL(url);
+        if (fetched && fetched.isInvalidLink) {
+          showToast(`⚠️ ${fetched.error}`);
+          if (linkedinPostInput) {
+            linkedinPostInput.value = "";
+            linkedinPostInput.placeholder = "⚠️ Post URL was invalid or expired on LinkedIn. Please paste the post text directly here, or click the Live LinkedIn Post Search buttons above!";
+          }
+          return;
+        }
+
         if (fetched) {
           if (linkedinPostInput) linkedinPostInput.value = fetched.text;
           if (linkedinAuthorInput) linkedinAuthorInput.value = fetched.author;
@@ -1439,7 +1493,7 @@ Best regards,
 
           // Automatically trigger evaluation!
           if (linkedinParseBtn) linkedinParseBtn.click();
-          showToast(`✅ Successfully fetched post from ${fetched.author || 'LinkedIn'}!`);
+          showToast(`✅ Successfully loaded post for ${fetched.author || 'LinkedIn'}!`);
         } else {
           showToast("⚠️ Could not extract text from URL. Please paste the message text directly.");
         }

@@ -462,16 +462,20 @@
             </div>
           </div>
           <div class="url-fetcher-input-row">
-            <input type="url" id="linkedin-fetch-url-input" placeholder="e.g. https://www.linkedin.com/posts/priyasharma_swiggy-apm-hiring-freshers-activity-7254890123-x9aL" class="fetch-input">
+            <input type="url" id="linkedin-fetch-url-input" placeholder="e.g. Paste any live LinkedIn post URL or search link (or paste message text below)..." class="fetch-input">
             <button type="button" class="btn btn-primary" id="btn-fetch-post-url">
               <span id="fetch-btn-label">⚡ Fetch & Parse Public Post</span>
             </button>
           </div>
           <div class="url-fetcher-hints">
-            <span class="hint-label">Supported URLs:</span>
+            <span class="hint-label">Supported Links:</span>
             <code>linkedin.com/posts/...</code>
+            <code>linkedin.com/search/results/content/...</code>
             <code>linkedin.com/feed/update/...</code>
             <code>linkedin.com/pulse/...</code>
+            <div style="margin-top:0.4rem; color:var(--text-muted); font-size:0.78rem;">
+              💡 <strong>Pro-Tip to avoid "Invalid post link" 404s:</strong> LinkedIn throws 404s on expired activity IDs or deleted posts. Click any <strong>Live Public Search Chip</strong> below to open active individual posts from the past 24 hours, or paste the message text directly into the form!
+            </div>
           </div>
         </div>
 
