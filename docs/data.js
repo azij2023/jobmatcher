@@ -4724,22 +4724,12 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     }
   ],
   "stats": {
-    "total_matches": 81,
-    "primary_matches": 69,
+    "total_jobs_evaluated": 82,
+    "primary_matches": 70,
     "secondary_matches": 6,
     "adjacent_matches": 6,
-    "avg_score": 0.943,
-    "top_categories": [
-      "Applied ML / Research",
-      "Data Science",
-      "Decision Science",
-      "OR / Optimization",
-      "Product",
-      "Strategy / Programs",
-      "Forecasting",
-      "ML Engineering",
-      "Data Engineering Adjacent"
-    ]
+    "last_sync": "2026-10-21 18:57"
   },
-  "total_jobs": 82
+  "total_jobs": 82,
+  "last_updated": "2026-10-21 18:57"
 };

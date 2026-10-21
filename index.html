@@ -53,6 +53,10 @@
       </nav>
 
       <div class="nav-actions">
+        <button class="btn-nav-refresh" id="nav-refresh-btn" title="Refresh & Fetch Fresh Jobs">
+          <span class="refresh-spinner" id="nav-refresh-icon">🔄</span>
+          <span id="nav-refresh-label">Refresh Jobs</span>
+        </button>
         <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Background" aria-label="Toggle theme">
           <span class="theme-icon-indicator" id="theme-icon-indicator">🌙</span>
           <span class="theme-mode-text" id="theme-mode-text">Dark Mode</span>
@@ -209,8 +213,14 @@
 
       <!-- Results Info -->
       <div class="results-header">
-        <span class="results-count" id="results-count">Showing 0 matching jobs</span>
-        <span class="active-filter-indicator" id="active-filter-indicator"></span>
+        <div class="results-meta-left">
+          <span class="results-count" id="results-count">Showing 0 matching jobs</span>
+          <span class="active-filter-indicator" id="active-filter-indicator"></span>
+        </div>
+        <div class="auto-sync-badge" id="auto-sync-indicator" title="Automatic hourly ingestion pipeline & dynamic freshness reload">
+          <span class="sync-pulse-dot"></span>
+          <span class="sync-badge-text">⚡ Auto-sync active (Every 1h) • Last synced: Just now</span>
+        </div>
       </div>
 
       <!-- Jobs Grid -->
@@ -756,7 +766,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="data.js?v=20261021"></script>
+  <script src="app.js?v=20261021"></script>
 </body>
 </html>

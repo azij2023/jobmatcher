@@ -4,25 +4,31 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   // 1. Data Initialization
-  const data = window.JOB_MATCHER_DATA || window.JOB_DATA || {
+  let data = window.JOB_MATCHER_DATA || window.JOB_DATA || {
     jobs: [],
     profile: {},
     stats: {}
   };
 
-  const jobs = data.jobs || [];
-  const profile = data.profile || {};
-  const stats = data.stats || {};
+  let jobs = data.jobs || [];
+  let profile = data.profile || {};
+  let stats = data.stats || {};
 
   // Load custom saved jobs from localStorage so they persist across page refreshes
-  try {
-    const savedCustomJobs = JSON.parse(localStorage.getItem("targetmatch_custom_jobs") || "[]");
-    savedCustomJobs.forEach(cj => {
-      if (!jobs.some(j => j.url === cj.url && j.title === cj.title)) {
-        jobs.unshift(cj);
-      }
-    });
-  } catch (e) {}
+  function mergeSavedCustomJobs(targetJobs) {
+    try {
+      const savedCustomJobs = JSON.parse(localStorage.getItem("targetmatch_custom_jobs") || "[]");
+      savedCustomJobs.forEach(cj => {
+        if (!targetJobs.some(j => (j.url && j.url === cj.url) || (j.title && j.title === cj.title && j.company === cj.company))) {
+          targetJobs.unshift(cj);
+        }
+      });
+    } catch (e) {
+      console.warn("Could not load custom jobs from localStorage", e);
+    }
+  }
+
+  mergeSavedCustomJobs(jobs);
 
   // DOM Elements
   const jobsGrid = document.getElementById("jobs-grid");
@@ -38,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const resetFiltersBtn = document.getElementById("reset-filters-btn");
   const tierChipsContainer = document.getElementById("tier-chips");
   const toast = document.getElementById("toast");
+  const navRefreshBtn = document.getElementById("nav-refresh-btn");
+  const navRefreshIcon = document.getElementById("nav-refresh-icon");
+  const navRefreshLabel = document.getElementById("nav-refresh-label");
+  const autoSyncIndicator = document.getElementById("auto-sync-indicator");
 
   // State
   let currentFilter = {
@@ -68,13 +78,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const secondaryCount = jobs.filter(j => j.priority === "Secondary" || j.tier === 8).length;
     const adjacentCount = jobs.filter(j => j.tier === 9).length;
 
-    document.getElementById("stat-primary-val").textContent = stats.primary_matches !== undefined ? stats.primary_matches : primaryCount;
-    document.getElementById("stat-secondary-val").textContent = stats.secondary_matches !== undefined ? stats.secondary_matches : secondaryCount;
-    document.getElementById("stat-adjacent-val").textContent = stats.adjacent_matches !== undefined ? stats.adjacent_matches : adjacentCount;
+    const statPrimaryEl = document.getElementById("stat-primary-val");
+    const statSecondaryEl = document.getElementById("stat-secondary-val");
+    const statAdjacentEl = document.getElementById("stat-adjacent-val");
+    const statAvgScoreEl = document.getElementById("stat-avg-score-val");
+
+    if (statPrimaryEl) statPrimaryEl.textContent = primaryCount;
+    if (statSecondaryEl) statSecondaryEl.textContent = secondaryCount;
+    if (statAdjacentEl) statAdjacentEl.textContent = adjacentCount;
     
-    const topScore = jobs.length > 0 ? Math.max(...jobs.map(j => j.score)) : 0;
-    document.getElementById("stat-avg-score-val").textContent = `${Math.round(topScore * 100)}%`;
-    navJobCount.textContent = jobs.length;
+    const validScores = jobs.map(j => j.score || 0).filter(s => typeof s === "number");
+    const topScore = validScores.length > 0 ? Math.max(...validScores) : 0;
+    if (statAvgScoreEl) statAvgScoreEl.textContent = `${Math.round(topScore * 100)}%`;
+    if (navJobCount) navJobCount.textContent = jobs.length;
   }
 
   // ==========================================================================
@@ -1898,7 +1914,7 @@ Best regards,
           <div>
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
               <span class="source-domain-badge source-linkedin-post">👤 Individual Public Post</span>
-              <span class="freshness-badge">⚡ ${p.hours_ago || 2}h ago</span>
+              <span class="freshness-badge">${getJobFreshness(p).badgeText}</span>
             </div>
             <h4 style="font-size:1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.25rem;">${escapeHTML(p.title)}</h4>
             <div style="font-size:0.85rem; color:var(--brand-primary); font-weight:600; margin-bottom:0.4rem;">
@@ -1958,11 +1974,94 @@ Best regards,
     });
   }
 
+  // ==========================================================================
+  // 12. Hourly Auto-Sync & Live Refresh Engine
+  // ==========================================================================
+
+  async function refreshJobsLive(isSilent = false) {
+    if (navRefreshIcon) navRefreshIcon.classList.add("spinning");
+    if (navRefreshBtn) navRefreshBtn.disabled = true;
+    if (navRefreshLabel && !isSilent) navRefreshLabel.textContent = "Syncing...";
+
+    try {
+      // 1. Fetch fresh payload with cache-busting timestamp
+      const response = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`Server returned HTTP ${response.status}`);
+      }
+      const freshData = await response.json();
+
+      if (freshData && Array.isArray(freshData.jobs)) {
+        data = freshData;
+        jobs = freshData.jobs;
+        stats = freshData.stats || stats;
+        profile = freshData.profile || profile;
+        window.JOB_MATCHER_DATA = window.JOB_DATA = freshData;
+
+        // Re-merge user saved custom jobs
+        mergeSavedCustomJobs(jobs);
+
+        // Re-render UI components
+        initStats();
+        renderJobs();
+        renderCuratedFeed();
+
+        // Update auto-sync status timestamp
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+        if (autoSyncIndicator) {
+          autoSyncIndicator.innerHTML = `<span class="sync-pulse-dot"></span><span class="sync-badge-text">⚡ Auto-sync active (Every 1h) • Last synced: ${timeStr}</span>`;
+        }
+
+        if (!isSilent) {
+          showToast(`🔄 Synchronized! ${jobs.length} opportunities loaded & refreshed.`);
+        }
+      }
+    } catch (err) {
+      console.warn("[TargetMatch AI] Remote fetch warning, recalculating client freshness:", err);
+      // Fallback: Re-render existing in-memory jobs to recalculate relative timestamps dynamically
+      initStats();
+      renderJobs();
+      renderCuratedFeed();
+
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit", second: "2-digit" });
+      if (autoSyncIndicator) {
+        autoSyncIndicator.innerHTML = `<span class="sync-pulse-dot"></span><span class="sync-badge-text">⚡ Auto-sync active (Every 1h) • Refreshed: ${timeStr}</span>`;
+      }
+
+      if (!isSilent) {
+        showToast(`🔄 Freshness re-evaluated for ${jobs.length} opportunities.`);
+      }
+    } finally {
+      if (navRefreshIcon) navRefreshIcon.classList.remove("spinning");
+      if (navRefreshLabel) navRefreshLabel.textContent = "Refresh Jobs";
+      if (navRefreshBtn) navRefreshBtn.disabled = false;
+    }
+  }
+
+  function setupHourlyAutoRefresh() {
+    // 3,600,000 ms = 1 Hour
+    const ONE_HOUR_MS = 60 * 60 * 1000;
+    setInterval(() => {
+      console.log("[TargetMatch AI] Hourly auto-sync interval triggered: Synchronizing jobs...");
+      refreshJobsLive(true);
+    }, ONE_HOUR_MS);
+  }
+
+  if (navRefreshBtn) {
+    navRefreshBtn.addEventListener("click", () => {
+      refreshJobsLive(false);
+    });
+  }
+
   // Initial Runs
   initStats();
   renderJobs();
   renderStrategyTable();
   renderSkillMatrix();
   renderCuratedFeed();
+  setupHourlyAutoRefresh();
 });
+
 
