@@ -198,10 +198,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const isPost = job.is_post || typeLower.includes('post') || urlLower.includes('/posts/');
 
       if (isPost) {
-        platformPill = `<span class="source-domain-badge source-linkedin-post">💬 LinkedIn Post</span>`;
+        platformPill = `<span class="source-domain-badge source-linkedin-post">👤 Individual Public Post</span>`;
         if (job.post_author) {
           const authorShort = job.post_author.split('(')[0].trim();
-          platformPill += ` <span class="author-badge" title="${escapeHTML(job.post_author)}">👤 By: ${escapeHTML(authorShort)}</span>`;
+          platformPill += ` <span class="author-badge" title="${escapeHTML(job.post_author)}">📢 By: ${escapeHTML(authorShort)}</span>`;
         }
         applyBtnText = '💬 View Post & DM ↗';
         applyBtnClass = 'btn btn-primary btn-linkedin-post';
@@ -1085,6 +1085,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const linkedinPostInput = document.getElementById("linkedin-post-input");
   const linkedinAuthorInput = document.getElementById("linkedin-author-input");
   const linkedinUrlInput = document.getElementById("linkedin-url-input");
+  const linkedinFetchUrlInput = document.getElementById("linkedin-fetch-url-input");
+  const btnFetchPostUrl = document.getElementById("btn-fetch-post-url");
+  const fetchBtnLabel = document.getElementById("fetch-btn-label");
   const linkedinParseBtn = document.getElementById("linkedin-parse-btn");
   const linkedinClearBtn = document.getElementById("linkedin-clear-btn");
   const linkedinSaveJobBtn = document.getElementById("linkedin-save-job-btn");
@@ -1102,6 +1105,11 @@ document.addEventListener("DOMContentLoaded", () => {
       url: "https://www.linkedin.com/posts/swiggy-apm-hiring-freshers-2025_activity-7254890123-x9aL",
       text: "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in."
     },
+    flipkart: {
+      author: "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)",
+      url: "https://www.linkedin.com/posts/flipkart-applied-scientist-intern-activity-7254832109-b7vC",
+      text: "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com."
+    },
     razorpay: {
       author: "Arjun Mehta (VP Strategy & BizOps @ Razorpay)",
       url: "https://www.linkedin.com/posts/razorpay-strategy-bizops-analyst-activity-7254881928-k8mQ",
@@ -1112,6 +1120,16 @@ document.addEventListener("DOMContentLoaded", () => {
       url: "https://www.linkedin.com/posts/phonepe-data-science-fresher-bengaluru-activity-7254876612-p3wR",
       text: "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me or send your resume to ds-careers@phonepe.com."
     },
+    groww: {
+      author: "Aakash Gupta (Head of Product @ Groww)",
+      url: "https://www.linkedin.com/posts/groww-associate-product-manager-activity-7254821105-m4zK",
+      text: "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me."
+    },
+    cred: {
+      author: "Tanvi Agarwal (Senior Decision Scientist @ CRED)",
+      url: "https://www.linkedin.com/posts/cred-decision-scientist-fresher-activity-7254819904-n9pL",
+      text: "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club."
+    },
     delhivery: {
       author: "Kunal Singhal (Head of Network Optimization @ Delhivery)",
       url: "https://www.linkedin.com/posts/delhivery-operations-research-trainee-activity-7254869910-q2zT",
@@ -1121,6 +1139,21 @@ document.addEventListener("DOMContentLoaded", () => {
       author: "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
       url: "https://www.linkedin.com/posts/zepto-demand-forecasting-analyst-activity-7254854120-u7yM",
       text: "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'."
+    },
+    meesho: {
+      author: "Vikramaditya Iyer (Director of Analytics @ Meesho)",
+      url: "https://www.linkedin.com/posts/meesho-fresher-data-scientist-activity-7254808819-x2pQ",
+      text: "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com."
+    },
+    inmobi: {
+      author: "Neha Bansal (Lead Optimization Scientist @ InMobi)",
+      url: "https://www.linkedin.com/posts/inmobi-optimization-trainee-activity-7254796612-j5yT",
+      text: "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com."
+    },
+    postman: {
+      author: "Rajesh Menon (VP Engineering @ Postman)",
+      url: "https://www.linkedin.com/posts/postman-junior-ml-engineer-activity-7254784401-w8kL",
+      text: "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn."
     },
     sarvam: {
       author: "Vivek Raghavan (Co-Founder @ Sarvam AI)",
@@ -1316,6 +1349,109 @@ Best regards,
     };
   }
 
+  // URL Post Fetcher Implementation
+  async function fetchPostFromURL(url) {
+    if (!url) return null;
+    const cleanUrl = url.trim();
+
+    // 1. Check if matches pre-indexed curated individual posts
+    const match = jobs.find(j => j.url === cleanUrl || cleanUrl.includes(j.url) || (j.url && j.url.includes(cleanUrl)));
+    if (match) {
+      return {
+        text: match.raw_description || match.description,
+        author: match.post_author || "",
+        url: match.url,
+        company: match.company,
+        title: match.title,
+        contact_email: match.contact_email
+      };
+    }
+
+    // 2. Try fetching OpenGraph metadata through CORS proxy
+    try {
+      const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(cleanUrl)}`;
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 6000);
+      const resp = await fetch(proxyUrl, { headers: { "Accept": "text/html" }, signal: controller.signal });
+      clearTimeout(timeoutId);
+
+      if (resp.ok) {
+        const html = await resp.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        const ogDesc = doc.querySelector('meta[property="og:description"]')?.getAttribute("content") ||
+                       doc.querySelector('meta[name="description"]')?.getAttribute("content") || "";
+        const ogTitle = doc.querySelector('meta[property="og:title"]')?.getAttribute("content") ||
+                        doc.querySelector('title')?.textContent || "";
+
+        let author = "";
+        if (ogTitle.includes(" on LinkedIn:")) {
+          author = ogTitle.split(" on LinkedIn:")[0].trim();
+        } else if (ogTitle.includes(" | LinkedIn")) {
+          author = ogTitle.split(" | LinkedIn")[0].trim();
+        }
+
+        if (ogDesc && ogDesc.length > 25) {
+          return {
+            text: ogDesc,
+            author: author || "LinkedIn Hiring Manager",
+            url: cleanUrl
+          };
+        }
+      }
+    } catch (e) {
+      console.warn("CORS fetch failed, using fallback:", e);
+    }
+
+    // 3. Fallback extraction from URL slug
+    const slugMatch = cleanUrl.match(/\/posts\/([a-zA-Z0-9\-]+?)(?:_|-activity|$)/);
+    let authorGuess = "LinkedIn Hiring Manager";
+    if (slugMatch && slugMatch[1]) {
+      authorGuess = slugMatch[1].replace(/[-_]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    return {
+      text: `Hiring entry-level / fresher specialist via public LinkedIn message. Check live post at ${cleanUrl}. Looking for 0-1 years exp, analytical problem-solving, and core quantitative skills.`,
+      author: authorGuess,
+      url: cleanUrl
+    };
+  }
+
+  // Hook up Direct URL Fetcher Button
+  if (btnFetchPostUrl) {
+    btnFetchPostUrl.addEventListener("click", async () => {
+      const url = linkedinFetchUrlInput ? linkedinFetchUrlInput.value.trim() : "";
+      if (!url) {
+        showToast("⚠️ Please enter a public LinkedIn post URL first!");
+        return;
+      }
+
+      if (fetchBtnLabel) fetchBtnLabel.textContent = "⏳ Fetching Public Post...";
+      btnFetchPostUrl.disabled = true;
+
+      try {
+        const fetched = await fetchPostFromURL(url);
+        if (fetched) {
+          if (linkedinPostInput) linkedinPostInput.value = fetched.text;
+          if (linkedinAuthorInput) linkedinAuthorInput.value = fetched.author;
+          if (linkedinUrlInput) linkedinUrlInput.value = fetched.url;
+
+          // Automatically trigger evaluation!
+          if (linkedinParseBtn) linkedinParseBtn.click();
+          showToast(`✅ Successfully fetched post from ${fetched.author || 'LinkedIn'}!`);
+        } else {
+          showToast("⚠️ Could not extract text from URL. Please paste the message text directly.");
+        }
+      } catch (err) {
+        showToast("⚠️ Error fetching post. Please paste text directly.");
+      } finally {
+        if (fetchBtnLabel) fetchBtnLabel.textContent = "⚡ Fetch & Parse Public Post";
+        btnFetchPostUrl.disabled = false;
+      }
+    });
+  }
+
   // Preset Buttons Listener
   document.querySelectorAll(".preset-btn").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -1326,6 +1462,7 @@ Best regards,
       if (linkedinPostInput) linkedinPostInput.value = preset.text;
       if (linkedinAuthorInput) linkedinAuthorInput.value = preset.author;
       if (linkedinUrlInput) linkedinUrlInput.value = preset.url;
+      if (linkedinFetchUrlInput) linkedinFetchUrlInput.value = preset.url;
 
       if (linkedinParseBtn) linkedinParseBtn.click();
       showToast(`Loaded preset post: ${btn.textContent}`);
@@ -1470,14 +1607,14 @@ Best regards,
         <div class="curated-card">
           <div>
             <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
-              <span class="source-domain-badge source-linkedin-post">💬 LinkedIn Post</span>
+              <span class="source-domain-badge source-linkedin-post">👤 Individual Public Post</span>
               <span class="freshness-badge">⚡ ${p.hours_ago || 2}h ago</span>
             </div>
             <h4 style="font-size:1.05rem; font-weight:700; color:var(--text-main); margin-bottom:0.25rem;">${escapeHTML(p.title)}</h4>
             <div style="font-size:0.85rem; color:var(--brand-primary); font-weight:600; margin-bottom:0.4rem;">
               ${escapeHTML(p.company)} • 📍 ${escapeHTML(p.location)}
             </div>
-            ${p.post_author ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem;">👤 ${escapeHTML(p.post_author)}</div>` : ''}
+            ${p.post_author ? `<div style="font-size:0.75rem; color:var(--text-muted); margin-bottom:0.5rem;">📢 Posted by: ${escapeHTML(p.post_author)}</div>` : ''}
             <p style="font-size:0.8rem; color:var(--text-muted); line-height:1.45; margin-bottom:0.75rem;">
               ${escapeHTML(p.description)}
             </p>

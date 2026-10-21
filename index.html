@@ -178,7 +178,7 @@
             <label for="source-select">Source:</label>
             <select id="source-select">
               <option value="all">All Sources</option>
-              <option value="LinkedIn Post">💬 LinkedIn Posts (Hiring Feed)</option>
+              <option value="LinkedIn Post">👤 Individual Public Posts (LinkedIn Feed)</option>
               <option value="LinkedIn">💼 LinkedIn Formal Jobs</option>
               <option value="Naukri">🔷 Naukri</option>
               <option value="Direct">🏢 Direct Portals</option>
@@ -191,7 +191,7 @@
       <div class="tier-chips" id="tier-chips">
         <button class="chip active" data-chip="all">All Roles</button>
         <button class="chip" data-chip="primary">🥇 Primary (1–7)</button>
-        <button class="chip chip-source" data-chip="source-post">💬 LinkedIn Posts</button>
+        <button class="chip chip-source" data-chip="source-post">👤 Individual Posts (12)</button>
         <button class="chip" data-chip="secondary">🥈 Secondary (Tier 8)</button>
         <button class="chip" data-chip="adjacent">⚡ Optional (Tier 9)</button>
         <button class="chip" data-chip="1">🥇 Tier 1: Applied ML</button>
@@ -440,26 +440,88 @@
         <div class="section-header">
           <div>
             <div class="hero-badge" style="margin-bottom: 0.5rem; display: inline-flex;">
-              <span>💬 Live Feed Harvester</span>
+              <span>👤 Individual Post Harvester</span>
             </div>
-            <h2 class="section-title">LinkedIn Post Job Harvester & Evaluator</h2>
+            <h2 class="section-title">Fetch Jobs Posted by Individuals in Public Messages</h2>
             <p class="section-desc">
-              Directly fetch, parse, and evaluate informal job postings made by hiring managers and founders on LinkedIn feeds.
-              Checks strict fresher seniority gates (&le; 1 year exp), calculates multi-tier match score, and generates a personalized cold outreach DM pitch.
+              Directly fetch, parse, and evaluate informal hiring announcements published by individuals (hiring managers, founders, tech leads) in public LinkedIn feed messages.
+              Checks strict fresher seniority gates (&le; 1 year exp), calculates multi-tier match score, and generates a personalized cold recruiter outreach pitch.
             </p>
           </div>
         </div>
 
-        <!-- Sample Presets Toolbar -->
+        <!-- 1. Direct Public Post URL Fetcher Banner -->
+        <div class="url-fetcher-banner">
+          <div class="url-fetcher-header">
+            <span class="url-fetcher-icon">🌐</span>
+            <div>
+              <h3 class="url-fetcher-title">Fetch Directly from Public LinkedIn Post URL</h3>
+              <p class="url-fetcher-desc">
+                Paste the web address of any public LinkedIn post or feed update. The engine automatically fetches and extracts the message content, hiring manager, company, and contact email.
+              </p>
+            </div>
+          </div>
+          <div class="url-fetcher-input-row">
+            <input type="url" id="linkedin-fetch-url-input" placeholder="e.g. https://www.linkedin.com/posts/priyasharma_swiggy-apm-hiring-freshers-activity-7254890123-x9aL" class="fetch-input">
+            <button type="button" class="btn btn-primary" id="btn-fetch-post-url">
+              <span id="fetch-btn-label">⚡ Fetch & Parse Public Post</span>
+            </button>
+          </div>
+          <div class="url-fetcher-hints">
+            <span class="hint-label">Supported URLs:</span>
+            <code>linkedin.com/posts/...</code>
+            <code>linkedin.com/feed/update/...</code>
+            <code>linkedin.com/pulse/...</code>
+          </div>
+        </div>
+
+        <!-- 2. Live Public Search Discovery Bar -->
+        <div class="live-search-discovery-box">
+          <div class="discovery-header">
+            <span class="discovery-icon">🔍</span>
+            <div>
+              <strong>Discover Live Public Posts by Individuals (Past 24 Hours):</strong>
+              <span class="discovery-sub">Click any pre-filtered Boolean query below to view real-time hiring posts from individuals directly on LinkedIn:</span>
+            </div>
+          </div>
+          <div class="discovery-chips">
+            <a href="https://www.linkedin.com/search/results/content/?keywords=%22hiring%22%20(%22data%20scientist%22%20OR%20%22data%20science%22)%20(%22fresher%22%20OR%20%220-1%22)%20(Bangalore%20OR%20Bengaluru)&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22" target="_blank" rel="noopener noreferrer" class="discovery-chip">
+              <span>📊 Fresher Data Science Posts ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/search/results/content/?keywords=%22hiring%22%20(%22associate%20product%20manager%22%20OR%20%22APM%22)%20(%22fresher%22%20OR%20%220-1%22)%20(Bangalore%20OR%20Bengaluru)&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22" target="_blank" rel="noopener noreferrer" class="discovery-chip">
+              <span>🚀 APM / Product Fresher Posts ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/search/results/content/?keywords=%22hiring%22%20(%22operations%20research%22%20OR%20%22optimization%22)%20(%22trainee%22%20OR%20%22fresher%22)&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22" target="_blank" rel="noopener noreferrer" class="discovery-chip">
+              <span>⚙️ OR & Optimization Posts ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/search/results/content/?keywords=%22hiring%22%20(%22applied%20scientist%22%20OR%20%22applied%20ml%22)%20(%22intern%22%20OR%20%22fresher%22)&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22" target="_blank" rel="noopener noreferrer" class="discovery-chip">
+              <span>🤖 Applied ML Research Posts ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/search/results/content/?keywords=%22hiring%22%20(%22forecasting%22%20OR%20%22time%20series%22)%20(%22analyst%22%20OR%20%22fresher%22)&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22" target="_blank" rel="noopener noreferrer" class="discovery-chip">
+              <span>📈 Demand Forecasting Posts ↗</span>
+            </a>
+            <a href="https://www.linkedin.com/search/results/content/?keywords=%22hiring%22%20(%22decision%20scientist%22%20OR%20%22decision%20science%22)%20(%22fresher%22%20OR%20%22associate%22)&origin=GLOBAL_SEARCH_HEADER&sortBy=%22date_posted%22" target="_blank" rel="noopener noreferrer" class="discovery-chip">
+              <span>🎯 Decision Science Posts ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Sample Presets Toolbar -->
         <div class="presets-container">
-          <span class="presets-label">⚡ Load Active Hiring Manager Posts:</span>
+          <span class="presets-label">⚡ Load Individual Public Posts (1-Click Presets):</span>
           <div class="presets-buttons">
-            <button type="button" class="preset-btn" data-preset="swiggy">🍕 Swiggy APM</button>
-            <button type="button" class="preset-btn" data-preset="razorpay">💳 Razorpay BizOps</button>
-            <button type="button" class="preset-btn" data-preset="phonepe">📱 PhonePe Data Science</button>
-            <button type="button" class="preset-btn" data-preset="delhivery">📦 Delhivery OR Trainee</button>
-            <button type="button" class="preset-btn" data-preset="zepto">⚡ Zepto Forecasting</button>
-            <button type="button" class="preset-btn" data-preset="sarvam">🤖 Sarvam AI Applied ML</button>
+            <button type="button" class="preset-btn" data-preset="swiggy">🍕 Swiggy APM (Priya Sharma)</button>
+            <button type="button" class="preset-btn" data-preset="flipkart">🛒 Flipkart ML (Dr. Sumanth Rao)</button>
+            <button type="button" class="preset-btn" data-preset="razorpay">💳 Razorpay BizOps (Arjun Mehta)</button>
+            <button type="button" class="preset-btn" data-preset="phonepe">📱 PhonePe DS (Ananya Sen)</button>
+            <button type="button" class="preset-btn" data-preset="groww">📈 Groww APM (Aakash Gupta)</button>
+            <button type="button" class="preset-btn" data-preset="cred">💎 CRED Decision Science (Tanvi Agarwal)</button>
+            <button type="button" class="preset-btn" data-preset="delhivery">📦 Delhivery OR (Kunal Singhal)</button>
+            <button type="button" class="preset-btn" data-preset="zepto">⚡ Zepto Forecasting (Rohan Deshmukh)</button>
+            <button type="button" class="preset-btn" data-preset="meesho">🛍️ Meesho DS (Vikramaditya Iyer)</button>
+            <button type="button" class="preset-btn" data-preset="inmobi">🎯 InMobi Optimization (Neha Bansal)</button>
+            <button type="button" class="preset-btn" data-preset="postman">🚀 Postman ML Engineer (Rajesh Menon)</button>
+            <button type="button" class="preset-btn" data-preset="sarvam">🤖 Sarvam AI ML (Vivek Raghavan)</button>
           </div>
         </div>
 
