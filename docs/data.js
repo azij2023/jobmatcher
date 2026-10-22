@@ -4728,8 +4728,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     "primary_matches": 70,
     "secondary_matches": 6,
     "adjacent_matches": 6,
-    "last_sync": "2026-10-22 13:38"
+    "last_sync": "2026-10-22 18:25"
   },
   "total_jobs": 82,
-  "last_updated": "2026-10-22 13:38"
+  "last_updated": "2026-10-22 18:25"
 };
