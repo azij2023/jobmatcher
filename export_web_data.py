@@ -2,6 +2,7 @@ import json
 import sqlite3
 import os
 import datetime
+from collectors.live_job_collector import collect_and_score_all_live_jobs
 from collectors.api_sources import fetch_api_jobs
 from collectors.linkedin_post_fetcher import get_curated_linkedin_posts
 from matching.scoring import score_job
@@ -17,11 +18,19 @@ def export_data():
 
     max_age = profile.get("freshness", {}).get("max_age_hours", 48)
 
-    # 2. Collect all jobs from API sources and curated post sources
+    # 2. Collect all jobs from live sources, API sources, and curated posts
     all_raw_jobs = []
-    
-    # Track URLs to avoid duplicates
     seen_keys = set()
+
+    # From live web feeds (LinkedIn Guest API, Remotive, Jobicy)
+    try:
+        for j in collect_and_score_all_live_jobs():
+            key = (j.get("company", "").strip().lower(), j.get("title", "").strip().lower())
+            if key not in seen_keys:
+                seen_keys.add(key)
+                all_raw_jobs.append(j)
+    except Exception as e:
+        print(f"[export_data] Notice collecting live jobs: {e}")
 
     # From API sources (verified portals & direct ATS)
     for j in fetch_api_jobs():

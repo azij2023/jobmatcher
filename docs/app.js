@@ -147,7 +147,33 @@ document.addEventListener("DOMContentLoaded", () => {
   function getJobFreshness(job) {
     if (!job) return { hours: 2, label: "2h ago", badgeText: "⚡ Posted 2h ago", isMinute: false };
 
-    // 1. Explicit relative time string (e.g. "5 minutes ago", "17 hours ago", "1 day ago")
+    // 1. If job has an absolute posted_at timestamp, calculate exact real-time elapsed age
+    if (job.posted_at) {
+      try {
+        const postedMs = new Date(job.posted_at.replace(" ", "T")).getTime();
+        const nowMs = Date.now();
+        if (!isNaN(postedMs) && postedMs <= nowMs) {
+          const diffMs = nowMs - postedMs;
+          const totalMins = Math.max(1, Math.floor(diffMs / (60 * 1000)));
+          const totalHours = totalMins / 60.0;
+          
+          if (totalMins < 60) {
+            const label = `${totalMins}m ago`;
+            return { hours: totalHours, label, badgeText: `⚡ Just now (${label})`, isMinute: true };
+          } else if (totalHours < 24) {
+            const hrs = Math.floor(totalHours);
+            const label = `${hrs}h ago`;
+            return { hours: totalHours, label, badgeText: `⚡ Posted ${label}`, isMinute: false };
+          } else {
+            const days = Math.floor(totalHours / 24);
+            const label = `${days}d ago`;
+            return { hours: totalHours, label, badgeText: `⚡ Posted ${label}`, isMinute: false };
+          }
+        }
+      } catch (e) {}
+    }
+
+    // 2. Explicit relative time string (e.g. "5 minutes ago", "17 hours ago", "1 day ago")
     if (job.relative_time) {
       const match = String(job.relative_time).match(/(\d+)\s*(h|hr|hour|d|day|m|min|w|week)/i);
       if (match) {
