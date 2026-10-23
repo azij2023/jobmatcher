@@ -205,21 +205,28 @@ def score_job(job: dict, profile: dict) -> dict:
     is_india = (
         any(city in job_location for city in preferred_cities) or
         any(acc in job_location for acc in acceptable_locs) or
-        "india" in job_location
+        "india" in job_location or
+        any(term in job_location for term in ("apac", "asia pacific", "asia-pacific"))
+    )
+    is_worldwide_remote = (
+        profile.get("locations", {}).get("allow_worldwide_remote", False) and
+        any(term in job_location for term in ("worldwide", "anywhere", "global"))
     )
 
     if profile.get("locations", {}).get("require_india_only", True):
-        if not is_india:
+        if not is_india and not is_worldwide_remote:
             return {
                 "rejected": True,
                 "final_score": 0.0,
-                "rejection_reason": f"Location '{job.get('location')}' is outside India (India-based jobs requested)."
+                "rejection_reason": f"Location '{job.get('location')}' is outside India or worldwide remote."
             }
 
     if any(city in job_location for city in preferred_cities):
         location_score = 1.0
     elif is_india:
         location_score = 0.95
+    elif is_worldwide_remote:
+        location_score = 0.85
     else:
         location_score = 0.50
 

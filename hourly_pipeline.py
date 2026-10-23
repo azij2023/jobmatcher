@@ -1,29 +1,26 @@
 """
-Hourly Automated Job Fetcher & Pipeline Sync
+Scheduled Job Fetcher & Pipeline Sync
 TargetMatch AI - Entry-Level Career Engine
 
-Runs automatically every hour via GitHub Actions cron, local scheduler, or manual trigger.
-Fetches REAL live entry-level opportunities from LinkedIn Guest API, Remotive, and Jobicy.
-Accurately recalculates elapsed age for older jobs, deduplicates, enriches semantic skill gaps,
-sorts by freshness (newest first), and synchronizes data payloads across root and docs/.
+Runs every 30 minutes via GitHub Actions. Remotive is queried at most every six hours.
+Fetches dated entry-level opportunities, recalculates age from source timestamps,
+deduplicates, enriches matches, and synchronizes the web payloads.
 """
 
 import os
 import json
 import datetime
-import re
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = SCRIPT_DIR
 
 from collectors.live_job_collector import collect_and_score_all_live_jobs
-from collectors.linkedin_post_fetcher import get_curated_linkedin_posts
 from scratch.add_semantic_skill_gaps import enrich_job_semantic_gaps
 
 def run_hourly_sync():
-    now = datetime.datetime.now()
-    timestamp_str = now.strftime("%Y-%m-%d %H:%M")
-    print(f"[{timestamp_str}] Running TargetMatch AI Hourly Pipeline Sync...")
+    now = datetime.datetime.now(datetime.timezone.utc)
+    timestamp_str = now.isoformat(timespec="minutes").replace("+00:00", "Z")
+    print(f"[{timestamp_str}] Running TargetMatch AI job feed sync...")
 
     data_json_path = os.path.join(ROOT_DIR, "data.json")
     if os.path.exists(data_json_path):
@@ -32,44 +29,60 @@ def run_hourly_sync():
     else:
         data = {"jobs": [], "total_jobs": 0, "profile": {}, "stats": {}}
 
-    existing_jobs = data.get("jobs", [])
-    existing_urls = {j.get("url") for j in existing_jobs if j.get("url")}
-    existing_keys = {f"{j.get('company', '').lower()}::{j.get('title', '').lower()}" for j in existing_jobs}
+    existing_jobs = [
+        job for job in data.get("jobs", [])
+        if job.get("posted_at_source") in {"published_at", "relative_time"}
+    ]
+    existing_by_url = {job["url"]: job for job in existing_jobs if job.get("url")}
+    existing_by_key = {
+        f"{job.get('company', '').lower()}::{job.get('title', '').lower()}": job
+        for job in existing_jobs
+    }
 
-    # 1. Collect REAL LIVE fresh jobs from LinkedIn Guest API, Remotive, and Jobicy
+    # Remotive recommends at most four requests a day; keep its fetch to six-hour intervals.
+    last_remotive_sync = data.get("last_remotive_sync")
+    include_remotive = True
+    if last_remotive_sync:
+        try:
+            last_sync = datetime.datetime.fromisoformat(last_remotive_sync.replace("Z", "+00:00"))
+            if last_sync.tzinfo is None:
+                last_sync = last_sync.replace(tzinfo=datetime.timezone.utc)
+            include_remotive = now - last_sync >= datetime.timedelta(hours=6)
+        except (TypeError, ValueError):
+            print(f"[{timestamp_str}] Ignoring invalid last_remotive_sync value.")
+
+    # 1. Collect dated listings from LinkedIn, Jobicy, and (when due) Remotive.
     print(f"[{timestamp_str}] Scraping & aggregating live job boards...")
-    live_scraped_jobs = collect_and_score_all_live_jobs()
+    live_scraped_jobs = collect_and_score_all_live_jobs(include_remotive=include_remotive)
+    if include_remotive:
+        data["last_remotive_sync"] = timestamp_str
     added_count = 0
 
     for job in live_scraped_jobs:
         j_key = f"{job.get('company', '').lower()}::{job.get('title', '').lower()}"
         j_url = job.get("url")
-        if j_url not in existing_urls and j_key not in existing_keys:
+        existing_job = existing_by_url.get(j_url) or existing_by_key.get(j_key)
+        if existing_job:
+            existing_job.update(job)
+        else:
             existing_jobs.insert(0, job)
-            existing_urls.add(j_url)
-            existing_keys.add(j_key)
+            if j_url:
+                existing_by_url[j_url] = job
+            existing_by_key[j_key] = job
             added_count += 1
 
-    # 2. Collect informal LinkedIn public posts from founders / hiring managers
-    fresh_posts = get_curated_linkedin_posts()
-    for post in fresh_posts:
-        p_key = f"{post.get('company', '').lower()}::{post.get('title', '').lower()}"
-        p_url = post.get("url")
-        if p_url not in existing_urls and p_key not in existing_keys:
-            enrich_job_semantic_gaps(post)
-            existing_jobs.append(post)
-            existing_urls.add(p_url)
-            existing_keys.add(p_key)
-            added_count += 1
-
-    # 3. Accurately recalculate elapsed time for ALL jobs based on true posted_at timestamp
-    # This prevents older jobs from staying stuck at "5 minutes ago" indefinitely
+    # 2. Recalculate age from the preserved source publication timestamp.
     for job in existing_jobs:
         posted_at_str = job.get("posted_at")
         if posted_at_str:
             try:
-                posted_dt = datetime.datetime.strptime(posted_at_str, "%Y-%m-%d %H:%M")
-                elapsed_hrs = max(0.05, (now - posted_dt).total_seconds() / 3600.0)
+                posted_dt = datetime.datetime.fromisoformat(posted_at_str.replace("Z", "+00:00"))
+                if posted_dt.tzinfo is None:
+                    posted_dt = posted_dt.replace(tzinfo=datetime.timezone.utc)
+                elapsed_hrs = (now - posted_dt).total_seconds() / 3600.0
+                if elapsed_hrs < 0:
+                    job["hours_ago"] = None
+                    continue
                 job["hours_ago"] = round(elapsed_hrs, 2)
                 if elapsed_hrs < 1:
                     mins = max(5, int(round(elapsed_hrs * 60)))
@@ -80,20 +93,28 @@ def run_hourly_sync():
                 else:
                     days = max(1, int(round(elapsed_hrs / 24)))
                     job["relative_time"] = f"{days} day{'s' if days > 1 else ''} ago"
-            except Exception:
-                pass
+            except (TypeError, ValueError) as error:
+                print(f"[{timestamp_str}] Dropping listing with invalid publication date: {error}")
+                job["hours_ago"] = None
+                continue
 
         if "semantic_skill_gap" not in job:
             enrich_job_semantic_gaps(job)
 
-    # 4. Sort strictly from LATEST to FARTHEST (lowest hours_ago at the top!)
+    # Keep one month of verified listings for the "Anytime" filter.
+    existing_jobs = [
+        job for job in existing_jobs
+        if job.get("hours_ago") is not None and job["hours_ago"] <= 24 * 30
+    ]
+
+    # 3. Sort from newest to oldest.
     existing_jobs.sort(key=lambda j: j.get("hours_ago", 999))
 
     data["jobs"] = existing_jobs
     data["total_jobs"] = len(existing_jobs)
     data["last_updated"] = timestamp_str
 
-    # 5. Update stats
+    # 4. Update stats
     primary_count = sum(1 for j in existing_jobs if j.get("priority") == "Primary" or j.get("tier") in [1, 2, 3, 4, 5, 6, 7])
     secondary_count = sum(1 for j in existing_jobs if j.get("priority") == "Secondary" or j.get("tier") == 8)
     adjacent_count = sum(1 for j in existing_jobs if j.get("tier") == 9)
@@ -106,20 +127,20 @@ def run_hourly_sync():
         "last_sync": timestamp_str
     }
 
-    # 6. Write back data.json and docs/data.json
+    # 5. Write back data.json and docs/data.json
     for p in [os.path.join(ROOT_DIR, "data.json"), os.path.join(ROOT_DIR, "docs", "data.json")]:
         with open(p, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
         print(f"Updated {p} ({len(existing_jobs)} jobs)")
 
-    # 7. Write back data.js and docs/data.js
+    # 6. Write back data.js and docs/data.js
     js_content = "window.JOB_MATCHER_DATA = window.JOB_DATA = " + json.dumps(data, indent=2, ensure_ascii=False) + ";\n"
     for p in [os.path.join(ROOT_DIR, "data.js"), os.path.join(ROOT_DIR, "docs", "data.js")]:
         with open(p, "w", encoding="utf-8") as f:
             f.write(js_content)
         print(f"Updated {p}")
 
-    print(f"[{timestamp_str}] Hourly sync complete! {added_count} brand-new live opportunities incorporated. Total: {len(existing_jobs)} jobs.")
+    print(f"[{timestamp_str}] Feed sync complete. Added {added_count} verified listings. Total: {len(existing_jobs)} jobs.")
     return len(existing_jobs), added_count
 
 if __name__ == "__main__":

@@ -296,6 +296,7 @@
   },
   "locations": {
     "require_india_only": true,
+    "allow_worldwide_remote": true,
     "preferred_cities": [
       "bangalore",
       "bengaluru",

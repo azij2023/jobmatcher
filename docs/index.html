@@ -53,7 +53,7 @@
       </nav>
 
       <div class="nav-actions">
-        <button class="btn-nav-refresh" id="nav-refresh-btn" title="Refresh & Fetch Fresh Jobs">
+        <button class="btn-nav-refresh" id="nav-refresh-btn" title="Reload the latest published snapshot; source feeds sync every 30 minutes.">
           <span class="refresh-spinner" id="nav-refresh-icon">🔄</span>
           <span id="nav-refresh-label">Refresh Jobs</span>
         </button>
@@ -75,14 +75,14 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-badge">
-        <span class="sparkle">⚡</span> Real-Time Freshness Engine • Last Minute to 2 Days (0m – 48h)
+        <span class="sparkle">⚡</span> Scheduled Job Feed • Page Reload Every 30 Minutes
       </div>
       <h1 class="hero-title">
         Verified Entry-Level <span class="gradient-text">Job Search</span>
       </h1>
       <p class="hero-subtitle">
-        Instant real-time search across verified live postings in India from <strong>the last minute up to the last 2 days</strong>. 
-        Strictly <strong>0–2 years experience</strong> (fresher, intern, early-career) across Applied ML, Data Science, Decision Science, Optimization & Engineering.
+        Fresh entry-level AI, data science and analytics jobs in India, plus remote roles open worldwide, sourced from LinkedIn, Remotive and Jobicy. The page refreshes every 30 minutes; Remotive data may be delayed by up to 24 hours.
+        Strictly <strong>0–2 years experience</strong> (fresher, intern, early-career) across Applied ML, Data Science, Decision Science, Optimization & Engineering. Post dates are shown only when the source provides them.
       </p>
 
       <!-- Prominent Job Search Console -->
@@ -112,7 +112,7 @@
                 <option value="pune">Pune</option>
                 <option value="gurugram">Gurugram / Noida / Delhi</option>
                 <option value="mumbai">Mumbai</option>
-                <option value="remote">Remote - India</option>
+                <option value="remote">Remote - Worldwide / India</option>
               </select>
             </div>
           </div>
@@ -252,7 +252,7 @@
               <option value="pune">Pune</option>
               <option value="gurugram">Gurugram / Noida</option>
               <option value="mumbai">Mumbai</option>
-              <option value="remote">Remote - India</option>
+              <option value="remote">Remote - Worldwide / India</option>
             </select>
           </div>
 
@@ -320,9 +320,9 @@
           <span class="results-count" id="results-count">Showing 0 matching jobs</span>
           <span class="active-filter-indicator" id="active-filter-indicator"></span>
         </div>
-        <div class="auto-sync-badge" id="auto-sync-indicator" title="Automatic hourly ingestion pipeline & dynamic freshness reload">
+        <div class="auto-sync-badge" id="auto-sync-indicator" title="Job feeds are checked every 30 minutes; this page reloads the latest published snapshot.">
           <span class="sync-pulse-dot"></span>
-          <span class="sync-badge-text">⚡ Auto-sync active (Every 1h) • Last synced: Just now</span>
+          <span class="sync-badge-text">⚡ Pipeline runs every 30m • Loading latest feed data...</span>
         </div>
       </div>
 

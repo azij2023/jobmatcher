@@ -5,7 +5,7 @@ TargetMatch AI - Real-time Job Pipeline
 Connects directly to live public search feeds:
 1. LinkedIn Public Guest Job Endpoint (Past 24h, Entry-level / Internship, India)
 2. Remotive Live Public API (Remote Tech / Data & ML jobs eligible for India/Global)
-3. Curated Informal LinkedIn Posts
+3. Jobicy Remote Jobs API (India and worldwide-eligible roles)
 
 Fetches real job listings posted within the last 1-24 hours, normalizes data,
 runs profile scoring, and assigns semantic skill gaps.
@@ -20,6 +20,7 @@ import html as html_lib
 import os
 import sys
 import time
+import urllib.error
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -41,42 +42,127 @@ EXCLUDE_TITLES = [
     "staff", "architect", "5+", "6+", "7+", "8+", "10+", "years experience"
 ]
 
-def parse_relative_time_to_hours(time_str: str) -> float:
-    """Parses relative time strings like '24 minutes ago', '2 hours ago', '1 day ago' into float hours."""
-    t = time_str.lower().strip()
-    match = re.search(r"(\d+)\s*(m|min|minute|h|hr|hour|d|day|w|week)", t)
-    if not match:
-        return 2.0
-    num = float(match.group(1))
-    unit = match.group(2)
-    if unit.startswith("m"):
-        return max(0.05, round(num / 60.0, 2))
-    elif unit.startswith("h"):
-        return round(num, 2)
-    elif unit.startswith("d"):
-        return round(num * 24.0, 2)
-    elif unit.startswith("w"):
-        return round(num * 168.0, 2)
-    return 2.0
+def parse_relative_time_to_hours(time_str: str) -> float | None:
+    """Parse a publisher-provided relative age without guessing when it is missing."""
+    text = (time_str or "").lower().strip()
+    if text in {"just now", "today"}:
+        return 0.0
 
-def fetch_live_linkedin_jobs(max_queries: int = 8) -> list:
+    match = re.search(
+        r"(\d+(?:\.\d+)?)\s*(s|sec|second|m|min|minute|h|hr|hour|d|day|w|week)",
+        text,
+    )
+    if not match:
+        return None
+
+    amount = float(match.group(1))
+    unit = match.group(2)
+    if unit.startswith("s"):
+        return amount / 3600.0
+    if unit.startswith("m"):
+        return amount / 60.0
+    if unit.startswith("h"):
+        return amount
+    if unit.startswith("d"):
+        return amount * 24.0
+    if unit.startswith("w"):
+        return amount * 168.0
+    return None
+
+
+def parse_published_datetime(value: str | None) -> datetime.datetime | None:
+    """Parse a source publication date and normalize it to UTC."""
+    if not value:
+        return None
+    try:
+        published_at = datetime.datetime.fromisoformat(str(value).strip().replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return None
+    if published_at.tzinfo is None:
+        published_at = published_at.replace(tzinfo=datetime.timezone.utc)
+    return published_at.astimezone(datetime.timezone.utc)
+
+
+def get_publication_freshness(
+    published_at_value: str | None,
+    relative_time: str | None,
+    now: datetime.datetime | None = None,
+) -> dict | None:
+    """Return a real source timestamp or a timestamp derived from source relative time."""
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    if now.tzinfo is None:
+        now = now.replace(tzinfo=datetime.timezone.utc)
+    else:
+        now = now.astimezone(datetime.timezone.utc)
+    published_at = parse_published_datetime(published_at_value)
+    source = "published_at"
+
+    date_has_time = bool(
+        published_at_value and
+        re.search(r"[T ]\d{2}:\d{2}", str(published_at_value))
+    )
+    if published_at is None or (not date_has_time and relative_time):
+        age_hours = parse_relative_time_to_hours(relative_time or "")
+        if age_hours is None:
+            if published_at is None:
+                return None
+            age_hours = (now - published_at).total_seconds() / 3600.0
+        else:
+            published_at = now - datetime.timedelta(hours=age_hours)
+            source = "relative_time"
+    else:
+        age_hours = (now - published_at).total_seconds() / 3600.0
+
+    if age_hours < 0:
+        return None
+
+    if age_hours < 1:
+        label = f"{max(1, round(age_hours * 60))} minutes ago"
+    elif age_hours < 24:
+        hours = max(1, round(age_hours))
+        label = f"{hours} hour{'s' if hours != 1 else ''} ago"
+    else:
+        days = max(1, round(age_hours / 24))
+        label = f"{days} day{'s' if days != 1 else ''} ago"
+
+    return {
+        "posted_at": published_at.isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "hours_ago": round(age_hours, 2),
+        "relative_time": label,
+        "posted_at_source": source,
+    }
+
+
+def is_india_or_worldwide_remote(location: str) -> bool:
+    """Limit remote-board results to India or postings explicitly open worldwide."""
+    value = (location or "").lower()
+    india_terms = ("india", "indian", "apac", "asia pacific", "asia-pacific")
+    worldwide_terms = ("worldwide", "anywhere", "global", "all locations", "from anywhere")
+    return any(term in value for term in india_terms + worldwide_terms)
+
+
+def get_remote_location_label(location: str) -> str:
+    value = (location or "").lower()
+    if "india" in value or "indian" in value:
+        return "Remote (India)"
+    if "apac" in value or "asia pacific" in value or "asia-pacific" in value:
+        return "Remote (APAC)"
+    return "Remote (Worldwide)"
+
+def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
     """
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint.
     Filters: India location, Past 24 Hours, Entry-level / Internships.
     """
     queries = [
-        "data scientist fresher",
         "junior data scientist",
-        "associate data scientist",
         "applied scientist intern",
         "machine learning intern",
-        "decision scientist",
-        "operations research",
-        "associate product manager"
+        "data analyst fresher",
     ][:max_queries]
 
     live_jobs = []
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(datetime.timezone.utc)
 
     for q in queries:
         params = urllib.parse.urlencode({
@@ -106,41 +192,37 @@ def fetch_live_linkedin_jobs(max_queries: int = 8) -> list:
                     loc = re.sub(r'<[^<]+?>', '', locations[i]).strip() if i < len(locations) else "India"
                     loc = html_lib.unescape(loc)
                     clean_link = links[i].split("?")[0] if i < len(links) else ""
-                    time_raw = times[i][1].strip() if i < len(times) else "2 hours ago"
+                    published_raw = times[i][0].strip() if i < len(times) else None
+                    time_raw = times[i][1].strip() if i < len(times) else ""
+                    if not clean_link:
+                        continue
 
                     # Hard filter for senior roles
                     lower_t = raw_title.lower()
                     if any(bad in lower_t for bad in EXCLUDE_TITLES):
                         continue
 
-                    hours_ago = parse_relative_time_to_hours(time_raw)
-                    posted_at = (now - datetime.timedelta(hours=hours_ago)).strftime("%Y-%m-%d %H:%M")
+                    freshness = get_publication_freshness(published_raw, time_raw, now)
+                    if freshness is None:
+                        continue
 
                     # Format clean relative time
-                    if hours_ago < 1:
-                        mins = max(5, int(round(hours_ago * 60)))
-                        rel_time = f"{mins} minutes ago"
-                    elif hours_ago < 24:
-                        hrs = max(1, int(round(hours_ago)))
-                        rel_time = f"{hrs} hour{'s' if hrs > 1 else ''} ago"
-                    else:
-                        days = max(1, int(round(hours_ago / 24)))
-                        rel_time = f"{days} day{'s' if days > 1 else ''} ago"
-
                     live_jobs.append({
                         "title": raw_title,
                         "company": company,
                         "location": loc,
                         "url": clean_link or build_linkedin_jobs_url(raw_title, company),
                         "direct_job_url": clean_link,
-                        "hours_ago": hours_ago,
-                        "relative_time": rel_time,
-                        "posted_at": posted_at,
+                        **freshness,
                         "source_type": "LinkedIn",
                         "source_domain": "linkedin.com",
-                        "raw_description": f"{raw_title} at {company} in {loc}. Posted on LinkedIn {rel_time}. Entry-level role for early career & fresh graduates.",
+                        "raw_description": f"{raw_title} at {company} in {loc}. Listed on LinkedIn.",
                         "is_post": False
                     })
+        except urllib.error.HTTPError as e:
+            print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
+            if e.code == 429:
+                break
         except Exception as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
         finally:
@@ -153,7 +235,6 @@ def fetch_live_jobicy_jobs() -> list:
     Fetches real-time remote data science and ML jobs from Jobicy public API.
     """
     live_jobs = []
-    now = datetime.datetime.now()
     url = "https://jobicy.com/api/v2/remote-jobs?count=20&industry=data-science"
     try:
         req = urllib.request.Request(url, headers=HEADERS)
@@ -161,23 +242,34 @@ def fetch_live_jobicy_jobs() -> list:
             data = json.loads(r.read().decode("utf-8", errors="ignore"))
             for j in data.get("jobs", []):
                 title = j.get("jobTitle", "")
-                if any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                    continue
+                level = (j.get("jobLevel") or "").lower()
+                if any(term in level for term in ("senior", "mid", "lead", "principal", "director")):
                     continue
                 company = j.get("companyName", "Tech Company")
                 job_url = j.get("url", "")
+                source_location = j.get("jobGeo") or j.get("jobLocation") or ""
+                if not job_url or not is_india_or_worldwide_remote(source_location):
+                    continue
+                freshness = get_publication_freshness(
+                    j.get("pubDate") or j.get("publication_date") or j.get("datePosted"),
+                    j.get("relative_time"),
+                )
+                if freshness is None:
+                    continue
                 desc = re.sub(r'<[^<]+?>', ' ', j.get("jobDescription", ""))[:300]
                 live_jobs.append({
                     "title": title,
                     "company": company,
-                    "location": "Remote (India / Global)",
+                    "location": get_remote_location_label(source_location),
                     "url": job_url,
                     "direct_job_url": job_url,
-                    "hours_ago": 1.0,
-                    "relative_time": "1 hour ago",
-                    "posted_at": (now - datetime.timedelta(hours=1.0)).strftime("%Y-%m-%d %H:%M"),
-                    "source_type": "Direct ATS",
+                    **freshness,
+                    "source_type": "Jobicy",
                     "source_domain": "jobicy.com",
                     "raw_description": f"{title} at {company}. {desc}",
+                    "is_remote": True,
                     "is_post": False
                 })
     except Exception as e:
@@ -190,53 +282,52 @@ def fetch_live_remotive_jobs() -> list:
     Filters for worldwide / APAC / India availability and entry-level or junior relevance.
     """
     live_jobs = []
-    now = datetime.datetime.now()
 
-    endpoints = [
-        "https://remotive.com/api/remote-jobs?search=data&limit=15",
-        "https://remotive.com/api/remote-jobs?search=machine+learning&limit=15"
-    ]
+    endpoint = "https://remotive.com/api/remote-jobs?limit=100"
+    try:
+        req = urllib.request.Request(endpoint, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=8) as r:
+            data = json.loads(r.read().decode("utf-8", errors="ignore"))
+            for j in data.get("jobs", []):
+                loc = (j.get("candidate_required_location") or "").lower()
+                if not is_india_or_worldwide_remote(loc):
+                    continue
 
-    for ep in endpoints:
-        try:
-            req = urllib.request.Request(ep, headers=HEADERS)
-            with urllib.request.urlopen(req, timeout=8) as r:
-                data = json.loads(r.read().decode("utf-8", errors="ignore"))
-                jobs = data.get("jobs", [])
-                for j in jobs:
-                    loc = (j.get("candidate_required_location") or "").lower()
-                    if not any(k in loc for k in ["anywhere", "worldwide", "apac", "india", "remote"]):
-                        continue
+                title = j.get("title", "")
+                if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                    continue
 
-                    title = j.get("title", "")
-                    if any(bad in title.lower() for bad in EXCLUDE_TITLES):
-                        continue
+                company = j.get("company_name", "Tech Company")
+                job_url = j.get("url", "")
+                if not job_url:
+                    continue
+                freshness = get_publication_freshness(
+                    j.get("publication_date") or j.get("date_posted"),
+                    j.get("relative_time"),
+                )
+                if freshness is None:
+                    continue
+                clean_desc = re.sub(r'<[^<]+?>', ' ', j.get("description", ""))[:300]
 
-                    company = j.get("company_name", "Remote AI Corp")
-                    job_url = j.get("url", "")
-                    clean_desc = re.sub(r'<[^<]+?>', ' ', j.get("description", ""))[:300]
-
-                    live_jobs.append({
-                        "title": title,
-                        "company": company,
-                        "location": "Remote (India / Global)",
-                        "url": job_url,
-                        "direct_job_url": job_url,
-                        "hours_ago": 1.5,
-                        "relative_time": "1 hour ago",
-                        "posted_at": (now - datetime.timedelta(hours=1.5)).strftime("%Y-%m-%d %H:%M"),
-                        "source_type": "Direct ATS",
-                        "source_domain": "remotive.com",
-                        "raw_description": f"{title} at {company}. {clean_desc}",
-                        "is_post": False
-                    })
-        except Exception as e:
-            print(f"[LiveCollector] Remotive notice: {e}")
-            continue
+                live_jobs.append({
+                    "title": title,
+                    "company": company,
+                    "location": get_remote_location_label(loc),
+                    "url": job_url,
+                    "direct_job_url": job_url,
+                    **freshness,
+                    "source_type": "Remotive",
+                    "source_domain": "remotive.com",
+                    "raw_description": f"{title} at {company}. {clean_desc}",
+                    "is_remote": True,
+                    "is_post": False
+                })
+    except Exception as e:
+        print(f"[LiveCollector] Remotive notice: {e}")
 
     return live_jobs
 
-def collect_and_score_all_live_jobs() -> list:
+def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
     """
     Runs multi-source live collection (LinkedIn Guest API, Remotive Public API, Jobicy),
     deduplicates, matches with user profile, scores fit, and attaches semantic skill gaps.
@@ -248,9 +339,9 @@ def collect_and_score_all_live_jobs() -> list:
     else:
         profile = {"target_level": "fresher", "locations": {"require_india_only": False}}
 
-    print("[LiveCollector] Fetching live entry-level jobs from LinkedIn Guest API, Remotive, and Jobicy...")
+    print("[LiveCollector] Fetching entry-level jobs from LinkedIn and Jobicy, plus Remotive when scheduled...")
     raw_linkedin = fetch_live_linkedin_jobs()
-    raw_remotive = fetch_live_remotive_jobs()
+    raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()
     all_raw = raw_linkedin + raw_remotive + raw_jobicy
 
@@ -274,7 +365,6 @@ def collect_and_score_all_live_jobs() -> list:
         scored = score_job({
             "title": title,
             "raw_description": desc,
-            "role_category": "Data Science",
             "location": loc,
             "seniority": "junior",
             "hours_ago": hours_ago,
@@ -291,7 +381,11 @@ def collect_and_score_all_live_jobs() -> list:
         final_score = scored.get("final_score") or 0.85
         badge = scored.get("badge") or ("🥇" if final_tier == 1 else ("🥈" if final_tier == 2 else "🥉"))
 
-        linkedin_url = raw.get("direct_job_url") or build_linkedin_jobs_url(title, company)
+        linkedin_url = (
+            raw.get("direct_job_url")
+            if raw["source_domain"] == "linkedin.com"
+            else build_linkedin_jobs_url(title, company)
+        )
         naukri_url = build_naukri_jobs_url(title)
 
         job_entry = {
@@ -304,16 +398,17 @@ def collect_and_score_all_live_jobs() -> list:
             "priority": final_priority,
             "badge": badge,
             "posted_at": raw["posted_at"],
+            "posted_at_source": raw["posted_at_source"],
             "hours_ago": hours_ago,
             "relative_time": raw["relative_time"],
             "url": raw["url"],
             "linkedin_url": linkedin_url,
             "naukri_url": naukri_url,
-            "company_url": raw.get("company_url", "https://www.linkedin.com"),
+            "company_url": raw.get("company_url") or raw["url"],
             "source_type": raw["source_type"],
             "source_domain": raw["source_domain"],
             "is_fresher": True,
-            "matched_skills": scored.get("matched_skills", ["python", "data_science"]),
+            "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),
             "description": desc[:280] + ("..." if len(desc) > 280 else ""),
             "raw_description": desc,
@@ -339,4 +434,3 @@ if __name__ == "__main__":
         safe_company = j['company'].encode('ascii', errors='replace').decode('ascii')
         safe_loc = j['location'].encode('ascii', errors='replace').decode('ascii')
         print(f"{idx}. [Tier {j['tier']}] {safe_title} @ {safe_company} ({safe_loc}) - {j['relative_time']} (Score: {int(j['score']*100)}%)")
-

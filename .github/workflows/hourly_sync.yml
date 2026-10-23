@@ -1,4 +1,4 @@
-name: Hourly Automated Job Pipeline Sync
+name: 30-Minute Job Feed Sync
 
 on:
   schedule:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  hourly-sync:
+  feed-sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Run Hourly Job Pipeline
+      - name: Run Job Feed Pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
@@ -31,4 +31,4 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json docs/data.json data.js docs/data.js
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(pipeline): hourly sync fresh entry-level jobs [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(pipeline): sync verified fresh job listings [skip ci]" && git push)

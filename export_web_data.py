@@ -3,12 +3,7 @@ import sqlite3
 import os
 import datetime
 from collectors.live_job_collector import collect_and_score_all_live_jobs
-from collectors.api_sources import fetch_api_jobs
-from collectors.linkedin_post_fetcher import get_curated_linkedin_posts
 from matching.scoring import score_job
-from processing.clean_text import clean_text
-from processing.normalize import normalize_location, normalize_skills, normalize_seniority
-from storage.db import init_db
 from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url
 
 def export_data():
@@ -18,33 +13,15 @@ def export_data():
 
     max_age = profile.get("freshness", {}).get("max_age_hours", 48)
 
-    # 2. Collect all jobs from live sources, API sources, and curated posts
+    # 2. Collect only listings with source-provided publication times.
     all_raw_jobs = []
     seen_keys = set()
 
-    # From live web feeds (LinkedIn Guest API, Remotive, Jobicy)
-    try:
-        for j in collect_and_score_all_live_jobs():
-            key = (j.get("company", "").strip().lower(), j.get("title", "").strip().lower())
-            if key not in seen_keys:
-                seen_keys.add(key)
-                all_raw_jobs.append(j)
-    except Exception as e:
-        print(f"[export_data] Notice collecting live jobs: {e}")
-
-    # From API sources (verified portals & direct ATS)
-    for j in fetch_api_jobs():
+    for j in collect_and_score_all_live_jobs(include_remotive=False):
         key = (j.get("company", "").strip().lower(), j.get("title", "").strip().lower())
         if key not in seen_keys:
             seen_keys.add(key)
             all_raw_jobs.append(j)
-
-    # From curated LinkedIn individual posts (founders & hiring managers)
-    for p in get_curated_linkedin_posts():
-        key = (p.get("company", "").strip().lower(), p.get("title", "").strip().lower())
-        if key not in seen_keys:
-            seen_keys.add(key)
-            all_raw_jobs.append(p)
 
     # 3. Score and normalize each job
     detailed_jobs = []
@@ -54,19 +31,17 @@ def export_data():
         company = raw.get("company", "Tech Company")
         loc = raw.get("location", "Bengaluru, Karnataka, India")
         desc = raw.get("raw_description", "")
-        hours_ago = raw.get("hours_ago", 2)
+        hours_ago = raw.get("hours_ago")
         
-        # Enforce 48h freshness ceiling (last minute to last 2 days)
-        if hours_ago is not None and hours_ago > max_age:
+        if not raw.get("posted_at_source") or hours_ago is None or hours_ago > max_age:
             continue
 
         # Ensure direct URL to official portal or ATS
         direct_url = raw.get("url", "")
         company_url = raw.get("company_url", "")
         
-        # Guard: Never allow generic LinkedIn search queries that inject sponsored 2-week-old ads
         if "linkedin.com/jobs/search" in direct_url or "linkedin.com/search" in direct_url:
-            direct_url = company_url or direct_url
+            continue
 
         scored = score_job({
             "title": title,
@@ -107,7 +82,7 @@ def export_data():
         naukri_url = build_naukri_jobs_url(title)
 
         detailed_jobs.append({
-            "url": linkedin_url,
+            "url": direct_url,
             "linkedin_url": linkedin_url,
             "naukri_url": naukri_url,
             "company_url": company_url or direct_url,
@@ -119,7 +94,8 @@ def export_data():
             "category": final_cat,
             "priority": final_priority,
             "badge": badge,
-            "posted_at": raw.get("posted_at") or "Today",
+            "posted_at": raw["posted_at"],
+            "posted_at_source": raw["posted_at_source"],
             "hours_ago": hours_ago,
             "relative_time": raw.get("relative_time") or rel_time,
             "source_type": raw.get("source_type") or scored.get("platform") or "Official Portal",
@@ -172,6 +148,8 @@ def export_data():
     web_data = {
         "profile": profile,
         "jobs": detailed_jobs,
+        "total_jobs": len(detailed_jobs),
+        "last_updated": datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="minutes").replace("+00:00", "Z"),
         "stats": {
             "total_matches": len(detailed_jobs),
             "primary_matches": len([j for j in detailed_jobs if j.get("tier") in [1, 2, 3, 4, 5, 6, 7]]),
