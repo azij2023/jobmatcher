@@ -130,6 +130,7 @@
                 <option value="12">🔥 Past 12 Hours</option>
                 <option value="24">⭐ Past 24 Hours (Today)</option>
                 <option value="48">📅 Past 48 Hours (2 Days Max)</option>
+                <option value="9999">🌐 Anytime / All Jobs</option>
               </select>
             </div>
           </div>
@@ -263,6 +264,7 @@
               <option value="12">🔥 Past 12 Hours</option>
               <option value="24">⭐ Past 24 Hours (Today)</option>
               <option value="48">📅 Past 48 Hours (2 Days Max)</option>
+              <option value="9999">🌐 Anytime / All Jobs</option>
             </select>
           </div>
 
@@ -349,9 +351,13 @@
       <!-- Empty State -->
       <div class="empty-state" id="empty-state" style="display:none;">
         <span class="empty-icon">🔎</span>
-        <h3>No jobs matched your current filters</h3>
-        <p>Try lowering the minimum match score or clearing your search query.</p>
-        <button class="btn btn-outline" id="reset-filters-btn">Reset All Filters</button>
+        <h3 id="empty-state-title">No jobs matched your current filters</h3>
+        <p id="empty-state-desc">Try clearing your search query or expanding the time window.</p>
+        <div class="empty-state-actions" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
+          <button class="btn btn-primary" id="empty-clear-search-btn" style="display:none;">✕ Clear Search Keyword</button>
+          <button class="btn btn-secondary" id="empty-expand-freshness-btn">⏱️ Expand to Anytime (All Jobs)</button>
+          <button class="btn btn-outline" id="reset-filters-btn">Reset All Filters</button>
+        </div>
       </div>
     </section>
 

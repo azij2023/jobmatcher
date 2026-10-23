@@ -233,6 +233,43 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  // Synonym & Domain Knowledge Mapping
+  const CITY_SYNONYMS = {
+    bengaluru: ['bengaluru', 'bangalore', 'blr'],
+    bangalore: ['bengaluru', 'bangalore', 'blr'],
+    gurugram: ['gurugram', 'gurgaon', 'noida', 'delhi', 'ncr', 'greater noida'],
+    gurgaon: ['gurugram', 'gurgaon', 'noida', 'delhi', 'ncr', 'greater noida'],
+    delhi: ['delhi', 'new delhi', 'noida', 'gurugram', 'gurgaon', 'ncr'],
+    noida: ['noida', 'greater noida', 'gurugram', 'gurgaon', 'delhi', 'ncr'],
+    mumbai: ['mumbai', 'bombay', 'navi mumbai', 'thane', 'pune'],
+    pune: ['pune', 'maharashtra', 'mumbai'],
+    hyderabad: ['hyderabad', 'secunderabad', 'hyd', 'telangana'],
+    remote: ['remote', 'work from home', 'wfh', 'anywhere', 'telecommute']
+  };
+
+  const DOMAIN_EXPANSIONS = {
+    'ml': ['machine learning', 'ml', 'mle'],
+    'mle': ['machine learning engineer', 'mle', 'applied mle', 'ml engineer'],
+    'ai': ['artificial intelligence', 'ai', 'genai', 'applied ai', 'deep learning'],
+    'genai': ['generative ai', 'genai', 'llm', 'foundation models', 'prompt engineering'],
+    'llm': ['large language model', 'llm', 'genai', 'generative ai', 'transformer'],
+    'ds': ['data science', 'data scientist', 'ds'],
+    'da': ['data analyst', 'data analytics', 'business analyst'],
+    'or': ['operations research', 'optimization', 'linear programming', 'integer programming', 'simplex'],
+    'optimization': ['optimization', 'operations research', 'or', 'gurobi', 'cplex', 'scipy.optimize'],
+    'fresher': ['fresher', '0-1 yr', '0-1', '0-2', 'entry-level', 'entry level', 'intern', 'campus', 'graduate', 'early career'],
+    'intern': ['intern', 'internship', 'trainee', 'apprentice']
+  };
+
+  function normalizeTokens(query) {
+    return query
+      .toLowerCase()
+      .replace(/[,\/\\|+&;()]/g, ' ')
+      .split(/\s+/)
+      .map(t => t.trim())
+      .filter(t => t.length > 0);
+  }
+
   function renderJobs() {
     let filtered = jobs.filter(job => {
       // Score filter
@@ -246,51 +283,84 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isNaN(currentFilter.tier) && job.tier !== parseInt(currentFilter.tier, 10)) return false;
       }
 
-      // Search query (intelligent multi-field & token matching across title, company, location, skills, description)
+      // Search query (intelligent multi-field & token matching with synonym expansion)
       if (currentFilter.search) {
-        const query = currentFilter.search.toLowerCase().trim();
-        const searchableText = [
-          job.title || '',
-          job.company || '',
-          job.category || '',
-          job.location || '',
-          job.source_type || '',
-          job.source_domain || '',
-          job.description || '',
-          job.raw_description || '',
+        const q = currentFilter.search.toLowerCase().trim();
+        const title = (job.title || '').toLowerCase();
+        const company = (job.company || '').toLowerCase();
+        const category = (job.category || '').toLowerCase();
+        const location = (job.location || '').toLowerCase();
+        const desc = (job.description || '').toLowerCase();
+        const rawDesc = (job.raw_description || '').toLowerCase();
+        const skills = [
           ...(job.matched_skills || []),
           ...(job.missing_skills || [])
-        ].join(' ').toLowerCase();
+        ].map(s => s.toLowerCase().replace(/_/g, ' '));
 
-        // 1. Direct substring match
-        if (searchableText.includes(query)) {
-          // Matched
+        const allText = [title, company, category, location, desc, rawDesc, ...skills].join(' ');
+
+        let matchesQuery = false;
+        // Direct exact match in title or company gets immediate pass (unless short 2-letter token)
+        if (q.length > 2 && (title.includes(q) || company.includes(q))) {
+          matchesQuery = true;
+        } else if (q === 'or') {
+          // Operations Research / Tier 4 match
+          if (job.tier === 4 || category.includes('optimization') || category.includes('or')) {
+            matchesQuery = true;
+          } else {
+            const orExpansions = ['operations research', 'linear programming', 'integer programming', 'simplex', 'gurobi', 'cplex', 'scipy.optimize'];
+            matchesQuery = orExpansions.some(exp => allText.includes(exp));
+          }
+        } else if (['ai', 'ml', 'ds', 'da'].includes(q)) {
+          const regex = new RegExp(`\\b${q}\\b`, 'i');
+          if (regex.test(title) || regex.test(company) || regex.test(category) || skills.some(s => regex.test(s))) {
+            matchesQuery = true;
+          } else {
+            const expansions = DOMAIN_EXPANSIONS[q] || [];
+            matchesQuery = expansions.some(exp => allText.includes(exp));
+          }
+        } else if (allText.includes(q)) {
+          matchesQuery = true;
         } else {
-          // 2. Multi-token match (all typed words must match somewhere in searchable text)
-          const tokens = query.split(/[\s,+/]+/).filter(t => t.length > 0);
-          const allTokensMatch = tokens.length > 0 && tokens.every(token => searchableText.includes(token));
-          if (!allTokensMatch) return false;
+          // Token-based matching with city and domain expansions
+          const tokens = normalizeTokens(q);
+          if (tokens.length > 0) {
+            matchesQuery = tokens.every(token => {
+              if (allText.includes(token)) return true;
+              if (CITY_SYNONYMS[token] && CITY_SYNONYMS[token].some(syn => allText.includes(syn))) return true;
+              if (DOMAIN_EXPANSIONS[token] && DOMAIN_EXPANSIONS[token].some(exp => allText.includes(exp))) return true;
+              if (token.length <= 3) {
+                const tokenRegex = new RegExp(`\\b${token}\\b`, 'i');
+                return tokenRegex.test(allText);
+              }
+              return false;
+            });
+          }
         }
+
+        if (!matchesQuery) return false;
       }
 
       // Location filter (matches Indian cities & Remote)
       if (currentFilter.location && currentFilter.location !== "all") {
         const locTarget = currentFilter.location.toLowerCase();
         const jobLoc = (job.location || '').toLowerCase();
-        if (locTarget === "bengaluru") {
-          if (!jobLoc.includes("bengaluru") && !jobLoc.includes("bangalore")) return false;
-        } else if (locTarget === "gurugram") {
-          if (!jobLoc.includes("gurugram") && !jobLoc.includes("gurgaon") && !jobLoc.includes("noida") && !jobLoc.includes("delhi")) return false;
-        } else if (locTarget === "remote") {
-          if (!jobLoc.includes("remote") && !job.is_remote) return false;
+        const isRemote = job.is_remote || jobLoc.includes("remote");
+
+        if (locTarget === "remote") {
+          if (!isRemote) return false;
         } else {
-          if (!jobLoc.includes(locTarget)) return false;
+          const syns = CITY_SYNONYMS[locTarget] || [locTarget];
+          const locMatches = syns.some(s => jobLoc.includes(s));
+          if (!locMatches) return false;
         }
       }
 
-      // Freshness filter: Strictly exclude jobs older than selected hours
-      const freshness = getJobFreshness(job);
-      if (freshness.hours > currentFilter.maxAgeHours) return false;
+      // Freshness filter: Strictly exclude jobs older than selected hours (unless Anytime / 9999)
+      if (currentFilter.maxAgeHours < 9000) {
+        const freshness = getJobFreshness(job);
+        if (freshness.hours > currentFilter.maxAgeHours) return false;
+      }
 
       // Source filter
       if (currentFilter.source && currentFilter.source !== "all") {
@@ -345,7 +415,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (bannerScopePill) {
       const scopeHrs = currentFilter.maxAgeHours || 48;
-      bannerScopePill.textContent = scopeHrs === 1 ? '⏱️ Last 1h Live Window' : (scopeHrs === 24 ? '⭐ Today (< 24h) Window' : `⚡ 0m – ${scopeHrs}h Live Window`);
+      bannerScopePill.textContent = scopeHrs >= 9000 ? '🌐 Anytime (All Jobs)' : (scopeHrs === 1 ? '⏱️ Last 1h Live Window' : (scopeHrs === 24 ? '⭐ Today (< 24h) Window' : `⚡ 0m – ${scopeHrs}h Live Window`));
     }
 
     // Render cards
@@ -354,6 +424,32 @@ document.addEventListener("DOMContentLoaded", () => {
       emptyState.style.display = "block";
       resultsCount.textContent = `Showing 0 matching jobs`;
       if (paginationContainer) paginationContainer.style.display = "none";
+
+      const emptyTitle = document.getElementById("empty-state-title");
+      const emptyDesc = document.getElementById("empty-state-desc");
+      const emptyClearBtn = document.getElementById("empty-clear-search-btn");
+      const emptyExpandBtn = document.getElementById("empty-expand-freshness-btn");
+
+      if (emptyTitle) {
+        if (currentFilter.search) {
+          emptyTitle.textContent = `No jobs matched "${currentFilter.search}"`;
+        } else {
+          emptyTitle.textContent = `No jobs matched your current filters`;
+        }
+      }
+      if (emptyDesc) {
+        if (currentFilter.maxAgeHours <= 24) {
+          emptyDesc.textContent = `No jobs found within the past ${currentFilter.maxAgeHours}h window. Try expanding to Anytime or clearing your search.`;
+        } else {
+          emptyDesc.textContent = `Try lowering your minimum match score or checking for other role keywords.`;
+        }
+      }
+      if (emptyClearBtn) {
+        emptyClearBtn.style.display = currentFilter.search ? "inline-block" : "none";
+      }
+      if (emptyExpandBtn) {
+        emptyExpandBtn.style.display = currentFilter.maxAgeHours < 9000 ? "inline-block" : "none";
+      }
       return;
     }
 
@@ -826,20 +922,86 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5. Filter Listeners
   // ==========================================================================
 
-  searchInput.addEventListener("input", (e) => {
-    currentFilter.search = e.target.value.trim();
-    clearSearchBtn.style.display = currentFilter.search ? "block" : "none";
-    currentPage = 1;
-    renderJobs();
-  });
+  // ==========================================================================
+  // 5. Filter & Real-Time Live Search Listeners
+  // ==========================================================================
 
-  clearSearchBtn.addEventListener("click", () => {
-    searchInput.value = "";
-    currentFilter.search = "";
-    clearSearchBtn.style.display = "none";
-    currentPage = 1;
-    renderJobs();
-  });
+  let searchDebounceTimer = null;
+  function handleLiveSearch(query, sourceInput) {
+    currentFilter.search = query.trim();
+
+    // Two-way synchronization between Hero search and Toolbar search
+    if (sourceInput !== heroSearchRole && heroSearchRole) {
+      heroSearchRole.value = query;
+    }
+    if (sourceInput !== searchInput && searchInput) {
+      searchInput.value = query;
+    }
+
+    // Toggle clear buttons
+    const hasQuery = Boolean(currentFilter.search);
+    if (heroClearRole) heroClearRole.style.display = hasQuery ? "block" : "none";
+    if (clearSearchBtn) clearSearchBtn.style.display = hasQuery ? "block" : "none";
+
+    clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+      currentPage = 1;
+      renderJobs();
+    }, 150);
+  }
+
+  if (heroSearchRole) {
+    heroSearchRole.addEventListener("input", (e) => {
+      handleLiveSearch(e.target.value, heroSearchRole);
+    });
+    heroSearchRole.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        executeJobSearch(true);
+      }
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      handleLiveSearch(e.target.value, searchInput);
+    });
+    searchInput.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        executeJobSearch(true);
+      }
+    });
+  }
+
+  if (heroClearRole) {
+    heroClearRole.addEventListener("click", () => {
+      handleLiveSearch("", null);
+    });
+  }
+
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener("click", () => {
+      handleLiveSearch("", null);
+    });
+  }
+
+  const emptyClearBtn = document.getElementById("empty-clear-search-btn");
+  if (emptyClearBtn) {
+    emptyClearBtn.addEventListener("click", () => {
+      handleLiveSearch("", null);
+    });
+  }
+
+  const emptyExpandBtn = document.getElementById("empty-expand-freshness-btn");
+  if (emptyExpandBtn) {
+    emptyExpandBtn.addEventListener("click", () => {
+      currentFilter.maxAgeHours = 9999;
+      if (heroSearchFreshness) heroSearchFreshness.value = "9999";
+      if (freshnessSelect) freshnessSelect.value = "9999";
+      currentPage = 1;
+      renderJobs();
+      showToast("⏱️ Expanded time window to Anytime (All Jobs)!");
+    });
+  }
 
   tierSelect.addEventListener("change", (e) => {
     currentFilter.tier = e.target.value;
@@ -867,7 +1029,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroSearchLocation) heroSearchLocation.value = "all";
     if (heroSearchFreshness) heroSearchFreshness.value = "48";
     if (locationSelect) locationSelect.value = "all";
-    searchInput.value = "";
+    if (searchInput) searchInput.value = "";
     currentFilter.search = "";
     currentFilter.tier = "all";
     currentFilter.location = "all";
@@ -875,13 +1037,13 @@ document.addEventListener("DOMContentLoaded", () => {
     currentFilter.minScore = 0.60;
     currentFilter.sortBy = "latest";
     currentFilter.maxAgeHours = 48;
-    scoreSlider.value = 60;
-    scoreSliderVal.textContent = "60%";
-    sortSelect.value = "latest";
-    tierSelect.value = "all";
+    if (scoreSlider) scoreSlider.value = 60;
+    if (scoreSliderVal) scoreSliderVal.textContent = "60%";
+    if (sortSelect) sortSelect.value = "latest";
+    if (tierSelect) tierSelect.value = "all";
     if (freshnessSelect) freshnessSelect.value = "48";
     if (sourceSelect) sourceSelect.value = "all";
-    clearSearchBtn.style.display = "none";
+    if (clearSearchBtn) clearSearchBtn.style.display = "none";
     if (heroClearRole) heroClearRole.style.display = "none";
     updateChipSelection("all");
     document.querySelectorAll(".quick-pill").forEach(p => p.classList.remove("active"));
@@ -893,8 +1055,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (freshnessSelect) {
     freshnessSelect.addEventListener("change", (e) => {
-      currentFilter.maxAgeHours = parseInt(e.target.value, 10);
-      if (heroSearchFreshness) heroSearchFreshness.value = e.target.value;
+      const val = e.target.value;
+      currentFilter.maxAgeHours = (val === "any" || val === "9999") ? 9999 : (parseInt(val, 10) || 48);
+      if (heroSearchFreshness) heroSearchFreshness.value = val;
       currentPage = 1;
       renderJobs();
     });
@@ -918,13 +1081,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // 1. Sync from hero search controls
     if (heroSearchRole) currentFilter.search = heroSearchRole.value.trim();
     if (heroSearchLocation) currentFilter.location = heroSearchLocation.value;
-    if (heroSearchFreshness) currentFilter.maxAgeHours = parseInt(heroSearchFreshness.value, 10) || 48;
+    if (heroSearchFreshness) {
+      const freshVal = heroSearchFreshness.value;
+      currentFilter.maxAgeHours = (freshVal === "any" || freshVal === "9999") ? 9999 : (parseInt(freshVal, 10) || 48);
+    }
 
     // 2. Sync secondary toolbar inputs
     if (searchInput) searchInput.value = currentFilter.search;
     if (clearSearchBtn) clearSearchBtn.style.display = currentFilter.search ? "block" : "none";
     if (locationSelect) locationSelect.value = currentFilter.location;
-    if (freshnessSelect) freshnessSelect.value = String(currentFilter.maxAgeHours);
+    if (freshnessSelect) freshnessSelect.value = heroSearchFreshness ? heroSearchFreshness.value : String(currentFilter.maxAgeHours);
 
     // 3. Button visual interaction
     if (feedback && heroSearchBtnText && heroSearchBtnIcon) {
@@ -956,38 +1122,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 40);
 
     if (feedback) {
-      const filteredCount = jobs.filter(j => {
-        const f = getJobFreshness(j);
-        return f.hours <= currentFilter.maxAgeHours && (j.score || 0.8) >= currentFilter.minScore;
-      }).length;
-      showToast(`🎯 Showing ${filteredCount} valid jobs in India!`);
+      const bannerCount = document.getElementById("banner-job-count");
+      const totalCount = bannerCount ? bannerCount.textContent : "0";
+      showToast(`🎯 Found ${totalCount} valid jobs matching your search!`);
     }
   }
 
   if (btnHeroJobSearch) {
     btnHeroJobSearch.addEventListener("click", () => executeJobSearch(true));
-  }
-
-  if (heroSearchRole) {
-    heroSearchRole.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        executeJobSearch(true);
-      }
-    });
-
-    heroSearchRole.addEventListener("input", (e) => {
-      if (heroClearRole) {
-        heroClearRole.style.display = e.target.value.trim() ? "block" : "none";
-      }
-    });
-  }
-
-  if (heroClearRole) {
-    heroClearRole.addEventListener("click", () => {
-      if (heroSearchRole) heroSearchRole.value = "";
-      heroClearRole.style.display = "none";
-      executeJobSearch(false);
-    });
   }
 
   if (heroSearchLocation) {
