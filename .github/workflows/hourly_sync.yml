@@ -2,8 +2,8 @@ name: Hourly Automated Job Pipeline Sync
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs automatically every hour
-  workflow_dispatch:     # Allows manual 1-click trigger from GitHub Actions
+    - cron: '*/30 * * * *'  # Runs automatically every 30 minutes
+  workflow_dispatch:        # Allows manual 1-click trigger from GitHub Actions
 
 permissions:
   contents: write
