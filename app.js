@@ -484,16 +484,19 @@ document.addEventListener("DOMContentLoaded", () => {
       const typeLower = (job.source_type || '').toLowerCase();
 
       // Sanitize URL: never link to generic LinkedIn keyword search pages which inject sponsored reposts
-      let targetUrl = job.url || job.company_url || '#';
+      let targetUrl = job.url || job.linkedin_url || job.company_url || '#';
       if (targetUrl.includes('linkedin.com/jobs/search') || targetUrl.includes('linkedin.com/search')) {
         targetUrl = job.company_url || targetUrl;
       }
 
+      const isPost = job.is_post || typeLower.includes('post') || urlLower.includes('/posts/');
+      const isNaukri = urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri');
+      const isLinkedIn = urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin') || isPost;
+      const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || typeLower.includes('ats');
+
       let platformPill = '';
       let applyBtnText = '🏢 Apply on Official Portal ↗';
       let applyBtnClass = 'btn btn-primary btn-direct-portal';
-
-      const isPost = job.is_post || typeLower.includes('post') || urlLower.includes('/posts/');
 
       if (isPost) {
         platformPill = `<span class="source-domain-badge source-linkedin-post">👤 Individual Public Post</span>`;
@@ -501,19 +504,24 @@ document.addEventListener("DOMContentLoaded", () => {
           const authorShort = job.post_author.split('(')[0].trim();
           platformPill += ` <span class="author-badge" title="${escapeHTML(job.post_author)}">📢 By: ${escapeHTML(authorShort)}</span>`;
         }
-        applyBtnText = '🏢 Apply on Official Portal ↗';
-        applyBtnClass = 'btn btn-primary';
-      } else if (urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || typeLower.includes('ats')) {
+        applyBtnText = '💼 Apply on LinkedIn ↗';
+        applyBtnClass = 'btn btn-primary btn-linkedin';
+      } else if (isAts) {
         platformPill = `<span class="source-domain-badge source-direct">🚀 Direct ATS</span>`;
         applyBtnText = '🚀 Direct ATS Application ↗';
         applyBtnClass = 'btn btn-primary btn-direct-portal';
-      } else if (urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri')) {
+      } else if (isNaukri) {
         platformPill = `<span class="source-domain-badge source-naukri">🔷 Naukri</span>`;
-        applyBtnText = 'Apply on Naukri ↗';
+        applyBtnText = '🔷 Apply on Naukri ↗';
         applyBtnClass = 'btn btn-primary btn-naukri';
+      } else if (isLinkedIn) {
+        platformPill = `<span class="source-domain-badge source-direct">💼 LinkedIn</span>`;
+        applyBtnText = '💼 Apply on LinkedIn ↗';
+        applyBtnClass = 'btn btn-primary btn-linkedin';
       } else if (urlLower.includes('indeed.com') || domainLower.includes('indeed')) {
         platformPill = `<span class="source-domain-badge">🎯 Indeed</span>`;
-        applyBtnText = 'Apply on Indeed ↗';
+        applyBtnText = '🎯 Apply on Indeed ↗';
+        applyBtnClass = 'btn btn-primary';
       } else if (job.source_domain) {
         platformPill = `<span class="source-domain-badge source-direct">🏢 ${escapeHTML(job.source_domain)}</span>`;
         applyBtnText = `🏢 Apply on ${escapeHTML(job.company)} Portal ↗`;
@@ -527,17 +535,6 @@ document.addEventListener("DOMContentLoaded", () => {
       const applicantPill = job.applicants_count
         ? `<span class="applicant-badge">👥 ${escapeHTML(job.applicants_count)}</span>`
         : '';
-
-      // Clean title helper for deep search
-      const cleanTitle = (job.title || '')
-        .replace(/\(.*?\)/g, '')
-        .replace(/-\s*(Fresher|Campus|Early Career|0-1 Yrs|Batch\s*\d+).*/i, '')
-        .replace(/\s+/g, ' ')
-        .trim() || job.title;
-
-      const linkedinRequisitionUrl = job.linkedin_url || `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(cleanTitle + ' ' + (job.company || ''))}&location=India&f_TPR=r86400&f_E=1%2C2`;
-      const naukriSlug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-      const naukriRequisitionUrl = job.naukri_url || `https://www.naukri.com/${naukriSlug}-jobs-in-india?experience=0`;
 
       return `
         <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
@@ -589,12 +586,14 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
-            <a href="${escapeHTML(linkedinRequisitionUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" title="Open live entry-level requisitions on LinkedIn (India, Past 24 Hours, 0-1 Yrs Exp)">
-              <span>💼 Apply on LinkedIn (Past 24h) ↗</span>
+            <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Direct application link for ${escapeHTML(job.title)} at ${escapeHTML(job.company)}">
+              <span>${applyBtnText}</span>
             </a>
-            <a href="${escapeHTML(naukriRequisitionUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-naukri-link" title="Open live entry-level requisitions on Naukri (0 Years Experience)">
-              <span>🔷 Naukri (0 Exp) ↗</span>
-            </a>
+            ${job.company_url && !targetUrl.includes(job.company_url.replace(/https?:\/\/(www\.)?/, '').split('/')[0]) ? `
+              <a href="${escapeHTML(job.company_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Visit ${escapeHTML(job.company)} official careers site">
+                <span>🏢 Careers Site ↗</span>
+              </a>
+            ` : ''}
             ${job.contact_email ? `
               <a href="mailto:${escapeHTML(job.contact_email)}?subject=${encodeURIComponent(`Application for ${job.title} - Fresher/Early Career`)}&body=${encodeURIComponent(job.outreach_dm || `Hi ${job.post_author ? job.post_author.split('(')[0].trim() : 'Hiring Team'},\n\nI saw your post regarding the ${job.title} role at ${job.company}.`)}" class="btn btn-secondary" title="Email recruiter directly">
                 <span>✉️ Email</span>
@@ -611,7 +610,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and application advice">
               🔍 Details
             </button>
-            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company}\nLinkedIn: ${linkedinRequisitionUrl}\nNaukri: ${naukriRequisitionUrl}`)}" title="Copy live requisition links">
+            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company}\nApplication Link: ${targetUrl}`)}" title="Copy direct application link">
               📋
             </button>
           </div>
@@ -854,28 +853,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalStrategyAdvice.textContent = advice;
 
-    // Deep Requisition URLs
-    const cleanTitle = (job.title || '')
-      .replace(/\(.*?\)/g, '')
-      .replace(/-\s*(Fresher|Campus|Early Career|0-1 Yrs|Batch\s*\d+).*/i, '')
-      .replace(/\s+/g, ' ')
-      .trim() || job.title;
+    // Direct Application URLs
+    const modalTargetUrl = job.url || job.linkedin_url || job.company_url || '#';
+    const isModalNaukri = (modalTargetUrl.toLowerCase().includes('naukri.com') || (job.source_type || '').toLowerCase().includes('naukri'));
+    const isModalLinkedIn = (modalTargetUrl.toLowerCase().includes('linkedin.com') || (job.source_type || '').toLowerCase().includes('linkedin') || job.is_post);
 
-    const modalLinkedinUrl = job.linkedin_url || `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(cleanTitle + ' ' + (job.company || ''))}&location=India&f_TPR=r86400&f_E=1%2C2`;
-    const modalNaukriSlug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-    const modalNaukriUrl = job.naukri_url || `https://www.naukri.com/${modalNaukriSlug}-jobs-in-india?experience=0`;
-
-    modalApplyLinkedin.textContent = "💼 Apply on LinkedIn (Past 24h & Fresher) ↗";
-    modalApplyLinkedin.href = modalLinkedinUrl;
-    modalApplyLinkedin.className = "btn btn-primary btn-linkedin";
-    modalApplyLinkedin.title = `Open live entry-level requisitions for ${job.title} on LinkedIn`;
+    modalApplyLinkedin.textContent = isModalLinkedIn ? "💼 Apply on LinkedIn ↗" : (isModalNaukri ? "🔷 Apply on Naukri ↗" : "🏢 Apply on Official Portal ↗");
+    modalApplyLinkedin.href = modalTargetUrl;
+    modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalNaukri ? "btn btn-primary btn-naukri" : "btn btn-primary btn-direct-portal");
+    modalApplyLinkedin.title = `Apply directly for ${job.title} at ${job.company}`;
 
     if (modalApplyGoogle) {
-      modalApplyGoogle.textContent = "🔷 Apply on Naukri (0 Yrs Exp) ↗";
-      modalApplyGoogle.href = modalNaukriUrl;
-      modalApplyGoogle.className = "btn btn-secondary btn-naukri-link";
-      modalApplyGoogle.style.display = "inline-flex";
-      modalApplyGoogle.title = `Open live entry-level requisitions for ${job.title} on Naukri`;
+      if (isModalNaukri) {
+        modalApplyGoogle.textContent = "🔷 Apply on Naukri ↗";
+        modalApplyGoogle.href = modalTargetUrl;
+        modalApplyGoogle.className = "btn btn-primary btn-naukri";
+        modalApplyGoogle.style.display = "inline-flex";
+      } else if (job.company_url && !modalTargetUrl.includes(job.company_url.replace(/https?:\/\/(www\.)?/, '').split('/')[0])) {
+        modalApplyGoogle.textContent = `🏢 ${job.company} Careers Site ↗`;
+        modalApplyGoogle.href = job.company_url;
+        modalApplyGoogle.className = "btn btn-secondary";
+        modalApplyGoogle.style.display = "inline-flex";
+      } else {
+        modalApplyGoogle.style.display = "none";
+      }
     }
 
     if (modalApplyCompany) {
@@ -890,9 +891,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     modalCopyBtn.onclick = () => {
-      const copyText = `${job.title} at ${job.company}\nLinkedIn (Past 24h & Fresher): ${modalLinkedinUrl}\nNaukri (0 Yrs): ${modalNaukriUrl}`;
+      const copyText = `${job.title} at ${job.company}\nApplication Link: ${modalTargetUrl}`;
       navigator.clipboard.writeText(copyText).then(() => {
-        showToast("Copied LinkedIn & Naukri requisition links!");
+        showToast("Copied direct application link!");
       });
     };
 
