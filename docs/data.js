@@ -1,11 +1,11 @@
-window.JOB_MATCHER_DATA = window.JOB_DATA = {
+window.JOB_MATCHER_DATA = {
   "profile": {
     "target_level": "fresher",
     "role_mapping": [
       {
         "tier": 1,
         "priority": "Primary",
-        "badge": "🥇",
+        "badge": "\ud83e\udd47",
         "category": "Applied ML / Research",
         "weight": 1.0,
         "roles": [
@@ -31,7 +31,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       {
         "tier": 2,
         "priority": "Primary",
-        "badge": "🥈",
+        "badge": "\ud83e\udd48",
         "category": "Data Science",
         "weight": 0.96,
         "roles": [
@@ -58,7 +58,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       {
         "tier": 3,
         "priority": "Primary",
-        "badge": "🥉",
+        "badge": "\ud83e\udd49",
         "category": "Decision Science",
         "weight": 0.92,
         "roles": [
@@ -82,7 +82,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       {
         "tier": 4,
         "priority": "Primary",
-        "badge": "🏅",
+        "badge": "\ud83c\udfc5",
         "category": "OR / Optimization",
         "weight": 0.9,
         "roles": [
@@ -446,8 +446,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       ]
     },
     "freshness": {
-      "max_age_hours": 24,
-      "max_display_age_hours": 72,
+      "max_age_hours": 48,
+      "max_display_age_hours": 48,
       "exclude_stale_jobs": true,
       "filter_param_naukri_days": 1,
       "filter_param_linkedin_tpr": "r86400",
@@ -468,822 +468,1889 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   },
   "jobs": [
     {
-      "title": "Applied Scientist Intern (GenAI & Recommendations)",
-      "company": "Flipkart",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+AI+Agent+%26+LLM+Engineer+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+AI+Agent+%26+LLM+Engineer+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-ai-agent-llm-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.sarvam.ai",
+      "title": "Junior AI Agent & LLM Engineer",
+      "company": "Sarvam AI",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 2,
-      "posted_at": "2026-10-21 12:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)",
-      "contact_email": "applied-scientist@flipkart.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Flipkart%22%20%22Applied%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
-      "company_url": "https://www.flipkartcareers.com/",
-      "score": 0.98,
-      "tier": 1,
-      "priority": "Primary",
-      "badge": "🥇",
-      "category": "Applied ML / Research",
-      "is_fresher": true,
-      "matched_skills": [
-        "pytorch",
-        "deep_learning",
-        "transformers",
-        "vector_search"
-      ],
-      "missing_skills": [
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Flipkart's Applied Scientist Intern (GenAI & Recommendations): Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "title": "Associate Product Manager (APM - 2025/2026 Batch)",
-      "company": "Swiggy",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 2,
-      "posted_at": "2026-10-20 21:20",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Priya Sharma (Principal PM, Consumer Marketplace @ Swiggy)",
-      "contact_email": "apm-hiring@swiggy.in",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Swiggy%22%20%22APM%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in.",
-      "company_url": "https://careers.swiggy.com/",
-      "score": 0.968,
-      "tier": 5,
-      "priority": "Primary",
-      "badge": "5",
-      "category": "Product",
-      "is_fresher": true,
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Swiggy's Associate Product Manager (APM - 2025/2026 Batch): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Microsoft+Applied+ML+Research+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "AI / Applied ML Research Intern",
-      "company": "Microsoft",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.93,
-      "tier": 1,
-      "category": "Applied ML / Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 19:54",
-      "hours_ago": 2,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.microsoft.com/v2/global/en/home.html",
-      "matched_skills": [
-        "pytorch",
-        "deep_learning"
-      ],
-      "missing_skills": [
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "Microsoft Research India in Bengaluru is hiring an Applied ML Research Intern. Work on state-of-the-art deep learning, LLM fine-tuning, PyTorch implementations, and novel AI architectures. 0 years experience required (open to final year students and 2025/2026 fresh graduates).",
-      "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Microsoft's AI / Applied ML Research Intern: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=PhonePe+Associate+Data+Scientist&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate Data Scientist (Fresher Batch 2025/2026)",
-      "company": "PhonePe",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.916,
+      "score": 1.0,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 19:54",
-      "hours_ago": 2,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-23 00:38",
+      "hours_ago": 0.08,
+      "relative_time": "5 minutes ago",
+      "source_type": "Direct ATS",
+      "source_domain": "sarvam.ai",
       "is_fresher": true,
-      "company_url": "https://www.phonepe.com/careers/",
       "matched_skills": [
         "python",
-        "sql"
+        "pytorch"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "PhonePe is hiring an Associate Data Scientist for their user intelligence and payment analytics team in Bengaluru. Build statistical predictive models, evaluate transactional risk indicators, and write high-performance SQL and Python scripts. 0-1 year experience / campus freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For PhonePe's Associate Data Scientist (Fresher Batch 2025/2026): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "missing_skills": [],
+      "description": "Sarvam AI Bengaluru just posted an opening for a Junior AI Agent & LLM Engineer (0-1 yrs exp / 2025-2026 freshers). Build autonomous LLM workflows, Indic RAG systems, and tool-augmented agents using Python, PyTorch, and LangChain.",
+      "raw_description": "Sarvam AI Bengaluru just posted an opening for a Junior AI Agent & LLM Engineer (0-1 yrs exp / 2025-2026 freshers). Build autonomous LLM workflows, Indic RAG systems, and tool-augmented agents using Python, PyTorch, and LangChain.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "title": "Data Scientist",
-      "company": "India's Future Investors - Money Entertainment Reality Show",
-      "location": "India (Remote)",
-      "score": 0.94,
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Applied+Scientist+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Applied+Scientist+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-applied-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.flipkartcareers.com",
+      "title": "Associate Applied Scientist (GenAI & Recommendations)",
+      "company": "Flipkart",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "hours_ago": 17,
-      "relative_time": "17 hours ago",
-      "posted_at": "2026-10-20 23:48",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-23 00:28",
+      "hours_ago": 0.25,
+      "relative_time": "15 minutes ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "flipkartcareers.com",
       "is_fresher": true,
-      "is_remote": true,
-      "applicants_count": "Over 100 applicants",
-      "url": "https://www.linkedin.com/jobs/search/?keywords=%22India%27s+Future+Investors%22+%22Data+Scientist%22&location=India&f_TPR=r86400&sortBy=DD",
-      "company_url": "https://www.linkedin.com/search/results/content/?keywords=%22India%27s+Future+Investors%22+%22Data+Scientist%22",
+      "matched_skills": [
+        "python",
+        "pytorch",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Flipkart Bengaluru is hiring an Associate Applied Scientist for e-commerce search, ranking, and generative AI recommendations. 0-1 years experience, Python, PyTorch, machine learning modeling.",
+      "raw_description": "Flipkart Bengaluru is hiring an Associate Applied Scientist for e-commerce search, ranking, and generative AI recommendations. 0-1 years experience, Python, PyTorch, machine learning modeling.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-scientist-i-jobs-in-india?experience=0",
+      "company_url": "https://careers.swiggy.com",
+      "title": "Data Scientist I (Analytics & Personalization - Fresher)",
+      "company": "Swiggy",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-23 00:13",
+      "hours_ago": 0.5,
+      "relative_time": "30 minutes ago",
+      "source_type": "Direct ATS",
+      "source_domain": "swiggy.com",
+      "is_fresher": true,
       "matched_skills": [
         "python",
         "sql",
-        "statistics",
-        "predictive_modeling",
         "machine_learning"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "India's Future Investors (Money Entertainment Reality Show) is hiring a remote Data Scientist in India. Over 100 applicants have applied. Model contestant performance, analyze viewer engagement telemetry, build audience prediction models, and perform financial behavior segmentation. 0-1 years experience / early career data scientists eligible.",
-      "raw_description": "India's Future Investors - Money Entertainment Reality Show\nData Scientist\nIndia · 17 hours ago · Over 100 applicants\nPromoted by hirer · Remote · Full-time\nLooking for an analytical Data Scientist to model entertainment viewership metrics, algorithmic audience scoring, and contestant engagement predictors.",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Semantic Fit",
-        "gap_percentage": "6% Gap to Bridge",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimental Modeling",
-            "action": "Implement DoWhy / EconML to measure causal viewer retention driven by specific episodic financial challenges."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Calculate sample sizes and minimum detectable effects for episode title & thumbnail engagement tests."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Data Pipelines",
-            "action": "Engineer time-series drop-off velocity features with SMOTE/class weights for sparse voting conversion events."
-          }
-        ],
-        "bridge_roadmap": "For India's Future Investors (Money Entertainment Reality Show): Build an end-to-end viewer retention prediction notebook with survival analysis (lifelines) and XGBoost on synthetic media streaming data, including an interactive Streamlit dashboard.",
-        "interview_talk_track": "While reality entertainment telemetry exhibits extreme audience skew, I account for this by training calibrated probabilistic models (gradient boosting with survival loss) and validating against holdout episodes to avoid overfitting."
-      }
+      "missing_skills": [],
+      "description": "Swiggy Bengaluru is actively looking for a Data Scientist I (Early Career / Fresher). Work on delivery ETA prediction, demand surge algorithms, SQL pipelines, and machine learning models in Python.",
+      "raw_description": "Swiggy Bengaluru is actively looking for a Data Scientist I (Early Career / Fresher). Work on delivery ETA prediction, demand surge algorithms, SQL pipelines, and machine learning models in Python.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Observe.AI+Applied+AI+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Analyst+-+Risk+%26+Merchant+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Analyst+-+Risk+%26+Merchant+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-science-analyst-risk-merchant-underwriting-jobs-in-india?experience=0",
+      "company_url": "https://razorpay.com",
+      "title": "Data Science Analyst - Risk & Merchant Underwriting",
+      "company": "Razorpay",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-21 02:43",
+      "hours_ago": 46.0,
+      "relative_time": "2 days ago",
+      "source_type": "Direct ATS",
+      "source_domain": "razorpay.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Razorpay Bengaluru is hiring a Data Science Analyst. Evaluate merchant transaction risk models, write high-performance SQL queries, and implement machine learning classifiers in Python.",
+      "raw_description": "Razorpay Bengaluru is hiring a Data Science Analyst. Evaluate merchant transaction risk models, write high-performance SQL queries, and implement machine learning classifiers in Python.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI+Agent+Engineer+Observe.AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Agent+Engineer+Observe.AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ai-agent-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.observe.ai/careers",
       "title": "AI Agent Engineer (Applied AI / LLM Systems)",
       "company": "Observe.AI",
       "location": "Hyderabad, Telangana, India",
-      "score": 0.85,
-      "tier": 1,
-      "category": "Applied ML / Research",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 19:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 22:43",
       "hours_ago": 2,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "relative_time": "2 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "observe.ai",
       "is_fresher": true,
-      "company_url": "https://www.observe.ai/careers",
       "matched_skills": [
         "python"
       ],
-      "missing_skills": [
-        "PyTorch Distributed Training & PEFT",
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
+      "missing_skills": [],
       "description": "Observe.AI Hyderabad is hiring an AI Agent Engineer to design, deploy, and optimize autonomous LLM agents, prompt engineering, RAG pipelines, and conversational AI integrations. Hands-on delivery with Python, LangChain, API integrations, and vector databases. 0 years experience / early career welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "PyTorch Distributed Training & PEFT",
-            "impact": "High Impact",
-            "category": "Deep Learning",
-            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
-          },
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Observe.AI's AI Agent Engineer (Applied AI / LLM Systems): Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
+      "raw_description": "Observe.AI Hyderabad is hiring an AI Agent Engineer to design, deploy, and optimize autonomous LLM agents, prompt engineering, RAG pipelines, and conversational AI integrations. Hands-on delivery with Python, LangChain, API integrations, and vector databases. 0 years experience / early career welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Flipkart+Demand+Forecasting+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Demand Forecasting & Inventory Analyst",
-      "company": "Flipkart",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.phonepe.com/careers/",
+      "title": "Associate Data Scientist (Fresher Batch 2025/2026)",
+      "company": "PhonePe",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.794,
-      "tier": 7,
-      "category": "Forecasting",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 19:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 22:43",
       "hours_ago": 2,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "relative_time": "2 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "phonepe.com",
       "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "PhonePe is hiring an Associate Data Scientist for their user intelligence and payment analytics team in Bengaluru. Build statistical predictive models, evaluate transactional risk indicators, and write high-performance SQL and Python scripts. 0-1 year experience / campus freshers welcome.",
+      "raw_description": "PhonePe is hiring an Associate Data Scientist for their user intelligence and payment analytics team in Bengaluru. Build statistical predictive models, evaluate transactional risk indicators, and write high-performance SQL and Python scripts. 0-1 year experience / campus freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Mu+Sigma&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Mu+Sigma&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/fresher-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.mu-sigma.com/careers",
+      "title": "Fresher Data Scientist (0-1 Yrs)",
+      "company": "Mu Sigma",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "mu-sigma.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "problem_solving"
+      ],
+      "missing_skills": [],
+      "description": "Mu Sigma is actively hiring Fresher Data Scientists (Trainee Decision Scientists) in Bengaluru. 0 to 1 years experience. Work with Python, SQL, exploratory data analysis, predictive statistical modeling, and business problem solving.",
+      "raw_description": "Mu Sigma is actively hiring Fresher Data Scientists (Trainee Decision Scientists) in Bengaluru. 0 to 1 years experience. Work with Python, SQL, exploratory data analysis, predictive statistical modeling, and business problem solving.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-scientist-i-jobs-in-india?experience=0",
+      "company_url": "https://www.meesho.io/jobs",
+      "title": "Data Scientist I (Catalog & Search Analytics)",
+      "company": "Meesho",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "meesho.io",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "experimentation"
+      ],
+      "missing_skills": [],
+      "description": "Meesho Bengaluru is hiring a Data Scientist I. Optimize catalog classification, visual search ranking, price elasticity modeling, and experimentation pipelines using Python and SQL. Freshers welcome.",
+      "raw_description": "Meesho Bengaluru is hiring a Data Scientist I. Optimize catalog classification, visual search ranking, price elasticity modeling, and experimentation pipelines using Python and SQL. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Fractal+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Fractal+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/decision-science-analyst-jobs-in-india?experience=0",
+      "company_url": "https://fractal.ai/careers/",
+      "title": "Decision Science Analyst (Campus / Fresher)",
+      "company": "Fractal Analytics",
+      "location": "Mumbai / Gurugram, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "fractal.ai",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "experimentation"
+      ],
+      "missing_skills": [],
+      "description": "Fractal Analytics is hiring Decision Science Analysts across Mumbai and Gurugram. Leverage decision trees, statistical hypothesis testing, A/B testing experimentation, and Python/SQL to drive enterprise decision making. 0 years experience required.",
+      "raw_description": "Fractal Analytics is hiring Decision Science Analysts across Mumbai and Gurugram. Leverage decision trees, statistical hypothesis testing, A/B testing experimentation, and Python/SQL to drive enterprise decision making. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Tredence&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Tredence&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/decision-science-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.tredence.com/careers",
+      "title": "Decision Science Analyst (Campus)",
+      "company": "Tredence",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "tredence.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Tredence Bengaluru is hiring a Decision Science Analyst. Work with CPG and retail clients on causal impact analysis, statistical tests, Python, and SQL dashboards. Freshers welcome.",
+      "raw_description": "Tredence Bengaluru is hiring a Decision Science Analyst. Work with CPG and retail clients on causal impact analysis, statistical tests, Python, and SQL dashboards. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+Ugam+%28A+Merkle+Company%29&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+Ugam+%28A+Merkle+Company%29&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-decision-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.ugamsolutions.com/careers",
+      "title": "Associate Decision Scientist",
+      "company": "Ugam (A Merkle Company)",
+      "location": "Mumbai / Bengaluru, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 15:43",
+      "hours_ago": 9,
+      "relative_time": "9 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "ugamsolutions.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Ugam is hiring Associate Decision Scientists across Mumbai and Bengaluru. Conduct exploratory analysis, decision modeling, A/B testing evaluation, and write Python/SQL queries. 0-1 year experience.",
+      "raw_description": "Ugam is hiring Associate Decision Scientists across Mumbai and Bengaluru. Conduct exploratory analysis, decision modeling, A/B testing evaluation, and write Python/SQL queries. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Software+%26+Procurement+Analyst+Intern+Thoughtworks&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Software+%26+Procurement+Analyst+Intern+Thoughtworks&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/software-procurement-analyst-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.thoughtworks.com/en-in/careers/jobs",
+      "title": "Software & Procurement Analyst Intern (Operations Optimization)",
+      "company": "Thoughtworks",
+      "location": "Gurgaon / Pune, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "thoughtworks.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "excel",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship).",
+      "raw_description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Network+Capacity+%26+OR+Analyst+Flipkart+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Network+Capacity+%26+OR+Analyst+Flipkart+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/network-capacity-or-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.flipkartcareers.com/",
+      "title": "Network Capacity & OR Analyst",
+      "company": "Flipkart Logistics",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "flipkartcareers.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python"
+      ],
+      "missing_skills": [],
+      "description": "Flipkart Supply Chain Design is hiring a Network Capacity & OR Analyst. Work on fulfillment center capacity modeling, linehaul routing, and mathematical programming in Python. Early career / freshers welcome.",
+      "raw_description": "Flipkart Supply Chain Design is hiring a Network Capacity & OR Analyst. Work on fulfillment center capacity modeling, linehaul routing, and mathematical programming in Python. Early career / freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=ML+Engineer+-+Battery+Intelligence+%26+Telemetry+Ather+Energy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=ML+Engineer+-+Battery+Intelligence+%26+Telemetry+Ather+Energy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ml-engineer-battery-intelligence-telemetry-jobs-in-india?experience=0",
+      "company_url": "https://www.atherenergy.com/careers",
+      "title": "ML Engineer - Battery Intelligence & Telemetry",
+      "company": "Ather Energy",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 15:43",
+      "hours_ago": 9,
+      "relative_time": "9 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "atherenergy.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python"
+      ],
+      "missing_skills": [],
+      "description": "Ather Energy Bengaluru is hiring a Junior ML Engineer. Analyze EV battery telemetry streams, build remaining useful life (RUL) models, and deploy Python inference endpoints. 0-1 year experience.",
+      "raw_description": "Ather Energy Bengaluru is hiring a Junior ML Engineer. Analyze EV battery telemetry streams, build remaining useful life (RUL) models, and deploy Python inference endpoints. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+%26+Predictive+Analytics+Trainee+ITC+Infotech&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+%26+Predictive+Analytics+Trainee+ITC+Infotech&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/time-series-predictive-analytics-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.itcinfotech.com/careers/",
+      "title": "Time Series & Predictive Analytics Trainee",
+      "company": "ITC Infotech",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "itcinfotech.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "pandas",
+        "time_series",
+        "forecasting"
+      ],
+      "missing_skills": [],
+      "description": "ITC Infotech is hiring a Time Series & Predictive Analytics Trainee in Bengaluru. Build retail demand forecasting models, seasonal decomposition, Python pandas pipelines, and SQL reports. 0-1 year experience.",
+      "raw_description": "ITC Infotech is hiring a Time Series & Predictive Analytics Trainee in Bengaluru. Build retail demand forecasting models, seasonal decomposition, Python pandas pipelines, and SQL reports. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineer+Intern+-+Data+Platform+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineer+Intern+-+Data+Platform+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/software-engineer-intern-data-platform-jobs-in-india?experience=0",
+      "company_url": "https://stripe.com/jobs/search?locations=India",
+      "title": "Software Engineer Intern - Data Platform",
+      "company": "Stripe",
+      "location": "Bengaluru, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "stripe.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity for university students to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL. 0 years experience required.",
+      "raw_description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity for university students to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Streaming+Data+Platform+Trainee+Confluent&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Streaming+Data+Platform+Trainee+Confluent&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/streaming-data-platform-trainee-jobs-in-india?experience=0",
+      "company_url": "https://careers.confluent.io/",
+      "title": "Streaming Data Platform Trainee (Kafka/Flink)",
+      "company": "Confluent",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 15:43",
+      "hours_ago": 9,
+      "relative_time": "9 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.confluent.io",
+      "is_fresher": true,
+      "matched_skills": [
+        "python"
+      ],
+      "missing_skills": [],
+      "description": "Confluent Bengaluru is hiring a Data Platform Trainee. Focus on event streaming architectures, Apache Kafka pipelines, real-time transformations in Flink, and Python integrations. Freshers welcome.",
+      "raw_description": "Confluent Bengaluru is hiring a Data Platform Trainee. Focus on event streaming architectures, Apache Kafka pipelines, real-time transformations in Flink, and Python integrations. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=University+Grad+Associate+Solutions+Engineer+Databricks&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=University+Grad+Associate+Solutions+Engineer+Databricks&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/university-grad-associate-solutions-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.databricks.com/company/careers",
+      "title": "University Grad Associate Solutions Engineer (Data/AI)",
+      "company": "Databricks",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 14:43",
+      "hours_ago": 10,
+      "relative_time": "10 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "databricks.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Databricks India is hiring University Grad Associate Solutions Engineers. Help customers architect Lakehouse solutions using Apache Spark, Delta Lake, MLflow, and Python/SQL. Campus freshers welcome.",
+      "raw_description": "Databricks India is hiring University Grad Associate Solutions Engineers. Help customers architect Lakehouse solutions using Apache Spark, Delta Lake, MLflow, and Python/SQL. Campus freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineering+Intern+-+Big+Data+Platform+Cloudera&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineering+Intern+-+Big+Data+Platform+Cloudera&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/software-engineering-intern-big-data-platform-jobs-in-india?experience=0",
+      "company_url": "https://www.cloudera.com/about/careers.html",
+      "title": "Software Engineering Intern - Big Data Platform",
+      "company": "Cloudera",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 13:43",
+      "hours_ago": 11,
+      "relative_time": "11 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "cloudera.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python"
+      ],
+      "missing_skills": [],
+      "description": "Cloudera Bengaluru is hiring a Software Engineering Intern for their Big Data platform. Work on distributed storage systems, Hive metastore, Spark optimizations, and Python telemetry scripts. 0 years experience required.",
+      "raw_description": "Cloudera Bengaluru is hiring a Software Engineering Intern for their Big Data platform. Work on distributed storage systems, Hive metastore, Spark optimizations, and Python telemetry scripts. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/fresher-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.meesho.io/careers",
+      "title": "Fresher Data Scientist (Marketplace & Pricing)",
+      "company": "Meesho",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 1.0,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "meesho.io",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "pandas"
+      ],
+      "missing_skills": [],
+      "description": "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com.",
+      "raw_description": "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com.",
+      "contact_email": "analytics-hiring@meesho.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Vikramaditya Iyer (Director of Analytics @ Meesho)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/decision-science-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.meesho.io",
+      "title": "Decision Science Analyst (Pricing & Logistics)",
+      "company": "Meesho",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 23:58",
+      "hours_ago": 0.75,
+      "relative_time": "45 minutes ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "meesho.io",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Meesho Bengaluru is hiring a Decision Science Analyst. Perform econometric modeling, price elasticity analysis, regression analysis, SQL querying, and experiment design with 0-1 year experience.",
+      "raw_description": "Meesho Bengaluru is hiring a Decision Science Analyst. Perform econometric modeling, price elasticity analysis, regression analysis, SQL querying, and experiment design with 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fraud+Operations+Associate+SDC+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fraud+Operations+Associate+SDC+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/fraud-operations-associate-sdc-jobs-in-india?experience=0",
+      "company_url": "https://stripe.com/jobs/search?locations=India",
+      "title": "Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment)",
+      "company": "Stripe",
+      "location": "Bengaluru, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "stripe.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required.",
+      "raw_description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+Walmart+Global+Tech&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+Walmart+Global+Tech&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://careers.walmart.com/",
+      "title": "Associate Data Scientist (Early Career)",
+      "company": "Walmart Global Tech",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.walmart.com",
+      "is_fresher": true,
       "matched_skills": [
         "sql",
-        "time_series",
-        "forecasting",
-        "arima",
-        "prophet",
-        "xgboost"
+        "machine_learning"
       ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "Flipkart Supply Chain Analytics is hiring a Demand Forecasting Analyst in Bengaluru. Build time series models (ARIMA, Prophet, XGBoost), analyze demand seasonality, write SQL queries, and optimize safety stock parameters. Freshers and 0-1 year graduates welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "79% Core Match",
-        "gap_percentage": "21% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Flipkart's Demand Forecasting & Inventory Analyst: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
+      "missing_skills": [],
+      "description": "Walmart Global Tech India is hiring an Associate Data Scientist in Bengaluru. Apply statistical modeling, machine learning algorithms, A/B testing, and Big Data queries (Spark, SQL) to e-commerce customer behavior. 0-1 year experience.",
+      "raw_description": "Walmart Global Tech India is hiring an Associate Data Scientist in Bengaluru. Apply statistical modeling, machine learning algorithms, A/B testing, and Big Data queries (Spark, SQL) to e-commerce customer behavior. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Target+India&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Target+India&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://corporate.target.com/careers",
+      "title": "Data Scientist - Fresher / Campus",
+      "company": "Target India",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "corporate.target.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Target India Bengaluru is hiring a Fresher Data Scientist. Build predictive models, customer segmentation, recommendation systems, and SQL feature stores. 0 to 1 years experience welcome.",
+      "raw_description": "Target India Bengaluru is hiring a Fresher Data Scientist. Build predictive models, customer segmentation, recommendation systems, and SQL feature stores. 0 to 1 years experience welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Risk+%26+Fraud+Data+Scientist+PayPal&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Risk+%26+Fraud+Data+Scientist+PayPal&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/risk-fraud-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://careers.pypl.com/",
+      "title": "Risk & Fraud Data Scientist (Fresher)",
+      "company": "PayPal",
+      "location": "Chennai / Bengaluru, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.pypl.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "PayPal India is hiring a Fresher Data Scientist in Chennai/Bengaluru. Focus on transaction risk modeling, behavioral biometrics, unsupervised anomaly detection, and SQL analytics. 0-1 year experience.",
+      "raw_description": "PayPal India is hiring a Fresher Data Scientist in Chennai/Bengaluru. Focus on transaction risk modeling, behavioral biometrics, unsupervised anomaly detection, and SQL analytics. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Quantitative+Decision+Analyst+-+Trainee+EXL+Service&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Quantitative+Decision+Analyst+-+Trainee+EXL+Service&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/quantitative-decision-analyst-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.exlservice.com/careers",
+      "title": "Quantitative Decision Analyst - Trainee",
+      "company": "EXL Service",
+      "location": "Noida / Gurugram, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "exlservice.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "excel"
+      ],
+      "missing_skills": [],
+      "description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct decision science modeling, statistical hypothesis testing, regression analysis, SQL queries, and KPI reporting in Advanced Excel.",
+      "raw_description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct decision science modeling, statistical hypothesis testing, regression analysis, SQL queries, and KPI reporting in Advanced Excel.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Decision+Analyst+McKinsey+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Decision+Analyst+McKinsey+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-decision-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.mckinsey.com/careers",
+      "title": "Junior Decision Analyst (QuantumBlack)",
+      "company": "McKinsey & Company",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "mckinsey.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "QuantumBlack, AI by McKinsey, is hiring a Junior Decision Analyst in Gurugram. Apply statistical hypothesis testing, machine learning simulations, and decision science to enterprise strategy. Entry level.",
+      "raw_description": "QuantumBlack, AI by McKinsey, is hiring a Junior Decision Analyst in Gurugram. Apply statistical hypothesis testing, machine learning simulations, and decision science to enterprise strategy. Entry level.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Advanced+Analytics+Associate+Bain+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Advanced+Analytics+Associate+Bain+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/advanced-analytics-associate-jobs-in-india?experience=0",
+      "company_url": "https://www.bain.com/careers/",
+      "title": "Advanced Analytics Associate (BCN)",
+      "company": "Bain & Company",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "bain.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Bain Capability Network (BCN) Gurugram is hiring an Advanced Analytics Associate. Focus on commercial decision analytics, regression modeling, customer lifetime value modeling, and SQL. 0-1 year experience.",
+      "raw_description": "Bain Capability Network (BCN) Gurugram is hiring an Advanced Analytics Associate. Focus on commercial decision analytics, regression modeling, customer lifetime value modeling, and SQL. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Sensing+%26+Forecasting+Associate+Reliance+Retail&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Sensing+%26+Forecasting+Associate+Reliance+Retail&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/demand-sensing-forecasting-associate-jobs-in-india?experience=0",
+      "company_url": "https://www.relianceretail.com/careers",
+      "title": "Demand Sensing & Forecasting Associate",
+      "company": "Reliance Retail",
+      "location": "Mumbai, Maharashtra, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "relianceretail.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Reliance Retail Mumbai is hiring a Demand Sensing Associate. Analyze store level sales trends, promotional lift impact, exponential smoothing models, and SQL data pipelines. Fresh graduates welcome.",
+      "raw_description": "Reliance Retail Mumbai is hiring a Demand Sensing Associate. Analyze store level sales trends, promotional lift impact, exponential smoothing models, and SQL data pipelines. Fresh graduates welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
+      "company_url": "https://careers.swiggy.com/",
+      "title": "Associate Product Manager (APM Intern)",
+      "company": "Swiggy",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.swiggy.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Swiggy is hiring an Associate Product Manager Intern in Bengaluru. Drive user journey analytics, track telemetry metrics, coordinate A/B testing rollouts, and write SQL queries for product KPI dashboards. 0 years experience required (internship).",
+      "raw_description": "Swiggy is hiring an Associate Product Manager Intern in Bengaluru. Drive user journey analytics, track telemetry metrics, coordinate A/B testing rollouts, and write SQL queries for product KPI dashboards. 0 years experience required (internship).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
+      "company_url": "https://cred.club/careers",
+      "title": "Associate Product Manager (Growth & User Journeys)",
+      "company": "CRED",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "cred.club",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "CRED Bengaluru is hiring an APM for user growth and product loops. Partner with engineering and design to run experiments, evaluate conversion funnels, and write SQL queries for product KPI dashboards. Freshers welcome.",
+      "raw_description": "CRED Bengaluru is hiring an APM for user growth and product loops. Partner with engineering and design to run experiments, evaluate conversion funnels, and write SQL queries for product KPI dashboards. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+-+Dining+%26+Delivery+Telemetry+Zomato&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+-+Dining+%26+Delivery+Telemetry+Zomato&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/product-analyst-dining-delivery-telemetry-jobs-in-india?experience=0",
+      "company_url": "https://www.zomato.com/careers",
+      "title": "Product Analyst - Dining & Delivery Telemetry",
+      "company": "Zomato",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "zomato.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Zomato Gurugram is hiring a Product Analyst. Monitor cart abandonment funnels, evaluate search feature experiments, run A/B testing statistical evaluations, and write complex SQL queries. 0-1 year experience.",
+      "raw_description": "Zomato Gurugram is hiring a Product Analyst. Monitor cart abandonment funnels, evaluate search feature experiments, run A/B testing statistical evaluations, and write complex SQL queries. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product+Telemetry+%26+Gameplay+Analytics+Trainee+Dream11&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Telemetry+%26+Gameplay+Analytics+Trainee+Dream11&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/product-telemetry-gameplay-analytics-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.dreamsports.group/careers",
+      "title": "Product Telemetry & Gameplay Analytics Trainee",
+      "company": "Dream11",
+      "location": "Mumbai, Maharashtra, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "dreamsports.group",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Dream11 Mumbai is hiring a Product Telemetry Trainee. Analyze user match contest participation, churn prediction metrics, SQL event queries, and feature engagement. 0 to 1 years experience.",
+      "raw_description": "Dream11 Mumbai is hiring a Product Telemetry Trainee. Analyze user match contest participation, churn prediction metrics, SQL event queries, and feature engagement. 0 to 1 years experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product+Operations+%26+User+Analytics+Intern+Urban+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Operations+%26+User+Analytics+Intern+Urban+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/product-operations-user-analytics-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.urbancompany.com/careers",
+      "title": "Product Operations & User Analytics Intern",
+      "company": "Urban Company",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 15:43",
+      "hours_ago": 9,
+      "relative_time": "9 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "urbancompany.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Urban Company Gurugram is hiring an APM / Product Operations Intern. Design user feedback loops, monitor cancellation telemetry, write SQL queries, and track partner NPS metrics. 0 years experience required.",
+      "raw_description": "Urban Company Gurugram is hiring an APM / Product Operations Intern. Design user feedback loops, monitor cancellation telemetry, write SQL queries, and track partner NPS metrics. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Verifications+Operations+Associate+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Verifications+Operations+Associate+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/verifications-operations-associate-jobs-in-india?experience=0",
+      "company_url": "https://stripe.com/jobs/search?locations=India",
+      "title": "Verifications Operations Associate (Compliance & User Operations)",
+      "company": "Stripe",
+      "location": "Bengaluru, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "stripe.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Stripe Bengaluru is hiring a Verifications Operations Associate. Synthesize customer risk data, audit operational verification processes, and write SQL queries for tracking user compliance metrics. Early career welcome.",
+      "raw_description": "Stripe Bengaluru is hiring a Verifications Operations Associate. Synthesize customer risk data, audit operational verification processes, and write SQL queries for tracking user compliance metrics. Early career welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+City+Operations+Associate+Rapido&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+City+Operations+Associate+Rapido&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/strategy-city-operations-associate-jobs-in-india?experience=0",
+      "company_url": "https://www.rapido.bike/Careers",
+      "title": "Strategy & City Operations Associate",
+      "company": "Rapido",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "rapido.bike",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Rapido Bengaluru is hiring a Strategy & City Operations Associate. Monitor supply-demand matching ratios, captain incentive programs, ride completion rates, and SQL operational metrics. 0-1 year experience.",
+      "raw_description": "Rapido Bengaluru is hiring a Strategy & City Operations Associate. Monitor supply-demand matching ratios, captain incentive programs, ride completion rates, and SQL operational metrics. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Growth+Strategy+%26+Business+Operations+Trainee+Spinny&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Growth+Strategy+%26+Business+Operations+Trainee+Spinny&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/growth-strategy-business-operations-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.spinny.com/careers/",
+      "title": "Growth Strategy & Business Operations Trainee",
+      "company": "Spinny",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "spinny.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Spinny Gurugram is hiring a Business Operations Trainee. Track hub inventory throughput, customer test-drive conversion rates, and write SQL queries for executive KPI dashboards. Freshers welcome.",
+      "raw_description": "Spinny Gurugram is hiring a Business Operations Trainee. Track hub inventory throughput, customer test-drive conversion rates, and write SQL queries for executive KPI dashboards. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Business+Operations+%26+Analytics+Trainee+Cars24&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Business+Operations+%26+Analytics+Trainee+Cars24&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/business-operations-analytics-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.cars24.com/careers/",
+      "title": "Business Operations & Analytics Trainee",
+      "company": "Cars24",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 15:43",
+      "hours_ago": 9,
+      "relative_time": "9 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "cars24.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Cars24 Gurugram is hiring a Business Operations & Analytics Trainee. Coordinate regional vehicle procurement workflows, analyze operational turnaround times (TAT), and build SQL dashboards. 0-1 year experience.",
+      "raw_description": "Cars24 Gurugram is hiring a Business Operations & Analytics Trainee. Coordinate regional vehicle procurement workflows, analyze operational turnaround times (TAT), and build SQL dashboards. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Program+Management+%26+Fulfillment+Associate+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Program+Management+%26+Fulfillment+Associate+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/program-management-fulfillment-associate-jobs-in-india?experience=0",
+      "company_url": "https://www.meesho.io/jobs",
+      "title": "Program Management & Fulfillment Associate (Fresher)",
+      "company": "Meesho",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 14:43",
+      "hours_ago": 10,
+      "relative_time": "10 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "meesho.io",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "excel"
+      ],
+      "missing_skills": [],
+      "description": "Meesho Bengaluru is hiring a Fulfillment Program Associate. Analyze supplier dispatch reliability, logistics partner SLA tracking, and manage fulfillment analytics in SQL and Excel. Freshers welcome.",
+      "raw_description": "Meesho Bengaluru is hiring a Fulfillment Program Associate. Analyze supplier dispatch reliability, logistics partner SLA tracking, and manage fulfillment analytics in SQL and Excel. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Operations+%26+Systems+Analyst+Fivetran&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Operations+%26+Systems+Analyst+Fivetran&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-operations-systems-analyst-jobs-in-india?experience=0",
+      "company_url": "https://fivetran.com/careers",
+      "title": "Data Operations & Systems Analyst",
+      "company": "Fivetran",
+      "location": "Bengaluru, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "fivetran.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "Fivetran Bengaluru is hiring an Operations & Systems Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and analytics systems.",
+      "raw_description": "Fivetran Bengaluru is hiring an Operations & Systems Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and analytics systems.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
+      "company_url": "https://careers.swiggy.com/",
+      "title": "Associate Product Manager (APM - 2025/2026 Batch)",
+      "company": "Swiggy",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 22:43",
+      "hours_ago": 2,
+      "relative_time": "2 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in.",
+      "raw_description": "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in.",
+      "contact_email": "apm-hiring@swiggy.in",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Priya Sharma (Principal PM, Consumer Marketplace @ Swiggy)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+BizOps+Analyst+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+BizOps+Analyst+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/strategy-bizops-analyst-jobs-in-india?experience=0",
+      "company_url": "https://razorpay.com/jobs/",
+      "title": "Strategy & BizOps Analyst (Founder's Office)",
+      "company": "Razorpay",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "razorpay.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "excel"
+      ],
+      "missing_skills": [],
+      "description": "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume.",
+      "raw_description": "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume.",
+      "contact_email": "bizops-talent@razorpay.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Arjun Mehta (VP Strategy & BizOps @ Razorpay)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
+      "company_url": "https://groww.in/careers",
+      "title": "Associate Product Manager (APM - Fresher)",
+      "company": "Groww",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.996,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "groww.in",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql"
+      ],
+      "missing_skills": [],
+      "description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
+      "raw_description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
+      "contact_email": "apm-talent@groww.in",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Aakash Gupta (Head of Product @ Groww)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+-+Content+%26+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+-+Content+%26+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-content-analytics-jobs-in-india?experience=0",
+      "company_url": "https://groww.in/careers",
+      "title": "Associate - Content & Analytics (Data Transformation)",
+      "company": "Groww",
+      "location": "Bengaluru, India",
+      "score": 0.992,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "groww.in",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "excel",
+        "analytics_engineering",
+        "analytical_thinking"
+      ],
+      "missing_skills": [],
+      "description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role.",
+      "raw_description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Optimization+Engineer+Locus.sh&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Optimization+Engineer+Locus.sh&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-optimization-engineer-jobs-in-india?experience=0",
+      "company_url": "https://locus.sh",
+      "title": "Junior Optimization Engineer (Supply Chain & Routing)",
+      "company": "Locus.sh",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.989,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-21 06:43",
+      "hours_ago": 42.0,
+      "relative_time": "1 day ago",
+      "source_type": "Direct ATS",
+      "source_domain": "locus.sh",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "integer_programming",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "Locus.sh Bengaluru is hiring an Entry-Level Optimization Engineer. Develop heuristics and integer programming models for vehicle dispatch and fleet routing with Python and OR-Tools.",
+      "raw_description": "Locus.sh Bengaluru is hiring an Entry-Level Optimization Engineer. Develop heuristics and integer programming models for vehicle dispatch and fleet routing with Python and OR-Tools.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Linear+Programming+%26+Network+Optimization+Trainee+Maersk+India&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Linear+Programming+%26+Network+Optimization+Trainee+Maersk+India&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/linear-programming-network-optimization-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.maersk.com/careers",
+      "title": "Linear Programming & Network Optimization Trainee",
+      "company": "Maersk India",
+      "location": "Mumbai / Bengaluru, India",
+      "score": 0.989,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 15:43",
+      "hours_ago": 9,
+      "relative_time": "9 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "maersk.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "optimization",
+        "pulp"
+      ],
+      "missing_skills": [],
+      "description": "Maersk India is hiring an Optimization Trainee. Work on container repositioning models, terminal scheduling constraints, linear optimization, and Python PuLP/SciPy. 0-1 year experience.",
+      "raw_description": "Maersk India is hiring an Optimization Trainee. Work on container repositioning models, terminal scheduling constraints, linear optimization, and Python PuLP/SciPy. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/fresher-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.phonepe.com/careers/",
       "title": "Fresher Data Scientist (Experimentation & Analytics)",
       "company": "PhonePe",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3,
-      "posted_at": "2026-10-20 20:20",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Ananya Sen (Director of Data Science @ PhonePe)",
-      "contact_email": "ds-careers@phonepe.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22PhonePe%22%20%22Data%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
-      "company_url": "https://www.phonepe.com/careers/",
       "score": 0.989,
       "tier": 2,
-      "priority": "Primary",
-      "badge": "🥈",
       "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "phonepe.com",
       "is_fresher": true,
       "matched_skills": [
         "python",
         "sql",
         "causal_inference"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For PhonePe's Fresher Data Scientist (Experimentation & Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "raw_description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
+      "contact_email": "ds-careers@phonepe.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Ananya Sen (Director of Data Science @ PhonePe)"
     },
     {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-decision-scientist-jobs-in-india?experience=0",
+      "company_url": "https://careers.cred.club/",
       "title": "Associate Decision Scientist (Risk & Growth)",
       "company": "CRED",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3,
-      "posted_at": "2026-10-21 11:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Tanvi Agarwal (Senior Decision Scientist @ CRED)",
-      "contact_email": "decisionscience@cred.club",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22CRED%22%20%22Decision%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
-      "company_url": "https://careers.cred.club/",
-      "score": 0.95,
-      "tier": 3,
+      "score": 0.989,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥉",
-      "category": "Decision Science",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "cred.club",
       "is_fresher": true,
       "matched_skills": [
-        "statistical_modeling",
-        "ab_testing",
-        "hypothesis_testing",
-        "sql"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing",
-        "Quasi-Experimentation & Synthetic Controls"
-      ],
-      "description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          },
-          {
-            "skill": "Quasi-Experimentation & Synthetic Controls",
-            "impact": "Medium Impact",
-            "category": "Analytics",
-            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
-          }
-        ],
-        "bridge_roadmap": "For CRED's Associate Decision Scientist (Risk & Growth): Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
-    },
-    {
-      "title": "Associate Product Manager (APM - Fresher)",
-      "company": "Groww",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3,
-      "posted_at": "2026-10-21 11:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Aakash Gupta (Head of Product @ Groww)",
-      "contact_email": "apm-talent@groww.in",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Groww%22%20%22APM%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
-      "company_url": "https://groww.in/careers",
-      "score": 0.945,
-      "tier": 5,
-      "priority": "Primary",
-      "badge": "5",
-      "category": "Product",
-      "is_fresher": true,
-      "matched_skills": [
-        "product_analytics",
         "sql",
-        "telemetry",
-        "problem_solving"
+        "excel",
+        "experimentation"
       ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Groww's Associate Product Manager (APM - Fresher): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
+      "missing_skills": [],
+      "description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
+      "raw_description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
+      "contact_email": "decisionscience@cred.club",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Tanvi Agarwal (Senior Decision Scientist @ CRED)"
     },
     {
-      "title": "Strategy & BizOps Analyst (Founder's Office)",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/operations-research-analyst-network-optimization-jobs-in-india?experience=0",
+      "company_url": "https://www.delhivery.com",
+      "title": "Operations Research Analyst - Network Optimization",
+      "company": "Delhivery",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.988,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 23:43",
+      "hours_ago": 1.0,
+      "relative_time": "1 hour ago",
+      "source_type": "Direct ATS",
+      "source_domain": "delhivery.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "linear_programming",
+        "optimization",
+        "pulp"
+      ],
+      "missing_skills": [],
+      "description": "Delhivery Gurugram is hiring an OR Analyst. Formulate linear programming models, route scheduling optimization, PuLP/CPLEX solvers, and constraint programming with Python and SQL.",
+      "raw_description": "Delhivery Gurugram is hiring an OR Analyst. Formulate linear programming models, route scheduling optimization, PuLP/CPLEX solvers, and constraint programming with Python and SQL.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Scientist+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Scientist+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://razorpay.com/jobs/",
+      "title": "Junior Data Scientist (Merchant Risk Analytics)",
       "company": "Razorpay",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3,
-      "posted_at": "2026-10-20 20:20",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Arjun Mehta (VP Strategy & BizOps @ Razorpay)",
-      "contact_email": "bizops-talent@razorpay.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Razorpay%22%20%22BizOps%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume.",
-      "company_url": "https://razorpay.com/jobs/",
-      "score": 0.931,
-      "tier": 6,
+      "score": 0.986,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "6",
-      "category": "Strategy / Programs",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "razorpay.com",
       "is_fresher": true,
       "matched_skills": [
         "sql",
-        "excel"
+        "xgboost"
       ],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume.",
-      "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Razorpay's Strategy & BizOps Analyst (Founder's Office): Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
+      "missing_skills": [],
+      "description": "Razorpay Risk & Fraud Analytics is hiring a Junior Data Scientist. Work on payment anomaly detection, credit risk scoring, gradient boosting models (XGBoost), and high-frequency SQL queries. 0-1 year experience.",
+      "raw_description": "Razorpay Risk & Fraud Analytics is hiring a Junior Data Scientist. Work on payment anomaly detection, credit risk scoring, gradient boosting models (XGBoost), and high-frequency SQL queries. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.naukri.com/forecasting-analyst-jobs-in-bengaluru?k=zepto+forecasting&experience=0&days=1&sortBy=date",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Benefits+Analyst+GitLab&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Benefits+Analyst+GitLab&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/benefits-analyst-jobs-in-india?experience=0",
+      "company_url": "https://about.gitlab.com/jobs/all-jobs/",
+      "title": "Benefits Analyst (Quantitative & Decision Analyst)",
+      "company": "GitLab",
+      "location": "Bangalore, India",
+      "score": 0.986,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "about.gitlab.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome.",
+      "raw_description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Optimization+Analyst+Shadowfax&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Optimization+Analyst+Shadowfax&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/supply-chain-optimization-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.shadowfax.in/careers",
+      "title": "Supply Chain Optimization Analyst",
+      "company": "Shadowfax",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.986,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "shadowfax.in",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "Shadowfax Bengaluru is hiring a Supply Chain Optimization Analyst. Focus on vehicle routing problem (VRP), dynamic dispatch optimization, constraint programming, and SQL operations analytics. Freshers welcome.",
+      "raw_description": "Shadowfax Bengaluru is hiring a Supply Chain Optimization Analyst. Focus on vehicle routing problem (VRP), dynamic dispatch optimization, constraint programming, and SQL operations analytics. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Transportation+Optimization+Analyst+Amazon+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Transportation+Optimization+Analyst+Amazon+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/transportation-optimization-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.amazon.jobs/en/",
+      "title": "Transportation Optimization Analyst",
+      "company": "Amazon Logistics",
+      "location": "Hyderabad, Telangana, India",
+      "score": 0.986,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "amazon.jobs",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "optimization"
+      ],
+      "missing_skills": [],
+      "description": "Amazon Transportation Services (ATS) India is hiring an Optimization Analyst in Hyderabad. Develop network optimization models, simulation models, and SQL performance metrics. 0-1 year experience.",
+      "raw_description": "Amazon Transportation Services (ATS) India is hiring an Optimization Analyst in Hyderabad. Develop network optimization models, simulation models, and SQL performance metrics. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Intern+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Intern+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/machine-learning-engineer-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.postman.com/company/careers/",
+      "title": "Machine Learning Engineer Intern",
+      "company": "Postman",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.986,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "postman.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "fastapi"
+      ],
+      "missing_skills": [],
+      "description": "Postman Bengaluru is hiring an ML Engineer Intern. Build automated API documentation generators, vector similarity search systems, Python FastAPI backends, and model evaluation suites. 0 years experience required.",
+      "raw_description": "Postman Bengaluru is hiring an ML Engineer Intern. Build automated API documentation generators, vector similarity search systems, Python FastAPI backends, and model evaluation suites. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Inventory+Forecasting+%26+Supply+Chain+Trainee+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Inventory+Forecasting+%26+Supply+Chain+Trainee+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/inventory-forecasting-supply-chain-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.zeptonow.com/careers",
       "title": "Inventory Forecasting & Supply Chain Trainee",
       "company": "Zepto",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.93,
-      "tier": 7,
-      "category": "Forecasting",
+      "score": 0.986,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 18:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
       "hours_ago": 3,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "zeptonow.com",
       "is_fresher": true,
-      "company_url": "https://www.zeptonow.com/careers",
       "matched_skills": [
         "sql",
         "forecasting"
       ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Prophet & SARIMAX Exogenous Regressors",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
+      "missing_skills": [],
       "description": "Zepto Quick Commerce is hiring a Forecasting & Supply Chain Trainee in Bengaluru. Build dark store SKU level demand forecasts, evaluate lead times, write SQL queries, and monitor stockouts. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Prophet & SARIMAX Exogenous Regressors",
-            "impact": "High Impact",
-            "category": "Statistical Forecasting",
-            "action": "Model demand seasonality with holiday calendars and price elasticity features in Prophet/Statsmodels."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Zepto's Inventory Forecasting & Supply Chain Trainee: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
+      "raw_description": "Zepto Quick Commerce is hiring a Forecasting & Supply Chain Trainee in Bengaluru. Build dark store SKU level demand forecasts, evaluate lead times, write SQL queries, and monitor stockouts. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.naukri.com/fresher-data-scientist-jobs-in-bengaluru?k=mu+sigma+data+scientist&experience=0&days=1&sortBy=date",
-      "title": "Fresher Data Scientist (0-1 Yrs)",
-      "company": "Mu Sigma",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+Operations+Associate+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+Operations+Associate+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/strategy-operations-associate-jobs-in-india?experience=0",
+      "company_url": "https://www.zeptonow.com/careers",
+      "title": "Strategy & Operations Associate (Fresher)",
+      "company": "Zepto",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.916,
+      "score": 0.986,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 18:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
       "hours_ago": 3,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "zeptonow.com",
       "is_fresher": true,
-      "company_url": "https://www.mu-sigma.com/careers",
       "matched_skills": [
-        "python",
         "sql",
-        "problem_solving"
+        "optimization"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Mu Sigma is actively hiring Fresher Data Scientists (Trainee Decision Scientists) in Bengaluru. 0 to 1 years experience. Work with Python, SQL, exploratory data analysis, predictive statistical modeling, and business problem solving.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Mu Sigma's Fresher Data Scientist (0-1 Yrs): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "missing_skills": [],
+      "description": "Zepto Quick Commerce is hiring a Strategy and Operations Associate in Bengaluru. 0 to 1 years experience. Manage operational metrics tracking, process optimization, SQL reports, and cross-functional programs. Freshers welcome.",
+      "raw_description": "Zepto Quick Commerce is hiring a Strategy and Operations Associate in Bengaluru. 0 to 1 years experience. Manage operational metrics tracking, process optimization, SQL reports, and cross-functional programs. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Fraud+Operations+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment)",
-      "company": "Stripe",
-      "location": "Bengaluru, India",
-      "score": 0.916,
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+Forecasting+Analyst+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+Forecasting+Analyst+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/time-series-forecasting-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.zeptonow.com/careers",
+      "title": "Time Series Forecasting Analyst (Early Career)",
+      "company": "Zepto",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.986,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 18:54",
-      "hours_ago": 3,
-      "source_type": "LinkedIn",
-      "source_domain": "stripe.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "zepto.com",
       "is_fresher": true,
-      "company_url": "https://stripe.com/jobs/search?locations=India",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Stripe's Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Fractal+Analytics+Decision+Science+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Decision Science Analyst (Campus / Fresher)",
-      "company": "Fractal Analytics",
-      "location": "Mumbai / Gurugram, India",
-      "score": 0.902,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "🥉",
-      "posted_at": "2026-10-20 18:54",
-      "hours_ago": 3,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://fractal.ai/careers/",
       "matched_skills": [
         "python",
+        "pandas",
+        "time_series",
+        "forecasting",
+        "arima",
+        "prophet"
+      ],
+      "missing_skills": [],
+      "description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
+      "raw_description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
+      "contact_email": "forecasting@zeptonow.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/operations-research-optimization-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.delhivery.com/careers",
+      "title": "Operations Research & Optimization Trainee",
+      "company": "Delhivery",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.984,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "delhivery.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "operations_research",
+        "linear_programming",
+        "optimization",
+        "pulp"
+      ],
+      "missing_skills": [],
+      "description": "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via email.",
+      "raw_description": "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via email.",
+      "contact_email": "optimization-hiring@delhivery.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Kunal Singhal (Head of Network Optimization @ Delhivery)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Trainee+Tiger+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Trainee+Tiger+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/decision-scientist-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.tigeranalytics.com/careers/",
+      "title": "Decision Scientist - Trainee",
+      "company": "Tiger Analytics",
+      "location": "Chennai / Bengaluru, India",
+      "score": 0.983,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "tigeranalytics.com",
+      "is_fresher": true,
+      "matched_skills": [
         "sql",
+        "optimization",
         "experimentation"
       ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing"
-      ],
-      "description": "Fractal Analytics is hiring Decision Science Analysts across Mumbai and Gurugram. Leverage decision trees, statistical hypothesis testing, A/B testing experimentation, and Python/SQL to drive enterprise decision making. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "90% Core Match",
-        "gap_percentage": "10% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          }
-        ],
-        "bridge_roadmap": "For Fractal Analytics's Decision Science Analyst (Campus / Fresher): Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
+      "missing_skills": [],
+      "description": "Tiger Analytics is hiring a Decision Scientist Trainee. Work on business experimentation, marketing mix modeling, price optimization, predictive statistical models, and SQL pipelines. 0 to 1 years experience.",
+      "raw_description": "Tiger Analytics is hiring a Decision Scientist Trainee. Work on business experimentation, marketing mix modeling, price optimization, predictive statistical models, and SQL pipelines. 0 to 1 years experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Delhivery+Operations+Research+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Intern+Snowflake&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Intern+Snowflake&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-engineering-intern-jobs-in-india?experience=0",
+      "company_url": "https://careers.snowflake.com/",
+      "title": "Data Engineering Intern",
+      "company": "Snowflake",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.983,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.snowflake.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "dbt"
+      ],
+      "missing_skills": [],
+      "description": "Snowflake Bengaluru is hiring a Data Engineering Intern. Build modern data warehouse tables, SQL transformations with dbt, Python scripts, and benchmark query performance. 0 years experience required.",
+      "raw_description": "Snowflake Bengaluru is hiring a Data Engineering Intern. Build modern data warehouse tables, SQL transformations with dbt, Python scripts, and benchmark query performance. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Network+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Network+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/operations-research-network-optimization-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.delhivery.com/careers/",
       "title": "Operations Research & Network Optimization Trainee",
       "company": "Delhivery",
       "location": "Gurugram, Haryana, India",
-      "score": 0.895,
-      "tier": 4,
-      "category": "OR / Optimization",
+      "score": 0.979,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-20 18:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
       "hours_ago": 3,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "delhivery.com",
       "is_fresher": true,
-      "company_url": "https://www.delhivery.com/careers/",
       "matched_skills": [
         "python",
         "operations_research",
@@ -1292,2515 +2359,50 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "optimization",
         "pulp"
       ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
+      "missing_skills": [],
       "description": "Delhivery is hiring an Operations Research Trainee in Gurugram. Solve supply chain routing optimization, linear programming models, facility allocation constraints, and integer programming in Python and PuLP. 0 years experience required (graduate trainee).",
-      "semantic_skill_gap": {
-        "fit_percentage": "89% Core Match",
-        "gap_percentage": "11% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Delhivery's Operations Research & Network Optimization Trainee: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
+      "raw_description": "Delhivery is hiring an Operations Research Trainee in Gurugram. Solve supply chain routing optimization, linear programming models, facility allocation constraints, and integer programming in Python and PuLP. 0 years experience required (graduate trainee).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Swiggy+Associate+Product+Manager+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate Product Manager (APM Intern)",
-      "company": "Swiggy",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.888,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-10-20 18:54",
-      "hours_ago": 3,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.swiggy.com/",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "Swiggy is hiring an Associate Product Manager Intern in Bengaluru. Drive user journey analytics, track telemetry metrics, coordinate A/B testing rollouts, and write SQL queries for product KPI dashboards. 0 years experience required (internship).",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Swiggy's Associate Product Manager (APM Intern): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/operations-associate-jobs-in-bengaluru?k=zepto+operations+analytics&experience=0&days=1&sortBy=date",
-      "title": "Strategy & Operations Associate (Fresher)",
-      "company": "Zepto",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.881,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 18:54",
-      "hours_ago": 3,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.zeptonow.com/careers",
-      "matched_skills": [
-        "sql",
-        "optimization"
-      ],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "Zepto Quick Commerce is hiring a Strategy and Operations Associate in Bengaluru. 0 to 1 years experience. Manage operational metrics tracking, process optimization, SQL reports, and cross-functional programs. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Zepto's Strategy & Operations Associate (Fresher): Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/data-engineer-jobs-in-chennai?k=latentview+data+engineer&experience=0&days=1&sortBy=date",
-      "title": "Junior Data Engineer / ETL Trainee",
-      "company": "LatentView Analytics",
-      "location": "Chennai / Bengaluru, India",
-      "score": 0.807,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-10-20 18:54",
-      "hours_ago": 3,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.latentview.com/careers/",
-      "matched_skills": [
-        "python",
-        "sql",
-        "dbt",
-        "etl"
-      ],
-      "missing_skills": [
-        "Workflow Orchestration",
-        "Automated Data Quality & Schema Testing"
-      ],
-      "description": "LatentView Analytics is hiring a Junior Data Engineer / ETL Trainee across Chennai and Bengaluru. 0 to 1 years experience. Build SQL transformations, dbt data models, Python ETL pipelines, and warehouse schemas.",
-      "semantic_skill_gap": {
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For LatentView Analytics's Junior Data Engineer / ETL Trainee: Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Fivetran+Operations+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Data Operations & Systems Analyst",
-      "company": "Fivetran",
-      "location": "Bengaluru, India",
-      "score": 0.996,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "fivetran.com",
-      "is_fresher": true,
-      "company_url": "https://fivetran.com/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Fivetran Bengaluru is hiring an Operations & Systems Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and analytics systems.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Fivetran's Data Operations & Systems Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Adobe+Applied+ML+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Applied ML & Computer Vision Intern",
-      "company": "Adobe",
-      "location": "Noida / Bengaluru, India",
-      "score": 0.98,
-      "tier": 1,
-      "category": "Applied ML / Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.adobe.com/careers.html",
-      "matched_skills": [
-        "pytorch",
-        "deep_learning"
-      ],
-      "missing_skills": [
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "Adobe India is hiring an Applied ML & Computer Vision Intern. Explore diffusion models, neural rendering, deep learning with PyTorch, and multimodal generative AI. Open to fresh graduates and campus interns.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Adobe's Applied ML & Computer Vision Intern: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "title": "Fresher Data Scientist (Marketplace & Pricing)",
-      "company": "Meesho",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 4,
-      "posted_at": "2026-10-21 10:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Vikramaditya Iyer (Director of Analytics @ Meesho)",
-      "contact_email": "analytics-hiring@meesho.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Meesho%22%20%22Data%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com.",
-      "company_url": "https://www.meesho.io/careers",
-      "score": 0.965,
-      "tier": 2,
-      "priority": "Primary",
-      "badge": "🥈",
-      "category": "Data Science",
-      "is_fresher": true,
-      "matched_skills": [
-        "python",
-        "sql",
-        "pandas",
-        "predictive_modeling"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Meesho's Fresher Data Scientist (Marketplace & Pricing): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "title": "Operations Research & Optimization Trainee",
-      "company": "Delhivery",
-      "location": "Gurugram, Haryana, India",
-      "hours_ago": 4,
-      "posted_at": "2026-10-21 10:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Kunal Singhal (Head of Network Optimization @ Delhivery)",
-      "contact_email": "optimization-hiring@delhivery.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Delhivery%22%20%22Operations%20Research%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via email.",
-      "company_url": "https://www.delhivery.com/careers",
-      "score": 0.94,
-      "tier": 4,
-      "priority": "Primary",
-      "badge": "🏅",
-      "category": "OR / Optimization",
-      "is_fresher": true,
-      "matched_skills": [
-        "linear_programming",
-        "python",
-        "pulp",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via email.",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Delhivery's Operations Research & Optimization Trainee: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
-    },
-    {
-      "title": "Optimization & Operations Research Trainee",
-      "company": "InMobi",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 4,
-      "posted_at": "2026-10-21 10:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Neha Bansal (Lead Optimization Scientist @ InMobi)",
-      "contact_email": "optimization@inmobi.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22InMobi%22%20%22Optimization%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com.",
-      "company_url": "https://www.inmobi.com/company/careers",
-      "score": 0.94,
-      "tier": 4,
-      "priority": "Primary",
-      "badge": "🏅",
-      "category": "OR / Optimization",
-      "is_fresher": true,
-      "matched_skills": [
-        "linear_programming",
-        "python",
-        "pulp",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com.",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For InMobi's Optimization & Operations Research Trainee: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Walmart+Associate+Data+Scientist+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate Data Scientist (Early Career)",
-      "company": "Walmart Global Tech",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.916,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.walmart.com/",
-      "matched_skills": [
-        "sql",
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Walmart Global Tech India is hiring an Associate Data Scientist in Bengaluru. Apply statistical modeling, machine learning algorithms, A/B testing, and Big Data queries (Spark, SQL) to e-commerce customer behavior. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Walmart Global Tech's Associate Data Scientist (Early Career): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "title": "Time Series Forecasting Analyst (Early Career)",
-      "company": "Zepto",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 4,
-      "posted_at": "2026-10-20 19:20",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
-      "contact_email": "forecasting@zeptonow.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Zepto%22%20%22Forecasting%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
-      "company_url": "https://www.zeptonow.com/careers",
-      "score": 0.914,
-      "tier": 7,
-      "priority": "Primary",
-      "badge": "7",
-      "category": "Forecasting",
-      "is_fresher": true,
-      "matched_skills": [
-        "python",
-        "pandas",
-        "time_series",
-        "forecasting",
-        "arima",
-        "prophet"
-      ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Zepto's Time Series Forecasting Analyst (Early Career): Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/decision-scientist-jobs-in-noida?k=EXL+Decision+Scientist&experience=0&days=1&sortBy=date",
-      "title": "Quantitative Decision Analyst - Trainee",
-      "company": "EXL Service",
-      "location": "Noida / Gurugram, India",
-      "score": 0.902,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "🥉",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.exlservice.com/careers",
-      "matched_skills": [
-        "sql",
-        "excel"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing",
-        "Quasi-Experimentation & Synthetic Controls"
-      ],
-      "description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct decision science modeling, statistical hypothesis testing, regression analysis, SQL queries, and KPI reporting in Advanced Excel.",
-      "semantic_skill_gap": {
-        "fit_percentage": "90% Core Match",
-        "gap_percentage": "10% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          },
-          {
-            "skill": "Quasi-Experimentation & Synthetic Controls",
-            "impact": "Medium Impact",
-            "category": "Analytics",
-            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
-          }
-        ],
-        "bridge_roadmap": "For EXL Service's Quantitative Decision Analyst - Trainee: Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Thoughtworks+Analyst+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Software & Procurement Analyst Intern (Operations Optimization)",
-      "company": "Thoughtworks",
-      "location": "Gurgaon / Pune, India",
-      "score": 0.895,
-      "tier": 4,
-      "category": "OR / Optimization",
-      "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "thoughtworks.com",
-      "is_fresher": true,
-      "company_url": "https://www.thoughtworks.com/en-in/careers/jobs",
-      "matched_skills": [
-        "python",
-        "excel",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship).",
-      "semantic_skill_gap": {
-        "fit_percentage": "89% Core Match",
-        "gap_percentage": "11% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Thoughtworks's Software & Procurement Analyst Intern (Operations Optimization): Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Video Editor & Media Intern (Product Telemetry & User Growth)",
-      "company": "Groww",
-      "location": "Bengaluru, India",
-      "score": 0.888,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "groww.in",
-      "is_fresher": true,
-      "company_url": "https://groww.in/careers",
-      "matched_skills": [],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship).",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Groww's Video Editor & Media Intern (Product Telemetry & User Growth): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Apprenticeship&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Operations Associate, Apprenticeship (Early Career)",
-      "company": "Stripe",
-      "location": "Bengaluru, India",
-      "score": 0.881,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "stripe.com",
-      "is_fresher": true,
-      "company_url": "https://stripe.com/jobs/search?locations=India",
-      "matched_skills": [],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Stripe's Operations Associate, Apprenticeship (Early Career): Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=GitLab+Quantitative+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Benefits Analyst (Quantitative & Decision Analyst)",
-      "company": "GitLab",
-      "location": "Bangalore, India",
-      "score": 0.822,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "🥉",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "gitlab.com",
-      "is_fresher": true,
-      "company_url": "https://about.gitlab.com/jobs/all-jobs/",
-      "matched_skills": [
-        "sql",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing",
-        "Quasi-Experimentation & Synthetic Controls"
-      ],
-      "description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "82% Core Match",
-        "gap_percentage": "18% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          },
-          {
-            "skill": "Quasi-Experimentation & Synthetic Controls",
-            "impact": "Medium Impact",
-            "category": "Analytics",
-            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
-          }
-        ],
-        "bridge_roadmap": "For GitLab's Benefits Analyst (Quantitative & Decision Analyst): Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Blinkit+Demand+Planning+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Demand Planning & Time Series Analyst",
-      "company": "Blinkit",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.794,
-      "tier": 7,
-      "category": "Forecasting",
-      "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 17:54",
-      "hours_ago": 4,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://blinkit.com/careers",
-      "matched_skills": [
-        "sql",
-        "time_series",
-        "forecasting",
-        "prophet"
-      ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "Blinkit Gurugram is hiring a Demand Planning & Time Series Analyst. Focus on grocery sales forecasting, perishables waste reduction, Prophet time series modeling, and SQL dashboards. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "79% Core Match",
-        "gap_percentage": "21% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Blinkit's Demand Planning & Time Series Analyst: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Elastic+Machine+Learning+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=UX+%26+Systems+Engineer+Elastic&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=UX+%26+Systems+Engineer+Elastic&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ux-systems-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.elastic.co/about/careers",
       "title": "UX & Systems Engineer (AI Search / Interface Systems)",
       "company": "Elastic",
       "location": "Bangalore, India",
-      "score": 0.773,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-20 17:54",
+      "score": 0.976,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
       "hours_ago": 4,
-      "source_type": "LinkedIn",
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
       "source_domain": "elastic.co",
       "is_fresher": true,
-      "company_url": "https://www.elastic.co/about/careers",
       "matched_skills": [
         "python",
         "docker"
       ],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Model Registry & Drift Monitoring"
-      ],
+      "missing_skills": [],
       "description": "Elastic Bangalore is hiring an Engineer for AI search interfaces and evaluation pipelines. Implement telemetry tracking, neural search interface evaluation, Python scripts, Docker workflows, and interactive model diagnostics.",
-      "semantic_skill_gap": {
-        "fit_percentage": "77% Core Match",
-        "gap_percentage": "23% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Elastic's UX & Systems Engineer (AI Search / Interface Systems): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      "raw_description": "Elastic Bangalore is hiring an Engineer for AI search interfaces and evaluation pipelines. Implement telemetry tracking, neural search interface evaluation, Python scripts, Docker workflows, and interactive model diagnostics.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "title": "Applied ML Research Intern (LLMs & Vision)",
-      "company": "Sarvam AI",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 5,
-      "posted_at": "2026-10-20 18:20",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Vivek Raghavan (Co-Founder @ Sarvam AI)",
-      "contact_email": "research@sarvam.ai",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Sarvam%20AI%22%20%22research%20intern%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
-      "company_url": "https://www.sarvam.ai/",
-      "score": 0.98,
-      "tier": 1,
-      "priority": "Primary",
-      "badge": "🥇",
-      "category": "Applied ML / Research",
-      "is_fresher": true,
-      "matched_skills": [
-        "pytorch",
-        "deep_learning"
-      ],
-      "missing_skills": [
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Sarvam AI's Applied ML Research Intern (LLMs & Vision): Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Sarvam+AI+Research+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "GenAI & Speech LLM Research Trainee",
-      "company": "Sarvam AI",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.956,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.sarvam.ai/",
-      "matched_skills": [
-        "pytorch",
-        "llms"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Sarvam AI Bengaluru is hiring a Research Trainee for Indic language models, speech LLMs, and foundation model training with PyTorch and CUDA. Fresh graduates with strong mathematical foundations welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Sarvam AI's GenAI & Speech LLM Research Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=HUL+Supply+Chain+Analytics+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Supply Chain Analytics & Forecasting Trainee",
-      "company": "Unilever India (HUL)",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.92,
-      "tier": 7,
-      "category": "Forecasting",
-      "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.hul.co.in/careers/",
-      "matched_skills": [
-        "sql",
-        "time_series",
-        "arima"
-      ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "Hindustan Unilever Limited (HUL) Mumbai is hiring a Supply Chain Analytics Trainee. Apply statistical time series models (ARIMA, Holt-Winters), inventory safety stock buffers, and SQL queries. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Unilever India (HUL)'s Supply Chain Analytics & Forecasting Trainee: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/fresher-data-scientist-jobs-in-bengaluru?k=Target+Data+Scientist&experience=0&days=1&sortBy=date",
-      "title": "Data Scientist - Fresher / Campus",
-      "company": "Target India",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.916,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://corporate.target.com/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Target India Bengaluru is hiring a Fresher Data Scientist. Build predictive models, customer segmentation, recommendation systems, and SQL feature stores. 0 to 1 years experience welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Target India's Data Scientist - Fresher / Campus: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "title": "Junior Machine Learning Engineer (MLOps)",
-      "company": "Postman",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 5,
-      "posted_at": "2026-10-21 09:53",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Rajesh Menon (VP Engineering @ Postman)",
-      "contact_email": "ml-hiring@postman.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=%22Postman%22%20%22ML%20Engineer%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
-      "raw_description": "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn.",
-      "company_url": "https://www.postman.com/company/careers/",
-      "score": 0.91,
-      "tier": 8,
-      "priority": "Secondary",
-      "badge": "8",
-      "category": "ML Engineering",
-      "is_fresher": true,
-      "matched_skills": [
-        "fastapi",
-        "docker",
-        "mlops",
-        "python",
-        "scikit_learn"
-      ],
-      "missing_skills": [
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Postman's Junior Machine Learning Engineer (MLOps): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/decision-scientist-jobs-in-chennai?k=Tiger+Analytics+Decision+Scientist&experience=0&days=1&sortBy=date",
-      "title": "Decision Scientist - Trainee",
-      "company": "Tiger Analytics",
-      "location": "Chennai / Bengaluru, India",
-      "score": 0.902,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "🥉",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.tigeranalytics.com/careers/",
-      "matched_skills": [
-        "sql",
-        "optimization",
-        "experimentation"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing"
-      ],
-      "description": "Tiger Analytics is hiring a Decision Scientist Trainee. Work on business experimentation, marketing mix modeling, price optimization, predictive statistical models, and SQL pipelines. 0 to 1 years experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "90% Core Match",
-        "gap_percentage": "10% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          }
-        ],
-        "bridge_roadmap": "For Tiger Analytics's Decision Scientist - Trainee: Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=CRED+Associate+Product+Manager&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate Product Manager (Growth & User Journeys)",
-      "company": "CRED",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.888,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://cred.club/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "CRED Bengaluru is hiring an APM for user growth and product loops. Partner with engineering and design to run experiments, evaluate conversion funnels, and write SQL queries for product KPI dashboards. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For CRED's Associate Product Manager (Growth & User Journeys): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Associate+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Verifications Operations Associate (Compliance & User Operations)",
-      "company": "Stripe",
-      "location": "Bengaluru, India",
-      "score": 0.881,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "LinkedIn",
-      "source_domain": "stripe.com",
-      "is_fresher": true,
-      "company_url": "https://stripe.com/jobs/search?locations=India",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "Stripe Bengaluru is hiring a Verifications Operations Associate. Synthesize customer risk data, audit operational verification processes, and write SQL queries for tracking user compliance metrics. Early career welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Stripe's Verifications Operations Associate (Compliance & User Operations): Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=MongoDB+Associate+Recruiter&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate Recruiter (Talent Operations & Sourcing)",
-      "company": "MongoDB",
-      "location": "Gurugram, India",
-      "score": 0.881,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "LinkedIn",
-      "source_domain": "mongodb.com",
-      "is_fresher": true,
-      "company_url": "https://www.mongodb.com/company/careers",
-      "matched_skills": [],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "MongoDB Gurugram is hiring an Associate Recruiter. Analyze recruiting pipeline data, manage talent community engagement, use Greenhouse and analytics tools. Experience preferred but not required, entry level welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For MongoDB's Associate Recruiter (Talent Operations & Sourcing): Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Jio+AI+Machine+Learning+Engineer+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Machine Learning Engineer - Fresher / New Grad",
-      "company": "Jio AI COE",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.853,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.jio.com/",
-      "matched_skills": [
-        "python",
-        "docker",
-        "fastapi",
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Jio AI COE's Machine Learning Engineer - Fresher / New Grad: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/operations-research-jobs-in-bengaluru?k=Shadowfax+Optimization&experience=0&days=1&sortBy=date",
-      "title": "Supply Chain Optimization Analyst",
-      "company": "Shadowfax",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.815,
-      "tier": 4,
-      "category": "OR / Optimization",
-      "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-20 16:54",
-      "hours_ago": 5,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.shadowfax.in/careers",
-      "matched_skills": [
-        "sql",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Shadowfax Bengaluru is hiring a Supply Chain Optimization Analyst. Focus on vehicle routing problem (VRP), dynamic dispatch optimization, constraint programming, and SQL operations analytics. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "81% Core Match",
-        "gap_percentage": "19% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Shadowfax's Supply Chain Optimization Analyst: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Google+AI+Research+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Student Researcher / AI Research Intern",
-      "company": "Google",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.983,
-      "tier": 1,
-      "category": "Applied ML / Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "google.com",
-      "is_fresher": true,
-      "company_url": "https://careers.google.com/",
-      "matched_skills": [
-        "machine_learning",
-        "deep_learning",
-        "nlp"
-      ],
-      "missing_skills": [
-        "PyTorch Distributed Training & PEFT",
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "Google Research India in Bengaluru invites applications for Student Researcher / AI Research Internships. Conduct cutting-edge machine learning research in deep learning, NLP, computer vision, and responsible AI. 0 years required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "PyTorch Distributed Training & PEFT",
-            "impact": "High Impact",
-            "category": "Deep Learning",
-            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
-          },
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Google's Student Researcher / AI Research Intern: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/forecasting-analyst-jobs-in-bengaluru?k=ITC+Infotech+Analytics&experience=0&days=1&sortBy=date",
-      "title": "Time Series & Predictive Analytics Trainee",
-      "company": "ITC Infotech",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.944,
-      "tier": 7,
-      "category": "Forecasting",
-      "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.itcinfotech.com/careers/",
-      "matched_skills": [
-        "python",
-        "sql",
-        "pandas",
-        "time_series",
-        "forecasting"
-      ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Prophet & SARIMAX Exogenous Regressors",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "ITC Infotech is hiring a Time Series & Predictive Analytics Trainee in Bengaluru. Build retail demand forecasting models, seasonal decomposition, Python pandas pipelines, and SQL reports. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Prophet & SARIMAX Exogenous Regressors",
-            "impact": "High Impact",
-            "category": "Statistical Forecasting",
-            "action": "Model demand seasonality with holiday calendars and price elasticity features in Prophet/Statsmodels."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For ITC Infotech's Time Series & Predictive Analytics Trainee: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Porter+Operations+Research+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Fleet Routing & Operations Research Trainee",
-      "company": "Porter",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.895,
-      "tier": 4,
-      "category": "OR / Optimization",
-      "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://porter.in/careers",
-      "matched_skills": [
-        "operations_research",
-        "linear_programming",
-        "integer_programming"
-      ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Porter Logistics Bengaluru is hiring an Operations Research Trainee. Formulate mathematical programming models (Linear Programming, Integer Programming) for intracity fleet dispatch. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "89% Core Match",
-        "gap_percentage": "11% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Porter's Fleet Routing & Operations Research Trainee: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=InMobi+People+Analytics+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Intern - Creative & Communications, People Team (Talent Analytics)",
-      "company": "InMobi",
-      "location": "Bangalore, India",
-      "score": 0.874,
-      "tier": 7,
-      "category": "Forecasting",
-      "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "inmobi.com",
-      "is_fresher": true,
-      "company_url": "https://www.inmobi.com/company/careers/",
-      "matched_skills": [
-        "forecasting",
-        "communication"
-      ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Prophet & SARIMAX Exogenous Regressors",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship).",
-      "semantic_skill_gap": {
-        "fit_percentage": "87% Core Match",
-        "gap_percentage": "13% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Prophet & SARIMAX Exogenous Regressors",
-            "impact": "High Impact",
-            "category": "Statistical Forecasting",
-            "action": "Model demand seasonality with holiday calendars and price elasticity features in Prophet/Statsmodels."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For InMobi's Intern - Creative & Communications, People Team (Talent Analytics): Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Tredence+Decision+Science+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Decision Science Analyst (Campus)",
-      "company": "Tredence",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.872,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "🥉",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.tredence.com/careers",
-      "matched_skills": [
-        "python",
-        "sql"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing",
-        "Quasi-Experimentation & Synthetic Controls"
-      ],
-      "description": "Tredence Bengaluru is hiring a Decision Science Analyst. Work with CPG and retail clients on causal impact analysis, statistical tests, Python, and SQL dashboards. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "87% Core Match",
-        "gap_percentage": "13% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          },
-          {
-            "skill": "Quasi-Experimentation & Synthetic Controls",
-            "impact": "Medium Impact",
-            "category": "Analytics",
-            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
-          }
-        ],
-        "bridge_roadmap": "For Tredence's Decision Science Analyst (Campus): Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Razorpay+Junior+Data+Scientist&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Junior Data Scientist (Merchant Risk Analytics)",
-      "company": "Razorpay",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.866,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://razorpay.com/jobs/",
-      "matched_skills": [
-        "sql",
-        "xgboost"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Razorpay Risk & Fraud Analytics is hiring a Junior Data Scientist. Work on payment anomaly detection, credit risk scoring, gradient boosting models (XGBoost), and high-frequency SQL queries. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "86% Core Match",
-        "gap_percentage": "14% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Razorpay's Junior Data Scientist (Merchant Risk Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Postman+Machine+Learning+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Machine Learning Engineer Intern",
-      "company": "Postman",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.853,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.postman.com/company/careers/",
-      "matched_skills": [
-        "python",
-        "fastapi"
-      ],
-      "missing_skills": [
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Postman Bengaluru is hiring an ML Engineer Intern. Build automated API documentation generators, vector similarity search systems, Python FastAPI backends, and model evaluation suites. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Postman's Machine Learning Engineer Intern: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Zomato+Product+Analyst+Gurugram&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Product Analyst - Dining & Delivery Telemetry",
-      "company": "Zomato",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.808,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.zomato.com/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "Zomato Gurugram is hiring a Product Analyst. Monitor cart abandonment funnels, evaluate search feature experiments, run A/B testing statistical evaluations, and write complex SQL queries. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Zomato's Product Analyst - Dining & Delivery Telemetry: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Software+Engineer+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Software Engineer Intern - Data Platform",
-      "company": "Stripe",
-      "location": "Bengaluru, India",
-      "score": 0.807,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-10-20 15:54",
-      "hours_ago": 6,
-      "source_type": "LinkedIn",
-      "source_domain": "stripe.com",
-      "is_fresher": true,
-      "company_url": "https://stripe.com/jobs/search?locations=India",
-      "matched_skills": [
-        "python",
-        "sql"
-      ],
-      "missing_skills": [
-        "dbt Transformations & Data Modeling",
-        "Workflow Orchestration",
-        "Automated Data Quality & Schema Testing"
-      ],
-      "description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity for university students to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "dbt Transformations & Data Modeling",
-            "impact": "High Impact",
-            "category": "Analytics Engineering",
-            "action": "Design a Kimball star-schema dimensional model with dbt staging, intermediate, and mart SQL models."
-          },
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For Stripe's Software Engineer Intern - Data Platform: Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Flipkart+Operations+Research+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Network Capacity & OR Analyst",
-      "company": "Flipkart Logistics",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 1.0,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.flipkartcareers.com/",
-      "matched_skills": [
-        "python"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Flipkart Supply Chain Design is hiring a Network Capacity & OR Analyst. Work on fulfillment center capacity modeling, linehaul routing, and mathematical programming in Python. Early career / freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Flipkart Logistics's Network Capacity & OR Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=McKinsey+QuantumBlack+Analyst+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Junior Decision Analyst (QuantumBlack)",
-      "company": "McKinsey & Company",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.996,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.mckinsey.com/careers",
-      "matched_skills": [
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "QuantumBlack, AI by McKinsey, is hiring a Junior Decision Analyst in Gurugram. Apply statistical hypothesis testing, machine learning simulations, and decision science to enterprise strategy. Entry level.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For McKinsey & Company's Junior Decision Analyst (QuantumBlack): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Reliance+Retail+Demand+Forecasting&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Demand Sensing & Forecasting Associate",
-      "company": "Reliance Retail",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.94,
-      "tier": 7,
-      "category": "Forecasting",
-      "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.relianceretail.com/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Prophet & SARIMAX Exogenous Regressors",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
-      "description": "Reliance Retail Mumbai is hiring a Demand Sensing Associate. Analyze store level sales trends, promotional lift impact, exponential smoothing models, and SQL data pipelines. Fresh graduates welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Prophet & SARIMAX Exogenous Regressors",
-            "impact": "High Impact",
-            "category": "Statistical Forecasting",
-            "action": "Model demand seasonality with holiday calendars and price elasticity features in Prophet/Statsmodels."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Reliance Retail's Demand Sensing & Forecasting Associate: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Amazon+Applied+Scientist+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Applied Scientist Intern",
-      "company": "Amazon",
-      "location": "Hyderabad / Bengaluru, India",
-      "score": 0.93,
-      "tier": 1,
-      "category": "Applied ML / Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.amazon.jobs/en/",
-      "matched_skills": [
-        "pytorch",
-        "machine_learning",
-        "deep_learning",
-        "nlp"
-      ],
-      "missing_skills": [
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "Amazon India is hiring Applied Scientist Interns. Build machine learning and statistical models for e-commerce ranking, search relevance, PyTorch deep learning, and large-scale NLP inference. Campus freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Amazon's Applied Scientist Intern: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Sprinklr+AI+ML+Engineer+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "AI/ML Platform Engineer - Fresher",
-      "company": "Sprinklr",
-      "location": "Gurugram / Bengaluru, India",
-      "score": 0.916,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.sprinklr.com/careers/",
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Sprinklr India is hiring a Fresher AI/ML Platform Engineer. Develop high-throughput model serving pipelines, model registry integrations, Triton inference servers, and Kafka data streams. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Sprinklr's AI/ML Platform Engineer - Fresher: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=MakeMyTrip+APM+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate Product Manager (Travel Discovery)",
-      "company": "MakeMyTrip",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.888,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.makemytrip.com/",
-      "matched_skills": [
-        "sql",
-        "product_analytics"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "MakeMyTrip is hiring an APM for hotel and flight booking journeys in Gurugram. Define product specs, conduct competitive telemetry analysis, and work with product analytics in SQL. Early career / campus graduates welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For MakeMyTrip's Associate Product Manager (Travel Discovery): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Rapido+Operations+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Strategy & City Operations Associate",
-      "company": "Rapido",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.881,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.rapido.bike/Careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "Rapido Bengaluru is hiring a Strategy & City Operations Associate. Monitor supply-demand matching ratios, captain incentive programs, ride completion rates, and SQL operational metrics. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Rapido's Strategy & City Operations Associate: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Meesho+Data+Scientist+I&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Data Scientist I (Catalog & Search Analytics)",
-      "company": "Meesho",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.836,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.meesho.io/jobs",
-      "matched_skills": [
-        "python",
-        "sql",
-        "experimentation"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Meesho Bengaluru is hiring a Data Scientist I. Optimize catalog classification, visual search ranking, price elasticity modeling, and experimentation pipelines using Python and SQL. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "83% Core Match",
-        "gap_percentage": "17% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Meesho's Data Scientist I (Catalog & Search Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Associate - Content & Analytics (Data Transformation)",
-      "company": "Groww",
-      "location": "Bengaluru, India",
-      "score": 0.807,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-10-20 14:54",
-      "hours_ago": 7,
-      "source_type": "LinkedIn",
-      "source_domain": "groww.in",
-      "is_fresher": true,
-      "company_url": "https://groww.in/careers",
-      "matched_skills": [
-        "python",
-        "sql",
-        "excel",
-        "analytics_engineering",
-        "analytical_thinking"
-      ],
-      "missing_skills": [
-        "dbt Transformations & Data Modeling",
-        "Workflow Orchestration",
-        "Automated Data Quality & Schema Testing"
-      ],
-      "description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role.",
-      "semantic_skill_gap": {
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "dbt Transformations & Data Modeling",
-            "impact": "High Impact",
-            "category": "Analytics Engineering",
-            "action": "Design a Kimball star-schema dimensional model with dbt staging, intermediate, and mart SQL models."
-          },
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For Groww's Associate - Content & Analytics (Data Transformation): Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Bain+Advanced+Analytics+Associate+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Advanced Analytics Associate (BCN)",
-      "company": "Bain & Company",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.996,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.bain.com/careers/",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Bain Capability Network (BCN) Gurugram is hiring an Advanced Analytics Associate. Focus on commercial decision analytics, regression modeling, customer lifetime value modeling, and SQL. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Bain & Company's Advanced Analytics Associate (BCN): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=NVIDIA+AI+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "AI Research & Deep Learning Intern",
-      "company": "NVIDIA",
-      "location": "Pune / Bengaluru, India",
-      "score": 0.983,
-      "tier": 1,
-      "category": "Applied ML / Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-      "matched_skills": [
-        "pytorch",
-        "deep_learning",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "NVIDIA India is looking for an AI Research and Deep Learning Intern. Focus on accelerated computing, LLM optimization (TensorRT-LLM), PyTorch model profiling, and GPU neural networks. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For NVIDIA's AI Research & Deep Learning Intern: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=BrowserStack+ML+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=ML+Infrastructure+Engineer+BrowserStack&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=ML+Infrastructure+Engineer+BrowserStack&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ml-infrastructure-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.browserstack.com/careers",
       "title": "ML Infrastructure Engineer (Early Career)",
       "company": "BrowserStack",
       "location": "Mumbai, Maharashtra, India",
@@ -3808,928 +2410,913 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 13:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
       "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "browserstack.com",
       "is_fresher": true,
-      "company_url": "https://www.browserstack.com/careers",
       "matched_skills": [
         "python",
         "docker"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "BrowserStack Mumbai is hiring an ML Infrastructure Engineer. Work on automated visual testing models, Docker container orchestration, Python SDKs, and high-reliability ML services. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For BrowserStack's ML Infrastructure Engineer (Early Career): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "raw_description": "BrowserStack Mumbai is hiring an ML Infrastructure Engineer. Work on automated visual testing models, Docker container orchestration, Python SDKs, and high-reliability ML services. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=PayPal+Data+Scientist+Fresher+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Risk & Fraud Data Scientist (Fresher)",
-      "company": "PayPal",
-      "location": "Chennai / Bengaluru, India",
-      "score": 0.916,
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+AI%2FML+Systems+Trainee+Hasura&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+AI%2FML+Systems+Trainee+Hasura&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/applied-ai-ml-systems-trainee-jobs-in-india?experience=0",
+      "company_url": "https://hasura.io/careers/",
+      "title": "Applied AI/ML Systems Trainee",
+      "company": "Hasura",
+      "location": "Bengaluru / Remote, India",
+      "score": 0.976,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 13:43",
+      "hours_ago": 11,
+      "relative_time": "11 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "hasura.io",
       "is_fresher": true,
-      "company_url": "https://careers.pypl.com/",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "PayPal India is hiring a Fresher Data Scientist in Chennai/Bengaluru. Focus on transaction risk modeling, behavioral biometrics, unsupervised anomaly detection, and SQL analytics. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For PayPal's Risk & Fraud Data Scientist (Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/product-analyst-jobs-in-mumbai?k=Dream11+Product+Analyst&experience=0&days=1&sortBy=date",
-      "title": "Product Telemetry & Gameplay Analytics Trainee",
-      "company": "Dream11",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.905,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.dreamsports.group/careers",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "Dream11 Mumbai is hiring a Product Telemetry Trainee. Analyze user match contest participation, churn prediction metrics, SQL event queries, and feature engagement. 0 to 1 years experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "90% Core Match",
-        "gap_percentage": "10% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Dream11's Product Telemetry & Gameplay Analytics Trainee: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/operations-associate-jobs-in-gurgaon?k=Spinny+Operations&experience=0&days=1&sortBy=date",
-      "title": "Growth Strategy & Business Operations Trainee",
-      "company": "Spinny",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.888,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.spinny.com/careers/",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "Spinny Gurugram is hiring a Business Operations Trainee. Track hub inventory throughput, customer test-drive conversion rates, and write SQL queries for executive KPI dashboards. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Spinny's Growth Strategy & Business Operations Trainee: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Snowflake+Data+Engineering+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Data Engineering Intern",
-      "company": "Snowflake",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.857,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.snowflake.com/",
       "matched_skills": [
         "python",
-        "sql",
-        "dbt"
+        "docker"
       ],
-      "missing_skills": [
-        "Workflow Orchestration",
-        "Automated Data Quality & Schema Testing"
-      ],
-      "description": "Snowflake Bengaluru is hiring a Data Engineering Intern. Build modern data warehouse tables, SQL transformations with dbt, Python scripts, and benchmark query performance. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For Snowflake's Data Engineering Intern: Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
+      "missing_skills": [],
+      "description": "Hasura is hiring an Applied AI/ML Systems Trainee. Build GraphQL-based vector connectors, semantic search query planners, and microservice wrappers in Python and Docker. 0 years experience required.",
+      "raw_description": "Hasura is hiring an Applied AI/ML Systems Trainee. Build GraphQL-based vector connectors, semantic search query planners, and microservice wrappers in Python and Docker. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Amazon+Optimization+Analyst+Hyderabad&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Transportation Optimization Analyst",
-      "company": "Amazon Logistics",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.815,
-      "tier": 4,
-      "category": "OR / Optimization",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Planning+%26+Time+Series+Analyst+Blinkit&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Planning+%26+Time+Series+Analyst+Blinkit&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/demand-planning-time-series-analyst-jobs-in-india?experience=0",
+      "company_url": "https://blinkit.com/careers",
+      "title": "Demand Planning & Time Series Analyst",
+      "company": "Blinkit",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.976,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-20 13:54",
-      "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "blinkit.com",
       "is_fresher": true,
-      "company_url": "https://www.amazon.jobs/en/",
       "matched_skills": [
         "sql",
-        "optimization"
+        "time_series",
+        "forecasting",
+        "prophet"
       ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Amazon Transportation Services (ATS) India is hiring an Optimization Analyst in Hyderabad. Develop network optimization models, simulation models, and SQL performance metrics. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "81% Core Match",
-        "gap_percentage": "19% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Amazon Logistics's Transportation Optimization Analyst: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
+      "missing_skills": [],
+      "description": "Blinkit Gurugram is hiring a Demand Planning & Time Series Analyst. Focus on grocery sales forecasting, perishables waste reduction, Prophet time series modeling, and SQL dashboards. 0-1 year experience.",
+      "raw_description": "Blinkit Gurugram is hiring a Demand Planning & Time Series Analyst. Focus on grocery sales forecasting, perishables waste reduction, Prophet time series modeling, and SQL dashboards. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Titan+Company+Demand+Forecasting&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Analytics+%26+Forecasting+Trainee+Unilever+India+%28HUL%29&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Analytics+%26+Forecasting+Trainee+Unilever+India+%28HUL%29&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/supply-chain-analytics-forecasting-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.hul.co.in/careers/",
+      "title": "Supply Chain Analytics & Forecasting Trainee",
+      "company": "Unilever India (HUL)",
+      "location": "Mumbai, Maharashtra, India",
+      "score": 0.976,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "hul.co.in",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "time_series",
+        "arima"
+      ],
+      "missing_skills": [],
+      "description": "Hindustan Unilever Limited (HUL) Mumbai is hiring a Supply Chain Analytics Trainee. Apply statistical time series models (ARIMA, Holt-Winters), inventory safety stock buffers, and SQL queries. Freshers welcome.",
+      "raw_description": "Hindustan Unilever Limited (HUL) Mumbai is hiring a Supply Chain Analytics Trainee. Apply statistical time series models (ARIMA, Holt-Winters), inventory safety stock buffers, and SQL queries. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Retail+Demand+Forecasting+Analyst+Titan+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Retail+Demand+Forecasting+Analyst+Titan+Company&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/retail-demand-forecasting-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.titancompany.in/careers",
       "title": "Retail Demand Forecasting Analyst",
       "company": "Titan Company",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.794,
-      "tier": 7,
-      "category": "Forecasting",
+      "score": 0.976,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "7",
-      "posted_at": "2026-10-20 13:54",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
       "hours_ago": 8,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "titancompany.in",
       "is_fresher": true,
-      "company_url": "https://www.titancompany.in/careers",
       "matched_skills": [
         "sql",
         "forecasting",
         "arima",
         "xgboost"
       ],
-      "missing_skills": [
-        "Hierarchical & Intermittent Time Series",
-        "Backtesting Cross-Validation & Metric Tuning"
-      ],
+      "missing_skills": [],
       "description": "Titan Company Bengaluru is hiring a Demand Forecasting Analyst for watches and jewelry supply networks. Build ARIMA/XGBoost models, manage seasonal stock allocations, and write SQL queries. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "79% Core Match",
-        "gap_percentage": "21% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Hierarchical & Intermittent Time Series",
-            "impact": "High Impact",
-            "category": "Forecasting",
-            "action": "Implement Croston's method or DeepAR on intermittent sparse retail demand in Python."
-          },
-          {
-            "skill": "Backtesting Cross-Validation & Metric Tuning",
-            "impact": "Medium Impact",
-            "category": "Model Validation",
-            "action": "Set up expanding-window time series cross-validation and compute WAPE, MASE, and pinball loss."
-          }
-        ],
-        "bridge_roadmap": "For Titan Company's Retail Demand Forecasting Analyst: Construct a rolling-origin time series evaluation notebook on retail SKU data comparing Prophet, LightGBM lag features, and ARIMA baselines.",
-        "interview_talk_track": "I prevent lookahead bias by enforcing strict temporal cross-validation and engineering calendar/lag regressors that capture demand spikes and supply bottlenecks."
-      }
+      "raw_description": "Titan Company Bengaluru is hiring a Demand Forecasting Analyst for watches and jewelry supply networks. Build ARIMA/XGBoost models, manage seasonal stock allocations, and write SQL queries. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Urban+Company+Product+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Product Operations & User Analytics Intern",
-      "company": "Urban Company",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+MakeMyTrip&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+MakeMyTrip&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
+      "company_url": "https://careers.makemytrip.com/",
+      "title": "Associate Product Manager (Travel Discovery)",
+      "company": "MakeMyTrip",
       "location": "Gurugram, Haryana, India",
-      "score": 0.996,
+      "score": 0.976,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 12:54",
-      "hours_ago": 9,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.makemytrip.com",
       "is_fresher": true,
-      "company_url": "https://www.urbancompany.com/careers",
       "matched_skills": [
-        "sql"
+        "sql",
+        "product_analytics"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Urban Company Gurugram is hiring an APM / Product Operations Intern. Design user feedback loops, monitor cancellation telemetry, write SQL queries, and track partner NPS metrics. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Urban Company's Product Operations & User Analytics Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "missing_skills": [],
+      "description": "MakeMyTrip is hiring an APM for hotel and flight booking journeys in Gurugram. Define product specs, conduct competitive telemetry analysis, and work with product analytics in SQL. Early career / campus graduates welcome.",
+      "raw_description": "MakeMyTrip is hiring an APM for hotel and flight booking journeys in Gurugram. Define product specs, conduct competitive telemetry analysis, and work with product analytics in SQL. Early career / campus graduates welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.naukri.com/machine-learning-engineer-jobs-in-bengaluru?k=Ather+Machine+Learning&experience=0&days=1&sortBy=date",
-      "title": "ML Engineer - Battery Intelligence & Telemetry",
-      "company": "Ather Energy",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.987,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-20 12:54",
-      "hours_ago": 9,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.atherenergy.com/careers",
-      "matched_skills": [
-        "python"
-      ],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Ather Energy Bengaluru is hiring a Junior ML Engineer. Analyze EV battery telemetry streams, build remaining useful life (RUL) models, and deploy Python inference endpoints. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Ather Energy's ML Engineer - Battery Intelligence & Telemetry: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/operations-research-jobs-in-mumbai?k=Maersk+Optimization&experience=0&days=1&sortBy=date",
-      "title": "Linear Programming & Network Optimization Trainee",
-      "company": "Maersk India",
-      "location": "Mumbai / Bengaluru, India",
-      "score": 0.951,
-      "tier": 4,
-      "category": "OR / Optimization",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Creative+%26+Communications%2C+People+Team+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Creative+%26+Communications%2C+People+Team+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/intern-creative-communications-people-team-jobs-in-india?experience=0",
+      "company_url": "https://www.inmobi.com/company/careers/",
+      "title": "Intern - Creative & Communications, People Team (Talent Analytics)",
+      "company": "InMobi",
+      "location": "Bangalore, India",
+      "score": 0.976,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-20 12:54",
-      "hours_ago": 9,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "inmobi.com",
       "is_fresher": true,
-      "company_url": "https://www.maersk.com/careers",
+      "matched_skills": [
+        "forecasting",
+        "communication"
+      ],
+      "missing_skills": [],
+      "description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship).",
+      "raw_description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Forecasting+%26+Inventory+Analyst+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Forecasting+%26+Inventory+Analyst+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/demand-forecasting-inventory-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.flipkartcareers.com/",
+      "title": "Demand Forecasting & Inventory Analyst",
+      "company": "Flipkart",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.973,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 22:43",
+      "hours_ago": 2,
+      "relative_time": "2 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "flipkartcareers.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "sql",
+        "time_series",
+        "forecasting",
+        "arima",
+        "prophet",
+        "xgboost"
+      ],
+      "missing_skills": [],
+      "description": "Flipkart Supply Chain Analytics is hiring a Demand Forecasting Analyst in Bengaluru. Build time series models (ARIMA, Prophet, XGBoost), analyze demand seasonality, write SQL queries, and optimize safety stock parameters. Freshers and 0-1 year graduates welcome.",
+      "raw_description": "Flipkart Supply Chain Analytics is hiring a Demand Forecasting Analyst in Bengaluru. Build time series models (ARIMA, Prophet, XGBoost), analyze demand seasonality, write SQL queries, and optimize safety stock parameters. Freshers and 0-1 year graduates welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/applied-machine-learning-engineer-jobs-in-india?experience=0",
+      "company_url": "https://careers.jio.com/",
+      "title": "Applied Machine Learning Engineer - Fresher",
+      "company": "Jio AI COE",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.971,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.jio.com",
+      "is_fresher": true,
       "matched_skills": [
         "python",
+        "docker",
+        "fastapi",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
+      "raw_description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Amazon&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Amazon&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/applied-scientist-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.amazon.jobs/en/",
+      "title": "Applied Scientist Intern",
+      "company": "Amazon",
+      "location": "Hyderabad / Bengaluru, India",
+      "score": 0.971,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "amazon.jobs",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "machine_learning",
+        "deep_learning",
+        "nlp"
+      ],
+      "missing_skills": [],
+      "description": "Amazon India is hiring Applied Scientist Interns. Build machine learning and statistical models for e-commerce ranking, search relevance, PyTorch deep learning, and large-scale NLP inference. Campus freshers welcome.",
+      "raw_description": "Amazon India is hiring Applied Scientist Interns. Build machine learning and statistical models for e-commerce ranking, search relevance, PyTorch deep learning, and large-scale NLP inference. Campus freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/machine-learning-engineer-jobs-in-india?experience=0",
+      "company_url": "https://careers.jio.com/",
+      "title": "Machine Learning Engineer - Fresher / New Grad",
+      "company": "Jio AI COE",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.971,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.jio.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "docker",
+        "fastapi",
+        "machine_learning"
+      ],
+      "missing_skills": [],
+      "description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
+      "raw_description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Engineer+%2F+ETL+Trainee+LatentView+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Engineer+%2F+ETL+Trainee+LatentView+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-data-engineer-etl-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.latentview.com/careers/",
+      "title": "Junior Data Engineer / ETL Trainee",
+      "company": "LatentView Analytics",
+      "location": "Chennai / Bengaluru, India",
+      "score": 0.971,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 21:43",
+      "hours_ago": 3,
+      "relative_time": "3 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "latentview.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "python",
+        "sql",
+        "dbt",
+        "etl"
+      ],
+      "missing_skills": [],
+      "description": "LatentView Analytics is hiring a Junior Data Engineer / ETL Trainee across Chennai and Bengaluru. 0 to 1 years experience. Build SQL transformations, dbt data models, Python ETL pipelines, and warehouse schemas.",
+      "raw_description": "LatentView Analytics is hiring a Junior Data Engineer / ETL Trainee across Chennai and Bengaluru. 0 to 1 years experience. Build SQL transformations, dbt data models, Python ETL pipelines, and warehouse schemas.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Optimization+%26+Operations+Research+Trainee+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Optimization+%26+Operations+Research+Trainee+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/optimization-operations-research-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.inmobi.com/company/careers",
+      "title": "Optimization & Operations Research Trainee",
+      "company": "InMobi",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.971,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "inmobi.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "operations_research",
+        "linear_programming",
         "optimization",
         "pulp"
       ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Maersk India is hiring an Optimization Trainee. Work on container repositioning models, terminal scheduling constraints, linear optimization, and Python PuLP/SciPy. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Maersk India's Linear Programming & Network Optimization Trainee: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      }
+      "missing_skills": [],
+      "description": "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com.",
+      "raw_description": "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com.",
+      "contact_email": "optimization@inmobi.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Neha Bansal (Lead Optimization Scientist @ InMobi)"
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Confluent+Data+Engineer+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Streaming Data Platform Trainee (Kafka/Flink)",
-      "company": "Confluent",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Student+Researcher+%2F+AI+Research+Intern+Google&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Student+Researcher+%2F+AI+Research+Intern+Google&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/student-researcher-ai-research-intern-jobs-in-india?experience=0",
+      "company_url": "https://careers.google.com/",
+      "title": "Student Researcher / AI Research Intern",
+      "company": "Google",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.91,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-10-20 12:54",
-      "hours_ago": 9,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://careers.confluent.io/",
-      "matched_skills": [
-        "python"
-      ],
-      "missing_skills": [
-        "dbt Transformations & Data Modeling",
-        "Workflow Orchestration",
-        "Automated Data Quality & Schema Testing"
-      ],
-      "description": "Confluent Bengaluru is hiring a Data Platform Trainee. Focus on event streaming architectures, Apache Kafka pipelines, real-time transformations in Flink, and Python integrations. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "dbt Transformations & Data Modeling",
-            "impact": "High Impact",
-            "category": "Analytics Engineering",
-            "action": "Design a Kimball star-schema dimensional model with dbt staging, intermediate, and mart SQL models."
-          },
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For Confluent's Streaming Data Platform Trainee (Kafka/Flink): Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
-    },
-    {
-      "url": "https://www.naukri.com/decision-scientist-jobs-in-mumbai?k=Ugam+Decision+Scientist&experience=0&days=1&sortBy=date",
-      "title": "Associate Decision Scientist",
-      "company": "Ugam (A Merkle Company)",
-      "location": "Mumbai / Bengaluru, India",
-      "score": 0.902,
-      "tier": 3,
-      "category": "Decision Science",
-      "priority": "Primary",
-      "badge": "🥉",
-      "posted_at": "2026-10-20 12:54",
-      "hours_ago": 9,
-      "source_type": "Naukri",
-      "source_domain": "naukri.com",
-      "is_fresher": true,
-      "company_url": "https://www.ugamsolutions.com/careers",
-      "matched_skills": [
-        "python",
-        "sql"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing",
-        "Quasi-Experimentation & Synthetic Controls"
-      ],
-      "description": "Ugam is hiring Associate Decision Scientists across Mumbai and Bengaluru. Conduct exploratory analysis, decision modeling, A/B testing evaluation, and write Python/SQL queries. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "90% Core Match",
-        "gap_percentage": "10% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          },
-          {
-            "skill": "Quasi-Experimentation & Synthetic Controls",
-            "impact": "Medium Impact",
-            "category": "Analytics",
-            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
-          }
-        ],
-        "bridge_roadmap": "For Ugam (A Merkle Company)'s Associate Decision Scientist: Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Cars24+Operations+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Business Operations & Analytics Trainee",
-      "company": "Cars24",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.888,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-10-20 12:54",
-      "hours_ago": 9,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "company_url": "https://www.cars24.com/careers/",
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "3-Statement Financial & Unit Economics Modeling",
-        "Market Sizing & TAM Estimation",
-        "Executive Board Deck & Memo Synthesis"
-      ],
-      "description": "Cars24 Gurugram is hiring a Business Operations & Analytics Trainee. Coordinate regional vehicle procurement workflows, analyze operational turnaround times (TAT), and build SQL dashboards. 0-1 year experience.",
-      "semantic_skill_gap": {
-        "fit_percentage": "88% Core Match",
-        "gap_percentage": "12% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Cars24's Business Operations & Analytics Trainee: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Databricks+Associate+Solutions+Engineer+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "University Grad Associate Solutions Engineer (Data/AI)",
-      "company": "Databricks",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 1.0,
+      "score": 0.969,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 11:54",
-      "hours_ago": 10,
-      "source_type": "LinkedIn",
-      "source_domain": "databricks.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.google.com",
       "is_fresher": true,
-      "company_url": "https://www.databricks.com/company/careers",
       "matched_skills": [
-        "python",
-        "sql"
+        "machine_learning",
+        "deep_learning",
+        "nlp"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Databricks India is hiring University Grad Associate Solutions Engineers. Help customers architect Lakehouse solutions using Apache Spark, Delta Lake, MLflow, and Python/SQL. Campus freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Databricks's University Grad Associate Solutions Engineer (Data/AI): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "missing_skills": [],
+      "description": "Google Research India in Bengaluru invites applications for Student Researcher / AI Research Internships. Conduct cutting-edge machine learning research in deep learning, NLP, computer vision, and responsible AI. 0 years required.",
+      "raw_description": "Google Research India in Bengaluru invites applications for Student Researcher / AI Research Internships. Conduct cutting-edge machine learning research in deep learning, NLP, computer vision, and responsible AI. 0 years required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Meesho+Program+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Program Management & Fulfillment Associate (Fresher)",
-      "company": "Meesho",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.996,
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI+Research+%26+Deep+Learning+Intern+NVIDIA&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Research+%26+Deep+Learning+Intern+NVIDIA&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ai-research-deep-learning-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "title": "AI Research & Deep Learning Intern",
+      "company": "NVIDIA",
+      "location": "Pune / Bengaluru, India",
+      "score": 0.969,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20 11:54",
-      "hours_ago": 10,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 16:43",
+      "hours_ago": 8,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "nvidia.com",
       "is_fresher": true,
-      "company_url": "https://www.meesho.io/jobs",
       "matched_skills": [
-        "sql",
-        "excel"
+        "pytorch",
+        "deep_learning",
+        "optimization"
       ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Meesho Bengaluru is hiring a Fulfillment Program Associate. Analyze supplier dispatch reliability, logistics partner SLA tracking, and manage fulfillment analytics in SQL and Excel. Freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Meesho's Program Management & Fulfillment Associate (Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      "missing_skills": [],
+      "description": "NVIDIA India is looking for an AI Research and Deep Learning Intern. Focus on accelerated computing, LLM optimization (TensorRT-LLM), PyTorch model profiling, and GPU neural networks. 0 years experience required.",
+      "raw_description": "NVIDIA India is looking for an AI Research and Deep Learning Intern. Focus on accelerated computing, LLM optimization (TensorRT-LLM), PyTorch model profiling, and GPU neural networks. 0 years experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Ola+Electric+Machine+Learning+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fleet+Routing+%26+Operations+Research+Trainee+Porter&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fleet+Routing+%26+Operations+Research+Trainee+Porter&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/fleet-routing-operations-research-trainee-jobs-in-india?experience=0",
+      "company_url": "https://porter.in/careers",
+      "title": "Fleet Routing & Operations Research Trainee",
+      "company": "Porter",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.969,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 18:43",
+      "hours_ago": 6,
+      "relative_time": "6 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "porter.in",
+      "is_fresher": true,
+      "matched_skills": [
+        "operations_research",
+        "linear_programming",
+        "integer_programming"
+      ],
+      "missing_skills": [],
+      "description": "Porter Logistics Bengaluru is hiring an Operations Research Trainee. Formulate mathematical programming models (Linear Programming, Integer Programming) for intracity fleet dispatch. 0-1 year experience.",
+      "raw_description": "Porter Logistics Bengaluru is hiring an Operations Research Trainee. Formulate mathematical programming models (Linear Programming, Integer Programming) for intracity fleet dispatch. 0-1 year experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI+%2F+Applied+ML+Research+Intern+Microsoft&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+%2F+Applied+ML+Research+Intern+Microsoft&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ai-applied-ml-research-intern-jobs-in-india?experience=0",
+      "company_url": "https://careers.microsoft.com/v2/global/en/home.html",
+      "title": "AI / Applied ML Research Intern",
+      "company": "Microsoft",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.966,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 22:43",
+      "hours_ago": 2,
+      "relative_time": "2 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.microsoft.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "deep_learning"
+      ],
+      "missing_skills": [],
+      "description": "Microsoft Research India in Bengaluru is hiring an Applied ML Research Intern. Work on state-of-the-art deep learning, LLM fine-tuning, PyTorch implementations, and novel AI architectures. 0 years experience required (open to final year students and 2025/2026 fresh graduates).",
+      "raw_description": "Microsoft Research India in Bengaluru is hiring an Applied ML Research Intern. Work on state-of-the-art deep learning, LLM fine-tuning, PyTorch implementations, and novel AI architectures. 0 years experience required (open to final year students and 2025/2026 fresh graduates).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+%26+Computer+Vision+Intern+Adobe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+%26+Computer+Vision+Intern+Adobe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/applied-ml-computer-vision-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.adobe.com/careers.html",
+      "title": "Applied ML & Computer Vision Intern",
+      "company": "Adobe",
+      "location": "Noida / Bengaluru, India",
+      "score": 0.966,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "adobe.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "deep_learning"
+      ],
+      "missing_skills": [],
+      "description": "Adobe India is hiring an Applied ML & Computer Vision Intern. Explore diffusion models, neural rendering, deep learning with PyTorch, and multimodal generative AI. Open to fresh graduates and campus interns.",
+      "raw_description": "Adobe India is hiring an Applied ML & Computer Vision Intern. Explore diffusion models, neural rendering, deep learning with PyTorch, and multimodal generative AI. Open to fresh graduates and campus interns.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+Research+Intern+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+Research+Intern+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/applied-ml-research-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.sarvam.ai/",
+      "title": "Applied ML Research Intern (LLMs & Vision)",
+      "company": "Sarvam AI",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.966,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "sarvam.ai",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "deep_learning"
+      ],
+      "missing_skills": [],
+      "description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
+      "raw_description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
+      "contact_email": "research@sarvam.ai",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Vivek Raghavan (Co-Founder @ Sarvam AI)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/applied-scientist-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.flipkartcareers.com/",
+      "title": "Applied Scientist Intern (GenAI & Recommendations)",
+      "company": "Flipkart",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.966,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 22:43",
+      "hours_ago": 2,
+      "relative_time": "2 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "flipkart.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "deep_learning"
+      ],
+      "missing_skills": [],
+      "description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
+      "raw_description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
+      "contact_email": "applied-scientist@flipkart.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Vehicle+Telemetry+%26+Applied+ML+Engineer+Ola+Electric&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Vehicle+Telemetry+%26+Applied+ML+Engineer+Ola+Electric&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/vehicle-telemetry-applied-ml-engineer-jobs-in-india?experience=0",
+      "company_url": "https://olaelectric.com/careers",
       "title": "Vehicle Telemetry & Applied ML Engineer",
       "company": "Ola Electric",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.773,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-20 11:54",
+      "score": 0.963,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 14:43",
       "hours_ago": 10,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "relative_time": "10 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "olaelectric.com",
       "is_fresher": true,
-      "company_url": "https://olaelectric.com/careers",
       "matched_skills": [
         "python",
         "docker",
         "fastapi"
       ],
-      "missing_skills": [
-        "Model Registry & Drift Monitoring"
-      ],
+      "missing_skills": [],
       "description": "Ola Electric is hiring a Fresher ML Engineer. Build predictive maintenance algorithms, vehicle sensor time-series processing, and FastAPI services in Python and Docker. Campus freshers welcome.",
-      "semantic_skill_gap": {
-        "fit_percentage": "77% Core Match",
-        "gap_percentage": "23% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Ola Electric's Vehicle Telemetry & Applied ML Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      "raw_description": "Ola Electric is hiring a Fresher ML Engineer. Build predictive maintenance algorithms, vehicle sensor time-series processing, and FastAPI services in Python and Docker. Campus freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Hasura+AI+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Applied AI/ML Systems Trainee",
-      "company": "Hasura",
-      "location": "Bengaluru / Remote, India",
-      "score": 0.99,
-      "tier": 1,
-      "category": "Applied ML / Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-20 10:54",
-      "hours_ago": 11,
-      "source_type": "LinkedIn",
-      "source_domain": "hasura.io",
-      "is_fresher": true,
-      "company_url": "https://hasura.io/careers/",
-      "matched_skills": [
-        "python",
-        "docker"
-      ],
-      "missing_skills": [
-        "PyTorch Distributed Training & PEFT",
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
-      ],
-      "description": "Hasura is hiring an Applied AI/ML Systems Trainee. Build GraphQL-based vector connectors, semantic search query planners, and microservice wrappers in Python and Docker. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "PyTorch Distributed Training & PEFT",
-            "impact": "High Impact",
-            "category": "Deep Learning",
-            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
-          },
-          {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
-            "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
-          }
-        ],
-        "bridge_roadmap": "For Hasura's Applied AI/ML Systems Trainee: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Cloudera+Software+Engineer+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
-      "title": "Software Engineering Intern - Big Data Platform",
-      "company": "Cloudera",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=GenAI+%26+Speech+LLM+Research+Trainee+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=GenAI+%26+Speech+LLM+Research+Trainee+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/genai-speech-llm-research-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.sarvam.ai/",
+      "title": "GenAI & Speech LLM Research Trainee",
+      "company": "Sarvam AI",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.807,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-10-20 10:54",
-      "hours_ago": 11,
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "score": 0.956,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "sarvam.ai",
       "is_fresher": true,
-      "company_url": "https://www.cloudera.com/about/careers.html",
       "matched_skills": [
-        "python"
+        "pytorch",
+        "llms"
       ],
-      "missing_skills": [
-        "dbt Transformations & Data Modeling",
-        "Workflow Orchestration",
-        "Automated Data Quality & Schema Testing"
+      "missing_skills": [],
+      "description": "Sarvam AI Bengaluru is hiring a Research Trainee for Indic language models, speech LLMs, and foundation model training with PyTorch and CUDA. Fresh graduates with strong mathematical foundations welcome.",
+      "raw_description": "Sarvam AI Bengaluru is hiring a Research Trainee for Indic language models, speech LLMs, and foundation model training with PyTorch and CUDA. Fresh graduates with strong mathematical foundations welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-machine-learning-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.postman.com/company/careers/",
+      "title": "Junior Machine Learning Engineer (MLOps)",
+      "company": "Postman",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.949,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "LinkedIn Post",
+      "source_domain": "postman.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "docker",
+        "fastapi",
+        "machine_learning"
       ],
-      "description": "Cloudera Bengaluru is hiring a Software Engineering Intern for their Big Data platform. Work on distributed storage systems, Hive metastore, Spark optimizations, and Python telemetry scripts. 0 years experience required.",
-      "semantic_skill_gap": {
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "dbt Transformations & Data Modeling",
-            "impact": "High Impact",
-            "category": "Analytics Engineering",
-            "action": "Design a Kimball star-schema dimensional model with dbt staging, intermediate, and mart SQL models."
-          },
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For Cloudera's Software Engineering Intern - Big Data Platform: Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
+      "missing_skills": [],
+      "description": "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn.",
+      "raw_description": "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn.",
+      "contact_email": "ml-hiring@postman.com",
+      "outreach_dm": null,
+      "is_post": true,
+      "post_author": "Rajesh Menon (VP Engineering @ Postman)"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Krutrim+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Krutrim+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/junior-machine-learning-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.olakrutrim.com",
+      "title": "Junior Machine Learning Engineer (Speech AI)",
+      "company": "Krutrim AI",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.946,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-21 22:43",
+      "hours_ago": 26.0,
+      "relative_time": "1 day ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "olakrutrim.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "pytorch",
+        "docker",
+        "fastapi",
+        "nlp"
+      ],
+      "missing_skills": [],
+      "description": "Krutrim Bengaluru is seeking a Junior ML Engineer for speech recognition, LLM fine-tuning, and Indic NLP models using PyTorch, FastAPI, and Docker. 0-1 years experience.",
+      "raw_description": "Krutrim Bengaluru is seeking a Junior ML Engineer for speech recognition, LLM fine-tuning, and Indic NLP models using PyTorch, FastAPI, and Docker. 0-1 years experience.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Intern+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Intern+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-product-manager-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.zeptonow.com",
+      "title": "Associate Product Manager Intern (APM Batch 2025/2026)",
+      "company": "Zepto",
+      "location": "Mumbai / Bengaluru, India",
+      "score": 0.916,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-21 14:43",
+      "hours_ago": 34.0,
+      "relative_time": "1 day ago",
+      "source_type": "Direct ATS",
+      "source_domain": "zepto.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [],
+      "description": "Zepto is hiring an APM Intern. Conduct user telemetry analysis, track warehouse operational funnels, define feature specs, and run A/B tests for quick commerce apps.",
+      "raw_description": "Zepto is hiring an APM Intern. Conduct user telemetry analysis, track warehouse operational funnels, define feature specs, and run A/B tests for quick commerce apps.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Platform+Engineer+Sprinklr&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Platform+Engineer+Sprinklr&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ai-ml-platform-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.sprinklr.com/careers/",
+      "title": "AI/ML Platform Engineer - Fresher",
+      "company": "Sprinklr",
+      "location": "Gurugram / Bengaluru, India",
+      "score": 0.916,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 17:43",
+      "hours_ago": 7,
+      "relative_time": "7 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "sprinklr.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [],
+      "description": "Sprinklr India is hiring a Fresher AI/ML Platform Engineer. Develop high-throughput model serving pipelines, model registry integrations, Triton inference servers, and Kafka data streams. Freshers welcome.",
+      "raw_description": "Sprinklr India is hiring a Fresher AI/ML Platform Engineer. Develop high-throughput model serving pipelines, model registry integrations, Triton inference servers, and Kafka data streams. Freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Video+Editor+%26+Media+Intern+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Video+Editor+%26+Media+Intern+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/video-editor-media-intern-jobs-in-india?experience=0",
+      "company_url": "https://groww.in/careers",
+      "title": "Video Editor & Media Intern (Product Telemetry & User Growth)",
+      "company": "Groww",
+      "location": "Bengaluru, India",
+      "score": 0.916,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "groww.in",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [],
+      "description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship).",
+      "raw_description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Associate%2C+Apprenticeship+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Associate%2C+Apprenticeship+Stripe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/operations-associate-apprenticeship-jobs-in-india?experience=0",
+      "company_url": "https://stripe.com/jobs/search?locations=India",
+      "title": "Operations Associate, Apprenticeship (Early Career)",
+      "company": "Stripe",
+      "location": "Bengaluru, India",
+      "score": 0.916,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 20:43",
+      "hours_ago": 4,
+      "relative_time": "4 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "stripe.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [],
+      "description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required.",
+      "raw_description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Recruiter+MongoDB&location=India&f_TPR=r86400&f_E=1%2C2",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Recruiter+MongoDB&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/associate-recruiter-jobs-in-india?experience=0",
+      "company_url": "https://www.mongodb.com/company/careers",
+      "title": "Associate Recruiter (Talent Operations & Sourcing)",
+      "company": "MongoDB",
+      "location": "Gurugram, India",
+      "score": 0.916,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "\ud83e\udd48",
+      "posted_at": "2026-10-22 19:43",
+      "hours_ago": 5,
+      "relative_time": "5 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "mongodb.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [],
+      "description": "MongoDB Gurugram is hiring an Associate Recruiter. Analyze recruiting pipeline data, manage talent community engagement, use Greenhouse and analytics tools. Experience preferred but not required, entry level welcome.",
+      "raw_description": "MongoDB Gurugram is hiring an Associate Recruiter. Analyze recruiting pipeline data, manage talent community engagement, use Greenhouse and analytics tools. Experience preferred but not required, entry level welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null
     }
   ],
   "stats": {
-    "total_jobs_evaluated": 82,
-    "primary_matches": 70,
-    "secondary_matches": 6,
-    "adjacent_matches": 6,
-    "last_sync": "2026-10-23 01:20"
-  },
-  "total_jobs": 82,
-  "last_updated": "2026-10-23 01:20"
+    "total_matches": 91,
+    "primary_matches": 91,
+    "secondary_matches": 0,
+    "adjacent_matches": 0,
+    "avg_score": 0.983,
+    "top_categories": [
+      "Data Science"
+    ]
+  }
 };

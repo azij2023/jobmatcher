@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261023_v1">
   <script>
     (function() {
       try {
@@ -75,15 +75,86 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-badge">
-        <span class="sparkle">✨</span> Prioritized Fresher & Early Career Job Pipeline (0–1 Year Experience)
+        <span class="sparkle">⚡</span> Real-Time Freshness Engine • Last Minute to 2 Days (0m – 48h)
       </div>
       <h1 class="hero-title">
-        Targeted Job Matcher & <span class="gradient-text">Priority Engine</span>
+        Verified Entry-Level <span class="gradient-text">Job Search</span>
       </h1>
       <p class="hero-subtitle">
-        Automated parsing, hard entry-level seniority gates, and multi-tier priority scoring for 
-        <strong>Applied ML, Data Science, Decision Science, Operations Research, Forecasting, and Adjacent Roles</strong>.
+        Instant real-time search across verified live postings in India from <strong>the last minute up to the last 2 days</strong>. 
+        Strictly <strong>0–2 years experience</strong> (fresher, intern, early-career) across Applied ML, Data Science, Decision Science, Optimization & Engineering.
       </p>
+
+      <!-- Prominent Job Search Console -->
+      <div class="job-search-hero-console" id="job-search-hero-console">
+        <div class="search-console-inputs">
+          <!-- Role / Skill Search Field -->
+          <div class="search-input-field search-field-role">
+            <span class="field-icon">💼</span>
+            <div class="field-content">
+              <label for="hero-search-role">Role, Skill or Keyword</label>
+              <input type="text" id="hero-search-role" placeholder="e.g. Applied ML, Data Scientist, Python, Decision Science..." autocomplete="off">
+            </div>
+            <button class="clear-field-btn" id="hero-clear-role" title="Clear keyword" style="display:none;">✕</button>
+          </div>
+
+          <div class="search-divider"></div>
+
+          <!-- Location Selector -->
+          <div class="search-input-field search-field-loc">
+            <span class="field-icon">📍</span>
+            <div class="field-content">
+              <label for="hero-search-location">Location (India)</label>
+              <select id="hero-search-location">
+                <option value="all" selected>🇮🇳 All India (Bengaluru, Hyderabad, Pune, Gurugram...)</option>
+                <option value="bengaluru">Bengaluru / Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="pune">Pune</option>
+                <option value="gurugram">Gurugram / Noida / Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="remote">Remote - India</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="search-divider"></div>
+
+          <!-- Freshness Window Selector (Default: Last Minute to 2 Days) -->
+          <div class="search-input-field search-field-freshness">
+            <span class="field-icon">⏱️</span>
+            <div class="field-content">
+              <label for="hero-search-freshness">Freshness Window</label>
+              <select id="hero-search-freshness">
+                <option value="48" selected>⚡ Last Minute to 2 Days (Past 48h)</option>
+                <option value="1">⏱️ Last 1 Hour (0–60 mins)</option>
+                <option value="12">🔥 Past 12 Hours</option>
+                <option value="24">⭐ Past 24 Hours (Today)</option>
+                <option value="48">📅 Past 48 Hours (2 Days Max)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- The Core Job Search Button -->
+          <button class="btn-job-search" id="btn-hero-job-search" type="button" title="Click to search valid jobs posted from last minute to last 2 days">
+            <span class="search-btn-icon" id="hero-search-btn-icon">🔍</span>
+            <span class="search-btn-text" id="hero-search-btn-text">Search Jobs</span>
+            <span class="search-btn-badge">0m – 48h</span>
+          </button>
+        </div>
+
+        <!-- Quick Search Tags -->
+        <div class="quick-search-tags" id="quick-search-tags">
+          <span class="quick-label">⚡ Popular Quick Filters:</span>
+          <button class="quick-pill active" data-role="" data-hours="48">🔥 All Valid (0m to 2 Days)</button>
+          <button class="quick-pill" data-role="Applied ML" data-hours="48">🤖 Applied ML / AI</button>
+          <button class="quick-pill" data-role="Data Science" data-hours="48">📊 Data Science</button>
+          <button class="quick-pill" data-role="Decision Science" data-hours="48">🎯 Decision Science</button>
+          <button class="quick-pill" data-role="Optimization" data-hours="48">📦 OR / Optimization</button>
+          <button class="quick-pill" data-role="Product" data-hours="48">🚀 Product & Strategy</button>
+          <button class="quick-pill" data-role="" data-hours="1">⏱️ Just Posted (&lt; 1h)</button>
+          <button class="quick-pill" data-role="" data-hours="24">📅 Today (&lt; 24h)</button>
+        </div>
+      </div>
 
       <!-- Stats Grid -->
       <div class="stats-grid" id="stats-grid">
@@ -172,11 +243,26 @@
           </div>
 
           <div class="control-group">
+            <label for="location-select">Location (India):</label>
+            <select id="location-select">
+              <option value="all" selected>All India</option>
+              <option value="bengaluru">Bengaluru / Bangalore</option>
+              <option value="hyderabad">Hyderabad</option>
+              <option value="pune">Pune</option>
+              <option value="gurugram">Gurugram / Noida</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="remote">Remote - India</option>
+            </select>
+          </div>
+
+          <div class="control-group">
             <label for="freshness-select">Freshness:</label>
             <select id="freshness-select">
-              <option value="24" selected>⚡ Past 24 Hours (Today)</option>
-              <option value="48">📅 Past 48 Hours</option>
-              <option value="72">🕒 Past 72 Hours (Max)</option>
+              <option value="48" selected>⚡ Last Minute to 2 Days (Past 48h)</option>
+              <option value="1">⏱️ Past 1 Hour (0–60m)</option>
+              <option value="12">🔥 Past 12 Hours</option>
+              <option value="24">⭐ Past 24 Hours (Today)</option>
+              <option value="48">📅 Past 48 Hours (2 Days Max)</option>
             </select>
           </div>
 
@@ -209,6 +295,21 @@
         <button class="chip" data-chip="7">7 Tier 7: Forecasting</button>
         <button class="chip" data-chip="8">8 Tier 8: ML Engineering</button>
         <button class="chip" data-chip="9">9 Tier 9: Data Eng</button>
+      </div>
+
+      <!-- Live Search Results Header Banner -->
+      <div class="search-results-banner" id="search-results-banner">
+        <div class="banner-content">
+          <div class="banner-headline-row">
+            <h2 class="banner-headline" id="banner-headline">
+              🎯 Found <span id="banner-job-count" class="highlight-count">0</span> Valid Jobs Posted Between Last Minute & 2 Days Ago
+            </h2>
+            <span class="banner-pill" id="banner-scope-pill">⏱️ 0m – 48h Live Window</span>
+          </div>
+          <p class="banner-caption" id="banner-caption">
+            Strictly 0–2 Years Experience • Verified Indian tech hubs & Remote • Updated just now
+          </p>
+        </div>
       </div>
 
       <!-- Results Info -->
@@ -746,17 +847,17 @@
       </div>
 
       <div class="modal-footer">
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" id="modal-apply-linkedin">
-          <span>Apply on Platform ↗</span>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" id="modal-apply-linkedin">
+          <span>💼 Apply on LinkedIn (Past 24h & Fresher) ↗</span>
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-apply-company">
-          <span>🏢 Company Careers Portal ↗</span>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-naukri-link" id="modal-apply-google">
+          <span>🔷 Apply on Naukri (0 Yrs Exp) ↗</span>
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="modal-apply-google">
-          <span>🔍 Google Jobs Search ↗</span>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="modal-apply-company" style="display:none;">
+          <span>✉️ Email Recruiter</span>
         </a>
         <button class="btn btn-secondary" id="modal-copy-btn">
-          <span>📋 Copy Info</span>
+          <span>📋 Copy Links</span>
         </button>
       </div>
     </div>
@@ -766,7 +867,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261021"></script>
-  <script src="app.js?v=20261021"></script>
+  <script src="data.js?v=20261023_v1"></script>
+  <script src="app.js?v=20261023_v1"></script>
 </body>
 </html>

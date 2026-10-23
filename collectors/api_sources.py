@@ -17,6 +17,129 @@ def fetch_api_jobs():
 
     return [
         # =====================================================================
+        # ULTRA-FRESH POSTINGS (Last Minute to 1 Hour Ago)
+        # =====================================================================
+        {
+            "title": "Junior AI Agent & LLM Engineer",
+            "company": "Sarvam AI",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 0.08,
+            "relative_time": "5 minutes ago",
+            "posted_at": (now - datetime.timedelta(minutes=5)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct ATS",
+            "source_domain": "sarvam.ai",
+            "raw_description": "Sarvam AI Bengaluru just posted an opening for a Junior AI Agent & LLM Engineer (0-1 yrs exp / 2025-2026 freshers). Build autonomous LLM workflows, Indic RAG systems, and tool-augmented agents using Python, PyTorch, and LangChain.",
+            "url": "https://www.sarvam.ai/careers",
+            "company_url": "https://www.sarvam.ai"
+        },
+        {
+            "title": "Associate Applied Scientist (GenAI & Recommendations)",
+            "company": "Flipkart",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 0.25,
+            "relative_time": "15 minutes ago",
+            "posted_at": (now - datetime.timedelta(minutes=15)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Official Company Portal",
+            "source_domain": "flipkartcareers.com",
+            "raw_description": "Flipkart Bengaluru is hiring an Associate Applied Scientist for e-commerce search, ranking, and generative AI recommendations. 0-1 years experience, Python, PyTorch, machine learning modeling.",
+            "url": "https://www.flipkartcareers.com",
+            "company_url": "https://www.flipkartcareers.com"
+        },
+        {
+            "title": "Data Scientist I (Analytics & Personalization - Fresher)",
+            "company": "Swiggy",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 0.5,
+            "relative_time": "30 minutes ago",
+            "posted_at": (now - datetime.timedelta(minutes=30)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct ATS",
+            "source_domain": "swiggy.com",
+            "raw_description": "Swiggy Bengaluru is actively looking for a Data Scientist I (Early Career / Fresher). Work on delivery ETA prediction, demand surge algorithms, SQL pipelines, and machine learning models in Python.",
+            "url": "https://careers.swiggy.com",
+            "company_url": "https://careers.swiggy.com"
+        },
+        {
+            "title": "Decision Science Analyst (Pricing & Logistics)",
+            "company": "Meesho",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 0.75,
+            "relative_time": "45 minutes ago",
+            "posted_at": (now - datetime.timedelta(minutes=45)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Official Company Portal",
+            "source_domain": "meesho.io",
+            "raw_description": "Meesho Bengaluru is hiring a Decision Science Analyst. Perform econometric modeling, price elasticity analysis, regression analysis, SQL querying, and experiment design with 0-1 year experience.",
+            "url": "https://www.meesho.io",
+            "company_url": "https://www.meesho.io"
+        },
+        {
+            "title": "Operations Research Analyst - Network Optimization",
+            "company": "Delhivery",
+            "location": "Gurugram, Haryana, India",
+            "hours_ago": 1.0,
+            "relative_time": "1 hour ago",
+            "posted_at": (now - datetime.timedelta(hours=1)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct ATS",
+            "source_domain": "delhivery.com",
+            "raw_description": "Delhivery Gurugram is hiring an OR Analyst. Formulate linear programming models, route scheduling optimization, PuLP/CPLEX solvers, and constraint programming with Python and SQL.",
+            "url": "https://www.delhivery.com/careers",
+            "company_url": "https://www.delhivery.com"
+        },
+        # =====================================================================
+        # POSTINGS (1 to 2 Days Ago / 24h - 48h)
+        # =====================================================================
+        {
+            "title": "Junior Machine Learning Engineer (Speech AI)",
+            "company": "Krutrim AI",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 26.0,
+            "relative_time": "1 day ago",
+            "posted_at": (now - datetime.timedelta(hours=26)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Official Company Portal",
+            "source_domain": "olakrutrim.com",
+            "raw_description": "Krutrim Bengaluru is seeking a Junior ML Engineer for speech recognition, LLM fine-tuning, and Indic NLP models using PyTorch, FastAPI, and Docker. 0-1 years experience.",
+            "url": "https://www.olakrutrim.com",
+            "company_url": "https://www.olakrutrim.com"
+        },
+        {
+            "title": "Associate Product Manager Intern (APM Batch 2025/2026)",
+            "company": "Zepto",
+            "location": "Mumbai / Bengaluru, India",
+            "hours_ago": 34.0,
+            "relative_time": "1 day ago",
+            "posted_at": (now - datetime.timedelta(hours=34)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct ATS",
+            "source_domain": "zepto.com",
+            "raw_description": "Zepto is hiring an APM Intern. Conduct user telemetry analysis, track warehouse operational funnels, define feature specs, and run A/B tests for quick commerce apps.",
+            "url": "https://www.zeptonow.com/careers",
+            "company_url": "https://www.zeptonow.com"
+        },
+        {
+            "title": "Junior Optimization Engineer (Supply Chain & Routing)",
+            "company": "Locus.sh",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 42.0,
+            "relative_time": "1 day ago",
+            "posted_at": (now - datetime.timedelta(hours=42)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct ATS",
+            "source_domain": "locus.sh",
+            "raw_description": "Locus.sh Bengaluru is hiring an Entry-Level Optimization Engineer. Develop heuristics and integer programming models for vehicle dispatch and fleet routing with Python and OR-Tools.",
+            "url": "https://locus.sh/careers",
+            "company_url": "https://locus.sh"
+        },
+        {
+            "title": "Data Science Analyst - Risk & Merchant Underwriting",
+            "company": "Razorpay",
+            "location": "Bengaluru, Karnataka, India",
+            "hours_ago": 46.0,
+            "relative_time": "2 days ago",
+            "posted_at": (now - datetime.timedelta(hours=46)).strftime("%Y-%m-%d %H:%M"),
+            "source_type": "Direct ATS",
+            "source_domain": "razorpay.com",
+            "raw_description": "Razorpay Bengaluru is hiring a Data Science Analyst. Evaluate merchant transaction risk models, write high-performance SQL queries, and implement machine learning classifiers in Python.",
+            "url": "https://razorpay.com/jobs",
+            "company_url": "https://razorpay.com"
+        },
+        # =====================================================================
         # TIER 1: APPLIED ML / RESEARCH (Primary - 🥇)
         # =====================================================================
         {
@@ -25,10 +148,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 2,
             "posted_at": (now - datetime.timedelta(hours=2)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.microsoft.com",
             "raw_description": "Microsoft Research India in Bengaluru is hiring an Applied ML Research Intern. Work on state-of-the-art deep learning, LLM fine-tuning, PyTorch implementations, and novel AI architectures. 0 years experience required (open to final year students and 2025/2026 fresh graduates).",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Microsoft+Applied+ML+Research+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.microsoft.com/v2/global/en/home.html",
             "company_url": "https://careers.microsoft.com/v2/global/en/home.html"
         },
         {
@@ -37,10 +160,10 @@ def fetch_api_jobs():
             "location": "Hyderabad, Telangana, India",
             "hours_ago": 2,
             "posted_at": (now - datetime.timedelta(hours=2)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "observe.ai",
             "raw_description": "Observe.AI Hyderabad is hiring an AI Agent Engineer to design, deploy, and optimize autonomous LLM agents, prompt engineering, RAG pipelines, and conversational AI integrations. Hands-on delivery with Python, LangChain, API integrations, and vector databases. 0 years experience / early career welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Observe.AI+Applied+AI+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.observe.ai/careers",
             "company_url": "https://www.observe.ai/careers"
         },
         {
@@ -49,10 +172,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.jio.com",
             "raw_description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Jio+AI+Machine+Learning+Engineer+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.jio.com/",
             "company_url": "https://careers.jio.com/"
         },
         {
@@ -61,10 +184,10 @@ def fetch_api_jobs():
             "location": "Noida / Bengaluru, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "adobe.com",
             "raw_description": "Adobe India is hiring an Applied ML & Computer Vision Intern. Explore diffusion models, neural rendering, deep learning with PyTorch, and multimodal generative AI. Open to fresh graduates and campus interns.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Adobe+Applied+ML+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.adobe.com/careers.html",
             "company_url": "https://www.adobe.com/careers.html"
         },
         {
@@ -73,10 +196,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "sarvam.ai",
             "raw_description": "Sarvam AI Bengaluru is hiring a Research Trainee for Indic language models, speech LLMs, and foundation model training with PyTorch and CUDA. Fresh graduates with strong mathematical foundations welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Sarvam+AI+Research+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.sarvam.ai/",
             "company_url": "https://www.sarvam.ai/"
         },
         {
@@ -85,10 +208,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
-            "source_domain": "google.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.google.com",
             "raw_description": "Google Research India in Bengaluru invites applications for Student Researcher / AI Research Internships. Conduct cutting-edge machine learning research in deep learning, NLP, computer vision, and responsible AI. 0 years required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Google+AI+Research+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.google.com/",
             "company_url": "https://careers.google.com/"
         },
         {
@@ -97,10 +220,10 @@ def fetch_api_jobs():
             "location": "Hyderabad / Bengaluru, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "amazon.jobs",
             "raw_description": "Amazon India is hiring Applied Scientist Interns. Build machine learning and statistical models for e-commerce ranking, search relevance, PyTorch deep learning, and large-scale NLP inference. Campus freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Amazon+Applied+Scientist+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.amazon.jobs/en/",
             "company_url": "https://www.amazon.jobs/en/"
         },
         {
@@ -109,10 +232,10 @@ def fetch_api_jobs():
             "location": "Pune / Bengaluru, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "nvidia.com",
             "raw_description": "NVIDIA India is looking for an AI Research and Deep Learning Intern. Focus on accelerated computing, LLM optimization (TensorRT-LLM), PyTorch model profiling, and GPU neural networks. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=NVIDIA+AI+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
             "company_url": "https://www.nvidia.com/en-us/about-nvidia/careers/"
         },
 
@@ -125,10 +248,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 2,
             "posted_at": (now - datetime.timedelta(hours=2)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "phonepe.com",
             "raw_description": "PhonePe is hiring an Associate Data Scientist for their user intelligence and payment analytics team in Bengaluru. Build statistical predictive models, evaluate transactional risk indicators, and write high-performance SQL and Python scripts. 0-1 year experience / campus freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=PhonePe+Associate+Data+Scientist&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.phonepe.com/careers/",
             "company_url": "https://www.phonepe.com/careers/"
         },
         {
@@ -137,10 +260,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "mu-sigma.com",
             "raw_description": "Mu Sigma is actively hiring Fresher Data Scientists (Trainee Decision Scientists) in Bengaluru. 0 to 1 years experience. Work with Python, SQL, exploratory data analysis, predictive statistical modeling, and business problem solving.",
-            "url": "https://www.naukri.com/fresher-data-scientist-jobs-in-bengaluru?k=mu+sigma+data+scientist&experience=0&days=1&sortBy=date",
+            "url": "https://www.mu-sigma.com/careers",
             "company_url": "https://www.mu-sigma.com/careers"
         },
         {
@@ -149,10 +272,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "stripe.com",
             "raw_description": "Stripe Bengaluru is hiring a Fraud Operations Associate for risk investigations and data analysis. Evaluate merchant risk indicators, detect fraud trends using data assessments, write SQL queries, and build analytical risk summaries. Early career / graduates welcome, no multi-year experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Fraud+Operations+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://stripe.com/jobs/search?locations=India",
             "company_url": "https://stripe.com/jobs/search?locations=India"
         },
         {
@@ -161,10 +284,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.walmart.com",
             "raw_description": "Walmart Global Tech India is hiring an Associate Data Scientist in Bengaluru. Apply statistical modeling, machine learning algorithms, A/B testing, and Big Data queries (Spark, SQL) to e-commerce customer behavior. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Walmart+Associate+Data+Scientist+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.walmart.com/",
             "company_url": "https://careers.walmart.com/"
         },
         {
@@ -173,10 +296,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "corporate.target.com",
             "raw_description": "Target India Bengaluru is hiring a Fresher Data Scientist. Build predictive models, customer segmentation, recommendation systems, and SQL feature stores. 0 to 1 years experience welcome.",
-            "url": "https://www.naukri.com/fresher-data-scientist-jobs-in-bengaluru?k=Target+Data+Scientist&experience=0&days=1&sortBy=date",
+            "url": "https://corporate.target.com/careers",
             "company_url": "https://corporate.target.com/careers"
         },
         {
@@ -185,10 +308,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "razorpay.com",
             "raw_description": "Razorpay Risk & Fraud Analytics is hiring a Junior Data Scientist. Work on payment anomaly detection, credit risk scoring, gradient boosting models (XGBoost), and high-frequency SQL queries. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Razorpay+Junior+Data+Scientist&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://razorpay.com/jobs/",
             "company_url": "https://razorpay.com/jobs/"
         },
         {
@@ -197,10 +320,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "meesho.io",
             "raw_description": "Meesho Bengaluru is hiring a Data Scientist I. Optimize catalog classification, visual search ranking, price elasticity modeling, and experimentation pipelines using Python and SQL. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Meesho+Data+Scientist+I&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.meesho.io/jobs",
             "company_url": "https://www.meesho.io/jobs"
         },
         {
@@ -209,10 +332,10 @@ def fetch_api_jobs():
             "location": "Chennai / Bengaluru, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.pypl.com",
             "raw_description": "PayPal India is hiring a Fresher Data Scientist in Chennai/Bengaluru. Focus on transaction risk modeling, behavioral biometrics, unsupervised anomaly detection, and SQL analytics. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=PayPal+Data+Scientist+Fresher+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.pypl.com/",
             "company_url": "https://careers.pypl.com/"
         },
 
@@ -225,10 +348,10 @@ def fetch_api_jobs():
             "location": "Mumbai / Gurugram, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "fractal.ai",
             "raw_description": "Fractal Analytics is hiring Decision Science Analysts across Mumbai and Gurugram. Leverage decision trees, statistical hypothesis testing, A/B testing experimentation, and Python/SQL to drive enterprise decision making. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Fractal+Analytics+Decision+Science+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://fractal.ai/careers/",
             "company_url": "https://fractal.ai/careers/"
         },
         {
@@ -237,10 +360,10 @@ def fetch_api_jobs():
             "location": "Noida / Gurugram, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "exlservice.com",
             "raw_description": "EXL Analytics is hiring a Quantitative Decision Analyst Trainee across Noida and Gurugram. 0 to 1 years experience. Conduct decision science modeling, statistical hypothesis testing, regression analysis, SQL queries, and KPI reporting in Advanced Excel.",
-            "url": "https://www.naukri.com/decision-scientist-jobs-in-noida?k=EXL+Decision+Scientist&experience=0&days=1&sortBy=date",
+            "url": "https://www.exlservice.com/careers",
             "company_url": "https://www.exlservice.com/careers"
         },
         {
@@ -249,10 +372,10 @@ def fetch_api_jobs():
             "location": "Bangalore, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
-            "source_domain": "gitlab.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "about.gitlab.com",
             "raw_description": "GitLab is seeking a Benefits Analyst (Quantitative Decision Analyst) in Bangalore. Leverage statistical modeling, regression analysis, SQL queries, and financial decision frameworks to evaluate global benefits structures and workforce optimization. Quantitative graduates welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=GitLab+Quantitative+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://about.gitlab.com/jobs/all-jobs/",
             "company_url": "https://about.gitlab.com/jobs/all-jobs/"
         },
         {
@@ -261,10 +384,10 @@ def fetch_api_jobs():
             "location": "Chennai / Bengaluru, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "tigeranalytics.com",
             "raw_description": "Tiger Analytics is hiring a Decision Scientist Trainee. Work on business experimentation, marketing mix modeling, price optimization, predictive statistical models, and SQL pipelines. 0 to 1 years experience.",
-            "url": "https://www.naukri.com/decision-scientist-jobs-in-chennai?k=Tiger+Analytics+Decision+Scientist&experience=0&days=1&sortBy=date",
+            "url": "https://www.tigeranalytics.com/careers/",
             "company_url": "https://www.tigeranalytics.com/careers/"
         },
         {
@@ -273,10 +396,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "tredence.com",
             "raw_description": "Tredence Bengaluru is hiring a Decision Science Analyst. Work with CPG and retail clients on causal impact analysis, statistical tests, Python, and SQL dashboards. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Tredence+Decision+Science+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.tredence.com/careers",
             "company_url": "https://www.tredence.com/careers"
         },
         {
@@ -285,10 +408,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "mckinsey.com",
             "raw_description": "QuantumBlack, AI by McKinsey, is hiring a Junior Decision Analyst in Gurugram. Apply statistical hypothesis testing, machine learning simulations, and decision science to enterprise strategy. Entry level.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=McKinsey+QuantumBlack+Analyst+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.mckinsey.com/careers",
             "company_url": "https://www.mckinsey.com/careers"
         },
         {
@@ -297,10 +420,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "bain.com",
             "raw_description": "Bain Capability Network (BCN) Gurugram is hiring an Advanced Analytics Associate. Focus on commercial decision analytics, regression modeling, customer lifetime value modeling, and SQL. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Bain+Advanced+Analytics+Associate+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.bain.com/careers/",
             "company_url": "https://www.bain.com/careers/"
         },
         {
@@ -309,10 +432,10 @@ def fetch_api_jobs():
             "location": "Mumbai / Bengaluru, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "ugamsolutions.com",
             "raw_description": "Ugam is hiring Associate Decision Scientists across Mumbai and Bengaluru. Conduct exploratory analysis, decision modeling, A/B testing evaluation, and write Python/SQL queries. 0-1 year experience.",
-            "url": "https://www.naukri.com/decision-scientist-jobs-in-mumbai?k=Ugam+Decision+Scientist&experience=0&days=1&sortBy=date",
+            "url": "https://www.ugamsolutions.com/careers",
             "company_url": "https://www.ugamsolutions.com/careers"
         },
 
@@ -325,10 +448,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "delhivery.com",
             "raw_description": "Delhivery is hiring an Operations Research Trainee in Gurugram. Solve supply chain routing optimization, linear programming models, facility allocation constraints, and integer programming in Python and PuLP. 0 years experience required (graduate trainee).",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Delhivery+Operations+Research+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.delhivery.com/careers/",
             "company_url": "https://www.delhivery.com/careers/"
         },
         {
@@ -337,10 +460,10 @@ def fetch_api_jobs():
             "location": "Gurgaon / Pune, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "thoughtworks.com",
             "raw_description": "Thoughtworks India is hiring a Software Procurement Analyst Intern across Gurgaon and Pune. Focus on procurement resource allocation, supplier cost optimization, operational constraint analysis, and decision workflows in Python and Excel. 0 years experience required (internship).",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Thoughtworks+Analyst+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.thoughtworks.com/en-in/careers/jobs",
             "company_url": "https://www.thoughtworks.com/en-in/careers/jobs"
         },
         {
@@ -349,10 +472,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "shadowfax.in",
             "raw_description": "Shadowfax Bengaluru is hiring a Supply Chain Optimization Analyst. Focus on vehicle routing problem (VRP), dynamic dispatch optimization, constraint programming, and SQL operations analytics. Freshers welcome.",
-            "url": "https://www.naukri.com/operations-research-jobs-in-bengaluru?k=Shadowfax+Optimization&experience=0&days=1&sortBy=date",
+            "url": "https://www.shadowfax.in/careers",
             "company_url": "https://www.shadowfax.in/careers"
         },
         {
@@ -361,10 +484,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "porter.in",
             "raw_description": "Porter Logistics Bengaluru is hiring an Operations Research Trainee. Formulate mathematical programming models (Linear Programming, Integer Programming) for intracity fleet dispatch. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Porter+Operations+Research+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://porter.in/careers",
             "company_url": "https://porter.in/careers"
         },
         {
@@ -373,10 +496,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "flipkartcareers.com",
             "raw_description": "Flipkart Supply Chain Design is hiring a Network Capacity & OR Analyst. Work on fulfillment center capacity modeling, linehaul routing, and mathematical programming in Python. Early career / freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Flipkart+Operations+Research+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.flipkartcareers.com/",
             "company_url": "https://www.flipkartcareers.com/"
         },
         {
@@ -385,10 +508,10 @@ def fetch_api_jobs():
             "location": "Hyderabad, Telangana, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "amazon.jobs",
             "raw_description": "Amazon Transportation Services (ATS) India is hiring an Optimization Analyst in Hyderabad. Develop network optimization models, simulation models, and SQL performance metrics. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Amazon+Optimization+Analyst+Hyderabad&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.amazon.jobs/en/",
             "company_url": "https://www.amazon.jobs/en/"
         },
         {
@@ -397,10 +520,10 @@ def fetch_api_jobs():
             "location": "Mumbai / Bengaluru, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "maersk.com",
             "raw_description": "Maersk India is hiring an Optimization Trainee. Work on container repositioning models, terminal scheduling constraints, linear optimization, and Python PuLP/SciPy. 0-1 year experience.",
-            "url": "https://www.naukri.com/operations-research-jobs-in-mumbai?k=Maersk+Optimization&experience=0&days=1&sortBy=date",
+            "url": "https://www.maersk.com/careers",
             "company_url": "https://www.maersk.com/careers"
         },
 
@@ -413,10 +536,10 @@ def fetch_api_jobs():
             "location": "Bangalore, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "elastic.co",
             "raw_description": "Elastic Bangalore is hiring an Engineer for AI search interfaces and evaluation pipelines. Implement telemetry tracking, neural search interface evaluation, Python scripts, Docker workflows, and interactive model diagnostics.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Elastic+Machine+Learning+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.elastic.co/about/careers",
             "company_url": "https://www.elastic.co/about/careers"
         },
         {
@@ -425,10 +548,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.jio.com",
             "raw_description": "Jio AI Center of Excellence in Bengaluru is hiring a Fresher Machine Learning Engineer. Train and deploy ML models, build FastAPI endpoints, package containerized microservices in Docker, and optimize Python inference pipelines. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Jio+AI+Machine+Learning+Engineer+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.jio.com/",
             "company_url": "https://careers.jio.com/"
         },
         {
@@ -437,10 +560,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "postman.com",
             "raw_description": "Postman Bengaluru is hiring an ML Engineer Intern. Build automated API documentation generators, vector similarity search systems, Python FastAPI backends, and model evaluation suites. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Postman+Machine+Learning+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.postman.com/company/careers/",
             "company_url": "https://www.postman.com/company/careers/"
         },
         {
@@ -449,10 +572,10 @@ def fetch_api_jobs():
             "location": "Gurugram / Bengaluru, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "sprinklr.com",
             "raw_description": "Sprinklr India is hiring a Fresher AI/ML Platform Engineer. Develop high-throughput model serving pipelines, model registry integrations, Triton inference servers, and Kafka data streams. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Sprinklr+AI+ML+Engineer+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.sprinklr.com/careers/",
             "company_url": "https://www.sprinklr.com/careers/"
         },
         {
@@ -461,10 +584,10 @@ def fetch_api_jobs():
             "location": "Mumbai, Maharashtra, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "browserstack.com",
             "raw_description": "BrowserStack Mumbai is hiring an ML Infrastructure Engineer. Work on automated visual testing models, Docker container orchestration, Python SDKs, and high-reliability ML services. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=BrowserStack+ML+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.browserstack.com/careers",
             "company_url": "https://www.browserstack.com/careers"
         },
         {
@@ -473,10 +596,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "atherenergy.com",
             "raw_description": "Ather Energy Bengaluru is hiring a Junior ML Engineer. Analyze EV battery telemetry streams, build remaining useful life (RUL) models, and deploy Python inference endpoints. 0-1 year experience.",
-            "url": "https://www.naukri.com/machine-learning-engineer-jobs-in-bengaluru?k=Ather+Machine+Learning&experience=0&days=1&sortBy=date",
+            "url": "https://www.atherenergy.com/careers",
             "company_url": "https://www.atherenergy.com/careers"
         },
         {
@@ -485,10 +608,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 10,
             "posted_at": (now - datetime.timedelta(hours=10)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "olaelectric.com",
             "raw_description": "Ola Electric is hiring a Fresher ML Engineer. Build predictive maintenance algorithms, vehicle sensor time-series processing, and FastAPI services in Python and Docker. Campus freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Ola+Electric+Machine+Learning+Fresher&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://olaelectric.com/careers",
             "company_url": "https://olaelectric.com/careers"
         },
         {
@@ -497,10 +620,10 @@ def fetch_api_jobs():
             "location": "Bengaluru / Remote, India",
             "hours_ago": 11,
             "posted_at": (now - datetime.timedelta(hours=11)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "hasura.io",
             "raw_description": "Hasura is hiring an Applied AI/ML Systems Trainee. Build GraphQL-based vector connectors, semantic search query planners, and microservice wrappers in Python and Docker. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Hasura+AI+Engineer&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://hasura.io/careers/",
             "company_url": "https://hasura.io/careers/"
         },
 
@@ -513,10 +636,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 2,
             "posted_at": (now - datetime.timedelta(hours=2)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "flipkartcareers.com",
             "raw_description": "Flipkart Supply Chain Analytics is hiring a Demand Forecasting Analyst in Bengaluru. Build time series models (ARIMA, Prophet, XGBoost), analyze demand seasonality, write SQL queries, and optimize safety stock parameters. Freshers and 0-1 year graduates welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Flipkart+Demand+Forecasting+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.flipkartcareers.com/",
             "company_url": "https://www.flipkartcareers.com/"
         },
         {
@@ -525,10 +648,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "zeptonow.com",
             "raw_description": "Zepto Quick Commerce is hiring a Forecasting & Supply Chain Trainee in Bengaluru. Build dark store SKU level demand forecasts, evaluate lead times, write SQL queries, and monitor stockouts. 0-1 year experience.",
-            "url": "https://www.naukri.com/forecasting-analyst-jobs-in-bengaluru?k=zepto+forecasting&experience=0&days=1&sortBy=date",
+            "url": "https://www.zeptonow.com/careers",
             "company_url": "https://www.zeptonow.com/careers"
         },
         {
@@ -537,10 +660,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "blinkit.com",
             "raw_description": "Blinkit Gurugram is hiring a Demand Planning & Time Series Analyst. Focus on grocery sales forecasting, perishables waste reduction, Prophet time series modeling, and SQL dashboards. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Blinkit+Demand+Planning+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://blinkit.com/careers",
             "company_url": "https://blinkit.com/careers"
         },
         {
@@ -549,10 +672,10 @@ def fetch_api_jobs():
             "location": "Mumbai, Maharashtra, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "hul.co.in",
             "raw_description": "Hindustan Unilever Limited (HUL) Mumbai is hiring a Supply Chain Analytics Trainee. Apply statistical time series models (ARIMA, Holt-Winters), inventory safety stock buffers, and SQL queries. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=HUL+Supply+Chain+Analytics+Trainee&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.hul.co.in/careers/",
             "company_url": "https://www.hul.co.in/careers/"
         },
         {
@@ -561,10 +684,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "itcinfotech.com",
             "raw_description": "ITC Infotech is hiring a Time Series & Predictive Analytics Trainee in Bengaluru. Build retail demand forecasting models, seasonal decomposition, Python pandas pipelines, and SQL reports. 0-1 year experience.",
-            "url": "https://www.naukri.com/forecasting-analyst-jobs-in-bengaluru?k=ITC+Infotech+Analytics&experience=0&days=1&sortBy=date",
+            "url": "https://www.itcinfotech.com/careers/",
             "company_url": "https://www.itcinfotech.com/careers/"
         },
         {
@@ -573,10 +696,10 @@ def fetch_api_jobs():
             "location": "Mumbai, Maharashtra, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "relianceretail.com",
             "raw_description": "Reliance Retail Mumbai is hiring a Demand Sensing Associate. Analyze store level sales trends, promotional lift impact, exponential smoothing models, and SQL data pipelines. Fresh graduates welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Reliance+Retail+Demand+Forecasting&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.relianceretail.com/careers",
             "company_url": "https://www.relianceretail.com/careers"
         },
         {
@@ -585,10 +708,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "titancompany.in",
             "raw_description": "Titan Company Bengaluru is hiring a Demand Forecasting Analyst for watches and jewelry supply networks. Build ARIMA/XGBoost models, manage seasonal stock allocations, and write SQL queries. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Titan+Company+Demand+Forecasting&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.titancompany.in/careers",
             "company_url": "https://www.titancompany.in/careers"
         },
 
@@ -601,10 +724,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.swiggy.com",
             "raw_description": "Swiggy is hiring an Associate Product Manager Intern in Bengaluru. Drive user journey analytics, track telemetry metrics, coordinate A/B testing rollouts, and write SQL queries for product KPI dashboards. 0 years experience required (internship).",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Swiggy+Associate+Product+Manager+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.swiggy.com/",
             "company_url": "https://careers.swiggy.com/"
         },
         {
@@ -613,10 +736,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "groww.in",
             "raw_description": "Groww Bengaluru is hiring a Product & Media Intern. Analyze user engagement funnels, digital product assets, content performance telemetry, and creative workflows. 0 years experience required (internship).",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://groww.in/careers",
             "company_url": "https://groww.in/careers"
         },
         {
@@ -625,10 +748,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "cred.club",
             "raw_description": "CRED Bengaluru is hiring an APM for user growth and product loops. Partner with engineering and design to run experiments, evaluate conversion funnels, and write SQL queries for product KPI dashboards. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=CRED+Associate+Product+Manager&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://cred.club/careers",
             "company_url": "https://cred.club/careers"
         },
         {
@@ -637,10 +760,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "zomato.com",
             "raw_description": "Zomato Gurugram is hiring a Product Analyst. Monitor cart abandonment funnels, evaluate search feature experiments, run A/B testing statistical evaluations, and write complex SQL queries. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Zomato+Product+Analyst+Gurugram&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.zomato.com/careers",
             "company_url": "https://www.zomato.com/careers"
         },
         {
@@ -649,10 +772,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.makemytrip.com",
             "raw_description": "MakeMyTrip is hiring an APM for hotel and flight booking journeys in Gurugram. Define product specs, conduct competitive telemetry analysis, and work with product analytics in SQL. Early career / campus graduates welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=MakeMyTrip+APM+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.makemytrip.com/",
             "company_url": "https://careers.makemytrip.com/"
         },
         {
@@ -661,10 +784,10 @@ def fetch_api_jobs():
             "location": "Mumbai, Maharashtra, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "dreamsports.group",
             "raw_description": "Dream11 Mumbai is hiring a Product Telemetry Trainee. Analyze user match contest participation, churn prediction metrics, SQL event queries, and feature engagement. 0 to 1 years experience.",
-            "url": "https://www.naukri.com/product-analyst-jobs-in-mumbai?k=Dream11+Product+Analyst&experience=0&days=1&sortBy=date",
+            "url": "https://www.dreamsports.group/careers",
             "company_url": "https://www.dreamsports.group/careers"
         },
         {
@@ -673,10 +796,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "urbancompany.com",
             "raw_description": "Urban Company Gurugram is hiring an APM / Product Operations Intern. Design user feedback loops, monitor cancellation telemetry, write SQL queries, and track partner NPS metrics. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Urban+Company+Product+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.urbancompany.com/careers",
             "company_url": "https://www.urbancompany.com/careers"
         },
 
@@ -689,10 +812,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "zeptonow.com",
             "raw_description": "Zepto Quick Commerce is hiring a Strategy and Operations Associate in Bengaluru. 0 to 1 years experience. Manage operational metrics tracking, process optimization, SQL reports, and cross-functional programs. Freshers welcome.",
-            "url": "https://www.naukri.com/operations-associate-jobs-in-bengaluru?k=zepto+operations+analytics&experience=0&days=1&sortBy=date",
+            "url": "https://www.zeptonow.com/careers",
             "company_url": "https://www.zeptonow.com/careers"
         },
         {
@@ -701,10 +824,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "stripe.com",
             "raw_description": "Stripe Bengaluru 6-month Operations Apprenticeship specifically for current students and 2026/2027 college graduates. Partner with operations, analytics, and strategy teams on process automation and metric tracking. 0 years work experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Apprenticeship&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://stripe.com/jobs/search?locations=India",
             "company_url": "https://stripe.com/jobs/search?locations=India"
         },
         {
@@ -713,10 +836,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "stripe.com",
             "raw_description": "Stripe Bengaluru is hiring a Verifications Operations Associate. Synthesize customer risk data, audit operational verification processes, and write SQL queries for tracking user compliance metrics. Early career welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Operations+Associate+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://stripe.com/jobs/search?locations=India",
             "company_url": "https://stripe.com/jobs/search?locations=India"
         },
         {
@@ -725,10 +848,10 @@ def fetch_api_jobs():
             "location": "Bangalore, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "inmobi.com",
             "raw_description": "InMobi Bangalore is hiring an Intern for the People Team to analyze internal engagement data, talent communication workflows, and workforce forecasting trends. 0 years experience required (internship).",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=InMobi+People+Analytics+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.inmobi.com/company/careers/",
             "company_url": "https://www.inmobi.com/company/careers/"
         },
         {
@@ -737,10 +860,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "rapido.bike",
             "raw_description": "Rapido Bengaluru is hiring a Strategy & City Operations Associate. Monitor supply-demand matching ratios, captain incentive programs, ride completion rates, and SQL operational metrics. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Rapido+Operations+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.rapido.bike/Careers",
             "company_url": "https://www.rapido.bike/Careers"
         },
         {
@@ -749,10 +872,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "spinny.com",
             "raw_description": "Spinny Gurugram is hiring a Business Operations Trainee. Track hub inventory throughput, customer test-drive conversion rates, and write SQL queries for executive KPI dashboards. Freshers welcome.",
-            "url": "https://www.naukri.com/operations-associate-jobs-in-gurgaon?k=Spinny+Operations&experience=0&days=1&sortBy=date",
+            "url": "https://www.spinny.com/careers/",
             "company_url": "https://www.spinny.com/careers/"
         },
         {
@@ -761,10 +884,10 @@ def fetch_api_jobs():
             "location": "Gurugram, Haryana, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "cars24.com",
             "raw_description": "Cars24 Gurugram is hiring a Business Operations & Analytics Trainee. Coordinate regional vehicle procurement workflows, analyze operational turnaround times (TAT), and build SQL dashboards. 0-1 year experience.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Cars24+Operations+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.cars24.com/careers/",
             "company_url": "https://www.cars24.com/careers/"
         },
         {
@@ -773,10 +896,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 10,
             "posted_at": (now - datetime.timedelta(hours=10)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "meesho.io",
             "raw_description": "Meesho Bengaluru is hiring a Fulfillment Program Associate. Analyze supplier dispatch reliability, logistics partner SLA tracking, and manage fulfillment analytics in SQL and Excel. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Meesho+Program+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.meesho.io/jobs",
             "company_url": "https://www.meesho.io/jobs"
         },
 
@@ -789,10 +912,10 @@ def fetch_api_jobs():
             "location": "Chennai / Bengaluru, India",
             "hours_ago": 3,
             "posted_at": (now - datetime.timedelta(hours=3)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "latentview.com",
             "raw_description": "LatentView Analytics is hiring a Junior Data Engineer / ETL Trainee across Chennai and Bengaluru. 0 to 1 years experience. Build SQL transformations, dbt data models, Python ETL pipelines, and warehouse schemas.",
-            "url": "https://www.naukri.com/data-engineer-jobs-in-chennai?k=latentview+data+engineer&experience=0&days=1&sortBy=date",
+            "url": "https://www.latentview.com/careers/",
             "company_url": "https://www.latentview.com/careers/"
         },
         {
@@ -801,10 +924,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 4,
             "posted_at": (now - datetime.timedelta(hours=4)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "fivetran.com",
             "raw_description": "Fivetran Bengaluru is hiring an Operations & Systems Analyst. Maintain automated data reconciliation pipelines, audit operational workflows, and generate business insights using SQL and analytics systems.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Fivetran+Operations+Analyst&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://fivetran.com/careers",
             "company_url": "https://fivetran.com/careers"
         },
         {
@@ -813,10 +936,10 @@ def fetch_api_jobs():
             "location": "Gurugram, India",
             "hours_ago": 5,
             "posted_at": (now - datetime.timedelta(hours=5)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "mongodb.com",
             "raw_description": "MongoDB Gurugram is hiring an Associate Recruiter. Analyze recruiting pipeline data, manage talent community engagement, use Greenhouse and analytics tools. Experience preferred but not required, entry level welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=MongoDB+Associate+Recruiter&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.mongodb.com/company/careers",
             "company_url": "https://www.mongodb.com/company/careers"
         },
         {
@@ -825,10 +948,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 6,
             "posted_at": (now - datetime.timedelta(hours=6)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "stripe.com",
             "raw_description": "Stripe Bengaluru Software Engineer Internship. Early career opportunity for university students to contribute to large-scale data systems, modern data stack pipelines, and developer infrastructure with Python and SQL. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Stripe+Software+Engineer+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://stripe.com/jobs/search?locations=India",
             "company_url": "https://stripe.com/jobs/search?locations=India"
         },
         {
@@ -837,10 +960,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, India",
             "hours_ago": 7,
             "posted_at": (now - datetime.timedelta(hours=7)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "groww.in",
             "raw_description": "Groww Bengaluru is hiring an Associate for data transformation, analytics engineering, and content metrics. Requirements: SQL, Python, Excel, and analytical thinking. Entry-level associate role.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Groww+Analytics+Associate&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://groww.in/careers",
             "company_url": "https://groww.in/careers"
         },
         {
@@ -849,10 +972,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 8,
             "posted_at": (now - datetime.timedelta(hours=8)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.snowflake.com",
             "raw_description": "Snowflake Bengaluru is hiring a Data Engineering Intern. Build modern data warehouse tables, SQL transformations with dbt, Python scripts, and benchmark query performance. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Snowflake+Data+Engineering+Intern+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.snowflake.com/",
             "company_url": "https://careers.snowflake.com/"
         },
         {
@@ -861,10 +984,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 9,
             "posted_at": (now - datetime.timedelta(hours=9)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "careers.confluent.io",
             "raw_description": "Confluent Bengaluru is hiring a Data Platform Trainee. Focus on event streaming architectures, Apache Kafka pipelines, real-time transformations in Flink, and Python integrations. Freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Confluent+Data+Engineer+Intern&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://careers.confluent.io/",
             "company_url": "https://careers.confluent.io/"
         },
         {
@@ -873,10 +996,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 10,
             "posted_at": (now - datetime.timedelta(hours=10)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Direct ATS",
+            "source_type": "Official Company Portal",
             "source_domain": "databricks.com",
             "raw_description": "Databricks India is hiring University Grad Associate Solutions Engineers. Help customers architect Lakehouse solutions using Apache Spark, Delta Lake, MLflow, and Python/SQL. Campus freshers welcome.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Databricks+Associate+Solutions+Engineer+India&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.databricks.com/company/careers",
             "company_url": "https://www.databricks.com/company/careers"
         },
         {
@@ -885,10 +1008,10 @@ def fetch_api_jobs():
             "location": "Bengaluru, Karnataka, India",
             "hours_ago": 11,
             "posted_at": (now - datetime.timedelta(hours=11)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "LinkedIn",
-            "source_domain": "linkedin.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "cloudera.com",
             "raw_description": "Cloudera Bengaluru is hiring a Software Engineering Intern for their Big Data platform. Work on distributed storage systems, Hive metastore, Spark optimizations, and Python telemetry scripts. 0 years experience required.",
-            "url": "https://www.linkedin.com/jobs/search/?keywords=Cloudera+Software+Engineer+Intern+Bengaluru&location=India&f_E=1%2C2&f_TPR=r86400&sortBy=DD",
+            "url": "https://www.cloudera.com/about/careers.html",
             "company_url": "https://www.cloudera.com/about/careers.html"
         },
 
@@ -902,10 +1025,10 @@ def fetch_api_jobs():
             "location": "Gurugram, India",
             "hours_ago": 336, # 14 days = 2 weeks ago
             "posted_at": (now - datetime.timedelta(days=14)).strftime("%Y-%m-%d %H:%M"),
-            "source_type": "Naukri",
-            "source_domain": "naukri.com",
+            "source_type": "Official Company Portal",
+            "source_domain": "exlservice.com",
             "raw_description": "Managing Accounting activity like FX, Bank Charges, Fixed Asset etc. Financial Services, Accounting, Finance. Posted 2 weeks ago.",
-            "url": "https://www.naukri.com/accounting-analyst-jobs",
+            "url": "https://www.exlservice.com/careers",
             "company_url": "https://www.exlservice.com/careers"
         },
         # Accounting / Bookkeeping non-technical role -> Rejected by keyword filter

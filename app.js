@@ -49,14 +49,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const navRefreshLabel = document.getElementById("nav-refresh-label");
   const autoSyncIndicator = document.getElementById("auto-sync-indicator");
 
+  // DOM Elements - Hero Job Search Console
+  const btnHeroJobSearch = document.getElementById("btn-hero-job-search");
+  const heroSearchRole = document.getElementById("hero-search-role");
+  const heroClearRole = document.getElementById("hero-clear-role");
+  const heroSearchLocation = document.getElementById("hero-search-location");
+  const heroSearchFreshness = document.getElementById("hero-search-freshness");
+  const heroSearchBtnIcon = document.getElementById("hero-search-btn-icon");
+  const heroSearchBtnText = document.getElementById("hero-search-btn-text");
+  const bannerJobCount = document.getElementById("banner-job-count");
+  const bannerScopePill = document.getElementById("banner-scope-pill");
+  const locationSelect = document.getElementById("location-select");
+
   // State
   let currentFilter = {
     search: "",
     tier: "all",
+    location: "all",
     source: "all",
     minScore: 0.60,
     sortBy: "latest",
-    maxAgeHours: 24
+    maxAgeHours: 48
   };
 
   let currentPage = 1;
@@ -132,43 +145,65 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getJobFreshness(job) {
-    if (!job) return { hours: 2, label: "2h ago", badgeText: "⚡ Posted 2h ago" };
+    if (!job) return { hours: 2, label: "2h ago", badgeText: "⚡ Posted 2h ago", isMinute: false };
 
-    // 1. Explicit relative time string (e.g. "17 hours ago", "17h ago")
+    // 1. Explicit relative time string (e.g. "5 minutes ago", "17 hours ago", "1 day ago")
     if (job.relative_time) {
       const match = String(job.relative_time).match(/(\d+)\s*(h|hr|hour|d|day|m|min|w|week)/i);
       if (match) {
         const num = parseInt(match[1], 10);
         const unit = match[2].toLowerCase();
         let hours = num;
+        let isMinute = false;
         if (unit.startsWith('d')) hours = num * 24;
         else if (unit.startsWith('w')) hours = num * 168;
-        else if (unit.startsWith('m')) hours = Math.max(1, Math.round(num / 60));
-        const label = hours >= 24 ? `${Math.floor(hours / 24)}d ago` : `${hours}h ago`;
-        return { hours, label, badgeText: `⚡ Posted ${label}` };
+        else if (unit.startsWith('m')) {
+          hours = Math.max(0.01, num / 60);
+          isMinute = true;
+        }
+        let label = `${hours}h ago`;
+        if (isMinute) label = `${num}m ago`;
+        else if (hours >= 24) label = `${Math.floor(hours / 24)}d ago`;
+        return { hours, label, badgeText: isMinute ? `⚡ Just now (${label})` : `⚡ Posted ${label}`, isMinute };
       }
     }
 
-    // 2. Scan raw_description or description for LinkedIn timestamp like "17 hours ago"
+    // 2. Scan raw_description or description for timestamp
     const textToScan = `${job.raw_description || ''} ${job.description || ''}`;
     const textTimeMatch = textToScan.match(/(?:posted\s*|·\s*)?(\d+)\s*(hours?|hrs?|h|days?|d|minutes?|mins?|m)\s*ago/i);
     if (textTimeMatch) {
       const num = parseInt(textTimeMatch[1], 10);
       const unit = textTimeMatch[2].toLowerCase();
       let hours = num;
+      let isMinute = false;
       if (unit.startsWith('d')) hours = num * 24;
-      else if (unit.startsWith('m')) hours = Math.max(1, Math.round(num / 60));
-      const label = hours >= 24 ? `${Math.floor(hours / 24)}d ago` : `${hours}h ago`;
-      return { hours, label, badgeText: `⚡ Posted ${label}` };
+      else if (unit.startsWith('m')) {
+        hours = Math.max(0.01, num / 60);
+        isMinute = true;
+      }
+      let label = `${hours}h ago`;
+      if (isMinute) label = `${num}m ago`;
+      else if (hours >= 24) label = `${Math.floor(hours / 24)}d ago`;
+      return { hours, label, badgeText: isMinute ? `⚡ Just now (${label})` : `⚡ Posted ${label}`, isMinute };
     }
 
-    // 3. Fallback to job.hours_ago
+    // 3. Fallback to job.hours_ago (supports fractional hours like 0.08h = ~5m)
     const fallbackHours = job.hours_ago !== undefined ? job.hours_ago : 2;
-    const label = fallbackHours >= 24 ? `${Math.floor(fallbackHours / 24)}d ago` : `${fallbackHours}h ago`;
+    if (fallbackHours < 1) {
+      const mins = Math.max(1, Math.round(fallbackHours * 60));
+      return {
+        hours: fallbackHours,
+        label: `${mins}m ago`,
+        badgeText: `⚡ Just now (${mins}m ago)`,
+        isMinute: true
+      };
+    }
+    const label = fallbackHours >= 24 ? `${Math.floor(fallbackHours / 24)}d ago` : `${Math.floor(fallbackHours)}h ago`;
     return {
       hours: fallbackHours,
       label,
-      badgeText: `⚡ Posted ${label}`
+      badgeText: `⚡ Posted ${label}`,
+      isMinute: false
     };
   }
 
@@ -185,15 +220,46 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isNaN(currentFilter.tier) && job.tier !== parseInt(currentFilter.tier, 10)) return false;
       }
 
-      // Search query
+      // Search query (intelligent multi-field & token matching across title, company, location, skills, description)
       if (currentFilter.search) {
-        const q = currentFilter.search.toLowerCase();
-        const titleMatch = job.title.toLowerCase().includes(q);
-        const compMatch = job.company.toLowerCase().includes(q);
-        const catMatch = job.category.toLowerCase().includes(q);
-        const sourceMatch = (job.source_type || '').toLowerCase().includes(q) || (job.source_domain || '').toLowerCase().includes(q);
-        const skillMatch = (job.matched_skills || []).some(s => s.toLowerCase().includes(q));
-        if (!titleMatch && !compMatch && !catMatch && !sourceMatch && !skillMatch) return false;
+        const query = currentFilter.search.toLowerCase().trim();
+        const searchableText = [
+          job.title || '',
+          job.company || '',
+          job.category || '',
+          job.location || '',
+          job.source_type || '',
+          job.source_domain || '',
+          job.description || '',
+          job.raw_description || '',
+          ...(job.matched_skills || []),
+          ...(job.missing_skills || [])
+        ].join(' ').toLowerCase();
+
+        // 1. Direct substring match
+        if (searchableText.includes(query)) {
+          // Matched
+        } else {
+          // 2. Multi-token match (all typed words must match somewhere in searchable text)
+          const tokens = query.split(/[\s,+/]+/).filter(t => t.length > 0);
+          const allTokensMatch = tokens.length > 0 && tokens.every(token => searchableText.includes(token));
+          if (!allTokensMatch) return false;
+        }
+      }
+
+      // Location filter (matches Indian cities & Remote)
+      if (currentFilter.location && currentFilter.location !== "all") {
+        const locTarget = currentFilter.location.toLowerCase();
+        const jobLoc = (job.location || '').toLowerCase();
+        if (locTarget === "bengaluru") {
+          if (!jobLoc.includes("bengaluru") && !jobLoc.includes("bangalore")) return false;
+        } else if (locTarget === "gurugram") {
+          if (!jobLoc.includes("gurugram") && !jobLoc.includes("gurgaon") && !jobLoc.includes("noida") && !jobLoc.includes("delhi")) return false;
+        } else if (locTarget === "remote") {
+          if (!jobLoc.includes("remote") && !job.is_remote) return false;
+        } else {
+          if (!jobLoc.includes(locTarget)) return false;
+        }
       }
 
       // Freshness filter: Strictly exclude jobs older than selected hours
@@ -241,6 +307,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const totalJobs = filtered.length;
 
+    // Update banner & counter elements
+    if (bannerJobCount) bannerJobCount.textContent = totalJobs;
+    const bannerHeadlineEl = document.getElementById("banner-headline");
+    if (bannerHeadlineEl) {
+      if (currentFilter.search) {
+        bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> Valid Jobs Matching "${escapeHTML(currentFilter.search)}"`;
+      } else {
+        bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> Valid Jobs Posted Between Last Minute & 2 Days Ago`;
+      }
+    }
+    if (bannerScopePill) {
+      const scopeHrs = currentFilter.maxAgeHours || 48;
+      bannerScopePill.textContent = scopeHrs === 1 ? '⏱️ Last 1h Live Window' : (scopeHrs === 24 ? '⭐ Today (< 24h) Window' : `⚡ 0m – ${scopeHrs}h Live Window`);
+    }
+
     // Render cards
     if (totalJobs === 0) {
       jobsGrid.innerHTML = "";
@@ -262,7 +343,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pagedJobs = filtered.slice(startIndex, endIndex);
 
     // Update results header
-    resultsCount.textContent = `Showing ${startIndex + 1}–${endIndex} of ${totalJobs} matching jobs (Page ${currentPage} of ${totalPages})`;
+    resultsCount.textContent = `Showing ${startIndex + 1}–${endIndex} of ${totalJobs} matching jobs (Posted within past ${currentFilter.maxAgeHours} hours)`;
 
     jobsGrid.innerHTML = pagedJobs.map(job => {
       const tierClass = getTierBadgeClass(job.tier);
@@ -272,15 +353,23 @@ document.addEventListener("DOMContentLoaded", () => {
       ).join("");
 
       const freshness = getJobFreshness(job);
-      const freshnessPill = `<span class="freshness-badge">⚡ Posted ${freshness.label}</span>`;
+      const freshnessPill = freshness.isMinute
+        ? `<span class="freshness-minute-badge"><span class="live-pulse-dot"></span> ⚡ Just Now (${freshness.label})</span>`
+        : `<span class="freshness-badge">⚡ Posted ${freshness.label}</span>`;
 
       const urlLower = (job.url || '').toLowerCase();
       const domainLower = (job.source_domain || '').toLowerCase();
       const typeLower = (job.source_type || '').toLowerCase();
 
+      // Sanitize URL: never link to generic LinkedIn keyword search pages which inject sponsored reposts
+      let targetUrl = job.url || job.company_url || '#';
+      if (targetUrl.includes('linkedin.com/jobs/search') || targetUrl.includes('linkedin.com/search')) {
+        targetUrl = job.company_url || targetUrl;
+      }
+
       let platformPill = '';
-      let applyBtnText = 'Apply on Company Site ↗';
-      let applyBtnClass = 'btn btn-primary';
+      let applyBtnText = '🏢 Apply on Official Portal ↗';
+      let applyBtnClass = 'btn btn-primary btn-direct-portal';
 
       const isPost = job.is_post || typeLower.includes('post') || urlLower.includes('/posts/');
 
@@ -290,12 +379,12 @@ document.addEventListener("DOMContentLoaded", () => {
           const authorShort = job.post_author.split('(')[0].trim();
           platformPill += ` <span class="author-badge" title="${escapeHTML(job.post_author)}">📢 By: ${escapeHTML(authorShort)}</span>`;
         }
-        applyBtnText = '💬 View Post & DM ↗';
-        applyBtnClass = 'btn btn-primary btn-linkedin-post';
-      } else if (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) {
-        platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn</span>`;
-        applyBtnText = 'Apply on LinkedIn ↗';
-        applyBtnClass = 'btn btn-primary btn-linkedin';
+        applyBtnText = '🏢 Apply on Official Portal ↗';
+        applyBtnClass = 'btn btn-primary';
+      } else if (urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || typeLower.includes('ats')) {
+        platformPill = `<span class="source-domain-badge source-direct">🚀 Direct ATS</span>`;
+        applyBtnText = '🚀 Direct ATS Application ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
       } else if (urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri')) {
         platformPill = `<span class="source-domain-badge source-naukri">🔷 Naukri</span>`;
         applyBtnText = 'Apply on Naukri ↗';
@@ -305,6 +394,8 @@ document.addEventListener("DOMContentLoaded", () => {
         applyBtnText = 'Apply on Indeed ↗';
       } else if (job.source_domain) {
         platformPill = `<span class="source-domain-badge source-direct">🏢 ${escapeHTML(job.source_domain)}</span>`;
+        applyBtnText = `🏢 Apply on ${escapeHTML(job.company)} Portal ↗`;
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
       }
 
       const fresherPill = `<span class="fresher-badge">🎓 Fresher (0-1 Yr)</span>`;
@@ -314,6 +405,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const applicantPill = job.applicants_count
         ? `<span class="applicant-badge">👥 ${escapeHTML(job.applicants_count)}</span>`
         : '';
+
+      // Clean title helper for deep search
+      const cleanTitle = (job.title || '')
+        .replace(/\(.*?\)/g, '')
+        .replace(/-\s*(Fresher|Campus|Early Career|0-1 Yrs|Batch\s*\d+).*/i, '')
+        .replace(/\s+/g, ' ')
+        .trim() || job.title;
+
+      const linkedinRequisitionUrl = job.linkedin_url || `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(cleanTitle + ' ' + (job.company || ''))}&location=India&f_TPR=r86400&f_E=1%2C2`;
+      const naukriSlug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+      const naukriRequisitionUrl = job.naukri_url || `https://www.naukri.com/${naukriSlug}-jobs-in-india?experience=0`;
 
       return `
         <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
@@ -365,11 +467,14 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
-            <a href="${escapeHTML(job.url)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Open direct application on ${escapeHTML(job.source_type || 'Job Portal')}">
-              <span>${applyBtnText}</span>
+            <a href="${escapeHTML(linkedinRequisitionUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" title="Open live entry-level requisitions on LinkedIn (India, Past 24 Hours, 0-1 Yrs Exp)">
+              <span>💼 Apply on LinkedIn (Past 24h) ↗</span>
+            </a>
+            <a href="${escapeHTML(naukriRequisitionUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-naukri-link" title="Open live entry-level requisitions on Naukri (0 Years Experience)">
+              <span>🔷 Naukri (0 Exp) ↗</span>
             </a>
             ${job.contact_email ? `
-              <a href="mailto:${escapeHTML(job.contact_email)}?subject=${encodeURIComponent(`Application for ${job.title} - Fresher/Early Career`)}&body=${encodeURIComponent(job.outreach_dm || `Hi ${job.post_author ? job.post_author.split('(')[0].trim() : 'Hiring Team'},\n\nI saw your LinkedIn post regarding the ${job.title} role at ${job.company}.`)}" class="btn btn-secondary" title="Email application & resume directly to recruiter">
+              <a href="mailto:${escapeHTML(job.contact_email)}?subject=${encodeURIComponent(`Application for ${job.title} - Fresher/Early Career`)}&body=${encodeURIComponent(job.outreach_dm || `Hi ${job.post_author ? job.post_author.split('(')[0].trim() : 'Hiring Team'},\n\nI saw your post regarding the ${job.title} role at ${job.company}.`)}" class="btn btn-secondary" title="Email recruiter directly">
                 <span>✉️ Email</span>
               </a>
             ` : ''}
@@ -378,18 +483,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span>💬 Pitch</span>
               </button>
             ` : ''}
-            <button class="btn btn-secondary btn-skill-gap view-gap-btn" data-job-url="${escapeHTML(job.url)}" title="View semantic skill gap analysis and 1-day portfolio project roadmap">
+            <button class="btn btn-secondary btn-skill-gap view-gap-btn" data-job-url="${escapeHTML(job.url)}" title="View semantic skill gap analysis">
               ⚡ Skill Gap
             </button>
-            ${job.company_url ? `
-              <a href="${escapeHTML(job.company_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-company-site" title="Visit official careers portal for ${escapeHTML(job.company)}">
-                <span>🏢 Careers ↗</span>
-              </a>
-            ` : ''}
-            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and multi-channel apply links">
+            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and application advice">
               🔍 Details
             </button>
-            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company} - ${job.url}`)}" title="Copy direct apply link">
+            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company}\nLinkedIn: ${linkedinRequisitionUrl}\nNaukri: ${naukriRequisitionUrl}`)}" title="Copy live requisition links">
               📋
             </button>
           </div>
@@ -632,49 +732,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalStrategyAdvice.textContent = advice;
 
-    // Direct Application button
-    const urlLower = (job.url || '').toLowerCase();
-    const sourceLower = (job.source_type || '').toLowerCase();
-    let applyLabel = 'Apply Online ↗';
-    let applyClass = 'btn btn-primary';
+    // Deep Requisition URLs
+    const cleanTitle = (job.title || '')
+      .replace(/\(.*?\)/g, '')
+      .replace(/-\s*(Fresher|Campus|Early Career|0-1 Yrs|Batch\s*\d+).*/i, '')
+      .replace(/\s+/g, ' ')
+      .trim() || job.title;
 
-    if (job.is_post || sourceLower.includes('post') || urlLower.includes('/posts/')) {
-      applyLabel = '💬 View Post & DM ↗';
-      applyClass = 'btn btn-primary btn-linkedin-post';
-    } else if (urlLower.includes('linkedin.com') || sourceLower.includes('linkedin')) {
-      applyLabel = 'Apply on LinkedIn ↗';
-      applyClass = 'btn btn-primary btn-linkedin';
-    } else if (urlLower.includes('naukri.com') || sourceLower.includes('naukri')) {
-      applyLabel = 'Apply on Naukri ↗';
-      applyClass = 'btn btn-primary btn-naukri';
-    } else if (urlLower.includes('indeed.com') || sourceLower.includes('indeed')) {
-      applyLabel = 'Apply on Indeed ↗';
-    } else {
-      applyLabel = `Apply on ${job.company} Career Site ↗`;
-    }
+    const modalLinkedinUrl = job.linkedin_url || `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(cleanTitle + ' ' + (job.company || ''))}&location=India&f_TPR=r86400&f_E=1%2C2`;
+    const modalNaukriSlug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    const modalNaukriUrl = job.naukri_url || `https://www.naukri.com/${modalNaukriSlug}-jobs-in-india?experience=0`;
 
-    modalApplyLinkedin.textContent = applyLabel;
-    modalApplyLinkedin.href = job.url;
-    modalApplyLinkedin.className = applyClass;
-    modalApplyLinkedin.title = `Direct application via ${job.source_type || 'Job Portal'}`;
-
-    if (modalApplyCompany) {
-      const compTarget = job.company_url || (job.source_domain ? `https://${job.source_domain}` : job.url);
-      modalApplyCompany.href = compTarget;
-      modalApplyCompany.style.display = "inline-flex";
-      modalApplyCompany.textContent = `🏢 ${job.company} Careers Portal ↗`;
-      modalApplyCompany.title = `Official careers portal for ${job.company}`;
-    }
+    modalApplyLinkedin.textContent = "💼 Apply on LinkedIn (Past 24h & Fresher) ↗";
+    modalApplyLinkedin.href = modalLinkedinUrl;
+    modalApplyLinkedin.className = "btn btn-primary btn-linkedin";
+    modalApplyLinkedin.title = `Open live entry-level requisitions for ${job.title} on LinkedIn`;
 
     if (modalApplyGoogle) {
-      modalApplyGoogle.href = `https://www.google.com/search?q=${encodeURIComponent(job.title + ' ' + job.company + ' fresher jobs india')}`;
-      modalApplyGoogle.title = `Search active listings for ${job.title} at ${job.company} on Google Jobs`;
+      modalApplyGoogle.textContent = "🔷 Apply on Naukri (0 Yrs Exp) ↗";
+      modalApplyGoogle.href = modalNaukriUrl;
+      modalApplyGoogle.className = "btn btn-secondary btn-naukri-link";
+      modalApplyGoogle.style.display = "inline-flex";
+      modalApplyGoogle.title = `Open live entry-level requisitions for ${job.title} on Naukri`;
+    }
+
+    if (modalApplyCompany) {
+      if (job.contact_email) {
+        modalApplyCompany.href = `mailto:${job.contact_email}?subject=${encodeURIComponent(`Application for ${job.title} - Fresher/Early Career`)}&body=${encodeURIComponent(job.outreach_dm || `Hi,\n\nI am applying for the ${job.title} role at ${job.company}.`)}`;
+        modalApplyCompany.style.display = "inline-flex";
+        modalApplyCompany.textContent = "✉️ Email Recruiter Directly";
+        modalApplyCompany.className = "btn btn-secondary";
+      } else {
+        modalApplyCompany.style.display = "none";
+      }
     }
 
     modalCopyBtn.onclick = () => {
-      const copyText = `${job.title} at ${job.company} (${job.source_domain || 'Direct Site'})\nApply Link: ${job.url}${job.company_url ? `\nCareers Portal: ${job.company_url}` : ''}`;
+      const copyText = `${job.title} at ${job.company}\nLinkedIn (Past 24h & Fresher): ${modalLinkedinUrl}\nNaukri (0 Yrs): ${modalNaukriUrl}`;
       navigator.clipboard.writeText(copyText).then(() => {
-        showToast("Copied application & careers links!");
+        showToast("Copied LinkedIn & Naukri requisition links!");
       });
     };
 
@@ -741,21 +837,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   resetFiltersBtn.addEventListener("click", () => {
+    if (heroSearchRole) heroSearchRole.value = "";
+    if (heroSearchLocation) heroSearchLocation.value = "all";
+    if (heroSearchFreshness) heroSearchFreshness.value = "48";
+    if (locationSelect) locationSelect.value = "all";
     searchInput.value = "";
     currentFilter.search = "";
     currentFilter.tier = "all";
+    currentFilter.location = "all";
     currentFilter.source = "all";
     currentFilter.minScore = 0.60;
     currentFilter.sortBy = "latest";
-    currentFilter.maxAgeHours = 24;
+    currentFilter.maxAgeHours = 48;
     scoreSlider.value = 60;
     scoreSliderVal.textContent = "60%";
     sortSelect.value = "latest";
     tierSelect.value = "all";
-    if (freshnessSelect) freshnessSelect.value = "24";
+    if (freshnessSelect) freshnessSelect.value = "48";
     if (sourceSelect) sourceSelect.value = "all";
     clearSearchBtn.style.display = "none";
+    if (heroClearRole) heroClearRole.style.display = "none";
     updateChipSelection("all");
+    document.querySelectorAll(".quick-pill").forEach(p => p.classList.remove("active"));
+    const defPill = document.querySelector(".quick-pill[data-hours='48'][data-role='']");
+    if (defPill) defPill.classList.add("active");
     currentPage = 1;
     renderJobs();
   });
@@ -763,10 +868,147 @@ document.addEventListener("DOMContentLoaded", () => {
   if (freshnessSelect) {
     freshnessSelect.addEventListener("change", (e) => {
       currentFilter.maxAgeHours = parseInt(e.target.value, 10);
+      if (heroSearchFreshness) heroSearchFreshness.value = e.target.value;
       currentPage = 1;
       renderJobs();
     });
   }
+
+  // ==========================================================================
+  // Primary Job Search Button & Console Execution
+  // ==========================================================================
+
+  function executeJobSearch(feedback = true) {
+    // 0. Explicitly switch to Matched Jobs tab first!
+    const jobsTabBtn = document.getElementById("tab-btn-jobs");
+    if (jobsTabBtn) {
+      document.querySelectorAll(".nav-tab").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
+      jobsTabBtn.classList.add("active");
+      const jobsView = document.getElementById("view-jobs");
+      if (jobsView) jobsView.classList.add("active");
+    }
+
+    // 1. Sync from hero search controls
+    if (heroSearchRole) currentFilter.search = heroSearchRole.value.trim();
+    if (heroSearchLocation) currentFilter.location = heroSearchLocation.value;
+    if (heroSearchFreshness) currentFilter.maxAgeHours = parseInt(heroSearchFreshness.value, 10) || 48;
+
+    // 2. Sync secondary toolbar inputs
+    if (searchInput) searchInput.value = currentFilter.search;
+    if (clearSearchBtn) clearSearchBtn.style.display = currentFilter.search ? "block" : "none";
+    if (locationSelect) locationSelect.value = currentFilter.location;
+    if (freshnessSelect) freshnessSelect.value = String(currentFilter.maxAgeHours);
+
+    // 3. Button visual interaction
+    if (feedback && heroSearchBtnText && heroSearchBtnIcon) {
+      const origText = heroSearchBtnText.textContent;
+      const origIcon = heroSearchBtnIcon.textContent;
+      heroSearchBtnIcon.textContent = "⏳";
+      heroSearchBtnText.textContent = "Searching...";
+      if (btnHeroJobSearch) btnHeroJobSearch.style.opacity = "0.85";
+
+      setTimeout(() => {
+        heroSearchBtnIcon.textContent = origIcon;
+        heroSearchBtnText.textContent = origText;
+        if (btnHeroJobSearch) btnHeroJobSearch.style.opacity = "1";
+      }, 250);
+    }
+
+    currentPage = 1;
+    renderJobs();
+
+    // 4. Smooth scroll to results section
+    setTimeout(() => {
+      const resultsEl = document.getElementById("search-results-banner") || document.getElementById("jobs-grid");
+      if (resultsEl) {
+        const rect = resultsEl.getBoundingClientRect();
+        const yOffset = -70;
+        const targetY = window.pageYOffset + rect.top + yOffset;
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+      }
+    }, 40);
+
+    if (feedback) {
+      const filteredCount = jobs.filter(j => {
+        const f = getJobFreshness(j);
+        return f.hours <= currentFilter.maxAgeHours && (j.score || 0.8) >= currentFilter.minScore;
+      }).length;
+      showToast(`🎯 Showing ${filteredCount} valid jobs in India!`);
+    }
+  }
+
+  if (btnHeroJobSearch) {
+    btnHeroJobSearch.addEventListener("click", () => executeJobSearch(true));
+  }
+
+  if (heroSearchRole) {
+    heroSearchRole.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        executeJobSearch(true);
+      }
+    });
+
+    heroSearchRole.addEventListener("input", (e) => {
+      if (heroClearRole) {
+        heroClearRole.style.display = e.target.value.trim() ? "block" : "none";
+      }
+    });
+  }
+
+  if (heroClearRole) {
+    heroClearRole.addEventListener("click", () => {
+      if (heroSearchRole) heroSearchRole.value = "";
+      heroClearRole.style.display = "none";
+      executeJobSearch(false);
+    });
+  }
+
+  if (heroSearchLocation) {
+    heroSearchLocation.addEventListener("change", () => {
+      if (locationSelect) locationSelect.value = heroSearchLocation.value;
+      executeJobSearch(true);
+    });
+  }
+
+  if (heroSearchFreshness) {
+    heroSearchFreshness.addEventListener("change", () => {
+      if (freshnessSelect) freshnessSelect.value = heroSearchFreshness.value;
+      executeJobSearch(true);
+    });
+  }
+
+  if (locationSelect) {
+    locationSelect.addEventListener("change", (e) => {
+      currentFilter.location = e.target.value;
+      if (heroSearchLocation) heroSearchLocation.value = e.target.value;
+      currentPage = 1;
+      renderJobs();
+    });
+  }
+
+  // Quick Filter Pills in Hero Console
+  document.querySelectorAll(".quick-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      document.querySelectorAll(".quick-pill").forEach(p => p.classList.remove("active"));
+      pill.classList.add("active");
+
+      const roleQuery = pill.getAttribute("data-role") || "";
+      const hours = parseInt(pill.getAttribute("data-hours") || "48", 10);
+
+      if (heroSearchRole) {
+        heroSearchRole.value = roleQuery;
+        if (heroClearRole) heroClearRole.style.display = roleQuery ? "block" : "none";
+      }
+      if (heroSearchFreshness) heroSearchFreshness.value = String(hours);
+      if (freshnessSelect) freshnessSelect.value = String(hours);
+
+      currentFilter.search = roleQuery;
+      currentFilter.maxAgeHours = hours;
+      currentPage = 1;
+      executeJobSearch(true);
+    });
+  });
 
   if (sourceSelect) {
     sourceSelect.addEventListener("change", (e) => {
@@ -1277,67 +1519,67 @@ document.addEventListener("DOMContentLoaded", () => {
   const LINKEDIN_SAMPLE_PRESETS = {
     swiggy: {
       author: "Priya Sharma (Principal PM, Consumer Marketplace @ Swiggy)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Swiggy%22%20%22APM%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://careers.swiggy.com/",
       text: "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in."
     },
     flipkart: {
       author: "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Flipkart%22%20%22Applied%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.flipkartcareers.com/",
       text: "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com."
     },
     razorpay: {
       author: "Arjun Mehta (VP Strategy & BizOps @ Razorpay)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Razorpay%22%20%22BizOps%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://razorpay.com/jobs/",
       text: "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume to bizops-talent@razorpay.com."
     },
     phonepe: {
       author: "Ananya Sen (Director of Data Science @ PhonePe)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22PhonePe%22%20%22Data%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.phonepe.com/careers/",
       text: "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me or send your resume to ds-careers@phonepe.com."
     },
     groww: {
       author: "Aakash Gupta (Head of Product @ Groww)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Groww%22%20%22APM%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://groww.in/careers",
       text: "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me."
     },
     cred: {
       author: "Tanvi Agarwal (Senior Decision Scientist @ CRED)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22CRED%22%20%22Decision%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://careers.cred.club/",
       text: "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club."
     },
     delhivery: {
       author: "Kunal Singhal (Head of Network Optimization @ Delhivery)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Delhivery%22%20%22Operations%20Research%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.delhivery.com/careers",
       text: "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via optimization-hiring@delhivery.com."
     },
     zepto: {
       author: "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Zepto%22%20%22Forecasting%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.zeptonow.com/careers",
       text: "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'."
     },
     meesho: {
       author: "Vikramaditya Iyer (Director of Analytics @ Meesho)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Meesho%22%20%22Data%20Scientist%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.meesho.io/careers",
       text: "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com."
     },
     inmobi: {
       author: "Neha Bansal (Lead Optimization Scientist @ InMobi)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22InMobi%22%20%22Optimization%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.inmobi.com/company/careers",
       text: "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com."
     },
     postman: {
       author: "Rajesh Menon (VP Engineering @ Postman)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Postman%22%20%22ML%20Engineer%22%20%22hiring%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.postman.com/company/careers/",
       text: "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn."
     },
     sarvam: {
       author: "Vivek Raghavan (Co-Founder @ Sarvam AI)",
-      url: "https://www.linkedin.com/search/results/content/?keywords=%22Sarvam%20AI%22%20%22research%20intern%22&datePosted=%22past-24h%22&sortBy=%22date_posted%22",
+      url: "https://www.sarvam.ai/careers",
       text: "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM or email research@sarvam.ai with your top projects."
     },
     ifi: {
       author: "Hiring Lead @ India's Future Investors",
-      url: "https://www.linkedin.com/jobs/search/?keywords=%22India%27s+Future+Investors%22+%22Data+Scientist%22&location=India&f_TPR=r86400&sortBy=DD",
+      url: "https://www.sarvam.ai/careers",
       text: "India's Future Investors - Money Entertainment Reality Show\nData Scientist\nIndia · 17 hours ago · Over 100 applicants\nPromoted by hirer · Remote · Full-time\n\nLooking for an analytical Data Scientist to model entertainment viewership metrics, algorithmic audience scoring, and contestant engagement predictors using Python and SQL. Early career freshers (0-1 yrs exp) eligible. DM me or apply directly!"
     }
   };

@@ -445,8 +445,8 @@
     ]
   },
   "freshness": {
-    "max_age_hours": 24,
-    "max_display_age_hours": 72,
+    "max_age_hours": 48,
+    "max_display_age_hours": 48,
     "exclude_stale_jobs": true,
     "filter_param_naukri_days": 1,
     "filter_param_linkedin_tpr": "r86400",
