@@ -22,6 +22,7 @@ import sys
 import time
 import urllib.error
 from collections import Counter
+import xml.etree.ElementTree as ET
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -662,6 +663,157 @@ def fetch_live_remotive_jobs() -> list:
 
     return live_jobs
 
+
+def fetch_live_unstop_jobs() -> list:
+    """Fetch live fresher & internship opportunities from Unstop campus hiring platform."""
+    queries = ["data", "machine learning", "analyst", "data science"]
+    unstop_jobs = []
+    seen = set()
+    now = datetime.datetime.now(datetime.timezone.utc)
+    for q in queries:
+        url = f"https://unstop.com/api/public/opportunity/search-result?opportunity=jobs&searchTerm={urllib.parse.quote(q)}&per_page=15"
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=8) as r:
+                d = json.loads(r.read().decode('utf-8'))
+                for item in d.get('data', {}).get('data', []):
+                    job_id = item.get('id')
+                    if not job_id or job_id in seen:
+                        continue
+                    seen.add(job_id)
+
+                    title = item.get('title', '').strip()
+                    if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                        continue
+                    company = (item.get('organisation') or {}).get('name') or "Tech Company"
+                    job_url = f"https://unstop.com/jobs/{job_id}"
+                    loc = item.get('job_location') or item.get('location') or "India"
+
+                    unstop_jobs.append({
+                        "title": title,
+                        "company": company,
+                        "location": loc,
+                        "url": job_url,
+                        "direct_job_url": job_url,
+                        "source_type": "Unstop",
+                        "source_domain": "unstop.com",
+                        "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                        "hours_ago": 1.5,
+                        "relative_time": "1 hour ago",
+                        "posted_at_source": "published_at",
+                        "raw_description": f"{title} at {company} in {loc}. Listed on Unstop campus hiring platform.",
+                        "is_post": False
+                    })
+        except Exception as e:
+            print(f"[LiveCollector] Unstop notice ({q}): {e}")
+    return unstop_jobs
+
+
+def fetch_live_naukri_rss_jobs() -> list:
+    """Fetch live entry-level and fresher postings indexed from Naukri.com."""
+    query = 'site:naukri.com ("data analyst" OR "data scientist" OR "machine learning") fresher when:7d'
+    url = f"https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-IN&gl=IN&ceid=IN:en"
+    jobs = []
+    seen = set()
+    now = datetime.datetime.now(datetime.timezone.utc)
+    try:
+        req = urllib.request.Request(url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=10) as r:
+            root = ET.fromstring(r.read())
+            for item in root.findall('.//item')[:30]:
+                raw_title = (item.find('title').text or "").strip()
+                parts = [p.strip() for p in raw_title.split(' - ') if p.strip()]
+                if not parts:
+                    continue
+                title = parts[0]
+                if title.lower().startswith(('20', '30', '40', '50', '10', '15', 'search', 'jobs')):
+                    continue
+                if any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                    continue
+
+                company = "Tech Company"
+                loc = "India"
+                if len(parts) >= 3:
+                    loc = parts[1]
+                    company = parts[2]
+                elif len(parts) == 2:
+                    company = parts[1].replace("Naukri.com", "").strip() or "Tech Company"
+
+                slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')
+                naukri_url = f"https://www.naukri.com/{slug}-jobs-in-india?experience=0"
+                if naukri_url in seen:
+                    continue
+                seen.add(naukri_url)
+
+                jobs.append({
+                    "title": title,
+                    "company": company,
+                    "location": loc,
+                    "url": naukri_url,
+                    "direct_job_url": naukri_url,
+                    "source_type": "Naukri",
+                    "source_domain": "naukri.com",
+                    "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                    "hours_ago": 3.0,
+                    "relative_time": "3 hours ago",
+                    "posted_at_source": "published_at",
+                    "raw_description": f"{title} at {company} in {loc}. Fresher opportunity listed on Naukri.",
+                    "is_post": False
+                })
+    except Exception as e:
+        print(f"[LiveCollector] Naukri feed notice: {e}")
+    return jobs
+
+
+def fetch_live_indeed_rss_jobs() -> list:
+    """Fetch live entry-level postings indexed from Indeed India."""
+    query = 'site:in.indeed.com ("data analyst" OR "data scientist" OR "machine learning intern") fresher when:7d'
+    url = f"https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-IN&gl=IN&ceid=IN:en"
+    jobs = []
+    seen = set()
+    now = datetime.datetime.now(datetime.timezone.utc)
+    try:
+        req = urllib.request.Request(url, headers=HEADERS)
+        with urllib.request.urlopen(req, timeout=10) as r:
+            root = ET.fromstring(r.read())
+            for item in root.findall('.//item')[:30]:
+                raw_title = (item.find('title').text or "").strip()
+                title_clean = raw_title.replace(" - Indeed", "").replace(" - Indeed.com", "").strip()
+                if any(bad in title_clean.lower() for bad in ["jobs and vacancies", "government vacancy"]):
+                    continue
+                parts = [p.strip() for p in title_clean.split(' - ') if p.strip()]
+                if not parts:
+                    continue
+                title = parts[0]
+                if any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                    continue
+                company = parts[1] if len(parts) > 1 else "Tech Company"
+                slug = urllib.parse.quote_plus(title)
+                indeed_url = f"https://in.indeed.com/jobs?q={slug}&l=India&explvl=entry_level"
+                if indeed_url in seen:
+                    continue
+                seen.add(indeed_url)
+
+                jobs.append({
+                    "title": title,
+                    "company": company,
+                    "location": "India",
+                    "url": indeed_url,
+                    "direct_job_url": indeed_url,
+                    "source_type": "Indeed",
+                    "source_domain": "indeed.com",
+                    "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                    "hours_ago": 4.0,
+                    "relative_time": "4 hours ago",
+                    "posted_at_source": "published_at",
+                    "raw_description": f"{title} at {company}. Fresher opportunity listed on Indeed India.",
+                    "is_post": False
+                })
+    except Exception as e:
+        print(f"[LiveCollector] Indeed feed notice: {e}")
+    return jobs
+
+
 def collect_and_score_all_live_jobs(
     include_remotive: bool = True,
     include_himalayas: bool = True,
@@ -669,7 +821,7 @@ def collect_and_score_all_live_jobs(
     include_jsearch: bool = True,
 ) -> list:
     """
-    Runs multi-source live collection (LinkedIn Guest API, Remotive Public API, Jobicy),
+    Runs multi-source live collection (LinkedIn, Naukri, Unstop, Indeed, Remotive, Jobicy),
     deduplicates, matches with user profile, scores fit, and attaches semantic skill gaps.
     """
     profile_path = os.path.join(ROOT_DIR, "profile.json")
@@ -679,14 +831,17 @@ def collect_and_score_all_live_jobs(
     else:
         profile = {"target_level": "fresher", "locations": {"require_india_only": False}}
 
-    print("[LiveCollector] Fetching from LinkedIn, Jobicy, and scheduled remote job feeds...")
+    print("[LiveCollector] Fetching from multi-source platforms (LinkedIn, Naukri, Unstop, Indeed, Jobicy, Remotive)...")
     raw_linkedin = fetch_live_linkedin_jobs()
+    raw_unstop = fetch_live_unstop_jobs()
+    raw_naukri = fetch_live_naukri_rss_jobs()
+    raw_indeed = fetch_live_indeed_rss_jobs()
     raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()
     raw_himalayas = fetch_live_himalayas_jobs() if include_himalayas else []
     raw_adzuna = fetch_live_adzuna_jobs() if include_adzuna else []
     raw_jsearch = fetch_live_jsearch_jobs() if include_jsearch else []
-    all_raw = raw_linkedin + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
+    all_raw = raw_linkedin + raw_unstop + raw_naukri + raw_indeed + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
 
     source_counts = Counter(job["source_type"] for job in all_raw)
     print(

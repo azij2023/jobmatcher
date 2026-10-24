@@ -351,10 +351,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Source filter
       if (currentFilter.source && currentFilter.source !== "all") {
-        const isPost = job.is_post || (job.source_type || '').toLowerCase().includes('post') || (job.url || '').includes('/posts/');
+        const urlLower = (job.url || '').toLowerCase();
+        const domainLower = (job.source_domain || '').toLowerCase();
+        const typeLower = (job.source_type || '').toLowerCase();
+        const isPost = Boolean(job.is_post) || typeLower.includes('post') || urlLower.includes('/posts/');
+        const isUnstop = urlLower.includes('unstop.com') || domainLower.includes('unstop') || typeLower.includes('unstop');
+        const isNaukri = urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri');
+        const isIndeed = urlLower.includes('indeed.com') || domainLower.includes('indeed') || typeLower.includes('indeed');
+        const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || urlLower.includes('workday') || typeLower.includes('ats');
+        const isPortal = typeLower.includes('portal') || typeLower.includes('official') || isAts || (!urlLower.includes('linkedin.com') && !urlLower.includes('naukri.com') && !urlLower.includes('unstop.com') && !urlLower.includes('indeed.com') && !isPost);
+        const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !isPortal && !isUnstop && !isNaukri && !isIndeed;
+
         if (currentFilter.source === "LinkedIn Post" && !isPost) return false;
-        if (currentFilter.source === "LinkedIn" && (isPost || !(job.url || '').toLowerCase().includes('linkedin.com'))) return false;
-        if (currentFilter.source === "Naukri" && !(job.url || '').toLowerCase().includes('naukri.com')) return false;
+        if (currentFilter.source === "LinkedIn" && !isLinkedIn) return false;
+        if (currentFilter.source === "Naukri" && !isNaukri) return false;
+        if (currentFilter.source === "Unstop" && !isUnstop) return false;
+        if (currentFilter.source === "Indeed" && !isIndeed) return false;
+        if (currentFilter.source === "Direct" && !isPortal) return false;
+
         const sourceDomains = {
           Jobicy: "jobicy.com",
           Remotive: "remotive.com",
@@ -363,8 +377,7 @@ document.addEventListener("DOMContentLoaded", () => {
           JSearch: "jsearch.p.rapidapi.com"
         };
         const selectedDomain = sourceDomains[currentFilter.source];
-        if (selectedDomain && !(job.source_domain || '').toLowerCase().includes(selectedDomain)) return false;
-        if (currentFilter.source === "Direct" && ((job.url || '').toLowerCase().includes('linkedin.com') || (job.url || '').toLowerCase().includes('naukri.com') || isPost)) return false;
+        if (selectedDomain && !domainLower.includes(selectedDomain)) return false;
       }
 
       return true;
@@ -498,13 +511,16 @@ document.addEventListener("DOMContentLoaded", () => {
         targetUrl = job.company_url || targetUrl;
       }
 
-      const isPost = job.is_post || typeLower.includes('post') || urlLower.includes('/posts/');
+      const isPost = Boolean(job.is_post) || typeLower.includes('post') || urlLower.includes('/posts/');
+      const isUnstop = urlLower.includes('unstop.com') || domainLower.includes('unstop') || typeLower.includes('unstop');
       const isNaukri = urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri');
-      const isLinkedIn = urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin') || isPost;
+      const isIndeed = urlLower.includes('indeed.com') || domainLower.includes('indeed') || typeLower.includes('indeed');
+      const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || urlLower.includes('workday') || typeLower.includes('ats');
+      const isPortal = typeLower.includes('portal') || typeLower.includes('official') || (!urlLower.includes('linkedin.com') && !urlLower.includes('naukri.com') && !urlLower.includes('unstop.com') && !urlLower.includes('indeed.com') && !isPost && !isAts && !domainLower.includes('remotive') && !domainLower.includes('jobicy'));
+      const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !isPortal && !isUnstop && !isNaukri && !isIndeed;
       const isRemotive = domainLower.includes('remotive.com');
       const isJobicy = domainLower.includes('jobicy.com');
       const isJSearch = domainLower.includes('jsearch.p.rapidapi.com');
-      const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || typeLower.includes('ats');
 
       let platformPill = '';
       let applyBtnText = '🏢 Apply on Official Portal ↗';
@@ -518,35 +534,47 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         applyBtnText = '💼 Apply on LinkedIn ↗';
         applyBtnClass = 'btn btn-primary btn-linkedin';
-      } else if (isAts) {
-        platformPill = `<span class="source-domain-badge source-direct">🚀 Direct ATS</span>`;
-        applyBtnText = '🚀 Direct ATS Application ↗';
-        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isUnstop) {
+        platformPill = `<span class="source-domain-badge source-unstop">🎯 Unstop</span>`;
+        applyBtnText = '🎯 Apply on Unstop ↗';
+        applyBtnClass = 'btn btn-primary btn-unstop';
       } else if (isNaukri) {
         platformPill = `<span class="source-domain-badge source-naukri">🔷 Naukri</span>`;
         applyBtnText = '🔷 Apply on Naukri ↗';
         applyBtnClass = 'btn btn-primary btn-naukri';
+      } else if (isIndeed) {
+        platformPill = `<span class="source-domain-badge source-indeed">🎯 Indeed</span>`;
+        applyBtnText = '🎯 Apply on Indeed ↗';
+        applyBtnClass = 'btn btn-primary btn-indeed';
+      } else if (isAts) {
+        platformPill = `<span class="source-domain-badge source-direct">🚀 Direct ATS</span>`;
+        applyBtnText = '🚀 Direct ATS Application ↗';
+        applyBtnClass = 'btn btn-primary btn-ats';
+      } else if (isPortal) {
+        const portalLabel = job.company ? `${escapeHTML(job.company)} Portal` : 'Company Portal';
+        platformPill = `<span class="source-domain-badge source-portal">🏢 ${portalLabel}</span>`;
+        applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Careers ↗`;
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
       } else if (isRemotive) {
-        platformPill = `<span class="source-domain-badge source-direct">Remotive</span>`;
-        applyBtnText = 'View listing on Remotive ↗';
+        platformPill = `<span class="source-domain-badge source-direct">🌐 Remotive</span>`;
+        applyBtnText = '🌐 View on Remotive ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
       } else if (isJobicy) {
-        platformPill = `<span class="source-domain-badge source-direct">Jobicy</span>`;
-        applyBtnText = 'View listing on Jobicy ↗';
+        platformPill = `<span class="source-domain-badge source-direct">🌐 Jobicy</span>`;
+        applyBtnText = '🌐 View on Jobicy ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
       } else if (isJSearch) {
         const publisher = job.job_publisher ? ` via ${escapeHTML(job.job_publisher)}` : '';
         platformPill = `<span class="source-domain-badge source-direct">JSearch${publisher}</span>`;
         applyBtnText = 'Apply via JSearch ↗';
+        applyBtnClass = 'btn btn-primary';
       } else if (isLinkedIn) {
-        platformPill = `<span class="source-domain-badge source-direct">💼 LinkedIn</span>`;
+        platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn</span>`;
         applyBtnText = '💼 Apply on LinkedIn ↗';
         applyBtnClass = 'btn btn-primary btn-linkedin';
-      } else if (urlLower.includes('indeed.com') || domainLower.includes('indeed')) {
-        platformPill = `<span class="source-domain-badge">🎯 Indeed</span>`;
-        applyBtnText = '🎯 Apply on Indeed ↗';
-        applyBtnClass = 'btn btn-primary';
       } else if (job.source_domain) {
-        platformPill = `<span class="source-domain-badge source-direct">🏢 ${escapeHTML(job.source_domain)}</span>`;
-        applyBtnText = `🏢 Apply on ${escapeHTML(job.company)} Portal ↗`;
+        platformPill = `<span class="source-domain-badge source-portal">🏢 ${escapeHTML(job.source_domain)}</span>`;
+        applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Portal ↗`;
         applyBtnClass = 'btn btn-primary btn-direct-portal';
       }
 
