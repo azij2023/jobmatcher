@@ -1,11 +1,15 @@
 import datetime
 import io
 import json
+import os
+import time
 import unittest
 from contextlib import nullcontext
 from unittest.mock import patch
 
 from collectors.live_job_collector import (
+    fetch_live_adzuna_jobs,
+    fetch_live_himalayas_jobs,
     fetch_live_jobicy_jobs,
     get_publication_freshness,
     is_india_or_worldwide_remote,
@@ -96,6 +100,104 @@ class PublicationFreshnessTests(unittest.TestCase):
         self.assertIn("cursor=next+page", requests[1])
         self.assertEqual([job["url"] for job in jobs], ["https://jobicy.com/jobs/1"])
         self.assertEqual(jobs[0]["source_domain"], "jobicy.com")
+
+    def test_himalayas_fetch_follows_cursor_and_filters_level_and_location(self):
+        published = int(time.time())
+        first_page = {
+            "jobs": [
+                {
+                    "title": "Junior Data Analyst",
+                    "companyName": "Example",
+                    "locationRestrictions": ["Anywhere in the World"],
+                    "seniority": ["Junior"],
+                    "applicationLink": "https://company.example/jobs/1",
+                    "pubDate": published,
+                    "description": "SQL and analytics",
+                },
+                {
+                    "title": "Senior Data Analyst",
+                    "companyName": "Example",
+                    "locationRestrictions": ["India"],
+                    "seniority": ["Senior"],
+                    "applicationLink": "https://company.example/jobs/2",
+                    "pubDate": published,
+                    "description": "Senior role",
+                },
+            ],
+            "nextCursor": "next page",
+        }
+        second_page = {
+            "jobs": [
+                {
+                    "title": "Data Scientist",
+                    "companyName": "Example",
+                    "locationRestrictions": ["United States"],
+                    "seniority": ["Entry-level"],
+                    "applicationLink": "https://company.example/jobs/3",
+                    "pubDate": published,
+                    "description": "Entry-level role",
+                },
+            ],
+            "nextCursor": None,
+        }
+        responses = [first_page, second_page]
+        requests = []
+
+        def open_feed(request, timeout):
+            requests.append(request.full_url)
+            return nullcontext(io.BytesIO(json.dumps(responses.pop(0)).encode("utf-8")))
+
+        with patch("collectors.live_job_collector.urllib.request.urlopen", side_effect=open_feed):
+            jobs = fetch_live_himalayas_jobs()
+
+        self.assertEqual(len(requests), 2)
+        self.assertIn("cursor=next+page", requests[1])
+        self.assertEqual([job["url"] for job in jobs], ["https://company.example/jobs/1"])
+        self.assertEqual(jobs[0]["source_type"], "Himalayas")
+        self.assertEqual(jobs[0]["seniority"], "junior")
+
+    def test_adzuna_skips_when_credentials_are_not_configured(self):
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("collectors.live_job_collector.urllib.request.urlopen") as open_feed:
+                self.assertEqual(fetch_live_adzuna_jobs(), [])
+        open_feed.assert_not_called()
+
+    def test_adzuna_fetches_fresh_entry_level_jobs_when_configured(self):
+        published = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        result = {
+            "results": [
+                {
+                    "title": "Data Analyst Intern",
+                    "company": {"display_name": "Example"},
+                    "location": {"display_name": "Bengaluru, India"},
+                    "redirect_url": "https://adzuna.example/jobs/1",
+                    "created": published,
+                    "description": "Internship for new graduates",
+                },
+                {
+                    "title": "Senior Data Scientist",
+                    "company": {"display_name": "Example"},
+                    "location": {"display_name": "India"},
+                    "redirect_url": "https://adzuna.example/jobs/2",
+                    "created": published,
+                    "description": "Senior role",
+                },
+            ]
+        }
+        requests = []
+
+        def open_feed(request, timeout):
+            requests.append(request.full_url)
+            return nullcontext(io.BytesIO(json.dumps(result).encode("utf-8")))
+
+        with patch.dict(os.environ, {"ADZUNA_APP_ID": "test-id", "ADZUNA_APP_KEY": "test-key"}):
+            with patch("collectors.live_job_collector.urllib.request.urlopen", side_effect=open_feed):
+                jobs = fetch_live_adzuna_jobs()
+
+        self.assertEqual(len(requests), 4)
+        self.assertIn("max_days_old=7", requests[0])
+        self.assertEqual([job["url"] for job in jobs], ["https://adzuna.example/jobs/1"] * 4)
+        self.assertEqual(jobs[0]["source_type"], "Adzuna")
 
 
 if __name__ == "__main__":

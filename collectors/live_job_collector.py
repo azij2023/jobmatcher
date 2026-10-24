@@ -142,6 +142,53 @@ def is_india_or_worldwide_remote(location: str) -> bool:
     return any(term in value for term in india_terms + worldwide_terms)
 
 
+def _is_entry_level_listing(title: str, seniority: str, description: str = "") -> bool:
+    title_text = (title or "").lower()
+    level_text = (seniority or "").lower().replace("-", " ")
+    if any(term in title_text for term in EXCLUDE_TITLES):
+        return False
+    if any(term in level_text for term in ("mid level", "mid-level", "senior", "lead", "principal", "director")):
+        return False
+    entry_terms = ("entry", "junior", "intern", "graduate", "associate", "fresher", "trainee", "early career", "new grad")
+    if any(term in title_text or term in level_text for term in entry_terms):
+        return True
+    description_text = (description or "").lower()
+    if any(term in description_text for term in (
+        "entry-level", "entry level", "fresher", "freshers", "internship",
+        "early career", "new graduate", "recent graduate",
+    )):
+        return True
+    return bool(re.search(
+        r"\b(?:0|one|1)\s*(?:-|to)?\s*(?:1)?\s*years?\s+(?:of\s+)?experience\b",
+        description_text,
+    ))
+
+
+def _epoch_to_iso(value) -> str | None:
+    try:
+        timestamp = datetime.datetime.fromtimestamp(float(value), tz=datetime.timezone.utc)
+    except (TypeError, ValueError, OverflowError, OSError):
+        return None
+    return timestamp.isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _normalize_seniority(value: str) -> str:
+    level = (value or "").strip().lower().replace("-", " ").replace(" ", "_")
+    if "intern" in level:
+        return "intern"
+    if "graduate" in level:
+        return "graduate"
+    if "associate" in level:
+        return "associate"
+    if "junior" in level:
+        return "junior"
+    if "entry" in level:
+        return "entry_level"
+    if "early_career" in level:
+        return "early_career"
+    return level
+
+
 def get_remote_location_label(location: str) -> str:
     value = (location or "").lower()
     if "india" in value or "indian" in value:
@@ -299,6 +346,146 @@ def fetch_live_jobicy_jobs() -> list:
 
     return live_jobs
 
+
+def fetch_live_himalayas_jobs(max_pages: int = 5) -> list:
+    """Fetch recent India-eligible remote jobs from Himalayas' public cursor API."""
+    live_jobs = []
+    cursor = None
+
+    for _ in range(max_pages):
+        params = {"limit": 100}
+        if cursor:
+            params["cursor"] = cursor
+        url = f"https://himalayas.app/jobs/api?{urllib.parse.urlencode(params)}"
+
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=15) as response:
+                data = json.loads(response.read().decode("utf-8", errors="ignore"))
+        except Exception as error:
+            print(f"[LiveCollector] Himalayas notice: {error}")
+            break
+
+        for job in data.get("jobs", []):
+            title = (job.get("title") or "").strip()
+            restrictions = job.get("locationRestrictions") or []
+            location = ", ".join(restrictions)
+            seniority = " ".join(job.get("seniority") or [])
+            description = re.sub(r"<[^<]+?>", " ", job.get("description") or "")
+            description = html_lib.unescape(description)
+            job_url = job.get("applicationLink") or ""
+            published_at = _epoch_to_iso(job.get("pubDate"))
+            if (
+                not title
+                or not job_url
+                or not location
+                or not is_india_or_worldwide_remote(location)
+                or not _is_entry_level_listing(title, seniority, description)
+            ):
+                continue
+
+            freshness = get_publication_freshness(published_at, None)
+            if freshness is None:
+                continue
+
+            company = job.get("companyName") or "Tech Company"
+            live_jobs.append({
+                "title": title,
+                "company": company,
+                "location": get_remote_location_label(location),
+                "url": job_url,
+                "direct_job_url": job_url,
+                **freshness,
+                "source_type": "Himalayas",
+                "source_domain": "himalayas.app",
+                "seniority": _normalize_seniority(seniority),
+                "raw_description": f"{title} at {company}. {description[:1000]}",
+                "is_remote": True,
+                "is_post": False
+            })
+
+        cursor = data.get("nextCursor")
+        if not cursor:
+            break
+
+    return live_jobs
+
+
+def fetch_live_adzuna_jobs() -> list:
+    """Fetch fresh India listings from Adzuna when API credentials are configured."""
+    app_id = os.environ.get("ADZUNA_APP_ID")
+    app_key = os.environ.get("ADZUNA_APP_KEY")
+    if not app_id or not app_key:
+        print("[LiveCollector] Adzuna skipped: configure ADZUNA_APP_ID and ADZUNA_APP_KEY.")
+        return []
+
+    queries = (
+        "data analyst",
+        "data scientist",
+        "machine learning engineer",
+        "AI engineer",
+    )
+    live_jobs = []
+    for query in queries:
+        params = urllib.parse.urlencode({
+            "app_id": app_id,
+            "app_key": app_key,
+            "results_per_page": 50,
+            "what": query,
+            "where": "India",
+            "max_days_old": 7,
+            "sort_by": "date",
+        })
+        url = f"https://api.adzuna.com/v1/api/jobs/in/search/1?{params}"
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=15) as response:
+                data = json.loads(response.read().decode("utf-8", errors="ignore"))
+        except urllib.error.HTTPError as error:
+            print(f"[LiveCollector] Adzuna request failed: HTTP {error.code}.")
+            if error.code in {401, 403, 429}:
+                break
+            continue
+        except Exception as error:
+            print(f"[LiveCollector] Adzuna notice: {error}")
+            continue
+
+        for job in data.get("results", []):
+            title = (job.get("title") or "").strip()
+            company = (job.get("company") or {}).get("display_name") or "Tech Company"
+            location = (job.get("location") or {}).get("display_name") or "India"
+            description = html_lib.unescape(job.get("description") or "")
+            job_url = job.get("redirect_url") or ""
+            if (
+                not title
+                or not job_url
+                or not is_india_or_worldwide_remote(location)
+                or not _is_entry_level_listing(title, "", description)
+            ):
+                continue
+
+            freshness = get_publication_freshness(job.get("created"), None)
+            if freshness is None:
+                continue
+
+            live_jobs.append({
+                "title": title,
+                "company": company,
+                "location": location,
+                "url": job_url,
+                "direct_job_url": job_url,
+                **freshness,
+                "source_type": "Adzuna",
+                "source_domain": "adzuna.com",
+                "seniority": "junior",
+                "raw_description": f"{title} at {company}. {description[:1000]}",
+                "is_remote": "remote" in location.lower(),
+                "is_post": False
+            })
+
+    return live_jobs
+
+
 def fetch_live_remotive_jobs() -> list:
     """
     Fetches real-time remote tech/data jobs from Remotive public API.
@@ -350,7 +537,11 @@ def fetch_live_remotive_jobs() -> list:
 
     return live_jobs
 
-def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
+def collect_and_score_all_live_jobs(
+    include_remotive: bool = True,
+    include_himalayas: bool = True,
+    include_adzuna: bool = True,
+) -> list:
     """
     Runs multi-source live collection (LinkedIn Guest API, Remotive Public API, Jobicy),
     deduplicates, matches with user profile, scores fit, and attaches semantic skill gaps.
@@ -362,11 +553,13 @@ def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
     else:
         profile = {"target_level": "fresher", "locations": {"require_india_only": False}}
 
-    print("[LiveCollector] Fetching entry-level jobs from LinkedIn and Jobicy, plus Remotive when scheduled...")
+    print("[LiveCollector] Fetching from LinkedIn, Jobicy, and scheduled remote job feeds...")
     raw_linkedin = fetch_live_linkedin_jobs()
     raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()
-    all_raw = raw_linkedin + raw_remotive + raw_jobicy
+    raw_himalayas = fetch_live_himalayas_jobs() if include_himalayas else []
+    raw_adzuna = fetch_live_adzuna_jobs() if include_adzuna else []
+    all_raw = raw_linkedin + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna
 
     source_counts = Counter(job["source_type"] for job in all_raw)
     print(
@@ -394,7 +587,7 @@ def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
             "title": title,
             "raw_description": desc,
             "location": loc,
-            "seniority": "junior",
+            "seniority": raw.get("seniority") or "junior",
             "hours_ago": hours_ago,
             "url": raw["url"],
             "required_skills": []

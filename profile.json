@@ -484,11 +484,10 @@
     "allow_job_boards": true,
     "supported_platforms": [
       "LinkedIn",
-      "Naukri",
-      "Indeed",
-      "Wellfound",
-      "Unstop",
-      "Direct ATS (Greenhouse / Lever / Workday)"
+      "Jobicy",
+      "Remotive",
+      "Himalayas",
+      "Adzuna (requires API credentials)"
     ],
     "exclude_aggregators": []
   },

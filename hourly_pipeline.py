@@ -39,23 +39,36 @@ def run_hourly_sync():
         for job in existing_jobs
     }
 
-    # Remotive recommends at most four requests a day; keep its fetch to six-hour intervals.
-    last_remotive_sync = data.get("last_remotive_sync")
-    include_remotive = True
-    if last_remotive_sync:
+    def source_is_due(last_sync_value, source_name):
+        if not last_sync_value:
+            return True
         try:
-            last_sync = datetime.datetime.fromisoformat(last_remotive_sync.replace("Z", "+00:00"))
+            last_sync = datetime.datetime.fromisoformat(last_sync_value.replace("Z", "+00:00"))
             if last_sync.tzinfo is None:
                 last_sync = last_sync.replace(tzinfo=datetime.timezone.utc)
-            include_remotive = now - last_sync >= datetime.timedelta(hours=6)
+            return now - last_sync >= datetime.timedelta(hours=6)
         except (TypeError, ValueError):
-            print(f"[{timestamp_str}] Ignoring invalid last_remotive_sync value.")
+            print(f"[{timestamp_str}] Ignoring invalid {source_name} sync timestamp.")
+            return True
 
-    # 1. Collect dated listings from LinkedIn, Jobicy, and (when due) Remotive.
+    # Remotive recommends at most four requests a day; throttle all larger public feeds.
+    include_remotive = source_is_due(data.get("last_remotive_sync"), "last_remotive_sync")
+    include_himalayas = source_is_due(data.get("last_himalayas_sync"), "last_himalayas_sync")
+    include_adzuna = source_is_due(data.get("last_adzuna_sync"), "last_adzuna_sync")
+
+    # 1. Collect dated listings from the available public feeds.
     print(f"[{timestamp_str}] Scraping & aggregating live job boards...")
-    live_scraped_jobs = collect_and_score_all_live_jobs(include_remotive=include_remotive)
+    live_scraped_jobs = collect_and_score_all_live_jobs(
+        include_remotive=include_remotive,
+        include_himalayas=include_himalayas,
+        include_adzuna=include_adzuna,
+    )
     if include_remotive:
         data["last_remotive_sync"] = timestamp_str
+    if include_himalayas:
+        data["last_himalayas_sync"] = timestamp_str
+    if include_adzuna:
+        data["last_adzuna_sync"] = timestamp_str
     added_count = 0
 
     for job in live_scraped_jobs:
