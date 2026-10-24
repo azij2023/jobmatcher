@@ -51,10 +51,11 @@ def run_hourly_sync():
             print(f"[{timestamp_str}] Ignoring invalid {source_name} sync timestamp.")
             return True
 
-    # Remotive recommends at most four requests a day; throttle all larger public feeds.
+    # Throttle publisher APIs while keeping the higher-frequency LinkedIn feed current.
     include_remotive = source_is_due(data.get("last_remotive_sync"), "last_remotive_sync")
     include_himalayas = source_is_due(data.get("last_himalayas_sync"), "last_himalayas_sync")
     include_adzuna = source_is_due(data.get("last_adzuna_sync"), "last_adzuna_sync")
+    include_jsearch = source_is_due(data.get("last_jsearch_sync"), "last_jsearch_sync")
 
     # 1. Collect dated listings from the available public feeds.
     print(f"[{timestamp_str}] Scraping & aggregating live job boards...")
@@ -62,6 +63,7 @@ def run_hourly_sync():
         include_remotive=include_remotive,
         include_himalayas=include_himalayas,
         include_adzuna=include_adzuna,
+        include_jsearch=include_jsearch,
     )
     if include_remotive:
         data["last_remotive_sync"] = timestamp_str
@@ -69,6 +71,8 @@ def run_hourly_sync():
         data["last_himalayas_sync"] = timestamp_str
     if include_adzuna:
         data["last_adzuna_sync"] = timestamp_str
+    if include_jsearch:
+        data["last_jsearch_sync"] = timestamp_str
     added_count = 0
 
     for job in live_scraped_jobs:

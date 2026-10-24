@@ -212,9 +212,12 @@ def score_job(job: dict, profile: dict) -> dict:
         profile.get("locations", {}).get("allow_worldwide_remote", False) and
         any(term in job_location for term in ("worldwide", "anywhere", "global"))
     )
+    is_remote_location_unverified = (
+        job.get("location_unverified", False) and "remote" in job_location
+    )
 
     if profile.get("locations", {}).get("require_india_only", True):
-        if not is_india and not is_worldwide_remote:
+        if not is_india and not is_worldwide_remote and not is_remote_location_unverified:
             return {
                 "rejected": True,
                 "final_score": 0.0,
@@ -227,6 +230,8 @@ def score_job(job: dict, profile: dict) -> dict:
         location_score = 0.95
     elif is_worldwide_remote:
         location_score = 0.85
+    elif is_remote_location_unverified:
+        location_score = 0.60
     else:
         location_score = 0.50
 

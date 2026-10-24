@@ -487,7 +487,8 @@
       "Jobicy",
       "Remotive",
       "Himalayas",
-      "Adzuna (requires API credentials)"
+      "Adzuna (requires API credentials)",
+      "JSearch multi-publisher feed (requires RAPIDAPI_KEY)"
     ],
     "exclude_aggregators": []
   },

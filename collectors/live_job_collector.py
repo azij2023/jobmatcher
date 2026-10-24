@@ -216,7 +216,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
         params = urllib.parse.urlencode({
             "keywords": q,
             "location": "India",
-            "f_TPR": "r86400",  # past 24 hours
+            "f_TPR": "r604800",  # past 7 days
             "f_E": "1,2",       # 1=Internship, 2=Entry level
             "start": 0
         })
@@ -285,8 +285,8 @@ def fetch_live_jobicy_jobs() -> list:
     live_jobs = []
     cursor = None
 
-    while True:
-        params = {"count": 200, "industry": "data-science"}
+    for _ in range(5):
+        params = {"count": 200}
         if cursor:
             params["cursor"] = cursor
         url = f"https://jobicy.com/api/jobs?{urllib.parse.urlencode(params)}"
@@ -343,6 +343,105 @@ def fetch_live_jobicy_jobs() -> list:
         cursor = data.get("nextCursor")
         if not cursor:
             break
+
+    return live_jobs
+
+
+def fetch_live_jsearch_jobs() -> list:
+    """Fetch India listings from JSearch's multi-publisher jobs API when configured."""
+    api_key = os.environ.get("RAPIDAPI_KEY")
+    if not api_key:
+        print("[LiveCollector] JSearch skipped: configure the RAPIDAPI_KEY repository secret.")
+        return []
+
+    queries = (
+        "entry level data analyst India",
+        "junior data scientist India",
+        "machine learning intern India",
+        "AI engineer fresher India",
+    )
+    live_jobs = []
+    for query in queries:
+        params = urllib.parse.urlencode({
+            "query": query,
+            "page": 1,
+            "num_pages": 1,
+            "country": "in",
+            "date_posted": "week",
+        })
+        request = urllib.request.Request(
+            f"https://jsearch.p.rapidapi.com/search?{params}",
+            headers={
+                **HEADERS,
+                "X-RapidAPI-Key": api_key,
+                "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
+            },
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=20) as response:
+                data = json.loads(response.read().decode("utf-8", errors="ignore"))
+        except urllib.error.HTTPError as error:
+            print(f"[LiveCollector] JSearch request failed: HTTP {error.code}.")
+            if error.code in {401, 403, 429}:
+                break
+            continue
+        except Exception as error:
+            print(f"[LiveCollector] JSearch notice: {error}")
+            continue
+
+        for job in data.get("data", []):
+            title = (job.get("job_title") or "").strip()
+            description = html_lib.unescape(job.get("job_description") or "")
+            required_experience = job.get("job_required_experience") or {}
+            years = required_experience.get("required_experience_in_months")
+            is_entry_level = (
+                _is_entry_level_listing(title, "", description)
+                or required_experience.get("no_experience_required") is True
+                or (isinstance(years, (int, float)) and years <= 12)
+            )
+            if not title or not is_entry_level:
+                continue
+
+            job_url = job.get("job_apply_link") or ""
+            if not job_url:
+                continue
+            country = job.get("job_country") or ""
+            remote = job.get("job_is_remote") is True
+            location = ", ".join(
+                part for part in (
+                    job.get("job_city"),
+                    job.get("job_state"),
+                    country,
+                ) if part
+            )
+            location_unverified = False
+            if remote and not location:
+                location = "Remote (verify location eligibility)"
+                location_unverified = True
+            elif not is_india_or_worldwide_remote(location):
+                continue
+
+            freshness = get_publication_freshness(job.get("job_posted_at_datetime_utc"), None)
+            if freshness is None:
+                continue
+
+            company = job.get("employer_name") or "Tech Company"
+            live_jobs.append({
+                "title": title,
+                "company": company,
+                "location": location,
+                "url": job_url,
+                "direct_job_url": job_url,
+                **freshness,
+                "source_type": "JSearch",
+                "source_domain": "jsearch.p.rapidapi.com",
+                "job_publisher": job.get("job_publisher"),
+                "seniority": "junior",
+                "location_unverified": location_unverified,
+                "raw_description": f"{title} at {company}. {description[:1000]}",
+                "is_remote": remote,
+                "is_post": False
+            })
 
     return live_jobs
 
@@ -541,6 +640,7 @@ def collect_and_score_all_live_jobs(
     include_remotive: bool = True,
     include_himalayas: bool = True,
     include_adzuna: bool = True,
+    include_jsearch: bool = True,
 ) -> list:
     """
     Runs multi-source live collection (LinkedIn Guest API, Remotive Public API, Jobicy),
@@ -559,7 +659,8 @@ def collect_and_score_all_live_jobs(
     raw_jobicy = fetch_live_jobicy_jobs()
     raw_himalayas = fetch_live_himalayas_jobs() if include_himalayas else []
     raw_adzuna = fetch_live_adzuna_jobs() if include_adzuna else []
-    all_raw = raw_linkedin + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna
+    raw_jsearch = fetch_live_jsearch_jobs() if include_jsearch else []
+    all_raw = raw_linkedin + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
 
     source_counts = Counter(job["source_type"] for job in all_raw)
     print(
@@ -590,7 +691,8 @@ def collect_and_score_all_live_jobs(
             "seniority": raw.get("seniority") or "junior",
             "hours_ago": hours_ago,
             "url": raw["url"],
-            "required_skills": []
+            "required_skills": [],
+            "location_unverified": raw.get("location_unverified", False),
         }, profile)
 
         if scored.get("rejected"):
@@ -629,6 +731,8 @@ def collect_and_score_all_live_jobs(
             "company_url": raw.get("company_url") or raw["url"],
             "source_type": raw["source_type"],
             "source_domain": raw["source_domain"],
+            "job_publisher": raw.get("job_publisher"),
+            "location_unverified": raw.get("location_unverified", False),
             "is_fresher": True,
             "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),

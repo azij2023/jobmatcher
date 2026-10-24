@@ -10,6 +10,8 @@ from unittest.mock import patch
 from collectors.live_job_collector import (
     fetch_live_adzuna_jobs,
     fetch_live_himalayas_jobs,
+    fetch_live_jsearch_jobs,
+    fetch_live_linkedin_jobs,
     fetch_live_jobicy_jobs,
     get_publication_freshness,
     is_india_or_worldwide_remote,
@@ -97,6 +99,7 @@ class PublicationFreshnessTests(unittest.TestCase):
             jobs = fetch_live_jobicy_jobs()
 
         self.assertEqual(len(requests), 2)
+        self.assertNotIn("industry=", requests[0])
         self.assertIn("cursor=next+page", requests[1])
         self.assertEqual([job["url"] for job in jobs], ["https://jobicy.com/jobs/1"])
         self.assertEqual(jobs[0]["source_domain"], "jobicy.com")
@@ -156,6 +159,20 @@ class PublicationFreshnessTests(unittest.TestCase):
         self.assertEqual(jobs[0]["source_type"], "Himalayas")
         self.assertEqual(jobs[0]["seniority"], "junior")
 
+    def test_linkedin_search_uses_the_full_seven_day_display_window(self):
+        requests = []
+
+        def open_feed(request, timeout):
+            requests.append(request.full_url)
+            return nullcontext(io.BytesIO(b""))
+
+        with patch("collectors.live_job_collector.urllib.request.urlopen", side_effect=open_feed):
+            with patch("collectors.live_job_collector.time.sleep"):
+                fetch_live_linkedin_jobs()
+
+        self.assertEqual(len(requests), 4)
+        self.assertTrue(all("f_TPR=r604800" in request for request in requests))
+
     def test_adzuna_skips_when_credentials_are_not_configured(self):
         with patch.dict(os.environ, {}, clear=True):
             with patch("collectors.live_job_collector.urllib.request.urlopen") as open_feed:
@@ -198,6 +215,60 @@ class PublicationFreshnessTests(unittest.TestCase):
         self.assertIn("max_days_old=7", requests[0])
         self.assertEqual([job["url"] for job in jobs], ["https://adzuna.example/jobs/1"] * 4)
         self.assertEqual(jobs[0]["source_type"], "Adzuna")
+
+    def test_jsearch_skips_when_api_key_is_not_configured(self):
+        with patch.dict(os.environ, {}, clear=True):
+            with patch("collectors.live_job_collector.urllib.request.urlopen") as open_feed:
+                self.assertEqual(fetch_live_jsearch_jobs(), [])
+        open_feed.assert_not_called()
+
+    def test_jsearch_fetches_fresh_entry_level_india_jobs(self):
+        published = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        result = {
+            "data": [
+                {
+                    "job_title": "Data Scientist",
+                    "employer_name": "Example",
+                    "job_city": "Bengaluru",
+                    "job_state": "Karnataka",
+                    "job_country": "India",
+                    "job_is_remote": False,
+                    "job_apply_link": "https://example.com/jobs/data-scientist",
+                    "job_posted_at_datetime_utc": published,
+                    "job_required_experience": {"no_experience_required": True},
+                    "job_description": "Build data models with Python and SQL.",
+                    "job_publisher": "Example Careers",
+                },
+                {
+                    "job_title": "Senior Data Scientist",
+                    "employer_name": "Example",
+                    "job_city": "Bengaluru",
+                    "job_state": "Karnataka",
+                    "job_country": "India",
+                    "job_is_remote": False,
+                    "job_apply_link": "https://example.com/jobs/senior-data-scientist",
+                    "job_posted_at_datetime_utc": published,
+                    "job_required_experience": {"no_experience_required": False},
+                    "job_description": "Senior role requiring 8 years.",
+                },
+            ]
+        }
+        requests = []
+
+        def open_feed(request, timeout):
+            requests.append(request)
+            return nullcontext(io.BytesIO(json.dumps(result).encode("utf-8")))
+
+        with patch.dict(os.environ, {"RAPIDAPI_KEY": "test-key"}):
+            with patch("collectors.live_job_collector.urllib.request.urlopen", side_effect=open_feed):
+                jobs = fetch_live_jsearch_jobs()
+
+        self.assertEqual(len(requests), 4)
+        self.assertIn("date_posted=week", requests[0].full_url)
+        self.assertIn("country=in", requests[0].full_url)
+        self.assertEqual(len(jobs), 4)
+        self.assertEqual(jobs[0]["source_type"], "JSearch")
+        self.assertEqual(jobs[0]["job_publisher"], "Example Careers")
 
 
 if __name__ == "__main__":

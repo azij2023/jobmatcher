@@ -358,8 +358,15 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentFilter.source === "LinkedIn Post" && !isPost) return false;
         if (currentFilter.source === "LinkedIn" && (isPost || !(job.url || '').toLowerCase().includes('linkedin.com'))) return false;
         if (currentFilter.source === "Naukri" && !(job.url || '').toLowerCase().includes('naukri.com')) return false;
-        if (currentFilter.source === "Jobicy" && !(job.source_domain || '').toLowerCase().includes('jobicy.com')) return false;
-        if (currentFilter.source === "Remotive" && !(job.source_domain || '').toLowerCase().includes('remotive.com')) return false;
+        const sourceDomains = {
+          Jobicy: "jobicy.com",
+          Remotive: "remotive.com",
+          Himalayas: "himalayas.app",
+          Adzuna: "adzuna.com",
+          JSearch: "jsearch.p.rapidapi.com"
+        };
+        const selectedDomain = sourceDomains[currentFilter.source];
+        if (selectedDomain && !(job.source_domain || '').toLowerCase().includes(selectedDomain)) return false;
         if (currentFilter.source === "Direct" && ((job.url || '').toLowerCase().includes('linkedin.com') || (job.url || '').toLowerCase().includes('naukri.com') || isPost)) return false;
       }
 
@@ -499,6 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const isLinkedIn = urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin') || isPost;
       const isRemotive = domainLower.includes('remotive.com');
       const isJobicy = domainLower.includes('jobicy.com');
+      const isJSearch = domainLower.includes('jsearch.p.rapidapi.com');
       const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || typeLower.includes('ats');
 
       let platformPill = '';
@@ -527,6 +535,10 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (isJobicy) {
         platformPill = `<span class="source-domain-badge source-direct">Jobicy</span>`;
         applyBtnText = 'View listing on Jobicy ↗';
+      } else if (isJSearch) {
+        const publisher = job.job_publisher ? ` via ${escapeHTML(job.job_publisher)}` : '';
+        platformPill = `<span class="source-domain-badge source-direct">JSearch${publisher}</span>`;
+        applyBtnText = 'Apply via JSearch ↗';
       } else if (isLinkedIn) {
         platformPill = `<span class="source-domain-badge source-direct">💼 LinkedIn</span>`;
         applyBtnText = '💼 Apply on LinkedIn ↗';
@@ -545,6 +557,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const remotePill = (job.is_remote || (job.location && job.location.toLowerCase().includes('remote')))
         ? `<span class="remote-badge">🌐 Remote</span>`
         : '';
+      const locationCheckPill = job.location_unverified
+        ? `<span class="source-domain-badge" title="The source does not specify whether this remote job accepts applications from India. Verify location eligibility on the listing.">⚠️ Verify location</span>`
+        : '';
       const applicantPill = job.applicants_count
         ? `<span class="applicant-badge">👥 ${escapeHTML(job.applicants_count)}</span>`
         : '';
@@ -562,6 +577,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   ${freshnessPill}
                   ${platformPill}
                   ${remotePill}
+                  ${locationCheckPill}
                   ${applicantPill}
                 </div>
                 <h3 class="job-title">${escapeHTML(job.title)}</h3>

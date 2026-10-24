@@ -38,6 +38,23 @@ class LocationScoringTests(unittest.TestCase):
         self.assertTrue(result["rejected"])
         self.assertIn("outside India or worldwide remote", result["rejection_reason"])
 
+    def test_remote_location_not_stated_is_allowed_with_explicit_flag(self):
+        result = score_job(
+            {
+                "title": "Junior Data Scientist",
+                "location": "Remote (verify location eligibility)",
+                "location_unverified": True,
+                "seniority": "junior",
+                "hours_ago": 2,
+                "raw_description": "Entry-level role using Python and SQL.",
+                "required_skills": [],
+            },
+            self.profile,
+        )
+
+        self.assertFalse(result["rejected"])
+        self.assertLess(result["final_score"], self.score_remote_job("Remote (Worldwide)")["final_score"])
+
     def test_data_analyst_is_a_matched_fresher_role(self):
         result = score_job(
             {
