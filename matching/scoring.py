@@ -69,6 +69,27 @@ def score_job(job: dict, profile: dict) -> dict:
             "rejection_reason": f"Job posted {hours_ago}h ago (older than {max_age_hours}h limit)"
         }
 
+    # 0a. Guardrail against generic companies and SEO search redirect URLs
+    company = job.get("company", "").lower().strip()
+    if not company or company in ["tech company", "other organization not listed here", "unknown"]:
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"Generic or placeholder company: '{company}'"
+        }
+    if any(bad in title for bad in ["jobs in", "job vacancies", "salary in", "vacancies in", "mba fresher or"]):
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"Title appears to be an SEO aggregator category page: '{title}'"
+        }
+    if "indeed.com/jobs?q=" in url or "-jobs-in-india" in url:
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"URL is a search redirect rather than a direct requisition link"
+        }
+
     # 0b. Platform Recognition (LinkedIn, Naukri, Indeed, Wellfound, Direct ATS)
     platform = "Direct Company Portal"
     if "linkedin.com" in url:

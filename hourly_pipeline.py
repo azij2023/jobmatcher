@@ -69,10 +69,25 @@ def run_hourly_sync():
             if not data:
                 data = {"jobs": [], "total_jobs": 0, "profile": {}, "stats": {}}
 
-    # Keep valid existing jobs, strictly purging any whose application deadline has passed
+    # Keep valid existing jobs, strictly purging any pseudo-jobs, search redirects, or expired deadlines
     valid_existing = []
     for job in data.get("jobs", []):
-        if not (job.get("title") or job.get("company")) or not (job.get("url") or job.get("linkedin_url")):
+        t = (job.get("title") or "").strip()
+        c = (job.get("company") or "").strip()
+        u = (job.get("url") or job.get("linkedin_url") or "").strip()
+        t_lower = t.lower()
+        c_lower = c.lower()
+        u_lower = u.lower()
+
+        if not t or not c or not u:
+            continue
+
+        # Purge fake/pseudo aggregator jobs
+        if c_lower in ["tech company", "other organization not listed here", "unknown"]:
+            continue
+        if any(bad in t_lower for bad in ["jobs in", "job vacancies", "salary in", "vacancies in", "mba fresher or"]):
+            continue
+        if "indeed.com/jobs?q=" in u_lower or "-jobs-in-india" in u_lower:
             continue
 
         # Purge expired application deadlines
@@ -83,7 +98,7 @@ def run_hourly_sync():
                 continue
 
         # Purge stale unstop jobs from legacy runs lacking verified active deadlines
-        if "unstop.com" in (job.get("url") or "") and not job.get("deadline"):
+        if "unstop.com" in u_lower and not job.get("deadline"):
             continue
 
         valid_existing.append(job)

@@ -356,17 +356,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const typeLower = (job.source_type || '').toLowerCase();
         const isPost = Boolean(job.is_post) || typeLower.includes('post') || urlLower.includes('/posts/');
         const isUnstop = urlLower.includes('unstop.com') || domainLower.includes('unstop') || typeLower.includes('unstop');
-        const isNaukri = urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri');
-        const isIndeed = urlLower.includes('indeed.com') || domainLower.includes('indeed') || typeLower.includes('indeed');
         const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || urlLower.includes('workday') || typeLower.includes('ats');
-        const isPortal = typeLower.includes('portal') || typeLower.includes('official') || isAts || (!urlLower.includes('linkedin.com') && !urlLower.includes('naukri.com') && !urlLower.includes('unstop.com') && !urlLower.includes('indeed.com') && !isPost);
-        const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !isPortal && !isUnstop && !isNaukri && !isIndeed;
+        const isPortal = (typeLower.includes('portal') || typeLower.includes('official') || (!urlLower.includes('linkedin.com') && !urlLower.includes('unstop.com') && !isPost && !domainLower.includes('remotive') && !domainLower.includes('jobicy'))) && !isAts;
+        const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !isPortal && !isAts && !isUnstop;
 
         if (currentFilter.source === "LinkedIn Post" && !isPost) return false;
         if (currentFilter.source === "LinkedIn" && !isLinkedIn) return false;
-        if (currentFilter.source === "Naukri" && !isNaukri) return false;
         if (currentFilter.source === "Unstop" && !isUnstop) return false;
-        if (currentFilter.source === "Indeed" && !isIndeed) return false;
+        if (currentFilter.source === "Direct ATS" && !isAts) return false;
         if (currentFilter.source === "Direct" && !isPortal) return false;
 
         const sourceDomains = {
@@ -909,7 +906,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Direct Application URLs
     const modalTargetUrl = job.url || job.linkedin_url || job.company_url || '#';
-    const isModalNaukri = (modalTargetUrl.toLowerCase().includes('naukri.com') || (job.source_type || '').toLowerCase().includes('naukri'));
+    const isModalUnstop = (modalTargetUrl.toLowerCase().includes('unstop.com') || (job.source_type || '').toLowerCase().includes('unstop'));
+    const isModalAts = (modalTargetUrl.toLowerCase().includes('greenhouse.io') || modalTargetUrl.toLowerCase().includes('lever.co') || modalTargetUrl.toLowerCase().includes('ashbyhq') || modalTargetUrl.toLowerCase().includes('workday'));
     const isModalLinkedIn = (modalTargetUrl.toLowerCase().includes('linkedin.com') || (job.source_type || '').toLowerCase().includes('linkedin') || job.is_post);
     const modalSourceDomain = (job.source_domain || '').toLowerCase();
     const isModalRemotive = modalSourceDomain.includes('remotive.com');
@@ -917,15 +915,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalApplyLinkedin.textContent = isModalLinkedIn
       ? "💼 Apply on LinkedIn ↗"
-      : isModalNaukri
-        ? "🔷 Apply on Naukri ↗"
-        : isModalRemotive
-          ? "View listing on Remotive ↗"
-          : isModalJobicy
-            ? "View listing on Jobicy ↗"
-            : "🏢 Apply on Official Portal ↗";
+      : isModalUnstop
+        ? "🎯 Apply on Unstop ↗"
+        : isModalAts
+          ? "🚀 Direct ATS Application ↗"
+          : isModalRemotive
+            ? "View listing on Remotive ↗"
+            : isModalJobicy
+              ? "View listing on Jobicy ↗"
+              : `🏢 Apply on ${job.company || 'Official'} Portal ↗`;
     modalApplyLinkedin.href = modalTargetUrl;
-    modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalNaukri ? "btn btn-primary btn-naukri" : "btn btn-primary btn-direct-portal");
+    modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalUnstop ? "btn btn-primary btn-unstop" : (isModalAts ? "btn btn-primary btn-ats" : "btn btn-primary btn-direct-portal"));
     modalApplyLinkedin.title = `Apply directly for ${job.title} at ${job.company}`;
 
     if (modalApplyGoogle) {

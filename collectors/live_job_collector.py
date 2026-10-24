@@ -170,14 +170,21 @@ def is_india_or_worldwide_remote(location: str) -> bool:
 def _is_entry_level_listing(title: str, seniority: str, description: str = "") -> bool:
     title_text = (title or "").lower()
     level_text = (seniority or "").lower().replace("-", " ")
+    description_text = (description or "").lower()
+    combined_text = f"{title_text} {level_text} {description_text}"
+
+    # 1. Hard reject senior titles or explicit 2+, 3+, 4+, 5+ year requirements
     if any(term in title_text for term in EXCLUDE_TITLES):
         return False
-    if any(term in level_text for term in ("mid level", "mid-level", "senior", "lead", "principal", "director")):
+    if any(term in level_text for term in ("mid level", "mid-level", "senior", "lead", "principal", "director", "manager")):
         return False
-    entry_terms = ("entry", "junior", "intern", "graduate", "associate", "fresher", "trainee", "early career", "new grad")
+    if re.search(r"\b(?:[2-9]|\d{2,})\+?\s*(?:-|to)?\s*\d*\s*years?(?:\s+of)?\s*(?:relevant\s+)?experience\b", combined_text):
+        return False
+
+    # 2. Explicit entry terms (excluding standalone 'associate' which can be 5+ yrs at banks like BlackRock)
+    entry_terms = ("entry", "junior", "intern", "graduate", "fresher", "trainee", "early career", "new grad", "apprentice")
     if any(term in title_text or term in level_text for term in entry_terms):
         return True
-    description_text = (description or "").lower()
     if any(term in description_text for term in (
         "entry-level", "entry level", "fresher", "freshers", "internship",
         "early career", "new graduate", "recent graduate",
@@ -733,7 +740,9 @@ def fetch_live_unstop_jobs() -> list:
                         # Exclude listings older than 7 days
                         continue
 
-                    company = (item.get('organisation') or {}).get('name') or "Tech Company"
+                    company = ((item.get('organisation') or {}).get('name') or "").strip()
+                    if not company or company.lower() in ["tech company", "other organization not listed here", "unknown"]:
+                        continue  # Must be an identified, verified company
                     job_url = f"https://unstop.com/jobs/{job_id}" if opp_type == "jobs" else f"https://unstop.com/internships/{job_id}"
                     loc = item.get('job_location') or item.get('location') or "India"
 
@@ -885,17 +894,15 @@ def collect_and_score_all_live_jobs(
     else:
         profile = {"target_level": "fresher", "locations": {"require_india_only": False}}
 
-    print("[LiveCollector] Fetching from multi-source platforms (LinkedIn, Naukri, Unstop, Indeed, Jobicy, Remotive)...")
+    print("[LiveCollector] Fetching from verified platforms (LinkedIn, Unstop, Remotive, Jobicy)...")
     raw_linkedin = fetch_live_linkedin_jobs()
     raw_unstop = fetch_live_unstop_jobs()
-    raw_naukri = fetch_live_naukri_rss_jobs()
-    raw_indeed = fetch_live_indeed_rss_jobs()
     raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()
     raw_himalayas = fetch_live_himalayas_jobs() if include_himalayas else []
     raw_adzuna = fetch_live_adzuna_jobs() if include_adzuna else []
     raw_jsearch = fetch_live_jsearch_jobs() if include_jsearch else []
-    all_raw = raw_linkedin + raw_unstop + raw_naukri + raw_indeed + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
+    all_raw = raw_linkedin + raw_unstop + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
 
     source_counts = Counter(job["source_type"] for job in all_raw)
     print(
@@ -910,6 +917,22 @@ def collect_and_score_all_live_jobs(
     for raw in all_raw:
         title = raw["title"].strip()
         company = raw["company"].strip()
+        url = raw["url"].strip()
+
+        # Hard guardrail against pseudo-jobs or search landing pages
+        c_lower = company.lower()
+        t_lower = title.lower()
+        u_lower = url.lower()
+        if not company or c_lower in ["tech company", "other organization not listed here", "unknown"]:
+            rejection_counts["generic_or_missing_company"] += 1
+            continue
+        if any(bad in t_lower for bad in ["jobs in", "job vacancies", "salary in", "vacancies in", "mba fresher or"]):
+            rejection_counts["seo_category_landing_page"] += 1
+            continue
+        if "indeed.com/jobs?q=" in u_lower or "-jobs-in-india" in u_lower:
+            rejection_counts["generic_search_redirect_url"] += 1
+            continue
+
         norm_key = f"{company.lower()}::{title.lower()}"
         if norm_key in seen_keys:
             continue
