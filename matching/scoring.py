@@ -60,8 +60,8 @@ def score_job(job: dict, profile: dict) -> dict:
     hours_ago = job.get("hours_ago")
     url = job.get("url", "").lower()
 
-    # 0. Check Freshness Filter (Within 24 Hours / 1 Day)
-    max_age_hours = profile.get("freshness", {}).get("max_age_hours", 24)
+    # 0. Check Freshness Filter (Retention window up to 30 days)
+    max_age_hours = profile.get("freshness", {}).get("max_age_hours", 720)
     if hours_ago is not None and hours_ago > max_age_hours:
         return {
             "rejected": True,

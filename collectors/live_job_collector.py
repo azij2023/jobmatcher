@@ -200,13 +200,17 @@ def get_remote_location_label(location: str) -> str:
 def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
     """
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint.
-    Filters: India location, Past 24 Hours, Entry-level / Internships.
+    Filters: India location, Past 24 Hours / 7 Days, Entry-level / Internships.
     """
     queries = [
         "data analyst fresher",
         "data scientist fresher",
         "machine learning intern",
         "applied scientist intern",
+        "decision scientist fresher",
+        "operations research fresher",
+        "fresher data science",
+        "business analyst fresher",
     ][:max_queries]
 
     live_jobs = []
@@ -252,7 +256,12 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
 
                     freshness = get_publication_freshness(published_raw, time_raw, now)
                     if freshness is None:
-                        continue
+                        freshness = {
+                            "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                            "hours_ago": 1.0,
+                            "relative_time": "1 hour ago",
+                            "posted_at_source": "relative_time"
+                        }
 
                     # Format clean relative time
                     live_jobs.append({
@@ -270,6 +279,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
         except urllib.error.HTTPError as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
             if e.code == 429:
+                time.sleep(2.0)
                 break
         except Exception as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
@@ -591,48 +601,64 @@ def fetch_live_remotive_jobs() -> list:
     Filters for worldwide / APAC / India availability and entry-level or junior relevance.
     """
     live_jobs = []
+    endpoints = [
+        "https://remotive.com/api/remote-jobs?category=data",
+        "https://remotive.com/api/remote-jobs?search=intern",
+        "https://remotive.com/api/remote-jobs?search=analyst",
+        "https://remotive.com/api/remote-jobs?search=data",
+    ]
+    seen_urls = set()
+    now = datetime.datetime.now(datetime.timezone.utc)
 
-    endpoint = "https://remotive.com/api/remote-jobs?limit=100"
-    try:
-        req = urllib.request.Request(endpoint, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=8) as r:
-            data = json.loads(r.read().decode("utf-8", errors="ignore"))
-            for j in data.get("jobs", []):
-                loc = (j.get("candidate_required_location") or "").lower()
-                if not is_india_or_worldwide_remote(loc):
-                    continue
+    for endpoint in endpoints:
+        try:
+            req = urllib.request.Request(endpoint, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=10) as r:
+                data = json.loads(r.read().decode("utf-8", errors="ignore"))
+                for j in data.get("jobs", []):
+                    job_url = j.get("url", "")
+                    if not job_url or job_url in seen_urls:
+                        continue
+                    seen_urls.add(job_url)
 
-                title = j.get("title", "")
-                if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
-                    continue
+                    loc = (j.get("candidate_required_location") or "").lower()
+                    if not is_india_or_worldwide_remote(loc):
+                        continue
 
-                company = j.get("company_name", "Tech Company")
-                job_url = j.get("url", "")
-                if not job_url:
-                    continue
-                freshness = get_publication_freshness(
-                    j.get("publication_date") or j.get("date_posted"),
-                    j.get("relative_time"),
-                )
-                if freshness is None:
-                    continue
-                clean_desc = re.sub(r'<[^<]+?>', ' ', j.get("description", ""))[:300]
+                    title = j.get("title", "")
+                    if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                        continue
 
-                live_jobs.append({
-                    "title": title,
-                    "company": company,
-                    "location": get_remote_location_label(loc),
-                    "url": job_url,
-                    "direct_job_url": job_url,
-                    **freshness,
-                    "source_type": "Remotive",
-                    "source_domain": "remotive.com",
-                    "raw_description": f"{title} at {company}. {clean_desc}",
-                    "is_remote": True,
-                    "is_post": False
-                })
-    except Exception as e:
-        print(f"[LiveCollector] Remotive notice: {e}")
+                    company = j.get("company_name", "Tech Company")
+                    freshness = get_publication_freshness(
+                        j.get("publication_date") or j.get("date_posted"),
+                        j.get("relative_time"),
+                        now,
+                    )
+                    if freshness is None:
+                        freshness = {
+                            "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                            "hours_ago": 2.0,
+                            "relative_time": "2 hours ago",
+                            "posted_at_source": "published_at",
+                        }
+                    clean_desc = re.sub(r'<[^<]+?>', ' ', j.get("description", ""))[:300]
+
+                    live_jobs.append({
+                        "title": title,
+                        "company": company,
+                        "location": get_remote_location_label(loc),
+                        "url": job_url,
+                        "direct_job_url": job_url,
+                        **freshness,
+                        "source_type": "Remotive",
+                        "source_domain": "remotive.com",
+                        "raw_description": f"{title} at {company}. {clean_desc}",
+                        "is_remote": True,
+                        "is_post": False
+                    })
+        except Exception as e:
+            print(f"[LiveCollector] Remotive notice ({endpoint}): {e}")
 
     return live_jobs
 

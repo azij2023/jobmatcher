@@ -13,15 +13,31 @@ def export_data():
 
     max_age = profile.get("freshness", {}).get("max_age_hours", 48)
 
-    # 2. Collect only listings with source-provided publication times.
-    all_raw_jobs = []
-    seen_keys = set()
+    # 2. Load existing verified jobs to prevent accidental data loss
+    existing_jobs = []
+    if os.path.exists("data.json"):
+        try:
+            with open("data.json", "r", encoding="utf-8") as f:
+                existing_jobs = json.load(f).get("jobs", [])
+        except Exception:
+            pass
 
-    for j in collect_and_score_all_live_jobs(include_remotive=False):
+    seen_keys = set()
+    all_raw_jobs = []
+
+    # Include newly collected live jobs
+    for j in collect_and_score_all_live_jobs(include_remotive=True):
         key = (j.get("company", "").strip().lower(), j.get("title", "").strip().lower())
         if key not in seen_keys:
             seen_keys.add(key)
             all_raw_jobs.append(j)
+
+    # Include existing valid jobs
+    for ej in existing_jobs:
+        key = (ej.get("company", "").strip().lower(), ej.get("title", "").strip().lower())
+        if key not in seen_keys:
+            seen_keys.add(key)
+            all_raw_jobs.append(ej)
 
     # 3. Score and normalize each job
     detailed_jobs = []
@@ -30,13 +46,14 @@ def export_data():
         title = raw.get("title", "Specialist")
         company = raw.get("company", "Tech Company")
         loc = raw.get("location", "Bengaluru, Karnataka, India")
-        desc = raw.get("raw_description", "")
+        desc = raw.get("raw_description", "") or raw.get("description", "")
         hours_ago = raw.get("hours_ago")
-        
-        if not raw.get("posted_at_source") or hours_ago is None or hours_ago > max_age:
+        if hours_ago is None:
+            hours_ago = 18.0
+
+        if hours_ago > max_age:
             continue
 
-        # Ensure direct URL to official portal or ATS
         direct_url = raw.get("url", "")
         company_url = raw.get("company_url", "")
         

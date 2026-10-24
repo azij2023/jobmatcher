@@ -29,7 +29,12 @@
         "applied ai engineer",
         "ai / applied ml research intern",
         "applied ml research intern",
-        "applied ml intern"
+        "applied ml intern",
+        "ai trainer",
+        "ai trainer - video annotation",
+        "ai model trainer",
+        "ai annotation specialist",
+        "ai data evaluator"
       ]
     },
     {
@@ -237,7 +242,10 @@
         "software engineer - edge ai",
         "edge ai",
         "machine learning engineer - fresher",
-        "machine learning engineer - fresher / new grad"
+        "machine learning engineer - fresher / new grad",
+        "software engineer, ai coding tasks",
+        "ai coding engineer",
+        "cloud field engineer"
       ]
     },
     {
@@ -476,8 +484,8 @@
     ]
   },
   "freshness": {
-    "max_age_hours": 168,
-    "max_display_age_hours": 168,
+    "max_age_hours": 720,
+    "max_display_age_hours": 720,
     "exclude_stale_jobs": true,
     "filter_param_naukri_days": 1,
     "filter_param_linkedin_tpr": "r86400",
