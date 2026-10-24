@@ -69,11 +69,26 @@ def run_hourly_sync():
             if not data:
                 data = {"jobs": [], "total_jobs": 0, "profile": {}, "stats": {}}
 
-    # Keep all valid existing jobs
-    existing_jobs = [
-        job for job in data.get("jobs", [])
-        if (job.get("title") or job.get("company")) and (job.get("url") or job.get("linkedin_url"))
-    ]
+    # Keep valid existing jobs, strictly purging any whose application deadline has passed
+    valid_existing = []
+    for job in data.get("jobs", []):
+        if not (job.get("title") or job.get("company")) or not (job.get("url") or job.get("linkedin_url")):
+            continue
+
+        # Purge expired application deadlines
+        deadline_str = job.get("deadline") or job.get("end_date")
+        if deadline_str:
+            deadline_dt = parse_any_datetime(deadline_str)
+            if deadline_dt and deadline_dt < now:
+                continue
+
+        # Purge stale unstop jobs from legacy runs lacking verified active deadlines
+        if "unstop.com" in (job.get("url") or "") and not job.get("deadline"):
+            continue
+
+        valid_existing.append(job)
+
+    existing_jobs = valid_existing
     existing_by_url = {job["url"]: job for job in existing_jobs if job.get("url")}
     existing_by_key = {
         f"{job.get('company', '').lower()}::{job.get('title', '').lower()}": job

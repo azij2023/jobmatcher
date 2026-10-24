@@ -20,9 +20,9 @@ import html as html_lib
 import os
 import sys
 import time
-import urllib.error
 from collections import Counter
 import xml.etree.ElementTree as ET
+import email.utils
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -73,16 +73,40 @@ def parse_relative_time_to_hours(time_str: str) -> float | None:
 
 
 def parse_published_datetime(value: str | None) -> datetime.datetime | None:
-    """Parse a source publication date and normalize it to UTC."""
+    """Parse a source publication date (ISO, RFC 2822, Unstop, etc.) and normalize it to UTC."""
     if not value:
         return None
+    val_str = str(value).strip()
+
+    # 1. ISO format (e.g. 2026-10-24T12:00:00Z, 2026-10-23T15:30:00+05:30)
     try:
-        published_at = datetime.datetime.fromisoformat(str(value).strip().replace("Z", "+00:00"))
+        clean_iso = val_str.replace("Z", "+00:00")
+        dt = datetime.datetime.fromisoformat(clean_iso)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        return dt.astimezone(datetime.timezone.utc)
     except (TypeError, ValueError):
-        return None
-    if published_at.tzinfo is None:
-        published_at = published_at.replace(tzinfo=datetime.timezone.utc)
-    return published_at.astimezone(datetime.timezone.utc)
+        pass
+
+    # 2. RFC 2822 format (e.g. RSS pubDate: 'Fri, 23 Oct 2026 12:30:28 GMT')
+    try:
+        dt = email.utils.parsedate_to_datetime(val_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        return dt.astimezone(datetime.timezone.utc)
+    except (TypeError, ValueError):
+        pass
+
+    # 3. Unstop format (e.g. '2026-10-13 13:00:42 GMT+0530' or '2026-10-13 13:00:42')
+    try:
+        clean_unstop = re.sub(r'\s*GMT.*', '', val_str).strip()
+        dt = datetime.datetime.strptime(clean_unstop, '%Y-%m-%d %H:%M:%S')
+        dt = dt.replace(tzinfo=datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
+        return dt.astimezone(datetime.timezone.utc)
+    except (TypeError, ValueError):
+        pass
+
+    return None
 
 
 def get_publication_freshness(
@@ -666,12 +690,17 @@ def fetch_live_remotive_jobs() -> list:
 
 def fetch_live_unstop_jobs() -> list:
     """Fetch live fresher & internship opportunities from Unstop campus hiring platform."""
-    queries = ["data", "machine learning", "analyst", "data science"]
+    categories = [
+        ("jobs", "data"), ("jobs", "analyst"), ("jobs", "machine learning"),
+        ("internships", "data"), ("internships", "analyst"), ("internships", "ai"),
+        ("internships", "machine learning")
+    ]
     unstop_jobs = []
     seen = set()
     now = datetime.datetime.now(datetime.timezone.utc)
-    for q in queries:
-        url = f"https://unstop.com/api/public/opportunity/search-result?opportunity=jobs&searchTerm={urllib.parse.quote(q)}&per_page=15"
+
+    for opp_type, q in categories:
+        url = f"https://unstop.com/api/public/opportunity/search-result?opportunity={opp_type}&searchTerm={urllib.parse.quote(q)}&sortBy=recent&per_page=30"
         try:
             req = urllib.request.Request(url, headers=HEADERS)
             with urllib.request.urlopen(req, timeout=8) as r:
@@ -682,11 +711,30 @@ def fetch_live_unstop_jobs() -> list:
                         continue
                     seen.add(job_id)
 
+                    # 1. Hard check: registration must be open and status LIVE
+                    if item.get('regn_open') == 0 or item.get('status') != 'LIVE':
+                        continue
+
+                    # 2. Hard check: application deadline must NOT have passed
+                    end_str = item.get('end_date')
+                    if end_str:
+                        end_dt = parse_published_datetime(end_str)
+                        if end_dt and end_dt < now:
+                            continue  # Application closed / deadline passed!
+
                     title = item.get('title', '').strip()
                     if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
                         continue
+
+                    # 3. Real publication timestamp check
+                    pub_str = item.get('approved_date') or item.get('updated_at')
+                    freshness = get_publication_freshness(pub_str, None, now)
+                    if not freshness or freshness['hours_ago'] > 168.0:
+                        # Exclude listings older than 7 days
+                        continue
+
                     company = (item.get('organisation') or {}).get('name') or "Tech Company"
-                    job_url = f"https://unstop.com/jobs/{job_id}"
+                    job_url = f"https://unstop.com/jobs/{job_id}" if opp_type == "jobs" else f"https://unstop.com/internships/{job_id}"
                     loc = item.get('job_location') or item.get('location') or "India"
 
                     unstop_jobs.append({
@@ -697,15 +745,13 @@ def fetch_live_unstop_jobs() -> list:
                         "direct_job_url": job_url,
                         "source_type": "Unstop",
                         "source_domain": "unstop.com",
-                        "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
-                        "hours_ago": 1.5,
-                        "relative_time": "1 hour ago",
-                        "posted_at_source": "published_at",
-                        "raw_description": f"{title} at {company} in {loc}. Listed on Unstop campus hiring platform.",
+                        **freshness,
+                        "deadline": end_str,
+                        "raw_description": f"{title} at {company} in {loc}. Active hiring opportunity on Unstop (Deadline: {end_str[:10] if end_str else 'Open'}).",
                         "is_post": False
                     })
         except Exception as e:
-            print(f"[LiveCollector] Unstop notice ({q}): {e}")
+            print(f"[LiveCollector] Unstop notice ({opp_type}/{q}): {e}")
     return unstop_jobs
 
 
@@ -722,6 +768,13 @@ def fetch_live_naukri_rss_jobs() -> list:
             root = ET.fromstring(r.read())
             for item in root.findall('.//item')[:30]:
                 raw_title = (item.find('title').text or "").strip()
+                pub_el = item.find('pubDate')
+                pub_str = pub_el.text.strip() if pub_el is not None and pub_el.text else None
+                freshness = get_publication_freshness(pub_str, None, now)
+                if not freshness or freshness['hours_ago'] > 168.0:
+                    # Discard articles older than 7 days (eliminates 2016 articles!)
+                    continue
+
                 parts = [p.strip() for p in raw_title.split(' - ') if p.strip()]
                 if not parts:
                     continue
@@ -753,10 +806,7 @@ def fetch_live_naukri_rss_jobs() -> list:
                     "direct_job_url": naukri_url,
                     "source_type": "Naukri",
                     "source_domain": "naukri.com",
-                    "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
-                    "hours_ago": 3.0,
-                    "relative_time": "3 hours ago",
-                    "posted_at_source": "published_at",
+                    **freshness,
                     "raw_description": f"{title} at {company} in {loc}. Fresher opportunity listed on Naukri.",
                     "is_post": False
                 })
@@ -787,6 +837,13 @@ def fetch_live_indeed_rss_jobs() -> list:
                 title = parts[0]
                 if any(bad in title.lower() for bad in EXCLUDE_TITLES):
                     continue
+
+                pub_el = item.find('pubDate')
+                pub_str = pub_el.text.strip() if pub_el is not None and pub_el.text else None
+                freshness = get_publication_freshness(pub_str, None, now)
+                if not freshness or freshness['hours_ago'] > 168.0:
+                    continue
+
                 company = parts[1] if len(parts) > 1 else "Tech Company"
                 slug = urllib.parse.quote_plus(title)
                 indeed_url = f"https://in.indeed.com/jobs?q={slug}&l=India&explvl=entry_level"
@@ -802,10 +859,7 @@ def fetch_live_indeed_rss_jobs() -> list:
                     "direct_job_url": indeed_url,
                     "source_type": "Indeed",
                     "source_domain": "indeed.com",
-                    "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
-                    "hours_ago": 4.0,
-                    "relative_time": "4 hours ago",
-                    "posted_at_source": "published_at",
+                    **freshness,
                     "raw_description": f"{title} at {company}. Fresher opportunity listed on Indeed India.",
                     "is_post": False
                 })
