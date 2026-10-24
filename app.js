@@ -73,13 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
     tier: "all",
     location: "all",
     source: "all",
-    minScore: 0.60,
+    minScore: 0.50,
     sortBy: "latest",
-    maxAgeHours: 48
+    maxAgeHours: 168
   };
 
   let currentPage = 1;
-  let pageSize = 8;
+  let pageSize = 24;
 
   const paginationContainer = document.getElementById("pagination-container");
   const paginationInfo = document.getElementById("pagination-info");
@@ -358,6 +358,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentFilter.source === "LinkedIn Post" && !isPost) return false;
         if (currentFilter.source === "LinkedIn" && (isPost || !(job.url || '').toLowerCase().includes('linkedin.com'))) return false;
         if (currentFilter.source === "Naukri" && !(job.url || '').toLowerCase().includes('naukri.com')) return false;
+        if (currentFilter.source === "Jobicy" && !(job.source_domain || '').toLowerCase().includes('jobicy.com')) return false;
+        if (currentFilter.source === "Remotive" && !(job.source_domain || '').toLowerCase().includes('remotive.com')) return false;
         if (currentFilter.source === "Direct" && ((job.url || '').toLowerCase().includes('linkedin.com') || (job.url || '').toLowerCase().includes('naukri.com') || isPost)) return false;
       }
 
@@ -397,15 +399,24 @@ document.addEventListener("DOMContentLoaded", () => {
     if (bannerJobCount) bannerJobCount.textContent = totalJobs;
     const bannerHeadlineEl = document.getElementById("banner-headline");
     if (bannerHeadlineEl) {
+      const freshnessText = currentFilter.maxAgeHours >= 9000
+        ? "Anytime"
+        : currentFilter.maxAgeHours % 24 === 0
+          ? `${currentFilter.maxAgeHours / 24} Days`
+          : `${currentFilter.maxAgeHours} Hours`;
       if (currentFilter.search) {
         bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> Valid Jobs Matching "${escapeHTML(currentFilter.search)}"`;
       } else {
-        bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> Valid Jobs Posted Between Last Minute & 2 Days Ago`;
+        bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> Valid Jobs Posted Within ${freshnessText}`;
       }
     }
     if (bannerScopePill) {
-      const scopeHrs = currentFilter.maxAgeHours || 48;
-      bannerScopePill.textContent = scopeHrs >= 9000 ? '🌐 Anytime (All Jobs)' : (scopeHrs === 1 ? '⏱️ Last 1h Live Window' : (scopeHrs === 24 ? '⭐ Today (< 24h) Window' : `⚡ 0m – ${scopeHrs}h Live Window`));
+      const scopeHrs = currentFilter.maxAgeHours || 168;
+      bannerScopePill.textContent = scopeHrs >= 9000
+        ? '🌐 Anytime (All Jobs)'
+        : scopeHrs % 24 === 0
+          ? `📅 Past ${scopeHrs / 24} days`
+          : `⚡ Past ${scopeHrs} hours`;
     }
 
     // Render cards
@@ -1048,20 +1059,20 @@ document.addEventListener("DOMContentLoaded", () => {
     currentFilter.tier = "all";
     currentFilter.location = "all";
     currentFilter.source = "all";
-    currentFilter.minScore = 0.60;
+    currentFilter.minScore = 0.50;
     currentFilter.sortBy = "latest";
-    currentFilter.maxAgeHours = 48;
-    if (scoreSlider) scoreSlider.value = 60;
-    if (scoreSliderVal) scoreSliderVal.textContent = "60%";
+    currentFilter.maxAgeHours = 168;
+    if (scoreSlider) scoreSlider.value = 50;
+    if (scoreSliderVal) scoreSliderVal.textContent = "50%";
     if (sortSelect) sortSelect.value = "latest";
     if (tierSelect) tierSelect.value = "all";
-    if (freshnessSelect) freshnessSelect.value = "48";
+    if (freshnessSelect) freshnessSelect.value = "168";
     if (sourceSelect) sourceSelect.value = "all";
     if (clearSearchBtn) clearSearchBtn.style.display = "none";
     if (heroClearRole) heroClearRole.style.display = "none";
     updateChipSelection("all");
     document.querySelectorAll(".quick-pill").forEach(p => p.classList.remove("active"));
-    const defPill = document.querySelector(".quick-pill[data-hours='48'][data-role='']");
+    const defPill = document.querySelector(".quick-pill[data-hours='168'][data-role='']");
     if (defPill) defPill.classList.add("active");
     currentPage = 1;
     renderJobs();
@@ -1070,7 +1081,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (freshnessSelect) {
     freshnessSelect.addEventListener("change", (e) => {
       const val = e.target.value;
-      currentFilter.maxAgeHours = (val === "any" || val === "9999") ? 9999 : (parseInt(val, 10) || 48);
+      currentFilter.maxAgeHours = (val === "any" || val === "9999") ? 9999 : (parseInt(val, 10) || 168);
       if (heroSearchFreshness) heroSearchFreshness.value = val;
       currentPage = 1;
       renderJobs();
@@ -1097,7 +1108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (heroSearchLocation) currentFilter.location = heroSearchLocation.value;
     if (heroSearchFreshness) {
       const freshVal = heroSearchFreshness.value;
-      currentFilter.maxAgeHours = (freshVal === "any" || freshVal === "9999") ? 9999 : (parseInt(freshVal, 10) || 48);
+      currentFilter.maxAgeHours = (freshVal === "any" || freshVal === "9999") ? 9999 : (parseInt(freshVal, 10) || 168);
     }
 
     // 2. Sync secondary toolbar inputs
@@ -1475,7 +1486,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     const roundedScore = Math.round(finalScore * 1000) / 1000;
-    const rejected = roundedScore < 0.60;
+    const minThreshold = profile.job_filters?.minimum_match_score ?? 0.6;
+    const rejected = roundedScore < minThreshold;
 
     return {
       rejected,

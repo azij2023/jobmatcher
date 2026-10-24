@@ -113,6 +113,8 @@ def run_hourly_sync():
     data["jobs"] = existing_jobs
     data["total_jobs"] = len(existing_jobs)
     data["last_updated"] = timestamp_str
+    with open(os.path.join(ROOT_DIR, "profile.json"), "r", encoding="utf-8") as f:
+        data["profile"] = json.load(f)
 
     # 4. Update stats
     primary_count = sum(1 for j in existing_jobs if j.get("priority") == "Primary" or j.get("tier") in [1, 2, 3, 4, 5, 6, 7])

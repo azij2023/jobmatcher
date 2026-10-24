@@ -21,6 +21,7 @@ import os
 import sys
 import time
 import urllib.error
+from collections import Counter
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(SCRIPT_DIR)
@@ -155,10 +156,10 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
     Filters: India location, Past 24 Hours, Entry-level / Internships.
     """
     queries = [
-        "junior data scientist",
-        "applied scientist intern",
-        "machine learning intern",
         "data analyst fresher",
+        "data scientist fresher",
+        "machine learning intern",
+        "applied scientist intern",
     ][:max_queries]
 
     live_jobs = []
@@ -226,54 +227,76 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
         except Exception as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
         finally:
-            time.sleep(1.0)  # Gentle spacing to prevent 429 rate limits
+            time.sleep(3.0)
 
     return live_jobs
 
 def fetch_live_jobicy_jobs() -> list:
     """
-    Fetches real-time remote data science and ML jobs from Jobicy public API.
+    Fetches paginated, date-stamped remote data science jobs from Jobicy's public API.
     """
     live_jobs = []
-    url = "https://jobicy.com/api/v2/remote-jobs?count=20&industry=data-science"
-    try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=8) as r:
-            data = json.loads(r.read().decode("utf-8", errors="ignore"))
-            for j in data.get("jobs", []):
-                title = j.get("jobTitle", "")
-                if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
-                    continue
-                level = (j.get("jobLevel") or "").lower()
-                if any(term in level for term in ("senior", "mid", "lead", "principal", "director")):
-                    continue
-                company = j.get("companyName", "Tech Company")
-                job_url = j.get("url", "")
-                source_location = j.get("jobGeo") or j.get("jobLocation") or ""
-                if not job_url or not is_india_or_worldwide_remote(source_location):
-                    continue
-                freshness = get_publication_freshness(
-                    j.get("pubDate") or j.get("publication_date") or j.get("datePosted"),
-                    j.get("relative_time"),
-                )
-                if freshness is None:
-                    continue
-                desc = re.sub(r'<[^<]+?>', ' ', j.get("jobDescription", ""))[:300]
-                live_jobs.append({
-                    "title": title,
-                    "company": company,
-                    "location": get_remote_location_label(source_location),
-                    "url": job_url,
-                    "direct_job_url": job_url,
-                    **freshness,
-                    "source_type": "Jobicy",
-                    "source_domain": "jobicy.com",
-                    "raw_description": f"{title} at {company}. {desc}",
-                    "is_remote": True,
-                    "is_post": False
-                })
-    except Exception as e:
-        print(f"[LiveCollector] Jobicy notice: {e}")
+    cursor = None
+
+    while True:
+        params = {"count": 200, "industry": "data-science"}
+        if cursor:
+            params["cursor"] = cursor
+        url = f"https://jobicy.com/api/jobs?{urllib.parse.urlencode(params)}"
+
+        try:
+            req = urllib.request.Request(url, headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=15) as response:
+                data = json.loads(response.read().decode("utf-8", errors="ignore"))
+        except Exception as error:
+            print(f"[LiveCollector] Jobicy notice: {error}")
+            break
+
+        for job in data.get("jobs", []):
+            title = (job.get("jobTitle") or "").strip()
+            if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                continue
+
+            level = (job.get("jobLevel") or "").lower()
+            entry_level_terms = ("entry", "junior", "intern", "graduate", "associate", "fresher", "early career")
+            if any(term in level for term in ("senior", "mid", "lead", "principal", "director")):
+                continue
+            if not any(term in level for term in entry_level_terms) and not any(
+                term in title.lower()
+                for term in ("junior", "intern", "graduate", "associate", "trainee", "fresher", "new grad")
+            ):
+                continue
+
+            source_location = job.get("jobGeo") or ""
+            job_url = job.get("url") or ""
+            if not job_url or not is_india_or_worldwide_remote(source_location):
+                continue
+
+            freshness = get_publication_freshness(job.get("pubDate"), None)
+            if freshness is None:
+                continue
+
+            company = job.get("companyName") or "Tech Company"
+            description = re.sub(r"<[^<]+?>", " ", job.get("jobDescription", ""))
+            description = html_lib.unescape(description)
+            live_jobs.append({
+                "title": title,
+                "company": company,
+                "location": get_remote_location_label(source_location),
+                "url": job_url,
+                "direct_job_url": job_url,
+                **freshness,
+                "source_type": "Jobicy",
+                "source_domain": "jobicy.com",
+                "raw_description": f"{title} at {company}. {description[:1000]}",
+                "is_remote": True,
+                "is_post": False
+            })
+
+        cursor = data.get("nextCursor")
+        if not cursor:
+            break
+
     return live_jobs
 
 def fetch_live_remotive_jobs() -> list:
@@ -345,10 +368,15 @@ def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
     raw_jobicy = fetch_live_jobicy_jobs()
     all_raw = raw_linkedin + raw_remotive + raw_jobicy
 
-    print(f"[LiveCollector] Retrieved {len(all_raw)} total raw candidates from live feeds.")
+    source_counts = Counter(job["source_type"] for job in all_raw)
+    print(
+        f"[LiveCollector] Retrieved {len(all_raw)} candidates from "
+        + ", ".join(f"{source}: {count}" for source, count in sorted(source_counts.items()))
+    )
 
     scored_jobs = []
     seen_keys = set()
+    rejection_counts = Counter()
 
     for raw in all_raw:
         title = raw["title"].strip()
@@ -373,6 +401,7 @@ def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
         }, profile)
 
         if scored.get("rejected"):
+            rejection_counts[scored.get("rejection_reason", "Unknown match rejection")] += 1
             continue
 
         final_tier = scored.get("tier") or 2
@@ -424,6 +453,8 @@ def collect_and_score_all_live_jobs(include_remotive: bool = True) -> list:
 
     # Sort strictly by freshness (lowest hours_ago first)
     scored_jobs.sort(key=lambda j: j.get("hours_ago", 99))
+    if rejection_counts:
+        print(f"[LiveCollector] Candidate rejections: {dict(rejection_counts)}")
     print(f"[LiveCollector] Successfully scored & processed {len(scored_jobs)} live matching entry-level opportunities.")
     return scored_jobs
 

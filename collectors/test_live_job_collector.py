@@ -1,7 +1,12 @@
 import datetime
+import io
+import json
 import unittest
+from contextlib import nullcontext
+from unittest.mock import patch
 
 from collectors.live_job_collector import (
+    fetch_live_jobicy_jobs,
     get_publication_freshness,
     is_india_or_worldwide_remote,
     parse_relative_time_to_hours,
@@ -47,6 +52,50 @@ class PublicationFreshnessTests(unittest.TestCase):
         self.assertTrue(is_india_or_worldwide_remote("Anywhere in the world"))
         self.assertTrue(is_india_or_worldwide_remote("Remote - India"))
         self.assertFalse(is_india_or_worldwide_remote("Remote - United States only"))
+
+    def test_jobicy_fetch_follows_cursor_and_keeps_source_listing_urls(self):
+        first_page = {
+            "jobs": [
+                {
+                    "jobTitle": "Junior Data Analyst",
+                    "companyName": "Example",
+                    "jobGeo": "Anywhere",
+                    "jobLevel": "Entry-level",
+                    "url": "https://jobicy.com/jobs/1",
+                    "pubDate": "2026-10-24T00:00:00Z",
+                    "jobDescription": "<p>SQL analytics</p>",
+                }
+            ],
+            "nextCursor": "next page",
+        }
+        second_page = {
+            "jobs": [
+                {
+                    "jobTitle": "Senior Data Analyst",
+                    "companyName": "Example",
+                    "jobGeo": "India",
+                    "jobLevel": "Senior",
+                    "url": "https://jobicy.com/jobs/2",
+                    "pubDate": "2026-10-24T00:00:00Z",
+                    "jobDescription": "Senior role",
+                }
+            ],
+            "nextCursor": None,
+        }
+        responses = [first_page, second_page]
+        requests = []
+
+        def open_feed(request, timeout):
+            requests.append(request.full_url)
+            return nullcontext(io.BytesIO(json.dumps(responses.pop(0)).encode("utf-8")))
+
+        with patch("collectors.live_job_collector.urllib.request.urlopen", side_effect=open_feed):
+            jobs = fetch_live_jobicy_jobs()
+
+        self.assertEqual(len(requests), 2)
+        self.assertIn("cursor=next+page", requests[1])
+        self.assertEqual([job["url"] for job in jobs], ["https://jobicy.com/jobs/1"])
+        self.assertEqual(jobs[0]["source_domain"], "jobicy.com")
 
 
 if __name__ == "__main__":

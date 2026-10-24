@@ -119,13 +119,13 @@
 
           <div class="search-divider"></div>
 
-          <!-- Freshness Window Selector (Default: Last Minute to 2 Days) -->
+          <!-- Freshness Window Selector (Default: Past 7 Days) -->
           <div class="search-input-field search-field-freshness">
             <span class="field-icon">⏱️</span>
             <div class="field-content">
               <label for="hero-search-freshness">Freshness Window</label>
               <select id="hero-search-freshness">
-                <option value="48" selected>⚡ Last Minute to 2 Days (Past 48h)</option>
+                <option value="168" selected>⚡ Past 7 Days (Fresh Jobs)</option>
                 <option value="1">⏱️ Last 1 Hour (0–60 mins)</option>
                 <option value="12">🔥 Past 12 Hours</option>
                 <option value="24">⭐ Past 24 Hours (Today)</option>
@@ -136,22 +136,23 @@
           </div>
 
           <!-- The Core Job Search Button -->
-          <button class="btn-job-search" id="btn-hero-job-search" type="button" title="Click to search valid jobs posted from last minute to last 2 days">
+          <button class="btn-job-search" id="btn-hero-job-search" type="button" title="Search fresher jobs posted within the past 7 days">
             <span class="search-btn-icon" id="hero-search-btn-icon">🔍</span>
             <span class="search-btn-text" id="hero-search-btn-text">Search Jobs</span>
-            <span class="search-btn-badge">0m – 48h</span>
+            <span class="search-btn-badge">Past 7 days</span>
           </button>
         </div>
 
         <!-- Quick Search Tags -->
         <div class="quick-search-tags" id="quick-search-tags">
           <span class="quick-label">⚡ Popular Quick Filters:</span>
-          <button class="quick-pill active" data-role="" data-hours="48">🔥 All Valid (0m to 2 Days)</button>
-          <button class="quick-pill" data-role="Applied ML" data-hours="48">🤖 Applied ML / AI</button>
-          <button class="quick-pill" data-role="Data Science" data-hours="48">📊 Data Science</button>
-          <button class="quick-pill" data-role="Decision Science" data-hours="48">🎯 Decision Science</button>
-          <button class="quick-pill" data-role="Optimization" data-hours="48">📦 OR / Optimization</button>
-          <button class="quick-pill" data-role="Product" data-hours="48">🚀 Product & Strategy</button>
+          <button class="quick-pill active" data-role="" data-hours="168">🔥 All Fresh Jobs (Past 7 Days)</button>
+          <button class="quick-pill" data-role="Applied ML" data-hours="168">🤖 Applied ML / AI</button>
+          <button class="quick-pill" data-role="Data Science" data-hours="168">📊 Data Science</button>
+          <button class="quick-pill" data-role="Data Analyst" data-hours="168">📈 Data Analyst / Analytics</button>
+          <button class="quick-pill" data-role="Decision Science" data-hours="168">🎯 Decision Science</button>
+          <button class="quick-pill" data-role="Optimization" data-hours="168">📦 OR / Optimization</button>
+          <button class="quick-pill" data-role="Product" data-hours="168">🚀 Product & Strategy</button>
           <button class="quick-pill" data-role="" data-hours="1">⏱️ Just Posted (&lt; 1h)</button>
           <button class="quick-pill" data-role="" data-hours="24">📅 Today (&lt; 24h)</button>
         </div>
@@ -228,8 +229,8 @@
           </div>
 
           <div class="control-group">
-            <label for="score-slider">Min Match: <span id="score-slider-val" class="slider-val">60%</span></label>
-            <input type="range" id="score-slider" min="50" max="95" step="1" value="60">
+            <label for="score-slider">Min Match: <span id="score-slider-val" class="slider-val">50%</span></label>
+            <input type="range" id="score-slider" min="50" max="95" step="1" value="50">
           </div>
 
           <div class="control-group">
@@ -259,7 +260,7 @@
           <div class="control-group">
             <label for="freshness-select">Freshness:</label>
             <select id="freshness-select">
-              <option value="48" selected>⚡ Last Minute to 2 Days (Past 48h)</option>
+              <option value="168" selected>⚡ Past 7 Days (Fresh Jobs)</option>
               <option value="1">⏱️ Past 1 Hour (0–60m)</option>
               <option value="12">🔥 Past 12 Hours</option>
               <option value="24">⭐ Past 24 Hours (Today)</option>
@@ -275,6 +276,8 @@
               <option value="LinkedIn Post">👤 Individual Public Posts (LinkedIn Feed)</option>
               <option value="LinkedIn">💼 LinkedIn Formal Jobs</option>
               <option value="Naukri">🔷 Naukri</option>
+              <option value="Jobicy">🌐 Jobicy</option>
+              <option value="Remotive">🌐 Remotive</option>
               <option value="Direct">🏢 Direct Portals</option>
             </select>
           </div>
@@ -285,7 +288,7 @@
       <div class="tier-chips" id="tier-chips">
         <button class="chip active" data-chip="all">All Roles</button>
         <button class="chip" data-chip="primary">🥇 Primary (1–7)</button>
-        <button class="chip chip-source" data-chip="source-post">👤 Individual Posts (12)</button>
+        <button class="chip chip-source" data-chip="source-post">👤 Individual Posts</button>
         <button class="chip" data-chip="secondary">🥈 Secondary (Tier 8)</button>
         <button class="chip" data-chip="adjacent">⚡ Optional (Tier 9)</button>
         <button class="chip" data-chip="1">🥇 Tier 1: Applied ML</button>
@@ -304,12 +307,12 @@
         <div class="banner-content">
           <div class="banner-headline-row">
             <h2 class="banner-headline" id="banner-headline">
-              🎯 Found <span id="banner-job-count" class="highlight-count">0</span> Valid Jobs Posted Between Last Minute & 2 Days Ago
+              🎯 Found <span id="banner-job-count" class="highlight-count">0</span> Valid Jobs Posted Within 7 Days
             </h2>
-            <span class="banner-pill" id="banner-scope-pill">⏱️ 0m – 48h Live Window</span>
+            <span class="banner-pill" id="banner-scope-pill">📅 Past 7 Days</span>
           </div>
           <p class="banner-caption" id="banner-caption">
-            Strictly 0–2 Years Experience • Verified Indian tech hubs & Remote • Updated just now
+            Entry-level AI, data science and analytics • India and eligible remote locations
           </p>
         </div>
       </div>
@@ -341,9 +344,9 @@
           <label for="page-size-select">Per page:</label>
           <select id="page-size-select">
             <option value="6">6 jobs</option>
-            <option value="8" selected>8 jobs</option>
+            <option value="8">8 jobs</option>
             <option value="12">12 jobs</option>
-            <option value="24">24 jobs</option>
+            <option value="24" selected>24 jobs</option>
           </select>
         </div>
       </div>

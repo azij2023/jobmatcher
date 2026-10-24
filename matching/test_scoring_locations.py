@@ -38,6 +38,22 @@ class LocationScoringTests(unittest.TestCase):
         self.assertTrue(result["rejected"])
         self.assertIn("outside India or worldwide remote", result["rejection_reason"])
 
+    def test_data_analyst_is_a_matched_fresher_role(self):
+        result = score_job(
+            {
+                "title": "Junior Data Analyst",
+                "location": "Bengaluru, India",
+                "seniority": "junior",
+                "hours_ago": 2,
+                "raw_description": "Entry-level job using SQL and Python.",
+                "required_skills": [],
+            },
+            self.profile,
+        )
+
+        self.assertFalse(result["rejected"])
+        self.assertEqual(result["category"], "Data Science")
+
 
 if __name__ == "__main__":
     unittest.main()
