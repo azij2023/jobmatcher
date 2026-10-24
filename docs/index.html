@@ -93,7 +93,7 @@
             <span class="field-icon">💼</span>
             <div class="field-content">
               <label for="hero-search-role">Role, Skill or Keyword</label>
-              <input type="text" id="hero-search-role" placeholder="e.g. Applied ML, Data Scientist, Python, Decision Science..." autocomplete="off">
+              <input type="text" id="hero-search-role" placeholder="e.g. Applied Scientist, Applied ML, Data Scientist, Python..." autocomplete="off">
             </div>
             <button class="clear-field-btn" id="hero-clear-role" title="Clear keyword" style="display:none;">✕</button>
           </div>
@@ -147,6 +147,7 @@
         <div class="quick-search-tags" id="quick-search-tags">
           <span class="quick-label">⚡ Popular Quick Filters:</span>
           <button class="quick-pill active" data-role="" data-hours="168">🔥 All Fresh Jobs (Past 7 Days)</button>
+          <button class="quick-pill" data-role="Applied Scientist" data-hours="168">🔬 Applied Scientist (Tier 1)</button>
           <button class="quick-pill" data-role="Applied ML" data-hours="168">🤖 Applied ML / AI</button>
           <button class="quick-pill" data-role="Data Science" data-hours="168">📊 Data Science</button>
           <button class="quick-pill" data-role="Data Analyst" data-hours="168">📈 Data Analyst / Analytics</button>
@@ -216,7 +217,7 @@
               <option value="primary">🥇 Primary Roles (Tiers 1–7)</option>
               <option value="secondary">🥈 Secondary Roles (Tier 8: ML Engineering)</option>
               <option value="adjacent">⚡ Optional Roles (Tier 9: Data Engineering)</option>
-              <option value="1">Tier 1: Applied ML / Research</option>
+              <option value="1">🥇 Tier 1: Applied Scientist &amp; ML (Primary)</option>
               <option value="2">Tier 2: Data Science</option>
               <option value="3">Tier 3: Decision Science</option>
               <option value="4">🏅 Tier 4: OR / Optimization (Primary)</option>
@@ -292,7 +293,7 @@
         <button class="chip chip-source" data-chip="source-post">👤 Individual Posts</button>
         <button class="chip" data-chip="secondary">🥈 Secondary (Tier 8)</button>
         <button class="chip" data-chip="adjacent">⚡ Optional (Tier 9)</button>
-        <button class="chip" data-chip="1">🥇 Tier 1: Applied ML</button>
+        <button class="chip" data-chip="1">🥇 Tier 1: Applied Scientist / ML</button>
         <button class="chip" data-chip="2">🥈 Tier 2: Data Science</button>
         <button class="chip" data-chip="3">🥉 Tier 3: Decision Science</button>
         <button class="chip" data-chip="4">🏅 Tier 4: OR / Optimization</button>
@@ -461,7 +462,7 @@
               <div class="form-group">
                 <label for="test-category">Role Category</label>
                 <select id="test-category">
-                  <option value="Applied ML / Research">Tier 1: Applied ML / Research (Primary)</option>
+                  <option value="Applied Scientist / ML Research">Tier 1: Applied Scientist / ML Research (Primary)</option>
                   <option value="Data Science">Tier 2: Data Science (Primary)</option>
                   <option value="Decision Science">Tier 3: Decision Science (Primary)</option>
                   <option value="OR / Optimization">Tier 4: OR / Optimization (Primary)</option>
@@ -695,7 +696,7 @@
             <div id="linkedin-eval-result" style="display: none;">
               <div class="eval-header">
                 <div>
-                  <span class="job-tier-badge" id="eval-tier-badge">🥇 Tier 1 • Applied ML</span>
+                  <span class="job-tier-badge" id="eval-tier-badge">🥇 Tier 1 • Applied Scientist / ML</span>
                   <h3 class="eval-title" id="eval-job-title">Role Title</h3>
                   <div class="job-company-loc" style="margin-top: 0.25rem;">
                     <span class="job-company" id="eval-company">Company</span>
@@ -805,7 +806,7 @@
       <button class="modal-close" id="modal-close-btn" aria-label="Close dialog">✕</button>
       <div class="modal-header">
         <div>
-          <span class="job-tier-badge" id="modal-tier-badge">🥇 Tier 1 • Applied ML</span>
+          <span class="job-tier-badge" id="modal-tier-badge">🥇 Tier 1 • Applied Scientist / ML</span>
           <h2 class="modal-title" id="modal-job-title">Job Title</h2>
           <div class="job-company-loc" style="margin-top: 0.35rem;">
             <span class="job-company" id="modal-company">Company</span>

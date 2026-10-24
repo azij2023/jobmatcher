@@ -235,10 +235,12 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
     Filters: India location, Past 24 Hours / 7 Days, Entry-level / Internships.
     """
     queries = [
+        "applied scientist fresher",
+        "applied scientist intern",
+        "applied scientist",
         "data analyst fresher",
         "data scientist fresher",
         "machine learning intern",
-        "applied scientist intern",
         "decision scientist fresher",
         "operations research fresher",
         "fresher data science",
@@ -698,6 +700,7 @@ def fetch_live_remotive_jobs() -> list:
 def fetch_live_unstop_jobs() -> list:
     """Fetch live fresher & internship opportunities from Unstop campus hiring platform."""
     categories = [
+        ("jobs", "applied scientist"), ("internships", "applied scientist"),
         ("jobs", "data"), ("jobs", "analyst"), ("jobs", "machine learning"),
         ("internships", "data"), ("internships", "analyst"), ("internships", "ai"),
         ("internships", "machine learning")

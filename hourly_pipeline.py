@@ -188,6 +188,23 @@ def run_hourly_sync():
         if "semantic_skill_gap" not in job:
             enrich_job_semantic_gaps(job)
 
+    # 2a. Re-evaluate role mapping, tier classification & badges against updated profile
+    profile_path = os.path.join(ROOT_DIR, "profile.json")
+    loaded_profile = {}
+    if os.path.exists(profile_path):
+        with open(profile_path, "r", encoding="utf-8") as f:
+            loaded_profile = json.load(f)
+
+    from matching.scoring import match_role_category
+    for job in existing_jobs:
+        if loaded_profile:
+            role_match = match_role_category(job, loaded_profile)
+            if role_match:
+                job["tier"] = role_match.get("tier")
+                job["priority"] = role_match.get("priority")
+                job["badge"] = role_match.get("badge")
+                job["category"] = role_match.get("category")
+
     # Keep listings up to 30 days (720 hours) for the "Anytime" filter
     existing_jobs = [
         job for job in existing_jobs
@@ -200,10 +217,7 @@ def run_hourly_sync():
     data["jobs"] = existing_jobs
     data["total_jobs"] = len(existing_jobs)
     data["last_updated"] = timestamp_str
-    profile_path = os.path.join(ROOT_DIR, "profile.json")
-    if os.path.exists(profile_path):
-        with open(profile_path, "r", encoding="utf-8") as f:
-            data["profile"] = json.load(f)
+    data["profile"] = loaded_profile
 
     # 4. Update stats
     primary_count = sum(1 for j in existing_jobs if j.get("priority") == "Primary" or j.get("tier") in [1, 2, 3, 4, 5, 6, 7])

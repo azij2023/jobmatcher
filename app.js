@@ -235,6 +235,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const DOMAIN_EXPANSIONS = {
+    'as': ['applied scientist', 'applied science', 'as'],
+    'applied scientist': ['applied scientist', 'applied ml', 'research scientist', 'applied science', 'applied ai'],
+    'applied': ['applied scientist', 'applied ml', 'applied ai', 'applied machine learning'],
     'ml': ['machine learning', 'ml', 'mle'],
     'mle': ['machine learning engineer', 'mle', 'applied mle', 'ml engineer'],
     'ai': ['artificial intelligence', 'ai', 'genai', 'applied ai', 'deep learning'],
@@ -298,7 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const orExpansions = ['operations research', 'linear programming', 'integer programming', 'simplex', 'gurobi', 'cplex', 'scipy.optimize'];
             matchesQuery = orExpansions.some(exp => allText.includes(exp));
           }
-        } else if (['ai', 'ml', 'ds', 'da'].includes(q)) {
+        } else if (['ai', 'ml', 'ds', 'da', 'as'].includes(q)) {
           const regex = new RegExp(`\\b${q}\\b`, 'i');
           if (regex.test(title) || regex.test(company) || regex.test(category) || skills.some(s => regex.test(s))) {
             matchesQuery = true;
@@ -892,7 +895,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let advice = "";
     if (job.is_post) {
       advice = `Informal LinkedIn Hiring Post: Reach out directly to ${job.post_author || 'the hiring manager'} on LinkedIn DM or via email (${job.contact_email || 'the post link'}). Use the generated outreach pitch highlighting your relevant skills: ${matched.join(', ') || 'data & quantitative modeling'}.`;
-    } else if (job.tier === 1) advice = "Top Priority Tier 1: Tailor your resume to highlight PyTorch, deep learning foundation models/LLMs, and research projects.";
+    } else if (job.tier === 1) advice = "Top Priority Tier 1 (Applied Scientist / ML Research): Tailor your resume to highlight PyTorch, deep learning foundation models/LLMs, scientific experimentation, and research projects.";
     else if (job.tier === 2) advice = "Top Priority Tier 2: Emphasize A/B testing methodologies, SQL analytics pipelines, business experimentation, and predictive modeling.";
     else if (job.tier === 3) advice = "Top Priority Tier 3: Showcase statistical modeling, hypothesis testing, causal inference, and decision optimization.";
     else if (job.tier === 4) advice = "Top Priority Tier 4: Highlight linear programming (PuLP/SciPy), operations research algorithms, routing, and constraint optimization.";
@@ -929,12 +932,7 @@ document.addEventListener("DOMContentLoaded", () => {
     modalApplyLinkedin.title = `Apply directly for ${job.title} at ${job.company}`;
 
     if (modalApplyGoogle) {
-      if (isModalNaukri) {
-        modalApplyGoogle.textContent = "🔷 Apply on Naukri ↗";
-        modalApplyGoogle.href = modalTargetUrl;
-        modalApplyGoogle.className = "btn btn-primary btn-naukri";
-        modalApplyGoogle.style.display = "inline-flex";
-      } else if (job.company_url && !modalTargetUrl.includes(job.company_url.replace(/https?:\/\/(www\.)?/, '').split('/')[0])) {
+      if (job.company_url && !modalTargetUrl.includes(job.company_url.replace(/https?:\/\/(www\.)?/, '').split('/')[0])) {
         modalApplyGoogle.textContent = `🏢 ${job.company} Careers Site ↗`;
         modalApplyGoogle.href = job.company_url;
         modalApplyGoogle.className = "btn btn-secondary";

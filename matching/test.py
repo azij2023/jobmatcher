@@ -125,6 +125,7 @@ print("ENTRY-LEVEL ROLE MAPPING TEST RESULTS")
 print("=" * 80)
 
 for job in test_jobs:
+    job.setdefault("company", "Amazon")
     res = score_job(job, profile)
     status = "REJECTED" if res["rejected"] else "ACCEPTED"
     badge = res.get("badge", "[X]")

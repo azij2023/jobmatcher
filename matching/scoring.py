@@ -10,8 +10,10 @@ def flatten_skills(skills: dict) -> dict:
 def match_role_category(job: dict, profile: dict) -> dict | None:
     """
     Matches the job title and extracted role against the prioritized role mapping.
-    1. First tries an exact or fuzzy category match.
-    2. Then evaluates role title matches prioritizing the longest/most specific title match first.
+    1. First evaluates specific role title matches (sorted by pattern length descending,
+       with lower tier number as tie-breaker so Tier 1 Applied Scientist takes precedence).
+    2. Then evaluates direct category match if no specific role title matched.
+    3. Finally checks fallback in general target_roles list.
     """
     title = job.get("title", "").lower()
     extracted_role = job.get("role_type", "").lower()
@@ -19,25 +21,25 @@ def match_role_category(job: dict, profile: dict) -> dict | None:
 
     role_mapping = profile.get("role_mapping", [])
 
-    # Pass 1: Direct Category match
+    # Pass 1: Most specific role pattern match (sorted by length descending, lower tier number tiebreaker)
+    all_role_candidates = []
+    for tier_info in role_mapping:
+        for role_pattern in tier_info["roles"]:
+            all_role_candidates.append((len(role_pattern), -tier_info["tier"], role_pattern.lower(), tier_info))
+
+    all_role_candidates.sort(key=lambda x: (x[0], x[1]), reverse=True)
+
+    for _, _, role_pattern, tier_info in all_role_candidates:
+        pattern = rf"\b{re.escape(role_pattern)}\b"
+        if re.search(pattern, title) or re.search(pattern, extracted_role) or role_pattern in title:
+            return tier_info
+
+    # Pass 2: Direct Category match fallback
     if extracted_category:
         for tier_info in role_mapping:
             cat_name = tier_info["category"].lower()
             if extracted_category == cat_name or extracted_category in cat_name or cat_name in extracted_category:
                 return tier_info
-
-    # Pass 2: Most specific role pattern match (sorted by length descending)
-    all_role_candidates = []
-    for tier_info in role_mapping:
-        for role_pattern in tier_info["roles"]:
-            all_role_candidates.append((len(role_pattern), role_pattern.lower(), tier_info))
-
-    all_role_candidates.sort(key=lambda x: x[0], reverse=True)
-
-    for _, role_pattern, tier_info in all_role_candidates:
-        pattern = rf"\b{re.escape(role_pattern)}\b"
-        if re.search(pattern, title) or re.search(pattern, extracted_role) or role_pattern in title:
-            return tier_info
 
     # Pass 3: Fallback check in general target_roles list
     for target in profile.get("target_roles", []):
