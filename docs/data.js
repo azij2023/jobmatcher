@@ -468,6 +468,65 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   },
   "jobs": [
     {
+      "title": "Associate Data Scientist",
+      "company": "Optum India",
+      "location": "Pune Division, Maharashtra, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-24T03:43:37Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 0.55,
+      "relative_time": "33 minutes ago",
+      "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-optum-india-4483193673",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-optum-india-4483193673",
+      "naukri_url": "https://www.naukri.com/associate-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-optum-india-4483193673",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Associate Data Scientist at Optum India in Pune Division, Maharashtra, India. Listed on LinkedIn.",
+      "raw_description": "Associate Data Scientist at Optum India in Pune Division, Maharashtra, India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Optum India's Associate Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      }
+    },
+    {
       "title": "Data Science Intern",
       "company": "Devryxa",
       "location": "India",
@@ -478,8 +537,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-23T18:36:43Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 5.2,
-      "relative_time": "5 hours ago",
+      "hours_ago": 9.67,
+      "relative_time": "10 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483137187",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483137187",
       "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
@@ -535,10 +594,10 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-23T13:48:31Z",
+      "posted_at": "2026-10-23T13:16:37Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 10.0,
-      "relative_time": "10 hours ago",
+      "hours_ago": 15.0,
+      "relative_time": "15 hours ago",
       "url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
       "linkedin_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
       "naukri_url": "https://www.naukri.com/junior-data-scientist-jobs-in-india?experience=0",
@@ -596,8 +655,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-23T00:00:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 23.81,
-      "relative_time": "24 hours ago",
+      "hours_ago": 28.28,
+      "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-ai-and-analytics-at-desible-ai-4480021724",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-ai-and-analytics-at-desible-ai-4480021724",
       "naukri_url": "https://www.naukri.com/data-scientist-ai-and-analytics-jobs-in-india?experience=0",
@@ -655,8 +714,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-23T00:00:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 23.81,
-      "relative_time": "24 hours ago",
+      "hours_ago": 28.28,
+      "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624",
       "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
@@ -705,13 +764,13 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     }
   ],
   "stats": {
-    "total_jobs_evaluated": 4,
-    "primary_matches": 4,
+    "total_jobs_evaluated": 5,
+    "primary_matches": 5,
     "secondary_matches": 0,
     "adjacent_matches": 0,
-    "last_sync": "2026-10-23T23:48Z"
+    "last_sync": "2026-10-24T04:16Z"
   },
-  "total_jobs": 4,
-  "last_updated": "2026-10-23T23:48Z",
-  "last_remotive_sync": "2026-10-23T20:07Z"
+  "total_jobs": 5,
+  "last_updated": "2026-10-24T04:16Z",
+  "last_remotive_sync": "2026-10-24T04:16Z"
 };
