@@ -360,14 +360,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const isPost = Boolean(job.is_post) || typeLower.includes('post') || urlLower.includes('/posts/');
         const isUnstop = urlLower.includes('unstop.com') || domainLower.includes('unstop') || typeLower.includes('unstop');
         const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || urlLower.includes('workday') || typeLower.includes('ats');
-        const isPortal = (typeLower.includes('portal') || typeLower.includes('official') || (!urlLower.includes('linkedin.com') && !urlLower.includes('unstop.com') && !isPost && !domainLower.includes('remotive') && !domainLower.includes('jobicy'))) && !isAts;
-        const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !isPortal && !isAts && !isUnstop;
+        const isCompanyPortal = typeLower.includes('portal') || typeLower.includes('official') || isAts || (!urlLower.includes('linkedin.com') && !urlLower.includes('unstop.com') && !isPost && !domainLower.includes('remotive') && !domainLower.includes('jobicy'));
+        const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !typeLower.includes('portal') && !isAts && !isUnstop;
 
         if (currentFilter.source === "LinkedIn Post" && !isPost) return false;
         if (currentFilter.source === "LinkedIn" && !isLinkedIn) return false;
         if (currentFilter.source === "Unstop" && !isUnstop) return false;
         if (currentFilter.source === "Direct ATS" && !isAts) return false;
-        if (currentFilter.source === "Direct" && !isPortal) return false;
+        if ((currentFilter.source === "Company Portal" || currentFilter.source === "Direct") && !isCompanyPortal) return false;
 
         const sourceDomains = {
           Jobicy: "jobicy.com",
@@ -546,12 +546,8 @@ document.addEventListener("DOMContentLoaded", () => {
         platformPill = `<span class="source-domain-badge source-indeed">🎯 Indeed</span>`;
         applyBtnText = '🎯 Apply on Indeed ↗';
         applyBtnClass = 'btn btn-primary btn-indeed';
-      } else if (isAts) {
-        platformPill = `<span class="source-domain-badge source-direct">🚀 Direct ATS</span>`;
-        applyBtnText = '🚀 Direct ATS Application ↗';
-        applyBtnClass = 'btn btn-primary btn-ats';
-      } else if (isPortal) {
-        const portalLabel = job.company ? `${escapeHTML(job.company)} Portal` : 'Company Portal';
+      } else if (isAts || isPortal) {
+        const portalLabel = job.company ? `${escapeHTML(job.company)} Career Portal` : (isAts ? 'Direct ATS' : 'Company Portal');
         platformPill = `<span class="source-domain-badge source-portal">🏢 ${portalLabel}</span>`;
         applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Careers ↗`;
         applyBtnClass = 'btn btn-primary btn-direct-portal';
@@ -921,7 +917,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : isModalUnstop
         ? "🎯 Apply on Unstop ↗"
         : isModalAts
-          ? "🚀 Direct ATS Application ↗"
+          ? `🏢 Apply on ${job.company || 'Company'} Careers ↗`
           : isModalRemotive
             ? "View listing on Remotive ↗"
             : isModalJobicy
@@ -1247,6 +1243,10 @@ document.addEventListener("DOMContentLoaded", () => {
       currentFilter.source = e.target.value;
       if (e.target.value === "LinkedIn Post") {
         updateChipSelection("source-post");
+      } else if (e.target.value === "Company Portal" || e.target.value === "Direct") {
+        updateChipSelection("source-company");
+      } else if (e.target.value === "Unstop") {
+        updateChipSelection("source-unstop");
       } else {
         updateChipSelection("all");
       }
@@ -1264,6 +1264,16 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFilter.tier = "all";
         tierSelect.value = "all";
         if (sourceSelect) sourceSelect.value = "LinkedIn Post";
+      } else if (chipVal === "source-company") {
+        currentFilter.source = "Company Portal";
+        currentFilter.tier = "all";
+        tierSelect.value = "all";
+        if (sourceSelect) sourceSelect.value = "Company Portal";
+      } else if (chipVal === "source-unstop") {
+        currentFilter.source = "Unstop";
+        currentFilter.tier = "all";
+        tierSelect.value = "all";
+        if (sourceSelect) sourceSelect.value = "Unstop";
       } else {
         currentFilter.source = "all";
         if (sourceSelect) sourceSelect.value = "all";

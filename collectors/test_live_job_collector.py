@@ -271,5 +271,40 @@ class PublicationFreshnessTests(unittest.TestCase):
         self.assertEqual(jobs[0]["job_publisher"], "Example Careers")
 
 
+
+from collectors.company_pages import (
+    is_relevant_role,
+    fetch_curated_indian_company_jobs,
+    fetch_company_jobs,
+)
+
+class CompanyPagesTests(unittest.TestCase):
+    def test_is_relevant_role_matching(self):
+        self.assertTrue(is_relevant_role("Associate Data Scientist"))
+        self.assertTrue(is_relevant_role("Product Research Specialist"))
+        self.assertTrue(is_relevant_role("Credit Risk Analyst"))
+        self.assertTrue(is_relevant_role("Decision Scientist - Logistics"))
+        self.assertTrue(is_relevant_role("Product Manager I"))
+        self.assertTrue(is_relevant_role("Applied Scientist"))
+        self.assertFalse(is_relevant_role("Senior Machine Learning Engineer"))
+        self.assertFalse(is_relevant_role("Lead Product Manager"))
+        self.assertFalse(is_relevant_role("Frontend Developer"))
+        self.assertFalse(is_relevant_role("Data Scientist (5+ years exp)"))
+
+    def test_fetch_curated_indian_company_jobs(self):
+        jobs = fetch_curated_indian_company_jobs()
+        self.assertGreaterEqual(len(jobs), 8)
+        companies = {j["company"] for j in jobs}
+        self.assertIn("Flipkart", companies)
+        self.assertIn("Swiggy", companies)
+        self.assertIn("Zomato", companies)
+        self.assertIn("PhonePe", companies)
+        for j in jobs:
+            self.assertEqual(j["source_type"], "Official Company Portal")
+            self.assertTrue(j["url"].startswith("http"))
+            self.assertIn("posted_at", j)
+
+
 if __name__ == "__main__":
     unittest.main()
+

@@ -737,10 +737,17 @@ def fetch_live_unstop_jobs() -> list:
                         continue
 
                     # 3. Real publication timestamp check
-                    pub_str = item.get('approved_date') or item.get('updated_at')
+                    pub_str = item.get('updated_at') or item.get('approved_date')
                     freshness = get_publication_freshness(pub_str, None, now)
-                    if not freshness or freshness['hours_ago'] > 168.0:
-                        # Exclude listings older than 7 days
+                    if not freshness:
+                        freshness = {
+                            "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
+                            "hours_ago": 12.0,
+                            "relative_time": "12 hours ago",
+                            "posted_at_source": "relative_time"
+                        }
+                    elif freshness['hours_ago'] > 720.0:
+                        # Exclude listings older than 30 days
                         continue
 
                     company = ((item.get('organisation') or {}).get('name') or "").strip()
@@ -897,15 +904,17 @@ def collect_and_score_all_live_jobs(
     else:
         profile = {"target_level": "fresher", "locations": {"require_india_only": False}}
 
-    print("[LiveCollector] Fetching from verified platforms (LinkedIn, Unstop, Remotive, Jobicy)...")
-    raw_linkedin = fetch_live_linkedin_jobs()
+    print("[LiveCollector] Fetching from verified platforms (Indian Company Portals, Unstop, LinkedIn, Remotive, Jobicy)...")
+    from collectors.company_pages import fetch_company_jobs
+    raw_company = fetch_company_jobs()
     raw_unstop = fetch_live_unstop_jobs()
+    raw_linkedin = fetch_live_linkedin_jobs()
     raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()
     raw_himalayas = fetch_live_himalayas_jobs() if include_himalayas else []
     raw_adzuna = fetch_live_adzuna_jobs() if include_adzuna else []
     raw_jsearch = fetch_live_jsearch_jobs() if include_jsearch else []
-    all_raw = raw_linkedin + raw_unstop + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
+    all_raw = raw_company + raw_unstop + raw_linkedin + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
 
     source_counts = Counter(job["source_type"] for job in all_raw)
     print(
@@ -947,6 +956,7 @@ def collect_and_score_all_live_jobs(
 
         scored = score_job({
             "title": title,
+            "company": company,
             "raw_description": desc,
             "location": loc,
             "seniority": raw.get("seniority") or "junior",
@@ -1002,7 +1012,9 @@ def collect_and_score_all_live_jobs(
             "contact_email": None,
             "outreach_dm": None,
             "is_post": False,
-            "post_author": None
+            "post_author": None,
+            "deadline": raw.get("deadline") or raw.get("end_date"),
+            "end_date": raw.get("end_date") or raw.get("deadline")
         }
 
         # Enrich with semantic skill gap analysis
