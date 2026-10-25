@@ -75,235 +75,211 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-badge">
-        <span class="sparkle">⚡</span> Scheduled Job Feed • Page Reload Every 30 Minutes
+        <span class="sparkle">⚡</span> Verified Entry-Level Feed • Updated Live
       </div>
       <h1 class="hero-title">
-        Verified Entry-Level <span class="gradient-text">Job Search</span>
+        Verified Entry-Level <span class="gradient-text">AI &amp; Data Jobs</span>
       </h1>
       <p class="hero-subtitle">
-        Fresh entry-level AI, data science and analytics jobs in India, collected from LinkedIn, Jobicy, Remotive, Himalayas and the JSearch multi-publisher feed. Adzuna and JSearch require API credentials. Job-board coverage depends on public feeds and available API access.
-        Strictly <strong>0–2 years experience</strong> (fresher, intern, early-career) across Applied ML, Data Science, Decision Science, Optimization & Engineering. Post dates are shown only when the source provides them.
+        Curated <strong>0–2 years early-career roles</strong> across Applied AI, Machine Learning, Data Science, Decision Science, and Optimization from top Indian tech hubs, direct career portals, and Unstop.
       </p>
 
-      <!-- Prominent Job Search Console -->
-      <div class="job-search-hero-console" id="job-search-hero-console">
-        <div class="search-console-inputs">
-          <!-- Role / Skill Search Field -->
-          <div class="search-input-field search-field-role">
-            <span class="field-icon">💼</span>
-            <div class="field-content">
-              <label for="hero-search-role">Role, Skill or Keyword</label>
-              <input type="text" id="hero-search-role" placeholder="e.g. Applied Scientist, Applied ML, Data Scientist, Python..." autocomplete="off">
-            </div>
-            <button class="clear-field-btn" id="hero-clear-role" title="Clear keyword" style="display:none;">✕</button>
-          </div>
-
-          <div class="search-divider"></div>
-
-          <!-- Location Selector -->
-          <div class="search-input-field search-field-loc">
-            <span class="field-icon">📍</span>
-            <div class="field-content">
-              <label for="hero-search-location">Location (India)</label>
-              <select id="hero-search-location">
-                <option value="all" selected>🇮🇳 All India (Bengaluru, Hyderabad, Pune, Gurugram...)</option>
-                <option value="bengaluru">Bengaluru / Bangalore</option>
-                <option value="hyderabad">Hyderabad</option>
-                <option value="pune">Pune</option>
-                <option value="gurugram">Gurugram / Noida / Delhi</option>
-                <option value="mumbai">Mumbai</option>
-                <option value="remote">Remote - Worldwide / India</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="search-divider"></div>
-
-          <!-- Freshness Window Selector (Default: Past 7 Days) -->
-          <div class="search-input-field search-field-freshness">
-            <span class="field-icon">⏱️</span>
-            <div class="field-content">
-              <label for="hero-search-freshness">Freshness Window</label>
-              <select id="hero-search-freshness">
-                <option value="168" selected>⚡ Past 7 Days (Fresh Jobs)</option>
-                <option value="1">⏱️ Last 1 Hour (0–60 mins)</option>
-                <option value="12">🔥 Past 12 Hours</option>
-                <option value="24">⭐ Past 24 Hours (Today)</option>
-                <option value="48">📅 Past 48 Hours (2 Days Max)</option>
-                <option value="9999">🌐 Anytime / All Jobs</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- The Core Job Search Button -->
-          <button class="btn-job-search" id="btn-hero-job-search" type="button" title="Search fresher jobs posted within the past 7 days">
-            <span class="search-btn-icon" id="hero-search-btn-icon">🔍</span>
-            <span class="search-btn-text" id="hero-search-btn-text">Search Jobs</span>
-            <span class="search-btn-badge">Past 7 days</span>
-          </button>
-        </div>
-
-        <!-- Quick Search Tags -->
-        <div class="quick-search-tags" id="quick-search-tags">
-          <span class="quick-label">⚡ Popular Quick Filters:</span>
-          <button class="quick-pill active" data-role="" data-hours="168">🔥 All Fresh Jobs (Past 7 Days)</button>
-          <button class="quick-pill" data-role="Applied Scientist" data-hours="168">🔬 Applied Scientist (Tier 1)</button>
-          <button class="quick-pill" data-role="Applied ML" data-hours="168">🤖 Applied ML / AI</button>
-          <button class="quick-pill" data-role="Data Science" data-hours="168">📊 Data Science</button>
-          <button class="quick-pill" data-role="Data Analyst" data-hours="168">📈 Data Analyst / Analytics</button>
-          <button class="quick-pill" data-role="Decision Science" data-hours="168">🎯 Decision Science</button>
-          <button class="quick-pill" data-role="Optimization" data-hours="168">📦 OR / Optimization</button>
-          <button class="quick-pill" data-role="Product" data-hours="168">🚀 Product & Strategy</button>
-          <button class="quick-pill" data-role="" data-hours="1">⏱️ Just Posted (&lt; 1h)</button>
-          <button class="quick-pill" data-role="" data-hours="24">📅 Today (&lt; 24h)</button>
-        </div>
-      </div>
-
-      <!-- Stats Grid -->
-      <div class="stats-grid" id="stats-grid">
-        <div class="stat-card" id="stat-primary">
+      <!-- Interactive Stats Deck -->
+      <div class="stats-grid interactive-stats" id="stats-grid">
+        <div class="stat-card clickable" id="stat-primary" data-stat-filter="primary" title="Click to filter by Primary Roles (Tiers 1–7)">
           <div class="stat-header">
-            <span class="stat-badge badge-primary">Primary Tiers (1–7)</span>
+            <span class="stat-badge badge-primary">Primary Roles</span>
             <span class="stat-icon">🥇</span>
           </div>
           <div class="stat-value" id="stat-primary-val">0</div>
-          <div class="stat-label">ML, DS, OR, Product, Strategy, Forecasting</div>
+          <div class="stat-label">ML, DS, OR &amp; Analytics</div>
+          <span class="stat-action-hint">Click to filter</span>
         </div>
 
-        <div class="stat-card" id="stat-secondary">
+        <div class="stat-card clickable" id="stat-portals" data-stat-filter="source-company" title="Click to filter by Indian Company Direct Career Sites">
           <div class="stat-header">
-            <span class="stat-badge badge-secondary">Secondary Tier (8)</span>
-            <span class="stat-icon">🥈</span>
+            <span class="stat-badge badge-portal">Indian Portals</span>
+            <span class="stat-icon">🏢</span>
           </div>
-          <div class="stat-value" id="stat-secondary-val">0</div>
-          <div class="stat-label">ML Engineering (Applied MLE)</div>
+          <div class="stat-value" id="stat-portals-val">0</div>
+          <div class="stat-label">Swiggy, Zepto, Flipkart &amp; ATS</div>
+          <span class="stat-action-hint">Click to filter</span>
         </div>
 
-        <div class="stat-card" id="stat-adjacent">
+        <div class="stat-card clickable" id="stat-unstop" data-stat-filter="source-unstop" title="Click to filter by Unstop Campus &amp; Fresher Openings">
           <div class="stat-header">
-            <span class="stat-badge badge-adjacent">Optional Tier (9)</span>
-            <span class="stat-icon">🥉</span>
+            <span class="stat-badge badge-unstop">Campus / Unstop</span>
+            <span class="stat-icon">🎯</span>
           </div>
-          <div class="stat-value" id="stat-adjacent-val">0</div>
-          <div class="stat-label">Data Engineering Adjacent</div>
+          <div class="stat-value" id="stat-unstop-val">0</div>
+          <div class="stat-label">Freshers &amp; Early Careers</div>
+          <span class="stat-action-hint">Click to filter</span>
         </div>
 
-        <div class="stat-card" id="stat-score">
+        <div class="stat-card clickable" id="stat-saved" data-stat-filter="saved" title="Click to view your bookmarked job shortlist">
           <div class="stat-header">
-            <span class="stat-badge badge-highlight">Top Match Score</span>
+            <span class="stat-badge badge-saved">⭐ Shortlist</span>
             <span class="stat-icon">⭐</span>
+          </div>
+          <div class="stat-value" id="stat-saved-val">0</div>
+          <div class="stat-label">Candidate Bookmarks</div>
+          <span class="stat-action-hint">Click to view</span>
+        </div>
+
+        <div class="stat-card clickable" id="stat-score" data-stat-filter="score" title="Click to sort by Highest Match Score">
+          <div class="stat-header">
+            <span class="stat-badge badge-highlight">Top Fit Score</span>
+            <span class="stat-icon">⚡</span>
           </div>
           <div class="stat-value" id="stat-avg-score-val">0%</div>
           <div class="stat-label">Weighted Profile Fit Rate</div>
+          <span class="stat-action-hint">Click to sort</span>
         </div>
       </div>
     </section>
 
     <!-- TAB 1: Matched Jobs Board -->
     <section class="tab-content active" id="view-jobs">
-      <!-- Controls Toolbar -->
-      <div class="controls-toolbar">
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="search-input" placeholder="Search by role, company, or skill (e.g. PyTorch, SQL, Linear Programming)...">
-          <button class="clear-search" id="clear-search-btn" title="Clear search" style="display:none;">✕</button>
+      <!-- Unified Search Command Deck -->
+      <div class="search-command-deck" id="search-command-deck">
+        <!-- Main Search Bar Row -->
+        <div class="search-main-row">
+          <div class="search-input-box">
+            <span class="search-box-icon">🔍</span>
+            <input type="text" id="search-input" placeholder="Search by role, company, or skill (e.g. Applied Scientist, PyTorch, Swiggy, LP)..." autocomplete="off">
+            <button class="clear-search-btn" id="clear-search-btn" title="Clear search" style="display:none;">✕</button>
+          </div>
+          <button class="btn-command-search" id="btn-search-exec" type="button" title="Execute search">
+            <span class="search-exec-icon">⚡</span>
+            <span class="search-exec-text">Search</span>
+          </button>
+          <button class="btn-toggle-filters" id="btn-toggle-filters" type="button" aria-expanded="false" title="Toggle fine-tuning filters">
+            <span>⚙️ Filters</span>
+            <span class="filter-count-badge" id="active-filter-badge" style="display:none;">0</span>
+          </button>
         </div>
 
-        <div class="filter-controls">
-          <div class="control-group">
-            <label for="tier-select">Category / Tier:</label>
-            <select id="tier-select">
-              <option value="all">All Tiers (1–9)</option>
-              <option value="primary">🥇 Primary Roles (Tiers 1–7)</option>
-              <option value="secondary">🥈 Secondary Roles (Tier 8: ML Engineering)</option>
-              <option value="adjacent">⚡ Optional Roles (Tier 9: Data Engineering)</option>
-              <option value="1">🥇 Tier 1: Applied Scientist &amp; ML (Primary)</option>
-              <option value="2">Tier 2: Data Science</option>
-              <option value="3">Tier 3: Decision Science</option>
-              <option value="4">🏅 Tier 4: OR / Optimization (Primary)</option>
-              <option value="5">Tier 5: Product (Management) (Primary)</option>
-              <option value="6">Tier 6: Strategy (Management) (Primary)</option>
-              <option value="7">Tier 7: Forecasting (Primary)</option>
-              <option value="8">Tier 8: ML Engineering (Secondary)</option>
-              <option value="9">Tier 9: Data Engineering Adjacent (Optional)</option>
-            </select>
+        <!-- Quick Filter Pills with Dynamic Counts -->
+        <div class="quick-filter-pills" id="quick-filter-pills">
+          <button class="quick-pill active" data-filter-type="all">
+            🔥 All Roles <span class="pill-count" id="count-all">0</span>
+          </button>
+          <button class="quick-pill pill-portal" data-filter-type="source-company">
+            🏢 Indian Portals <span class="pill-count" id="count-company">0</span>
+          </button>
+          <button class="quick-pill pill-unstop" data-filter-type="source-unstop">
+            🎯 Unstop Freshers <span class="pill-count" id="count-unstop">0</span>
+          </button>
+          <button class="quick-pill pill-saved" data-filter-type="saved" id="pill-saved">
+            ⭐ Shortlist <span class="pill-count" id="count-saved">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-1">
+            🔬 Applied Scientist <span class="pill-count" id="count-as">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-2">
+            📊 Data Science <span class="pill-count" id="count-ds">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-3">
+            🎯 Decision Science <span class="pill-count" id="count-dec">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-4">
+            📦 OR / Optimization <span class="pill-count" id="count-or">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-8">
+            🤖 ML Engineering <span class="pill-count" id="count-mle">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="fresh-24">
+            ⚡ Past 24h <span class="pill-count" id="count-24h">0</span>
+          </button>
+        </div>
+
+        <!-- Collapsible Advanced Filters Drawer -->
+        <div class="advanced-filters-drawer" id="advanced-filters-drawer" style="display:none;">
+          <div class="filter-drawer-grid">
+            <div class="drawer-group">
+              <label for="tier-select">Category / Role Tier</label>
+              <select id="tier-select">
+                <option value="all" selected>All Tiers (1–9)</option>
+                <option value="primary">🥇 Primary Roles (Tiers 1–7)</option>
+                <option value="secondary">🥈 Secondary Roles (Tier 8: ML Engineering)</option>
+                <option value="adjacent">⚡ Optional Roles (Tier 9: Data Engineering)</option>
+                <option value="1">🥇 Tier 1: Applied Scientist &amp; ML (Primary)</option>
+                <option value="2">Tier 2: Data Science</option>
+                <option value="3">Tier 3: Decision Science</option>
+                <option value="4">🏅 Tier 4: OR / Optimization (Primary)</option>
+                <option value="5">Tier 5: Product (Management)</option>
+                <option value="6">Tier 6: Strategy (Management)</option>
+                <option value="7">Tier 7: Forecasting</option>
+                <option value="8">Tier 8: ML Engineering (Secondary)</option>
+                <option value="9">Tier 9: Data Engineering Adjacent</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="location-select">Location (India &amp; Remote)</label>
+              <select id="location-select">
+                <option value="all" selected>🇮🇳 All India</option>
+                <option value="bengaluru">Bengaluru / Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="pune">Pune</option>
+                <option value="gurugram">Gurugram / Noida / Delhi NCR</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="remote">🌐 Remote (India / Worldwide)</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="freshness-select">Posting Freshness</label>
+              <select id="freshness-select">
+                <option value="168" selected>⚡ Past 7 Days (Fresh Jobs)</option>
+                <option value="1">⏱️ Past 1 Hour (0–60m)</option>
+                <option value="12">🔥 Past 12 Hours</option>
+                <option value="24">⭐ Past 24 Hours (Today)</option>
+                <option value="48">📅 Past 48 Hours</option>
+                <option value="9999">🌐 Anytime / All Jobs</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="source-select">Source Platform</label>
+              <select id="source-select">
+                <option value="all" selected>All Platforms (Verified Openings)</option>
+                <option value="Company Portal">🏢 Indian Companies (Direct Portals)</option>
+                <option value="Unstop">🎯 Unstop (Campus &amp; Freshers)</option>
+                <option value="Direct ATS">🚀 Direct ATS (Greenhouse / Lever / Ashby)</option>
+                <option value="LinkedIn">💼 LinkedIn Direct</option>
+                <option value="LinkedIn Post">👤 Individual Public Posts</option>
+                <option value="Remotive">🌐 Remotive</option>
+                <option value="Jobicy">🌐 Jobicy</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="score-slider">Min Fit Score: <span id="score-slider-val" class="slider-val">50%</span></label>
+              <input type="range" id="score-slider" min="50" max="95" step="1" value="50">
+            </div>
+
+            <div class="drawer-group">
+              <label for="sort-select">Sort Feed By</label>
+              <select id="sort-select">
+                <option value="latest" selected>⚡ Newest to Oldest</option>
+                <option value="score-desc">⭐ Highest Fit Score</option>
+                <option value="tier-asc">🥇 Priority Tier (1 to 9)</option>
+                <option value="company-asc">🏢 Company Name (A–Z)</option>
+                <option value="farthest">⏳ Oldest to Newest</option>
+              </select>
+            </div>
           </div>
 
-          <div class="control-group">
-            <label for="score-slider">Min Match: <span id="score-slider-val" class="slider-val">50%</span></label>
-            <input type="range" id="score-slider" min="50" max="95" step="1" value="50">
-          </div>
-
-          <div class="control-group">
-            <label for="sort-select">Sort By:</label>
-            <select id="sort-select">
-              <option value="latest" selected>⚡ Latest to Farthest (Newest First)</option>
-              <option value="score-desc">Highest Match Score</option>
-              <option value="tier-asc">Priority Tier (1 to 9)</option>
-              <option value="company-asc">Company Name (A–Z)</option>
-              <option value="farthest">⏳ Farthest to Latest (Oldest First)</option>
-            </select>
-          </div>
-
-          <div class="control-group">
-            <label for="location-select">Location (India):</label>
-            <select id="location-select">
-              <option value="all" selected>All India</option>
-              <option value="bengaluru">Bengaluru / Bangalore</option>
-              <option value="hyderabad">Hyderabad</option>
-              <option value="pune">Pune</option>
-              <option value="gurugram">Gurugram / Noida</option>
-              <option value="mumbai">Mumbai</option>
-              <option value="remote">Remote - Worldwide / India</option>
-            </select>
-          </div>
-
-          <div class="control-group">
-            <label for="freshness-select">Freshness:</label>
-            <select id="freshness-select">
-              <option value="168" selected>⚡ Past 7 Days (Fresh Jobs)</option>
-              <option value="1">⏱️ Past 1 Hour (0–60m)</option>
-              <option value="12">🔥 Past 12 Hours</option>
-              <option value="24">⭐ Past 24 Hours (Today)</option>
-              <option value="48">📅 Past 48 Hours (2 Days Max)</option>
-              <option value="9999">🌐 Anytime / All Jobs</option>
-            </select>
-          </div>
-
-          <div class="control-group">
-            <label for="source-select">Source:</label>
-            <select id="source-select">
-              <option value="all">All Platforms (Verified Openings)</option>
-              <option value="Company Portal">🏢 Indian Companies (Direct Career Sites)</option>
-              <option value="Unstop">🎯 Unstop (Campus &amp; Freshers)</option>
-              <option value="Direct ATS">🚀 Direct ATS (Greenhouse / Lever / Ashby)</option>
-              <option value="LinkedIn">💼 LinkedIn (Verified Direct Openings)</option>
-              <option value="LinkedIn Post">👤 Individual Public Posts</option>
-              <option value="Remotive">🌐 Remotive</option>
-              <option value="Jobicy">🌐 Jobicy</option>
-            </select>
+          <div class="filter-drawer-actions">
+            <button class="btn-drawer-reset" id="reset-filters-btn" type="button">
+              ↺ Reset All Filters
+            </button>
+            <button class="btn-drawer-close" id="btn-close-drawer" type="button">
+              ✕ Close Drawer
+            </button>
           </div>
         </div>
-      </div>
-
-      <!-- Quick Tier Filter Chips -->
-      <div class="tier-chips" id="tier-chips">
-        <button class="chip active" data-chip="all">All Roles</button>
-        <button class="chip" data-chip="primary">🥇 Primary (1–7)</button>
-        <button class="chip chip-source" data-chip="source-company">🏢 Indian Company Portals</button>
-        <button class="chip chip-source" data-chip="source-unstop">🎯 Unstop Freshers</button>
-        <button class="chip chip-source" data-chip="source-post">👤 Individual Posts</button>
-        <button class="chip" data-chip="secondary">🥈 Secondary (Tier 8)</button>
-        <button class="chip" data-chip="adjacent">⚡ Optional (Tier 9)</button>
-        <button class="chip" data-chip="1">🥇 Tier 1: Applied Scientist / ML</button>
-        <button class="chip" data-chip="2">🥈 Tier 2: Data Science</button>
-        <button class="chip" data-chip="3">🥉 Tier 3: Decision Science</button>
-        <button class="chip" data-chip="4">🏅 Tier 4: OR / Optimization</button>
-        <button class="chip" data-chip="5">5 Tier 5: Product (Mgmt)</button>
-        <button class="chip" data-chip="6">6 Tier 6: Strategy (Mgmt)</button>
-        <button class="chip" data-chip="7">7 Tier 7: Forecasting</button>
-        <button class="chip" data-chip="8">8 Tier 8: ML Engineering</button>
-        <button class="chip" data-chip="9">9 Tier 9: Data Eng</button>
       </div>
 
       <!-- Live Search Results Header Banner -->

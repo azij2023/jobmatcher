@@ -33,11 +33,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
   mergeSavedCustomJobs(jobs);
 
+  // Shortlist / Bookmark State Management
+  const SHORTLIST_STORAGE_KEY = "targetmatch_shortlist";
+
+  function getSavedJobIds() {
+    try {
+      return JSON.parse(localStorage.getItem(SHORTLIST_STORAGE_KEY) || "[]");
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function getJobId(job) {
+    if (!job) return "";
+    return job.url || `${job.tier}-${(job.company || '').replace(/\s+/g, '-').toLowerCase()}-${(job.title || '').replace(/\s+/g, '-').toLowerCase()}`;
+  }
+
+  function isJobSaved(jobId) {
+    if (!jobId) return false;
+    return getSavedJobIds().includes(jobId);
+  }
+
+  function toggleSavedJob(jobId) {
+    if (!jobId) return false;
+    const saved = getSavedJobIds();
+    const idx = saved.indexOf(jobId);
+    let isSavedNow = false;
+    if (idx >= 0) {
+      saved.splice(idx, 1);
+      isSavedNow = false;
+    } else {
+      saved.push(jobId);
+      isSavedNow = true;
+    }
+    try {
+      localStorage.setItem(SHORTLIST_STORAGE_KEY, JSON.stringify(saved));
+    } catch (e) {
+      console.warn("Could not save to localStorage", e);
+    }
+    updateShortlistStats();
+    updateFilterPillCounts();
+    return isSavedNow;
+  }
+
   // DOM Elements
   const jobsGrid = document.getElementById("jobs-grid");
   const emptyState = document.getElementById("empty-state");
   const searchInput = document.getElementById("search-input");
   const clearSearchBtn = document.getElementById("clear-search-btn");
+  const btnSearchExec = document.getElementById("btn-search-exec");
+  const btnToggleFilters = document.getElementById("btn-toggle-filters");
+  const activeFilterBadge = document.getElementById("active-filter-badge");
+  const advancedFiltersDrawer = document.getElementById("advanced-filters-drawer");
+  const btnCloseDrawer = document.getElementById("btn-close-drawer");
   const tierSelect = document.getElementById("tier-select");
   const scoreSlider = document.getElementById("score-slider");
   const scoreSliderVal = document.getElementById("score-slider-val");
@@ -45,24 +93,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultsCount = document.getElementById("results-count");
   const navJobCount = document.getElementById("nav-job-count");
   const resetFiltersBtn = document.getElementById("reset-filters-btn");
-  const tierChipsContainer = document.getElementById("tier-chips");
   const toast = document.getElementById("toast");
   const navRefreshBtn = document.getElementById("nav-refresh-btn");
   const navRefreshIcon = document.getElementById("nav-refresh-icon");
   const navRefreshLabel = document.getElementById("nav-refresh-label");
   const autoSyncIndicator = document.getElementById("auto-sync-indicator");
-
-  // DOM Elements - Hero Job Search Console
-  const btnHeroJobSearch = document.getElementById("btn-hero-job-search");
-  const heroSearchRole = document.getElementById("hero-search-role");
-  const heroClearRole = document.getElementById("hero-clear-role");
-  const heroSearchLocation = document.getElementById("hero-search-location");
-  const heroSearchFreshness = document.getElementById("hero-search-freshness");
-  const heroSearchBtnIcon = document.getElementById("hero-search-btn-icon");
-  const heroSearchBtnText = document.getElementById("hero-search-btn-text");
   const bannerJobCount = document.getElementById("banner-job-count");
   const bannerScopePill = document.getElementById("banner-scope-pill");
   const locationSelect = document.getElementById("location-select");
+  const freshnessSelect = document.getElementById("freshness-select");
+  const sourceSelect = document.getElementById("source-select");
 
   // State
   let currentFilter = {
@@ -72,7 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
     source: "all",
     minScore: 0.50,
     sortBy: "latest",
-    maxAgeHours: 168
+    maxAgeHours: 168,
+    onlySaved: false
   };
 
   let currentPage = 1;
@@ -82,31 +123,86 @@ document.addEventListener("DOMContentLoaded", () => {
   const paginationInfo = document.getElementById("pagination-info");
   const paginationButtons = document.getElementById("pagination-buttons");
   const pageSizeSelect = document.getElementById("page-size-select");
-  const freshnessSelect = document.getElementById("freshness-select");
-  const sourceSelect = document.getElementById("source-select");
+
+  // Helper source classification functions
+  const isCompanyPortalJob = j => {
+    if (!j) return false;
+    const u = (j.url || '').toLowerCase();
+    const t = (j.source_type || '').toLowerCase();
+    const d = (j.source_domain || '').toLowerCase();
+    const isPost = Boolean(j.is_post) || t.includes('post') || u.includes('/posts/');
+    const isAts = u.includes('greenhouse.io') || u.includes('lever.co') || u.includes('ashbyhq') || u.includes('workday') || t.includes('ats');
+    return t.includes('portal') || t.includes('official') || isAts || (!u.includes('linkedin.com') && !u.includes('naukri.com') && !u.includes('unstop.com') && !u.includes('indeed.com') && !isPost && !d.includes('remotive') && !d.includes('jobicy'));
+  };
+
+  const isUnstopJob = j => {
+    if (!j) return false;
+    const u = (j.url || '').toLowerCase();
+    const d = (j.source_domain || '').toLowerCase();
+    const t = (j.source_type || '').toLowerCase();
+    return u.includes('unstop.com') || d.includes('unstop') || t.includes('unstop');
+  };
 
   // ==========================================================================
   // 2. Initial Setup & Stats Display
   // ==========================================================================
 
+  function updateShortlistStats() {
+    const savedCount = getSavedJobIds().length;
+    const statSavedEl = document.getElementById("stat-saved-val");
+    if (statSavedEl) statSavedEl.textContent = savedCount;
+    const countSavedEl = document.getElementById("count-saved");
+    if (countSavedEl) countSavedEl.textContent = savedCount;
+  }
+
   function initStats() {
     const primaryCount = jobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4, 5, 6, 7].includes(j.tier)).length;
-    const secondaryCount = jobs.filter(j => j.priority === "Secondary" || j.tier === 8).length;
-    const adjacentCount = jobs.filter(j => j.tier === 9).length;
+    const portalCount = jobs.filter(isCompanyPortalJob).length;
+    const unstopCount = jobs.filter(isUnstopJob).length;
+    const savedCount = getSavedJobIds().length;
 
     const statPrimaryEl = document.getElementById("stat-primary-val");
-    const statSecondaryEl = document.getElementById("stat-secondary-val");
-    const statAdjacentEl = document.getElementById("stat-adjacent-val");
+    const statPortalsEl = document.getElementById("stat-portals-val");
+    const statUnstopEl = document.getElementById("stat-unstop-val");
+    const statSavedEl = document.getElementById("stat-saved-val");
     const statAvgScoreEl = document.getElementById("stat-avg-score-val");
 
     if (statPrimaryEl) statPrimaryEl.textContent = primaryCount;
-    if (statSecondaryEl) statSecondaryEl.textContent = secondaryCount;
-    if (statAdjacentEl) statAdjacentEl.textContent = adjacentCount;
-    
+    if (statPortalsEl) statPortalsEl.textContent = portalCount;
+    if (statUnstopEl) statUnstopEl.textContent = unstopCount;
+    if (statSavedEl) statSavedEl.textContent = savedCount;
+
     const validScores = jobs.map(j => j.score || 0).filter(s => typeof s === "number");
     const topScore = validScores.length > 0 ? Math.max(...validScores) : 0;
     if (statAvgScoreEl) statAvgScoreEl.textContent = `${Math.round(topScore * 100)}%`;
     if (navJobCount) navJobCount.textContent = jobs.length;
+
+    updateFilterPillCounts();
+  }
+
+  function updateFilterPillCounts() {
+    const savedIds = getSavedJobIds();
+    const countAllEl = document.getElementById("count-all");
+    const countCompanyEl = document.getElementById("count-company");
+    const countUnstopEl = document.getElementById("count-unstop");
+    const countSavedEl = document.getElementById("count-saved");
+    const countAsEl = document.getElementById("count-as");
+    const countDsEl = document.getElementById("count-ds");
+    const countDecEl = document.getElementById("count-dec");
+    const countOrEl = document.getElementById("count-or");
+    const countMleEl = document.getElementById("count-mle");
+    const count24hEl = document.getElementById("count-24h");
+
+    if (countAllEl) countAllEl.textContent = jobs.length;
+    if (countCompanyEl) countCompanyEl.textContent = jobs.filter(isCompanyPortalJob).length;
+    if (countUnstopEl) countUnstopEl.textContent = jobs.filter(isUnstopJob).length;
+    if (countSavedEl) countSavedEl.textContent = savedIds.length;
+    if (countAsEl) countAsEl.textContent = jobs.filter(j => j.tier === 1).length;
+    if (countDsEl) countDsEl.textContent = jobs.filter(j => j.tier === 2).length;
+    if (countDecEl) countDecEl.textContent = jobs.filter(j => j.tier === 3).length;
+    if (countOrEl) countOrEl.textContent = jobs.filter(j => j.tier === 4).length;
+    if (countMleEl) countMleEl.textContent = jobs.filter(j => j.tier === 8).length;
+    if (count24hEl) count24hEl.textContent = jobs.filter(j => getJobFreshness(j).hours <= 24).length;
   }
 
   // ==========================================================================
@@ -262,6 +358,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderJobs() {
     let filtered = jobs.filter(job => {
+      // Shortlist filter
+      if (currentFilter.onlySaved) {
+        const jId = getJobId(job);
+        if (!isJobSaved(jId)) return false;
+      }
+
       // Score filter
       if (job.score < currentFilter.minScore) return false;
 
@@ -449,7 +551,9 @@ document.addEventListener("DOMContentLoaded", () => {
       const emptyExpandBtn = document.getElementById("empty-expand-freshness-btn");
 
       if (emptyTitle) {
-        if (jobs.length === 0) {
+        if (currentFilter.onlySaved) {
+          emptyTitle.textContent = "Your shortlist is empty";
+        } else if (jobs.length === 0) {
           emptyTitle.textContent = "Waiting for verified job listings";
         } else if (currentFilter.search) {
           emptyTitle.textContent = `No jobs matched "${currentFilter.search}"`;
@@ -458,7 +562,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
       if (emptyDesc) {
-        if (jobs.length === 0) {
+        if (currentFilter.onlySaved) {
+          emptyDesc.textContent = "Click the ★ star on any job card to bookmark roles you want to save and track.";
+        } else if (jobs.length === 0) {
           emptyDesc.textContent = "Listings appear here after the scheduled feeds return jobs with a source-provided posting date. The feed sync runs every 30 minutes.";
         } else if (currentFilter.maxAgeHours <= 24) {
           emptyDesc.textContent = `No jobs found within the past ${currentFilter.maxAgeHours}h window. Try expanding to Anytime or clearing your search.`;
@@ -585,8 +691,15 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<span class="applicant-badge">👥 ${escapeHTML(job.applicants_count)}</span>`
         : '';
 
+      const jobId = getJobId(job);
+      const isSaved = isJobSaved(jobId);
+      const hasRecruiterOutreach = Boolean(job.contact_email || job.outreach_dm);
+      const recruiterPill = hasRecruiterOutreach
+        ? `<span class="recruiter-avail-badge" title="Recruiter outreach contact available in details">✉️ Recruiter Available</span>`
+        : '';
+
       return `
-        <article class="job-card" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
+        <article class="job-card ${isSaved ? 'is-saved' : ''}" id="job-${job.tier}-${job.company.replace(/\s+/g, '-').toLowerCase()}">
           <div>
             <div class="job-card-header">
               <div>
@@ -598,6 +711,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   ${freshnessPill}
                   ${platformPill}
                   ${remotePill}
+                  ${recruiterPill}
                   ${locationCheckPill}
                   ${applicantPill}
                 </div>
@@ -608,9 +722,12 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span class="job-location">📍 ${escapeHTML(job.location)}</span>
                 </div>
               </div>
-              <div class="score-badge-circle" title="Calculated Match Score: ${scorePct}%">
-                <span class="score-badge-val">${scorePct}%</span>
-                <span class="score-badge-label">FIT</span>
+              <div class="card-header-actions">
+                <button class="card-star-btn ${isSaved ? 'saved' : ''}" data-job-url="${escapeHTML(job.url)}" title="${isSaved ? 'Remove from your shortlist' : 'Bookmark role to your shortlist'}">★</button>
+                <div class="score-badge-circle" title="Calculated Match Score: ${scorePct}%">
+                  <span class="score-badge-val">${scorePct}%</span>
+                  <span class="score-badge-label">FIT</span>
+                </div>
               </div>
             </div>
 
@@ -639,43 +756,42 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Direct application link for ${escapeHTML(job.title)} at ${escapeHTML(job.company)}">
               <span>${applyBtnText}</span>
             </a>
-            ${job.company_url && !targetUrl.includes(job.company_url.replace(/https?:\/\/(www\.)?/, '').split('/')[0]) ? `
-              <a href="${escapeHTML(job.company_url)}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Visit ${escapeHTML(job.company)} official careers site">
-                <span>🏢 Careers Site ↗</span>
-              </a>
-            ` : ''}
-            ${job.contact_email ? `
-              <a href="mailto:${escapeHTML(job.contact_email)}?subject=${encodeURIComponent(`Application for ${job.title} - Fresher/Early Career`)}&body=${encodeURIComponent(job.outreach_dm || `Hi ${job.post_author ? job.post_author.split('(')[0].trim() : 'Hiring Team'},\n\nI saw your post regarding the ${job.title} role at ${job.company}.`)}" class="btn btn-secondary" title="Email recruiter directly">
-                <span>✉️ Email</span>
-              </a>
-            ` : ''}
-            ${job.outreach_dm ? `
-              <button class="btn btn-secondary copy-outreach-btn" data-outreach="${escapeHTML(job.outreach_dm)}" title="Copy personalized recruiter outreach DM pitch">
-                <span>💬 Pitch</span>
-              </button>
-            ` : ''}
-            <button class="btn btn-secondary btn-skill-gap view-gap-btn" data-job-url="${escapeHTML(job.url)}" title="View semantic skill gap analysis">
-              ⚡ Skill Gap
+            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details, roadmap and recruiter pitch">
+              <span>⚡ Skill Gap &amp; Roadmap</span>
             </button>
-            <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details and application advice">
-              🔍 Details
-            </button>
-            <button class="btn btn-secondary copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company}\nApplication Link: ${targetUrl}`)}" title="Copy direct application link">
-              📋
+            <button class="btn btn-secondary btn-icon copy-btn" data-info="${escapeHTML(`${job.title} at ${job.company}\nApplication Link: ${targetUrl}`)}" title="Copy direct application link">
+              <span>📋</span>
             </button>
           </div>
         </article>
       `;
     }).join("");
 
-    // Attach copy pitch buttons
-    document.querySelectorAll(".copy-outreach-btn").forEach(btn => {
+    // Attach bookmark star buttons
+    document.querySelectorAll(".card-star-btn").forEach(btn => {
       btn.addEventListener("click", (e) => {
         e.stopPropagation();
-        const pitch = e.currentTarget.getAttribute("data-outreach");
-        navigator.clipboard.writeText(pitch).then(() => {
-          showToast("📋 Personalized recruiter outreach pitch copied to clipboard!");
-        });
+        const jobUrl = e.currentTarget.getAttribute("data-job-url");
+        const found = jobs.find(j => j.url === jobUrl);
+        const jId = getJobId(found || { url: jobUrl });
+        const isNowSaved = toggleSavedJob(jId);
+        if (isNowSaved) {
+          btn.classList.add("saved");
+          btn.title = "Remove from your shortlist";
+          showToast("⭐ Added role to your shortlist!");
+        } else {
+          btn.classList.remove("saved");
+          btn.title = "Bookmark role to your shortlist";
+          showToast("Removed role from your shortlist");
+        }
+        const card = btn.closest(".job-card");
+        if (card) {
+          if (isNowSaved) card.classList.add("is-saved");
+          else card.classList.remove("is-saved");
+        }
+        if (currentFilter.onlySaved) {
+          renderJobs();
+        }
       });
     });
 
@@ -700,30 +816,19 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    document.querySelectorAll(".view-gap-btn").forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const jobUrl = e.currentTarget.getAttribute("data-job-url");
-        const found = jobs.find(j => j.url === jobUrl);
-        if (found) {
-          openJobModal(found);
-          setTimeout(() => {
-            const gapSec = document.getElementById("modal-semantic-gap-section");
-            if (gapSec) gapSec.scrollIntoView({ behavior: 'smooth' });
-          }, 100);
-        }
-      });
-    });
-
     document.querySelectorAll(".job-card").forEach(card => {
       card.addEventListener("click", (e) => {
-        // Prevent opening if clicking an <a> tag or copy button
-        if (e.target.closest("a") || e.target.closest(".copy-btn")) return;
+        // Prevent opening if clicking an <a> tag, copy button, or bookmark star
+        if (e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn")) return;
         const cardId = card.id;
-        const found = jobs.find(j => cardId.includes(j.company.replace(/\s+/g, '-').toLowerCase()));
+        const found = jobs.find(j => cardId.includes((j.company || '').replace(/\s+/g, '-').toLowerCase()));
         if (found) openJobModal(found);
       });
     });
+
+    // Update active filters badge & pills
+    updateActiveFilterBadge();
+    updatePillActiveState();
 
     // Render Pagination Controls ("Many Pages")
     renderPagination(totalJobs, totalPages);
@@ -979,28 +1084,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ==========================================================================
-  // 5. Filter Listeners
-  // ==========================================================================
-
-  // ==========================================================================
   // 5. Filter & Real-Time Live Search Listeners
   // ==========================================================================
 
   let searchDebounceTimer = null;
-  function handleLiveSearch(query, sourceInput) {
-    currentFilter.search = query.trim();
+  function handleLiveSearch(query) {
+    currentFilter.search = (query || "").trim();
 
-    // Two-way synchronization between Hero search and Toolbar search
-    if (sourceInput !== heroSearchRole && heroSearchRole) {
-      heroSearchRole.value = query;
-    }
-    if (sourceInput !== searchInput && searchInput) {
-      searchInput.value = query;
-    }
-
-    // Toggle clear buttons
+    // Toggle clear button
     const hasQuery = Boolean(currentFilter.search);
-    if (heroClearRole) heroClearRole.style.display = hasQuery ? "block" : "none";
     if (clearSearchBtn) clearSearchBtn.style.display = hasQuery ? "block" : "none";
 
     clearTimeout(searchDebounceTimer);
@@ -1010,20 +1102,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 150);
   }
 
-  if (heroSearchRole) {
-    heroSearchRole.addEventListener("input", (e) => {
-      handleLiveSearch(e.target.value, heroSearchRole);
-    });
-    heroSearchRole.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        executeJobSearch(true);
-      }
-    });
-  }
-
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
-      handleLiveSearch(e.target.value, searchInput);
+      handleLiveSearch(e.target.value);
     });
     searchInput.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
@@ -1032,22 +1113,18 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (heroClearRole) {
-    heroClearRole.addEventListener("click", () => {
-      handleLiveSearch("", null);
-    });
-  }
-
   if (clearSearchBtn) {
     clearSearchBtn.addEventListener("click", () => {
-      handleLiveSearch("", null);
+      if (searchInput) searchInput.value = "";
+      handleLiveSearch("");
     });
   }
 
   const emptyClearBtn = document.getElementById("empty-clear-search-btn");
   if (emptyClearBtn) {
     emptyClearBtn.addEventListener("click", () => {
-      handleLiveSearch("", null);
+      if (searchInput) searchInput.value = "";
+      handleLiveSearch("");
     });
   }
 
@@ -1055,7 +1132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (emptyExpandBtn) {
     emptyExpandBtn.addEventListener("click", () => {
       currentFilter.maxAgeHours = 9999;
-      if (heroSearchFreshness) heroSearchFreshness.value = "9999";
       if (freshnessSelect) freshnessSelect.value = "9999";
       currentPage = 1;
       renderJobs();
@@ -1063,74 +1139,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  tierSelect.addEventListener("change", (e) => {
-    currentFilter.tier = e.target.value;
-    updateChipSelection(e.target.value);
-    currentPage = 1;
-    renderJobs();
-  });
-
-  scoreSlider.addEventListener("input", (e) => {
-    const val = parseInt(e.target.value, 10);
-    currentFilter.minScore = val / 100;
-    scoreSliderVal.textContent = `${val}%`;
-    currentPage = 1;
-    renderJobs();
-  });
-
-  sortSelect.addEventListener("change", (e) => {
-    currentFilter.sortBy = e.target.value;
-    currentPage = 1;
-    renderJobs();
-  });
-
-  resetFiltersBtn.addEventListener("click", () => {
-    if (heroSearchRole) heroSearchRole.value = "";
-    if (heroSearchLocation) heroSearchLocation.value = "all";
-    if (heroSearchFreshness) heroSearchFreshness.value = "168";
-    if (locationSelect) locationSelect.value = "all";
-    if (searchInput) searchInput.value = "";
-    currentFilter.search = "";
-    currentFilter.tier = "all";
-    currentFilter.location = "all";
-    currentFilter.source = "all";
-    currentFilter.minScore = 0.50;
-    currentFilter.sortBy = "latest";
-    currentFilter.maxAgeHours = 168;
-    if (scoreSlider) scoreSlider.value = 50;
-    if (scoreSliderVal) scoreSliderVal.textContent = "50%";
-    if (sortSelect) sortSelect.value = "latest";
-    if (tierSelect) tierSelect.value = "all";
-    if (freshnessSelect) freshnessSelect.value = "168";
-    if (sourceSelect) sourceSelect.value = "all";
-    if (clearSearchBtn) clearSearchBtn.style.display = "none";
-    if (heroClearRole) heroClearRole.style.display = "none";
-    updateChipSelection("all");
-    document.querySelectorAll(".quick-pill").forEach(p => p.classList.remove("active"));
-    const defPill = document.querySelector(".quick-pill[data-hours='168'][data-role='']");
-    if (defPill) defPill.classList.add("active");
-    currentPage = 1;
-    renderJobs();
-  });
-
-  if (freshnessSelect) {
-    freshnessSelect.addEventListener("change", (e) => {
-      const val = e.target.value;
-      currentFilter.maxAgeHours = (val === "any" || val === "9999") ? 9999 : (parseInt(val, 10) || 168);
-      if (heroSearchFreshness) heroSearchFreshness.value = val;
-      currentPage = 1;
-      renderJobs();
-    });
-  }
-
-  // ==========================================================================
-  // Primary Job Search Button & Console Execution
-  // ==========================================================================
-
+  // Execute Search Command
   function executeJobSearch(feedback = true) {
-    // 0. Explicitly switch to Matched Jobs tab first!
     const jobsTabBtn = document.getElementById("tab-btn-jobs");
-    if (jobsTabBtn) {
+    if (jobsTabBtn && !jobsTabBtn.classList.contains("active")) {
       document.querySelectorAll(".nav-tab").forEach(btn => btn.classList.remove("active"));
       document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active"));
       jobsTabBtn.classList.add("active");
@@ -1138,39 +1150,236 @@ document.addEventListener("DOMContentLoaded", () => {
       if (jobsView) jobsView.classList.add("active");
     }
 
-    // 1. Sync from hero search controls
-    if (heroSearchRole) currentFilter.search = heroSearchRole.value.trim();
-    if (heroSearchLocation) currentFilter.location = heroSearchLocation.value;
-    if (heroSearchFreshness) {
-      const freshVal = heroSearchFreshness.value;
-      currentFilter.maxAgeHours = (freshVal === "any" || freshVal === "9999") ? 9999 : (parseInt(freshVal, 10) || 168);
-    }
-
-    // 2. Sync secondary toolbar inputs
-    if (searchInput) searchInput.value = currentFilter.search;
-    if (clearSearchBtn) clearSearchBtn.style.display = currentFilter.search ? "block" : "none";
-    if (locationSelect) locationSelect.value = currentFilter.location;
-    if (freshnessSelect) freshnessSelect.value = heroSearchFreshness ? heroSearchFreshness.value : String(currentFilter.maxAgeHours);
-
-    // 3. Button visual interaction
-    if (feedback && heroSearchBtnText && heroSearchBtnIcon) {
-      const origText = heroSearchBtnText.textContent;
-      const origIcon = heroSearchBtnIcon.textContent;
-      heroSearchBtnIcon.textContent = "⏳";
-      heroSearchBtnText.textContent = "Searching...";
-      if (btnHeroJobSearch) btnHeroJobSearch.style.opacity = "0.85";
-
-      setTimeout(() => {
-        heroSearchBtnIcon.textContent = origIcon;
-        heroSearchBtnText.textContent = origText;
-        if (btnHeroJobSearch) btnHeroJobSearch.style.opacity = "1";
-      }, 250);
+    if (searchInput) {
+      currentFilter.search = searchInput.value.trim();
     }
 
     currentPage = 1;
     renderJobs();
+    scrollToResults();
 
-    // 4. Smooth scroll to results section
+    if (feedback) {
+      const bannerCount = document.getElementById("banner-job-count");
+      const totalCount = bannerCount ? bannerCount.textContent : "0";
+      showToast(`🎯 Found ${totalCount} valid jobs matching your search!`);
+    }
+  }
+
+  if (btnSearchExec) {
+    btnSearchExec.addEventListener("click", () => executeJobSearch(true));
+  }
+
+  // Filter Drawer Toggle
+  if (btnToggleFilters && advancedFiltersDrawer) {
+    btnToggleFilters.addEventListener("click", () => {
+      const isHidden = advancedFiltersDrawer.style.display === "none";
+      advancedFiltersDrawer.style.display = isHidden ? "block" : "none";
+      btnToggleFilters.setAttribute("aria-expanded", isHidden ? "true" : "false");
+    });
+  }
+
+  if (btnCloseDrawer && advancedFiltersDrawer) {
+    btnCloseDrawer.addEventListener("click", () => {
+      advancedFiltersDrawer.style.display = "none";
+      if (btnToggleFilters) btnToggleFilters.setAttribute("aria-expanded", "false");
+    });
+  }
+
+  // Interactive Clickable Stats Cards
+  const statPrimaryCard = document.getElementById("stat-primary");
+  if (statPrimaryCard) {
+    statPrimaryCard.addEventListener("click", () => {
+      if (currentFilter.tier === "primary") {
+        currentFilter.tier = "all";
+        if (tierSelect) tierSelect.value = "all";
+      } else {
+        currentFilter.tier = "primary";
+        currentFilter.source = "all";
+        currentFilter.onlySaved = false;
+        if (tierSelect) tierSelect.value = "primary";
+        if (sourceSelect) sourceSelect.value = "all";
+      }
+      updatePillActiveState();
+      currentPage = 1;
+      renderJobs();
+      scrollToResults();
+    });
+  }
+
+  const statPortalsCard = document.getElementById("stat-portals");
+  if (statPortalsCard) {
+    statPortalsCard.addEventListener("click", () => {
+      if (currentFilter.source === "Company Portal") {
+        currentFilter.source = "all";
+        if (sourceSelect) sourceSelect.value = "all";
+      } else {
+        currentFilter.source = "Company Portal";
+        currentFilter.tier = "all";
+        currentFilter.onlySaved = false;
+        if (sourceSelect) sourceSelect.value = "Company Portal";
+        if (tierSelect) tierSelect.value = "all";
+      }
+      updatePillActiveState();
+      currentPage = 1;
+      renderJobs();
+      scrollToResults();
+    });
+  }
+
+  const statUnstopCard = document.getElementById("stat-unstop");
+  if (statUnstopCard) {
+    statUnstopCard.addEventListener("click", () => {
+      if (currentFilter.source === "Unstop") {
+        currentFilter.source = "all";
+        if (sourceSelect) sourceSelect.value = "all";
+      } else {
+        currentFilter.source = "Unstop";
+        currentFilter.tier = "all";
+        currentFilter.onlySaved = false;
+        if (sourceSelect) sourceSelect.value = "Unstop";
+        if (tierSelect) tierSelect.value = "all";
+      }
+      updatePillActiveState();
+      currentPage = 1;
+      renderJobs();
+      scrollToResults();
+    });
+  }
+
+  const statSavedCard = document.getElementById("stat-saved");
+  if (statSavedCard) {
+    statSavedCard.addEventListener("click", () => {
+      currentFilter.onlySaved = !currentFilter.onlySaved;
+      if (currentFilter.onlySaved) {
+        currentFilter.tier = "all";
+        currentFilter.source = "all";
+        if (tierSelect) tierSelect.value = "all";
+        if (sourceSelect) sourceSelect.value = "all";
+      }
+      updatePillActiveState();
+      currentPage = 1;
+      renderJobs();
+      scrollToResults();
+    });
+  }
+
+  const statScoreCard = document.getElementById("stat-score");
+  if (statScoreCard) {
+    statScoreCard.addEventListener("click", () => {
+      currentFilter.sortBy = (currentFilter.sortBy === "score-desc") ? "latest" : "score-desc";
+      if (sortSelect) sortSelect.value = currentFilter.sortBy;
+      currentPage = 1;
+      renderJobs();
+      scrollToResults();
+    });
+  }
+
+  // Quick Filter Pills in Command Deck
+  document.querySelectorAll(".quick-filter-pills .quick-pill").forEach(pill => {
+    pill.addEventListener("click", () => {
+      const type = pill.getAttribute("data-filter-type");
+      if (type === "all") {
+        currentFilter.tier = "all";
+        currentFilter.source = "all";
+        currentFilter.onlySaved = false;
+        currentFilter.maxAgeHours = 168;
+        if (tierSelect) tierSelect.value = "all";
+        if (sourceSelect) sourceSelect.value = "all";
+        if (freshnessSelect) freshnessSelect.value = "168";
+      } else if (type === "source-company") {
+        currentFilter.source = "Company Portal";
+        currentFilter.tier = "all";
+        currentFilter.onlySaved = false;
+        if (sourceSelect) sourceSelect.value = "Company Portal";
+        if (tierSelect) tierSelect.value = "all";
+      } else if (type === "source-unstop") {
+        currentFilter.source = "Unstop";
+        currentFilter.tier = "all";
+        currentFilter.onlySaved = false;
+        if (sourceSelect) sourceSelect.value = "Unstop";
+        if (tierSelect) tierSelect.value = "all";
+      } else if (type === "saved") {
+        currentFilter.onlySaved = true;
+        currentFilter.tier = "all";
+        currentFilter.source = "all";
+        if (tierSelect) tierSelect.value = "all";
+        if (sourceSelect) sourceSelect.value = "all";
+      } else if (type.startsWith("tier-")) {
+        const t = type.replace("tier-", "");
+        currentFilter.tier = t;
+        currentFilter.source = "all";
+        currentFilter.onlySaved = false;
+        if (tierSelect) tierSelect.value = t;
+        if (sourceSelect) sourceSelect.value = "all";
+      } else if (type === "fresh-24") {
+        currentFilter.maxAgeHours = 24;
+        if (freshnessSelect) freshnessSelect.value = "24";
+      }
+
+      updatePillActiveState();
+      currentPage = 1;
+      renderJobs();
+    });
+  });
+
+  function updatePillActiveState() {
+    document.querySelectorAll(".quick-filter-pills .quick-pill").forEach(p => {
+      const type = p.getAttribute("data-filter-type");
+      let isActive = false;
+      if (type === "all" && currentFilter.tier === "all" && currentFilter.source === "all" && !currentFilter.onlySaved && currentFilter.maxAgeHours === 168) {
+        isActive = true;
+      } else if (type === "source-company" && currentFilter.source === "Company Portal") {
+        isActive = true;
+      } else if (type === "source-unstop" && currentFilter.source === "Unstop") {
+        isActive = true;
+      } else if (type === "saved" && currentFilter.onlySaved) {
+        isActive = true;
+      } else if (type === `tier-${currentFilter.tier}`) {
+        isActive = true;
+      } else if (type === "fresh-24" && currentFilter.maxAgeHours === 24) {
+        isActive = true;
+      }
+
+      if (isActive) p.classList.add("active");
+      else p.classList.remove("active");
+    });
+
+    // Also update active-stat styling on stat cards!
+    const statPrimaryEl = document.getElementById("stat-primary");
+    const statPortalsEl = document.getElementById("stat-portals");
+    const statUnstopEl = document.getElementById("stat-unstop");
+    const statSavedEl = document.getElementById("stat-saved");
+    const statScoreEl = document.getElementById("stat-score");
+
+    if (statPrimaryEl) statPrimaryEl.classList.toggle("active-stat", currentFilter.tier === "primary");
+    if (statPortalsEl) statPortalsEl.classList.toggle("active-stat", currentFilter.source === "Company Portal");
+    if (statUnstopEl) statUnstopEl.classList.toggle("active-stat", currentFilter.source === "Unstop");
+    if (statSavedEl) statSavedEl.classList.toggle("active-stat", Boolean(currentFilter.onlySaved));
+    if (statScoreEl) statScoreEl.classList.toggle("active-stat", currentFilter.sortBy === "score-desc");
+  }
+
+  function updateActiveFilterBadge() {
+    let count = 0;
+    if (currentFilter.tier !== "all") count++;
+    if (currentFilter.location !== "all") count++;
+    if (currentFilter.maxAgeHours !== 168) count++;
+    if (currentFilter.source !== "all") count++;
+    if (currentFilter.minScore > 0.50) count++;
+    if (currentFilter.sortBy !== "latest") count++;
+    if (currentFilter.onlySaved) count++;
+    if (currentFilter.search) count++;
+
+    if (activeFilterBadge) {
+      if (count > 0) {
+        activeFilterBadge.style.display = "inline-block";
+        activeFilterBadge.textContent = count;
+      } else {
+        activeFilterBadge.style.display = "none";
+      }
+    }
+  }
+
+  function scrollToResults() {
     setTimeout(() => {
       const resultsEl = document.getElementById("search-results-banner") || document.getElementById("jobs-grid");
       if (resultsEl) {
@@ -1180,127 +1389,95 @@ document.addEventListener("DOMContentLoaded", () => {
         window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
       }
     }, 40);
-
-    if (feedback) {
-      const bannerCount = document.getElementById("banner-job-count");
-      const totalCount = bannerCount ? bannerCount.textContent : "0";
-      showToast(`🎯 Found ${totalCount} valid jobs matching your search!`);
-    }
   }
 
-  if (btnHeroJobSearch) {
-    btnHeroJobSearch.addEventListener("click", () => executeJobSearch(true));
-  }
-
-  if (heroSearchLocation) {
-    heroSearchLocation.addEventListener("change", () => {
-      if (locationSelect) locationSelect.value = heroSearchLocation.value;
-      executeJobSearch(true);
+  // Drawer Form Controls
+  if (tierSelect) {
+    tierSelect.addEventListener("change", (e) => {
+      currentFilter.tier = e.target.value;
+      updatePillActiveState();
+      currentPage = 1;
+      renderJobs();
     });
   }
 
-  if (heroSearchFreshness) {
-    heroSearchFreshness.addEventListener("change", () => {
-      if (freshnessSelect) freshnessSelect.value = heroSearchFreshness.value;
-      executeJobSearch(true);
+  if (scoreSlider) {
+    scoreSlider.addEventListener("input", (e) => {
+      const val = parseInt(e.target.value, 10);
+      currentFilter.minScore = val / 100;
+      if (scoreSliderVal) scoreSliderVal.textContent = `${val}%`;
+      currentPage = 1;
+      renderJobs();
+    });
+  }
+
+  if (sortSelect) {
+    sortSelect.addEventListener("change", (e) => {
+      currentFilter.sortBy = e.target.value;
+      currentPage = 1;
+      renderJobs();
     });
   }
 
   if (locationSelect) {
     locationSelect.addEventListener("change", (e) => {
       currentFilter.location = e.target.value;
-      if (heroSearchLocation) heroSearchLocation.value = e.target.value;
       currentPage = 1;
       renderJobs();
     });
   }
 
-  // Quick Filter Pills in Hero Console
-  document.querySelectorAll(".quick-pill").forEach(pill => {
-    pill.addEventListener("click", () => {
-      document.querySelectorAll(".quick-pill").forEach(p => p.classList.remove("active"));
-      pill.classList.add("active");
-
-      const roleQuery = pill.getAttribute("data-role") || "";
-      const hours = parseInt(pill.getAttribute("data-hours") || "48", 10);
-
-      if (heroSearchRole) {
-        heroSearchRole.value = roleQuery;
-        if (heroClearRole) heroClearRole.style.display = roleQuery ? "block" : "none";
-      }
-      if (heroSearchFreshness) heroSearchFreshness.value = String(hours);
-      if (freshnessSelect) freshnessSelect.value = String(hours);
-
-      currentFilter.search = roleQuery;
-      currentFilter.maxAgeHours = hours;
+  if (freshnessSelect) {
+    freshnessSelect.addEventListener("change", (e) => {
+      const val = e.target.value;
+      currentFilter.maxAgeHours = (val === "any" || val === "9999") ? 9999 : (parseInt(val, 10) || 168);
       currentPage = 1;
-      executeJobSearch(true);
+      renderJobs();
     });
-  });
+  }
 
   if (sourceSelect) {
     sourceSelect.addEventListener("change", (e) => {
       currentFilter.source = e.target.value;
-      if (e.target.value === "LinkedIn Post") {
-        updateChipSelection("source-post");
-      } else if (e.target.value === "Company Portal" || e.target.value === "Direct") {
-        updateChipSelection("source-company");
-      } else if (e.target.value === "Unstop") {
-        updateChipSelection("source-unstop");
-      } else {
-        updateChipSelection("all");
-      }
+      updatePillActiveState();
       currentPage = 1;
       renderJobs();
     });
   }
 
-  // Quick Chips
-  tierChipsContainer.addEventListener("click", (e) => {
-    if (e.target.classList.contains("chip")) {
-      const chipVal = e.target.getAttribute("data-chip");
-      if (chipVal === "source-post") {
-        currentFilter.source = "LinkedIn Post";
-        currentFilter.tier = "all";
-        tierSelect.value = "all";
-        if (sourceSelect) sourceSelect.value = "LinkedIn Post";
-      } else if (chipVal === "source-company") {
-        currentFilter.source = "Company Portal";
-        currentFilter.tier = "all";
-        tierSelect.value = "all";
-        if (sourceSelect) sourceSelect.value = "Company Portal";
-      } else if (chipVal === "source-unstop") {
-        currentFilter.source = "Unstop";
-        currentFilter.tier = "all";
-        tierSelect.value = "all";
-        if (sourceSelect) sourceSelect.value = "Unstop";
-      } else {
-        currentFilter.source = "all";
-        if (sourceSelect) sourceSelect.value = "all";
-        currentFilter.tier = chipVal;
-        tierSelect.value = chipVal;
-      }
-      updateChipSelection(chipVal);
+  if (resetFiltersBtn) {
+    resetFiltersBtn.addEventListener("click", () => {
+      if (searchInput) searchInput.value = "";
+      if (clearSearchBtn) clearSearchBtn.style.display = "none";
+      if (tierSelect) tierSelect.value = "all";
+      if (locationSelect) locationSelect.value = "all";
+      if (freshnessSelect) freshnessSelect.value = "168";
+      if (sourceSelect) sourceSelect.value = "all";
+      if (scoreSlider) scoreSlider.value = 50;
+      if (scoreSliderVal) scoreSliderVal.textContent = "50%";
+      if (sortSelect) sortSelect.value = "latest";
+
+      currentFilter.search = "";
+      currentFilter.tier = "all";
+      currentFilter.location = "all";
+      currentFilter.source = "all";
+      currentFilter.minScore = 0.50;
+      currentFilter.sortBy = "latest";
+      currentFilter.maxAgeHours = 168;
+      currentFilter.onlySaved = false;
+
+      updatePillActiveState();
       currentPage = 1;
       renderJobs();
-    }
-  });
+      showToast("↺ All filters reset to default!");
+    });
+  }
 
   if (pageSizeSelect) {
     pageSizeSelect.addEventListener("change", (e) => {
       pageSize = parseInt(e.target.value, 10);
       currentPage = 1;
       renderJobs();
-    });
-  }
-
-  function updateChipSelection(val) {
-    document.querySelectorAll(".chip").forEach(chip => {
-      if (chip.getAttribute("data-chip") === val) {
-        chip.classList.add("active");
-      } else {
-        chip.classList.remove("active");
-      }
     });
   }
 
