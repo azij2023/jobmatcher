@@ -143,6 +143,50 @@ document.addEventListener("DOMContentLoaded", () => {
     return u.includes('unstop.com') || d.includes('unstop') || t.includes('unstop');
   };
 
+  const isExactJobUrl = u => {
+    if (!u) return false;
+    const s = u.toLowerCase();
+    if (s.includes('/jobs/view/') || s.includes('/internships/') || s.includes('/posting/') || s.includes('greenhouse.io') || s.includes('lever.co') || s.includes('ashbyhq.com') || s.includes('/posts/') || s.includes('activity-')) {
+      return true;
+    }
+    const clean = s.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+    const parts = clean.split('/');
+    if (parts.length <= 1) return false;
+    if (parts.length === 2 && ['careers', 'jobs', 'job-openings', 'company', 'en', 'in', 'about'].includes(parts[1])) {
+      return false;
+    }
+    return parts.length >= 3;
+  };
+
+  const resolveJobTargetUrl = j => {
+    if (!j) return '#';
+    const directUrl = (j.direct_job_url || '').trim();
+    const url = (j.url || '').trim();
+    const linkedinUrl = (j.linkedin_url || '').trim();
+    const companyUrl = (j.company_url || '').trim();
+
+    // 1. Direct specific job link (ATS, Greenhouse, Lever, Ashby, Unstop, etc.)
+    if (directUrl && isExactJobUrl(directUrl)) return directUrl;
+
+    // 2. Specific job URL on any board
+    if (url && isExactJobUrl(url)) return url;
+
+    // 3. Exact LinkedIn post link
+    if (linkedinUrl && isExactJobUrl(linkedinUrl)) return linkedinUrl;
+
+    // 4. Targeted LinkedIn search query for role & company (lands directly on the role card)
+    if (url && (url.includes('linkedin.com/jobs/search') || url.includes('linkedin.com/search'))) return url;
+    if (linkedinUrl && (linkedinUrl.includes('linkedin.com/jobs/search') || linkedinUrl.includes('linkedin.com/search'))) return linkedinUrl;
+
+    // 5. Construct targeted search query for company + title so user lands on exact role, never a blank homepage
+    if (j.company && j.title) {
+      const query = encodeURIComponent(`${j.company} ${j.title}`.trim());
+      return `https://www.linkedin.com/jobs/search/?keywords=${query}&location=India&f_TPR=r604800`;
+    }
+
+    return companyUrl || url || '#';
+  };
+
   // ==========================================================================
   // 2. Initial Setup & Stats Display
   // ==========================================================================
@@ -607,29 +651,28 @@ document.addEventListener("DOMContentLoaded", () => {
         ? `<span class="freshness-minute-badge"><span class="live-pulse-dot"></span> ⚡ Just Now (${freshness.label})</span>`
         : `<span class="freshness-badge">⚡ Posted ${freshness.label}</span>`;
 
-      const urlLower = (job.url || '').toLowerCase();
+      // Resolve exact application URL:
+      // We NEVER redirect users to generic company homepages when a specific post or targeted search is available!
+      const targetUrl = resolveJobTargetUrl(job);
+      const urlLower = targetUrl.toLowerCase();
       const domainLower = (job.source_domain || '').toLowerCase();
       const typeLower = (job.source_type || '').toLowerCase();
-
-      // Sanitize URL: never link to generic LinkedIn keyword search pages which inject sponsored reposts
-      let targetUrl = job.url || job.linkedin_url || job.company_url || '#';
-      if (targetUrl.includes('linkedin.com/jobs/search') || targetUrl.includes('linkedin.com/search')) {
-        targetUrl = job.company_url || targetUrl;
-      }
 
       const isPost = Boolean(job.is_post) || typeLower.includes('post') || urlLower.includes('/posts/');
       const isUnstop = urlLower.includes('unstop.com') || domainLower.includes('unstop') || typeLower.includes('unstop');
       const isNaukri = urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri');
       const isIndeed = urlLower.includes('indeed.com') || domainLower.includes('indeed') || typeLower.includes('indeed');
       const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || urlLower.includes('workday') || typeLower.includes('ats');
-      const isPortal = typeLower.includes('portal') || typeLower.includes('official') || (!urlLower.includes('linkedin.com') && !urlLower.includes('naukri.com') && !urlLower.includes('unstop.com') && !urlLower.includes('indeed.com') && !isPost && !isAts && !domainLower.includes('remotive') && !domainLower.includes('jobicy'));
-      const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost && !isPortal && !isUnstop && !isNaukri && !isIndeed;
-      const isRemotive = domainLower.includes('remotive.com');
-      const isJobicy = domainLower.includes('jobicy.com');
+      const isLinkedInSearch = urlLower.includes('linkedin.com/jobs/search') || urlLower.includes('linkedin.com/search');
+      const isLinkedInView = urlLower.includes('linkedin.com/jobs/view');
+      const isLinkedIn = (urlLower.includes('linkedin.com') || domainLower.includes('linkedin') || typeLower.includes('linkedin')) && !isPost;
+      const isRemotive = domainLower.includes('remotive.com') || urlLower.includes('remotive.com');
+      const isJobicy = domainLower.includes('jobicy.com') || urlLower.includes('jobicy.com');
       const isJSearch = domainLower.includes('jsearch.p.rapidapi.com');
+      const isPortal = isAts || typeLower.includes('portal') || typeLower.includes('official');
 
       let platformPill = '';
-      let applyBtnText = '🏢 Apply on Official Portal ↗';
+      let applyBtnText = '🏢 Apply to Exact Post ↗';
       let applyBtnClass = 'btn btn-primary btn-direct-portal';
 
       if (isPost) {
@@ -652,11 +695,18 @@ document.addEventListener("DOMContentLoaded", () => {
         platformPill = `<span class="source-domain-badge source-indeed">🎯 Indeed</span>`;
         applyBtnText = '🎯 Apply on Indeed ↗';
         applyBtnClass = 'btn btn-primary btn-indeed';
-      } else if (isAts || isPortal) {
-        const portalLabel = job.company ? `${escapeHTML(job.company)} Career Portal` : (isAts ? 'Direct ATS' : 'Company Portal');
-        platformPill = `<span class="source-domain-badge source-portal">🏢 ${portalLabel}</span>`;
-        applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Careers ↗`;
+      } else if (isAts) {
+        platformPill = `<span class="source-domain-badge source-portal">🏢 ${escapeHTML(job.company || 'Direct ATS')} ATS</span>`;
+        applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Portal ↗`;
         applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isLinkedInView) {
+        platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn Direct</span>`;
+        applyBtnText = '💼 Apply on LinkedIn ↗';
+        applyBtnClass = 'btn btn-primary btn-linkedin';
+      } else if (isLinkedInSearch) {
+        platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn Jobs</span>`;
+        applyBtnText = '💼 View & Apply on LinkedIn ↗';
+        applyBtnClass = 'btn btn-primary btn-linkedin';
       } else if (isRemotive) {
         platformPill = `<span class="source-domain-badge source-direct">🌐 Remotive</span>`;
         applyBtnText = '🌐 View on Remotive ↗';
@@ -674,8 +724,9 @@ document.addEventListener("DOMContentLoaded", () => {
         platformPill = `<span class="source-domain-badge source-linkedin">💼 LinkedIn</span>`;
         applyBtnText = '💼 Apply on LinkedIn ↗';
         applyBtnClass = 'btn btn-primary btn-linkedin';
-      } else if (job.source_domain) {
-        platformPill = `<span class="source-domain-badge source-portal">🏢 ${escapeHTML(job.source_domain)}</span>`;
+      } else {
+        const portalLabel = job.company ? `${escapeHTML(job.company)} Portal` : 'Direct Portal';
+        platformPill = `<span class="source-domain-badge source-portal">🏢 ${portalLabel}</span>`;
         applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Portal ↗`;
         applyBtnClass = 'btn btn-primary btn-direct-portal';
       }
@@ -1008,36 +1059,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     modalStrategyAdvice.textContent = advice;
 
-    // Direct Application URLs
-    const modalTargetUrl = job.url || job.linkedin_url || job.company_url || '#';
-    const isModalUnstop = (modalTargetUrl.toLowerCase().includes('unstop.com') || (job.source_type || '').toLowerCase().includes('unstop'));
-    const isModalAts = (modalTargetUrl.toLowerCase().includes('greenhouse.io') || modalTargetUrl.toLowerCase().includes('lever.co') || modalTargetUrl.toLowerCase().includes('ashbyhq') || modalTargetUrl.toLowerCase().includes('workday'));
-    const isModalLinkedIn = (modalTargetUrl.toLowerCase().includes('linkedin.com') || (job.source_type || '').toLowerCase().includes('linkedin') || job.is_post);
-    const modalSourceDomain = (job.source_domain || '').toLowerCase();
-    const isModalRemotive = modalSourceDomain.includes('remotive.com');
-    const isModalJobicy = modalSourceDomain.includes('jobicy.com');
+    // Direct Exact Application URL
+    const modalTargetUrl = resolveJobTargetUrl(job);
+    const isModalUnstop = modalTargetUrl.toLowerCase().includes('unstop.com');
+    const isModalAts = modalTargetUrl.toLowerCase().includes('greenhouse.io') || modalTargetUrl.toLowerCase().includes('lever.co') || modalTargetUrl.toLowerCase().includes('ashbyhq') || modalTargetUrl.toLowerCase().includes('workday');
+    const isModalLinkedIn = modalTargetUrl.toLowerCase().includes('linkedin.com');
 
     modalApplyLinkedin.textContent = isModalLinkedIn
-      ? "💼 Apply on LinkedIn ↗"
+      ? (modalTargetUrl.includes('search') ? "💼 View & Apply on LinkedIn ↗" : "💼 Apply on LinkedIn ↗")
       : isModalUnstop
         ? "🎯 Apply on Unstop ↗"
         : isModalAts
-          ? `🏢 Apply on ${job.company || 'Company'} Careers ↗`
-          : isModalRemotive
-            ? "View listing on Remotive ↗"
-            : isModalJobicy
-              ? "View listing on Jobicy ↗"
-              : `🏢 Apply on ${job.company || 'Official'} Portal ↗`;
+          ? `🏢 Apply on ${job.company || 'Company'} ATS Portal ↗`
+          : `🏢 Apply to Exact Post ↗`;
     modalApplyLinkedin.href = modalTargetUrl;
     modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalUnstop ? "btn btn-primary btn-unstop" : (isModalAts ? "btn btn-primary btn-ats" : "btn btn-primary btn-direct-portal"));
-    modalApplyLinkedin.title = `Apply directly for ${job.title} at ${job.company}`;
+    modalApplyLinkedin.title = `Direct application link for ${job.title} at ${job.company}`;
 
     if (modalApplyGoogle) {
-      if (job.company_url && !modalTargetUrl.includes(job.company_url.replace(/https?:\/\/(www\.)?/, '').split('/')[0])) {
-        modalApplyGoogle.textContent = `🏢 ${job.company} Careers Site ↗`;
-        modalApplyGoogle.href = job.company_url;
+      const compUrl = job.company_url || '';
+      if (compUrl && compUrl !== modalTargetUrl) {
+        modalApplyGoogle.textContent = `🏢 ${job.company || 'Company'} Careers Site ↗`;
+        modalApplyGoogle.href = compUrl;
         modalApplyGoogle.className = "btn btn-secondary";
         modalApplyGoogle.style.display = "inline-flex";
+        modalApplyGoogle.title = `Visit official ${job.company} careers portal`;
       } else {
         modalApplyGoogle.style.display = "none";
       }

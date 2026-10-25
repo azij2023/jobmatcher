@@ -583,7 +583,8 @@
         ],
         "bridge_roadmap": "For Aalteon's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1775918"
     },
     {
       "title": "AI Engineer Internship – Computer Vision & AI Automation",
@@ -646,7 +647,8 @@
         ],
         "bridge_roadmap": "For SG Technologies's AI Engineer Internship – Computer Vision & AI Automation: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1774620"
     },
     {
       "title": "Data Science Intern",
@@ -709,10 +711,11 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483367319"
     },
     {
-      "url": "https://www.phonepe.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
       "company_url": "https://www.phonepe.com/careers/",
@@ -772,10 +775,11 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://razorpay.com/jobs/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Risk+Analytics+%26+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Risk+Analytics+%26+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-scientist-risk-analytics-underwriting-jobs-in-india?experience=0",
       "company_url": "https://razorpay.com/jobs/",
@@ -835,10 +839,11 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Risk+Analytics+%26+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.swiggy.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?experience=0",
       "company_url": "https://careers.swiggy.com/",
@@ -898,7 +903,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Decision Scientist - Freight Network Optimization",
@@ -913,7 +919,7 @@
       "posted_at_source": "published_at",
       "hours_ago": 16.0,
       "relative_time": "16 hours ago",
-      "url": "https://www.delhivery.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Freight+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Freight+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/decision-scientist-freight-network-optimization-jobs-in-india?experience=0",
       "company_url": "https://www.delhivery.com/careers",
@@ -963,10 +969,11 @@
         ],
         "bridge_roadmap": "For Delhivery's Decision Scientist - Freight Network Optimization: Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
         "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      }
+      },
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Freight+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.zeptonow.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/operations-research-analyst-micro-fulfillment-jobs-in-india?experience=0",
       "company_url": "https://www.zeptonow.com/careers",
@@ -1029,7 +1036,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "AI Engineering & Open-Source Development Internship",
@@ -1092,10 +1100,11 @@
         ],
         "bridge_roadmap": "For Alphashots.AI's AI Engineering & Open-Source Development Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1774132"
     },
     {
-      "url": "https://www.zeptonow.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/operations-research-analyst-micro-fulfillment-jobs-in-india?experience=0",
       "company_url": "https://www.zeptonow.com/careers",
@@ -1158,7 +1167,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Healthcare Data Analyst",
@@ -1173,7 +1183,7 @@
       "posted_at_source": "published_at",
       "hours_ago": 22.0,
       "relative_time": "22 hours ago",
-      "url": "https://www.1mg.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/healthcare-data-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.1mg.com/careers",
@@ -1223,7 +1233,8 @@
         ],
         "bridge_roadmap": "For Tata 1mg's Healthcare Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering)",
@@ -1286,7 +1297,8 @@
         ],
         "bridge_roadmap": "For Moonshot Factory Inc.'s AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1769128"
     },
     {
       "title": "Applied Scientist II, Detail Page",
@@ -1349,7 +1361,8 @@
         ],
         "bridge_roadmap": "For Amazon Science's Applied Scientist II, Detail Page: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
         "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-detail-page-at-amazon-science-4481042348"
     },
     {
       "title": "Applied Scientist-II, Amazon Music - Search Science, Amazon Music – Search Science",
@@ -1412,7 +1425,8 @@
         ],
         "bridge_roadmap": "For Amazon Music's Applied Scientist-II, Amazon Music - Search Science, Amazon Music – Search Science: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
         "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-amazon-music-search-science-amazon-music-%E2%80%93-search-science-at-amazon-music-4465303670"
     },
     {
       "title": "Applied Scientist II, Buyer Risk Prevention (BRP)",
@@ -1475,7 +1489,8 @@
         ],
         "bridge_roadmap": "For Amazon Business's Applied Scientist II, Buyer Risk Prevention (BRP): Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
         "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-buyer-risk-prevention-brp-at-amazon-business-4474550513"
     },
     {
       "title": "Junior Computer Vision Researcher",
@@ -1538,7 +1553,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765"
     },
     {
       "title": "Junior Data Scientist",
@@ -1601,7 +1617,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458"
     },
     {
       "title": "Associate Data Scientist",
@@ -1662,7 +1679,8 @@
         ],
         "bridge_roadmap": "For Optum India's Associate Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-optum-india-4483193673"
     },
     {
       "title": "Cloud Field Engineer",
@@ -1727,7 +1745,8 @@
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://jobicy.com/jobs/149523-cloud-field-engineer"
     },
     {
       "title": "Data Analyst Internship",
@@ -1790,7 +1809,8 @@
         ],
         "bridge_roadmap": "For Vayanai's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1774237"
     },
     {
       "title": "S&C Global Network - AI - Supply Chain -Analyst",
@@ -1837,7 +1857,8 @@
         "bridge_roadmap": "For Accenture in India's S&C Global Network - AI - Supply Chain -Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-supply-chain-analyst-at-accenture-in-india-4455950495"
     },
     {
       "title": "#ACN  I&P - GN - SONG - AI & Data - Commerce - Decision Science -  Consultant",
@@ -1896,7 +1917,8 @@
         "bridge_roadmap": "For Accenture in India's #ACN  I&P - GN - SONG - AI & Data - Commerce - Decision Science -  Consultant: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/%23acn-i-p-gn-song-ai-data-commerce-decision-science-%C2%A0-consultant-at-accenture-in-india-4476314312"
     },
     {
       "title": "AADC-Industry & Function-AI & Data-FS Insurance-Associate",
@@ -1955,7 +1977,8 @@
         "bridge_roadmap": "For Accenture in India's AADC-Industry & Function-AI & Data-FS Insurance-Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/aadc-industry-function-ai-data-fs-insurance-associate-at-accenture-in-india-4455951428"
     },
     {
       "title": "S&C Global Network - AI - Hi Tech - Data Science Associate 2",
@@ -2002,7 +2025,8 @@
         "bridge_roadmap": "For Accenture in India's S&C Global Network - AI - Hi Tech - Data Science Associate 2: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-hi-tech-data-science-associate-2-at-accenture-in-india-4475876202"
     },
     {
       "title": "S&C Global Network - AI - Hi Tech - Data Science Associate",
@@ -2049,7 +2073,8 @@
         "bridge_roadmap": "For Accenture in India's S&C Global Network - AI - Hi Tech - Data Science Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-hi-tech-data-science-associate-at-accenture-in-india-4475869358"
     },
     {
       "title": "Risk Analyst, Buyer Risk Prevention, Payment Risk Mining",
@@ -2108,7 +2133,8 @@
         "bridge_roadmap": "For Amazon's Risk Analyst, Buyer Risk Prevention, Payment Risk Mining: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/risk-analyst-buyer-risk-prevention-payment-risk-mining-at-amazon-4455913460"
     },
     {
       "title": "Associate Consultant - Presales Solutioning-Product Development-Product Development",
@@ -2167,7 +2193,8 @@
         "bridge_roadmap": "For EXL's Associate Consultant - Presales Solutioning-Product Development-Product Development: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409"
     },
     {
       "title": "AI Trainee",
@@ -2226,7 +2253,8 @@
         "bridge_roadmap": "For Rasta.Ai's AI Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942"
     },
     {
       "title": "AI / Computer Vision Intern",
@@ -2285,7 +2313,8 @@
         "bridge_roadmap": "For Arthrex India's AI / Computer Vision Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924"
     },
     {
       "title": "Junior AI Engineer – Applied AI (Non-Clinical)",
@@ -2344,7 +2373,8 @@
         "bridge_roadmap": "For Teleradiology Solutions's Junior AI Engineer – Applied AI (Non-Clinical): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420"
     },
     {
       "title": "Business Research Analyst - I, RBS Tech",
@@ -2403,7 +2433,8 @@
         "bridge_roadmap": "For Amazon's Business Research Analyst - I, RBS Tech: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122"
     },
     {
       "title": "Data Analyst",
@@ -2464,7 +2495,8 @@
         ],
         "bridge_roadmap": "For Resollect's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786"
     },
     {
       "title": "Artificial Intelligence Intern (Remote)",
@@ -2523,7 +2555,8 @@
         "bridge_roadmap": "For MediNex Workforce's Artificial Intelligence Intern (Remote): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024"
     },
     {
       "title": "Data Scientist",
@@ -2582,7 +2615,8 @@
         "bridge_roadmap": "For Setu's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624"
     },
     {
       "title": "Research Scientist III, Last Mile Science",
@@ -2641,7 +2675,8 @@
         "bridge_roadmap": "For Amazon Science's Research Scientist III, Last Mile Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832"
     },
     {
       "title": "Associate, Grid, PI - Global Capability Center",
@@ -2700,7 +2735,8 @@
         "bridge_roadmap": "For Alvarez & Marsal's Associate, Grid, PI - Global Capability Center: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005"
     },
     {
       "title": "Global Markets Quantitative Research - Flow Rates Group",
@@ -2759,7 +2795,8 @@
         "bridge_roadmap": "For BNP Paribas's Global Markets Quantitative Research - Flow Rates Group: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323"
     },
     {
       "title": "CBS CSU Associate AI Engineer",
@@ -2818,7 +2855,8 @@
         "bridge_roadmap": "For GRUNDFOS's CBS CSU Associate AI Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225"
     },
     {
       "title": "Specialist I – Data Science",
@@ -2877,7 +2915,8 @@
         "bridge_roadmap": "For Smart IMS Inc.'s Specialist I – Data Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362"
     },
     {
       "title": "Data Analyst (Marathi Language Required)",
@@ -2940,7 +2979,8 @@
         ],
         "bridge_roadmap": "For Peroptyx's Data Analyst (Marathi Language Required): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/jobs/1762576"
     },
     {
       "title": "Machine Learning Intern",
@@ -3001,7 +3041,8 @@
         "bridge_roadmap": "For UM IT PRIVATE LIMITED's Machine Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243"
     },
     {
       "title": "Data Science Intern (Remote)",
@@ -3060,7 +3101,8 @@
         "bridge_roadmap": "For MediNex Workforce's Data Science Intern (Remote): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300"
     },
     {
       "title": "AI/ML Intern",
@@ -3119,7 +3161,8 @@
         "bridge_roadmap": "For Bluebex's AI/ML Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224"
     },
     {
       "title": "AI / ML internship in degradation modelling for Li-ion batteries",
@@ -3178,7 +3221,8 @@
         "bridge_roadmap": "For Bridge Green Upcycle's AI / ML internship in degradation modelling for Li-ion batteries: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087"
     },
     {
       "title": "(765) Data Analyst (Healthcare Fraud)",
@@ -3237,7 +3281,8 @@
         "bridge_roadmap": "For Arlo Solutions's (765) Data Analyst (Healthcare Fraud): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud"
     },
     {
       "title": "AWS Data Engineer (Associate)",
@@ -3298,7 +3343,8 @@
         "bridge_roadmap": "For Mactores's AWS Data Engineer (Associate): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate"
     },
     {
       "title": "Data Analytics & Revenue Reporting Specialist",
@@ -3357,7 +3403,8 @@
         "bridge_roadmap": "For LevelUp's Data Analytics & Revenue Reporting Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist"
     },
     {
       "title": "Machine Learning Specialist",
@@ -3418,7 +3465,8 @@
         "bridge_roadmap": "For Hired's Machine Learning Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749"
     },
     {
       "title": "Artificial Intelligence Intern",
@@ -3477,7 +3525,8 @@
         "bridge_roadmap": "For Jobs4PanIndia's Artificial Intelligence Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403"
     },
     {
       "title": "Data Science Intern",
@@ -3536,7 +3585,8 @@
         "bridge_roadmap": "For Jobs4PanIndia's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074"
     },
     {
       "title": "Data Science Associate",
@@ -3595,7 +3645,8 @@
         "bridge_roadmap": "For Hired's Data Science Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914"
     },
     {
       "title": "Machine Learning Coordinator",
@@ -3656,7 +3707,8 @@
         "bridge_roadmap": "For Hired's Machine Learning Coordinator: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887"
     },
     {
       "title": "Research Scientist",
@@ -3719,7 +3771,8 @@
         ],
         "bridge_roadmap": "For NielsenIQ's Research Scientist: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
         "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/research-scientist-at-nielseniq-4325398840"
     },
     {
       "title": "Associate - Data Scientist",
@@ -3782,7 +3835,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-united-airlines-india-knowledge-center-4474154531"
     },
     {
       "title": "Applied Scientist II, IN SPS Tech",
@@ -3845,7 +3899,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971"
     },
     {
       "title": "Entry Data Analyst",
@@ -3908,7 +3963,8 @@
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005"
     },
     {
       "title": "Freelance Copywriter",
@@ -3967,7 +4023,8 @@
         "bridge_roadmap": "For Coalition Technologies's Freelance Copywriter: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306"
     },
     {
       "title": "Freelance Writer",
@@ -4026,7 +4083,8 @@
         "bridge_roadmap": "For IAPWE's Freelance Writer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://remotive.com/remote-jobs/writing/freelance-writer-1185979"
     },
     {
       "title": "Tier III Service Desk Engineer",
@@ -4085,7 +4143,8 @@
         "bridge_roadmap": "For Unio Digital's Tier III Service Desk Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045"
     },
     {
       "title": "Inside Sales Contractor",
@@ -4144,7 +4203,8 @@
         "bridge_roadmap": "For Credit Wellness, LLC's Inside Sales Contractor: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540"
     },
     {
       "title": "IBM Research/Research Software - Intern",
@@ -4203,7 +4263,8 @@
         "bridge_roadmap": "For IBM's IBM Research/Research Software - Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ibm-research-research-software-intern-at-ibm-4480620993"
     },
     {
       "title": "AI Engineer - T&I",
@@ -4262,7 +4323,8 @@
         "bridge_roadmap": "For WSP in India's AI Engineer - T&I: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-t-i-at-wsp-in-india-4481669117"
     },
     {
       "title": "Artificial Intelligence Intern",
@@ -4321,7 +4383,8 @@
         "bridge_roadmap": "For ThinkNovaa's Artificial Intelligence Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-thinknovaa-4481656026"
     },
     {
       "title": "Machine Learning Intern",
@@ -4382,7 +4445,8 @@
         "bridge_roadmap": "For ThinkNovaa's Machine Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-thinknovaa-4481641510"
     },
     {
       "title": "Data Scientist - AI and Analytics",
@@ -4441,7 +4505,8 @@
         "bridge_roadmap": "For Desible.ai's Data Scientist - AI and Analytics: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-ai-and-analytics-at-desible-ai-4480021724"
     },
     {
       "title": "Artificial Intelligence Researcher",
@@ -4500,7 +4565,8 @@
         "bridge_roadmap": "For Project Bhaskar's Artificial Intelligence Researcher: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-researcher-at-project-bhaskar-4481628699"
     },
     {
       "title": "Data Analytics Engineer",
@@ -4559,7 +4625,8 @@
         "bridge_roadmap": "For Ruby Labs's Data Analytics Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/151318-data-analytics-engineer"
     },
     {
       "title": "Data Scientist",
@@ -4618,7 +4685,8 @@
         "bridge_roadmap": "For Opvia.in's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-opvia-in-4480626100"
     },
     {
       "title": "Jr Cloud Engineer",
@@ -4677,7 +4745,8 @@
         "bridge_roadmap": "For Brillius Technologies's Jr Cloud Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/jr-cloud-engineer-at-brillius-technologies-4480050732"
     },
     {
       "title": "Analyst - Wholesale Credit Risk Quantitative Research",
@@ -4736,7 +4805,8 @@
         "bridge_roadmap": "For JPMorganChase's Analyst - Wholesale Credit Risk Quantitative Research: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/analyst-wholesale-credit-risk-quantitative-research-at-jpmorganchase-4482803839"
     },
     {
       "title": "Associate Data Scientist",
@@ -4795,7 +4865,8 @@
         "bridge_roadmap": "For Gartner's Associate Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425"
     },
     {
       "title": "Decision Analytics Associate Consultant - Commercial Analytics +AI engineering",
@@ -4854,7 +4925,8 @@
         "bridge_roadmap": "For ZS's Decision Analytics Associate Consultant - Commercial Analytics +AI engineering: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/decision-analytics-associate-consultant-commercial-analytics-%2Bai-engineering-at-zs-4480073594"
     },
     {
       "title": "Insights Analyst",
@@ -4913,7 +4985,8 @@
         "bridge_roadmap": "For Flexiple's Insights Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/insights-analyst-at-flexiple-4482808116"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+AI+Agent+%26+LLM+Engineer+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -4975,10 +5048,11 @@
         "bridge_roadmap": "For Sarvam AI's Junior AI Agent & LLM Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+AI+Agent+%26+LLM+Engineer+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.flipkartcareers.com",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Applied+Scientist+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Applied+Scientist+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-applied-scientist-jobs-in-india?experience=0",
       "company_url": "https://www.flipkartcareers.com",
@@ -5038,7 +5112,8 @@
         "bridge_roadmap": "For Flipkart's Associate Applied Scientist (GenAI & Recommendations): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Applied+Scientist+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5101,10 +5176,11 @@
         "bridge_roadmap": "For Swiggy's Data Scientist I (Analytics & Personalization - Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.meesho.io",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/decision-science-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.meesho.io",
@@ -5162,7 +5238,8 @@
         "bridge_roadmap": "For Meesho's Decision Science Analyst (Pricing & Logistics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Meesho&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5227,10 +5304,11 @@
         "bridge_roadmap": "For Delhivery's Operations Research Analyst - Network Optimization: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.observe.ai/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI+Agent+Engineer+Observe.AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Agent+Engineer+Observe.AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ai-agent-engineer-jobs-in-india?experience=0",
       "company_url": "https://www.observe.ai/careers",
@@ -5288,7 +5366,8 @@
         "bridge_roadmap": "For Observe.AI's AI Agent Engineer (Applied AI / LLM Systems): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Agent+Engineer+Observe.AI&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5349,10 +5428,11 @@
         "bridge_roadmap": "For Swiggy's Associate Product Manager (APM - 2025/2026 Batch): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.flipkartcareers.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Forecasting+%26+Inventory+Analyst+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Forecasting+%26+Inventory+Analyst+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/demand-forecasting-inventory-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.flipkartcareers.com/",
@@ -5415,7 +5495,8 @@
         "bridge_roadmap": "For Flipkart's Demand Forecasting & Inventory Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Forecasting+%26+Inventory+Analyst+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://careers.microsoft.com/v2/global/en/home.html",
@@ -5477,7 +5558,8 @@
         "bridge_roadmap": "For Microsoft's AI / Applied ML Research Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://careers.microsoft.com/v2/global/en/home.html"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5539,7 +5621,8 @@
         "bridge_roadmap": "For Flipkart's Applied Scientist Intern (GenAI & Recommendations): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Graduate Apprentice Trainee - Data Science",
@@ -5598,10 +5681,11 @@
         "bridge_roadmap": "For Volvo Group's Graduate Apprentice Trainee - Data Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/graduate-apprentice-trainee-data-science-at-volvo-group-4482710530"
     },
     {
-      "url": "https://www.mu-sigma.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Mu+Sigma&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Mu+Sigma&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/fresher-data-scientist-jobs-in-india?experience=0",
       "company_url": "https://www.mu-sigma.com/careers",
@@ -5661,10 +5745,11 @@
         "bridge_roadmap": "For Mu Sigma's Fresher Data Scientist (0-1 Yrs): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Mu+Sigma&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://fractal.ai/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Fractal+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Fractal+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/decision-science-analyst-jobs-in-india?experience=0",
       "company_url": "https://fractal.ai/careers/",
@@ -5724,7 +5809,8 @@
         "bridge_roadmap": "For Fractal Analytics's Decision Science Analyst (Campus / Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Fractal+Analytics&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://stripe.com/jobs/search?locations=India",
@@ -5785,7 +5871,8 @@
         "bridge_roadmap": "For Stripe's Fraud Operations Associate SDC (Risk Analytics & Fraud Assessment): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://stripe.com/jobs/search?locations=India"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+BizOps+Analyst+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5847,7 +5934,8 @@
         "bridge_roadmap": "For Razorpay's Strategy & BizOps Analyst (Founder's Office): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+BizOps+Analyst+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5908,7 +5996,8 @@
         "bridge_roadmap": "For Groww's Associate Product Manager (APM - Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Groww&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -5971,7 +6060,8 @@
         "bridge_roadmap": "For PhonePe's Fresher Data Scientist (Experimentation & Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -6034,10 +6124,11 @@
         "bridge_roadmap": "For CRED's Associate Decision Scientist (Risk & Growth): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+CRED&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.delhivery.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Network+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Network+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/operations-research-network-optimization-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.delhivery.com/careers/",
@@ -6100,10 +6191,11 @@
         "bridge_roadmap": "For Delhivery's Operations Research & Network Optimization Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Network+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.jio.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/applied-machine-learning-engineer-jobs-in-india?experience=0",
       "company_url": "https://careers.jio.com/",
@@ -6164,10 +6256,11 @@
         "bridge_roadmap": "For Jio AI COE's Applied Machine Learning Engineer - Fresher: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.latentview.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Engineer+%2F+ETL+Trainee+LatentView+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Engineer+%2F+ETL+Trainee+LatentView+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/junior-data-engineer-etl-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.latentview.com/careers/",
@@ -6228,7 +6321,8 @@
         "bridge_roadmap": "For LatentView Analytics's Junior Data Engineer / ETL Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Data+Engineer+%2F+ETL+Trainee+LatentView+Analytics&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Machine Learning Intern",
@@ -6289,10 +6383,11 @@
         "bridge_roadmap": "For Unified Mentor Private Limited's Machine Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-unified-mentor-private-limited-4481380131"
     },
     {
-      "url": "https://www.thoughtworks.com/en-in/careers/jobs",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Software+%26+Procurement+Analyst+Intern+Thoughtworks&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Software+%26+Procurement+Analyst+Intern+Thoughtworks&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/software-procurement-analyst-intern-jobs-in-india?experience=0",
       "company_url": "https://www.thoughtworks.com/en-in/careers/jobs",
@@ -6352,7 +6447,8 @@
         "bridge_roadmap": "For Thoughtworks's Software & Procurement Analyst Intern (Operations Optimization): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Software+%26+Procurement+Analyst+Intern+Thoughtworks&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -6414,10 +6510,11 @@
         "bridge_roadmap": "For Meesho's Fresher Data Scientist (Marketplace & Pricing): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+Meesho&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.walmart.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+Walmart+Global+Tech&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+Walmart+Global+Tech&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-data-scientist-jobs-in-india?experience=0",
       "company_url": "https://careers.walmart.com/",
@@ -6476,10 +6573,11 @@
         "bridge_roadmap": "For Walmart Global Tech's Associate Data Scientist (Early Career): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+Walmart+Global+Tech&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.exlservice.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Quantitative+Decision+Analyst+-+Trainee+EXL+Service&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Quantitative+Decision+Analyst+-+Trainee+EXL+Service&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/quantitative-decision-analyst-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.exlservice.com/careers",
@@ -6538,10 +6636,11 @@
         "bridge_roadmap": "For EXL Service's Quantitative Decision Analyst - Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Quantitative+Decision+Analyst+-+Trainee+EXL+Service&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://fivetran.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Operations+%26+Systems+Analyst+Fivetran&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Operations+%26+Systems+Analyst+Fivetran&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-operations-systems-analyst-jobs-in-india?experience=0",
       "company_url": "https://fivetran.com/careers",
@@ -6599,7 +6698,8 @@
         "bridge_roadmap": "For Fivetran's Data Operations & Systems Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Operations+%26+Systems+Analyst+Fivetran&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://about.gitlab.com/jobs/all-jobs/",
@@ -6661,7 +6761,8 @@
         "bridge_roadmap": "For GitLab's Benefits Analyst (Quantitative & Decision Analyst): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://about.gitlab.com/jobs/all-jobs/"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+Forecasting+Analyst+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -6727,7 +6828,8 @@
         "bridge_roadmap": "For Zepto's Time Series Forecasting Analyst (Early Career): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+Forecasting+Analyst+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -6792,10 +6894,11 @@
         "bridge_roadmap": "For Delhivery's Operations Research & Optimization Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+%26+Optimization+Trainee+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.elastic.co/about/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=UX+%26+Systems+Engineer+Elastic&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=UX+%26+Systems+Engineer+Elastic&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ux-systems-engineer-jobs-in-india?experience=0",
       "company_url": "https://www.elastic.co/about/careers",
@@ -6854,10 +6957,11 @@
         "bridge_roadmap": "For Elastic's UX & Systems Engineer (AI Search / Interface Systems): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=UX+%26+Systems+Engineer+Elastic&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://blinkit.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Planning+%26+Time+Series+Analyst+Blinkit&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Planning+%26+Time+Series+Analyst+Blinkit&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/demand-planning-time-series-analyst-jobs-in-india?experience=0",
       "company_url": "https://blinkit.com/careers",
@@ -6918,7 +7022,8 @@
         "bridge_roadmap": "For Blinkit's Demand Planning & Time Series Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Planning+%26+Time+Series+Analyst+Blinkit&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Optimization+%26+Operations+Research+Trainee+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -6982,10 +7087,11 @@
         "bridge_roadmap": "For InMobi's Optimization & Operations Research Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Optimization+%26+Operations+Research+Trainee+InMobi&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.adobe.com/careers.html",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+%26+Computer+Vision+Intern+Adobe&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+%26+Computer+Vision+Intern+Adobe&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/applied-ml-computer-vision-intern-jobs-in-india?experience=0",
       "company_url": "https://www.adobe.com/careers.html",
@@ -7044,10 +7150,11 @@
         "bridge_roadmap": "For Adobe's Applied ML & Computer Vision Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+%26+Computer+Vision+Intern+Adobe&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://groww.in/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Video+Editor+%26+Media+Intern+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Video+Editor+%26+Media+Intern+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/video-editor-media-intern-jobs-in-india?experience=0",
       "company_url": "https://groww.in/careers",
@@ -7103,7 +7210,8 @@
         "bridge_roadmap": "For Groww's Video Editor & Media Intern (Product Telemetry & User Growth): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Video+Editor+%26+Media+Intern+Groww&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://stripe.com/jobs/search?locations=India",
@@ -7162,7 +7270,8 @@
         "bridge_roadmap": "For Stripe's Operations Associate, Apprenticeship (Early Career): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://stripe.com/jobs/search?locations=India"
     },
     {
       "title": "Industry Consulting Snr. Consultant",
@@ -7221,7 +7330,8 @@
         "bridge_roadmap": "For NTT DATA North America's Industry Consulting Snr. Consultant: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/industry-consulting-snr-consultant-at-ntt-data-north-america-4482742771"
     },
     {
       "title": "Service Delivery Engineer III",
@@ -7280,7 +7390,8 @@
         "bridge_roadmap": "For Sabre's Service Delivery Engineer III: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/service-delivery-engineer-iii-at-sabre-4463825819"
     },
     {
       "title": "I&F Decision Sci Practitioner Specialist",
@@ -7339,10 +7450,11 @@
         "bridge_roadmap": "For Accenture in India's I&F Decision Sci Practitioner Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/i-f-decision-sci-practitioner-specialist-at-accenture-in-india-4482704244"
     },
     {
-      "url": "https://corporate.target.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Target+India&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Target+India&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
       "company_url": "https://corporate.target.com/careers",
@@ -7400,10 +7512,11 @@
         "bridge_roadmap": "For Target India's Data Scientist - Fresher / Campus: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Target+India&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://cred.club/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
       "company_url": "https://cred.club/careers",
@@ -7461,7 +7574,8 @@
         "bridge_roadmap": "For CRED's Associate Product Manager (Growth & User Journeys): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+CRED&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://stripe.com/jobs/search?locations=India",
@@ -7522,10 +7636,11 @@
         "bridge_roadmap": "For Stripe's Verifications Operations Associate (Compliance & User Operations): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://stripe.com/jobs/search?locations=India"
     },
     {
-      "url": "https://www.shadowfax.in/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Optimization+Analyst+Shadowfax&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Optimization+Analyst+Shadowfax&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/supply-chain-optimization-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.shadowfax.in/careers",
@@ -7584,10 +7699,11 @@
         "bridge_roadmap": "For Shadowfax's Supply Chain Optimization Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Optimization+Analyst+Shadowfax&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.tigeranalytics.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Trainee+Tiger+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Trainee+Tiger+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/decision-scientist-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.tigeranalytics.com/careers/",
@@ -7647,10 +7763,11 @@
         "bridge_roadmap": "For Tiger Analytics's Decision Scientist - Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Trainee+Tiger+Analytics&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.hul.co.in/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Analytics+%26+Forecasting+Trainee+Unilever+India+%28HUL%29&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Analytics+%26+Forecasting+Trainee+Unilever+India+%28HUL%29&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/supply-chain-analytics-forecasting-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.hul.co.in/careers/",
@@ -7710,10 +7827,11 @@
         "bridge_roadmap": "For Unilever India (HUL)'s Supply Chain Analytics & Forecasting Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Analytics+%26+Forecasting+Trainee+Unilever+India+%28HUL%29&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.jio.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/machine-learning-engineer-jobs-in-india?experience=0",
       "company_url": "https://careers.jio.com/",
@@ -7774,7 +7892,8 @@
         "bridge_roadmap": "For Jio AI COE's Machine Learning Engineer - Fresher / New Grad: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Jio+AI+COE&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+Research+Intern+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -7836,10 +7955,11 @@
         "bridge_roadmap": "For Sarvam AI's Applied ML Research Intern (LLMs & Vision): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+ML+Research+Intern+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.sarvam.ai/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=GenAI+%26+Speech+LLM+Research+Trainee+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=GenAI+%26+Speech+LLM+Research+Trainee+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/genai-speech-llm-research-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.sarvam.ai/",
@@ -7898,7 +8018,8 @@
         "bridge_roadmap": "For Sarvam AI's GenAI & Speech LLM Research Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=GenAI+%26+Speech+LLM+Research+Trainee+Sarvam+AI&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -7961,10 +8082,11 @@
         "bridge_roadmap": "For Postman's Junior Machine Learning Engineer (MLOps): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Postman&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.mongodb.com/company/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Recruiter+MongoDB&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Recruiter+MongoDB&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-recruiter-jobs-in-india?experience=0",
       "company_url": "https://www.mongodb.com/company/careers",
@@ -8020,7 +8142,8 @@
         "bridge_roadmap": "For MongoDB's Associate Recruiter (Talent Operations & Sourcing): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Recruiter+MongoDB&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Research Scientist III, Last Mile Science",
@@ -8079,7 +8202,8 @@
         "bridge_roadmap": "For Amazon's Research Scientist III, Last Mile Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-4482742283"
     },
     {
       "title": "Jr. Associate (Product)",
@@ -8138,7 +8262,8 @@
         "bridge_roadmap": "For LS Digital Group's Jr. Associate (Product): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/jr-associate-product-at-ls-digital-group-4480033862"
     },
     {
       "title": "Machine Learning Intern",
@@ -8199,7 +8324,8 @@
         "bridge_roadmap": "For Dexter's Tech's Machine Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4482497170"
     },
     {
       "title": "Global Credit Risk Data Scientist",
@@ -8258,7 +8384,8 @@
         "bridge_roadmap": "For CNH's Global Credit Risk Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/global-credit-risk-data-scientist-at-cnh-4482473806"
     },
     {
       "title": "Engr II-Data Science",
@@ -8317,10 +8444,11 @@
         "bridge_roadmap": "For Verizon's Engr II-Data Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/engr-ii-data-science-at-verizon-4482494031"
     },
     {
-      "url": "https://www.tredence.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Tredence&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Tredence&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/decision-science-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.tredence.com/careers",
@@ -8379,10 +8507,11 @@
         "bridge_roadmap": "For Tredence's Decision Science Analyst (Campus): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Science+Analyst+Tredence&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.itcinfotech.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+%26+Predictive+Analytics+Trainee+ITC+Infotech&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+%26+Predictive+Analytics+Trainee+ITC+Infotech&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/time-series-predictive-analytics-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.itcinfotech.com/careers/",
@@ -8444,7 +8573,8 @@
         "bridge_roadmap": "For ITC Infotech's Time Series & Predictive Analytics Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Time+Series+%26+Predictive+Analytics+Trainee+ITC+Infotech&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://stripe.com/jobs/search?locations=India",
@@ -8506,10 +8636,11 @@
         "bridge_roadmap": "For Stripe's Software Engineer Intern - Data Platform: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://stripe.com/jobs/search?locations=India"
     },
     {
-      "url": "https://www.zomato.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+-+Dining+%26+Delivery+Telemetry+Zomato&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+-+Dining+%26+Delivery+Telemetry+Zomato&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/product-analyst-dining-delivery-telemetry-jobs-in-india?experience=0",
       "company_url": "https://www.zomato.com/careers",
@@ -8567,10 +8698,11 @@
         "bridge_roadmap": "For Zomato's Product Analyst - Dining & Delivery Telemetry: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+-+Dining+%26+Delivery+Telemetry+Zomato&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.postman.com/company/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Intern+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Intern+Postman&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/machine-learning-engineer-intern-jobs-in-india?experience=0",
       "company_url": "https://www.postman.com/company/careers/",
@@ -8629,10 +8761,11 @@
         "bridge_roadmap": "For Postman's Machine Learning Engineer Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Intern+Postman&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.inmobi.com/company/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Creative+%26+Communications%2C+People+Team+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Creative+%26+Communications%2C+People+Team+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/intern-creative-communications-people-team-jobs-in-india?experience=0",
       "company_url": "https://www.inmobi.com/company/careers/",
@@ -8691,10 +8824,11 @@
         "bridge_roadmap": "For InMobi's Intern - Creative & Communications, People Team (Talent Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Creative+%26+Communications%2C+People+Team+InMobi&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.google.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Student+Researcher+%2F+AI+Research+Intern+Google&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Student+Researcher+%2F+AI+Research+Intern+Google&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/student-researcher-ai-research-intern-jobs-in-india?experience=0",
       "company_url": "https://careers.google.com/",
@@ -8754,10 +8888,11 @@
         "bridge_roadmap": "For Google's Student Researcher / AI Research Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Student+Researcher+%2F+AI+Research+Intern+Google&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://porter.in/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Fleet+Routing+%26+Operations+Research+Trainee+Porter&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Fleet+Routing+%26+Operations+Research+Trainee+Porter&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/fleet-routing-operations-research-trainee-jobs-in-india?experience=0",
       "company_url": "https://porter.in/careers",
@@ -8817,7 +8952,8 @@
         "bridge_roadmap": "For Porter's Fleet Routing & Operations Research Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Fleet+Routing+%26+Operations+Research+Trainee+Porter&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "AI Trainer - Video Annotation",
@@ -8880,7 +9016,8 @@
         "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-trainer-video-annotation-2091161"
     },
     {
       "title": "Transport Modeler/ Economist/ Planner",
@@ -8939,7 +9076,8 @@
         "bridge_roadmap": "For Sweco's Transport Modeler/ Economist/ Planner: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/transport-modeler-economist-planner-at-sweco-4469384276"
     },
     {
       "title": "Applied Scientist II, Last Mile",
@@ -8998,7 +9136,8 @@
         "bridge_roadmap": "For Amazon's Applied Scientist II, Last Mile: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-last-mile-at-amazon-4455779868"
     },
     {
       "title": "Business Research Analyst - II, RBS",
@@ -9057,7 +9196,8 @@
         "bridge_roadmap": "For Amazon's Business Research Analyst - II, RBS: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/business-research-analyst-ii-rbs-at-amazon-4455797223"
     },
     {
       "title": "Data Science Intern",
@@ -9116,7 +9256,8 @@
         "bridge_roadmap": "For Vortenza Systems's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4482478589"
     },
     {
       "title": "Data Science Intern",
@@ -9175,7 +9316,8 @@
         "bridge_roadmap": "For Dexter's Tech's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-dexter-s-tech-4482482188"
     },
     {
       "title": "Intern Bachelors AI Eng",
@@ -9234,10 +9376,11 @@
         "bridge_roadmap": "For Honeywell Technologies's Intern Bachelors AI Eng: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/intern-bachelors-ai-eng-at-honeywell-technologies-4482477402"
     },
     {
-      "url": "https://www.meesho.io/jobs",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-scientist-i-jobs-in-india?experience=0",
       "company_url": "https://www.meesho.io/jobs",
@@ -9297,10 +9440,11 @@
         "bridge_roadmap": "For Meesho's Data Scientist I (Catalog & Search Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+Meesho&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.flipkartcareers.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Network+Capacity+%26+OR+Analyst+Flipkart+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Network+Capacity+%26+OR+Analyst+Flipkart+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/network-capacity-or-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.flipkartcareers.com/",
@@ -9358,10 +9502,11 @@
         "bridge_roadmap": "For Flipkart Logistics's Network Capacity & OR Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Network+Capacity+%26+OR+Analyst+Flipkart+Logistics&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.mckinsey.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Decision+Analyst+McKinsey+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Decision+Analyst+McKinsey+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/junior-decision-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.mckinsey.com/careers",
@@ -9419,10 +9564,11 @@
         "bridge_roadmap": "For McKinsey & Company's Junior Decision Analyst (QuantumBlack): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Decision+Analyst+McKinsey+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.relianceretail.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Sensing+%26+Forecasting+Associate+Reliance+Retail&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Sensing+%26+Forecasting+Associate+Reliance+Retail&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/demand-sensing-forecasting-associate-jobs-in-india?experience=0",
       "company_url": "https://www.relianceretail.com/careers",
@@ -9480,10 +9626,11 @@
         "bridge_roadmap": "For Reliance Retail's Demand Sensing & Forecasting Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Demand+Sensing+%26+Forecasting+Associate+Reliance+Retail&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.rapido.bike/Careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+City+Operations+Associate+Rapido&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+City+Operations+Associate+Rapido&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/strategy-city-operations-associate-jobs-in-india?experience=0",
       "company_url": "https://www.rapido.bike/Careers",
@@ -9541,10 +9688,11 @@
         "bridge_roadmap": "For Rapido's Strategy & City Operations Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Strategy+%26+City+Operations+Associate+Rapido&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://groww.in/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+-+Content+%26+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+-+Content+%26+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-content-analytics-jobs-in-india?experience=0",
       "company_url": "https://groww.in/careers",
@@ -9606,10 +9754,11 @@
         "bridge_roadmap": "For Groww's Associate - Content & Analytics (Data Transformation): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+-+Content+%26+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.makemytrip.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+MakeMyTrip&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+MakeMyTrip&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india?experience=0",
       "company_url": "https://careers.makemytrip.com/",
@@ -9668,10 +9817,11 @@
         "bridge_roadmap": "For MakeMyTrip's Associate Product Manager (Travel Discovery): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+MakeMyTrip&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.amazon.jobs/en/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Amazon&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Amazon&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/applied-scientist-intern-jobs-in-india?experience=0",
       "company_url": "https://www.amazon.jobs/en/",
@@ -9732,10 +9882,11 @@
         "bridge_roadmap": "For Amazon's Applied Scientist Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+Scientist+Intern+Amazon&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.sprinklr.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Platform+Engineer+Sprinklr&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Platform+Engineer+Sprinklr&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ai-ml-platform-engineer-jobs-in-india?experience=0",
       "company_url": "https://www.sprinklr.com/careers/",
@@ -9791,10 +9942,11 @@
         "bridge_roadmap": "For Sprinklr's AI/ML Platform Engineer - Fresher: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Platform+Engineer+Sprinklr&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.pypl.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Risk+%26+Fraud+Data+Scientist+PayPal&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Risk+%26+Fraud+Data+Scientist+PayPal&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/risk-fraud-data-scientist-jobs-in-india?experience=0",
       "company_url": "https://careers.pypl.com/",
@@ -9852,10 +10004,11 @@
         "bridge_roadmap": "For PayPal's Risk & Fraud Data Scientist (Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Risk+%26+Fraud+Data+Scientist+PayPal&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.bain.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Advanced+Analytics+Associate+Bain+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Advanced+Analytics+Associate+Bain+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/advanced-analytics-associate-jobs-in-india?experience=0",
       "company_url": "https://www.bain.com/careers/",
@@ -9913,10 +10066,11 @@
         "bridge_roadmap": "For Bain & Company's Advanced Analytics Associate (BCN): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Advanced+Analytics+Associate+Bain+%26+Company&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.dreamsports.group/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product+Telemetry+%26+Gameplay+Analytics+Trainee+Dream11&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Telemetry+%26+Gameplay+Analytics+Trainee+Dream11&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/product-telemetry-gameplay-analytics-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.dreamsports.group/careers",
@@ -9974,10 +10128,11 @@
         "bridge_roadmap": "For Dream11's Product Telemetry & Gameplay Analytics Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Telemetry+%26+Gameplay+Analytics+Trainee+Dream11&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.spinny.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Growth+Strategy+%26+Business+Operations+Trainee+Spinny&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Growth+Strategy+%26+Business+Operations+Trainee+Spinny&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/growth-strategy-business-operations-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.spinny.com/careers/",
@@ -10035,10 +10190,11 @@
         "bridge_roadmap": "For Spinny's Growth Strategy & Business Operations Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Growth+Strategy+%26+Business+Operations+Trainee+Spinny&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.amazon.jobs/en/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Transportation+Optimization+Analyst+Amazon+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Transportation+Optimization+Analyst+Amazon+Logistics&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/transportation-optimization-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.amazon.jobs/en/",
@@ -10097,10 +10253,11 @@
         "bridge_roadmap": "For Amazon Logistics's Transportation Optimization Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Transportation+Optimization+Analyst+Amazon+Logistics&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.snowflake.com/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Intern+Snowflake&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Intern+Snowflake&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-engineering-intern-jobs-in-india?experience=0",
       "company_url": "https://careers.snowflake.com/",
@@ -10160,10 +10317,11 @@
         "bridge_roadmap": "For Snowflake's Data Engineering Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Intern+Snowflake&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.browserstack.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=ML+Infrastructure+Engineer+BrowserStack&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=ML+Infrastructure+Engineer+BrowserStack&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ml-infrastructure-engineer-jobs-in-india?experience=0",
       "company_url": "https://www.browserstack.com/careers",
@@ -10222,10 +10380,11 @@
         "bridge_roadmap": "For BrowserStack's ML Infrastructure Engineer (Early Career): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=ML+Infrastructure+Engineer+BrowserStack&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.titancompany.in/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Retail+Demand+Forecasting+Analyst+Titan+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Retail+Demand+Forecasting+Analyst+Titan+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/retail-demand-forecasting-analyst-jobs-in-india?experience=0",
       "company_url": "https://www.titancompany.in/careers",
@@ -10286,10 +10445,11 @@
         "bridge_roadmap": "For Titan Company's Retail Demand Forecasting Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Retail+Demand+Forecasting+Analyst+Titan+Company&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=AI+Research+%26+Deep+Learning+Intern+NVIDIA&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Research+%26+Deep+Learning+Intern+NVIDIA&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ai-research-deep-learning-intern-jobs-in-india?experience=0",
       "company_url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
@@ -10349,7 +10509,8 @@
         "bridge_roadmap": "For NVIDIA's AI Research & Deep Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Research+%26+Deep+Learning+Intern+NVIDIA&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Analytics Analyst",
@@ -10408,7 +10569,8 @@
         "bridge_roadmap": "For Mondelēz International's Analytics Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/analytics-analyst-at-mondel%C4%93z-international-4482447973"
     },
     {
       "title": "Nasdaq Campus Program  - 2027",
@@ -10467,7 +10629,8 @@
         "bridge_roadmap": "For Nasdaq's Nasdaq Campus Program  - 2027: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/nasdaq-campus-program-2027-at-nasdaq-4482456678"
     },
     {
       "title": "Streamlit Developer / Jr. Data Scientist",
@@ -10526,10 +10689,11 @@
         "bridge_roadmap": "For D Square Consulting Services Pvt Ltd's Streamlit Developer / Jr. Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/streamlit-developer-jr-data-scientist-at-d-square-consulting-services-pvt-ltd-4481329113"
     },
     {
-      "url": "https://www.ugamsolutions.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+Ugam+%28A+Merkle+Company%29&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+Ugam+%28A+Merkle+Company%29&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-decision-scientist-jobs-in-india?experience=0",
       "company_url": "https://www.ugamsolutions.com/careers",
@@ -10588,10 +10752,11 @@
         "bridge_roadmap": "For Ugam (A Merkle Company)'s Associate Decision Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+Ugam+%28A+Merkle+Company%29&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.atherenergy.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=ML+Engineer+-+Battery+Intelligence+%26+Telemetry+Ather+Energy&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=ML+Engineer+-+Battery+Intelligence+%26+Telemetry+Ather+Energy&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ml-engineer-battery-intelligence-telemetry-jobs-in-india?experience=0",
       "company_url": "https://www.atherenergy.com/careers",
@@ -10649,10 +10814,11 @@
         "bridge_roadmap": "For Ather Energy's ML Engineer - Battery Intelligence & Telemetry: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=ML+Engineer+-+Battery+Intelligence+%26+Telemetry+Ather+Energy&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://careers.confluent.io/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Streaming+Data+Platform+Trainee+Confluent&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Streaming+Data+Platform+Trainee+Confluent&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/streaming-data-platform-trainee-jobs-in-india?experience=0",
       "company_url": "https://careers.confluent.io/",
@@ -10710,10 +10876,11 @@
         "bridge_roadmap": "For Confluent's Streaming Data Platform Trainee (Kafka/Flink): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Streaming+Data+Platform+Trainee+Confluent&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.urbancompany.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Product+Operations+%26+User+Analytics+Intern+Urban+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Operations+%26+User+Analytics+Intern+Urban+Company&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/product-operations-user-analytics-intern-jobs-in-india?experience=0",
       "company_url": "https://www.urbancompany.com/careers",
@@ -10771,10 +10938,11 @@
         "bridge_roadmap": "For Urban Company's Product Operations & User Analytics Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Operations+%26+User+Analytics+Intern+Urban+Company&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.cars24.com/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Business+Operations+%26+Analytics+Trainee+Cars24&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Business+Operations+%26+Analytics+Trainee+Cars24&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/business-operations-analytics-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.cars24.com/careers/",
@@ -10832,10 +11000,11 @@
         "bridge_roadmap": "For Cars24's Business Operations & Analytics Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Business+Operations+%26+Analytics+Trainee+Cars24&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.maersk.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Linear+Programming+%26+Network+Optimization+Trainee+Maersk+India&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Linear+Programming+%26+Network+Optimization+Trainee+Maersk+India&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/linear-programming-network-optimization-trainee-jobs-in-india?experience=0",
       "company_url": "https://www.maersk.com/careers",
@@ -10895,7 +11064,8 @@
         "bridge_roadmap": "For Maersk India's Linear Programming & Network Optimization Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Linear+Programming+%26+Network+Optimization+Trainee+Maersk+India&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Research Scientist II, Last Mile Science",
@@ -10954,7 +11124,8 @@
         "bridge_roadmap": "For Amazon's Research Scientist II, Last Mile Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/research-scientist-ii-last-mile-science-at-amazon-4455912044"
     },
     {
       "title": "Quant Research Analyst",
@@ -11013,7 +11184,8 @@
         "bridge_roadmap": "For Zepto's Quant Research Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/quant-research-analyst-at-zepto-4480002913"
     },
     {
       "title": "Data Engineer - ML",
@@ -11072,10 +11244,11 @@
         "bridge_roadmap": "For Scoutit's Data Engineer - ML: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-engineer-ml-at-scoutit-4481307813"
     },
     {
-      "url": "https://www.databricks.com/company/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=University+Grad+Associate+Solutions+Engineer+Databricks&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=University+Grad+Associate+Solutions+Engineer+Databricks&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/university-grad-associate-solutions-engineer-jobs-in-india?experience=0",
       "company_url": "https://www.databricks.com/company/careers",
@@ -11134,10 +11307,11 @@
         "bridge_roadmap": "For Databricks's University Grad Associate Solutions Engineer (Data/AI): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=University+Grad+Associate+Solutions+Engineer+Databricks&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.meesho.io/jobs",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Program+Management+%26+Fulfillment+Associate+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Program+Management+%26+Fulfillment+Associate+Meesho&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/program-management-fulfillment-associate-jobs-in-india?experience=0",
       "company_url": "https://www.meesho.io/jobs",
@@ -11196,10 +11370,11 @@
         "bridge_roadmap": "For Meesho's Program Management & Fulfillment Associate (Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Program+Management+%26+Fulfillment+Associate+Meesho&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://olaelectric.com/careers",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Vehicle+Telemetry+%26+Applied+ML+Engineer+Ola+Electric&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Vehicle+Telemetry+%26+Applied+ML+Engineer+Ola+Electric&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/vehicle-telemetry-applied-ml-engineer-jobs-in-india?experience=0",
       "company_url": "https://olaelectric.com/careers",
@@ -11259,7 +11434,8 @@
         "bridge_roadmap": "For Ola Electric's Vehicle Telemetry & Applied ML Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Vehicle+Telemetry+%26+Applied+ML+Engineer+Ola+Electric&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Data Science Internship",
@@ -11322,10 +11498,11 @@
         ],
         "bridge_roadmap": "For Zenotalent's Data Science Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1773591"
     },
     {
-      "url": "https://www.cloudera.com/about/careers.html",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineering+Intern+-+Big+Data+Platform+Cloudera&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineering+Intern+-+Big+Data+Platform+Cloudera&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/software-engineering-intern-big-data-platform-jobs-in-india?experience=0",
       "company_url": "https://www.cloudera.com/about/careers.html",
@@ -11383,10 +11560,11 @@
         "bridge_roadmap": "For Cloudera's Software Engineering Intern - Big Data Platform: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineering+Intern+-+Big+Data+Platform+Cloudera&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://hasura.io/careers/",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Applied+AI%2FML+Systems+Trainee+Hasura&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+AI%2FML+Systems+Trainee+Hasura&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/applied-ai-ml-systems-trainee-jobs-in-india?experience=0",
       "company_url": "https://hasura.io/careers/",
@@ -11445,7 +11623,8 @@
         "bridge_roadmap": "For Hasura's Applied AI/ML Systems Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Applied+AI%2FML+Systems+Trainee+Hasura&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "AI Engineer Internship",
@@ -11508,7 +11687,8 @@
         ],
         "bridge_roadmap": "For Trawel.in's AI Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1773097"
     },
     {
       "title": "AI Engineer",
@@ -11567,7 +11747,8 @@
         "bridge_roadmap": "For Jetbro's AI Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-jetbro-4481310828"
     },
     {
       "title": "AI Engineer",
@@ -11630,7 +11811,8 @@
         ],
         "bridge_roadmap": "For OATI's AI Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392"
     },
     {
       "title": "Data Analyst",
@@ -11693,7 +11875,8 @@
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580"
     },
     {
       "title": "Data Science Intern",
@@ -11756,7 +11939,8 @@
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245"
     },
     {
       "title": "Data Analyst (Fresher)",
@@ -11819,7 +12003,8 @@
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741"
     },
     {
       "title": "Data Analyst Internship",
@@ -11882,10 +12067,11 @@
         ],
         "bridge_roadmap": "For To-Let Globe's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1772806"
     },
     {
-      "url": "https://www.olakrutrim.com",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Krutrim+AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Krutrim+AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/junior-machine-learning-engineer-jobs-in-india?experience=0",
       "company_url": "https://www.olakrutrim.com",
@@ -11946,7 +12132,8 @@
         "bridge_roadmap": "For Krutrim AI's Junior Machine Learning Engineer (Speech AI): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Machine+Learning+Engineer+Krutrim+AI&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Intern+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12005,7 +12192,8 @@
         "bridge_roadmap": "For Zepto's Associate Product Manager Intern (APM Batch 2025/2026): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Intern+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "AI/ML Engineering Intern",
@@ -12068,7 +12256,8 @@
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-engineering-intern-at-daice-labs-4480759259"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Optimization+Engineer+Locus.sh&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12131,7 +12320,8 @@
         "bridge_roadmap": "For Locus.sh's Junior Optimization Engineer (Supply Chain & Routing): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Junior+Optimization+Engineer+Locus.sh&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Analyst+-+Risk+%26+Merchant+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12194,7 +12384,8 @@
         "bridge_roadmap": "For Razorpay's Data Science Analyst - Risk & Merchant Underwriting: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Analyst+-+Risk+%26+Merchant+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
       "title": "Data Scientist",
@@ -12257,7 +12448,8 @@
         ],
         "bridge_roadmap": "For TalentLo's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/jobs/1770765"
     },
     {
       "title": "Gen AI/ML/Data Science Internship",
@@ -12320,7 +12512,8 @@
         ],
         "bridge_roadmap": "For Deep Dive AI's Gen AI/ML/Data Science Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1729526"
     },
     {
       "title": "Data Analyst, Business Finance",
@@ -12383,7 +12576,8 @@
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-business-finance-at-razorpay-4481538796"
     },
     {
       "title": "Data Engineer Internship",
@@ -12446,7 +12640,8 @@
         ],
         "bridge_roadmap": "For Acumen Advisory Consulting LLC's Data Engineer Internship: Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
         "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1769787"
     },
     {
       "title": "Data Analyst Internship",
@@ -12509,7 +12704,8 @@
         ],
         "bridge_roadmap": "For Cornixe Edutech Pvt. Ltd.'s Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1772426"
     },
     {
       "title": "Data Analyst Internship",
@@ -12572,7 +12768,8 @@
         ],
         "bridge_roadmap": "For Skill Orbit's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1772369"
     },
     {
       "title": "AI Engineer Internship (Computer Vision)",
@@ -12635,7 +12832,8 @@
         ],
         "bridge_roadmap": "For Toplens AI Solutions Private Limited's AI Engineer Internship (Computer Vision): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1770906"
     },
     {
       "title": "Data Analyst Internship",
@@ -12698,7 +12896,8 @@
         ],
         "bridge_roadmap": "For Codeatrix's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1772058"
     },
     {
       "title": "Data Analyst Internship",
@@ -12761,7 +12960,8 @@
         ],
         "bridge_roadmap": "For Research Engine's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1771930"
     },
     {
       "title": "Data Scientist",
@@ -12822,7 +13022,8 @@
         ],
         "bridge_roadmap": "For Aditya Birla Capital's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-aditya-birla-capital-4463357550"
     },
     {
       "title": "Software Engineer, AI Coding Tasks",
@@ -12885,7 +13086,8 @@
       "job_publisher": null,
       "location_unverified": false,
       "deadline": null,
-      "end_date": null
+      "end_date": null,
+      "direct_job_url": "https://remotive.com/remote-jobs/software-development/software-engineer-ai-coding-tasks-2091158"
     },
     {
       "title": "Data Analyst",
@@ -12946,7 +13148,8 @@
         ],
         "bridge_roadmap": "For QBYSS's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-qbyss-4479677037"
     },
     {
       "title": "AI ML Engineer Internship",
@@ -13009,7 +13212,8 @@
         ],
         "bridge_roadmap": "For TalentCV's AI ML Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1771124"
     },
     {
       "title": "Data Analyst Internship",
@@ -13072,7 +13276,8 @@
         ],
         "bridge_roadmap": "For Zenotalent's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1770763"
     },
     {
       "title": "AI Engineer Internship",
@@ -13135,7 +13340,8 @@
         ],
         "bridge_roadmap": "For openjobs.ai's AI Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1769835"
     },
     {
       "title": "Product Analyst II",
@@ -13198,7 +13404,8 @@
         ],
         "bridge_roadmap": "For InMobi's Product Analyst II: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
         "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
+      },
+      "direct_job_url": "https://job-boards.greenhouse.io/inmobi/jobs/8181422"
     },
     {
       "title": "Data Scientist",
@@ -13261,7 +13468,8 @@
         ],
         "bridge_roadmap": "For Trent Limited's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/jobs/1714449"
     },
     {
       "title": "Data Analyst",
@@ -13324,7 +13532,8 @@
         ],
         "bridge_roadmap": "For Nova Technology's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/jobs/1769699"
     },
     {
       "title": "Agentic AI Engineer Internship (Product Intelligence and AI Evaluation)",
@@ -13389,7 +13598,8 @@
         ],
         "bridge_roadmap": "For VEYRA AI's Agentic AI Engineer Internship (Product Intelligence and AI Evaluation): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1767420"
     },
     {
       "title": "Data Science Internship",
@@ -13452,7 +13662,8 @@
         ],
         "bridge_roadmap": "For Vortizo AI's Data Science Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1768694"
     },
     {
       "title": "Product Research Specialist (W from Groww)",
@@ -13515,7 +13726,8 @@
         ],
         "bridge_roadmap": "For Groww's Product Research Specialist (W from Groww): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
         "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
+      },
+      "direct_job_url": "https://job-boards.eu.greenhouse.io/groww/jobs/4714061101"
     },
     {
       "title": "Data Science Internship",
@@ -13578,7 +13790,8 @@
         ],
         "bridge_roadmap": "For Codeatrix's Data Science Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      }
+      },
+      "direct_job_url": "https://unstop.com/internships/1765550"
     },
     {
       "title": "Product Management - Associate Product Manager - Travel.",
@@ -13641,7 +13854,8 @@
         ],
         "bridge_roadmap": "For Paytm's Product Management - Associate Product Manager - Travel.: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
         "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      }
+      },
+      "direct_job_url": "https://jobs.lever.co/paytm/cf1076c8-e8be-4fc4-8112-aa55051de742"
     }
   ],
   "stats": {
