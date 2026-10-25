@@ -531,10 +531,10 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-25T09:57:08Z",
+      "posted_at": "2026-10-25T11:58:27Z",
       "posted_at_source": "published_at",
-      "hours_ago": 0.12,
-      "relative_time": "7 minutes ago",
+      "hours_ago": 2.56,
+      "relative_time": "3 hours ago",
       "url": "https://unstop.com/internships/1775918",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Aalteon&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india?experience=0",
@@ -587,6 +587,198 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://unstop.com/internships/1775918"
     },
     {
+      "title": "Data Science Intern",
+      "company": "Devryxa",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-25T11:32:14Z",
+      "hours_ago": 3.0,
+      "relative_time": "3 hours ago",
+      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483380299",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483380299",
+      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483380299",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Science Intern at Devryxa in India. Listed on LinkedIn.",
+      "raw_description": "Data Science Intern at Devryxa in India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Devryxa's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "relative_time",
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483367319"
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Trent Limited",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-25T10:16:18Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 4.26,
+      "relative_time": "4 hours ago",
+      "url": "https://unstop.com/jobs/1714449",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Trent+Limited&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/jobs/1714449",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Scientist at Trent Limited in India. Active hiring opportunity on Unstop (Deadline: 2027-08-31).",
+      "raw_description": "Data Scientist at Trent Limited in India. Active hiring opportunity on Unstop (Deadline: 2027-08-31).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2027-08-31T12:36:00+05:30",
+      "end_date": "2027-08-31T12:36:00+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Trent Limited's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "direct_job_url": "https://unstop.com/jobs/1714449"
+    },
+    {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=PhonePe+Data+Analyst+Fraud+Risk&location=India&f_TPR=r604800",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
+      "company_url": "https://www.phonepe.com/careers/",
+      "title": "Data Analyst - Payments & Fraud Risk",
+      "company": "PhonePe",
+      "location": "Bengaluru, Karnataka",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-25T06:32:00Z",
+      "hours_ago": 8.0,
+      "relative_time": "8 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "phonepe.com/careers",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers.",
+      "raw_description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For PhonePe's Data Analyst - Payments & Fraud Risk: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2"
+    },
+    {
       "title": "AI Engineer Internship – Computer Vision & AI Automation",
       "company": "SG Technologies",
       "location": "India",
@@ -597,8 +789,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-25T06:25:52Z",
       "posted_at_source": "published_at",
-      "hours_ago": 3.64,
-      "relative_time": "4 hours ago",
+      "hours_ago": 8.1,
+      "relative_time": "8 hours ago",
       "url": "https://unstop.com/internships/1774620",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+%E2%80%93+Computer+Vision+%26+AI+Automation+SG+Technologies&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ai-engineer-internship-computer-vision-ai-automation-jobs-in-india?experience=0",
@@ -651,135 +843,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://unstop.com/internships/1774620"
     },
     {
-      "title": "Data Science Intern",
-      "company": "Devryxa",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-25T06:04:24Z",
-      "hours_ago": 4.0,
-      "relative_time": "4 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483367319",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483367319",
-      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483367319",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Science Intern at Devryxa in India. Listed on LinkedIn.",
-      "raw_description": "Data Science Intern at Devryxa in India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Devryxa's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "relative_time",
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4483367319"
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
-      "company_url": "https://www.phonepe.com/careers/",
-      "title": "Data Analyst - Payments & Fraud Risk",
-      "company": "PhonePe",
-      "location": "Bengaluru, Karnataka",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-25T02:04:10Z",
-      "hours_ago": 8.0,
-      "relative_time": "8 hours ago",
-      "source_type": "Official Company Portal",
-      "source_domain": "phonepe.com/careers",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers.",
-      "raw_description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For PhonePe's Data Analyst - Payments & Fraud Risk: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2"
-    },
-    {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Risk+Analytics+%26+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Razorpay+Data+Scientist+Risk+Analytics&location=India&f_TPR=r604800",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Risk+Analytics+%26+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-scientist-risk-analytics-underwriting-jobs-in-india?experience=0",
       "company_url": "https://razorpay.com/jobs/",
@@ -791,7 +855,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-25T00:34:10Z",
+      "posted_at": "2026-10-25T05:02:00Z",
       "hours_ago": 9.5,
       "relative_time": "9 hours ago",
       "source_type": "Official Company Portal",
@@ -843,7 +907,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Risk+Analytics+%26+Underwriting+Razorpay&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Swiggy+Data+Scientist+Machine+Learning&location=India&f_TPR=r604800",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?experience=0",
       "company_url": "https://careers.swiggy.com/",
@@ -855,7 +919,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-24T23:04:10Z",
+      "posted_at": "2026-10-25T03:32:00Z",
       "hours_ago": 11.0,
       "relative_time": "11 hours ago",
       "source_type": "Official Company Portal",
@@ -915,11 +979,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "🥉",
-      "posted_at": "2026-10-24T18:04:10Z",
+      "posted_at": "2026-10-24T22:32:00Z",
       "posted_at_source": "published_at",
       "hours_ago": 16.0,
       "relative_time": "16 hours ago",
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Freight+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Delhivery+Decision+Scientist+Optimization&location=India&f_TPR=r604800",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Freight+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/decision-scientist-freight-network-optimization-jobs-in-india?experience=0",
       "company_url": "https://www.delhivery.com/careers",
@@ -973,6 +1037,139 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Decision+Scientist+-+Freight+Network+Optimization+Delhivery&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Zepto+Operations+Research+Analyst&location=India&f_TPR=r604800",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/operations-research-analyst-micro-fulfillment-jobs-in-india?experience=0",
+      "company_url": "https://www.zeptonow.com/careers",
+      "title": "Operations Research Analyst - Micro-Fulfillment",
+      "company": "Zepto",
+      "location": "Bengaluru, Karnataka",
+      "score": 0.95,
+      "tier": 4,
+      "category": "OR / Optimization",
+      "priority": "Primary",
+      "badge": "🏅",
+      "posted_at": "2026-10-24T20:32:00Z",
+      "hours_ago": 18.0,
+      "relative_time": "18 hours ago",
+      "source_type": "Official Company Portal",
+      "source_domain": "zeptonow.com/careers",
+      "is_fresher": true,
+      "matched_skills": [
+        "operations_research",
+        "optimization"
+      ],
+      "missing_skills": [
+        "Vehicle Routing & Network Flow Formulations",
+        "Mixed Integer Linear Programming",
+        "Heuristic Algorithms & Metaheuristics"
+      ],
+      "description": "Operations Research Analyst at Zepto designing dark store inventory placement, order picker route planning, and 10-minute dispatch optimization. Direct on official Zepto Careers portal.",
+      "raw_description": "Operations Research Analyst at Zepto designing dark store inventory placement, order picker route planning, and 10-minute dispatch optimization. Direct on official Zepto Careers portal.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Vehicle Routing & Network Flow Formulations",
+            "impact": "High Impact",
+            "category": "Operations Research",
+            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
+          },
+          {
+            "skill": "Mixed Integer Linear Programming (MILP)",
+            "impact": "High Impact",
+            "category": "Mathematical Programming",
+            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
+          },
+          {
+            "skill": "Heuristic Algorithms & Metaheuristics",
+            "impact": "Medium Impact",
+            "category": "Algorithm Design",
+            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
+          }
+        ],
+        "bridge_roadmap": "For Zepto's Operations Research Analyst - Micro-Fulfillment: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
+        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
+      },
+      "posted_at_source": "published_at",
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
+    },
+    {
+      "title": "Healthcare Data Analyst",
+      "company": "Tata 1mg",
+      "location": "Gurugram, Haryana",
+      "score": 0.98,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-24T16:32:00Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 22.0,
+      "relative_time": "22 hours ago",
+      "url": "https://www.linkedin.com/jobs/search/?keywords=Tata+1mg+Healthcare+Data+Analyst&location=India&f_TPR=r604800",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/healthcare-data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.1mg.com/careers",
+      "source_type": "Official Company Portal",
+      "source_domain": "1mg.com/careers",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [
+        "forecasting"
+      ],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Healthcare Data Analyst at Tata 1mg analyzing e-pharmacy prescription fulfillment, lab test demand forecasting, and inventory turn velocity. Direct on Tata 1mg Careers portal.",
+      "raw_description": "Healthcare Data Analyst at Tata 1mg analyzing e-pharmacy prescription fulfillment, lab test demand forecasting, and inventory turn velocity. Direct on Tata 1mg Careers portal.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Tata 1mg's Healthcare Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2"
+    },
+    {
       "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/operations-research-analyst-micro-fulfillment-jobs-in-india?experience=0",
@@ -986,8 +1183,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-24T16:04:10Z",
-      "hours_ago": 18.0,
-      "relative_time": "18 hours ago",
+      "hours_ago": 22.46,
+      "relative_time": "22 hours ago",
       "source_type": "Official Company Portal",
       "source_domain": "zeptonow.com/careers",
       "is_fresher": true,
@@ -1050,8 +1247,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-24T15:32:36Z",
       "posted_at_source": "published_at",
-      "hours_ago": 18.53,
-      "relative_time": "19 hours ago",
+      "hours_ago": 22.99,
+      "relative_time": "23 hours ago",
       "url": "https://unstop.com/internships/1774132",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/ai-engineering-open-source-development-internship-jobs-in-india?experience=0",
@@ -1104,203 +1301,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://unstop.com/internships/1774132"
     },
     {
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/operations-research-analyst-micro-fulfillment-jobs-in-india?experience=0",
-      "company_url": "https://www.zeptonow.com/careers",
-      "title": "Operations Research Analyst - Micro-Fulfillment",
-      "company": "Zepto",
-      "location": "Bengaluru, Karnataka",
-      "score": 0.95,
-      "tier": 4,
-      "category": "OR / Optimization",
-      "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-10-24T13:03:32Z",
-      "hours_ago": 21.01,
-      "relative_time": "21 hours ago",
-      "source_type": "Official Company Portal",
-      "source_domain": "zeptonow.com/careers",
-      "is_fresher": true,
-      "matched_skills": [
-        "operations_research",
-        "optimization"
-      ],
-      "missing_skills": [
-        "Vehicle Routing & Network Flow Formulations",
-        "Mixed Integer Linear Programming",
-        "Heuristic Algorithms & Metaheuristics"
-      ],
-      "description": "Operations Research Analyst at Zepto designing dark store inventory placement, order picker route planning, and 10-minute dispatch optimization. Direct on official Zepto Careers portal.",
-      "raw_description": "Operations Research Analyst at Zepto designing dark store inventory placement, order picker route planning, and 10-minute dispatch optimization. Direct on official Zepto Careers portal.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Zepto's Operations Research Analyst - Micro-Fulfillment: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      },
-      "posted_at_source": "published_at",
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Operations+Research+Analyst+-+Micro-Fulfillment+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
-    },
-    {
-      "title": "Healthcare Data Analyst",
-      "company": "Tata 1mg",
-      "location": "Gurugram, Haryana",
-      "score": 0.98,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-24T12:04:10Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 22.0,
-      "relative_time": "22 hours ago",
-      "url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/healthcare-data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://www.1mg.com/careers",
-      "source_type": "Official Company Portal",
-      "source_domain": "1mg.com/careers",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [
-        "forecasting"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Healthcare Data Analyst at Tata 1mg analyzing e-pharmacy prescription fulfillment, lab test demand forecasting, and inventory turn velocity. Direct on Tata 1mg Careers portal.",
-      "raw_description": "Healthcare Data Analyst at Tata 1mg analyzing e-pharmacy prescription fulfillment, lab test demand forecasting, and inventory turn velocity. Direct on Tata 1mg Careers portal.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Tata 1mg's Healthcare Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Healthcare+Data+Analyst+Tata+1mg&location=India&f_TPR=r86400&f_E=1%2C2"
-    },
-    {
-      "title": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering)",
-      "company": "Moonshot Factory Inc.",
-      "location": "India",
-      "score": 0.85,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-24T11:12:40Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 22.86,
-      "relative_time": "23 hours ago",
-      "url": "https://unstop.com/internships/1769128",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Product+Reviewer%2FBeta-Testing+Internship+Moonshot+Factory+Inc.&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/ai-product-reviewer-beta-testing-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1769128",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering) at Moonshot Factory Inc. in India. Active hiring opportunity on Unstop (Deadline: 2026-11-11).",
-      "raw_description": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering) at Moonshot Factory Inc. in India. Active hiring opportunity on Unstop (Deadline: 2026-11-11).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-11T00:00:00+05:30",
-      "end_date": "2026-11-11T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Moonshot Factory Inc.'s AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "direct_job_url": "https://unstop.com/internships/1769128"
-    },
-    {
       "title": "Applied Scientist II, Detail Page",
       "company": "Amazon Science",
       "location": "Bengaluru, Karnataka, India",
@@ -1309,10 +1309,10 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
-      "posted_at": "2026-10-24T11:04:24Z",
+      "posted_at": "2026-10-24T14:32:14Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 23.0,
-      "relative_time": "23 hours ago",
+      "hours_ago": 24.0,
+      "relative_time": "24 hours ago",
       "url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-detail-page-at-amazon-science-4481042348",
       "linkedin_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-detail-page-at-amazon-science-4481042348",
       "naukri_url": "https://www.naukri.com/applied-scientist-ii-detail-page-jobs-in-india?experience=0",
@@ -1373,7 +1373,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
-      "posted_at": "2026-10-24T10:04:24Z",
+      "posted_at": "2026-10-24T14:32:14Z",
       "posted_at_source": "relative_time",
       "hours_ago": 24.0,
       "relative_time": "24 hours ago",
@@ -1437,7 +1437,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
-      "posted_at": "2026-10-24T10:04:24Z",
+      "posted_at": "2026-10-24T14:32:14Z",
       "posted_at_source": "relative_time",
       "hours_ago": 24.0,
       "relative_time": "24 hours ago",
@@ -1493,132 +1493,68 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-buyer-risk-prevention-brp-at-amazon-business-4474550513"
     },
     {
-      "title": "Junior Computer Vision Researcher",
-      "company": "Auric AI Labs",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.93,
-      "tier": 1,
-      "category": "Applied Scientist / ML Research",
-      "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-24T10:04:24Z",
-      "hours_ago": 24.0,
-      "relative_time": "24 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765",
-      "naukri_url": "https://www.naukri.com/junior-computer-vision-researcher-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
+      "title": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering)",
+      "company": "Moonshot Factory Inc.",
+      "location": "India",
+      "score": 0.85,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-10-24T11:12:40Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 27.32,
+      "relative_time": "1 day ago",
+      "url": "https://unstop.com/internships/1769128",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Product+Reviewer%2FBeta-Testing+Internship+Moonshot+Factory+Inc.&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ai-product-reviewer-beta-testing-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1769128",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [
-        "PyTorch Distributed Training & PEFT",
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
+        "FastAPI REST Serving & Latency Optimization",
+        "Docker Containerization & Multi-Stage Builds",
+        "Model Registry & Drift Monitoring"
       ],
-      "description": "Junior Computer Vision Researcher at Auric AI Labs in Bengaluru, Karnataka, India. Listed on LinkedIn.",
-      "raw_description": "Junior Computer Vision Researcher at Auric AI Labs in Bengaluru, Karnataka, India. Listed on LinkedIn.",
+      "description": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering) at Moonshot Factory Inc. in India. Active hiring opportunity on Unstop (Deadline: 2026-11-11).",
+      "raw_description": "AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering) at Moonshot Factory Inc. in India. Active hiring opportunity on Unstop (Deadline: 2026-11-11).",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
       "post_author": null,
+      "deadline": "2026-11-11T00:00:00+05:30",
+      "end_date": "2026-11-11T00:00:00+05:30",
       "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
+        "fit_percentage": "85% Core Match",
+        "gap_percentage": "15% Skill Gap",
         "gaps": [
           {
-            "skill": "PyTorch Distributed Training & PEFT",
+            "skill": "FastAPI REST Serving & Latency Optimization",
             "impact": "High Impact",
-            "category": "Deep Learning",
-            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
           },
           {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
             "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
           }
         ],
-        "bridge_roadmap": "For Auric AI Labs's Junior Computer Vision Researcher: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
+        "bridge_roadmap": "For Moonshot Factory Inc.'s AI Product Reviewer/Beta-Testing Internship (Full-Stack / AI Engineering): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
       },
-      "posted_at_source": "relative_time",
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765"
-    },
-    {
-      "title": "Junior Data Scientist",
-      "company": "Arcadia",
-      "location": "Chennai, Tamil Nadu, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-24T10:04:24Z",
-      "hours_ago": 24.0,
-      "relative_time": "24 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
-      "naukri_url": "https://www.naukri.com/junior-data-scientist-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Junior Data Scientist at Arcadia in Chennai, Tamil Nadu, India. Listed on LinkedIn.",
-      "raw_description": "Junior Data Scientist at Arcadia in Chennai, Tamil Nadu, India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Arcadia's Junior Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "relative_time",
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458"
+      "direct_job_url": "https://unstop.com/internships/1769128"
     },
     {
       "title": "Associate Data Scientist",
@@ -1631,7 +1567,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-24T04:22:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 29.7,
+      "hours_ago": 34.16,
       "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-optum-india-4483193673",
       "linkedin_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-optum-india-4483193673",
@@ -1693,7 +1629,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-24T03:45:31Z",
       "posted_at_source": "published_at",
-      "hours_ago": 30.31,
+      "hours_ago": 34.77,
       "relative_time": "1 day ago",
       "url": "https://jobicy.com/jobs/149523-cloud-field-engineer",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Cloud+Field+Engineer+Canonical&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -1759,7 +1695,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-24T03:30:21Z",
       "posted_at_source": "published_at",
-      "hours_ago": 30.56,
+      "hours_ago": 35.03,
       "relative_time": "1 day ago",
       "url": "https://unstop.com/internships/1774237",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Vayanai&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -1822,7 +1758,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 21:23",
-      "hours_ago": 36.69,
+      "hours_ago": 41.15,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-supply-chain-analyst-at-accenture-in-india-4455950495",
       "linkedin_url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-supply-chain-analyst-at-accenture-in-india-4455950495",
@@ -1870,7 +1806,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 21:23",
-      "hours_ago": 36.69,
+      "hours_ago": 41.15,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/%23acn-i-p-gn-song-ai-data-commerce-decision-science-%C2%A0-consultant-at-accenture-in-india-4476314312",
       "linkedin_url": "https://in.linkedin.com/jobs/view/%23acn-i-p-gn-song-ai-data-commerce-decision-science-%C2%A0-consultant-at-accenture-in-india-4476314312",
@@ -1930,7 +1866,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 21:23",
-      "hours_ago": 36.69,
+      "hours_ago": 41.15,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/aadc-industry-function-ai-data-fs-insurance-associate-at-accenture-in-india-4455951428",
       "linkedin_url": "https://in.linkedin.com/jobs/view/aadc-industry-function-ai-data-fs-insurance-associate-at-accenture-in-india-4455951428",
@@ -1990,7 +1926,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 21:23",
-      "hours_ago": 36.69,
+      "hours_ago": 41.15,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-hi-tech-data-science-associate-2-at-accenture-in-india-4475876202",
       "linkedin_url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-hi-tech-data-science-associate-2-at-accenture-in-india-4475876202",
@@ -2038,7 +1974,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 21:23",
-      "hours_ago": 36.69,
+      "hours_ago": 41.15,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-hi-tech-data-science-associate-at-accenture-in-india-4475869358",
       "linkedin_url": "https://in.linkedin.com/jobs/view/s-c-global-network-ai-hi-tech-data-science-associate-at-accenture-in-india-4475869358",
@@ -2086,7 +2022,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 20:23",
-      "hours_ago": 37.69,
+      "hours_ago": 42.15,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/risk-analyst-buyer-risk-prevention-payment-risk-mining-at-amazon-4455913460",
       "linkedin_url": "https://in.linkedin.com/jobs/view/risk-analyst-buyer-risk-prevention-payment-risk-mining-at-amazon-4455913460",
@@ -2137,1182 +2073,32 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://in.linkedin.com/jobs/view/risk-analyst-buyer-risk-prevention-payment-risk-mining-at-amazon-4455913460"
     },
     {
-      "title": "Associate Consultant - Presales Solutioning-Product Development-Product Development",
-      "company": "EXL",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 13:00",
-      "hours_ago": 45.07,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409",
-      "naukri_url": "https://www.naukri.com/associate-consultant-presales-solutioning-product-development-product-development-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Associate Consultant - Presales Solutioning-Product Development-Product Development at EXL in Gurugram, Haryana, India. Posted on LinkedIn 13 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Associate Consultant - Presales Solutioning-Product Development-Product Development at EXL in Gurugram, Haryana, India. Posted on LinkedIn 13 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For EXL's Associate Consultant - Presales Solutioning-Product Development-Product Development: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409"
-    },
-    {
-      "title": "AI Trainee",
-      "company": "Rasta.Ai",
-      "location": "Pune Division, Maharashtra, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 12:58",
-      "hours_ago": 45.1,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942",
-      "naukri_url": "https://www.naukri.com/ai-trainee-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "AI Trainee at Rasta.Ai in Pune Division, Maharashtra, India. Posted on LinkedIn 15 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "AI Trainee at Rasta.Ai in Pune Division, Maharashtra, India. Posted on LinkedIn 15 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Rasta.Ai's AI Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942"
-    },
-    {
-      "title": "AI / Computer Vision Intern",
-      "company": "Arthrex India",
-      "location": "Pune Division, Maharashtra, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 12:51",
-      "hours_ago": 45.22,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924",
-      "naukri_url": "https://www.naukri.com/ai-computer-vision-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "AI / Computer Vision Intern at Arthrex India in Pune Division, Maharashtra, India. Posted on LinkedIn 22 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "AI / Computer Vision Intern at Arthrex India in Pune Division, Maharashtra, India. Posted on LinkedIn 22 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Arthrex India's AI / Computer Vision Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924"
-    },
-    {
-      "title": "Junior AI Engineer – Applied AI (Non-Clinical)",
-      "company": "Teleradiology Solutions",
+      "title": "Junior Computer Vision Researcher",
+      "company": "Auric AI Labs",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-23 12:45",
-      "hours_ago": 45.32,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420",
-      "naukri_url": "https://www.naukri.com/junior-ai-engineer-applied-ai-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Junior AI Engineer – Applied AI (Non-Clinical) at Teleradiology Solutions in Bengaluru, Karnataka, India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Junior AI Engineer – Applied AI (Non-Clinical) at Teleradiology Solutions in Bengaluru, Karnataka, India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Teleradiology Solutions's Junior AI Engineer – Applied AI (Non-Clinical): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420"
-    },
-    {
-      "title": "Business Research Analyst - I, RBS Tech",
-      "company": "Amazon",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 12:22",
-      "hours_ago": 45.7,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122",
-      "naukri_url": "https://www.naukri.com/business-research-analyst-i-rbs-tech-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Business Research Analyst - I, RBS Tech at Amazon in Bengaluru, Karnataka, India. Posted on LinkedIn 51 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Business Research Analyst - I, RBS Tech at Amazon in Bengaluru, Karnataka, India. Posted on LinkedIn 51 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Amazon's Business Research Analyst - I, RBS Tech: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122"
-    },
-    {
-      "title": "Data Analyst",
-      "company": "Resollect",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23T12:13:48Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 45.84,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst at Resollect in Mumbai, Maharashtra, India. Listed on LinkedIn.",
-      "raw_description": "Data Analyst at Resollect in Mumbai, Maharashtra, India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Resollect's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786"
-    },
-    {
-      "title": "Artificial Intelligence Intern (Remote)",
-      "company": "MediNex Workforce",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 12:13",
-      "hours_ago": 45.85,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024",
-      "naukri_url": "https://www.naukri.com/artificial-intelligence-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Artificial Intelligence Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Artificial Intelligence Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For MediNex Workforce's Artificial Intelligence Intern (Remote): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024"
-    },
-    {
-      "title": "Data Scientist",
-      "company": "Setu",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 12:13",
-      "hours_ago": 45.85,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624",
-      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Scientist at Setu in Bengaluru, Karnataka, India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Data Scientist at Setu in Bengaluru, Karnataka, India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Setu's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624"
-    },
-    {
-      "title": "Research Scientist III, Last Mile Science",
-      "company": "Amazon Science",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
+      "score": 0.93,
       "tier": 1,
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
-      "posted_at": "2026-10-23 11:13",
-      "hours_ago": 46.85,
+      "posted_at": "2026-10-23T14:32:14Z",
+      "hours_ago": 48.0,
       "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832",
-      "naukri_url": "https://www.naukri.com/research-scientist-iii-last-mile-science-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
+      "url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765",
+      "naukri_url": "https://www.naukri.com/junior-computer-vision-researcher-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765",
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
       "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
+        "PyTorch Distributed Training & PEFT",
+        "Vector Search & Embeddings",
+        "LLM Evaluation Benchmarks & Guardrails"
       ],
-      "description": "Research Scientist III, Last Mile Science at Amazon Science in Bengaluru, Karnataka, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Research Scientist III, Last Mile Science at Amazon Science in Bengaluru, Karnataka, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Amazon Science's Research Scientist III, Last Mile Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832"
-    },
-    {
-      "title": "Associate, Grid, PI - Global Capability Center",
-      "company": "Alvarez & Marsal",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 11:13",
-      "hours_ago": 46.85,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005",
-      "naukri_url": "https://www.naukri.com/associate-grid-pi-global-capability-center-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Associate, Grid, PI - Global Capability Center at Alvarez & Marsal in Gurugram, Haryana, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Associate, Grid, PI - Global Capability Center at Alvarez & Marsal in Gurugram, Haryana, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Alvarez & Marsal's Associate, Grid, PI - Global Capability Center: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005"
-    },
-    {
-      "title": "Global Markets Quantitative Research - Flow Rates Group",
-      "company": "BNP Paribas",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 11:13",
-      "hours_ago": 46.85,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323",
-      "naukri_url": "https://www.naukri.com/global-markets-quantitative-research-flow-rates-group-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Global Markets Quantitative Research - Flow Rates Group at BNP Paribas in Mumbai, Maharashtra, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Global Markets Quantitative Research - Flow Rates Group at BNP Paribas in Mumbai, Maharashtra, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For BNP Paribas's Global Markets Quantitative Research - Flow Rates Group: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323"
-    },
-    {
-      "title": "CBS CSU Associate AI Engineer",
-      "company": "GRUNDFOS",
-      "location": "Chennai, Tamil Nadu, India",
-      "score": 0.92,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-23 11:13",
-      "hours_ago": 46.85,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225",
-      "naukri_url": "https://www.naukri.com/cbs-csu-associate-ai-engineer-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "CBS CSU Associate AI Engineer at GRUNDFOS in Chennai, Tamil Nadu, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "CBS CSU Associate AI Engineer at GRUNDFOS in Chennai, Tamil Nadu, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For GRUNDFOS's CBS CSU Associate AI Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225"
-    },
-    {
-      "title": "Specialist I – Data Science",
-      "company": "Smart IMS Inc.",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 11:05",
-      "hours_ago": 46.99,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362",
-      "naukri_url": "https://www.naukri.com/specialist-i-data-science-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Specialist I – Data Science at Smart IMS Inc. in Hyderabad, Telangana, India. Posted on LinkedIn 6 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Specialist I – Data Science at Smart IMS Inc. in Hyderabad, Telangana, India. Posted on LinkedIn 6 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Smart IMS Inc.'s Specialist I – Data Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362"
-    },
-    {
-      "title": "Data Analyst (Marathi Language Required)",
-      "company": "Peroptyx",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23T10:49:58Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 47.24,
-      "relative_time": "2 days ago",
-      "url": "https://unstop.com/jobs/1762576",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Peroptyx&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/jobs/1762576",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst (Marathi Language Required) at Peroptyx in India. Active hiring opportunity on Unstop (Deadline: 2026-10-28).",
-      "raw_description": "Data Analyst (Marathi Language Required) at Peroptyx in India. Active hiring opportunity on Unstop (Deadline: 2026-10-28).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-10-28T13:51:17+05:30",
-      "end_date": "2026-10-28T13:51:17+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Peroptyx's Data Analyst (Marathi Language Required): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "direct_job_url": "https://unstop.com/jobs/1762576"
-    },
-    {
-      "title": "Machine Learning Intern",
-      "company": "UM IT PRIVATE LIMITED",
-      "location": "India",
-      "score": 0.99,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:42",
-      "hours_ago": 47.37,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243",
-      "naukri_url": "https://www.naukri.com/machine-learning-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Machine Learning Intern at UM IT PRIVATE LIMITED in India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Machine Learning Intern at UM IT PRIVATE LIMITED in India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For UM IT PRIVATE LIMITED's Machine Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243"
-    },
-    {
-      "title": "Data Science Intern (Remote)",
-      "company": "MediNex Workforce",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:35",
-      "hours_ago": 47.49,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300",
-      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Science Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 36 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Data Science Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 36 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For MediNex Workforce's Data Science Intern (Remote): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300"
-    },
-    {
-      "title": "AI/ML Intern",
-      "company": "Bluebex",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:23",
-      "hours_ago": 47.69,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224",
-      "naukri_url": "https://www.naukri.com/ai-ml-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "AI/ML Intern at Bluebex in Bengaluru, Karnataka, India. Posted on LinkedIn 48 minutes ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "AI/ML Intern at Bluebex in Bengaluru, Karnataka, India. Posted on LinkedIn 48 minutes ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Bluebex's AI/ML Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224"
-    },
-    {
-      "title": "AI / ML internship in degradation modelling for Li-ion batteries",
-      "company": "Bridge Green Upcycle",
-      "location": "Chennai, Tamil Nadu, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:13",
-      "hours_ago": 47.85,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087",
-      "naukri_url": "https://www.naukri.com/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "AI / ML internship in degradation modelling for Li-ion batteries at Bridge Green Upcycle in Chennai, Tamil Nadu, India. Posted on LinkedIn 3 hours ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "AI / ML internship in degradation modelling for Li-ion batteries at Bridge Green Upcycle in Chennai, Tamil Nadu, India. Posted on LinkedIn 3 hours ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Bridge Green Upcycle's AI / ML internship in degradation modelling for Li-ion batteries: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087"
-    },
-    {
-      "title": "(765) Data Analyst (Healthcare Fraud)",
-      "company": "Arlo Solutions",
-      "location": "Remote (India / Global)",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud",
-      "linkedin_url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "Direct ATS",
-      "source_domain": "jobicy.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "(765) Data Analyst (Healthcare Fraud) at Arlo Solutions.   Company Summary  \n  Arlo Solutions  (Arlo) is an information technology consulting services company that specializes in delivering technology solutions. Our reputation reflects the high quality of the talented Arlo Soluti...",
-      "raw_description": "(765) Data Analyst (Healthcare Fraud) at Arlo Solutions.   Company Summary  \n  Arlo Solutions  (Arlo) is an information technology consulting services company that specializes in delivering technology solutions. Our reputation reflects the high quality of the talented Arlo Solutions team and the consultants working in partnership with our customers. Our m",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Arlo Solutions's (765) Data Analyst (Healthcare Fraud): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud"
-    },
-    {
-      "title": "AWS Data Engineer (Associate)",
-      "company": "Mactores",
-      "location": "Remote (India / Global)",
-      "score": 0.93,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate",
-      "linkedin_url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate",
-      "naukri_url": "https://www.naukri.com/aws-data-engineer-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "Direct ATS",
-      "source_domain": "jobicy.com",
-      "is_fresher": true,
-      "matched_skills": [
-        "aws"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "AWS Data Engineer (Associate) at Mactores.   Mactores  is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcome...",
-      "raw_description": "AWS Data Engineer (Associate) at Mactores.   Mactores  is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform",
+      "description": "Junior Computer Vision Researcher at Auric AI Labs in Bengaluru, Karnataka, India. Listed on LinkedIn.",
+      "raw_description": "Junior Computer Vision Researcher at Auric AI Labs in Bengaluru, Karnataka, India. Listed on LinkedIn.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
@@ -3322,168 +2108,50 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "gap_percentage": "7% Skill Gap",
         "gaps": [
           {
-            "skill": "Causal Inference & Uplift Modeling",
+            "skill": "PyTorch Distributed Training & PEFT",
             "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+            "category": "Deep Learning",
+            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
           },
           {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
+            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
             "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+            "category": "RAG & Retrieval",
+            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
+          },
+          {
+            "skill": "LLM Evaluation Benchmarks & Guardrails",
+            "impact": "High Impact",
+            "category": "LLM Systems",
+            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
           }
         ],
-        "bridge_roadmap": "For Mactores's AWS Data Engineer (Associate): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+        "bridge_roadmap": "For Auric AI Labs's Junior Computer Vision Researcher: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
+        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
       },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate"
+      "posted_at_source": "relative_time",
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-computer-vision-researcher-at-auric-ai-labs-4470004765"
     },
     {
-      "title": "Data Analytics & Revenue Reporting Specialist",
-      "company": "LevelUp",
-      "location": "Remote (India / Global)",
-      "score": 0.91,
+      "title": "Junior Data Scientist",
+      "company": "Arcadia",
+      "location": "Chennai, Tamil Nadu, India",
+      "score": 0.92,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
+      "posted_at": "2026-10-23T14:32:14Z",
+      "hours_ago": 48.0,
       "relative_time": "2 days ago",
-      "url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist",
-      "linkedin_url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist",
-      "naukri_url": "https://www.naukri.com/data-analytics-revenue-reporting-specialist-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "Direct ATS",
-      "source_domain": "jobicy.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analytics & Revenue Reporting Specialist at LevelUp.   Company Overview  \n   LevelUp   is a specialist agency that provides outsourcing solutions to agencies, software vendors, and website owners. For over seven years, we have successfully collaborated with a variety of comp...",
-      "raw_description": "Data Analytics & Revenue Reporting Specialist at LevelUp.   Company Overview  \n   LevelUp   is a specialist agency that provides outsourcing solutions to agencies, software vendors, and website owners. For over seven years, we have successfully collaborated with a variety of companies, providing valuable technical, operational, and back-office support. We ",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For LevelUp's Data Analytics & Revenue Reporting Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist"
-    },
-    {
-      "title": "Machine Learning Specialist",
-      "company": "Hired",
-      "location": "India",
-      "score": 0.99,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749",
-      "naukri_url": "https://www.naukri.com/machine-learning-specialist-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Machine Learning Specialist at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Machine Learning Specialist at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Hired's Machine Learning Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749"
-    },
-    {
-      "title": "Artificial Intelligence Intern",
-      "company": "Jobs4PanIndia",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403",
-      "naukri_url": "https://www.naukri.com/artificial-intelligence-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
+      "url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
+      "naukri_url": "https://www.naukri.com/junior-data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458",
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
       "is_fresher": true,
@@ -3493,15 +2161,15 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "A/B Testing Power Analysis & Sample Sizing",
         "Advanced Feature Engineering & Imbalance"
       ],
-      "description": "Artificial Intelligence Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Artificial Intelligence Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "description": "Junior Data Scientist at Arcadia in Chennai, Tamil Nadu, India. Listed on LinkedIn.",
+      "raw_description": "Junior Data Scientist at Arcadia in Chennai, Tamil Nadu, India. Listed on LinkedIn.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
       "post_author": null,
       "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
         "gaps": [
           {
             "skill": "Causal Inference & Uplift Modeling",
@@ -3522,193 +2190,15 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
             "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
           }
         ],
-        "bridge_roadmap": "For Jobs4PanIndia's Artificial Intelligence Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "bridge_roadmap": "For Arcadia's Junior Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403"
-    },
-    {
-      "title": "Data Science Intern",
-      "company": "Jobs4PanIndia",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074",
-      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Science Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Data Science Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Jobs4PanIndia's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074"
-    },
-    {
-      "title": "Data Science Associate",
-      "company": "Hired",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914",
-      "naukri_url": "https://www.naukri.com/data-science-associate-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Science Associate at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Data Science Associate at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Hired's Data Science Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914"
-    },
-    {
-      "title": "Machine Learning Coordinator",
-      "company": "Hired",
-      "location": "India",
-      "score": 0.99,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-23 10:11",
-      "hours_ago": 47.89,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887",
-      "naukri_url": "https://www.naukri.com/machine-learning-coordinator-jobs-in-india?experience=0",
-      "company_url": "https://www.linkedin.com",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "is_fresher": true,
-      "matched_skills": [
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Machine Learning Coordinator at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "raw_description": "Machine Learning Coordinator at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Hired's Machine Learning Coordinator: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887"
+      "posted_at_source": "relative_time",
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-arcadia-4472977458"
     },
     {
       "title": "Research Scientist",
@@ -3719,7 +2209,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
-      "posted_at": "2026-10-23T10:04:24Z",
+      "posted_at": "2026-10-23T14:32:14Z",
       "posted_at_source": "relative_time",
       "hours_ago": 48.0,
       "relative_time": "2 days ago",
@@ -3783,7 +2273,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-23T10:04:24Z",
+      "posted_at": "2026-10-23T14:32:14Z",
       "hours_ago": 48.0,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-united-airlines-india-knowledge-center-4474154531",
@@ -3839,86 +2329,322 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-united-airlines-india-knowledge-center-4474154531"
     },
     {
-      "title": "Applied Scientist II, IN SPS Tech",
-      "company": "Amazon",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.93,
-      "tier": 1,
-      "category": "Applied Scientist / ML Research",
+      "title": "Associate Consultant - Presales Solutioning-Product Development-Product Development",
+      "company": "EXL",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
       "priority": "Primary",
-      "badge": "🥇",
-      "posted_at": "2026-10-23T10:04:24Z",
-      "hours_ago": 48.0,
+      "badge": "🥈",
+      "posted_at": "2026-10-23 13:00",
+      "hours_ago": 49.53,
       "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971",
-      "naukri_url": "https://www.naukri.com/applied-scientist-ii-in-sps-tech-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971",
+      "url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409",
+      "naukri_url": "https://www.naukri.com/associate-consultant-presales-solutioning-product-development-product-development-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
       "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [
-        "PyTorch Distributed Training & PEFT",
-        "Vector Search & Embeddings",
-        "LLM Evaluation Benchmarks & Guardrails"
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
       ],
-      "description": "Applied Scientist II, IN SPS Tech at Amazon in Bengaluru, Karnataka, India. Listed on LinkedIn.",
-      "raw_description": "Applied Scientist II, IN SPS Tech at Amazon in Bengaluru, Karnataka, India. Listed on LinkedIn.",
+      "description": "Associate Consultant - Presales Solutioning-Product Development-Product Development at EXL in Gurugram, Haryana, India. Posted on LinkedIn 13 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Associate Consultant - Presales Solutioning-Product Development-Product Development at EXL in Gurugram, Haryana, India. Posted on LinkedIn 13 minutes ago. Entry-level role for early career & fresh graduates.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
       "post_author": null,
       "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
         "gaps": [
           {
-            "skill": "PyTorch Distributed Training & PEFT",
+            "skill": "Causal Inference & Uplift Modeling",
             "impact": "High Impact",
-            "category": "Deep Learning",
-            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
           },
           {
-            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
             "impact": "Medium Impact",
-            "category": "RAG & Retrieval",
-            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
-          },
-          {
-            "skill": "LLM Evaluation Benchmarks & Guardrails",
-            "impact": "High Impact",
-            "category": "LLM Systems",
-            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
           }
         ],
-        "bridge_roadmap": "For Amazon's Applied Scientist II, IN SPS Tech: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
-        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
+        "bridge_roadmap": "For EXL's Associate Consultant - Presales Solutioning-Product Development-Product Development: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "posted_at_source": "relative_time",
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-consultant-presales-solutioning-product-development-product-development-at-exl-4446732409"
     },
     {
-      "title": "Entry Data Analyst",
-      "company": "Vamstar",
-      "location": "India",
-      "score": 0.91,
+      "title": "AI Trainee",
+      "company": "Rasta.Ai",
+      "location": "Pune Division, Maharashtra, India",
+      "score": 0.92,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-23T10:04:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 48.0,
+      "posted_at": "2026-10-23 12:58",
+      "hours_ago": 49.57,
       "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005",
-      "naukri_url": "https://www.naukri.com/entry-data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005",
+      "url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942",
+      "naukri_url": "https://www.naukri.com/ai-trainee-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "AI Trainee at Rasta.Ai in Pune Division, Maharashtra, India. Posted on LinkedIn 15 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "AI Trainee at Rasta.Ai in Pune Division, Maharashtra, India. Posted on LinkedIn 15 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Rasta.Ai's AI Trainee: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-trainee-at-rasta-ai-4480647942"
+    },
+    {
+      "title": "AI / Computer Vision Intern",
+      "company": "Arthrex India",
+      "location": "Pune Division, Maharashtra, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 12:51",
+      "hours_ago": 49.68,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924",
+      "naukri_url": "https://www.naukri.com/ai-computer-vision-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "AI / Computer Vision Intern at Arthrex India in Pune Division, Maharashtra, India. Posted on LinkedIn 22 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "AI / Computer Vision Intern at Arthrex India in Pune Division, Maharashtra, India. Posted on LinkedIn 22 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Arthrex India's AI / Computer Vision Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-computer-vision-intern-at-arthrex-india-4481675924"
+    },
+    {
+      "title": "Junior AI Engineer – Applied AI (Non-Clinical)",
+      "company": "Teleradiology Solutions",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.92,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-10-23 12:45",
+      "hours_ago": 49.78,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420",
+      "naukri_url": "https://www.naukri.com/junior-ai-engineer-applied-ai-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Junior AI Engineer – Applied AI (Non-Clinical) at Teleradiology Solutions in Bengaluru, Karnataka, India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Junior AI Engineer – Applied AI (Non-Clinical) at Teleradiology Solutions in Bengaluru, Karnataka, India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Teleradiology Solutions's Junior AI Engineer – Applied AI (Non-Clinical): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/junior-ai-engineer-%E2%80%93-applied-ai-non-clinical-at-teleradiology-solutions-4481688420"
+    },
+    {
+      "title": "Business Research Analyst - I, RBS Tech",
+      "company": "Amazon",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 12:22",
+      "hours_ago": 50.17,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122",
+      "naukri_url": "https://www.naukri.com/business-research-analyst-i-rbs-tech-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Business Research Analyst - I, RBS Tech at Amazon in Bengaluru, Karnataka, India. Posted on LinkedIn 51 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Business Research Analyst - I, RBS Tech at Amazon in Bengaluru, Karnataka, India. Posted on LinkedIn 51 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Amazon's Business Research Analyst - I, RBS Tech: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/business-research-analyst-i-rbs-tech-at-amazon-4455910122"
+    },
+    {
+      "title": "Data Analyst",
+      "company": "Resollect",
+      "location": "Mumbai, Maharashtra, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23T12:13:48Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 50.3,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786",
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
       "job_publisher": null,
@@ -3930,8 +2656,67 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "A/B Testing Power Analysis & Sample Sizing",
         "Advanced Feature Engineering & Imbalance"
       ],
-      "description": "Entry Data Analyst at Vamstar in India. Listed on LinkedIn.",
-      "raw_description": "Entry Data Analyst at Vamstar in India. Listed on LinkedIn.",
+      "description": "Data Analyst at Resollect in Mumbai, Maharashtra, India. Listed on LinkedIn.",
+      "raw_description": "Data Analyst at Resollect in Mumbai, Maharashtra, India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Resollect's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-resollect-4480622786"
+    },
+    {
+      "title": "Artificial Intelligence Intern (Remote)",
+      "company": "MediNex Workforce",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 12:13",
+      "hours_ago": 50.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024",
+      "naukri_url": "https://www.naukri.com/artificial-intelligence-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Artificial Intelligence Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Artificial Intelligence Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
@@ -3959,12 +2744,1163 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
             "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
           }
         ],
-        "bridge_roadmap": "For Vamstar's Entry Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "bridge_roadmap": "For MediNex Workforce's Artificial Intelligence Intern (Remote): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005"
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-remote-at-medinex-workforce-4481690024"
+    },
+    {
+      "title": "Data Scientist",
+      "company": "Setu",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 12:13",
+      "hours_ago": 50.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624",
+      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Scientist at Setu in Bengaluru, Karnataka, India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Data Scientist at Setu in Bengaluru, Karnataka, India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Setu's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-setu-4480650624"
+    },
+    {
+      "title": "Research Scientist III, Last Mile Science",
+      "company": "Amazon Science",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.92,
+      "tier": 1,
+      "category": "Applied Scientist / ML Research",
+      "priority": "Primary",
+      "badge": "🥇",
+      "posted_at": "2026-10-23 11:13",
+      "hours_ago": 51.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832",
+      "naukri_url": "https://www.naukri.com/research-scientist-iii-last-mile-science-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Research Scientist III, Last Mile Science at Amazon Science in Bengaluru, Karnataka, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Research Scientist III, Last Mile Science at Amazon Science in Bengaluru, Karnataka, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Amazon Science's Research Scientist III, Last Mile Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-science-4480638832"
+    },
+    {
+      "title": "Associate, Grid, PI - Global Capability Center",
+      "company": "Alvarez & Marsal",
+      "location": "Gurugram, Haryana, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 11:13",
+      "hours_ago": 51.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005",
+      "naukri_url": "https://www.naukri.com/associate-grid-pi-global-capability-center-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Associate, Grid, PI - Global Capability Center at Alvarez & Marsal in Gurugram, Haryana, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Associate, Grid, PI - Global Capability Center at Alvarez & Marsal in Gurugram, Haryana, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Alvarez & Marsal's Associate, Grid, PI - Global Capability Center: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-grid-pi-global-capability-center-at-alvarez-marsal-4466338005"
+    },
+    {
+      "title": "Global Markets Quantitative Research - Flow Rates Group",
+      "company": "BNP Paribas",
+      "location": "Mumbai, Maharashtra, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 11:13",
+      "hours_ago": 51.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323",
+      "naukri_url": "https://www.naukri.com/global-markets-quantitative-research-flow-rates-group-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Global Markets Quantitative Research - Flow Rates Group at BNP Paribas in Mumbai, Maharashtra, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Global Markets Quantitative Research - Flow Rates Group at BNP Paribas in Mumbai, Maharashtra, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For BNP Paribas's Global Markets Quantitative Research - Flow Rates Group: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/global-markets-quantitative-research-flow-rates-group-at-bnp-paribas-4474315323"
+    },
+    {
+      "title": "CBS CSU Associate AI Engineer",
+      "company": "GRUNDFOS",
+      "location": "Chennai, Tamil Nadu, India",
+      "score": 0.92,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-10-23 11:13",
+      "hours_ago": 51.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225",
+      "naukri_url": "https://www.naukri.com/cbs-csu-associate-ai-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "CBS CSU Associate AI Engineer at GRUNDFOS in Chennai, Tamil Nadu, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "CBS CSU Associate AI Engineer at GRUNDFOS in Chennai, Tamil Nadu, India. Posted on LinkedIn 2 hours ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For GRUNDFOS's CBS CSU Associate AI Engineer: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/cbs-csu-associate-ai-engineer-at-grundfos-4482866225"
+    },
+    {
+      "title": "Specialist I – Data Science",
+      "company": "Smart IMS Inc.",
+      "location": "Hyderabad, Telangana, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 11:05",
+      "hours_ago": 51.45,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362",
+      "naukri_url": "https://www.naukri.com/specialist-i-data-science-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Specialist I – Data Science at Smart IMS Inc. in Hyderabad, Telangana, India. Posted on LinkedIn 6 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Specialist I – Data Science at Smart IMS Inc. in Hyderabad, Telangana, India. Posted on LinkedIn 6 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Smart IMS Inc.'s Specialist I – Data Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/specialist-i-%E2%80%93-data-science-at-smart-ims-inc-4480620362"
+    },
+    {
+      "title": "Data Analyst (Marathi Language Required)",
+      "company": "Peroptyx",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23T10:49:58Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 51.7,
+      "relative_time": "2 days ago",
+      "url": "https://unstop.com/jobs/1762576",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Peroptyx&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/jobs/1762576",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst (Marathi Language Required) at Peroptyx in India. Active hiring opportunity on Unstop (Deadline: 2026-10-28).",
+      "raw_description": "Data Analyst (Marathi Language Required) at Peroptyx in India. Active hiring opportunity on Unstop (Deadline: 2026-10-28).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-10-28T13:51:17+05:30",
+      "end_date": "2026-10-28T13:51:17+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Peroptyx's Data Analyst (Marathi Language Required): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "direct_job_url": "https://unstop.com/jobs/1762576"
+    },
+    {
+      "title": "Machine Learning Intern",
+      "company": "UM IT PRIVATE LIMITED",
+      "location": "India",
+      "score": 0.99,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:42",
+      "hours_ago": 51.83,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243",
+      "naukri_url": "https://www.naukri.com/machine-learning-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "machine_learning"
+      ],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Machine Learning Intern at UM IT PRIVATE LIMITED in India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Machine Learning Intern at UM IT PRIVATE LIMITED in India. Posted on LinkedIn 28 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For UM IT PRIVATE LIMITED's Machine Learning Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-um-it-private-limited-4481660243"
+    },
+    {
+      "title": "Data Science Intern (Remote)",
+      "company": "MediNex Workforce",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:35",
+      "hours_ago": 51.95,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300",
+      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Science Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 36 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Data Science Intern (Remote) at MediNex Workforce in India. Posted on LinkedIn 36 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For MediNex Workforce's Data Science Intern (Remote): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-remote-at-medinex-workforce-4481656300"
+    },
+    {
+      "title": "AI/ML Intern",
+      "company": "Bluebex",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:23",
+      "hours_ago": 52.15,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224",
+      "naukri_url": "https://www.naukri.com/ai-ml-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "AI/ML Intern at Bluebex in Bengaluru, Karnataka, India. Posted on LinkedIn 48 minutes ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "AI/ML Intern at Bluebex in Bengaluru, Karnataka, India. Posted on LinkedIn 48 minutes ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Bluebex's AI/ML Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-bluebex-4481652224"
+    },
+    {
+      "title": "AI / ML internship in degradation modelling for Li-ion batteries",
+      "company": "Bridge Green Upcycle",
+      "location": "Chennai, Tamil Nadu, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:13",
+      "hours_ago": 52.32,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087",
+      "naukri_url": "https://www.naukri.com/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "AI / ML internship in degradation modelling for Li-ion batteries at Bridge Green Upcycle in Chennai, Tamil Nadu, India. Posted on LinkedIn 3 hours ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "AI / ML internship in degradation modelling for Li-ion batteries at Bridge Green Upcycle in Chennai, Tamil Nadu, India. Posted on LinkedIn 3 hours ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Bridge Green Upcycle's AI / ML internship in degradation modelling for Li-ion batteries: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-internship-in-degradation-modelling-for-li-ion-batteries-at-bridge-green-upcycle-4481680087"
+    },
+    {
+      "title": "(765) Data Analyst (Healthcare Fraud)",
+      "company": "Arlo Solutions",
+      "location": "Remote (India / Global)",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud",
+      "linkedin_url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "Direct ATS",
+      "source_domain": "jobicy.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "(765) Data Analyst (Healthcare Fraud) at Arlo Solutions.   Company Summary  \n  Arlo Solutions  (Arlo) is an information technology consulting services company that specializes in delivering technology solutions. Our reputation reflects the high quality of the talented Arlo Soluti...",
+      "raw_description": "(765) Data Analyst (Healthcare Fraud) at Arlo Solutions.   Company Summary  \n  Arlo Solutions  (Arlo) is an information technology consulting services company that specializes in delivering technology solutions. Our reputation reflects the high quality of the talented Arlo Solutions team and the consultants working in partnership with our customers. Our m",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Arlo Solutions's (765) Data Analyst (Healthcare Fraud): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/156082-765-data-analyst-healthcare-fraud"
+    },
+    {
+      "title": "AWS Data Engineer (Associate)",
+      "company": "Mactores",
+      "location": "Remote (India / Global)",
+      "score": 0.93,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate",
+      "linkedin_url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate",
+      "naukri_url": "https://www.naukri.com/aws-data-engineer-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "Direct ATS",
+      "source_domain": "jobicy.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "aws"
+      ],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "AWS Data Engineer (Associate) at Mactores.   Mactores  is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcome...",
+      "raw_description": "AWS Data Engineer (Associate) at Mactores.   Mactores  is the agent-native AWS modernization firm. Most modernization work doesn't ship, it stalls in pilots, slips a year, or lands at three times the budget. We exist to ship it: production systems running, legacy retired, outcomes measured. Our delivery is built on Aedeon, the agent platform",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "93% Core Match",
+        "gap_percentage": "7% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Mactores's AWS Data Engineer (Associate): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/151141-aws-data-engineer-associate"
+    },
+    {
+      "title": "Data Analytics & Revenue Reporting Specialist",
+      "company": "LevelUp",
+      "location": "Remote (India / Global)",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist",
+      "linkedin_url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist",
+      "naukri_url": "https://www.naukri.com/data-analytics-revenue-reporting-specialist-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "Direct ATS",
+      "source_domain": "jobicy.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analytics & Revenue Reporting Specialist at LevelUp.   Company Overview  \n   LevelUp   is a specialist agency that provides outsourcing solutions to agencies, software vendors, and website owners. For over seven years, we have successfully collaborated with a variety of comp...",
+      "raw_description": "Data Analytics & Revenue Reporting Specialist at LevelUp.   Company Overview  \n   LevelUp   is a specialist agency that provides outsourcing solutions to agencies, software vendors, and website owners. For over seven years, we have successfully collaborated with a variety of companies, providing valuable technical, operational, and back-office support. We ",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For LevelUp's Data Analytics & Revenue Reporting Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://jobicy.com/jobs/156376-data-analytics-revenue-reporting-specialist"
+    },
+    {
+      "title": "Machine Learning Specialist",
+      "company": "Hired",
+      "location": "India",
+      "score": 0.99,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749",
+      "naukri_url": "https://www.naukri.com/machine-learning-specialist-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "machine_learning"
+      ],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Machine Learning Specialist at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Machine Learning Specialist at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Hired's Machine Learning Specialist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-specialist-at-hired-4480607749"
+    },
+    {
+      "title": "Artificial Intelligence Intern",
+      "company": "Jobs4PanIndia",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403",
+      "naukri_url": "https://www.naukri.com/artificial-intelligence-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Artificial Intelligence Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Artificial Intelligence Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Jobs4PanIndia's Artificial Intelligence Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4481644403"
+    },
+    {
+      "title": "Data Science Intern",
+      "company": "Jobs4PanIndia",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074",
+      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Science Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Data Science Intern at Jobs4PanIndia in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Jobs4PanIndia's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4481657074"
+    },
+    {
+      "title": "Data Science Associate",
+      "company": "Hired",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914",
+      "naukri_url": "https://www.naukri.com/data-science-associate-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Science Associate at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Data Science Associate at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Hired's Data Science Associate: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-associate-at-hired-4480601914"
+    },
+    {
+      "title": "Machine Learning Coordinator",
+      "company": "Hired",
+      "location": "India",
+      "score": 0.99,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-23 10:11",
+      "hours_ago": 52.35,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887",
+      "naukri_url": "https://www.naukri.com/machine-learning-coordinator-jobs-in-india?experience=0",
+      "company_url": "https://www.linkedin.com",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [
+        "machine_learning"
+      ],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Machine Learning Coordinator at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "raw_description": "Machine Learning Coordinator at Hired in India. Posted on LinkedIn 1 hour ago. Entry-level role for early career & fresh graduates.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Hired's Machine Learning Coordinator: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "posted_at_source": "published_at",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-coordinator-at-hired-4480603887"
     },
     {
       "title": "Freelance Copywriter",
@@ -3976,7 +3912,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:41",
-      "hours_ago": 48.39,
+      "hours_ago": 52.85,
       "relative_time": "2 days ago",
       "url": "https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306",
       "linkedin_url": "https://remotive.com/remote-jobs/writing/freelance-copywriter-1749306",
@@ -4036,7 +3972,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:41",
-      "hours_ago": 48.39,
+      "hours_ago": 52.85,
       "relative_time": "2 days ago",
       "url": "https://remotive.com/remote-jobs/writing/freelance-writer-1185979",
       "linkedin_url": "https://remotive.com/remote-jobs/writing/freelance-writer-1185979",
@@ -4096,7 +4032,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:41",
-      "hours_ago": 48.39,
+      "hours_ago": 52.85,
       "relative_time": "2 days ago",
       "url": "https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045",
       "linkedin_url": "https://remotive.com/remote-jobs/information-technology/tier-iii-service-desk-engineer-2091045",
@@ -4156,7 +4092,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:41",
-      "hours_ago": 48.39,
+      "hours_ago": 52.85,
       "relative_time": "2 days ago",
       "url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540",
       "linkedin_url": "https://remotive.com/remote-jobs/sales/inside-sales-contractor-2086540",
@@ -4216,7 +4152,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:13",
-      "hours_ago": 48.85,
+      "hours_ago": 53.32,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ibm-research-research-software-intern-at-ibm-4480620993",
       "linkedin_url": "https://in.linkedin.com/jobs/view/ibm-research-research-software-intern-at-ibm-4480620993",
@@ -4276,7 +4212,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-23 09:13",
-      "hours_ago": 48.85,
+      "hours_ago": 53.32,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-engineer-t-i-at-wsp-in-india-4481669117",
       "linkedin_url": "https://in.linkedin.com/jobs/view/ai-engineer-t-i-at-wsp-in-india-4481669117",
@@ -4336,7 +4272,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:11",
-      "hours_ago": 48.89,
+      "hours_ago": 53.35,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-thinknovaa-4481656026",
       "linkedin_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-thinknovaa-4481656026",
@@ -4396,7 +4332,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 09:11",
-      "hours_ago": 48.89,
+      "hours_ago": 53.35,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-thinknovaa-4481641510",
       "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-thinknovaa-4481641510",
@@ -4458,7 +4394,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 08:13",
-      "hours_ago": 49.85,
+      "hours_ago": 54.32,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-ai-and-analytics-at-desible-ai-4480021724",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-ai-and-analytics-at-desible-ai-4480021724",
@@ -4518,7 +4454,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-23 07:11",
-      "hours_ago": 50.89,
+      "hours_ago": 55.35,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-researcher-at-project-bhaskar-4481628699",
       "linkedin_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-researcher-at-project-bhaskar-4481628699",
@@ -4578,7 +4514,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Optional",
       "badge": "9",
       "posted_at": "2026-10-23 06:13",
-      "hours_ago": 51.85,
+      "hours_ago": 56.32,
       "relative_time": "2 days ago",
       "url": "https://jobicy.com/jobs/151318-data-analytics-engineer",
       "linkedin_url": "https://jobicy.com/jobs/151318-data-analytics-engineer",
@@ -4638,7 +4574,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 06:13",
-      "hours_ago": 51.85,
+      "hours_ago": 56.32,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-opvia-in-4480626100",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-opvia-in-4480626100",
@@ -4698,7 +4634,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 05:13",
-      "hours_ago": 52.85,
+      "hours_ago": 57.32,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/jr-cloud-engineer-at-brillius-technologies-4480050732",
       "linkedin_url": "https://in.linkedin.com/jobs/view/jr-cloud-engineer-at-brillius-technologies-4480050732",
@@ -4758,7 +4694,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 03:13",
-      "hours_ago": 54.85,
+      "hours_ago": 59.32,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/analyst-wholesale-credit-risk-quantitative-research-at-jpmorganchase-4482803839",
       "linkedin_url": "https://in.linkedin.com/jobs/view/analyst-wholesale-credit-risk-quantitative-research-at-jpmorganchase-4482803839",
@@ -4818,7 +4754,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 03:11",
-      "hours_ago": 54.89,
+      "hours_ago": 59.35,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425",
       "linkedin_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425",
@@ -4878,8 +4814,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-23 02:11",
-      "hours_ago": 55.89,
-      "relative_time": "2 days ago",
+      "hours_ago": 60.35,
+      "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/decision-analytics-associate-consultant-commercial-analytics-%2Bai-engineering-at-zs-4480073594",
       "linkedin_url": "https://in.linkedin.com/jobs/view/decision-analytics-associate-consultant-commercial-analytics-%2Bai-engineering-at-zs-4480073594",
       "naukri_url": "https://www.naukri.com/decision-analytics-associate-consultant-commercial-analytics-ai-engineering-jobs-in-india?experience=0",
@@ -4938,8 +4874,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 01:13",
-      "hours_ago": 56.85,
-      "relative_time": "2 days ago",
+      "hours_ago": 61.32,
+      "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/insights-analyst-at-flexiple-4482808116",
       "linkedin_url": "https://in.linkedin.com/jobs/view/insights-analyst-at-flexiple-4482808116",
       "naukri_url": "https://www.naukri.com/insights-analyst-jobs-in-india?experience=0",
@@ -5002,8 +4938,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-23 00:38",
-      "hours_ago": 57.44,
-      "relative_time": "2 days ago",
+      "hours_ago": 61.9,
+      "relative_time": "3 days ago",
       "source_type": "Direct ATS",
       "source_domain": "sarvam.ai",
       "is_fresher": true,
@@ -5065,8 +5001,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-23 00:28",
-      "hours_ago": 57.6,
-      "relative_time": "2 days ago",
+      "hours_ago": 62.07,
+      "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "flipkartcareers.com",
       "is_fresher": true,
@@ -5129,8 +5065,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-23 00:13",
-      "hours_ago": 57.85,
-      "relative_time": "2 days ago",
+      "hours_ago": 62.32,
+      "relative_time": "3 days ago",
       "source_type": "Direct ATS",
       "source_domain": "swiggy.com",
       "is_fresher": true,
@@ -5193,8 +5129,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 23:58",
-      "hours_ago": 58.1,
-      "relative_time": "2 days ago",
+      "hours_ago": 62.57,
+      "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "meesho.io",
       "is_fresher": true,
@@ -5255,8 +5191,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 23:43",
-      "hours_ago": 58.35,
-      "relative_time": "2 days ago",
+      "hours_ago": 62.82,
+      "relative_time": "3 days ago",
       "source_type": "Direct ATS",
       "source_domain": "delhivery.com",
       "is_fresher": true,
@@ -5321,8 +5257,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 22:43",
-      "hours_ago": 59.35,
-      "relative_time": "2 days ago",
+      "hours_ago": 63.82,
+      "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "observe.ai",
       "is_fresher": true,
@@ -5383,8 +5319,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-22 22:43",
-      "hours_ago": 59.35,
-      "relative_time": "2 days ago",
+      "hours_ago": 63.82,
+      "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
       "is_fresher": true,
@@ -5445,8 +5381,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "7",
       "posted_at": "2026-10-22 22:43",
-      "hours_ago": 59.35,
-      "relative_time": "2 days ago",
+      "hours_ago": 63.82,
+      "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "flipkartcareers.com",
       "is_fresher": true,
@@ -5512,8 +5448,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 22:43",
-      "hours_ago": 59.35,
-      "relative_time": "2 days ago",
+      "hours_ago": 63.82,
+      "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.microsoft.com",
       "is_fresher": true,
@@ -5575,8 +5511,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 22:43",
-      "hours_ago": 59.35,
-      "relative_time": "2 days ago",
+      "hours_ago": 63.82,
+      "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "flipkart.com",
       "is_fresher": true,
@@ -5634,8 +5570,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 22:11",
-      "hours_ago": 59.89,
-      "relative_time": "2 days ago",
+      "hours_ago": 64.35,
+      "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/graduate-apprentice-trainee-data-science-at-volvo-group-4482710530",
       "linkedin_url": "https://in.linkedin.com/jobs/view/graduate-apprentice-trainee-data-science-at-volvo-group-4482710530",
       "naukri_url": "https://www.naukri.com/graduate-apprentice-trainee-data-science-jobs-in-india?experience=0",
@@ -5698,7 +5634,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "mu-sigma.com",
@@ -5762,7 +5698,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "fractal.ai",
@@ -5826,7 +5762,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "stripe.com",
@@ -5888,7 +5824,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "razorpay.com",
@@ -5951,7 +5887,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "groww.in",
@@ -6013,7 +5949,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "phonepe.com",
@@ -6077,7 +6013,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "cred.club",
@@ -6141,7 +6077,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "delhivery.com",
@@ -6208,7 +6144,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.jio.com",
@@ -6273,7 +6209,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Optional",
       "badge": "9",
       "posted_at": "2026-10-22 21:43",
-      "hours_ago": 60.35,
+      "hours_ago": 64.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "latentview.com",
@@ -6334,7 +6270,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 21:11",
-      "hours_ago": 60.89,
+      "hours_ago": 65.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-unified-mentor-private-limited-4481380131",
       "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-unified-mentor-private-limited-4481380131",
@@ -6400,7 +6336,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "thoughtworks.com",
@@ -6464,7 +6400,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "meesho.io",
@@ -6527,7 +6463,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.walmart.com",
@@ -6590,7 +6526,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "exlservice.com",
@@ -6653,7 +6589,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "fivetran.com",
@@ -6715,7 +6651,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "about.gitlab.com",
@@ -6778,7 +6714,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "7",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "zepto.com",
@@ -6845,7 +6781,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "delhivery.com",
@@ -6911,7 +6847,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "elastic.co",
@@ -6974,7 +6910,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "7",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "blinkit.com",
@@ -7039,7 +6975,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "inmobi.com",
@@ -7104,7 +7040,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "adobe.com",
@@ -7167,7 +7103,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "groww.in",
@@ -7227,7 +7163,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-10-22 20:43",
-      "hours_ago": 61.35,
+      "hours_ago": 65.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "stripe.com",
@@ -7283,7 +7219,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:13",
-      "hours_ago": 61.85,
+      "hours_ago": 66.32,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/industry-consulting-snr-consultant-at-ntt-data-north-america-4482742771",
       "linkedin_url": "https://in.linkedin.com/jobs/view/industry-consulting-snr-consultant-at-ntt-data-north-america-4482742771",
@@ -7343,7 +7279,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:11",
-      "hours_ago": 61.89,
+      "hours_ago": 66.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/service-delivery-engineer-iii-at-sabre-4463825819",
       "linkedin_url": "https://in.linkedin.com/jobs/view/service-delivery-engineer-iii-at-sabre-4463825819",
@@ -7403,7 +7339,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 20:11",
-      "hours_ago": 61.89,
+      "hours_ago": 66.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/i-f-decision-sci-practitioner-specialist-at-accenture-in-india-4482704244",
       "linkedin_url": "https://in.linkedin.com/jobs/view/i-f-decision-sci-practitioner-specialist-at-accenture-in-india-4482704244",
@@ -7467,7 +7403,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "corporate.target.com",
@@ -7529,7 +7465,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "cred.club",
@@ -7591,7 +7527,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "stripe.com",
@@ -7653,7 +7589,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "shadowfax.in",
@@ -7716,7 +7652,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "tigeranalytics.com",
@@ -7780,7 +7716,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "hul.co.in",
@@ -7844,7 +7780,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.jio.com",
@@ -7909,7 +7845,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "sarvam.ai",
@@ -7972,7 +7908,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "sarvam.ai",
@@ -8035,7 +7971,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "LinkedIn Post",
       "source_domain": "postman.com",
@@ -8099,7 +8035,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-10-22 19:43",
-      "hours_ago": 62.35,
+      "hours_ago": 66.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "mongodb.com",
@@ -8155,7 +8091,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 19:13",
-      "hours_ago": 62.85,
+      "hours_ago": 67.32,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-4482742283",
       "linkedin_url": "https://in.linkedin.com/jobs/view/research-scientist-iii-last-mile-science-at-amazon-4482742283",
@@ -8215,7 +8151,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 19:11",
-      "hours_ago": 62.89,
+      "hours_ago": 67.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/jr-associate-product-at-ls-digital-group-4480033862",
       "linkedin_url": "https://in.linkedin.com/jobs/view/jr-associate-product-at-ls-digital-group-4480033862",
@@ -8275,7 +8211,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 19:11",
-      "hours_ago": 62.89,
+      "hours_ago": 67.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4482497170",
       "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4482497170",
@@ -8337,7 +8273,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 19:11",
-      "hours_ago": 62.89,
+      "hours_ago": 67.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/global-credit-risk-data-scientist-at-cnh-4482473806",
       "linkedin_url": "https://in.linkedin.com/jobs/view/global-credit-risk-data-scientist-at-cnh-4482473806",
@@ -8397,7 +8333,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 19:11",
-      "hours_ago": 62.89,
+      "hours_ago": 67.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/engr-ii-data-science-at-verizon-4482494031",
       "linkedin_url": "https://in.linkedin.com/jobs/view/engr-ii-data-science-at-verizon-4482494031",
@@ -8461,7 +8397,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "tredence.com",
@@ -8524,7 +8460,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "itcinfotech.com",
@@ -8590,7 +8526,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Optional",
       "badge": "9",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "stripe.com",
@@ -8653,7 +8589,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "zomato.com",
@@ -8715,7 +8651,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "postman.com",
@@ -8778,7 +8714,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "7",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "inmobi.com",
@@ -8841,7 +8777,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.google.com",
@@ -8905,7 +8841,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 18:43",
-      "hours_ago": 63.35,
+      "hours_ago": 67.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "porter.in",
@@ -8966,7 +8902,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-10-22T18:40:19Z",
       "posted_at_source": "published_at",
-      "hours_ago": 63.4,
+      "hours_ago": 67.86,
       "relative_time": "3 days ago",
       "url": "https://remotive.com/remote-jobs/artificial-intelligence/ai-trainer-video-annotation-2091161",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Trainer+-+Video+Annotation+iMerit+Technology&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -9029,7 +8965,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 18:11",
-      "hours_ago": 63.89,
+      "hours_ago": 68.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/transport-modeler-economist-planner-at-sweco-4469384276",
       "linkedin_url": "https://in.linkedin.com/jobs/view/transport-modeler-economist-planner-at-sweco-4469384276",
@@ -9089,7 +9025,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 18:11",
-      "hours_ago": 63.89,
+      "hours_ago": 68.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-last-mile-at-amazon-4455779868",
       "linkedin_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-last-mile-at-amazon-4455779868",
@@ -9149,7 +9085,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 18:11",
-      "hours_ago": 63.89,
+      "hours_ago": 68.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/business-research-analyst-ii-rbs-at-amazon-4455797223",
       "linkedin_url": "https://in.linkedin.com/jobs/view/business-research-analyst-ii-rbs-at-amazon-4455797223",
@@ -9209,7 +9145,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 18:11",
-      "hours_ago": 63.89,
+      "hours_ago": 68.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4482478589",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4482478589",
@@ -9269,7 +9205,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 18:11",
-      "hours_ago": 63.89,
+      "hours_ago": 68.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-dexter-s-tech-4482482188",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-dexter-s-tech-4482482188",
@@ -9329,7 +9265,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 18:11",
-      "hours_ago": 63.89,
+      "hours_ago": 68.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/intern-bachelors-ai-eng-at-honeywell-technologies-4482477402",
       "linkedin_url": "https://in.linkedin.com/jobs/view/intern-bachelors-ai-eng-at-honeywell-technologies-4482477402",
@@ -9393,7 +9329,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "meesho.io",
@@ -9457,7 +9393,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "flipkartcareers.com",
@@ -9519,7 +9455,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "mckinsey.com",
@@ -9581,7 +9517,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "relianceretail.com",
@@ -9643,7 +9579,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "rapido.bike",
@@ -9705,7 +9641,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Optional",
       "badge": "9",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "groww.in",
@@ -9771,7 +9707,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.makemytrip.com",
@@ -9834,7 +9770,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "amazon.jobs",
@@ -9899,7 +9835,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 17:43",
-      "hours_ago": 64.35,
+      "hours_ago": 68.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "sprinklr.com",
@@ -9959,7 +9895,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.pypl.com",
@@ -10021,7 +9957,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "bain.com",
@@ -10083,7 +10019,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "dreamsports.group",
@@ -10145,7 +10081,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "spinny.com",
@@ -10207,7 +10143,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "amazon.jobs",
@@ -10270,7 +10206,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.snowflake.com",
@@ -10334,7 +10270,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "browserstack.com",
@@ -10397,7 +10333,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "7",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "titancompany.in",
@@ -10462,7 +10398,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 16:43",
-      "hours_ago": 65.35,
+      "hours_ago": 69.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "nvidia.com",
@@ -10522,7 +10458,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:11",
-      "hours_ago": 65.89,
+      "hours_ago": 70.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/analytics-analyst-at-mondel%C4%93z-international-4482447973",
       "linkedin_url": "https://in.linkedin.com/jobs/view/analytics-analyst-at-mondel%C4%93z-international-4482447973",
@@ -10582,7 +10518,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:11",
-      "hours_ago": 65.89,
+      "hours_ago": 70.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/nasdaq-campus-program-2027-at-nasdaq-4482456678",
       "linkedin_url": "https://in.linkedin.com/jobs/view/nasdaq-campus-program-2027-at-nasdaq-4482456678",
@@ -10642,7 +10578,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 16:11",
-      "hours_ago": 65.89,
+      "hours_ago": 70.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/streamlit-developer-jr-data-scientist-at-d-square-consulting-services-pvt-ltd-4481329113",
       "linkedin_url": "https://in.linkedin.com/jobs/view/streamlit-developer-jr-data-scientist-at-d-square-consulting-services-pvt-ltd-4481329113",
@@ -10706,7 +10642,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥉",
       "posted_at": "2026-10-22 15:43",
-      "hours_ago": 66.35,
+      "hours_ago": 70.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "ugamsolutions.com",
@@ -10769,7 +10705,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:43",
-      "hours_ago": 66.35,
+      "hours_ago": 70.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "atherenergy.com",
@@ -10831,7 +10767,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:43",
-      "hours_ago": 66.35,
+      "hours_ago": 70.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "careers.confluent.io",
@@ -10893,7 +10829,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:43",
-      "hours_ago": 66.35,
+      "hours_ago": 70.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "urbancompany.com",
@@ -10955,7 +10891,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:43",
-      "hours_ago": 66.35,
+      "hours_ago": 70.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "cars24.com",
@@ -11017,7 +10953,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:43",
-      "hours_ago": 66.35,
+      "hours_ago": 70.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "maersk.com",
@@ -11077,7 +11013,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-10-22 15:13",
-      "hours_ago": 66.85,
+      "hours_ago": 71.32,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/research-scientist-ii-last-mile-science-at-amazon-4455912044",
       "linkedin_url": "https://in.linkedin.com/jobs/view/research-scientist-ii-last-mile-science-at-amazon-4455912044",
@@ -11137,7 +11073,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:11",
-      "hours_ago": 66.89,
+      "hours_ago": 71.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/quant-research-analyst-at-zepto-4480002913",
       "linkedin_url": "https://in.linkedin.com/jobs/view/quant-research-analyst-at-zepto-4480002913",
@@ -11197,7 +11133,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 15:11",
-      "hours_ago": 66.89,
+      "hours_ago": 71.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-engineer-ml-at-scoutit-4481307813",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-engineer-ml-at-scoutit-4481307813",
@@ -11261,7 +11197,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 14:43",
-      "hours_ago": 67.35,
+      "hours_ago": 71.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "databricks.com",
@@ -11324,7 +11260,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 14:43",
-      "hours_ago": 67.35,
+      "hours_ago": 71.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "meesho.io",
@@ -11387,7 +11323,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 14:43",
-      "hours_ago": 67.35,
+      "hours_ago": 71.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "olaelectric.com",
@@ -11438,6 +11374,262 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Vehicle+Telemetry+%26+Applied+ML+Engineer+Ola+Electric&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
+      "title": "Applied Scientist II, IN SPS Tech",
+      "company": "Amazon",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.93,
+      "tier": 1,
+      "category": "Applied Scientist / ML Research",
+      "priority": "Primary",
+      "badge": "🥇",
+      "posted_at": "2026-10-22T14:32:14Z",
+      "hours_ago": 72.0,
+      "relative_time": "3 days ago",
+      "url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971",
+      "naukri_url": "https://www.naukri.com/applied-scientist-ii-in-sps-tech-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "PyTorch Distributed Training & PEFT",
+        "Vector Search & Embeddings",
+        "LLM Evaluation Benchmarks & Guardrails"
+      ],
+      "description": "Applied Scientist II, IN SPS Tech at Amazon in Bengaluru, Karnataka, India. Listed on LinkedIn.",
+      "raw_description": "Applied Scientist II, IN SPS Tech at Amazon in Bengaluru, Karnataka, India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "93% Core Match",
+        "gap_percentage": "7% Skill Gap",
+        "gaps": [
+          {
+            "skill": "PyTorch Distributed Training & PEFT",
+            "impact": "High Impact",
+            "category": "Deep Learning",
+            "action": "Implement a modular LoRA / PEFT fine-tuning script in PyTorch on a Hugging Face dataset."
+          },
+          {
+            "skill": "Vector Search & Embeddings (FAISS / Chroma)",
+            "impact": "Medium Impact",
+            "category": "RAG & Retrieval",
+            "action": "Build a dense vector retrieval pipeline with cosine similarity & hybrid BM25 reranking."
+          },
+          {
+            "skill": "LLM Evaluation Benchmarks & Guardrails",
+            "impact": "High Impact",
+            "category": "LLM Systems",
+            "action": "Create an automated evaluation harness measuring BLEU/ROUGE, latency, and hallucination rates."
+          }
+        ],
+        "bridge_roadmap": "For Amazon's Applied Scientist II, IN SPS Tech: Build an end-to-end multimodal or domain-specific LLM fine-tuning project on Hugging Face Spaces with a documented GitHub README and evaluation metrics.",
+        "interview_talk_track": "While I haven't trained billion-parameter foundation models across large GPU clusters, I have designed custom PyTorch training loops with mixed-precision, LoRA adapters, and rigorous validation."
+      },
+      "posted_at_source": "relative_time",
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/applied-scientist-ii-in-sps-tech-at-amazon-4455913971"
+    },
+    {
+      "title": "Entry Data Analyst",
+      "company": "Vamstar",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-22T14:32:14Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 72.0,
+      "relative_time": "3 days ago",
+      "url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005",
+      "naukri_url": "https://www.naukri.com/entry-data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Entry Data Analyst at Vamstar in India. Listed on LinkedIn.",
+      "raw_description": "Entry Data Analyst at Vamstar in India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Vamstar's Entry Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/entry-data-analyst-at-vamstar-4480060005"
+    },
+    {
+      "title": "AI Engineer",
+      "company": "OATI",
+      "location": "Mohali district, India",
+      "score": 0.85,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-10-22T14:32:14Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 72.0,
+      "relative_time": "3 days ago",
+      "url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392",
+      "naukri_url": "https://www.naukri.com/ai-engineer-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "FastAPI REST Serving & Latency Optimization",
+        "Docker Containerization & Multi-Stage Builds",
+        "Model Registry & Drift Monitoring"
+      ],
+      "description": "AI Engineer at OATI in Mohali district, India. Listed on LinkedIn.",
+      "raw_description": "AI Engineer at OATI in Mohali district, India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "85% Core Match",
+        "gap_percentage": "15% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For OATI's AI Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392"
+    },
+    {
+      "title": "Data Analyst",
+      "company": "Athena Tech",
+      "location": "Hyderabad, Telangana, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-22T14:32:14Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 72.0,
+      "relative_time": "3 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst at Athena Tech in Hyderabad, Telangana, India. Listed on LinkedIn.",
+      "raw_description": "Data Analyst at Athena Tech in Hyderabad, Telangana, India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Athena Tech's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580"
+    },
+    {
       "title": "Data Science Internship",
       "company": "Zenotalent",
       "location": "India",
@@ -11448,7 +11640,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-22T13:47:28Z",
       "posted_at_source": "published_at",
-      "hours_ago": 68.28,
+      "hours_ago": 72.74,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1773591",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Internship+Zenotalent&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -11515,7 +11707,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Optional",
       "badge": "9",
       "posted_at": "2026-10-22 13:43",
-      "hours_ago": 68.35,
+      "hours_ago": 72.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "cloudera.com",
@@ -11577,7 +11769,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-22 13:43",
-      "hours_ago": 68.35,
+      "hours_ago": 72.82,
       "relative_time": "3 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "hasura.io",
@@ -11637,7 +11829,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-22T13:38:48Z",
       "posted_at_source": "published_at",
-      "hours_ago": 68.42,
+      "hours_ago": 72.89,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1773097",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+Trawel.in&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -11700,7 +11892,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-22 13:11",
-      "hours_ago": 68.89,
+      "hours_ago": 73.35,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-engineer-at-jetbro-4481310828",
       "linkedin_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-jetbro-4481310828",
@@ -11751,262 +11943,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-jetbro-4481310828"
     },
     {
-      "title": "AI Engineer",
-      "company": "OATI",
-      "location": "Mohali district, India",
-      "score": 0.85,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-10-22T10:04:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 72.0,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392",
-      "naukri_url": "https://www.naukri.com/ai-engineer-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "AI Engineer at OATI in Mohali district, India. Listed on LinkedIn.",
-      "raw_description": "AI Engineer at OATI in Mohali district, India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For OATI's AI Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-at-oati-4458501392"
-    },
-    {
-      "title": "Data Analyst",
-      "company": "Athena Tech",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-22T10:04:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 72.0,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst at Athena Tech in Hyderabad, Telangana, India. Listed on LinkedIn.",
-      "raw_description": "Data Analyst at Athena Tech in Hyderabad, Telangana, India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Athena Tech's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-athena-tech-4479424580"
-    },
-    {
-      "title": "Data Science Intern",
-      "company": "Electronic Arts (EA)",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-22T10:04:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 72.0,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245",
-      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Science Intern at Electronic Arts (EA) in Hyderabad, Telangana, India. Listed on LinkedIn.",
-      "raw_description": "Data Science Intern at Electronic Arts (EA) in Hyderabad, Telangana, India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Electronic Arts (EA)'s Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245"
-    },
-    {
-      "title": "Data Analyst (Fresher)",
-      "company": "Clovity",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-22T10:04:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 72.0,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst (Fresher) at Clovity in India. Listed on LinkedIn.",
-      "raw_description": "Data Analyst (Fresher) at Clovity in India. Listed on LinkedIn.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Clovity's Data Analyst (Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "deadline": null,
-      "end_date": null,
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741"
-    },
-    {
       "title": "Data Analyst Internship",
       "company": "To-Let Globe",
       "location": "India",
@@ -12017,7 +11953,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-22T09:12:57Z",
       "posted_at_source": "published_at",
-      "hours_ago": 72.85,
+      "hours_ago": 77.32,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1772806",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+To-Let+Globe&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12084,8 +12020,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-21 22:43",
-      "hours_ago": 83.35,
-      "relative_time": "3 days ago",
+      "hours_ago": 87.82,
+      "relative_time": "4 days ago",
       "source_type": "Official Company Portal",
       "source_domain": "olakrutrim.com",
       "is_fresher": true,
@@ -12149,7 +12085,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-10-21 14:43",
-      "hours_ago": 91.35,
+      "hours_ago": 95.82,
       "relative_time": "4 days ago",
       "source_type": "Direct ATS",
       "source_domain": "zepto.com",
@@ -12196,6 +12132,134 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Intern+Zepto&location=India&f_TPR=r86400&f_E=1%2C2"
     },
     {
+      "title": "Data Science Intern",
+      "company": "Electronic Arts (EA)",
+      "location": "Hyderabad, Telangana, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-21T14:32:14Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 96.0,
+      "relative_time": "4 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245",
+      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Science Intern at Electronic Arts (EA) in Hyderabad, Telangana, India. Listed on LinkedIn.",
+      "raw_description": "Data Science Intern at Electronic Arts (EA) in Hyderabad, Telangana, India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Electronic Arts (EA)'s Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-electronic-arts-ea-4479404245"
+    },
+    {
+      "title": "Data Analyst (Fresher)",
+      "company": "Clovity",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-21T14:32:14Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 96.0,
+      "relative_time": "4 days ago",
+      "url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst (Fresher) at Clovity in India. Listed on LinkedIn.",
+      "raw_description": "Data Analyst (Fresher) at Clovity in India. Listed on LinkedIn.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Clovity's Data Analyst (Fresher): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "deadline": null,
+      "end_date": null,
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-fresher-at-clovity-4480778741"
+    },
+    {
       "title": "AI/ML Engineering Intern",
       "company": "Daice Labs",
       "location": "India",
@@ -12204,7 +12268,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "8",
-      "posted_at": "2026-10-21T10:04:24Z",
+      "posted_at": "2026-10-21T14:32:14Z",
       "posted_at_source": "relative_time",
       "hours_ago": 96.0,
       "relative_time": "4 days ago",
@@ -12273,7 +12337,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-10-21 06:43",
-      "hours_ago": 99.35,
+      "hours_ago": 103.82,
       "relative_time": "4 days ago",
       "source_type": "Direct ATS",
       "source_domain": "locus.sh",
@@ -12337,7 +12401,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-10-21 02:43",
-      "hours_ago": 103.35,
+      "hours_ago": 107.82,
       "relative_time": "4 days ago",
       "source_type": "Direct ATS",
       "source_domain": "razorpay.com",
@@ -12398,7 +12462,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-20T21:40:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 108.4,
+      "hours_ago": 112.86,
       "relative_time": "5 days ago",
       "url": "https://unstop.com/jobs/1770765",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+TalentLo&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12452,70 +12516,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://unstop.com/jobs/1770765"
     },
     {
-      "title": "Gen AI/ML/Data Science Internship",
-      "company": "Deep Dive AI",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-20T14:24:23Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 115.66,
-      "relative_time": "5 days ago",
-      "url": "https://unstop.com/internships/1729526",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Gen+AI%2FML%2FData+Science+Internship+Deep+Dive+AI&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/gen-ai-ml-data-science-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1729526",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Gen AI/ML/Data Science Internship at Deep Dive AI in India. Active hiring opportunity on Unstop (Deadline: 2026-10-27).",
-      "raw_description": "Gen AI/ML/Data Science Internship at Deep Dive AI in India. Active hiring opportunity on Unstop (Deadline: 2026-10-27).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-10-27T19:03:00+05:30",
-      "end_date": "2026-10-27T19:03:00+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Deep Dive AI's Gen AI/ML/Data Science Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "direct_job_url": "https://unstop.com/internships/1729526"
-    },
-    {
       "title": "Data Analyst, Business Finance",
       "company": "Razorpay",
       "location": "Bengaluru, Karnataka, India",
@@ -12524,7 +12524,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-20T10:04:24Z",
+      "posted_at": "2026-10-20T14:32:14Z",
       "posted_at_source": "relative_time",
       "hours_ago": 120.0,
       "relative_time": "5 days ago",
@@ -12580,6 +12580,70 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-business-finance-at-razorpay-4481538796"
     },
     {
+      "title": "Gen AI/ML/Data Science Internship",
+      "company": "Deep Dive AI",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-20T14:24:23Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 120.13,
+      "relative_time": "5 days ago",
+      "url": "https://unstop.com/internships/1729526",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Gen+AI%2FML%2FData+Science+Internship+Deep+Dive+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/gen-ai-ml-data-science-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1729526",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Gen AI/ML/Data Science Internship at Deep Dive AI in India. Active hiring opportunity on Unstop (Deadline: 2026-10-27).",
+      "raw_description": "Gen AI/ML/Data Science Internship at Deep Dive AI in India. Active hiring opportunity on Unstop (Deadline: 2026-10-27).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-10-27T19:03:00+05:30",
+      "end_date": "2026-10-27T19:03:00+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Deep Dive AI's Gen AI/ML/Data Science Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "direct_job_url": "https://unstop.com/internships/1729526"
+    },
+    {
       "title": "Data Engineer Internship",
       "company": "Acumen Advisory Consulting LLC",
       "location": "India",
@@ -12590,7 +12654,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "9",
       "posted_at": "2026-10-19T19:25:58Z",
       "posted_at_source": "published_at",
-      "hours_ago": 134.64,
+      "hours_ago": 139.1,
       "relative_time": "6 days ago",
       "url": "https://unstop.com/internships/1769787",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineer+Internship+Acumen+Advisory+Consulting+LLC&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12654,7 +12718,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-19T19:06:39Z",
       "posted_at_source": "published_at",
-      "hours_ago": 134.96,
+      "hours_ago": 139.42,
       "relative_time": "6 days ago",
       "url": "https://unstop.com/internships/1772426",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Cornixe+Edutech+Pvt.+Ltd.&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12718,7 +12782,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-19T15:45:56Z",
       "posted_at_source": "published_at",
-      "hours_ago": 138.3,
+      "hours_ago": 142.77,
       "relative_time": "6 days ago",
       "url": "https://unstop.com/internships/1772369",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Skill+Orbit&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12782,7 +12846,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-19T13:24:44Z",
       "posted_at_source": "published_at",
-      "hours_ago": 140.66,
+      "hours_ago": 145.12,
       "relative_time": "6 days ago",
       "url": "https://unstop.com/internships/1770906",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+Toplens+AI+Solutions+Private+Limited&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12846,7 +12910,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-19T05:02:50Z",
       "posted_at_source": "published_at",
-      "hours_ago": 149.02,
+      "hours_ago": 153.49,
       "relative_time": "6 days ago",
       "url": "https://unstop.com/internships/1772058",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Codeatrix&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12910,7 +12974,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-18T14:31:28Z",
       "posted_at_source": "published_at",
-      "hours_ago": 163.54,
+      "hours_ago": 168.01,
       "relative_time": "7 days ago",
       "url": "https://unstop.com/internships/1771930",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Research+Engine&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -12974,7 +13038,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-18T10:22:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 167.7,
+      "hours_ago": 172.16,
       "relative_time": "7 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-aditya-birla-capital-4463357550",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-aditya-birla-capital-4463357550",
@@ -13035,7 +13099,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-10-17T16:04:29Z",
-      "hours_ago": 185.99,
+      "hours_ago": 190.46,
       "relative_time": "8 days ago",
       "url": "https://remotive.com/remote-jobs/software-development/software-engineer-ai-coding-tasks-2091158",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineer%2C+AI+Coding+Tasks+Askable&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13100,7 +13164,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-17T11:13:48Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 190.84,
+      "hours_ago": 195.3,
       "relative_time": "8 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-qbyss-4479677037",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-qbyss-4479677037",
@@ -13162,7 +13226,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-16T09:52:09Z",
       "posted_at_source": "published_at",
-      "hours_ago": 216.2,
+      "hours_ago": 220.66,
       "relative_time": "9 days ago",
       "url": "https://unstop.com/internships/1771124",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+ML+Engineer+Internship+TalentCV&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13226,7 +13290,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-15T12:00:23Z",
       "posted_at_source": "published_at",
-      "hours_ago": 238.06,
+      "hours_ago": 242.53,
       "relative_time": "10 days ago",
       "url": "https://unstop.com/internships/1770763",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Zenotalent&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13290,7 +13354,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-14T08:15:13Z",
       "posted_at_source": "published_at",
-      "hours_ago": 265.82,
+      "hours_ago": 270.28,
       "relative_time": "11 days ago",
       "url": "https://unstop.com/internships/1769835",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+openjobs.ai&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13354,7 +13418,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-10-14T01:55:39-04:00",
       "posted_at_source": "published_at",
-      "hours_ago": 268.14,
+      "hours_ago": 272.6,
       "relative_time": "11 days ago",
       "url": "https://job-boards.greenhouse.io/inmobi/jobs/8181422",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+II+InMobi&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13408,70 +13472,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "direct_job_url": "https://job-boards.greenhouse.io/inmobi/jobs/8181422"
     },
     {
-      "title": "Data Scientist",
-      "company": "Trent Limited",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-14T04:47:26Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 269.28,
-      "relative_time": "11 days ago",
-      "url": "https://unstop.com/jobs/1714449",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Trent+Limited&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/jobs/1714449",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Scientist at Trent Limited in India. Active hiring opportunity on Unstop (Deadline: 2027-08-31).",
-      "raw_description": "Data Scientist at Trent Limited in India. Active hiring opportunity on Unstop (Deadline: 2027-08-31).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2027-08-31T12:36:00+05:30",
-      "end_date": "2027-08-31T12:36:00+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Trent Limited's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "direct_job_url": "https://unstop.com/jobs/1714449"
-    },
-    {
       "title": "Data Analyst",
       "company": "Nova Technology",
       "location": "India",
@@ -13482,7 +13482,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-13T07:30:42Z",
       "posted_at_source": "published_at",
-      "hours_ago": 290.56,
+      "hours_ago": 295.02,
       "relative_time": "12 days ago",
       "url": "https://unstop.com/jobs/1769699",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Nova+Technology&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13546,8 +13546,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-10-13T00:56:58Z",
       "posted_at_source": "published_at",
-      "hours_ago": 297.12,
-      "relative_time": "12 days ago",
+      "hours_ago": 301.58,
+      "relative_time": "13 days ago",
       "url": "https://unstop.com/internships/1767420",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Agentic+AI+Engineer+Internship+VEYRA+AI&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/agentic-ai-engineer-internship-jobs-in-india?experience=0",
@@ -13612,7 +13612,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-12T11:12:25Z",
       "posted_at_source": "published_at",
-      "hours_ago": 310.86,
+      "hours_ago": 315.33,
       "relative_time": "13 days ago",
       "url": "https://unstop.com/internships/1768694",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Internship+Vortizo+AI&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13676,7 +13676,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-10-06T06:31:05-04:00",
       "posted_at_source": "published_at",
-      "hours_ago": 455.55,
+      "hours_ago": 460.01,
       "relative_time": "19 days ago",
       "url": "https://job-boards.eu.greenhouse.io/groww/jobs/4714061101",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Research+Specialist+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13740,7 +13740,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-05T09:16:19Z",
       "posted_at_source": "published_at",
-      "hours_ago": 480.8,
+      "hours_ago": 485.26,
       "relative_time": "20 days ago",
       "url": "https://unstop.com/internships/1765550",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Internship+Codeatrix&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13804,7 +13804,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-09-30T11:18:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 598.77,
+      "hours_ago": 603.23,
       "relative_time": "25 days ago",
       "url": "https://jobs.lever.co/paytm/cf1076c8-e8be-4fc4-8112-aa55051de742",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Management+-+Associate+Product+Manager+-+Travel.+Paytm&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -13863,12 +13863,12 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     "primary_matches": 183,
     "secondary_matches": 25,
     "adjacent_matches": 6,
-    "last_sync": "2026-10-25T10:04Z"
+    "last_sync": "2026-10-25T14:31Z"
   },
   "total_jobs": 214,
-  "last_updated": "2026-10-25T10:04Z",
-  "last_remotive_sync": "2026-10-25T10:04Z",
-  "last_himalayas_sync": "2026-10-25T10:04Z",
-  "last_adzuna_sync": "2026-10-25T10:04Z",
-  "last_jsearch_sync": "2026-10-25T10:04Z"
+  "last_updated": "2026-10-25T14:31Z",
+  "last_remotive_sync": "2026-10-25T14:31Z",
+  "last_himalayas_sync": "2026-10-25T14:31Z",
+  "last_adzuna_sync": "2026-10-25T14:31Z",
+  "last_jsearch_sync": "2026-10-25T14:31Z"
 };
