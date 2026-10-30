@@ -71,9 +71,9 @@ def score_job(job: dict, profile: dict) -> dict:
             "rejection_reason": f"Job posted {hours_ago}h ago (older than {max_age_hours}h limit)"
         }
 
-    # 0a. Guardrail against generic companies and SEO search redirect URLs
+    # 0a. Guardrail against generic placeholder companies and SEO search redirect URLs
     company = job.get("company", "").lower().strip()
-    if not company or company in ["tech company", "other organization not listed here", "unknown"]:
+    if company in ["tech company", "other organization not listed here", "unknown"]:
         return {
             "rejected": True,
             "final_score": 0.0,
@@ -144,23 +144,27 @@ def score_job(job: dict, profile: dict) -> dict:
                     "rejection_reason": f"Description contains excluded domain/stale keyword: '{bad}'"
                 }
 
-    # 2. Check Experience Limit for Entry Level (Strict 0-1 year limit)
-    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 1)
+    # 2. Check Experience Limit for Entry Level / Freshers (Strict 0 experience limit)
+    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 0)
+    strict_zero = profile.get("job_filters", {}).get("strict_zero_experience", True)
     if min_exp is not None and min_exp > max_allowed_exp:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} year for entry-level)"
+            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} year for pure freshers)"
         }
 
-    # 2b. Check Description for explicit 2+ years requirement
+    # 2b. Check Description for experience requirements (1+ years or 2+ years)
     full_text = f"{title} {job.get('raw_description', '')}".lower()
-    two_plus_match = re.search(r"(?:minimum(?:\s+of)?|at\s+least|\b)\s*([2-9]|\d{2,})\+?\s*(?:-\s*\d+)?\s*years?", full_text)
-    if two_plus_match:
+    exp_threshold = "1" if strict_zero or max_allowed_exp == 0 else "2"
+    exp_pattern = rf"(?:minimum(?:\s+of)?|at\s+least|\b)\s*([{exp_threshold}-9]|\d{{2,}})\+?\s*(?:-\s*\d+)?\s*years?(?:\s+of)?\s*(?:relevant\s+)?experience"
+    exp_match = re.search(exp_pattern, full_text)
+    is_zero_explicit = re.search(r"\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b", full_text)
+    if exp_match and not is_zero_explicit:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Job demands '{two_plus_match.group(0).strip()}' (exceeds 0-1 year entry-level limit)"
+            "rejection_reason": f"Job demands '{exp_match.group(0).strip()}' (exceeds 0-experience fresher limit)"
         }
 
     # 3. Check Seniority / Level Filter

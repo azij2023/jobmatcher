@@ -1,10 +1,11 @@
+import re
 import json
 import sqlite3
 import os
 import datetime
 from collectors.live_job_collector import collect_and_score_all_live_jobs
 from matching.scoring import score_job
-from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url
+from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url, build_multi_source_urls
 
 def export_data():
     # 1. Load Profile
@@ -98,6 +99,14 @@ def export_data():
         linkedin_url = build_linkedin_jobs_url(title, company)
         naukri_url = build_naukri_jobs_url(title)
 
+        # Detect internship by title and description keywords
+        _title_lower = title.lower()
+        _desc_lower = desc.lower()
+        _intern_keywords = ["intern", "internship", "trainee", "apprentice", "apprenticeship"]
+        is_internship = any(kw in _title_lower for kw in _intern_keywords)
+        if not is_internship:
+            is_internship = bool(re.search(r'\b(?:internship|intern\s+position|apprenticeship)\b', _desc_lower))
+
         detailed_jobs.append({
             "url": direct_url,
             "linkedin_url": linkedin_url,
@@ -118,6 +127,8 @@ def export_data():
             "source_type": raw.get("source_type") or scored.get("platform") or "Official Portal",
             "source_domain": source_domain or "Company Website",
             "is_fresher": scored.get("is_fresher", True),
+            "is_internship": is_internship,
+            "multi_source_urls": build_multi_source_urls(title, company),
             "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),
             "description": desc or f"Fresher level opportunity for {title} at {company}.",
@@ -173,6 +184,8 @@ def export_data():
             "secondary_matches": len([j for j in detailed_jobs if j.get("tier") == 8]),
             "adjacent_matches": len([j for j in detailed_jobs if j.get("tier") == 9]),
             "avg_score": round(sum(j["score"] for j in detailed_jobs) / len(detailed_jobs), 3) if detailed_jobs else 0.0,
+            "full_time_matches": len([j for j in detailed_jobs if not j.get("is_internship")]),
+            "internship_matches": len([j for j in detailed_jobs if j.get("is_internship")]),
             "top_categories": list(dict.fromkeys([j["category"] for j in detailed_jobs]))
         }
     }

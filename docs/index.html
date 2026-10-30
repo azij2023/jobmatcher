@@ -36,7 +36,10 @@
 
       <nav class="nav-tabs" id="nav-tabs" aria-label="Main Navigation">
         <button class="nav-tab active" data-tab="jobs" id="tab-btn-jobs">
-          <span class="tab-icon">💼</span> Matched Jobs (<span id="nav-job-count">0</span>)
+          <span class="tab-icon">💼</span> Jobs (<span id="nav-job-count">0</span>)
+        </button>
+        <button class="nav-tab" data-tab="internships" id="tab-btn-internships">
+          <span class="tab-icon">🎓</span> Internships (<span id="nav-intern-count">0</span>)
         </button>
         <button class="nav-tab" data-tab="strategy" id="tab-btn-strategy">
           <span class="tab-icon">🗺️</span> 9-Tier Strategy
@@ -50,12 +53,15 @@
         <button class="nav-tab" data-tab="linkedin" id="tab-btn-linkedin">
           <span class="tab-icon">📥</span> LinkedIn Post Fetcher
         </button>
+        <button class="nav-tab" data-tab="channels" id="tab-btn-channels">
+          <span class="tab-icon">🌐</span> Career Channels
+        </button>
       </nav>
 
       <div class="nav-actions">
-        <button class="btn-nav-refresh" id="nav-refresh-btn" title="Reload the latest published snapshot; source feeds sync every 30 minutes.">
+        <button class="btn-nav-refresh" id="nav-refresh-btn" title="Instantly scan all live ATS boards and published feeds right now.">
           <span class="refresh-spinner" id="nav-refresh-icon">🔄</span>
-          <span id="nav-refresh-label">Refresh Jobs</span>
+          <span id="nav-refresh-label">Live Sync Now</span>
         </button>
         <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Background" aria-label="Toggle theme">
           <span class="theme-icon-indicator" id="theme-icon-indicator">🌙</span>
@@ -86,6 +92,26 @@
 
       <!-- Interactive Stats Deck -->
       <div class="stats-grid interactive-stats" id="stats-grid">
+        <div class="stat-card clickable active-stat" id="stat-full-jobs" data-stat-filter="full-jobs" title="Click to filter Full-Time Jobs (Internships separated)">
+          <div class="stat-header">
+            <span class="stat-badge badge-portal">💼 Full-Time</span>
+            <span class="stat-icon">💼</span>
+          </div>
+          <div class="stat-value" id="stat-full-jobs-val">0</div>
+          <div class="stat-label">Full-Time Positions</div>
+          <span class="stat-action-hint">Click to isolate</span>
+        </div>
+
+        <div class="stat-card clickable" id="stat-internships" data-stat-filter="internships" title="Click to filter Internships &amp; Traineeships">
+          <div class="stat-header">
+            <span class="stat-badge badge-unstop">🎓 Internships</span>
+            <span class="stat-icon">🎓</span>
+          </div>
+          <div class="stat-value" id="stat-internships-val">0</div>
+          <div class="stat-label">Internships &amp; Trainees</div>
+          <span class="stat-action-hint">Click to isolate</span>
+        </div>
+
         <div class="stat-card clickable" id="stat-primary" data-stat-filter="primary" title="Click to filter by Primary Roles (Tiers 1–7)">
           <div class="stat-header">
             <span class="stat-badge badge-primary">Primary Roles</span>
@@ -142,6 +168,25 @@
     <section class="tab-content active" id="view-jobs">
       <!-- Unified Search Command Deck -->
       <div class="search-command-deck" id="search-command-deck">
+        <!-- Prominent Role Type Separation Switch -->
+        <div class="role-type-segmented-control" id="role-type-segmented-control" role="tablist" aria-label="Separate Jobs from Internships">
+          <button class="type-segment-btn active" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="true" title="Full-time entry-level positions only">
+            <span class="segment-icon">💼</span>
+            <span class="segment-title">Full-Time Jobs</span>
+            <span class="segment-badge" id="segment-count-jobs">0</span>
+          </button>
+          <button class="type-segment-btn" data-role-type="internships" id="btn-type-internships" role="tab" aria-selected="false" title="Internships, Traineeships &amp; Apprenticeships only">
+            <span class="segment-icon">🎓</span>
+            <span class="segment-title">Internships</span>
+            <span class="segment-badge" id="segment-count-internships">0</span>
+          </button>
+          <button class="type-segment-btn" data-role-type="all" id="btn-type-all" role="tab" aria-selected="false" title="View all roles (Jobs and Internships together)">
+            <span class="segment-icon">🔥</span>
+            <span class="segment-title">All Roles Combined</span>
+            <span class="segment-badge" id="segment-count-all">0</span>
+          </button>
+        </div>
+
         <!-- Main Search Bar Row -->
         <div class="search-main-row">
           <div class="search-input-box">
@@ -163,6 +208,15 @@
         <div class="quick-filter-pills" id="quick-filter-pills">
           <button class="quick-pill active" data-filter-type="all">
             🔥 All Roles <span class="pill-count" id="count-all">0</span>
+          </button>
+          <button class="quick-pill pill-zero-exp" data-filter-type="zero-exp" id="pill-zero-exp" title="Filter strictly for 0 experience / freshers & interns">
+            🎓 0 Experience <span class="pill-count" id="count-zero-exp">0</span>
+          </button>
+          <button class="quick-pill pill-intern" data-filter-type="internships" id="pill-internships" title="Filter internships, traineeships & apprenticeships only">
+            🎓 Internships <span class="pill-count" id="count-internships">0</span>
+          </button>
+          <button class="quick-pill pill-full-job" data-filter-type="full-jobs" id="pill-full-jobs" title="Filter full-time jobs only (exclude internships)">
+            💼 Full-Time Jobs <span class="pill-count" id="count-full-jobs">0</span>
           </button>
           <button class="quick-pill pill-portal" data-filter-type="source-company">
             🏢 Indian Portals <span class="pill-count" id="count-company">0</span>
@@ -196,6 +250,15 @@
         <!-- Collapsible Advanced Filters Drawer -->
         <div class="advanced-filters-drawer" id="advanced-filters-drawer" style="display:none;">
           <div class="filter-drawer-grid">
+            <div class="drawer-group">
+              <label for="role-type-select">Opportunity Type</label>
+              <select id="role-type-select">
+                <option value="jobs" selected>💼 Full-Time Jobs Only (Internships Separated)</option>
+                <option value="internships">🎓 Internships &amp; Traineeships Only</option>
+                <option value="all">🔥 All Opportunities (Jobs + Internships)</option>
+              </select>
+            </div>
+
             <div class="drawer-group">
               <label for="tier-select">Category / Role Tier</label>
               <select id="tier-select">
@@ -303,9 +366,9 @@
           <span class="results-count" id="results-count">Showing 0 matching jobs</span>
           <span class="active-filter-indicator" id="active-filter-indicator"></span>
         </div>
-        <div class="auto-sync-badge" id="auto-sync-indicator" title="Job feeds are checked every 30 minutes; this page reloads the latest published snapshot.">
-          <span class="sync-pulse-dot"></span>
-          <span class="sync-badge-text">⚡ Pipeline runs every 30m • Loading latest feed data...</span>
+        <div class="auto-sync-badge" id="auto-sync-indicator" title="Real-time live streaming engine polls live ATS boards and feeds every 30 seconds.">
+          <span class="sync-pulse-dot live-active-pulse"></span>
+          <span class="sync-badge-text">🟢 Live Stream Active • Polling every 30s • Direct ATS Live</span>
         </div>
       </div>
 
@@ -762,6 +825,293 @@
       </div>
     </section>
 
+  
+    <!-- TAB 6: Multi-Platform Career Channels & Live Job Launchers -->
+    <section class="tab-content" id="view-channels">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <div class="hero-badge" style="margin-bottom: 0.5rem; display: inline-flex;">
+              <span>🌐 Multi-Platform Discovery Engine</span>
+            </div>
+            <h2 class="section-title">Job Search Channels &amp; Direct Career Portals</h2>
+            <p class="section-desc">
+              Directly query, browse, and launch live 0–2 years / fresher job searches across all premier Indian, startup, internship, data-specific, and remote career platforms.
+            </p>
+          </div>
+        </div>
+
+        <!-- Interactive Channel Query Customizer -->
+        <div class="channel-query-deck">
+          <div class="channel-query-header">
+            <span class="channel-query-icon">⚡</span>
+            <div>
+              <strong>Target Role Query Launcher:</strong>
+              <span class="channel-query-sub">Customize the role or company to update all 25+ platform launch links below simultaneously:</span>
+            </div>
+          </div>
+          <div class="channel-query-inputs">
+            <div class="channel-input-box">
+              <label for="channel-role-input">Target Role Title:</label>
+              <input type="text" id="channel-role-input" value="Data Scientist" placeholder="e.g. Applied Scientist, Data Scientist, Decision Scientist, APM...">
+            </div>
+            <div class="channel-input-box">
+              <label for="channel-company-input">Target Company (Optional):</label>
+              <input type="text" id="channel-company-input" placeholder="e.g. Swiggy, Razorpay, Flipkart, Fractal...">
+            </div>
+            <div class="channel-role-presets">
+              <span class="preset-title">Quick Roles:</span>
+              <button type="button" class="channel-preset-chip active" data-role="Data Scientist">📊 Data Scientist</button>
+              <button type="button" class="channel-preset-chip" data-role="Applied Scientist">🔬 Applied Scientist</button>
+              <button type="button" class="channel-preset-chip" data-role="Decision Scientist">🎯 Decision Scientist</button>
+              <button type="button" class="channel-preset-chip" data-role="Operations Research">📦 OR / Optimization</button>
+              <button type="button" class="channel-preset-chip" data-role="Associate Product Manager">🚀 APM</button>
+              <button type="button" class="channel-preset-chip" data-role="Machine Learning Engineer">🤖 ML Engineer</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categorized Channels Grid -->
+        <div class="channels-grid">
+
+          <!-- 1. General (India) -->
+          <div class="channel-category-card">
+            <div class="channel-cat-header">
+              <span class="channel-cat-icon">🇮🇳</span>
+              <div>
+                <h3 class="channel-cat-title">General (India)</h3>
+                <p class="channel-cat-desc">Top high-volume career networks across Indian tech hubs (Bengaluru, Hyderabad, Gurgaon, Pune, Mumbai).</p>
+              </div>
+            </div>
+            <div class="channel-links-grid" id="cat-general-india">
+              <a href="https://www.linkedin.com/jobs/search/?keywords=Data+Scientist&location=India&f_TPR=r86400&f_E=1%2C2" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="linkedin">
+                <span class="chip-brand">💼 LinkedIn India</span>
+                <span class="chip-tag">Past 24h • 0-1 Yr</span>
+              </a>
+              <a href="https://www.naukri.com/data-scientist-jobs-in-india?experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="naukri">
+                <span class="chip-brand">🔷 Naukri</span>
+                <span class="chip-tag">0 Years • Freshers</span>
+              </a>
+              <a href="https://in.indeed.com/jobs?q=Data+Scientist&l=India&fromage=1&explvl=entry_level" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="indeed">
+                <span class="chip-brand">🎯 Indeed India</span>
+                <span class="chip-tag">Entry Level</span>
+              </a>
+              <a href="https://www.foundit.in/srp/results?query=Data+Scientist&locations=India&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="foundit">
+                <span class="chip-brand">⚡ Foundit (ex-Monster)</span>
+                <span class="chip-tag">0 Yrs Exp</span>
+              </a>
+              <a href="https://www.glassdoor.co.in/Job/india-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="glassdoor">
+                <span class="chip-brand">🚪 Glassdoor India</span>
+                <span class="chip-tag">Verified Fresh</span>
+              </a>
+              <a href="https://www.shine.com/job-search/data-scientist-jobs-in-india?experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="shine">
+                <span class="chip-brand">✨ Shine</span>
+                <span class="chip-tag">Freshers</span>
+              </a>
+              <a href="https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist&cboWorkExp1=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="timesjobs">
+                <span class="chip-brand">📰 TimesJobs</span>
+                <span class="chip-tag">0 Yrs</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Tech / Startup -->
+          <div class="channel-category-card">
+            <div class="channel-cat-header">
+              <span class="channel-cat-icon">🚀</span>
+              <div>
+                <h3 class="channel-cat-title">Tech / Startup</h3>
+                <p class="channel-cat-desc">Venture-backed startups, high-growth tech teams, and product engineering hubs.</p>
+              </div>
+            </div>
+            <div class="channel-links-grid" id="cat-tech-startup">
+              <a href="https://wellfound.com/jobs?role=Data+Scientist&location=India" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="wellfound">
+                <span class="chip-brand">✌️ Wellfound (AngelList)</span>
+                <span class="chip-tag">Startups</span>
+              </a>
+              <a href="https://www.instahyre.com/jobs-search?search=Data+Scientist&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="instahyre">
+                <span class="chip-brand">⚡ Instahyre</span>
+                <span class="chip-tag">Top Tech</span>
+              </a>
+              <a href="https://cutshort.io/jobs?query=Data+Scientist&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="cutshort">
+                <span class="chip-brand">✂️ Cutshort</span>
+                <span class="chip-tag">0-1 Yr</span>
+              </a>
+              <a href="https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-1" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="hirist">
+                <span class="chip-brand">💻 Hirist</span>
+                <span class="chip-tag">Tech Jobs</span>
+              </a>
+              <a href="https://www.workatastartup.com/jobs?query=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="ycombinator">
+                <span class="chip-brand">🟧 Y Combinator Startups</span>
+                <span class="chip-tag">YC Backed</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Internships / Freshers -->
+          <div class="channel-category-card">
+            <div class="channel-cat-header">
+              <span class="channel-cat-icon">🎓</span>
+              <div>
+                <h3 class="channel-cat-title">Internships / Freshers</h3>
+                <p class="channel-cat-desc">Dedicated campus hiring, student trainee openings, and early-career starter programs.</p>
+              </div>
+            </div>
+            <div class="channel-links-grid" id="cat-internships-freshers">
+              <a href="https://internshala.com/internships/data-science-internship/" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="internshala">
+                <span class="chip-brand">🎓 Internshala</span>
+                <span class="chip-tag">Student Interns</span>
+              </a>
+              <a href="https://unstop.com/internships?keyword=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="unstop">
+                <span class="chip-brand">🎯 Unstop</span>
+                <span class="chip-tag">Campus &amp; Competitions</span>
+              </a>
+              <a href="https://www.letsintern.com/internships/data-science-internships" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="letsintern">
+                <span class="chip-brand">🌱 LetsIntern</span>
+                <span class="chip-tag">Internships</span>
+              </a>
+              <a href="https://apna.co/jobs?q=Data+Scientist&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="apna">
+                <span class="chip-brand">📱 Apna</span>
+                <span class="chip-tag">Freshers</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. Data / Analytics-Specific -->
+          <div class="channel-category-card">
+            <div class="channel-cat-header">
+              <span class="channel-cat-icon">📊</span>
+              <div>
+                <h3 class="channel-cat-title">Data / Analytics-Specific</h3>
+                <p class="channel-cat-desc">Niche data science communities, competition boards, and analytics research media.</p>
+              </div>
+            </div>
+            <div class="channel-links-grid" id="cat-data-analytics">
+              <a href="https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="analyticsvidhya">
+                <span class="chip-brand">📈 Analytics Vidhya</span>
+                <span class="chip-tag">Data Community</span>
+              </a>
+              <a href="https://www.kaggle.com/jobs" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="kaggle">
+                <span class="chip-brand">🏆 Kaggle Jobs</span>
+                <span class="chip-tag">ML &amp; Competitions</span>
+              </a>
+              <a href="https://analyticsindiamag.com/careers/" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="aim">
+                <span class="chip-brand">📰 Analytics India Mag</span>
+                <span class="chip-tag">AI News &amp; Jobs</span>
+              </a>
+              <a href="https://dataelixir.com/jobs" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="dataelixir">
+                <span class="chip-brand">💌 DataTau / Data Elixir</span>
+                <span class="chip-tag">Curated Newsletter</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Remote / Global -->
+          <div class="channel-category-card">
+            <div class="channel-cat-header">
+              <span class="channel-cat-icon">🌐</span>
+              <div>
+                <h3 class="channel-cat-title">Remote / Global</h3>
+                <p class="channel-cat-desc">Worldwide remote opportunities hiring candidates in India and worldwide time zones.</p>
+              </div>
+            </div>
+            <div class="channel-links-grid" id="cat-remote-global">
+              <a href="https://remoteok.com/remote-data-scientist-jobs" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="remoteok">
+                <span class="chip-brand">🏝️ RemoteOK</span>
+                <span class="chip-tag">Remote Worldwide</span>
+              </a>
+              <a href="https://weworkremotely.com/remote-jobs/search?term=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="weworkremotely">
+                <span class="chip-brand">🌍 We Work Remotely</span>
+                <span class="chip-tag">Remote Global</span>
+              </a>
+              <a href="https://remotive.com/remote-jobs?search=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="remotive">
+                <span class="chip-brand">🌐 Remotive</span>
+                <span class="chip-tag">Curated Remote</span>
+              </a>
+              <a href="https://www.workingnomads.com/jobs?category=data&q=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="workingnomads">
+                <span class="chip-brand">⛺ Working Nomads</span>
+                <span class="chip-tag">Data Roles</span>
+              </a>
+              <a href="https://app.otta.com/jobs" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="otta">
+                <span class="chip-brand">🔮 Otta / Welcome to Jungle</span>
+                <span class="chip-tag">Curated Tech</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Direct Company Career Portals -->
+          <div class="channel-category-card">
+            <div class="channel-cat-header">
+              <span class="channel-cat-icon">🏢</span>
+              <div>
+                <h3 class="channel-cat-title">Direct Company Career Pages</h3>
+                <p class="channel-cat-desc">Skip middlemen. Apply directly to official requisitions on company ATS portals.</p>
+              </div>
+            </div>
+            <div class="channel-links-grid" id="cat-direct-companies">
+              <a href="https://www.flipkartcareers.com/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🛒 Flipkart Careers</span>
+                <span class="chip-tag">Official ATS</span>
+              </a>
+              <a href="https://careers.swiggy.com/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🍕 Swiggy Careers</span>
+                <span class="chip-tag">SmartRecruiters</span>
+              </a>
+              <a href="https://razorpay.com/jobs/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">💳 Razorpay Jobs</span>
+                <span class="chip-tag">Direct Portal</span>
+              </a>
+              <a href="https://www.phonepe.com/careers/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">📱 PhonePe Careers</span>
+                <span class="chip-tag">Official Portal</span>
+              </a>
+              <a href="https://www.meesho.io/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🛍️ Meesho Careers</span>
+                <span class="chip-tag">Lever ATS</span>
+              </a>
+              <a href="https://fractal.ai/careers/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🧠 Fractal Analytics</span>
+                <span class="chip-tag">AI &amp; Analytics</span>
+              </a>
+              <a href="https://www.mu-sigma.com/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">📐 Mu Sigma</span>
+                <span class="chip-tag">Decision Science</span>
+              </a>
+              <a href="https://www.tigeranalytics.com/careers/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🐯 Tiger Analytics</span>
+                <span class="chip-tag">Applied ML &amp; DS</span>
+              </a>
+              <a href="https://careers.cred.club/" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">💎 CRED Careers</span>
+                <span class="chip-tag">Lever ATS</span>
+              </a>
+              <a href="https://www.zeptonow.com/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">⚡ Zepto Careers</span>
+                <span class="chip-tag">Quick Commerce</span>
+              </a>
+              <a href="https://www.inmobi.com/company/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🎯 InMobi Careers</span>
+                <span class="chip-tag">Greenhouse ATS</span>
+              </a>
+              <a href="https://groww.in/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">📈 Groww Careers</span>
+                <span class="chip-tag">Greenhouse ATS</span>
+              </a>
+              <a href="https://www.zomato.com/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">🍽️ Zomato Careers</span>
+                <span class="chip-tag">Direct Portal</span>
+              </a>
+              <a href="https://www.delhivery.com/careers" target="_blank" rel="noopener noreferrer" class="channel-chip">
+                <span class="chip-brand">📦 Delhivery Careers</span>
+                <span class="chip-tag">Logistics &amp; OR</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -832,6 +1182,14 @@
         <div class="modal-section" id="modal-strategy-advice-section">
           <h4>Recommended Application Strategy</h4>
           <p id="modal-strategy-advice" class="modal-text"></p>
+        </div>
+
+        <div class="modal-section" id="modal-multi-source-section">
+          <h4>🌐 Cross-Platform Application Hub</h4>
+          <p class="modal-text" style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem;">
+            Directly cross-reference this role across major India, startup, internship, analytics, and remote channels:
+          </p>
+          <div id="modal-multi-source-grid" class="multi-source-pills-grid"></div>
         </div>
       </div>
 

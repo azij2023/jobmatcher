@@ -1180,6 +1180,13 @@ body {
   box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
 }
 
+.quick-filter-pills .quick-pill.pill-zero-exp.active {
+  background: #10b981;
+  border-color: #10b981;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.35);
+}
+
 .pill-count {
   background: rgba(0, 0, 0, 0.07);
   color: inherit;
@@ -1647,6 +1654,48 @@ input[type="range"] {
   background: rgba(16, 185, 129, 0.2);
   color: #6ee7b7;
   border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+.badge-early-career {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+}
+
+[data-theme="dark"] .badge-early-career {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+/* Internship Badge */
+.intern-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] .intern-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+/* Internship / Full-time filter pill accents */
+.pill-intern {
+  --pill-accent: #d97706;
+}
+
+.pill-full-job {
+  --pill-accent: #059669;
 }
 
 .job-meta-badges {
@@ -3484,3 +3533,396 @@ input[type="range"] {
 }
 
 
+
+/* Role Type Segmented Control */
+.role-type-segmented-control {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem;
+  border-radius: var(--radius-lg, 12px);
+  margin-bottom: 1.25rem;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.type-segment-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1.2rem;
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md, 8px);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  text-align: center;
+}
+
+.type-segment-btn:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme="dark"] .type-segment-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.type-segment-btn.active {
+  background: var(--bg-card);
+  color: var(--brand-primary);
+  border-color: var(--border-color);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] .type-segment-btn.active {
+  background: #1e293b;
+  color: #818cf8;
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.type-segment-btn .segment-icon {
+  font-size: 1.05rem;
+}
+
+.type-segment-btn .segment-title {
+  letter-spacing: -0.01em;
+}
+
+.type-segment-btn .segment-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full, 9999px);
+  background: rgba(79, 70, 229, 0.08);
+  color: var(--brand-primary);
+  font-family: var(--font-mono);
+}
+
+.type-segment-btn.active .segment-badge {
+  background: var(--brand-primary);
+  color: #ffffff;
+}
+
+[data-theme="dark"] .type-segment-btn .segment-badge {
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+}
+
+[data-theme="dark"] .type-segment-btn.active .segment-badge {
+  background: #4f46e5;
+  color: #ffffff;
+}
+
+/* Full-time & Internship Badges on Job Cards */
+.fulltime-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #eff6ff;
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+  letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] .fulltime-badge {
+  background: rgba(59, 130, 246, 0.18);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.intern-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fcd34d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.65rem;
+  border-radius: var(--radius-full, 9999px);
+  letter-spacing: 0.02em;
+}
+
+[data-theme="dark"] .intern-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+@media (max-width: 768px) {
+  .role-type-segmented-control {
+    flex-direction: column;
+  }
+  .type-segment-btn {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+/* Career Channels & Multi-Platform Hub */
+.channel-query-deck {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.channel-query-header {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+
+.channel-query-icon {
+  font-size: 1.25rem;
+}
+
+.channel-query-sub {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.channel-query-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.channel-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.channel-input-box label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.channel-input-box input {
+  padding: 0.65rem 0.95rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md, 8px);
+  background: var(--bg-card);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.channel-input-box input:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px var(--border-glow);
+}
+
+.channel-role-presets {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-top: 0.35rem;
+}
+
+.channel-role-presets .preset-title {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-dim);
+}
+
+.channel-preset-chip {
+  padding: 0.3rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: var(--radius-full, 9999px);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.channel-preset-chip:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.channel-preset-chip.active {
+  background: var(--brand-primary);
+  color: #ffffff;
+  border-color: var(--brand-primary);
+}
+
+/* Channels Grid */
+.channels-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.25rem;
+}
+
+.channel-category-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg, 12px);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.channel-category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.channel-cat-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.channel-cat-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.channel-cat-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.2rem;
+}
+
+.channel-cat-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.channel-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.6rem;
+  flex: 1;
+}
+
+.channel-chip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.6rem 0.8rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md, 8px);
+  text-decoration: none;
+  transition: all 0.18s ease;
+}
+
+.channel-chip:hover {
+  background: var(--bg-card);
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.1);
+}
+
+.chip-brand {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.channel-chip:hover .chip-brand {
+  color: var(--brand-primary);
+}
+
+.chip-tag {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+/* Modal Multi-Source Pills Grid */
+.multi-source-pills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.5rem;
+}
+
+.modal-channel-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-full, 9999px);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.modal-channel-pill:hover {
+  background: var(--brand-primary);
+  color: #ffffff;
+  border-color: var(--brand-primary);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 640px) {
+  .channels-grid {
+    grid-template-columns: 1fr;
+  }
+  .channel-links-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Live Active Radar Pulse */
+.sync-pulse-dot.live-active-pulse {
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: liveRadarPulse 2s infinite cubic-bezier(0.66, 0, 0, 1);
+}
+
+@keyframes liveRadarPulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 9px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}

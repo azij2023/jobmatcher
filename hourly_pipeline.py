@@ -41,6 +41,16 @@ def parse_any_datetime(dt_str):
             pass
     return None
 
+def normalize_job_key(company, title):
+    import re
+    c = re.sub(r'[^a-z0-9]', '', (company or '').lower())
+    t = (title or '').lower()
+    t = re.sub(r'\s*\([^)]*\)', '', t)
+    t = re.sub(r'\s*\|.*', '', t)
+    t = re.sub(r'\s*-\s*(?:fresher|batch\s*202\d|bangalore|bengaluru|gurugram|noida|india|early career).*', '', t)
+    t = re.sub(r'[^a-z0-9]', '', t)
+    return f"{c}::{t}"
+
 def run_hourly_sync():
     now = datetime.datetime.now(datetime.timezone.utc)
     timestamp_str = now.isoformat(timespec="minutes").replace("+00:00", "Z")
@@ -101,12 +111,30 @@ def run_hourly_sync():
         if "unstop.com" in u_lower and not job.get("deadline"):
             continue
 
+        # Purge generic company portal homepages that do not link to an exact job requisition
+        is_portal_type = "portal" in (job.get("source_type") or "").lower() or "company" in (job.get("source_type") or "").lower()
+        if is_portal_type:
+            if "linkedin.com/jobs/search" in u_lower:
+                continue
+            if not any(exact in u_lower for exact in ["/job", "/posting", "/jobs/", "smartrecruiters", "greenhouse.io", "lever.co", "ashbyhq", "?id=", "#!/job-view/"]):
+                continue
+
         valid_existing.append(job)
 
-    existing_jobs = valid_existing
-    existing_by_url = {job["url"]: job for job in existing_jobs if job.get("url")}
+    # Deduplicate existing jobs by normalized (company, title) keeping newest entry
+    deduped_existing = []
+    seen_existing_keys = set()
+    for job in sorted(valid_existing, key=lambda j: (j.get("hours_ago") if j.get("hours_ago") is not None else 999)):
+        k = normalize_job_key(job.get("company"), job.get("title"))
+        if k in seen_existing_keys:
+            continue
+        seen_existing_keys.add(k)
+        deduped_existing.append(job)
+
+    existing_jobs = deduped_existing
+    existing_by_url = {job["url"].lower(): job for job in existing_jobs if job.get("url")}
     existing_by_key = {
-        f"{job.get('company', '').lower()}::{job.get('title', '').lower()}": job
+        normalize_job_key(job.get('company'), job.get('title')): job
         for job in existing_jobs
     }
 
@@ -146,8 +174,8 @@ def run_hourly_sync():
     added_count = 0
 
     for job in live_scraped_jobs:
-        j_key = f"{job.get('company', '').lower()}::{job.get('title', '').lower()}"
-        j_url = job.get("url")
+        j_key = normalize_job_key(job.get('company'), job.get('title'))
+        j_url = (job.get("url") or "").lower()
         existing_job = existing_by_url.get(j_url) or existing_by_key.get(j_key)
         if existing_job:
             existing_job.update(job)
@@ -205,6 +233,34 @@ def run_hourly_sync():
                 job["badge"] = role_match.get("badge")
                 job["category"] = role_match.get("category")
 
+    # 2b. Re-evaluate strict 0-experience eligibility against profile
+    strict_zero = loaded_profile.get("job_filters", {}).get("strict_zero_experience", True)
+    if strict_zero:
+        from matching.scoring import score_job
+        clean_zero_jobs = []
+        for job in existing_jobs:
+            scored = score_job(job, loaded_profile)
+            if not scored.get("rejected"):
+                clean_zero_jobs.append(job)
+        existing_jobs = clean_zero_jobs
+
+    # 2c-1. Enrich multi_source_urls across 6 channel categories
+    from collectors.career_urls import build_multi_source_urls
+    for job in existing_jobs:
+        if "multi_source_urls" not in job or not job["multi_source_urls"]:
+            job["multi_source_urls"] = build_multi_source_urls(job.get("title", ""), job.get("company", ""))
+
+    # 2c. Compute is_internship flag for every job
+    import re
+    intern_keywords = ["intern", "internship", "trainee", "apprentice", "apprenticeship"]
+    for job in existing_jobs:
+        t_low = (job.get("title") or "").lower()
+        d_low = (job.get("raw_description") or job.get("description") or "").lower()
+        is_int = any(kw in t_low for kw in intern_keywords)
+        if not is_int:
+            is_int = bool(re.search(r'\b(?:internship|intern\s+position|apprenticeship)\b', d_low))
+        job["is_internship"] = is_int
+
     # Keep listings up to 30 days (720 hours) for the "Anytime" filter
     existing_jobs = [
         job for job in existing_jobs
@@ -213,6 +269,17 @@ def run_hourly_sync():
 
     # 3. Sort from newest to oldest
     existing_jobs.sort(key=lambda j: j.get("hours_ago", 999))
+
+    # Final deduplication by normalized key preserving newest
+    final_deduped = []
+    seen_final = set()
+    for job in existing_jobs:
+        k = normalize_job_key(job.get("company"), job.get("title"))
+        if k in seen_final:
+            continue
+        seen_final.add(k)
+        final_deduped.append(job)
+    existing_jobs = final_deduped
 
     data["jobs"] = existing_jobs
     data["total_jobs"] = len(existing_jobs)
@@ -229,6 +296,8 @@ def run_hourly_sync():
         "primary_matches": primary_count,
         "secondary_matches": secondary_count,
         "adjacent_matches": adjacent_count,
+        "full_time_matches": sum(1 for j in existing_jobs if not j.get("is_internship")),
+        "internship_matches": sum(1 for j in existing_jobs if j.get("is_internship")),
         "last_sync": timestamp_str
     }
 

@@ -1,5 +1,9 @@
 {
   "target_level": "fresher",
+  "job_filters": {
+    "max_experience_years": 0,
+    "strict_zero_experience": true
+  },
   "role_mapping": [
     {
       "tier": 1,

@@ -997,6 +997,7 @@ def collect_and_score_all_live_jobs(
             "hours_ago": hours_ago,
             "relative_time": raw["relative_time"],
             "url": raw["url"],
+            "direct_job_url": raw.get("direct_job_url") or raw["url"],
             "linkedin_url": linkedin_url,
             "naukri_url": naukri_url,
             "company_url": raw.get("company_url") or raw["url"],

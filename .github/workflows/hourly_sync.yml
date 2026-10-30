@@ -1,12 +1,18 @@
-name: 30-Minute Job Feed Sync
+name: Real-Time Live Job Feed Sync
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Runs automatically every 30 minutes
-  workflow_dispatch:        # Allows manual 1-click trigger from GitHub Actions
+    - cron: '*/5 * * * *'  # Runs automatically every 5 minutes (maximum frequency supported by GitHub Actions)
+  workflow_dispatch:        # Allows instant 1-click trigger from GitHub Actions
+  repository_dispatch:      # Allows instant trigger via incoming webhooks from external ATS/APIs
+    types: [live_job_alert, ats_webhook, instant_sync]
 
 permissions:
   contents: write
+
+concurrency:
+  group: "feed-sync"
+  cancel-in-progress: false
 
 jobs:
   feed-sync:
@@ -33,5 +39,5 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data.json docs/data.json data.js docs/data.js
-          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(pipeline): sync verified fresh job listings [skip ci]" && git push)
+          git add data.json docs/data.json data.js docs/data.js jobs.db
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(pipeline): instant sync fresh job listings [skip ci]" && git push)
