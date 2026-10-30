@@ -41,7 +41,10 @@ HEADERS = {
 
 EXCLUDE_TITLES = [
     "senior", "sr.", "lead", "principal", "manager", "director", "head of", "vp",
-    "staff", "architect", "5+", "6+", "7+", "8+", "10+", "years experience"
+    "staff", "architect", "5+", "6+", "7+", "8+", "10+", "years experience",
+    " ii", " iii", " iv", "-ii", "-iii", " 2", " 3", "scientist ii", "scientist iii",
+    "engineer ii", "engineer iii", "analyst ii", "analyst iii", "specialist ii", "specialist iii",
+    "mid-level", "mid level", "experienced", "1+ years", "2+ years", "3+ years"
 ]
 
 def parse_relative_time_to_hours(time_str: str) -> float | None:

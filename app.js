@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sortBy: "latest",
     maxAgeHours: 168,
     onlySaved: false,
-    onlyZeroExp: false,
+    onlyZeroExp: true, // Strictly 0 experience / freshers by default
     roleType: "jobs" // "jobs" (full-time only, internships separated), "internships", or "all"
   };
 
@@ -148,11 +148,35 @@ document.addEventListener("DOMContentLoaded", () => {
   const isZeroExpJob = j => {
     if (!j) return false;
     const minExp = j.min_years_experience != null ? Number(j.min_years_experience) : null;
-    const text = `${j.title || ''} ${j.description || ''} ${j.raw_description || ''}`.toLowerCase();
-    const hasExpReq = /\b(?:1|2|3|4|5|[1-9]\d*)\+?\s*(?:-|to)?\s*\d*\s*years?(?:\s+of)?\s*(?:relevant\s+)?experience\b/.test(text);
-    const isExplicitZero = /\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b/.test(text);
+    const title = (j.title || '').toLowerCase();
+    const desc = `${j.description || ''} ${j.raw_description || ''}`.toLowerCase();
+    const text = `${title} ${desc}`;
+
+    // Reject Senior / Lead / Principal / Staff / Manager
+    if (/\b(?:senior|sr\b|sr\.|staff|principal|lead|head of|director|vp|manager|architect)\b/i.test(title)) {
+      if (!/\b(?:associate product manager|apm|intern|trainee)\b/i.test(title)) return false;
+    }
+
+    // Reject Level II, III, IV, etc. (e.g. Applied Scientist II, Research Scientist III)
+    if (/\b(?:ii|iii|iv|v|2|3|4)\b/i.test(title) && /(?:scientist|engineer|analyst|specialist|researcher|consultant|developer)/i.test(title)) {
+      return false;
+    }
+
+    // Reject if minimum years of experience > 0
     if (minExp !== null && minExp > 0) return false;
+
+    // Reject if demands 1+ years experience without explicit zero / fresher
+    const hasExpReq = /\b(?:[1-9]\d*)\+?\s*(?:-|to)?\s*\d*\s*years?(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?experience\b/i.test(text);
+    const isExplicitZero = /\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b|\bentry\s*level\b/i.test(text);
     if (hasExpReq && !isExplicitZero) return false;
+
+    // Require entry-level / fresher marker for full-time jobs
+    const isIntern = (typeof isInternshipJob === 'function') ? isInternshipJob(j) : false;
+    if (!isIntern) {
+      const hasEntryMarker = /\b(?:fresher|intern|internship|trainee|campus|graduate|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b/i.test(text);
+      if (!hasEntryMarker) return false;
+    }
+
     return true;
   };
 

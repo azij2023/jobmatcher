@@ -117,18 +117,37 @@ def score_job(job: dict, profile: dict) -> dict:
                 "rejection_reason": f"Platform '{agg}' excluded by profile configuration."
             }
 
-    # 1. Check Hard Exclusion Keywords (Title & Description) using word boundaries
+    # 1. Check Hard Exclusion Keywords & Senior / Experienced Levels in Title
+    title_lower = title.lower()
     raw_desc = job.get('raw_description', '').lower()
+
+    # Reject Senior / Lead / Principal / Staff / Manager in title
+    if re.search(r'\b(?:senior|sr\b|sr\.|staff|principal|lead|head of|director|vp|vice president|manager|architect)\b', title_lower):
+        if not re.search(r'\b(?:associate product manager|apm|intern|trainee)\b', title_lower):
+            return {
+                "rejected": True,
+                "final_score": 0.0,
+                "rejection_reason": f"Senior title keyword in '{title}'"
+            }
+
+    # Reject Experienced Level II, III, IV, etc. in title
+    if re.search(r'\b(?:ii|iii|iv|v|2|3|4)\b', title_lower) and any(w in title_lower for w in ['scientist', 'engineer', 'analyst', 'specialist', 'researcher', 'consultant', 'developer']):
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"Experienced level (II/III/IV) in title '{title}' (not a fresher role)"
+        }
+
     for bad in profile.get("job_filters", {}).get("exclude_keywords", []):
         bad_lower = bad.lower().strip()
         
         # Exception: Allow APM / Associate Product Manager despite 'manager'
         if bad_lower == "manager":
-            if "associate product manager" in title or "apm" in title or "junior product manager" in title:
+            if "associate product manager" in title_lower or "apm" in title_lower or "junior product manager" in title_lower:
                 continue
 
         pattern = rf"\b{re.escape(bad_lower)}\b" if not bad_lower.endswith(("+", ".")) else re.escape(bad_lower)
-        if re.search(pattern, title):
+        if re.search(pattern, title_lower):
             return {
                 "rejected": True,
                 "final_score": 0.0,
@@ -144,28 +163,39 @@ def score_job(job: dict, profile: dict) -> dict:
                     "rejection_reason": f"Description contains excluded domain/stale keyword: '{bad}'"
                 }
 
-    # 2. Check Experience Limit for Entry Level / Freshers (Strict 0 experience limit)
+    # 2. Strict Fresher / 0 Experience Check
     max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 0)
     strict_zero = profile.get("job_filters", {}).get("strict_zero_experience", True)
     if min_exp is not None and min_exp > max_allowed_exp:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} year for pure freshers)"
+            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} years for pure freshers)"
         }
 
     # 2b. Check Description for experience requirements (1+ years or 2+ years)
-    full_text = f"{title} {job.get('raw_description', '')}".lower()
+    full_text = f"{title_lower} {raw_desc}".lower()
     exp_threshold = "1" if strict_zero or max_allowed_exp == 0 else "2"
-    exp_pattern = rf"(?:minimum(?:\s+of)?|at\s+least|\b)\s*([{exp_threshold}-9]|\d{{2,}})\+?\s*(?:-\s*\d+)?\s*years?(?:\s+of)?\s*(?:relevant\s+)?experience"
+    exp_pattern = rf"(?:minimum(?:\s+of)?|at\s+least|\b)\s*([{exp_threshold}-9]|\d{{2,}})\+?\s*(?:-\s*\d+)?\s*years?(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?experience"
     exp_match = re.search(exp_pattern, full_text)
-    is_zero_explicit = re.search(r"\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b", full_text)
+    is_zero_explicit = re.search(r"\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b|\bentry\s*level\b", full_text)
     if exp_match and not is_zero_explicit:
         return {
             "rejected": True,
             "final_score": 0.0,
             "rejection_reason": f"Job demands '{exp_match.group(0).strip()}' (exceeds 0-experience fresher limit)"
         }
+
+    # 2c. Require entry-level / fresher verification for full-time jobs
+    is_internship = any(kw in title_lower for kw in ['intern', 'internship', 'trainee', 'apprentice'])
+    if not is_internship:
+        has_entry_marker = bool(re.search(r'\b(?:fresher|intern|internship|trainee|campus|graduate|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b', full_text))
+        if not has_entry_marker:
+            return {
+                "rejected": True,
+                "final_score": 0.0,
+                "rejection_reason": f"No entry-level or fresher indicator found for '{title}' (pure freshers only)"
+            }
 
     # 3. Check Seniority / Level Filter
     acceptable_seniorities = set(profile.get("seniority", {}).get("acceptable", []))
