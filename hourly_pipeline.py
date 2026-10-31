@@ -111,12 +111,12 @@ def run_hourly_sync():
         if "unstop.com" in u_lower and not job.get("deadline"):
             continue
 
-        # Purge generic company portal homepages that do not link to an exact job requisition
+        # Keep verified company career portals and direct requisitions
         is_portal_type = "portal" in (job.get("source_type") or "").lower() or "company" in (job.get("source_type") or "").lower()
         if is_portal_type:
             if "linkedin.com/jobs/search" in u_lower:
                 continue
-            if not any(exact in u_lower for exact in ["/job", "/posting", "/jobs/", "smartrecruiters", "greenhouse.io", "lever.co", "ashbyhq", "?id=", "#!/job-view/"]):
+            if not any(exact in u_lower for exact in ["/job", "/posting", "/jobs/", "smartrecruiters", "greenhouse.io", "lever.co", "ashbyhq", "careers", "/careers"]):
                 continue
 
         valid_existing.append(job)

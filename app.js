@@ -190,57 +190,43 @@ document.addEventListener("DOMContentLoaded", () => {
     return /\b(?:internship|intern\s+position|apprenticeship)\b/.test(desc);
   };
 
-    const isExactJobUrl = u => {
+  const isExactJobUrl = u => {
     if (!u) return false;
     const s = u.toLowerCase();
+    // Exclude any fake generated slugs that return 404
+    if (s.includes('-2026') || s.includes('job-opening/?id=') || s.includes('#!/job-view/')) return false;
     if (s.includes('/jobs/view/') || s.includes('/internships/') || s.includes('/posting/') || 
         s.includes('greenhouse.io') || s.includes('lever.co') || s.includes('ashbyhq.com') || 
-        s.includes('smartrecruiters.com') || s.includes('/posts/') || s.includes('activity-') ||
-        s.includes('#!/job-view/') || s.includes('job-view') || s.includes('job-opening') ||
-        s.includes('?id=') || s.includes('/jobs/data-') || s.includes('/jobs/analyst-') || 
-        s.includes('/jobs/associate-') || s.includes('/jobs/decision-') || s.includes('/jobs/operations-') ||
-        s.includes('/careers/decision-') || s.includes('/careers/operations-') || s.includes('/careers/healthcare-') ||
-        s.includes('/careers/product-') || s.includes('/careers/associate-') || s.includes('/careers/data-')) {
+        s.includes('smartrecruiters.com') || s.includes('/posts/') || s.includes('activity-')) {
       return true;
     }
-    const clean = s.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
-    const parts = clean.split('/');
-    if (parts.length <= 1) return false;
-    if (parts.length === 2 && ['careers', 'jobs', 'job-openings', 'company', 'en', 'in', 'about'].includes(parts[1])) {
-      return false;
-    }
-    return parts.length >= 2;
+    return false;
   };
 
   const resolveJobTargetUrl = j => {
     if (!j) return '#';
-    const directUrl = (j.direct_job_url || '').trim();
-    const url = (j.url || '').trim();
+    let directUrl = (j.direct_job_url || '').trim();
+    let url = (j.url || '').trim();
     const linkedinUrl = (j.linkedin_url || '').trim();
     const companyUrl = (j.company_url || '').trim();
 
-    // 1. Direct specific job link (ATS, Greenhouse, Lever, Ashby, SmartRecruiters, Unstop, Requisition)
-    if (directUrl && isExactJobUrl(directUrl)) return directUrl;
+    // Strip legacy broken fake slug URLs
+    if (directUrl.includes('-2026') || directUrl.includes('job-opening/?id=') || directUrl.includes('#!/job-view/')) directUrl = '';
+    if (url.includes('-2026') || url.includes('job-opening/?id=') || url.includes('#!/job-view/')) url = '';
 
-    // 2. Specific job URL on any board
+    // 1. Direct specific job link on verified ATS or platforms
+    if (directUrl && isExactJobUrl(directUrl)) return directUrl;
     if (url && isExactJobUrl(url)) return url;
 
-    // 3. For official company portal jobs, always prioritize direct portal requisition, NEVER redirect to LinkedIn
-    const isCompanyPortal = (j.source_type && (j.source_type.includes('Company') || j.source_type.includes('Portal') || j.source_type.includes('ATS')));
-    if (isCompanyPortal) {
-      if (directUrl) return directUrl;
-      if (url && !url.includes('linkedin.com/jobs/search')) return url;
-      if (companyUrl) return companyUrl;
-    }
+    // 2. Official verified company career portal URL
+    if (companyUrl && !companyUrl.includes('-2026')) return companyUrl;
+    if (directUrl && !directUrl.includes('-2026')) return directUrl;
+    if (url && !url.includes('-2026') && !url.includes('linkedin.com/jobs/search')) return url;
 
-    // 4. Exact LinkedIn post link
+    // 3. Exact LinkedIn post link
     if (linkedinUrl && isExactJobUrl(linkedinUrl)) return linkedinUrl;
 
-    // 5. Targeted LinkedIn search query for role & company (lands directly on the role card)
-    if (url && (url.includes('linkedin.com/jobs/search') || url.includes('linkedin.com/search'))) return url;
-    if (linkedinUrl && (linkedinUrl.includes('linkedin.com/jobs/search') || linkedinUrl.includes('linkedin.com/search'))) return linkedinUrl;
-
-    // 6. Construct targeted search query for company + title so user lands on exact role, never a blank homepage
+    // 4. Targeted search query for company + title so user lands on exact role
     if (j.company && j.title) {
       const query = encodeURIComponent(`${j.company} ${j.title}`.trim());
       return `https://www.linkedin.com/jobs/search/?keywords=${query}&location=India&f_TPR=r604800`;
