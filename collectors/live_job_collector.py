@@ -30,7 +30,7 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from matching.scoring import score_job
-from scratch.add_semantic_skill_gaps import enrich_job_semantic_gaps
+from matching.semantic_gaps import enrich_job_semantic_gaps
 from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url
 
 HEADERS = {

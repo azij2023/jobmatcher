@@ -17,7 +17,7 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = SCRIPT_DIR
 
 from collectors.live_job_collector import collect_and_score_all_live_jobs
-from scratch.add_semantic_skill_gaps import enrich_job_semantic_gaps
+from matching.semantic_gaps import enrich_job_semantic_gaps
 
 def parse_any_datetime(dt_str):
     """Robustly parse timestamps in ISO, UTC, or space-separated formats."""

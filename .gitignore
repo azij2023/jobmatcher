@@ -5,6 +5,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.log
 
 # Database
 *.db
@@ -14,3 +15,7 @@ __pycache__/
 .venv/
 env/
 venv/
+
+# Scratch & temporary artifacts
+scratch/
+.pytest_cache/
