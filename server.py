@@ -75,6 +75,22 @@ def run_sync_task():
     except Exception as e:
         print(f"[API Sync] Error: {e}")
 
+# Automatic Hourly Background Scheduler
+@app.on_event("startup")
+async def start_hourly_background_sync():
+    async def hourly_loop():
+        # Wait 60 seconds after startup before first background check
+        await asyncio.sleep(60)
+        while True:
+            try:
+                print("[Hourly Scheduler] Running automated 1-hour job feed refresh...")
+                await asyncio.to_thread(run_sync_task)
+            except Exception as e:
+                print(f"[Hourly Scheduler] Error: {e}")
+            # Sleep 1 hour (3600 seconds)
+            await asyncio.sleep(3600)
+    asyncio.create_task(hourly_loop())
+
 @app.post("/api/sync")
 def trigger_sync(background_tasks: BackgroundTasks):
     background_tasks.add_task(run_sync_task)
