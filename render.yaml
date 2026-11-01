@@ -1,0 +1,30 @@
+services:
+  # 1. Full-Stack Python Web Service & Live API on Render
+  - type: web
+    name: targetmatch-api
+    runtime: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: PORT
+        value: 10000
+
+  # 2. High-Performance Static Site on Render
+  - type: static
+    name: targetmatch-web
+    runtime: static
+    buildCommand: ""
+    publishDir: "."
+    headers:
+      - path: /data.json
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+      - path: /data.js
+        name: Cache-Control
+        value: public, max-age=0, must-revalidate
+
