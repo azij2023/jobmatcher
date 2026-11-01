@@ -237,7 +237,10 @@ def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
     Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
     """
-    from bs4 import BeautifulSoup
+    try:
+        from bs4 import BeautifulSoup
+    except ImportError:
+        BeautifulSoup = None
 
     queries = [
         "data scientist fresher",

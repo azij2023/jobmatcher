@@ -2,13 +2,15 @@ name: Real-Time Live Job Feed Sync
 
 on:
   schedule:
-    - cron: '*/5 * * * *'  # Runs automatically every 5 minutes (maximum frequency supported by GitHub Actions)
+    - cron: '0 * * * *'  # Runs automatically at minute 0 of every hour
   push:
     paths:
       - 'collectors/**'
       - 'matching/**'
       - 'hourly_pipeline.py'
       - 'profile.json'
+      - 'requirements.txt'
+      - '.github/workflows/hourly_sync.yml'
   workflow_dispatch:        # Allows instant 1-click trigger from GitHub Actions
   repository_dispatch:      # Allows instant trigger via incoming webhooks from external ATS/APIs
     types: [live_job_alert, ats_webhook, instant_sync]
@@ -31,6 +33,12 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
       - name: Run Job Feed Pipeline
         env:
@@ -47,7 +55,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json docs/data.json data.js docs/data.js
           if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "chore(pipeline): instant sync fresh job listings (5m-2d recency)"
+            git commit -m "chore(pipeline): hourly sync fresh job listings (5m-2d recency)"
             git pull --rebase origin main || true
             git push origin main
           fi
