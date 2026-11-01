@@ -3355,6 +3355,8 @@ Best regards,
   renderStrategyTable();
   renderSkillMatrix();
   renderCuratedFeed();
+  // Immediately re-validate data.json with zero cache on startup
+  setTimeout(() => { refreshJobsLive(true); }, 50);
   if (autoSyncIndicator) {
     const feedUpdatedAt = data.last_updated
       ? new Date(data.last_updated).toLocaleString()
