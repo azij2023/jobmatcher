@@ -1,6 +1,10 @@
 name: Deploy Static Website to GitHub Pages
 
 on:
+  workflow_run:
+    workflows: ["Real-Time Live Job Feed Sync"]
+    types:
+      - completed
   push:
     branches: ["master", "main"]
   workflow_dispatch:
@@ -16,6 +20,7 @@ concurrency:
 
 jobs:
   deploy:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

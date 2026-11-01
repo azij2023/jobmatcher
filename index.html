@@ -170,7 +170,7 @@
       <div class="search-command-deck" id="search-command-deck">
         <!-- Prominent Role Type Separation Switch -->
         <div class="role-type-segmented-control" id="role-type-segmented-control" role="tablist" aria-label="Separate Jobs from Internships">
-          <button class="type-segment-btn active" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="true" title="Full-time entry-level positions only">
+          <button class="type-segment-btn" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="false" title="Full-time entry-level positions only">
             <span class="segment-icon">💼</span>
             <span class="segment-title">Full-Time Jobs</span>
             <span class="segment-badge" id="segment-count-jobs">0</span>
@@ -180,7 +180,7 @@
             <span class="segment-title">Internships</span>
             <span class="segment-badge" id="segment-count-internships">0</span>
           </button>
-          <button class="type-segment-btn" data-role-type="all" id="btn-type-all" role="tab" aria-selected="false" title="View all roles (Jobs and Internships together)">
+          <button class="type-segment-btn active" data-role-type="all" id="btn-type-all" role="tab" aria-selected="true" title="View all roles (Jobs and Internships together)">
             <span class="segment-icon">🔥</span>
             <span class="segment-title">All Roles Combined</span>
             <span class="segment-badge" id="segment-count-all">0</span>
@@ -294,11 +294,11 @@
             <div class="drawer-group">
               <label for="freshness-select">Posting Freshness</label>
               <select id="freshness-select">
-                <option value="168" selected>⚡ Past 7 Days (Fresh Jobs)</option>
+                <option value="48" selected>⚡ Recent (5 min to 2 days / 48h)</option>
                 <option value="1">⏱️ Past 1 Hour (0–60m)</option>
                 <option value="12">🔥 Past 12 Hours</option>
                 <option value="24">⭐ Past 24 Hours (Today)</option>
-                <option value="48">📅 Past 48 Hours</option>
+                <option value="168">📅 Past 7 Days</option>
                 <option value="9999">🌐 Anytime / All Jobs</option>
               </select>
             </div>

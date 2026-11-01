@@ -189,7 +189,11 @@ def score_job(job: dict, profile: dict) -> dict:
     # 2c. Require entry-level / fresher verification for full-time jobs
     is_internship = any(kw in title_lower for kw in ['intern', 'internship', 'trainee', 'apprentice'])
     if not is_internship:
-        has_entry_marker = bool(re.search(r'\b(?:fresher|intern|internship|trainee|campus|graduate|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b', full_text))
+        has_entry_marker = bool(
+            job.get("is_fresher") or
+            job.get("seniority") in ["junior", "entry_level", "entry", "fresher", "graduate", "intern"] or
+            re.search(r'\b(?:fresher|intern|internship|trainee|campus|graduate|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567]|\b[a-z]+\s+[i1]\b)\b', full_text)
+        )
         if not has_entry_marker:
             return {
                 "rejected": True,

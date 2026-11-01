@@ -112,10 +112,10 @@ document.addEventListener("DOMContentLoaded", () => {
     source: "all",
     minScore: 0.50,
     sortBy: "latest",
-    maxAgeHours: 168,
+    maxAgeHours: 48, // Recent live jobs (past 48 hours / 2 days)
     onlySaved: false,
     onlyZeroExp: true, // Strictly 0 experience / freshers by default
-    roleType: "jobs" // "jobs" (full-time only, internships separated), "internships", or "all"
+    roleType: "all" // "all" shows both fresh jobs and internships by default, easily separated by tabs
   };
 
   let currentPage = 1;
@@ -728,7 +728,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     if (bannerScopePill) {
-      const scopeHrs = currentFilter.maxAgeHours || 168;
+      const scopeHrs = currentFilter.maxAgeHours || 48;
       bannerScopePill.textContent = scopeHrs >= 9000
         ? '🌐 Anytime (All Jobs)'
         : scopeHrs % 24 === 0
@@ -1575,10 +1575,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFilter.onlyZeroExp = false;
         currentFilter.onlyInternships = false;
         currentFilter.onlyFullJobs = false;
-        currentFilter.maxAgeHours = 168;
+        currentFilter.maxAgeHours = 48;
         if (tierSelect) tierSelect.value = "all";
         if (sourceSelect) sourceSelect.value = "all";
-        if (freshnessSelect) freshnessSelect.value = "168";
+        if (freshnessSelect) freshnessSelect.value = "48";
       } else if (type === "zero-exp") {
         currentFilter.onlyZeroExp = true;
         currentFilter.tier = "all";
@@ -1651,7 +1651,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".quick-filter-pills .quick-pill").forEach(p => {
       const type = p.getAttribute("data-filter-type");
       let isActive = false;
-      if (type === "all" && currentFilter.tier === "all" && currentFilter.source === "all" && !currentFilter.onlySaved && !currentFilter.onlyZeroExp && !currentFilter.onlyInternships && !currentFilter.onlyFullJobs && currentFilter.maxAgeHours === 168) {
+      if (type === "all" && currentFilter.tier === "all" && currentFilter.source === "all" && !currentFilter.onlySaved && !currentFilter.onlyZeroExp && !currentFilter.onlyInternships && !currentFilter.onlyFullJobs && currentFilter.maxAgeHours === 48) {
         isActive = true;
       } else if (type === "zero-exp" && currentFilter.onlyZeroExp) {
         isActive = true;
@@ -1693,7 +1693,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let count = 0;
     if (currentFilter.tier !== "all") count++;
     if (currentFilter.location !== "all") count++;
-    if (currentFilter.maxAgeHours !== 168) count++;
+    if (currentFilter.maxAgeHours !== 48) count++;
     if (currentFilter.source !== "all") count++;
     if (currentFilter.minScore > 0.50) count++;
     if (currentFilter.sortBy !== "latest") count++;
@@ -1784,7 +1784,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (clearSearchBtn) clearSearchBtn.style.display = "none";
       if (tierSelect) tierSelect.value = "all";
       if (locationSelect) locationSelect.value = "all";
-      if (freshnessSelect) freshnessSelect.value = "168";
+      if (freshnessSelect) freshnessSelect.value = "48";
       if (sourceSelect) sourceSelect.value = "all";
       if (scoreSlider) scoreSlider.value = 50;
       if (scoreSliderVal) scoreSliderVal.textContent = "50%";
@@ -1796,7 +1796,7 @@ document.addEventListener("DOMContentLoaded", () => {
       currentFilter.source = "all";
       currentFilter.minScore = 0.50;
       currentFilter.sortBy = "latest";
-      currentFilter.maxAgeHours = 168;
+      currentFilter.maxAgeHours = 48;
       currentFilter.onlySaved = false;
       currentFilter.onlyInternships = false;
       currentFilter.onlyFullJobs = false;

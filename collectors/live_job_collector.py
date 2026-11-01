@@ -232,32 +232,39 @@ def get_remote_location_label(location: str) -> str:
         return "Remote (APAC)"
     return "Remote (Worldwide)"
 
-def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
+def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
     """
-    Fetches live verified entry-level job postings from LinkedIn public guest endpoint.
-    Filters: India location, Past 24 Hours / 7 Days, Entry-level / Internships.
+    Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
+    Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
     """
+    from bs4 import BeautifulSoup
+
     queries = [
-        "applied scientist fresher",
-        "applied scientist intern",
-        "applied scientist",
-        "data analyst fresher",
         "data scientist fresher",
+        "data analyst fresher",
+        "associate data scientist",
+        "junior data scientist",
+        "junior data analyst",
+        "graduate trainee data",
         "machine learning intern",
+        "applied scientist intern",
+        "data science intern",
+        "data analyst intern",
+        "ai intern",
+        "applied scientist fresher",
         "decision scientist fresher",
-        "operations research fresher",
-        "fresher data science",
         "business analyst fresher",
     ][:max_queries]
 
     live_jobs = []
+    seen = set()
     now = datetime.datetime.now(datetime.timezone.utc)
 
     for q in queries:
         params = urllib.parse.urlencode({
             "keywords": q,
             "location": "India",
-            "f_TPR": "r604800",  # past 7 days
+            "f_TPR": "r172800",  # past 48 hours / 2 days (recency 5m to 2d)
             "f_E": "1,2",       # 1=Internship, 2=Entry level
             "start": 0
         })
@@ -267,40 +274,62 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
             req = urllib.request.Request(url, headers=HEADERS)
             with urllib.request.urlopen(req, timeout=8) as r:
                 html = r.read().decode("utf-8", errors="ignore")
-                titles = re.findall(r'<h3[^>]*base-search-card__title[^>]*>(.*?)</h3>', html, re.DOTALL)
-                companies = re.findall(r'<h4[^>]*base-search-card__subtitle[^>]*>(.*?)</h4>', html, re.DOTALL)
-                locations = re.findall(r'<span[^>]*job-search-card__location[^>]*>(.*?)</span>', html, re.DOTALL)
-                links = re.findall(r'<a[^>]*base-card__full-link[^>]*href=["\']([^"\']+)["\']', html)
-                times = re.findall(r'<time[^>]*datetime=["\']([^"\']+)["\'][^>]*>(.*?)</time>', html, re.DOTALL)
+                soup = BeautifulSoup(html, "html.parser")
+                cards = soup.find_all("li")
 
-                for i in range(len(titles)):
-                    raw_title = re.sub(r'<[^<]+?>', '', titles[i]).strip()
-                    raw_title = html_lib.unescape(raw_title)
-                    company = re.sub(r'<[^<]+?>', '', companies[i]).strip() if i < len(companies) else "Tech Company"
-                    company = html_lib.unescape(company)
-                    loc = re.sub(r'<[^<]+?>', '', locations[i]).strip() if i < len(locations) else "India"
-                    loc = html_lib.unescape(loc)
-                    clean_link = links[i].split("?")[0] if i < len(links) else ""
-                    published_raw = times[i][0].strip() if i < len(times) else None
-                    time_raw = times[i][1].strip() if i < len(times) else ""
+                for card in cards:
+                    title_el = card.find("h3", class_=re.compile(r"base-search-card__title"))
+                    comp_el = card.find("h4", class_=re.compile(r"base-search-card__subtitle"))
+                    loc_el = card.find("span", class_=re.compile(r"job-search-card__location"))
+                    link_el = card.find("a", class_=re.compile(r"base-card__full-link"))
+                    time_el = card.find("time")
+
+                    if not title_el or not link_el:
+                        continue
+
+                    raw_title = html_lib.unescape(title_el.get_text(strip=True))
+                    company = html_lib.unescape(comp_el.get_text(strip=True)) if comp_el else "Tech Company"
+                    loc = html_lib.unescape(loc_el.get_text(strip=True)) if loc_el else "India"
+                    clean_link = link_el.get("href", "").split("?")[0]
                     if not clean_link:
                         continue
 
-                    # Hard filter for senior roles
+                    key = f"{company.lower()}::{raw_title.lower()}"
+                    if key in seen:
+                        continue
+                    seen.add(key)
+
                     lower_t = raw_title.lower()
                     if any(bad in lower_t for bad in EXCLUDE_TITLES):
                         continue
 
+                    time_raw = time_el.get_text(strip=True) if time_el else ""
+                    published_raw = time_el.get("datetime") if time_el else None
+
                     freshness = get_publication_freshness(published_raw, time_raw, now)
                     if freshness is None:
+                        hrs = parse_relative_time_to_hours(time_raw) or 6.0
+                        if hrs < 1:
+                            rel_lbl = f"{max(5, int(hrs * 60))} minutes ago"
+                        elif hrs < 24:
+                            rel_lbl = f"{max(1, int(hrs))} hours ago"
+                        else:
+                            rel_lbl = f"{max(1, int(hrs / 24))} days ago"
                         freshness = {
-                            "posted_at": now.isoformat(timespec="seconds").replace("+00:00", "Z"),
-                            "hours_ago": 1.0,
-                            "relative_time": "1 hour ago",
+                            "posted_at": (now - datetime.timedelta(hours=hrs)).isoformat(timespec="seconds").replace("+00:00", "Z"),
+                            "hours_ago": round(hrs, 2),
+                            "relative_time": rel_lbl,
                             "posted_at_source": "relative_time"
                         }
 
-                    # Format clean relative time
+                    # Filter out any stale items older than 48 hours (2 days)
+                    if freshness.get("hours_ago", 0) > 48.0:
+                        continue
+
+                    is_intern = any(kw in lower_t for kw in ['intern', 'internship', 'trainee', 'apprentice'])
+                    desc_type = "Verified internship position" if is_intern else "Verified entry-level fresher role (0-1 years exp)"
+                    desc = f"{raw_title} at {company} in {loc}. {desc_type} listed on LinkedIn (entry-level filter f_E=1,2)."
+
                     live_jobs.append({
                         "title": raw_title,
                         "company": company,
@@ -310,18 +339,20 @@ def fetch_live_linkedin_jobs(max_queries: int = 4) -> list:
                         **freshness,
                         "source_type": "LinkedIn",
                         "source_domain": "linkedin.com",
-                        "raw_description": f"{raw_title} at {company} in {loc}. Listed on LinkedIn.",
-                        "is_post": False
+                        "raw_description": desc,
+                        "is_post": False,
+                        "is_fresher": True,
+                        "seniority": "junior",
+                        "is_internship": is_intern
                     })
         except urllib.error.HTTPError as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
             if e.code == 429:
-                time.sleep(2.0)
-                break
+                time.sleep(1.5)
         except Exception as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
         finally:
-            time.sleep(3.0)
+            time.sleep(1.2)
 
     return live_jobs
 

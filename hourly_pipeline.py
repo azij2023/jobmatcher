@@ -261,10 +261,10 @@ def run_hourly_sync():
             is_int = bool(re.search(r'\b(?:internship|intern\s+position|apprenticeship)\b', d_low))
         job["is_internship"] = is_int
 
-    # Keep listings up to 30 days (720 hours) for the "Anytime" filter
+    # Keep listings strictly between 5 minutes and 48 hours (2 days) for live real-time freshness
     existing_jobs = [
         job for job in existing_jobs
-        if job.get("hours_ago") is not None and job["hours_ago"] <= 720
+        if job.get("hours_ago") is not None and job["hours_ago"] <= 48.0
     ]
 
     # 3. Sort from newest to oldest

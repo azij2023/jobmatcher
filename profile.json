@@ -164,7 +164,11 @@
         "analytics analyst",
         "junior analytics analyst",
         "data analytics analyst",
-        "business analyst (data)"
+        "business analyst (data)",
+        "data scientist i",
+        "data analyst i",
+        "junior data scientist",
+        "junior data analyst"
       ]
     },
     {
@@ -211,7 +215,9 @@
         "agent optimization & evaluation",
         "data scientist, optimization",
         "operations research & network optimization trainee",
-        "operations research trainee"
+        "operations research trainee",
+        "supply chain analyst",
+        "supply chain data analyst"
       ]
     },
     {
@@ -392,7 +398,11 @@
     "strategy analyst",
     "business operations analyst",
     "analytics engineer",
-    "junior data engineer"
+    "junior data engineer",
+    "supply chain analyst",
+    "data scientist i",
+    "data analyst i",
+    "machine learning scientist"
   ],
   "seniority": {
     "level": "entry_level",
