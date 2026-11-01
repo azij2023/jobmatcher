@@ -17,18 +17,11 @@ document.addEventListener("DOMContentLoaded", () => {
   let profile = data.profile || {};
   let stats = data.stats || {};
 
-  // Load custom saved jobs from localStorage so they persist across page refreshes
+  // Purge legacy unverified custom jobs from localStorage so live verified feed is 100% accurate
   function mergeSavedCustomJobs(targetJobs) {
     try {
-      const savedCustomJobs = JSON.parse(localStorage.getItem("targetmatch_custom_jobs") || "[]");
-      savedCustomJobs.forEach(cj => {
-        if (!targetJobs.some(j => (j.url && j.url === cj.url) || (j.title && j.title === cj.title && j.company === cj.company))) {
-          targetJobs.unshift(cj);
-        }
-      });
-    } catch (e) {
-      console.warn("Could not load custom jobs from localStorage", e);
-    }
+      localStorage.removeItem("targetmatch_custom_jobs");
+    } catch (e) {}
   }
 
   mergeSavedCustomJobs(jobs);
@@ -3045,12 +3038,32 @@ Best regards,
     if (navRefreshLabel && !isSilent) navRefreshLabel.textContent = "Syncing...";
 
     try {
-      // 1. Fetch fresh payload with cache-busting timestamp
-      const response = await fetch(`./data.json?t=${Date.now()}`, { cache: "no-store" });
-      if (!response.ok) {
-        throw new Error(`Server returned HTTP ${response.status}`);
+      // 1. Fetch fresh payload with robust fallback and HTML safety check
+      let freshData = null;
+      const candidates = [
+        `./data.json?t=${Date.now()}`,
+        `data.json?t=${Date.now()}`,
+        `https://raw.githubusercontent.com/azij2023/jobmatcher/main/data.json?t=${Date.now()}`
+      ];
+
+      for (const endpoint of candidates) {
+        try {
+          const resp = await fetch(endpoint, { cache: "no-store" });
+          if (!resp.ok) continue;
+          const text = await resp.text();
+          if (text && text.trim().startsWith("{")) {
+            const parsed = JSON.parse(text);
+            if (parsed && Array.isArray(parsed.jobs) && parsed.jobs.length > 0) {
+              freshData = parsed;
+              break;
+            }
+          }
+        } catch (e) {}
       }
-      const freshData = await response.json();
+
+      if (!freshData) {
+        throw new Error("Could not parse JSON payload from candidate endpoints.");
+      }
 
       if (freshData && Array.isArray(freshData.jobs)) {
         data = freshData;
@@ -3079,14 +3092,7 @@ Best regards,
           newLiveCount++;
           latestDiscoveredRole = `${jObj.title} @ ${jObj.company}`;
 
-          try {
-            const saved = JSON.parse(localStorage.getItem("targetmatch_custom_jobs") || "[]");
-            if (!saved.some(s => s.url === jObj.url)) {
-              saved.unshift(jObj);
-              if (saved.length > 80) saved.length = 80;
-              localStorage.setItem("targetmatch_custom_jobs", JSON.stringify(saved));
-            }
-          } catch (e) {}
+          // Do not write unverified jobs to localStorage
           return true;
         };
 
@@ -3306,6 +3312,7 @@ Best regards,
 
         // Re-render UI components
         initStats();
+        updateFilterPillCounts();
         renderJobs();
         renderCuratedFeed();
 
