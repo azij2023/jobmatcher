@@ -3043,6 +3043,7 @@ Best regards,
       const candidates = [
         `./data.json?t=${Date.now()}`,
         `data.json?t=${Date.now()}`,
+        `https://jobmatcher-2.onrender.com/api/jobs?t=${Date.now()}`,
         `https://raw.githubusercontent.com/azij2023/jobmatcher/main/data.json?t=${Date.now()}`
       ];
 

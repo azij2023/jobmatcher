@@ -64,6 +64,8 @@ def get_jobs(role_type: str = "all", max_hours: float = 48.0):
         "last_updated": data.get("last_updated"),
         "role_type": role_type,
         "max_hours": max_hours,
+        "profile": data.get("profile", {}),
+        "stats": data.get("stats", {}),
         "jobs": jobs
     }
 
