@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (s.includes('-2026') || s.includes('job-opening/?id=') || s.includes('#!/job-view/')) return false;
     if (s.includes('/jobs/view/') || s.includes('/internships/') || s.includes('/posting/') || 
         s.includes('greenhouse.io') || s.includes('lever.co') || s.includes('ashbyhq.com') || 
-        s.includes('smartrecruiters.com') || s.includes('/posts/') || s.includes('activity-')) {
+        s.includes('smartrecruiters.com') || (s.includes('/posts/') && /\d{5,}/.test(s)) || s.includes('activity-') || s.includes('/search/results/content/')) {
       return true;
     }
     return false;
@@ -228,7 +228,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (directUrl && !directUrl.includes('-2026')) return directUrl;
     if (url && !url.includes('-2026') && !url.includes('linkedin.com/jobs/search')) return url;
 
-    // 3. Exact LinkedIn post link
+    // 3. Exact LinkedIn post link or verified content search
+    if (j.is_post || j.source_type === "LinkedIn Post") {
+      if (directUrl && isExactJobUrl(directUrl)) return directUrl;
+      if (url && isExactJobUrl(url)) return url;
+      const query = encodeURIComponent(`"${j.company || ''}" "${j.title || ''}" hiring`.trim());
+      return `https://www.linkedin.com/search/results/content/?keywords=${query}&sortBy=%22date_posted%22`;
+    }
     if (linkedinUrl && isExactJobUrl(linkedinUrl)) return linkedinUrl;
 
     // 4. Targeted search query for company + title so user lands on exact role

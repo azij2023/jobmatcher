@@ -1,4 +1,4 @@
-window.JOB_MATCHER_DATA = window.JOB_DATA = {
+window.JOB_MATCHER_DATA = {
   "profile": {
     "target_level": "fresher",
     "job_filters": {
@@ -1622,8 +1622,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "is_post": true,
       "post_author": "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)",
       "contact_email": "applied-scientist@flipkart.com",
-      "url": "https://www.linkedin.com/posts/flipkart-applied-scientist-sumanth-rao",
-      "direct_job_url": "https://www.linkedin.com/posts/flipkart-applied-scientist-sumanth-rao",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=Flipkart%20Applied%20Scientist%20Intern%20%28GenAI%20%26%20Recommendations%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=Flipkart%20Applied%20Scientist%20Intern%20%28GenAI%20%26%20Recommendations%29%20hiring&sortBy=%22date_posted%22",
       "raw_description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
       "company_url": "https://www.flipkartcareers.com/",
       "score": 0.98,
@@ -2647,8 +2647,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "is_post": true,
       "post_author": "Ananya Sen (Director of Data Science @ PhonePe)",
       "contact_email": "ds-careers@phonepe.com",
-      "url": "https://www.linkedin.com/posts/phonepe-data-scientist-ananya-sen",
-      "direct_job_url": "https://www.linkedin.com/posts/phonepe-data-scientist-ananya-sen",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20%28Experimentation%20%26%20Analytics%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20%28Experimentation%20%26%20Analytics%29%20hiring&sortBy=%22date_posted%22",
       "raw_description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
       "company_url": "https://www.phonepe.com/careers/",
       "score": 0.965,
@@ -2748,8 +2748,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "is_post": true,
       "post_author": "Aakash Gupta (Head of Product @ Groww)",
       "contact_email": "apm-talent@groww.in",
-      "url": "https://www.linkedin.com/posts/groww-apm-aakash-gupta",
-      "direct_job_url": "https://www.linkedin.com/posts/groww-apm-aakash-gupta",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20Associate%20Product%20Manager%20%28APM%20-%20Fresher%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20Associate%20Product%20Manager%20%28APM%20-%20Fresher%29%20hiring&sortBy=%22date_posted%22",
       "raw_description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
       "company_url": "https://groww.in/careers",
       "score": 0.945,
@@ -3460,8 +3460,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "is_post": true,
       "post_author": "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
       "contact_email": "forecasting@zeptonow.com",
-      "url": "https://www.linkedin.com/posts/zepto-forecasting-analyst-rohan-deshmukh",
-      "direct_job_url": "https://www.linkedin.com/posts/zepto-forecasting-analyst-rohan-deshmukh",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=Zepto%20Time%20Series%20Forecasting%20Analyst%20%28Early%20Career%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=Zepto%20Time%20Series%20Forecasting%20Analyst%20%28Early%20Career%29%20hiring&sortBy=%22date_posted%22",
       "raw_description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
       "company_url": "https://www.zeptonow.com/careers",
       "score": 0.925,
@@ -4379,8 +4379,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "is_post": true,
       "post_author": "Vivek Raghavan (Co-Founder @ Sarvam AI)",
       "contact_email": "research@sarvam.ai",
-      "url": "https://www.linkedin.com/posts/sarvam-ai-research-vivek-raghavan",
-      "direct_job_url": "https://www.linkedin.com/posts/sarvam-ai-research-vivek-raghavan",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=Sarvam%20AI%20Applied%20ML%20Research%20Intern%20%28LLMs%20%26%20Vision%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=Sarvam%20AI%20Applied%20ML%20Research%20Intern%20%28LLMs%20%26%20Vision%29%20hiring&sortBy=%22date_posted%22",
       "raw_description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
       "company_url": "https://www.sarvam.ai/",
       "score": 0.98,
@@ -9019,3 +9019,4 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   "last_adzuna_sync": "2026-11-02T12:59Z",
   "last_jsearch_sync": "2026-11-02T12:59Z"
 };
+window.JOB_DATA = window.JOB_MATCHER_DATA;

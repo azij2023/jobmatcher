@@ -230,7 +230,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Priya Sharma (Principal PM, Consumer Marketplace @ Swiggy)",
             "contact_email": "apm-hiring@swiggy.in",
-            "url": "https://www.linkedin.com/posts/swiggy-apm-priya-sharma-hiring",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Swiggy%20APM%20hiring%20fresher&sortBy=%22date_posted%22",
             "raw_description": "We are expanding our consumer product team! Hiring 2 Associate Product Managers (APMs) in Bengaluru. Looking for 0-1 year experience / fresh graduates with high ownership, first-principles thinking, SQL, and telemetry analytics skills. Shoot a DM or email your resume and 1 teardown to apm-hiring@swiggy.in.",
             "company_url": "https://careers.swiggy.com/"
         },
@@ -245,7 +245,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Arjun Mehta (VP Strategy & BizOps @ Razorpay)",
             "contact_email": "bizops-talent@razorpay.com",
-            "url": "https://www.linkedin.com/posts/razorpay-bizops-arjun-mehta",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Razorpay%20BizOps%20Founder%20Office%20hiring&sortBy=%22date_posted%22",
             "raw_description": "I'm hiring an entry-level Strategy & BizOps Analyst for the Founder's Office at Razorpay Bengaluru. Work on new product line financial modeling, merchant growth KPIs, competitive intelligence, and board decks. 0-1 year experience, advanced Excel & SQL. Comment or DM your resume.",
             "company_url": "https://razorpay.com/jobs/"
         },
@@ -260,7 +260,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Ananya Sen (Director of Data Science @ PhonePe)",
             "contact_email": "ds-careers@phonepe.com",
-            "url": "https://www.linkedin.com/posts/phonepe-data-scientist-ananya-sen",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20hiring&sortBy=%22date_posted%22",
             "raw_description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
             "company_url": "https://www.phonepe.com/careers/"
         },
@@ -275,7 +275,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Kunal Singhal (Head of Network Optimization @ Delhivery)",
             "contact_email": "optimization-hiring@delhivery.com",
-            "url": "https://www.linkedin.com/posts/delhivery-operations-research-kunal-singhal",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Delhivery%20Operations%20Research%20Trainee%20hiring&sortBy=%22date_posted%22",
             "raw_description": "Hiring alert! Looking for an Operations Research Trainee in Gurugram to solve large-scale vehicle routing, linehaul dispatch, and hub capacity optimization problems using Python and PuLP/Linear Programming. Freshers from mathematics, engineering, and stats welcome. Apply directly via email.",
             "company_url": "https://www.delhivery.com/careers"
         },
@@ -290,7 +290,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Rohan Deshmukh (VP Supply Chain & Forecasting @ Zepto)",
             "contact_email": "forecasting@zeptonow.com",
-            "url": "https://www.linkedin.com/posts/zepto-forecasting-analyst-rohan-deshmukh",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Zepto%20Forecasting%20Analyst%20hiring&sortBy=%22date_posted%22",
             "raw_description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
             "company_url": "https://www.zeptonow.com/careers"
         },
@@ -305,7 +305,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Vivek Raghavan (Co-Founder @ Sarvam AI)",
             "contact_email": "research@sarvam.ai",
-            "url": "https://www.linkedin.com/posts/sarvam-ai-research-vivek-raghavan",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Sarvam%20AI%20Research%20Intern%20hiring&sortBy=%22date_posted%22",
             "raw_description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
             "company_url": "https://www.sarvam.ai/"
         },
@@ -320,7 +320,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Dr. Sumanth Rao (Lead Applied Scientist @ Flipkart)",
             "contact_email": "applied-scientist@flipkart.com",
-            "url": "https://www.linkedin.com/posts/flipkart-applied-scientist-sumanth-rao",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Flipkart%20Applied%20Scientist%20Intern%20hiring&sortBy=%22date_posted%22",
             "raw_description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
             "company_url": "https://www.flipkartcareers.com/"
         },
@@ -335,7 +335,7 @@ def get_curated_linkedin_posts():
             "is_post": True,
             "post_author": "Aakash Gupta (Head of Product @ Groww)",
             "contact_email": "apm-talent@groww.in",
-            "url": "https://www.linkedin.com/posts/groww-apm-aakash-gupta",
+            "url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20APM%20Associate%20Product%20Manager%20hiring&sortBy=%22date_posted%22",
             "raw_description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
             "company_url": "https://groww.in/careers"
         },
