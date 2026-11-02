@@ -843,6 +843,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const isUnstop = urlLower.includes('unstop.com') || domainLower.includes('unstop') || typeLower.includes('unstop');
       const isNaukri = urlLower.includes('naukri.com') || domainLower.includes('naukri') || typeLower.includes('naukri');
       const isIndeed = urlLower.includes('indeed.com') || domainLower.includes('indeed') || typeLower.includes('indeed');
+      const isFoundit = urlLower.includes('foundit.in') || domainLower.includes('foundit') || typeLower.includes('foundit');
+      const isShine = urlLower.includes('shine.com') || domainLower.includes('shine') || typeLower.includes('shine');
+      const isInstahyre = urlLower.includes('instahyre.com') || domainLower.includes('instahyre') || typeLower.includes('instahyre');
+      const isCutshort = urlLower.includes('cutshort.io') || domainLower.includes('cutshort') || typeLower.includes('cutshort');
+      const isWellfound = urlLower.includes('wellfound.com') || domainLower.includes('wellfound') || typeLower.includes('wellfound');
+      const isHirist = urlLower.includes('hirist.tech') || domainLower.includes('hirist') || typeLower.includes('hirist');
+      const isInternshala = urlLower.includes('internshala.com') || domainLower.includes('internshala') || typeLower.includes('internshala');
+      const isApna = urlLower.includes('apna.co') || domainLower.includes('apna') || typeLower.includes('apna');
+      const isRemoteOK = urlLower.includes('remoteok.com') || domainLower.includes('remoteok') || typeLower.includes('remoteok');
       const isAts = urlLower.includes('greenhouse.io') || urlLower.includes('lever.co') || urlLower.includes('ashbyhq') || urlLower.includes('workday') || typeLower.includes('ats');
       const isLinkedInSearch = urlLower.includes('linkedin.com/jobs/search') || urlLower.includes('linkedin.com/search');
       const isLinkedInView = urlLower.includes('linkedin.com/jobs/view');
@@ -876,6 +885,42 @@ document.addEventListener("DOMContentLoaded", () => {
         platformPill = `<span class="source-domain-badge source-indeed">🎯 Indeed</span>`;
         applyBtnText = '🎯 Apply on Indeed ↗';
         applyBtnClass = 'btn btn-primary btn-indeed';
+      } else if (isInternshala) {
+        platformPill = `<span class="source-domain-badge source-unstop">🎓 Internshala</span>`;
+        applyBtnText = '🎓 Apply on Internshala ↗';
+        applyBtnClass = 'btn btn-primary btn-unstop';
+      } else if (isInstahyre) {
+        platformPill = `<span class="source-domain-badge source-direct">⚡ Instahyre</span>`;
+        applyBtnText = '⚡ Apply on Instahyre ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isCutshort) {
+        platformPill = `<span class="source-domain-badge source-direct">✂️ Cutshort</span>`;
+        applyBtnText = '✂️ Apply on Cutshort ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isWellfound) {
+        platformPill = `<span class="source-domain-badge source-direct">✌️ Wellfound</span>`;
+        applyBtnText = '✌️ Apply on Wellfound ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isHirist) {
+        platformPill = `<span class="source-domain-badge source-direct">💻 Hirist</span>`;
+        applyBtnText = '💻 Apply on Hirist ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isFoundit) {
+        platformPill = `<span class="source-domain-badge source-direct">⚡ Foundit</span>`;
+        applyBtnText = '⚡ Apply on Foundit ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isShine) {
+        platformPill = `<span class="source-domain-badge source-direct">✨ Shine</span>`;
+        applyBtnText = '✨ Apply on Shine ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isApna) {
+        platformPill = `<span class="source-domain-badge source-direct">📱 Apna</span>`;
+        applyBtnText = '📱 Apply on Apna ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
+      } else if (isRemoteOK) {
+        platformPill = `<span class="source-domain-badge source-direct">🏝️ RemoteOK</span>`;
+        applyBtnText = '🏝️ Apply on RemoteOK ↗';
+        applyBtnClass = 'btn btn-primary btn-direct-portal';
       } else if (isAts) {
         platformPill = `<span class="source-domain-badge source-portal">🏢 ${escapeHTML(job.company || 'Direct ATS')} ATS</span>`;
         applyBtnText = `🏢 Apply on ${escapeHTML(job.company || 'Company')} Portal ↗`;

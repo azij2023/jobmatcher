@@ -941,17 +941,19 @@ def collect_and_score_all_live_jobs(
     else:
         profile = {"target_level": "fresher", "locations": {"require_india_only": False}}
 
-    print("[LiveCollector] Fetching from verified platforms (Indian Company Portals, Unstop, LinkedIn, Remotive, Jobicy)...")
+    print("[LiveCollector] Fetching from verified platforms (Multi-Channel, Company Portals, Unstop, LinkedIn, Remotive, Jobicy)...")
     from collectors.company_pages import fetch_company_jobs
+    from collectors.multi_channel_collector import fetch_all_channel_jobs
     raw_company = fetch_company_jobs()
     raw_unstop = fetch_live_unstop_jobs()
     raw_linkedin = fetch_live_linkedin_jobs()
+    raw_multi_channel = fetch_all_channel_jobs()
     raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()
     raw_himalayas = fetch_live_himalayas_jobs() if include_himalayas else []
     raw_adzuna = fetch_live_adzuna_jobs() if include_adzuna else []
     raw_jsearch = fetch_live_jsearch_jobs() if include_jsearch else []
-    all_raw = raw_company + raw_unstop + raw_linkedin + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
+    all_raw = raw_company + raw_unstop + raw_linkedin + raw_multi_channel + raw_remotive + raw_jobicy + raw_himalayas + raw_adzuna + raw_jsearch
 
     source_counts = Counter(job["source_type"] for job in all_raw)
     print(
@@ -1030,7 +1032,7 @@ def collect_and_score_all_live_jobs(
             "priority": final_priority,
             "badge": badge,
             "posted_at": raw["posted_at"],
-            "posted_at_source": raw["posted_at_source"],
+            "posted_at_source": raw.get("posted_at_source") or raw.get("posted_at", "Direct Channel Feed"),
             "hours_ago": hours_ago,
             "relative_time": raw["relative_time"],
             "url": raw["url"],
