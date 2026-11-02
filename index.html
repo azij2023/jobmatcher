@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261023_v1">
+  <link rel="stylesheet" href="styles.css?v=20261102_v5">
   <script>
     (function() {
       try {
@@ -59,9 +59,13 @@
       </nav>
 
       <div class="nav-actions">
+        <div class="auto-sync-badge top-sync-badge" id="auto-sync-indicator" title="Real-time live streaming engine polls live ATS boards and feeds every 30 seconds.">
+          <span class="sync-pulse-dot live-active-pulse"></span>
+          <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: Live</span></span>
+        </div>
         <button class="btn-nav-refresh" id="nav-refresh-btn" title="Instantly scan all live ATS boards and published feeds right now.">
           <span class="refresh-spinner" id="nav-refresh-icon">🔄</span>
-          <span id="nav-refresh-label">Live Sync Now</span>
+          <span id="nav-refresh-label">Refresh Jobs</span>
         </button>
         <button class="theme-toggle-btn" id="theme-toggle-btn" title="Toggle Light / Dark Background" aria-label="Toggle theme">
           <span class="theme-icon-indicator" id="theme-icon-indicator">🌙</span>
@@ -366,7 +370,7 @@
           <span class="results-count" id="results-count">Showing 0 matching jobs</span>
           <span class="active-filter-indicator" id="active-filter-indicator"></span>
         </div>
-        <div class="auto-sync-badge" id="auto-sync-indicator" title="Real-time live streaming engine polls live ATS boards and feeds every 30 seconds.">
+        <div class="auto-sync-badge results-sync-badge" title="Real-time live streaming engine polls live ATS boards and feeds every 30 seconds.">
           <span class="sync-pulse-dot live-active-pulse"></span>
           <span class="sync-badge-text">🟢 Live Stream Active • Polling every 30s • Direct ATS Live</span>
         </div>
@@ -1214,7 +1218,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261101_v4"></script>
-  <script src="app.js?v=20261101_v4"></script>
+  <script src="data.js?v=20261102_v5"></script>
+  <script src="app.js?v=20261102_v5"></script>
 </body>
 </html>

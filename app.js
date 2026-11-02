@@ -3321,9 +3321,10 @@ Best regards,
         const feedUpdatedAt = freshData.last_updated
           ? new Date(freshData.last_updated).toLocaleString()
           : "just now";
-        if (autoSyncIndicator) {
-          autoSyncIndicator.innerHTML = `<span class="sync-pulse-dot live-active-pulse"></span> <span class="sync-badge-text">🟢 Live Stream Active • Direct ATS Polling every 30s • Synced: ${feedUpdatedAt}</span>`;
-        }
+        const badges = document.querySelectorAll(".auto-sync-badge");
+        badges.forEach(b => {
+          b.innerHTML = `<span class="sync-pulse-dot live-active-pulse"></span> <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: ${feedUpdatedAt}</span></span>`;
+        });
 
         if (!isSilent) {
           if (newLiveCount > 0) {
@@ -3365,11 +3366,11 @@ Best regards,
   renderCuratedFeed();
   // Immediately re-validate data.json with zero cache on startup
   setTimeout(() => { refreshJobsLive(true); }, 50);
-  if (autoSyncIndicator) {
-    const feedUpdatedAt = data.last_updated
-      ? new Date(data.last_updated).toLocaleString()
-      : "not recorded";
-    autoSyncIndicator.innerHTML = `<span class="sync-pulse-dot live-active-pulse"></span> <span class="sync-badge-text">🟢 Live Stream Active • Direct ATS Polling every 30s • Synced: ${feedUpdatedAt}</span>`;
-  }
+  const feedUpdatedAt = data.last_updated
+    ? new Date(data.last_updated).toLocaleString()
+    : "not recorded";
+  document.querySelectorAll(".auto-sync-badge").forEach(b => {
+    b.innerHTML = `<span class="sync-pulse-dot live-active-pulse"></span> <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: ${feedUpdatedAt}</span></span>`;
+  });
   setupRealtimeLiveStream();
 });
