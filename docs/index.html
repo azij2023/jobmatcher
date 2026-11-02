@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261102_v7">
+  <link rel="stylesheet" href="styles.css?v=20261102_v8">
   <script>
     (function() {
       try {
@@ -59,10 +59,6 @@
       </nav>
 
       <div class="nav-actions">
-        <div class="auto-sync-badge top-sync-badge" id="auto-sync-indicator" title="Real-time live streaming engine polls live ATS boards and feeds every 30 seconds.">
-          <span class="sync-pulse-dot live-active-pulse"></span>
-          <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: Live</span></span>
-        </div>
         <button class="btn-nav-refresh" id="nav-refresh-btn" title="Instantly scan all live ATS boards and published feeds right now.">
           <span class="refresh-spinner" id="nav-refresh-icon">🔄</span>
           <span id="nav-refresh-label">Refresh Jobs</span>
@@ -84,8 +80,14 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-      <div class="hero-badge">
-        <span class="sparkle">⚡</span> 100% Verified Fresher Feed • Strictly 0 Years Experience • 1m to 5 Days Recency
+      <div class="hero-badges-wrapper">
+        <div class="hero-badge">
+          <span class="sparkle">⚡</span> 100% Verified Fresher Feed • Strictly 0 Years Experience • 1m to 5 Days Recency
+        </div>
+        <div class="auto-sync-badge hero-sync-badge" id="auto-sync-indicator" title="Real-time live streaming engine polls live ATS boards and feeds every 30 seconds.">
+          <span class="sync-pulse-dot live-active-pulse"></span>
+          <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: Live</span></span>
+        </div>
       </div>
       <h1 class="hero-title">
         Verified Fresher <span class="gradient-text">AI &amp; Data Jobs</span>
@@ -1220,7 +1222,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261102_v7"></script>
-  <script src="app.js?v=20261102_v7"></script>
+  <script src="data.js?v=20261102_v8"></script>
+  <script src="app.js?v=20261102_v8"></script>
 </body>
 </html>
