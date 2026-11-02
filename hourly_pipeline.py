@@ -41,7 +41,7 @@ def parse_any_datetime(dt_str):
             pass
     return None
 
-def normalize_job_key(company, title):
+def normalize_job_key(company, title, is_post=False):
     import re
     c = re.sub(r'[^a-z0-9]', '', (company or '').lower())
     t = (title or '').lower()
@@ -49,7 +49,8 @@ def normalize_job_key(company, title):
     t = re.sub(r'\s*\|.*', '', t)
     t = re.sub(r'\s*-\s*(?:fresher|batch\s*202\d|bangalore|bengaluru|gurugram|noida|india|early career).*', '', t)
     t = re.sub(r'[^a-z0-9]', '', t)
-    return f"{c}::{t}"
+    suffix = "::post" if is_post else ""
+    return f"{c}::{t}{suffix}"
 
 def run_hourly_sync():
     now = datetime.datetime.now(datetime.timezone.utc)
@@ -134,7 +135,7 @@ def run_hourly_sync():
     existing_jobs = deduped_existing
     existing_by_url = {job["url"].lower(): job for job in existing_jobs if job.get("url")}
     existing_by_key = {
-        normalize_job_key(job.get('company'), job.get('title')): job
+        normalize_job_key(job.get('company'), job.get('title'), job.get('is_post')): job
         for job in existing_jobs
     }
 
@@ -174,7 +175,7 @@ def run_hourly_sync():
     added_count = 0
 
     for job in live_scraped_jobs:
-        j_key = normalize_job_key(job.get('company'), job.get('title'))
+        j_key = normalize_job_key(job.get('company'), job.get('title'), job.get('is_post'))
         j_url = (job.get("url") or "").lower()
         existing_job = existing_by_url.get(j_url) or existing_by_key.get(j_key)
         if existing_job:
@@ -184,6 +185,112 @@ def run_hourly_sync():
             if j_url:
                 existing_by_url[j_url] = job
             existing_by_key[j_key] = job
+            added_count += 1
+
+    # 1b. Collect individual message posts from hiring leads & founders
+    from collectors.linkedin_post_fetcher import get_curated_linkedin_posts
+    individual_posts = get_curated_linkedin_posts()
+    for p in individual_posts:
+        title_lower = p["title"].lower()
+        skills = ["python", "sql"]
+        tier = 2
+        badge = "🥈"
+        category = "Data Science"
+        priority = "Primary"
+        score = 0.95
+
+        if "product" in title_lower or "apm" in title_lower:
+            tier = 5
+            badge = "5"
+            category = "Product"
+            priority = "Primary"
+            skills = ["product_analytics", "sql", "telemetry", "problem_solving"]
+            score = 0.945
+        elif "decision" in title_lower:
+            tier = 3
+            badge = "🥉"
+            category = "Decision Science"
+            priority = "Primary"
+            skills = ["statistical_modeling", "ab_testing", "hypothesis_testing", "sql"]
+            score = 0.950
+        elif "data scientist" in title_lower or "data science" in title_lower:
+            tier = 2
+            badge = "🥈"
+            category = "Data Science"
+            priority = "Primary"
+            skills = ["python", "sql", "pandas", "predictive_modeling"]
+            score = 0.965
+        elif "optimization" in title_lower or "operations research" in title_lower:
+            tier = 4
+            badge = "🏅"
+            category = "OR / Optimization"
+            priority = "Primary"
+            skills = ["linear_programming", "python", "pulp", "optimization"]
+            score = 0.940
+        elif "forecasting" in title_lower or "time series" in title_lower:
+            tier = 7
+            badge = "7"
+            category = "Forecasting"
+            priority = "Primary"
+            skills = ["time_series", "forecasting", "prophet", "arima", "pandas"]
+            score = 0.925
+        elif "ml engineer" in title_lower or "machine learning engineer" in title_lower:
+            tier = 8
+            badge = "8"
+            category = "ML Engineering"
+            priority = "Secondary"
+            skills = ["fastapi", "docker", "mlops", "python", "scikit_learn"]
+            score = 0.910
+        elif "applied scientist" in title_lower or "applied ml" in title_lower:
+            tier = 1
+            badge = "🥇"
+            category = "Applied ML / Research"
+            priority = "Primary"
+            skills = ["pytorch", "deep_learning", "transformers", "vector_search"]
+            score = 0.980
+        elif "strategy" in title_lower or "bizops" in title_lower:
+            tier = 6
+            badge = "6"
+            category = "Strategy / Programs"
+            priority = "Primary"
+            skills = ["excel", "sql", "financial_modeling", "problem_solving"]
+            score = 0.930
+
+        p_hrs = float(p.get("hours_ago", 3.0))
+        p_posted_at = (now - datetime.timedelta(hours=p_hrs)).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+        job_entry = {
+            "title": p["title"],
+            "company": p["company"],
+            "location": p["location"],
+            "hours_ago": p_hrs,
+            "posted_at": p_posted_at,
+            "source_type": "LinkedIn Post",
+            "source_domain": "linkedin.com",
+            "is_post": True,
+            "post_author": p.get("post_author", "Hiring Lead"),
+            "contact_email": p.get("contact_email"),
+            "url": p["url"],
+            "direct_job_url": p["url"],
+            "raw_description": p.get("raw_description", ""),
+            "company_url": p.get("company_url"),
+            "score": score,
+            "tier": tier,
+            "priority": priority,
+            "badge": badge,
+            "category": category,
+            "is_fresher": True,
+            "is_internship": False,
+            "matched_skills": skills,
+            "missing_skills": [],
+            "description": p.get("raw_description", "")
+        }
+        p_key = normalize_job_key(job_entry['company'], job_entry['title'], is_post=True)
+        p_url = job_entry["url"].lower()
+        if p_key not in existing_by_key and p_url not in existing_by_url:
+            existing_jobs.append(job_entry)
+            existing_by_key[p_key] = job_entry
+            existing_by_url[p_url] = job_entry
             added_count += 1
 
     # 2. Recalculate age from preserved publication timestamps
