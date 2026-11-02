@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261102_v5">
+  <link rel="stylesheet" href="styles.css?v=20261102_v6">
   <script>
     (function() {
       try {
@@ -174,7 +174,7 @@
       <div class="search-command-deck" id="search-command-deck">
         <!-- Prominent Role Type Separation Switch -->
         <div class="role-type-segmented-control" id="role-type-segmented-control" role="tablist" aria-label="Separate Jobs from Internships">
-          <button class="type-segment-btn" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="false" title="Full-time entry-level positions only">
+          <button class="type-segment-btn active" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="true" title="Full-time entry-level positions only">
             <span class="segment-icon">💼</span>
             <span class="segment-title">Full-Time Jobs</span>
             <span class="segment-badge" id="segment-count-jobs">0</span>
@@ -184,7 +184,7 @@
             <span class="segment-title">Internships</span>
             <span class="segment-badge" id="segment-count-internships">0</span>
           </button>
-          <button class="type-segment-btn active" data-role-type="all" id="btn-type-all" role="tab" aria-selected="true" title="View all roles (Jobs and Internships together)">
+          <button class="type-segment-btn" data-role-type="all" id="btn-type-all" role="tab" aria-selected="false" title="View all roles (Jobs and Internships together)">
             <span class="segment-icon">🔥</span>
             <span class="segment-title">All Roles Combined</span>
             <span class="segment-badge" id="segment-count-all">0</span>
@@ -1218,7 +1218,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261102_v5"></script>
-  <script src="app.js?v=20261102_v5"></script>
+  <script src="data.js?v=20261102_v6"></script>
+  <script src="app.js?v=20261102_v6"></script>
 </body>
 </html>

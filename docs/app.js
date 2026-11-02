@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     maxAgeHours: 48, // Recent live jobs (past 48 hours / 2 days)
     onlySaved: false,
     onlyZeroExp: true, // Strictly 0 experience / freshers by default
-    roleType: "all" // "all" shows both fresh jobs and internships by default, easily separated by tabs
+    roleType: "jobs" // Strictly "jobs" (full-time fresher roles) by default; internships isolated to Internships tab
   };
 
   let currentPage = 1;
@@ -175,12 +175,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const isInternshipJob = j => {
     if (!j) return false;
-    if (typeof j.is_internship === "boolean") return j.is_internship;
     const title = (j.title || '').toLowerCase();
     const desc = (j.raw_description || j.description || '').toLowerCase();
-    const internKw = ['intern', 'internship', 'trainee', 'apprentice', 'apprenticeship'];
+    const url = (j.url || j.direct_job_url || '').toLowerCase();
+    const internKw = ['intern', 'internship', 'trainee', 'apprentice', 'apprenticeship', 'co-op', 'fellowship'];
+    
+    // 1. Keyword in title or URL is a guaranteed internship
     if (internKw.some(kw => title.includes(kw))) return true;
-    return /\b(?:internship|intern\s+position|apprenticeship)\b/.test(desc);
+    if (url.includes('/internships/') || url.includes('-intern-') || url.includes('-internship-')) return true;
+    
+    // 2. Explicit flag from server/pipeline
+    if (j.is_internship === true) return true;
+    if (j.is_internship === false) {
+      // Catch any edge case where flag was false but description explicitly states internship/trainee
+      return /\b(?:internship|intern\s+position|graduate\s+trainee|management\s+trainee|apprenticeship)\b/.test(desc);
+    }
+    
+    // 3. Fallback description pattern match
+    return /\b(?:internship|intern\s+position|graduate\s+trainee|management\s+trainee|apprenticeship)\b/.test(desc);
   };
 
   const isExactJobUrl = u => {
@@ -656,12 +668,13 @@ document.addEventListener("DOMContentLoaded", () => {
         return false;
       }
 
-      // Role Type Separation: Jobs vs Internships
-      if (currentFilter.roleType === "jobs" && isInternshipJob(job)) {
-        return false; // Exclude internships from full-time jobs view
+      // Role Type Separation: Jobs vs Internships (Strict Exclusions)
+      const isIntern = isInternshipJob(job);
+      if ((currentFilter.roleType === "jobs" || currentFilter.onlyFullJobs) && isIntern) {
+        return false; // Strictly exclude ALL internships from full-time jobs view
       }
-      if (currentFilter.roleType === "internships" && !isInternshipJob(job)) {
-        return false; // Exclude full-time jobs from internships view
+      if ((currentFilter.roleType === "internships" || currentFilter.onlyInternships) && !isIntern) {
+        return false; // Strictly exclude full-time jobs from internships view
       }
 
       return true;
@@ -1609,23 +1622,11 @@ document.addEventListener("DOMContentLoaded", () => {
         if (tierSelect) tierSelect.value = t;
         if (sourceSelect) sourceSelect.value = "all";
       } else if (type === "internships") {
-        currentFilter.onlyInternships = true;
-        currentFilter.onlyFullJobs = false;
-        currentFilter.onlyZeroExp = false;
-        currentFilter.tier = "all";
-        currentFilter.source = "all";
-        currentFilter.onlySaved = false;
-        if (tierSelect) tierSelect.value = "all";
-        if (sourceSelect) sourceSelect.value = "all";
+        setRoleTypeFilter("internships", true);
+        return;
       } else if (type === "full-jobs") {
-        currentFilter.onlyFullJobs = true;
-        currentFilter.onlyInternships = false;
-        currentFilter.onlyZeroExp = false;
-        currentFilter.tier = "all";
-        currentFilter.source = "all";
-        currentFilter.onlySaved = false;
-        if (tierSelect) tierSelect.value = "all";
-        if (sourceSelect) sourceSelect.value = "all";
+        setRoleTypeFilter("jobs", true);
+        return;
       } else if (type === "fresh-24") {
         currentFilter.maxAgeHours = 24;
         currentFilter.onlyZeroExp = false;
@@ -3358,7 +3359,8 @@ Best regards,
     });
   }
 
-  // Initial Runs
+  // Initial Runs: Enforce Full-Time Jobs isolation on load
+  setRoleTypeFilter("jobs", false);
   initStats();
   renderJobs();
   renderStrategyTable();
