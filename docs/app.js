@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (s.includes('-2026') || s.includes('job-opening/?id=') || s.includes('#!/job-view/')) return false;
     if (s.includes('/jobs/view/') || s.includes('/internships/') || s.includes('/posting/') || 
         s.includes('greenhouse.io') || s.includes('lever.co') || s.includes('ashbyhq.com') || 
-        s.includes('smartrecruiters.com') || (s.includes('/posts/') && /\d{5,}/.test(s)) || s.includes('activity-') || s.includes('/search/results/content/')) {
+        s.includes('smartrecruiters.com') || (s.includes('/posts/') && (s.includes('activity-') || /\d{10,}/.test(s))) || s.includes('activity-') || s.includes('/search/results/content/')) {
       return true;
     }
     return false;
@@ -219,14 +219,18 @@ document.addEventListener("DOMContentLoaded", () => {
     if (directUrl.includes('-2026') || directUrl.includes('job-opening/?id=') || directUrl.includes('#!/job-view/')) directUrl = '';
     if (url.includes('-2026') || url.includes('job-opening/?id=') || url.includes('#!/job-view/')) url = '';
 
+    // Strip unverified /posts/ vanity URLs that cause LinkedIn 'Invalid post link' 404s
+    if (directUrl.includes('/posts/') && !directUrl.includes('activity-') && !/\d{10,}/.test(directUrl)) directUrl = '';
+    if (url.includes('/posts/') && !url.includes('activity-') && !/\d{10,}/.test(url)) url = '';
+
     // 1. Direct specific job link on verified ATS or platforms
     if (directUrl && isExactJobUrl(directUrl)) return directUrl;
     if (url && isExactJobUrl(url)) return url;
 
     // 2. Official verified company career portal URL
     if (companyUrl && !companyUrl.includes('-2026')) return companyUrl;
-    if (directUrl && !directUrl.includes('-2026')) return directUrl;
-    if (url && !url.includes('-2026') && !url.includes('linkedin.com/jobs/search')) return url;
+    if (directUrl && !directUrl.includes('-2026') && !directUrl.includes('/posts/')) return directUrl;
+    if (url && !url.includes('-2026') && !url.includes('linkedin.com/jobs/search') && !url.includes('/posts/')) return url;
 
     // 3. Exact LinkedIn post link or verified content search
     if (j.is_post || j.source_type === "LinkedIn Post") {
@@ -2400,7 +2404,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     ifi: {
       author: "Hiring Lead @ India's Future Investors",
-      url: "https://www.sarvam.ai/careers",
+      url: "https://www.linkedin.com/search/results/content/?keywords=%22India%27s%20Future%20Investors%22%20Data%20Scientist%20hiring&sortBy=%22date_posted%22",
       text: "India's Future Investors - Money Entertainment Reality Show\nData Scientist\nIndia · 17 hours ago · Over 100 applicants\nPromoted by hirer · Remote · Full-time\n\nLooking for an analytical Data Scientist to model entertainment viewership metrics, algorithmic audience scoring, and contestant engagement predictors using Python and SQL. Early career freshers (0-1 yrs exp) eligible. DM me or apply directly!"
     }
   };
@@ -2897,7 +2901,7 @@ Best regards,
       }
 
       if (evalViewPostLink) {
-        evalViewPostLink.href = job.url;
+        evalViewPostLink.href = resolveJobTargetUrl(job);
       }
 
       showToast(`⚡ Evaluated: ${job.title} (${Math.round(job.score * 100)}% Match)`);
@@ -2993,7 +2997,7 @@ Best regards,
             <button class="btn btn-secondary btn-sm load-preset-feed-btn" data-feed-index="${idx}" title="Load this post into parser for full evaluation">
               ⚡ Load in Parser
             </button>
-            <a href="${escapeHTML(p.url)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-linkedin-post">
+            <a href="${escapeHTML(resolveJobTargetUrl(p))}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-linkedin-post" title="Open verified live LinkedIn post search or portal">
               <span>💬 View & DM ↗</span>
             </a>
             ${p.contact_email ? `
