@@ -3979,3 +3979,21 @@ input[type="range"] {
   border-color: rgba(52, 211, 153, 0.35);
   color: #34d399;
 }
+
+/* Backup Active Openings Search Button */
+.btn-backup-search {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-backup-search:hover {
+  background: var(--bg-input);
+  color: var(--primary);
+  border-color: var(--primary-light);
+  transform: translateY(-1px);
+}

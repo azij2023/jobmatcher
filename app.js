@@ -976,6 +976,9 @@ document.addEventListener("DOMContentLoaded", () => {
             <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Direct application link for ${escapeHTML(job.title)} at ${escapeHTML(job.company)}">
               <span>${applyBtnText}</span>
             </a>
+            <a href="https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent((job.company || '') + ' ' + (job.title || '')).trim()}&location=India&f_TPR=r604800" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-backup-search" title="Search all active openings on LinkedIn & Naukri if direct posting closed">
+              <span>🔍 Active Openings ↗</span>
+            </a>
             <button class="btn btn-secondary view-details-btn" data-job-url="${escapeHTML(job.url)}" title="View complete details, roadmap and recruiter pitch">
               <span>⚡ Skill Gap &amp; Roadmap</span>
             </button>

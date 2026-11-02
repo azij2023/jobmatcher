@@ -261,6 +261,25 @@ def run_hourly_sync():
             is_int = bool(re.search(r'\b(?:internship|intern\s+position|apprenticeship)\b', d_low))
         job["is_internship"] = is_int
 
+    # 2d. Filter out closed requisitions, dead URLs, or expired postings
+    DEAD_URL_PATTERNS = [
+        "smartrecruiters.com/swiggy/6000000001526179",
+        "job-boards.eu.greenhouse.io/groww/jobs/4714061101",
+        "jobs.lever.co/meesho/ad781ae8",
+        "jobs.lever.co/cred/cf1076c8",
+        "skillzen-loop",
+        "inlighnx-global"
+    ]
+    def is_active_listing(job):
+        u = (job.get("direct_job_url") or job.get("url") or "").lower()
+        if not u or u == "#":
+            return False
+        if any(p in u for p in DEAD_URL_PATTERNS):
+            return False
+        return True
+
+    existing_jobs = [j for j in existing_jobs if is_active_listing(j)]
+
     # Keep listings strictly between 1 minute and 120 hours (5 days) for live real-time freshness
     existing_jobs = [
         job for job in existing_jobs
