@@ -198,8 +198,8 @@ def run_hourly_sync():
             if elapsed_hrs >= 0:
                 job["hours_ago"] = round(elapsed_hrs, 2)
                 if elapsed_hrs < 1:
-                    mins = max(5, int(round(elapsed_hrs * 60)))
-                    job["relative_time"] = f"{mins} minutes ago"
+                    mins = max(1, int(round(elapsed_hrs * 60)))
+                    job["relative_time"] = f"{mins} minute{'s' if mins != 1 else ''} ago"
                 elif elapsed_hrs < 24:
                     hrs = max(1, int(round(elapsed_hrs)))
                     job["relative_time"] = f"{hrs} hour{'s' if hrs > 1 else ''} ago"
@@ -261,10 +261,10 @@ def run_hourly_sync():
             is_int = bool(re.search(r'\b(?:internship|intern\s+position|apprenticeship)\b', d_low))
         job["is_internship"] = is_int
 
-    # Keep listings strictly between 5 minutes and 48 hours (2 days) for live real-time freshness
+    # Keep listings strictly between 1 minute and 120 hours (5 days) for live real-time freshness
     existing_jobs = [
         job for job in existing_jobs
-        if job.get("hours_ago") is not None and job["hours_ago"] <= 48.0
+        if job.get("hours_ago") is not None and job["hours_ago"] <= 120.0
     ]
 
     # 3. Sort from newest to oldest

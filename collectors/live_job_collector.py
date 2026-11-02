@@ -267,7 +267,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
         params = urllib.parse.urlencode({
             "keywords": q,
             "location": "India",
-            "f_TPR": "r172800",  # past 48 hours / 2 days (recency 5m to 2d)
+            "f_TPR": "r432000",  # past 120 hours / 5 days (recency 1m to 5d)
             "f_E": "1,2",       # 1=Internship, 2=Entry level
             "start": 0
         })

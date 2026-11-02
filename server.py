@@ -45,7 +45,7 @@ def health_check():
     }
 
 @app.get("/api/jobs")
-def get_jobs(role_type: str = "all", max_hours: float = 48.0):
+def get_jobs(role_type: str = "all", max_hours: float = 120.0):
     data = load_jobs_data()
     jobs = data.get("jobs", [])
     

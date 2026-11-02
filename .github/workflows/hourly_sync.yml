@@ -55,7 +55,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data.json docs/data.json data.js docs/data.js
           if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "chore(pipeline): hourly sync fresh job listings (5m-2d recency)"
+            git commit -m "chore(pipeline): hourly sync fresh job listings (1m-5d recency)"
             git pull --rebase origin main || true
             git push origin main
           fi

@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261102_v6">
+  <link rel="stylesheet" href="styles.css?v=20261102_v7">
   <script>
     (function() {
       try {
@@ -85,7 +85,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="hero-badge">
-        <span class="sparkle">⚡</span> 100% Verified Fresher Feed • Strictly 0 Years Experience • Updated Live
+        <span class="sparkle">⚡</span> 100% Verified Fresher Feed • Strictly 0 Years Experience • 1m to 5 Days Recency
       </div>
       <h1 class="hero-title">
         Verified Fresher <span class="gradient-text">AI &amp; Data Jobs</span>
@@ -298,12 +298,14 @@
             <div class="drawer-group">
               <label for="freshness-select">Posting Freshness</label>
               <select id="freshness-select">
-                <option value="48" selected>⚡ Recent (5 min to 2 days / 48h)</option>
-                <option value="1">⏱️ Past 1 Hour (0–60m)</option>
-                <option value="12">🔥 Past 12 Hours</option>
-                <option value="24">⭐ Past 24 Hours (Today)</option>
-                <option value="168">📅 Past 7 Days</option>
-                <option value="9999">🌐 Anytime / All Jobs</option>
+                <option value="120" selected>⚡ Live & Fresh (1 min to 5 days / 120h)</option>
+                <option value="1">⏱️ Past 1 Hour (0-60m)</option>
+                <option value="12">🌅 Past 12 Hours</option>
+                <option value="24">📅 Past 24 Hours (Today)</option>
+                <option value="48">⏳ Past 2 Days (48h)</option>
+                <option value="120">🗓️ Past 5 Days (120h)</option>
+                <option value="168">📆 Past 7 Days</option>
+                <option value="any">🌐 Anytime (All Jobs)</option>
               </select>
             </div>
 
@@ -354,9 +356,9 @@
         <div class="banner-content">
           <div class="banner-headline-row">
             <h2 class="banner-headline" id="banner-headline">
-              🎯 Found <span id="banner-job-count" class="highlight-count">0</span> Valid Jobs Posted Within 7 Days
+              🎯 Found <span id="banner-job-count" class="highlight-count">0</span> Valid Jobs Posted Within 5 Days
             </h2>
-            <span class="banner-pill" id="banner-scope-pill">📅 Past 7 Days</span>
+            <span class="banner-pill" id="banner-scope-pill">📅 Past 5 Days</span>
           </div>
           <p class="banner-caption" id="banner-caption">
             Entry-level AI, data science and analytics • India and eligible remote locations
@@ -1218,7 +1220,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261102_v6"></script>
-  <script src="app.js?v=20261102_v6"></script>
+  <script src="data.js?v=20261102_v7"></script>
+  <script src="app.js?v=20261102_v7"></script>
 </body>
 </html>

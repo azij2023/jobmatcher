@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     source: "all",
     minScore: 0.50,
     sortBy: "latest",
-    maxAgeHours: 48, // Recent live jobs (past 48 hours / 2 days)
+    maxAgeHours: 120, // Live jobs from 1 minute to 5 days (120 hours)
     onlySaved: false,
     onlyZeroExp: true, // Strictly 0 experience / freshers by default
     roleType: "jobs" // Strictly "jobs" (full-time fresher roles) by default; internships isolated to Internships tab
@@ -734,7 +734,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
     if (bannerScopePill) {
-      const scopeHrs = currentFilter.maxAgeHours || 48;
+      const scopeHrs = currentFilter.maxAgeHours || 120;
       bannerScopePill.textContent = scopeHrs >= 9000
         ? '🌐 Anytime (All Jobs)'
         : scopeHrs % 24 === 0
@@ -1581,7 +1581,7 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFilter.onlyZeroExp = false;
         currentFilter.onlyInternships = false;
         currentFilter.onlyFullJobs = false;
-        currentFilter.maxAgeHours = 48;
+        currentFilter.maxAgeHours = 120;
         if (tierSelect) tierSelect.value = "all";
         if (sourceSelect) sourceSelect.value = "all";
         if (freshnessSelect) freshnessSelect.value = "48";
@@ -1645,7 +1645,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".quick-filter-pills .quick-pill").forEach(p => {
       const type = p.getAttribute("data-filter-type");
       let isActive = false;
-      if (type === "all" && currentFilter.tier === "all" && currentFilter.source === "all" && !currentFilter.onlySaved && !currentFilter.onlyZeroExp && !currentFilter.onlyInternships && !currentFilter.onlyFullJobs && currentFilter.maxAgeHours === 48) {
+      if (type === "all" && currentFilter.tier === "all" && currentFilter.source === "all" && !currentFilter.onlySaved && !currentFilter.onlyZeroExp && !currentFilter.onlyInternships && !currentFilter.onlyFullJobs && currentFilter.maxAgeHours === 120) {
         isActive = true;
       } else if (type === "zero-exp" && currentFilter.onlyZeroExp) {
         isActive = true;
