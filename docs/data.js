@@ -1,4 +1,4 @@
-window.JOB_MATCHER_DATA = {
+window.JOB_MATCHER_DATA = window.JOB_DATA = {
   "profile": {
     "target_level": "fresher",
     "job_filters": {
@@ -565,23 +565,23 @@ window.JOB_MATCHER_DATA = {
   },
   "jobs": [
     {
-      "title": "Business Data Analyst",
-      "company": "VineForge Technologies",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.92,
+      "title": "Hiring: Data Science Intern | Freshers Welcome",
+      "company": "Crossing Infotech",
+      "location": "India",
+      "score": 0.91,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T13:23:04Z",
+      "posted_at": "2026-11-02T13:56:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 0.13,
-      "relative_time": "8 minutes ago",
-      "url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
-      "naukri_url": "https://www.naukri.com/business-data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
+      "hours_ago": 0.11,
+      "relative_time": "7 minutes ago",
+      "url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485726432",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485726432",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485726432",
+      "naukri_url": "https://www.naukri.com/hiring-data-science-intern-freshers-welcome-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485726432",
       "source_type": "LinkedIn",
       "source_domain": "linkedin.com",
       "job_publisher": null,
@@ -593,8 +593,8 @@ window.JOB_MATCHER_DATA = {
         "A/B Testing Power Analysis & Sample Sizing",
         "Advanced Feature Engineering & Imbalance"
       ],
-      "description": "Business Data Analyst at VineForge Technologies in Hyderabad, Telangana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Business Data Analyst at VineForge Technologies in Hyderabad, Telangana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "description": "Hiring: Data Science Intern | Freshers Welcome at Crossing Infotech in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Hiring: Data Science Intern | Freshers Welcome at Crossing Infotech in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
@@ -602,8 +602,8 @@ window.JOB_MATCHER_DATA = {
       "deadline": null,
       "end_date": null,
       "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
         "gaps": [
           {
             "skill": "Causal Inference & Uplift Modeling",
@@ -624,48 +624,48 @@ window.JOB_MATCHER_DATA = {
             "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
           }
         ],
-        "bridge_roadmap": "For VineForge Technologies's Business Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "bridge_roadmap": "For Crossing Infotech's Hiring: Data Science Intern | Freshers Welcome: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
       "multi_source_urls": {
         "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Data+Analyst+VineForge+Technologies&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/business-data-analyst-jobs-in-india?k=Business+Data+Analyst+VineForge+Technologies&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Business+Data+Analyst+VineForge+Technologies&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Business+Data+Analyst+VineForge+Technologies&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/business-data-analyst-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Data+Analyst+VineForge+Technologies&cboWorkExp1=0"
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/hiring-data-science-intern-freshers-welcome-jobs-in-india?k=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-hiring-data-science-intern-freshers-welcome-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/hiring-data-science-intern-freshers-welcome-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&cboWorkExp1=0"
         },
         "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Business+Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Data+Analyst+VineForge+Technologies&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Business+Data+Analyst&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Business+Data+Analyst&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Data+Analyst"
+          "Wellfound": "https://wellfound.com/jobs?role=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome"
         },
         "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/business-data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Business+Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/business-data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Business+Data+Analyst&experience=0"
+          "Internshala": "https://internshala.com/internships/hiring-data-science-intern-freshers-welcome-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
+          "LetsIntern": "https://www.letsintern.com/internships/hiring-data-science-intern-freshers-welcome-internships",
+          "Apna": "https://apna.co/jobs?q=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&experience=0"
         },
         "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Data+Analyst",
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
           "Kaggle Jobs": "https://www.kaggle.com/jobs",
           "AIM Jobs": "https://analyticsindiamag.com/careers/",
           "Data Elixir": "https://dataelixir.com/jobs"
         },
         "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-business-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Business+Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Data+Analyst",
+          "RemoteOK": "https://remoteok.com/remote-hiring-data-science-intern-freshers-welcome-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
+          "Remotive": "https://remotive.com/remote-jobs?search=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
           "Otta": "https://app.otta.com/jobs"
         },
-        "direct_company_portal": "https://www.google.com/search?q=VineForge+Technologies+careers"
+        "direct_company_portal": "https://www.google.com/search?q=Crossing+Infotech+careers"
       },
-      "is_internship": false
+      "is_internship": true
     },
     {
       "title": "Associate Data Scientist - AI & Advanced Analytics",
@@ -676,7 +676,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T13:09:50Z",
+      "posted_at": "2026-11-02T13:42:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 0.35,
       "relative_time": "21 minutes ago",
@@ -775,109 +775,6 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
-      "title": "Data Analyst",
-      "company": "MedTourEasy Bengaluru",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T13:05:07Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 0.43,
-      "relative_time": "26 minutes ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst at MedTourEasy Bengaluru in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Data Analyst at MedTourEasy Bengaluru in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For MedTourEasy Bengaluru's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+MedTourEasy+Bengaluru&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+MedTourEasy+Bengaluru&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+MedTourEasy+Bengaluru&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+MedTourEasy+Bengaluru&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+MedTourEasy+Bengaluru&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+MedTourEasy+Bengaluru&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=MedTourEasy+Bengaluru+careers"
-      },
-      "is_internship": false
-    },
-    {
       "title": "Trainee Decision Scientist",
       "company": "Mu Sigma",
       "location": "Bengaluru, Karnataka",
@@ -886,7 +783,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "🥉",
-      "posted_at": "2026-11-02T13:00:50Z",
+      "posted_at": "2026-11-02T13:33:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 0.5,
       "relative_time": "30 minutes ago",
@@ -986,6 +883,109 @@ window.JOB_MATCHER_DATA = {
       "is_internship": true
     },
     {
+      "title": "Business Data Analyst",
+      "company": "VineForge Technologies",
+      "location": "Hyderabad, Telangana, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T13:22:40Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 0.68,
+      "relative_time": "41 minutes ago",
+      "url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
+      "naukri_url": "https://www.naukri.com/business-data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/business-data-analyst-at-vineforge-technologies-4484348985",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Business Data Analyst at VineForge Technologies in Hyderabad, Telangana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Business Data Analyst at VineForge Technologies in Hyderabad, Telangana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For VineForge Technologies's Business Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Data+Analyst+VineForge+Technologies&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/business-data-analyst-jobs-in-india?k=Business+Data+Analyst+VineForge+Technologies&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Business+Data+Analyst+VineForge+Technologies&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Business+Data+Analyst+VineForge+Technologies&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/business-data-analyst-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Data+Analyst+VineForge+Technologies&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Business+Data+Analyst&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Data+Analyst+VineForge+Technologies&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Business+Data+Analyst&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Business+Data+Analyst&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Data+Analyst"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/business-data-analyst-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Business+Data+Analyst",
+          "LetsIntern": "https://www.letsintern.com/internships/business-data-analyst-internships",
+          "Apna": "https://apna.co/jobs?q=Business+Data+Analyst&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Data+Analyst",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-business-data-analyst-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Data+Analyst",
+          "Remotive": "https://remotive.com/remote-jobs?search=Business+Data+Analyst",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Data+Analyst",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=VineForge+Technologies+careers"
+      },
+      "is_internship": false
+    },
+    {
       "url": "https://www.flipkartcareers.com/",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+-+Supply+Chain+Intelligence+Flipkart&location=India&f_TPR=r86400&f_E=1%2C2",
       "naukri_url": "https://www.naukri.com/associate-data-scientist-supply-chain-intelligence-jobs-in-india?experience=0",
@@ -998,7 +998,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T12:45:50Z",
+      "posted_at": "2026-11-02T13:18:19Z",
       "hours_ago": 0.75,
       "relative_time": "45 minutes ago",
       "source_type": "Official Company Portal",
@@ -1094,6 +1094,212 @@ window.JOB_MATCHER_DATA = {
     },
     {
       "title": "Data Analyst",
+      "company": "MedTourEasy Bengaluru",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T13:04:40Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 0.98,
+      "relative_time": "59 minutes ago",
+      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-medtoureasy-bengaluru-4485159422",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst at MedTourEasy Bengaluru in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Data Analyst at MedTourEasy Bengaluru in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For MedTourEasy Bengaluru's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+MedTourEasy+Bengaluru&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+MedTourEasy+Bengaluru&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+MedTourEasy+Bengaluru&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+MedTourEasy+Bengaluru&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+MedTourEasy+Bengaluru&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+MedTourEasy+Bengaluru&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
+          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Analyst&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=MedTourEasy+Bengaluru+careers"
+      },
+      "is_internship": false
+    },
+    {
+      "title": "Data Science Intern",
+      "company": "ThinkNovaa",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T13:03:40Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 0.99,
+      "relative_time": "60 minutes ago",
+      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485709639",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485709639",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485709639",
+      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485709639",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Science Intern at ThinkNovaa in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Data Science Intern at ThinkNovaa in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For ThinkNovaa's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Intern+ThinkNovaa&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-science-intern-jobs-in-india?k=Data+Science+Intern+ThinkNovaa&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Science+Intern+ThinkNovaa&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Science+Intern+ThinkNovaa&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-science-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-science-intern-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Science+Intern+ThinkNovaa&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Science+Intern&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Science+Intern+ThinkNovaa&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Science+Intern&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Science+Intern&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Science+Intern"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-science-intern-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Science+Intern",
+          "LetsIntern": "https://www.letsintern.com/internships/data-science-intern-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Science+Intern&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Science+Intern",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-science-intern-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Science+Intern",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Science+Intern",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Science+Intern",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=ThinkNovaa+careers"
+      },
+      "is_internship": true
+    },
+    {
+      "title": "Data Analyst",
       "company": "zonious",
       "location": "India",
       "score": 0.91,
@@ -1101,10 +1307,10 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T12:31:07Z",
+      "posted_at": "2026-11-02T12:03:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 0.99,
-      "relative_time": "60 minutes ago",
+      "hours_ago": 1.99,
+      "relative_time": "2 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-zonious-4484349604",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zonious-4484349604",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zonious-4484349604",
@@ -1196,214 +1402,6 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
-      "title": "Intern - Product Analyst (2027)",
-      "company": "Lokal",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.89,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-02T12:00:00Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 1.51,
-      "relative_time": "2 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
-      "naukri_url": "https://www.naukri.com/intern-product-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "Intern - Product Analyst (2027) at Lokal in Bengaluru, Karnataka, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Intern - Product Analyst (2027) at Lokal in Bengaluru, Karnataka, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "89% Core Match",
-        "gap_percentage": "11% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Lokal's Intern - Product Analyst (2027): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Product+Analyst+Lokal&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/intern-product-analyst-jobs-in-india?k=Intern+-+Product+Analyst+Lokal&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Intern+-+Product+Analyst+Lokal&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Intern+-+Product+Analyst+Lokal&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-intern-product-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/intern-product-analyst-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Intern+-+Product+Analyst+Lokal&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Intern+-+Product+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Intern+-+Product+Analyst+Lokal&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Intern+-+Product+Analyst&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Intern+-+Product+Analyst&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Intern+-+Product+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/intern-product-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Intern+-+Product+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/intern-product-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Intern+-+Product+Analyst&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Intern+-+Product+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-intern-product-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Intern+-+Product+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Intern+-+Product+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Intern+-+Product+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Lokal+careers"
-      },
-      "is_internship": true
-    },
-    {
-      "title": "Machine Learning Engineer Internship",
-      "company": "Vortizo AI",
-      "location": "India",
-      "score": 0.93,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-02T11:43:57Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 1.78,
-      "relative_time": "2 hours ago",
-      "url": "https://unstop.com/internships/1791403",
-      "direct_job_url": "https://unstop.com/internships/1791403",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Vortizo+AI&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1791403",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Machine Learning Engineer Internship at Vortizo AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-30).",
-      "raw_description": "Machine Learning Engineer Internship at Vortizo AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-30).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-30T00:00:00+05:30",
-      "end_date": "2026-11-30T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Vortizo AI's Machine Learning Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Vortizo+AI&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?k=Machine+Learning+Engineer+Internship+Vortizo+AI&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Engineer+Internship+Vortizo+AI&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Engineer+Internship+Vortizo+AI&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/machine-learning-engineer-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Engineer+Internship+Vortizo+AI&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Engineer+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Engineer+Internship+Vortizo+AI&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Engineer+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Engineer+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Engineer+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/machine-learning-engineer-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Engineer+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-engineer-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Machine+Learning+Engineer+Internship&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Engineer+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-machine-learning-engineer-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Engineer+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Engineer+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Engineer+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Vortizo+AI+careers"
-      },
-      "is_internship": true
-    },
-    {
       "title": "Data Science Intern",
       "company": "Jobs4PanIndia",
       "location": "India",
@@ -1412,7 +1410,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T11:31:07Z",
+      "posted_at": "2026-11-02T12:03:40Z",
       "hours_ago": 1.99,
       "relative_time": "2 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4485460986",
@@ -1517,7 +1515,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T11:31:07Z",
+      "posted_at": "2026-11-02T12:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 1.99,
       "relative_time": "2 hours ago",
@@ -1612,10 +1610,218 @@ window.JOB_MATCHER_DATA = {
       "is_internship": true
     },
     {
+      "title": "Intern - Product Analyst (2027)",
+      "company": "Lokal",
+      "location": "Bengaluru, Karnataka, India",
+      "score": 0.89,
+      "tier": 5,
+      "category": "Product",
+      "priority": "Primary",
+      "badge": "5",
+      "posted_at": "2026-11-02T12:00:00Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 2.05,
+      "relative_time": "2 hours ago",
+      "url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
+      "naukri_url": "https://www.naukri.com/intern-product-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/intern-product-analyst-2027-at-lokal-4486149613",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Product Teardown & PRD Documentation",
+        "Telemetry Schema Design & Event Tracking",
+        "User Journey Mapping & Prioritization"
+      ],
+      "description": "Intern - Product Analyst (2027) at Lokal in Bengaluru, Karnataka, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Intern - Product Analyst (2027) at Lokal in Bengaluru, Karnataka, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "89% Core Match",
+        "gap_percentage": "11% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Product Teardown & PRD Documentation",
+            "impact": "High Impact",
+            "category": "Product Thinking",
+            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
+          },
+          {
+            "skill": "Telemetry Schema Design & Event Tracking",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
+          },
+          {
+            "skill": "User Journey Mapping & Prioritization",
+            "impact": "Medium Impact",
+            "category": "Execution",
+            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
+          }
+        ],
+        "bridge_roadmap": "For Lokal's Intern - Product Analyst (2027): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
+        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Intern+-+Product+Analyst+Lokal&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/intern-product-analyst-jobs-in-india?k=Intern+-+Product+Analyst+Lokal&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Intern+-+Product+Analyst+Lokal&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Intern+-+Product+Analyst+Lokal&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-intern-product-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/intern-product-analyst-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Intern+-+Product+Analyst+Lokal&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Intern+-+Product+Analyst&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Intern+-+Product+Analyst+Lokal&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Intern+-+Product+Analyst&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Intern+-+Product+Analyst&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Intern+-+Product+Analyst"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/intern-product-analyst-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Intern+-+Product+Analyst",
+          "LetsIntern": "https://www.letsintern.com/internships/intern-product-analyst-internships",
+          "Apna": "https://apna.co/jobs?q=Intern+-+Product+Analyst&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Intern+-+Product+Analyst",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-intern-product-analyst-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Intern+-+Product+Analyst",
+          "Remotive": "https://remotive.com/remote-jobs?search=Intern+-+Product+Analyst",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Intern+-+Product+Analyst",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Lokal+careers"
+      },
+      "is_internship": true
+    },
+    {
+      "title": "Machine Learning Engineer Internship",
+      "company": "Vortizo AI",
+      "location": "India",
+      "score": 0.93,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-02T11:43:57Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 2.32,
+      "relative_time": "2 hours ago",
+      "url": "https://unstop.com/internships/1791403",
+      "direct_job_url": "https://unstop.com/internships/1791403",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Vortizo+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1791403",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [
+        "machine_learning"
+      ],
+      "missing_skills": [
+        "FastAPI REST Serving & Latency Optimization",
+        "Docker Containerization & Multi-Stage Builds",
+        "Model Registry & Drift Monitoring"
+      ],
+      "description": "Machine Learning Engineer Internship at Vortizo AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-30).",
+      "raw_description": "Machine Learning Engineer Internship at Vortizo AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-30).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-11-30T00:00:00+05:30",
+      "end_date": "2026-11-30T00:00:00+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "93% Core Match",
+        "gap_percentage": "7% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For Vortizo AI's Machine Learning Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Vortizo+AI&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?k=Machine+Learning+Engineer+Internship+Vortizo+AI&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Engineer+Internship+Vortizo+AI&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Engineer+Internship+Vortizo+AI&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/machine-learning-engineer-internship-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Engineer+Internship+Vortizo+AI&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Engineer+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Engineer+Internship+Vortizo+AI&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Engineer+Internship&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Engineer+Internship&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Engineer+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/machine-learning-engineer-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Engineer+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-engineer-internship-internships",
+          "Apna": "https://apna.co/jobs?q=Machine+Learning+Engineer+Internship&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Engineer+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-machine-learning-engineer-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Engineer+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Engineer+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Engineer+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Vortizo+AI+careers"
+      },
+      "is_internship": true
+    },
+    {
       "title": "Applied Scientist Intern (GenAI & Recommendations)",
       "company": "Flipkart",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 2.1,
+      "hours_ago": 2.64,
       "posted_at": "2026-11-02T11:24:48Z",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
@@ -1645,7 +1851,7 @@ window.JOB_MATCHER_DATA = {
       ],
       "description": "My team at Flipkart is hiring an Applied Scientist Intern in Bengaluru! Work on multi-modal generative recommendations and vector search using PyTorch, transformers, and deep learning. 0 years experience required (final-year students / fresh grads). Drop a DM or send your CV and GitHub to applied-scientist@flipkart.com.",
       "posted_at_source": "published_at",
-      "relative_time": "2 hours ago",
+      "relative_time": "3 hours ago",
       "semantic_skill_gap": {
         "fit_percentage": "95% Core Match",
         "gap_percentage": "5% Skill Gap",
@@ -1716,8 +1922,8 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-02T11:05:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 2.43,
-      "relative_time": "2 hours ago",
+      "hours_ago": 2.97,
+      "relative_time": "3 hours ago",
       "url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-foximize-technology-4485469679",
       "direct_job_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-foximize-technology-4485469679",
       "linkedin_url": "https://in.linkedin.com/jobs/view/junior-data-scientist-at-foximize-technology-4485469679",
@@ -1809,6 +2015,109 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
+      "title": "Data Scientist I - Machine Learning & Dynamic Dispatch",
+      "company": "Swiggy",
+      "location": "Bengaluru, Karnataka",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T11:03:19Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 3.0,
+      "relative_time": "3 hours ago",
+      "url": "https://careers.swiggy.com/",
+      "direct_job_url": "https://careers.swiggy.com/",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?experience=0",
+      "company_url": "https://careers.swiggy.com/",
+      "source_type": "Official Company Portal",
+      "source_domain": "careers.swiggy.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Scientist I at Swiggy engineering real-time ETA prediction models, food delivery assignment algorithms, and spatial clustering models. Direct requisition on official Swiggy Careers portal (SmartRecruiters). 0 experience, freshers welcome.",
+      "raw_description": "Data Scientist I at Swiggy engineering real-time ETA prediction models, food delivery assignment algorithms, and spatial clustering models. Direct requisition on official Swiggy Careers portal (SmartRecruiters). 0 experience, freshers welcome.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Swiggy's Data Scientist I - Machine Learning & Dynamic Dispatch: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?k=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-i-machine-learning-dynamic-dispatch-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-scientist-i-machine-learning-dynamic-dispatch-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
+          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-i-machine-learning-dynamic-dispatch-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-scientist-i-machine-learning-dynamic-dispatch-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://careers.swiggy.com/"
+      },
+      "is_internship": false
+    },
+    {
       "title": "Data Scientist",
       "company": "Spar",
       "location": "India",
@@ -1819,7 +2128,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-02T10:52:27Z",
       "posted_at_source": "published_at",
-      "hours_ago": 2.64,
+      "hours_ago": 3.18,
       "relative_time": "3 hours ago",
       "url": "https://unstop.com/jobs/1783624",
       "direct_job_url": "https://unstop.com/jobs/1783624",
@@ -1912,6 +2221,611 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
+      "title": "Product Research Specialist - Fintech & Wealth Analytics",
+      "company": "Groww",
+      "location": "Bengaluru, Karnataka",
+      "score": 0.89,
+      "tier": 5,
+      "category": "Product",
+      "priority": "Primary",
+      "badge": "5",
+      "posted_at": "2026-11-02T10:33:19Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 3.5,
+      "relative_time": "3 hours ago",
+      "url": "https://groww.in/careers",
+      "direct_job_url": "https://groww.in/careers",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/product-research-specialist-fintech-wealth-analytics-jobs-in-india?experience=0",
+      "company_url": "https://groww.in",
+      "source_type": "Official Company Portal",
+      "source_domain": "groww.greenhouse.io",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Product Teardown & PRD Documentation",
+        "Telemetry Schema Design & Event Tracking",
+        "User Journey Mapping & Prioritization"
+      ],
+      "description": "Product Research Specialist at Groww analyzing mutual fund transaction flows, retail investor behavioral analytics, and telemetry cohorts. Direct verified requisition on Groww Greenhouse ATS. 0 experience / freshers eligible.",
+      "raw_description": "Product Research Specialist at Groww analyzing mutual fund transaction flows, retail investor behavioral analytics, and telemetry cohorts. Direct verified requisition on Groww Greenhouse ATS. 0 experience / freshers eligible.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "89% Core Match",
+        "gap_percentage": "11% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Product Teardown & PRD Documentation",
+            "impact": "High Impact",
+            "category": "Product Thinking",
+            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
+          },
+          {
+            "skill": "Telemetry Schema Design & Event Tracking",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
+          },
+          {
+            "skill": "User Journey Mapping & Prioritization",
+            "impact": "Medium Impact",
+            "category": "Execution",
+            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
+          }
+        ],
+        "bridge_roadmap": "For Groww's Product Research Specialist - Fintech & Wealth Analytics: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
+        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/product-research-specialist-fintech-wealth-analytics-jobs-in-india?k=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-product-research-specialist-fintech-wealth-analytics-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/product-research-specialist-fintech-wealth-analytics-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/product-research-specialist-fintech-wealth-analytics-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
+          "LetsIntern": "https://www.letsintern.com/internships/product-research-specialist-fintech-wealth-analytics-internships",
+          "Apna": "https://apna.co/jobs?q=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-product-research-specialist-fintech-wealth-analytics-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
+          "Remotive": "https://remotive.com/remote-jobs?search=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://groww.in/careers"
+      },
+      "is_internship": false
+    },
+    {
+      "title": "Data Scientist - Marketing",
+      "company": "HDFC Bank",
+      "location": "Mumbai, Maharashtra, India",
+      "score": 0.92,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T10:30:11Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 3.55,
+      "relative_time": "4 hours ago",
+      "url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
+      "naukri_url": "https://www.naukri.com/data-scientist-marketing-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Scientist - Marketing at HDFC Bank in Mumbai, Maharashtra, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Data Scientist - Marketing at HDFC Bank in Mumbai, Maharashtra, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For HDFC Bank's Data Scientist - Marketing: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Marketing+HDFC+Bank&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-scientist-marketing-jobs-in-india?k=Data+Scientist+-+Marketing+HDFC+Bank&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+-+Marketing+HDFC+Bank&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+-+Marketing+HDFC+Bank&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-marketing-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-scientist-marketing-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+-+Marketing+HDFC+Bank&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist+-+Marketing&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+-+Marketing+HDFC+Bank&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist+-+Marketing&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist+-+Marketing&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist+-+Marketing"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-scientist-marketing-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist+-+Marketing",
+          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-marketing-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Scientist+-+Marketing&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist+-+Marketing",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-scientist-marketing-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist+-+Marketing",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist+-+Marketing",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist+-+Marketing",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=HDFC+Bank+careers"
+      },
+      "is_internship": false
+    },
+    {
+      "title": "Fresher Data Scientist (Experimentation & Analytics)",
+      "company": "PhonePe",
+      "location": "Bengaluru, Karnataka, India",
+      "hours_ago": 3.64,
+      "posted_at": "2026-11-02T10:24:48Z",
+      "source_type": "LinkedIn Post",
+      "source_domain": "linkedin.com",
+      "is_post": true,
+      "post_author": "Ananya Sen (Director of Data Science @ PhonePe)",
+      "contact_email": "ds-careers@phonepe.com",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20%28Experimentation%20%26%20Analytics%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20%28Experimentation%20%26%20Analytics%29%20hiring&sortBy=%22date_posted%22",
+      "raw_description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
+      "company_url": "https://www.phonepe.com/careers/",
+      "score": 0.965,
+      "tier": 2,
+      "priority": "Primary",
+      "badge": "🥈",
+      "category": "Data Science",
+      "is_fresher": true,
+      "is_internship": false,
+      "matched_skills": [
+        "python",
+        "sql",
+        "pandas",
+        "predictive_modeling"
+      ],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
+      "posted_at_source": "published_at",
+      "relative_time": "4 hours ago",
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For PhonePe's Fresher Data Scientist (Experimentation & Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/fresher-data-scientist-jobs-in-india?k=Fresher+Data+Scientist+PhonePe&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Fresher+Data+Scientist+PhonePe&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Fresher+Data+Scientist+PhonePe&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-fresher-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/fresher-data-scientist-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Fresher+Data+Scientist+PhonePe&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Fresher+Data+Scientist&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Fresher+Data+Scientist+PhonePe&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Fresher+Data+Scientist&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Fresher+Data+Scientist&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Fresher+Data+Scientist"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/fresher-data-scientist-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Fresher+Data+Scientist",
+          "LetsIntern": "https://www.letsintern.com/internships/fresher-data-scientist-internships",
+          "Apna": "https://apna.co/jobs?q=Fresher+Data+Scientist&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Fresher+Data+Scientist",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-fresher-data-scientist-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Fresher+Data+Scientist",
+          "Remotive": "https://remotive.com/remote-jobs?search=Fresher+Data+Scientist",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Fresher+Data+Scientist",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.phonepe.com/careers/"
+      }
+    },
+    {
+      "title": "Associate Product Manager (APM - Fresher)",
+      "company": "Groww",
+      "location": "Bengaluru, Karnataka, India",
+      "hours_ago": 3.64,
+      "posted_at": "2026-11-02T10:24:48Z",
+      "source_type": "LinkedIn Post",
+      "source_domain": "linkedin.com",
+      "is_post": true,
+      "post_author": "Aakash Gupta (Head of Product @ Groww)",
+      "contact_email": "apm-talent@groww.in",
+      "url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20Associate%20Product%20Manager%20%28APM%20-%20Fresher%29%20hiring&sortBy=%22date_posted%22",
+      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20Associate%20Product%20Manager%20%28APM%20-%20Fresher%29%20hiring&sortBy=%22date_posted%22",
+      "raw_description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
+      "company_url": "https://groww.in/careers",
+      "score": 0.945,
+      "tier": 5,
+      "priority": "Primary",
+      "badge": "5",
+      "category": "Product",
+      "is_fresher": true,
+      "is_internship": false,
+      "matched_skills": [
+        "product_analytics",
+        "sql",
+        "telemetry",
+        "problem_solving"
+      ],
+      "missing_skills": [
+        "Product Teardown & PRD Documentation",
+        "User Journey Mapping & Prioritization"
+      ],
+      "description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
+      "posted_at_source": "published_at",
+      "relative_time": "4 hours ago",
+      "semantic_skill_gap": {
+        "fit_percentage": "94% Core Match",
+        "gap_percentage": "6% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Product Teardown & PRD Documentation",
+            "impact": "High Impact",
+            "category": "Product Thinking",
+            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
+          },
+          {
+            "skill": "User Journey Mapping & Prioritization",
+            "impact": "Medium Impact",
+            "category": "Execution",
+            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
+          }
+        ],
+        "bridge_roadmap": "For Groww's Associate Product Manager (APM - Fresher): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
+        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/associate-product-manager-jobs-in-india?k=Associate+Product+Manager+Groww&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+Groww&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+Groww&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/associate-product-manager-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+Groww&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+Groww&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/associate-product-manager-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager",
+          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-internships",
+          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager",
+          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://groww.in/careers"
+      }
+    },
+    {
+      "title": "Associate Decision Scientist (Risk & Growth)",
+      "company": "CRED",
+      "location": "Bengaluru, Karnataka, India",
+      "hours_ago": 3.64,
+      "posted_at": "2026-11-02T10:24:48Z",
+      "source_type": "LinkedIn Post",
+      "source_domain": "linkedin.com",
+      "is_post": true,
+      "post_author": "Tanvi Agarwal (Senior Decision Scientist @ CRED)",
+      "contact_email": "decisionscience@cred.club",
+      "url": "https://careers.cred.club/",
+      "direct_job_url": "https://careers.cred.club/",
+      "raw_description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
+      "company_url": "https://careers.cred.club/",
+      "score": 0.95,
+      "tier": 3,
+      "priority": "Primary",
+      "badge": "🥉",
+      "category": "Decision Science",
+      "is_fresher": true,
+      "is_internship": false,
+      "matched_skills": [
+        "statistical_modeling",
+        "ab_testing",
+        "hypothesis_testing",
+        "sql"
+      ],
+      "missing_skills": [
+        "Bayesian Modeling & Uncertainty Estimation",
+        "Multi-Armed Bandits & Dynamic Pricing",
+        "Quasi-Experimentation & Synthetic Controls"
+      ],
+      "description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
+      "posted_at_source": "published_at",
+      "relative_time": "4 hours ago",
+      "semantic_skill_gap": {
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Bayesian Modeling & Uncertainty Estimation",
+            "impact": "High Impact",
+            "category": "Statistical Science",
+            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
+          },
+          {
+            "skill": "Multi-Armed Bandits & Dynamic Pricing",
+            "impact": "High Impact",
+            "category": "Decision Optimization",
+            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
+          },
+          {
+            "skill": "Quasi-Experimentation & Synthetic Controls",
+            "impact": "Medium Impact",
+            "category": "Analytics",
+            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
+          }
+        ],
+        "bridge_roadmap": "For CRED's Associate Decision Scientist (Risk & Growth): Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
+        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/associate-decision-scientist-jobs-in-india?k=Associate+Decision+Scientist+CRED&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Decision+Scientist+CRED&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Decision+Scientist+CRED&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-decision-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/associate-decision-scientist-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Decision+Scientist+CRED&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Associate+Decision+Scientist&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Decision+Scientist+CRED&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Associate+Decision+Scientist&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Decision+Scientist&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Decision+Scientist"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/associate-decision-scientist-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Associate+Decision+Scientist",
+          "LetsIntern": "https://www.letsintern.com/internships/associate-decision-scientist-internships",
+          "Apna": "https://apna.co/jobs?q=Associate+Decision+Scientist&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Decision+Scientist",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-associate-decision-scientist-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Decision+Scientist",
+          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Decision+Scientist",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Decision+Scientist",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://careers.cred.club/"
+      }
+    },
+    {
+      "title": "Data Analyst Internship",
+      "company": "Springer Capital",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T10:17:04Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 3.77,
+      "relative_time": "4 hours ago",
+      "url": "https://unstop.com/internships/1787900",
+      "direct_job_url": "https://unstop.com/internships/1787900",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Springer+Capital&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1787900",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst Internship at Springer Capital in India. Active hiring opportunity on Unstop (Deadline: 2026-11-14).",
+      "raw_description": "Data Analyst Internship at Springer Capital in India. Active hiring opportunity on Unstop (Deadline: 2026-11-14).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-11-14T00:00:00+05:30",
+      "end_date": "2026-11-14T00:00:00+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Springer Capital's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Springer+Capital&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-analyst-internship-jobs-in-india?k=Data+Analyst+Internship+Springer+Capital&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Internship+Springer+Capital&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Internship+Springer+Capital&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-analyst-internship-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Internship+Springer+Capital&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Internship+Springer+Capital&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst+Internship&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst+Internship&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-analyst-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internship-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Analyst+Internship&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-analyst-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Springer+Capital+careers"
+      },
+      "is_internship": true
+    },
+    {
       "title": "Data Science Intern",
       "company": "Devryxa",
       "location": "India",
@@ -1920,9 +2834,9 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T10:31:07Z",
-      "hours_ago": 2.99,
-      "relative_time": "3 hours ago",
+      "posted_at": "2026-11-02T10:03:40Z",
+      "hours_ago": 3.99,
+      "relative_time": "4 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4485453759",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4485453759",
       "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
@@ -2025,9 +2939,9 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T10:31:07Z",
-      "hours_ago": 2.99,
-      "relative_time": "3 hours ago",
+      "posted_at": "2026-11-02T10:03:40Z",
+      "hours_ago": 3.99,
+      "relative_time": "4 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4485455750",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4485455750",
       "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
@@ -2130,10 +3044,10 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T10:31:07Z",
+      "posted_at": "2026-11-02T10:03:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 2.99,
-      "relative_time": "3 hours ago",
+      "hours_ago": 3.99,
+      "relative_time": "4 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-vortenza-systems-4485467541",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-vortenza-systems-4485467541",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-vortenza-systems-4485467541",
@@ -2233,10 +3147,10 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T10:31:07Z",
+      "posted_at": "2026-11-02T10:03:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 2.99,
-      "relative_time": "3 hours ago",
+      "hours_ago": 3.99,
+      "relative_time": "4 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-devryxa-4486122995",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-devryxa-4486122995",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-devryxa-4486122995",
@@ -2336,10 +3250,10 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T10:31:07Z",
+      "posted_at": "2026-11-02T10:03:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 2.99,
-      "relative_time": "3 hours ago",
+      "hours_ago": 3.99,
+      "relative_time": "4 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-webs-it-solution-4486123890",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-webs-it-solution-4486123890",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-webs-it-solution-4486123890",
@@ -2431,27 +3345,23 @@ window.JOB_MATCHER_DATA = {
       "is_internship": true
     },
     {
-      "title": "Data Scientist I - Machine Learning & Dynamic Dispatch",
-      "company": "Swiggy",
+      "url": "https://www.phonepe.com/careers/",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
+      "company_url": "https://www.phonepe.com/careers/",
+      "title": "Data Analyst - Payments & Fraud Risk",
+      "company": "PhonePe",
       "location": "Bengaluru, Karnataka",
       "score": 0.92,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T10:30:50Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 3.0,
-      "relative_time": "3 hours ago",
-      "url": "https://careers.swiggy.com/",
-      "direct_job_url": "https://careers.swiggy.com/",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?experience=0",
-      "company_url": "https://careers.swiggy.com/",
+      "posted_at": "2026-11-02T10:03:19Z",
+      "hours_ago": 4.0,
+      "relative_time": "4 hours ago",
       "source_type": "Official Company Portal",
-      "source_domain": "careers.swiggy.com",
-      "job_publisher": null,
-      "location_unverified": false,
+      "source_domain": "phonepe.com/careers",
       "is_fresher": true,
       "matched_skills": [],
       "missing_skills": [
@@ -2459,14 +3369,12 @@ window.JOB_MATCHER_DATA = {
         "A/B Testing Power Analysis & Sample Sizing",
         "Advanced Feature Engineering & Imbalance"
       ],
-      "description": "Data Scientist I at Swiggy engineering real-time ETA prediction models, food delivery assignment algorithms, and spatial clustering models. Direct requisition on official Swiggy Careers portal (SmartRecruiters). 0 experience, freshers welcome.",
-      "raw_description": "Data Scientist I at Swiggy engineering real-time ETA prediction models, food delivery assignment algorithms, and spatial clustering models. Direct requisition on official Swiggy Careers portal (SmartRecruiters). 0 experience, freshers welcome.",
+      "description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers. Strictly 0 years experience / freshers eligible.",
+      "raw_description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers. Strictly 0 years experience / freshers eligible.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
       "post_author": null,
-      "deadline": null,
-      "end_date": null,
       "semantic_skill_gap": {
         "fit_percentage": "92% Core Match",
         "gap_percentage": "8% Skill Gap",
@@ -2490,653 +3398,56 @@ window.JOB_MATCHER_DATA = {
             "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
           }
         ],
-        "bridge_roadmap": "For Swiggy's Data Scientist I - Machine Learning & Dynamic Dispatch: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "bridge_roadmap": "For PhonePe's Data Analyst - Payments & Fraud Risk: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
         "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?k=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-i-machine-learning-dynamic-dispatch-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-scientist-i-machine-learning-dynamic-dispatch-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch+Swiggy&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-scientist-i-machine-learning-dynamic-dispatch-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
-          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-i-machine-learning-dynamic-dispatch-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-scientist-i-machine-learning-dynamic-dispatch-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist+I+-+Machine+Learning+%26+Dynamic+Dispatch",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://careers.swiggy.com/"
-      },
-      "is_internship": false
-    },
-    {
-      "title": "Data Scientist - Marketing",
-      "company": "HDFC Bank",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T10:30:11Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 3.01,
-      "relative_time": "3 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
-      "naukri_url": "https://www.naukri.com/data-scientist-marketing-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-scientist-marketing-at-hdfc-bank-4484344065",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Scientist - Marketing at HDFC Bank in Mumbai, Maharashtra, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Data Scientist - Marketing at HDFC Bank in Mumbai, Maharashtra, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For HDFC Bank's Data Scientist - Marketing: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Marketing+HDFC+Bank&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-scientist-marketing-jobs-in-india?k=Data+Scientist+-+Marketing+HDFC+Bank&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+-+Marketing+HDFC+Bank&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+-+Marketing+HDFC+Bank&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-marketing-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-scientist-marketing-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+-+Marketing+HDFC+Bank&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist+-+Marketing&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+-+Marketing+HDFC+Bank&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist+-+Marketing&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist+-+Marketing&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist+-+Marketing"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-scientist-marketing-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist+-+Marketing",
-          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-marketing-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Scientist+-+Marketing&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist+-+Marketing",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-scientist-marketing-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist+-+Marketing",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist+-+Marketing",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist+-+Marketing",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=HDFC+Bank+careers"
-      },
-      "is_internship": false
-    },
-    {
-      "title": "Fresher Data Scientist (Experimentation & Analytics)",
-      "company": "PhonePe",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3.1,
-      "posted_at": "2026-11-02T10:24:48Z",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Ananya Sen (Director of Data Science @ PhonePe)",
-      "contact_email": "ds-careers@phonepe.com",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20%28Experimentation%20%26%20Analytics%29%20hiring&sortBy=%22date_posted%22",
-      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=PhonePe%20Fresher%20Data%20Scientist%20%28Experimentation%20%26%20Analytics%29%20hiring&sortBy=%22date_posted%22",
-      "raw_description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
-      "company_url": "https://www.phonepe.com/careers/",
-      "score": 0.965,
-      "tier": 2,
-      "priority": "Primary",
-      "badge": "🥈",
-      "category": "Data Science",
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "python",
-        "sql",
-        "pandas",
-        "predictive_modeling"
-      ],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "My team at PhonePe is looking for a Fresher Data Scientist in Bengaluru! Work on payment fraud detection, causal inference, and user behavior modeling using Python and SQL. 0 years experience required (2024/2025 batch graduates). DM me your GitHub/LinkedIn.",
       "posted_at_source": "published_at",
-      "relative_time": "3 hours ago",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For PhonePe's Fresher Data Scientist (Experimentation & Analytics): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
+      "direct_job_url": "https://www.phonepe.com/careers/",
+      "min_years_experience": 0,
+      "max_years_experience": 1,
+      "job_publisher": null,
+      "location_unverified": false,
+      "deadline": null,
+      "end_date": null,
+      "is_internship": false,
       "multi_source_urls": {
         "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Fresher+Data+Scientist+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/fresher-data-scientist-jobs-in-india?k=Fresher+Data+Scientist+PhonePe&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Fresher+Data+Scientist+PhonePe&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Fresher+Data+Scientist+PhonePe&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-fresher-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/fresher-data-scientist-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Fresher+Data+Scientist+PhonePe&cboWorkExp1=0"
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?k=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-payments-fraud-risk-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&cboWorkExp1=0"
         },
         "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Fresher+Data+Scientist&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Fresher+Data+Scientist+PhonePe&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Fresher+Data+Scientist&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Fresher+Data+Scientist&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Fresher+Data+Scientist"
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst+-+Payments+%26+Fraud+Risk&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst+-+Payments+%26+Fraud+Risk&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst+-+Payments+%26+Fraud+Risk&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst+-+Payments+%26+Fraud+Risk"
         },
         "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/fresher-data-scientist-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Fresher+Data+Scientist",
-          "LetsIntern": "https://www.letsintern.com/internships/fresher-data-scientist-internships",
-          "Apna": "https://apna.co/jobs?q=Fresher+Data+Scientist&experience=0"
+          "Internshala": "https://internshala.com/internships/data-analyst-payments-fraud-risk-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst+-+Payments+%26+Fraud+Risk",
+          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-payments-fraud-risk-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Analyst+-+Payments+%26+Fraud+Risk&experience=0"
         },
         "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Fresher+Data+Scientist",
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst+-+Payments+%26+Fraud+Risk",
           "Kaggle Jobs": "https://www.kaggle.com/jobs",
           "AIM Jobs": "https://analyticsindiamag.com/careers/",
           "Data Elixir": "https://dataelixir.com/jobs"
         },
         "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-fresher-data-scientist-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Fresher+Data+Scientist",
-          "Remotive": "https://remotive.com/remote-jobs?search=Fresher+Data+Scientist",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Fresher+Data+Scientist",
+          "RemoteOK": "https://remoteok.com/remote-data-analyst-payments-fraud-risk-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst+-+Payments+%26+Fraud+Risk",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst+-+Payments+%26+Fraud+Risk",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst+-+Payments+%26+Fraud+Risk",
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.phonepe.com/careers/"
       }
-    },
-    {
-      "title": "Associate Product Manager (APM - Fresher)",
-      "company": "Groww",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3.1,
-      "posted_at": "2026-11-02T10:24:48Z",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Aakash Gupta (Head of Product @ Groww)",
-      "contact_email": "apm-talent@groww.in",
-      "url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20Associate%20Product%20Manager%20%28APM%20-%20Fresher%29%20hiring&sortBy=%22date_posted%22",
-      "direct_job_url": "https://www.linkedin.com/search/results/content/?keywords=Groww%20Associate%20Product%20Manager%20%28APM%20-%20Fresher%29%20hiring&sortBy=%22date_posted%22",
-      "raw_description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
-      "company_url": "https://groww.in/careers",
-      "score": 0.945,
-      "tier": 5,
-      "priority": "Primary",
-      "badge": "5",
-      "category": "Product",
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "product_analytics",
-        "sql",
-        "telemetry",
-        "problem_solving"
-      ],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "We are hiring 2 APMs at Groww Bengaluru for our core investing and payments team. Looking for 0-1 years exp, strong analytical mindset, telemetry metrics, and SQL. If you love fintech and building products from scratch, send a teardown and CV to apm-talent@groww.in or DM me.",
-      "posted_at_source": "published_at",
-      "relative_time": "3 hours ago",
-      "semantic_skill_gap": {
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Groww's Associate Product Manager (APM - Fresher): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/associate-product-manager-jobs-in-india?k=Associate+Product+Manager+Groww&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+Groww&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+Groww&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+Groww&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+Groww&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://groww.in/careers"
-      }
-    },
-    {
-      "title": "Associate Decision Scientist (Risk & Growth)",
-      "company": "CRED",
-      "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 3.1,
-      "posted_at": "2026-11-02T10:24:48Z",
-      "source_type": "LinkedIn Post",
-      "source_domain": "linkedin.com",
-      "is_post": true,
-      "post_author": "Tanvi Agarwal (Senior Decision Scientist @ CRED)",
-      "contact_email": "decisionscience@cred.club",
-      "url": "https://careers.cred.club/",
-      "direct_job_url": "https://careers.cred.club/",
-      "raw_description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
-      "company_url": "https://careers.cred.club/",
-      "score": 0.95,
-      "tier": 3,
-      "priority": "Primary",
-      "badge": "🥉",
-      "category": "Decision Science",
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "statistical_modeling",
-        "ab_testing",
-        "hypothesis_testing",
-        "sql"
-      ],
-      "missing_skills": [
-        "Bayesian Modeling & Uncertainty Estimation",
-        "Multi-Armed Bandits & Dynamic Pricing",
-        "Quasi-Experimentation & Synthetic Controls"
-      ],
-      "description": "Hiring alert! CRED's Decision Science team is expanding in Bengaluru. We are looking for entry-level Decision Scientists (0-1 yr exp) who excel at statistical modeling, hypothesis testing, A/B experimentation, and SQL. Comment 'Interested' or email decisionscience@cred.club.",
-      "posted_at_source": "published_at",
-      "relative_time": "3 hours ago",
-      "semantic_skill_gap": {
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Bayesian Modeling & Uncertainty Estimation",
-            "impact": "High Impact",
-            "category": "Statistical Science",
-            "action": "Build a hierarchical Bayesian model in PyMC or Stan to estimate risk parameters with credible intervals."
-          },
-          {
-            "skill": "Multi-Armed Bandits & Dynamic Pricing",
-            "impact": "High Impact",
-            "category": "Decision Optimization",
-            "action": "Simulate Thompson Sampling vs Epsilon-Greedy allocation for conversion optimization in Python."
-          },
-          {
-            "skill": "Quasi-Experimentation & Synthetic Controls",
-            "impact": "Medium Impact",
-            "category": "Analytics",
-            "action": "Conduct an observational policy study using propensity score matching and regression discontinuity."
-          }
-        ],
-        "bridge_roadmap": "For CRED's Associate Decision Scientist (Risk & Growth): Develop a decision-support dashboard evaluating trade-offs between false-positive risk and user retention with simulated ROI metrics.",
-        "interview_talk_track": "I focus on actionable decision analysis under uncertainty, using statistical hypothesis testing and trade-off matrices to translate raw numbers into executive recommendations."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Decision+Scientist+CRED&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/associate-decision-scientist-jobs-in-india?k=Associate+Decision+Scientist+CRED&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Decision+Scientist+CRED&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Decision+Scientist+CRED&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-decision-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/associate-decision-scientist-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Decision+Scientist+CRED&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Decision+Scientist&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Decision+Scientist+CRED&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Decision+Scientist&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Decision+Scientist&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Decision+Scientist"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-decision-scientist-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Decision+Scientist",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-decision-scientist-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Decision+Scientist&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Decision+Scientist",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-decision-scientist-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Decision+Scientist",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Decision+Scientist",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Decision+Scientist",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://careers.cred.club/"
-      }
-    },
-    {
-      "title": "Data Analyst Internship",
-      "company": "Springer Capital",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T10:17:04Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 3.23,
-      "relative_time": "3 hours ago",
-      "url": "https://unstop.com/internships/1787900",
-      "direct_job_url": "https://unstop.com/internships/1787900",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Springer+Capital&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1787900",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst Internship at Springer Capital in India. Active hiring opportunity on Unstop (Deadline: 2026-11-14).",
-      "raw_description": "Data Analyst Internship at Springer Capital in India. Active hiring opportunity on Unstop (Deadline: 2026-11-14).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-14T00:00:00+05:30",
-      "end_date": "2026-11-14T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Springer Capital's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Springer+Capital&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-analyst-internship-jobs-in-india?k=Data+Analyst+Internship+Springer+Capital&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Internship+Springer+Capital&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Internship+Springer+Capital&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-analyst-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Internship+Springer+Capital&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Internship+Springer+Capital&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst+Internship&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Springer+Capital+careers"
-      },
-      "is_internship": true
-    },
-    {
-      "title": "Product Research Specialist - Fintech & Wealth Analytics",
-      "company": "Groww",
-      "location": "Bengaluru, Karnataka",
-      "score": 0.89,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-02T10:00:50Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 3.5,
-      "relative_time": "3 hours ago",
-      "url": "https://groww.in/careers",
-      "direct_job_url": "https://groww.in/careers",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/product-research-specialist-fintech-wealth-analytics-jobs-in-india?experience=0",
-      "company_url": "https://groww.in",
-      "source_type": "Official Company Portal",
-      "source_domain": "groww.greenhouse.io",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
-      "description": "Product Research Specialist at Groww analyzing mutual fund transaction flows, retail investor behavioral analytics, and telemetry cohorts. Direct verified requisition on Groww Greenhouse ATS. 0 experience / freshers eligible.",
-      "raw_description": "Product Research Specialist at Groww analyzing mutual fund transaction flows, retail investor behavioral analytics, and telemetry cohorts. Direct verified requisition on Groww Greenhouse ATS. 0 experience / freshers eligible.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "89% Core Match",
-        "gap_percentage": "11% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Groww's Product Research Specialist - Fintech & Wealth Analytics: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/product-research-specialist-fintech-wealth-analytics-jobs-in-india?k=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-product-research-specialist-fintech-wealth-analytics-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/product-research-specialist-fintech-wealth-analytics-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics+Groww&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/product-research-specialist-fintech-wealth-analytics-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
-          "LetsIntern": "https://www.letsintern.com/internships/product-research-specialist-fintech-wealth-analytics-internships",
-          "Apna": "https://apna.co/jobs?q=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-product-research-specialist-fintech-wealth-analytics-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
-          "Remotive": "https://remotive.com/remote-jobs?search=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Product+Research+Specialist+-+Fintech+%26+Wealth+Analytics",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://groww.in/careers"
-      },
-      "is_internship": false
     },
     {
       "title": "Data Scientist (Junior)",
@@ -3149,7 +3460,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-02T09:52:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 3.64,
+      "hours_ago": 4.18,
       "relative_time": "4 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-junior-at-coderound-ai-4486135539",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-junior-at-coderound-ai-4486135539",
@@ -3252,8 +3563,8 @@ window.JOB_MATCHER_DATA = {
       "badge": "5",
       "posted_at": "2026-11-02T09:33:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 3.96,
-      "relative_time": "4 hours ago",
+      "hours_ago": 4.5,
+      "relative_time": "5 hours ago",
       "url": "https://in.linkedin.com/jobs/view/product-analyst-at-headout-4436513787",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-analyst-at-headout-4436513787",
       "linkedin_url": "https://in.linkedin.com/jobs/view/product-analyst-at-headout-4436513787",
@@ -3345,115 +3656,10 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
-      "url": "https://www.phonepe.com/careers/",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
-      "company_url": "https://www.phonepe.com/careers/",
-      "title": "Data Analyst - Payments & Fraud Risk",
-      "company": "PhonePe",
-      "location": "Bengaluru, Karnataka",
-      "score": 0.92,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T09:30:50Z",
-      "hours_ago": 4.0,
-      "relative_time": "4 hours ago",
-      "source_type": "Official Company Portal",
-      "source_domain": "phonepe.com/careers",
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers. Strictly 0 years experience / freshers eligible.",
-      "raw_description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers. Strictly 0 years experience / freshers eligible.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For PhonePe's Data Analyst - Payments & Fraud Risk: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "posted_at_source": "published_at",
-      "direct_job_url": "https://www.phonepe.com/careers/",
-      "min_years_experience": 0,
-      "max_years_experience": 1,
-      "job_publisher": null,
-      "location_unverified": false,
-      "deadline": null,
-      "end_date": null,
-      "is_internship": false,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-analyst-payments-fraud-risk-jobs-in-india?k=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-payments-fraud-risk-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-analyst-payments-fraud-risk-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst+-+Payments+%26+Fraud+Risk&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+-+Payments+%26+Fraud+Risk+PhonePe&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst+-+Payments+%26+Fraud+Risk&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst+-+Payments+%26+Fraud+Risk&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst+-+Payments+%26+Fraud+Risk"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-payments-fraud-risk-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst+-+Payments+%26+Fraud+Risk",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-payments-fraud-risk-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst+-+Payments+%26+Fraud+Risk&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst+-+Payments+%26+Fraud+Risk",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-payments-fraud-risk-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst+-+Payments+%26+Fraud+Risk",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst+-+Payments+%26+Fraud+Risk",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst+-+Payments+%26+Fraud+Risk",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.phonepe.com/careers/"
-      }
-    },
-    {
       "title": "Time Series Forecasting Analyst (Early Career)",
       "company": "Zepto",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 4.1,
+      "hours_ago": 4.64,
       "posted_at": "2026-11-02T09:24:48Z",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
@@ -3484,7 +3690,7 @@ window.JOB_MATCHER_DATA = {
       ],
       "description": "Zepto is hiring a Time Series Forecasting Analyst in Bengaluru. Drive 10-minute dark store demand prediction models using Prophet, ARIMA, and Python pandas. 0-1 year experience. Send your resume directly to forecasting@zeptonow.com with subject 'Forecasting Analyst - Fresher'.",
       "posted_at_source": "published_at",
-      "relative_time": "4 hours ago",
+      "relative_time": "5 hours ago",
       "semantic_skill_gap": {
         "fit_percentage": "92% Core Match",
         "gap_percentage": "8% Skill Gap",
@@ -3548,7 +3754,7 @@ window.JOB_MATCHER_DATA = {
       "title": "Fresher Data Scientist (Marketplace & Pricing)",
       "company": "Meesho",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 4.1,
+      "hours_ago": 4.64,
       "posted_at": "2026-11-02T09:24:48Z",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
@@ -3579,7 +3785,7 @@ window.JOB_MATCHER_DATA = {
       ],
       "description": "I am hiring a Fresher Data Scientist for Meesho's marketplace pricing team in Bengaluru. 2024/2025 batch graduates with Python, pandas, and predictive modeling experience. Work on real-time pricing and seller incentives. Email resume to analytics-hiring@meesho.com.",
       "posted_at_source": "published_at",
-      "relative_time": "4 hours ago",
+      "relative_time": "5 hours ago",
       "semantic_skill_gap": {
         "fit_percentage": "95% Core Match",
         "gap_percentage": "5% Skill Gap",
@@ -3649,7 +3855,7 @@ window.JOB_MATCHER_DATA = {
       "title": "Optimization & Operations Research Trainee",
       "company": "InMobi",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 4.1,
+      "hours_ago": 4.64,
       "posted_at": "2026-11-02T09:24:48Z",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
@@ -3680,7 +3886,7 @@ window.JOB_MATCHER_DATA = {
       ],
       "description": "My team at InMobi is looking for an Optimization Trainee in Bengaluru. Freshers with strong linear programming, PuLP, and operations research background. Optimize real-time ad bidding allocation algorithms. Shoot me a message or email optimization@inmobi.com.",
       "posted_at_source": "published_at",
-      "relative_time": "4 hours ago",
+      "relative_time": "5 hours ago",
       "semantic_skill_gap": {
         "fit_percentage": "94% Core Match",
         "gap_percentage": "6% Skill Gap",
@@ -3747,418 +3953,6 @@ window.JOB_MATCHER_DATA = {
       }
     },
     {
-      "title": "Data Analyst Internship",
-      "company": "Webboost Solutions",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T09:00:17Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 4.51,
-      "relative_time": "5 hours ago",
-      "url": "https://unstop.com/internships/1784953",
-      "direct_job_url": "https://unstop.com/internships/1784953",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Webboost+Solutions&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1784953",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst Internship at Webboost Solutions in India. Active hiring opportunity on Unstop (Deadline: 2026-11-13).",
-      "raw_description": "Data Analyst Internship at Webboost Solutions in India. Active hiring opportunity on Unstop (Deadline: 2026-11-13).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-13T00:00:33+05:30",
-      "end_date": "2026-11-13T00:00:33+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Webboost Solutions's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Webboost+Solutions&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-analyst-internship-jobs-in-india?k=Data+Analyst+Internship+Webboost+Solutions&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Internship+Webboost+Solutions&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Internship+Webboost+Solutions&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-analyst-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Internship+Webboost+Solutions&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Internship+Webboost+Solutions&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst+Internship&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Webboost+Solutions+careers"
-      },
-      "is_internship": true
-    },
-    {
-      "title": "Data Analyst",
-      "company": "Appinventiv",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T08:33:11Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 4.96,
-      "relative_time": "5 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Analyst at Appinventiv in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Data Analyst at Appinventiv in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Appinventiv's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Appinventiv&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Appinventiv&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Appinventiv&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Appinventiv&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Appinventiv&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Appinventiv&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Appinventiv+careers"
-      },
-      "is_internship": false
-    },
-    {
-      "title": "Data Science Intern",
-      "company": "ThinkNovaa",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-02T08:31:07Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 4.99,
-      "relative_time": "5 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485461430",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485461430",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485461430",
-      "naukri_url": "https://www.naukri.com/data-science-intern-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4485461430",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Data Science Intern at ThinkNovaa in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Data Science Intern at ThinkNovaa in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For ThinkNovaa's Data Science Intern: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Intern+ThinkNovaa&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-science-intern-jobs-in-india?k=Data+Science+Intern+ThinkNovaa&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Science+Intern+ThinkNovaa&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Science+Intern+ThinkNovaa&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-science-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-science-intern-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Science+Intern+ThinkNovaa&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Science+Intern&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Science+Intern+ThinkNovaa&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Science+Intern&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Science+Intern&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Science+Intern"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-science-intern-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Science+Intern",
-          "LetsIntern": "https://www.letsintern.com/internships/data-science-intern-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Science+Intern&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Science+Intern",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-science-intern-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Science+Intern",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Science+Intern",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Science+Intern",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=ThinkNovaa+careers"
-      },
-      "is_internship": true
-    },
-    {
-      "title": "Generative AI Engineer Intern",
-      "company": "Margadeshaka",
-      "location": "Chandigarh, Chandigarh, India",
-      "score": 0.85,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-02T08:31:07Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 4.99,
-      "relative_time": "5 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
-      "naukri_url": "https://www.naukri.com/generative-ai-engineer-intern-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Generative AI Engineer Intern at Margadeshaka in Chandigarh, Chandigarh, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Generative AI Engineer Intern at Margadeshaka in Chandigarh, Chandigarh, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Margadeshaka's Generative AI Engineer Intern: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Generative+AI+Engineer+Intern+Margadeshaka&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/generative-ai-engineer-intern-jobs-in-india?k=Generative+AI+Engineer+Intern+Margadeshaka&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Generative+AI+Engineer+Intern+Margadeshaka&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Generative+AI+Engineer+Intern+Margadeshaka&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-generative-ai-engineer-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/generative-ai-engineer-intern-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Generative+AI+Engineer+Intern+Margadeshaka&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Generative+AI+Engineer+Intern&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Generative+AI+Engineer+Intern+Margadeshaka&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Generative+AI+Engineer+Intern&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Generative+AI+Engineer+Intern&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Generative+AI+Engineer+Intern"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/generative-ai-engineer-intern-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Generative+AI+Engineer+Intern",
-          "LetsIntern": "https://www.letsintern.com/internships/generative-ai-engineer-intern-internships",
-          "Apna": "https://apna.co/jobs?q=Generative+AI+Engineer+Intern&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Generative+AI+Engineer+Intern",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-generative-ai-engineer-intern-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Generative+AI+Engineer+Intern",
-          "Remotive": "https://remotive.com/remote-jobs?search=Generative+AI+Engineer+Intern",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Generative+AI+Engineer+Intern",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Margadeshaka+careers"
-      },
-      "is_internship": true
-    },
-    {
       "title": "Product Analyst - Payments & UPI Telemetry",
       "company": "Paytm",
       "location": "Noida, Uttar Pradesh",
@@ -4167,7 +3961,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Product",
       "priority": "Primary",
       "badge": "5",
-      "posted_at": "2026-11-02T08:30:50Z",
+      "posted_at": "2026-11-02T09:03:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 5.0,
       "relative_time": "5 hours ago",
@@ -4276,7 +4070,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T08:30:50Z",
+      "posted_at": "2026-11-02T09:03:19Z",
       "hours_ago": 5.0,
       "relative_time": "5 hours ago",
       "source_type": "Official Company Portal",
@@ -4369,10 +4163,216 @@ window.JOB_MATCHER_DATA = {
       }
     },
     {
+      "title": "Data Analyst Internship",
+      "company": "Webboost Solutions",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T09:00:17Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 5.05,
+      "relative_time": "5 hours ago",
+      "url": "https://unstop.com/internships/1784953",
+      "direct_job_url": "https://unstop.com/internships/1784953",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Webboost+Solutions&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1784953",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst Internship at Webboost Solutions in India. Active hiring opportunity on Unstop (Deadline: 2026-11-13).",
+      "raw_description": "Data Analyst Internship at Webboost Solutions in India. Active hiring opportunity on Unstop (Deadline: 2026-11-13).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-11-13T00:00:33+05:30",
+      "end_date": "2026-11-13T00:00:33+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Webboost Solutions's Data Analyst Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Webboost+Solutions&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-analyst-internship-jobs-in-india?k=Data+Analyst+Internship+Webboost+Solutions&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Internship+Webboost+Solutions&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Internship+Webboost+Solutions&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-analyst-internship-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Internship+Webboost+Solutions&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Internship+Webboost+Solutions&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst+Internship&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst+Internship&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-analyst-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internship-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Analyst+Internship&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-analyst-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Webboost+Solutions+careers"
+      },
+      "is_internship": true
+    },
+    {
+      "title": "Data Analyst",
+      "company": "Appinventiv",
+      "location": "India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-11-02T08:33:11Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 5.5,
+      "relative_time": "6 hours ago",
+      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
+      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-appinventiv-4484310848",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Data Analyst at Appinventiv in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Data Analyst at Appinventiv in India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Appinventiv's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Appinventiv&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Appinventiv&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Appinventiv&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Appinventiv&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Appinventiv&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Appinventiv&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
+          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
+          "Apna": "https://apna.co/jobs?q=Data+Analyst&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
+          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Appinventiv+careers"
+      },
+      "is_internship": false
+    },
+    {
       "title": "Applied ML Research Intern (LLMs & Vision)",
       "company": "Sarvam AI",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 5.1,
+      "hours_ago": 5.64,
       "posted_at": "2026-11-02T08:24:48Z",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
@@ -4402,7 +4402,7 @@ window.JOB_MATCHER_DATA = {
       ],
       "description": "We are looking for passionate Applied ML Research Interns in Bengaluru to work on multimodal Indic foundation models. Strong PyTorch fundamentals, deep learning, and transformer architectures required. 0 years experience required (final year / fresh grads). Drop a DM with your top projects.",
       "posted_at_source": "published_at",
-      "relative_time": "5 hours ago",
+      "relative_time": "6 hours ago",
       "semantic_skill_gap": {
         "fit_percentage": "95% Core Match",
         "gap_percentage": "5% Skill Gap",
@@ -4466,7 +4466,7 @@ window.JOB_MATCHER_DATA = {
       "title": "Junior Machine Learning Engineer (MLOps)",
       "company": "Postman",
       "location": "Bengaluru, Karnataka, India",
-      "hours_ago": 5.1,
+      "hours_ago": 5.64,
       "posted_at": "2026-11-02T08:24:48Z",
       "source_type": "LinkedIn Post",
       "source_domain": "linkedin.com",
@@ -4496,7 +4496,7 @@ window.JOB_MATCHER_DATA = {
       ],
       "description": "Postman is hiring a Junior ML Engineer in Bengaluru. Looking for 0-1 year exp with FastAPI, Docker, and machine learning model deployment pipelines. Send your portfolio and resume to ml-hiring@postman.com or connect directly on LinkedIn.",
       "posted_at_source": "published_at",
-      "relative_time": "5 hours ago",
+      "relative_time": "6 hours ago",
       "semantic_skill_gap": {
         "fit_percentage": "91% Core Match",
         "gap_percentage": "9% Skill Gap",
@@ -4551,24 +4551,25 @@ window.JOB_MATCHER_DATA = {
       }
     },
     {
-      "title": "AI Engineering & Open-Source Development Internship",
-      "company": "Alphashots.AI",
-      "location": "India",
+      "title": "Generative AI Engineer Intern",
+      "company": "Margadeshaka",
+      "location": "Chandigarh, Chandigarh, India",
       "score": 0.85,
       "tier": 8,
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "8",
-      "posted_at": "2026-11-02T08:00:13Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 5.51,
+      "posted_at": "2026-11-02T08:03:40Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 5.99,
       "relative_time": "6 hours ago",
-      "url": "https://unstop.com/internships/1774132",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/ai-engineering-open-source-development-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1774132",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
+      "url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
+      "naukri_url": "https://www.naukri.com/generative-ai-engineer-intern-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/generative-ai-engineer-intern-at-margadeshaka-4485455380",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
       "job_publisher": null,
       "location_unverified": false,
       "is_fresher": true,
@@ -4578,14 +4579,14 @@ window.JOB_MATCHER_DATA = {
         "Docker Containerization & Multi-Stage Builds",
         "Model Registry & Drift Monitoring"
       ],
-      "description": "AI Engineering & Open-Source Development Internship at Alphashots.AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-22).",
-      "raw_description": "AI Engineering & Open-Source Development Internship at Alphashots.AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-22).",
+      "description": "Generative AI Engineer Intern at Margadeshaka in Chandigarh, Chandigarh, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Generative AI Engineer Intern at Margadeshaka in Chandigarh, Chandigarh, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
       "post_author": null,
-      "deadline": "2026-11-22T00:00:00+05:30",
-      "end_date": "2026-11-22T00:00:00+05:30",
+      "deadline": null,
+      "end_date": null,
       "semantic_skill_gap": {
         "fit_percentage": "85% Core Match",
         "gap_percentage": "15% Skill Gap",
@@ -4609,51 +4610,48 @@ window.JOB_MATCHER_DATA = {
             "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
           }
         ],
-        "bridge_roadmap": "For Alphashots.AI's AI Engineering & Open-Source Development Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "bridge_roadmap": "For Margadeshaka's Generative AI Engineer Intern: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
         "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
       },
-      "direct_job_url": "https://unstop.com/internships/1774132",
-      "min_years_experience": 0,
-      "max_years_experience": 1,
-      "is_internship": true,
       "multi_source_urls": {
         "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/ai-engineering-open-source-development-internship-jobs-in-india?k=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-ai-engineering-open-source-development-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/ai-engineering-open-source-development-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&cboWorkExp1=0"
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Generative+AI+Engineer+Intern+Margadeshaka&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/generative-ai-engineer-intern-jobs-in-india?k=Generative+AI+Engineer+Intern+Margadeshaka&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Generative+AI+Engineer+Intern+Margadeshaka&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Generative+AI+Engineer+Intern+Margadeshaka&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-generative-ai-engineer-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/generative-ai-engineer-intern-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Generative+AI+Engineer+Intern+Margadeshaka&cboWorkExp1=0"
         },
         "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=AI+Engineering+%26+Open-Source+Development+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=AI+Engineering+%26+Open-Source+Development+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=AI+Engineering+%26+Open-Source+Development+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=AI+Engineering+%26+Open-Source+Development+Internship"
+          "Wellfound": "https://wellfound.com/jobs?role=Generative+AI+Engineer+Intern&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Generative+AI+Engineer+Intern+Margadeshaka&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Generative+AI+Engineer+Intern&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Generative+AI+Engineer+Intern&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Generative+AI+Engineer+Intern"
         },
         "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/ai-engineering-open-source-development-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=AI+Engineering+%26+Open-Source+Development+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/ai-engineering-open-source-development-internship-internships",
-          "Apna": "https://apna.co/jobs?q=AI+Engineering+%26+Open-Source+Development+Internship&experience=0"
+          "Internshala": "https://internshala.com/internships/generative-ai-engineer-intern-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Generative+AI+Engineer+Intern",
+          "LetsIntern": "https://www.letsintern.com/internships/generative-ai-engineer-intern-internships",
+          "Apna": "https://apna.co/jobs?q=Generative+AI+Engineer+Intern&experience=0"
         },
         "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=AI+Engineering+%26+Open-Source+Development+Internship",
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Generative+AI+Engineer+Intern",
           "Kaggle Jobs": "https://www.kaggle.com/jobs",
           "AIM Jobs": "https://analyticsindiamag.com/careers/",
           "Data Elixir": "https://dataelixir.com/jobs"
         },
         "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-ai-engineering-open-source-development-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=AI+Engineering+%26+Open-Source+Development+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=AI+Engineering+%26+Open-Source+Development+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=AI+Engineering+%26+Open-Source+Development+Internship",
+          "RemoteOK": "https://remoteok.com/remote-generative-ai-engineer-intern-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Generative+AI+Engineer+Intern",
+          "Remotive": "https://remotive.com/remote-jobs?search=Generative+AI+Engineer+Intern",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Generative+AI+Engineer+Intern",
           "Otta": "https://app.otta.com/jobs"
         },
-        "direct_company_portal": "https://www.google.com/search?q=Alphashots.AI+careers"
-      }
+        "direct_company_portal": "https://www.google.com/search?q=Margadeshaka+careers"
+      },
+      "is_internship": true
     },
     {
       "title": "Data Analyst",
@@ -4664,7 +4662,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T07:31:07Z",
+      "posted_at": "2026-11-02T08:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 5.99,
       "relative_time": "6 hours ago",
@@ -4767,7 +4765,7 @@ window.JOB_MATCHER_DATA = {
       "category": "OR / Optimization",
       "priority": "Primary",
       "badge": "🏅",
-      "posted_at": "2026-11-02T07:30:50Z",
+      "posted_at": "2026-11-02T08:03:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 6.0,
       "relative_time": "6 hours ago",
@@ -4865,6 +4863,111 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
+      "title": "AI Engineering & Open-Source Development Internship",
+      "company": "Alphashots.AI",
+      "location": "India",
+      "score": 0.85,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-02T08:00:13Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 6.05,
+      "relative_time": "6 hours ago",
+      "url": "https://unstop.com/internships/1774132",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/ai-engineering-open-source-development-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1774132",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "FastAPI REST Serving & Latency Optimization",
+        "Docker Containerization & Multi-Stage Builds",
+        "Model Registry & Drift Monitoring"
+      ],
+      "description": "AI Engineering & Open-Source Development Internship at Alphashots.AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-22).",
+      "raw_description": "AI Engineering & Open-Source Development Internship at Alphashots.AI in India. Active hiring opportunity on Unstop (Deadline: 2026-11-22).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-11-22T00:00:00+05:30",
+      "end_date": "2026-11-22T00:00:00+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "85% Core Match",
+        "gap_percentage": "15% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For Alphashots.AI's AI Engineering & Open-Source Development Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "direct_job_url": "https://unstop.com/internships/1774132",
+      "min_years_experience": 0,
+      "max_years_experience": 1,
+      "is_internship": true,
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/ai-engineering-open-source-development-internship-jobs-in-india?k=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-ai-engineering-open-source-development-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/ai-engineering-open-source-development-internship-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=AI+Engineering+%26+Open-Source+Development+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=AI+Engineering+%26+Open-Source+Development+Internship+Alphashots.AI&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=AI+Engineering+%26+Open-Source+Development+Internship&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=AI+Engineering+%26+Open-Source+Development+Internship&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=AI+Engineering+%26+Open-Source+Development+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/ai-engineering-open-source-development-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=AI+Engineering+%26+Open-Source+Development+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/ai-engineering-open-source-development-internship-internships",
+          "Apna": "https://apna.co/jobs?q=AI+Engineering+%26+Open-Source+Development+Internship&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=AI+Engineering+%26+Open-Source+Development+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-ai-engineering-open-source-development-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=AI+Engineering+%26+Open-Source+Development+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=AI+Engineering+%26+Open-Source+Development+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=AI+Engineering+%26+Open-Source+Development+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Alphashots.AI+careers"
+      }
+    },
+    {
       "title": "Decision Science Analyst - Marketplace & Pricing",
       "company": "Meesho",
       "location": "Bengaluru, Karnataka",
@@ -4873,7 +4976,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "🥉",
-      "posted_at": "2026-11-02T07:00:50Z",
+      "posted_at": "2026-11-02T07:33:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 6.5,
       "relative_time": "6 hours ago",
@@ -4968,109 +5071,6 @@ window.JOB_MATCHER_DATA = {
       }
     },
     {
-      "title": "Associate AI Engineer",
-      "company": "Staples India",
-      "location": "Chennai, Tamil Nadu, India",
-      "score": 0.85,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-02T06:33:11Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 6.96,
-      "relative_time": "7 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
-      "naukri_url": "https://www.naukri.com/associate-ai-engineer-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Associate AI Engineer at Staples India in Chennai, Tamil Nadu, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Associate AI Engineer at Staples India in Chennai, Tamil Nadu, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Staples India's Associate AI Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+AI+Engineer+Staples+India&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/associate-ai-engineer-jobs-in-india?k=Associate+AI+Engineer+Staples+India&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+AI+Engineer+Staples+India&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+AI+Engineer+Staples+India&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-ai-engineer-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/associate-ai-engineer-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+AI+Engineer+Staples+India&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+AI+Engineer&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+AI+Engineer+Staples+India&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+AI+Engineer&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+AI+Engineer&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+AI+Engineer"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-ai-engineer-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+AI+Engineer",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-ai-engineer-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+AI+Engineer&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+AI+Engineer",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-ai-engineer-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+AI+Engineer",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+AI+Engineer",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+AI+Engineer",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Staples+India+careers"
-      },
-      "is_internship": false
-    },
-    {
       "title": "Associate Data Scientist",
       "company": "TriNet",
       "location": "Hyderabad, Telangana, India",
@@ -5079,7 +5079,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T06:31:07Z",
+      "posted_at": "2026-11-02T07:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 6.99,
       "relative_time": "7 hours ago",
@@ -5174,6 +5174,109 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
+      "title": "Associate AI Engineer",
+      "company": "Staples India",
+      "location": "Chennai, Tamil Nadu, India",
+      "score": 0.85,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-02T06:33:11Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 7.5,
+      "relative_time": "8 hours ago",
+      "url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
+      "naukri_url": "https://www.naukri.com/associate-ai-engineer-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/associate-ai-engineer-at-staples-india-4485456049",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "FastAPI REST Serving & Latency Optimization",
+        "Docker Containerization & Multi-Stage Builds",
+        "Model Registry & Drift Monitoring"
+      ],
+      "description": "Associate AI Engineer at Staples India in Chennai, Tamil Nadu, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Associate AI Engineer at Staples India in Chennai, Tamil Nadu, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "85% Core Match",
+        "gap_percentage": "15% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For Staples India's Associate AI Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+AI+Engineer+Staples+India&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/associate-ai-engineer-jobs-in-india?k=Associate+AI+Engineer+Staples+India&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Associate+AI+Engineer+Staples+India&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Associate+AI+Engineer+Staples+India&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-ai-engineer-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/associate-ai-engineer-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+AI+Engineer+Staples+India&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Associate+AI+Engineer&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+AI+Engineer+Staples+India&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Associate+AI+Engineer&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Associate+AI+Engineer&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+AI+Engineer"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/associate-ai-engineer-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Associate+AI+Engineer",
+          "LetsIntern": "https://www.letsintern.com/internships/associate-ai-engineer-internships",
+          "Apna": "https://apna.co/jobs?q=Associate+AI+Engineer&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+AI+Engineer",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-associate-ai-engineer-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+AI+Engineer",
+          "Remotive": "https://remotive.com/remote-jobs?search=Associate+AI+Engineer",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+AI+Engineer",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Staples+India+careers"
+      },
+      "is_internship": false
+    },
+    {
       "title": "Decision Scientist - Freight Network Optimization",
       "company": "Delhivery",
       "location": "Gurugram, Haryana",
@@ -5182,7 +5285,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "🥉",
-      "posted_at": "2026-11-02T06:00:50Z",
+      "posted_at": "2026-11-02T06:33:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 7.5,
       "relative_time": "7 hours ago",
@@ -5287,7 +5390,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Decision Science",
       "priority": "Primary",
       "badge": "🥉",
-      "posted_at": "2026-11-02T05:30:50Z",
+      "posted_at": "2026-11-02T06:03:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 8.0,
       "relative_time": "8 hours ago",
@@ -5382,111 +5485,6 @@ window.JOB_MATCHER_DATA = {
       }
     },
     {
-      "title": "Machine Learning Engineer Internship",
-      "company": "Fortune Analytics",
-      "location": "India",
-      "score": 0.93,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-02T05:21:20Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 8.16,
-      "relative_time": "8 hours ago",
-      "url": "https://unstop.com/internships/1790094",
-      "direct_job_url": "https://unstop.com/internships/1790094",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Fortune+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1790094",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [
-        "machine_learning"
-      ],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
-      "description": "Machine Learning Engineer Internship at Fortune Analytics in India. Active hiring opportunity on Unstop (Deadline: 2026-11-15).",
-      "raw_description": "Machine Learning Engineer Internship at Fortune Analytics in India. Active hiring opportunity on Unstop (Deadline: 2026-11-15).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-15T00:00:00+05:30",
-      "end_date": "2026-11-15T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Fortune Analytics's Machine Learning Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Fortune+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?k=Machine+Learning+Engineer+Internship+Fortune+Analytics&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Engineer+Internship+Fortune+Analytics&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Engineer+Internship+Fortune+Analytics&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/machine-learning-engineer-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Engineer+Internship+Fortune+Analytics&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Engineer+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Engineer+Internship+Fortune+Analytics&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Engineer+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Engineer+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Engineer+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/machine-learning-engineer-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Engineer+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-engineer-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Machine+Learning+Engineer+Internship&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Engineer+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-machine-learning-engineer-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Engineer+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Engineer+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Engineer+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Fortune+Analytics+careers"
-      },
-      "is_internship": true
-    },
-    {
       "title": "Healthcare Data Analyst",
       "company": "Tata 1mg",
       "location": "Gurugram, Haryana",
@@ -5495,7 +5493,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T05:00:50Z",
+      "posted_at": "2026-11-02T05:33:19Z",
       "posted_at_source": "published_at",
       "hours_ago": 8.5,
       "relative_time": "8 hours ago",
@@ -5592,6 +5590,111 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
+      "title": "Machine Learning Engineer Internship",
+      "company": "Fortune Analytics",
+      "location": "India",
+      "score": 0.93,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-02T05:21:20Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 8.7,
+      "relative_time": "9 hours ago",
+      "url": "https://unstop.com/internships/1790094",
+      "direct_job_url": "https://unstop.com/internships/1790094",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Fortune+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+      "naukri_url": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?experience=0",
+      "company_url": "https://unstop.com/internships/1790094",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [
+        "machine_learning"
+      ],
+      "missing_skills": [
+        "FastAPI REST Serving & Latency Optimization",
+        "Docker Containerization & Multi-Stage Builds",
+        "Model Registry & Drift Monitoring"
+      ],
+      "description": "Machine Learning Engineer Internship at Fortune Analytics in India. Active hiring opportunity on Unstop (Deadline: 2026-11-15).",
+      "raw_description": "Machine Learning Engineer Internship at Fortune Analytics in India. Active hiring opportunity on Unstop (Deadline: 2026-11-15).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-11-15T00:00:00+05:30",
+      "end_date": "2026-11-15T00:00:00+05:30",
+      "semantic_skill_gap": {
+        "fit_percentage": "93% Core Match",
+        "gap_percentage": "7% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For Fortune Analytics's Machine Learning Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer+Internship+Fortune+Analytics&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/machine-learning-engineer-internship-jobs-in-india?k=Machine+Learning+Engineer+Internship+Fortune+Analytics&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Engineer+Internship+Fortune+Analytics&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Engineer+Internship+Fortune+Analytics&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/machine-learning-engineer-internship-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Engineer+Internship+Fortune+Analytics&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Engineer+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Engineer+Internship+Fortune+Analytics&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Engineer+Internship&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Engineer+Internship&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Engineer+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/machine-learning-engineer-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Engineer+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-engineer-internship-internships",
+          "Apna": "https://apna.co/jobs?q=Machine+Learning+Engineer+Internship&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Engineer+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-machine-learning-engineer-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Engineer+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Engineer+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Engineer+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Fortune+Analytics+careers"
+      },
+      "is_internship": true
+    },
+    {
       "title": "Product Analyst",
       "company": "Snapmint",
       "location": "Bengaluru, Karnataka, India",
@@ -5602,8 +5705,8 @@ window.JOB_MATCHER_DATA = {
       "badge": "5",
       "posted_at": "2026-11-02T04:33:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 8.96,
-      "relative_time": "9 hours ago",
+      "hours_ago": 9.5,
+      "relative_time": "10 hours ago",
       "url": "https://in.linkedin.com/jobs/view/product-analyst-at-snapmint-4486103816",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-analyst-at-snapmint-4486103816",
       "linkedin_url": "https://in.linkedin.com/jobs/view/product-analyst-at-snapmint-4486103816",
@@ -5703,10 +5806,10 @@ window.JOB_MATCHER_DATA = {
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "8",
-      "posted_at": "2026-11-02T04:31:07Z",
+      "posted_at": "2026-11-02T04:03:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 8.99,
-      "relative_time": "9 hours ago",
+      "hours_ago": 9.99,
+      "relative_time": "10 hours ago",
       "url": "https://in.linkedin.com/jobs/view/token-maxxer-ai-engineer-at-vedika-api-4485160734",
       "direct_job_url": "https://in.linkedin.com/jobs/view/token-maxxer-ai-engineer-at-vedika-api-4485160734",
       "linkedin_url": "https://in.linkedin.com/jobs/view/token-maxxer-ai-engineer-at-vedika-api-4485160734",
@@ -5806,10 +5909,10 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-02T03:31:07Z",
+      "posted_at": "2026-11-02T03:03:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 9.99,
-      "relative_time": "10 hours ago",
+      "hours_ago": 10.99,
+      "relative_time": "11 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-intern-at-evoastra-ventures-pvt-ltd-4484304529",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-intern-at-evoastra-ventures-pvt-ltd-4484304529",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-intern-at-evoastra-ventures-pvt-ltd-4484304529",
@@ -5911,7 +6014,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-02T02:48:33Z",
       "posted_at_source": "published_at",
-      "hours_ago": 10.7,
+      "hours_ago": 11.24,
       "relative_time": "11 hours ago",
       "url": "https://unstop.com/internships/1790039",
       "direct_job_url": "https://unstop.com/internships/1790039",
@@ -6014,8 +6117,8 @@ window.JOB_MATCHER_DATA = {
       "badge": "5",
       "posted_at": "2026-11-01T16:04:59Z",
       "posted_at_source": "published_at",
-      "hours_ago": 21.43,
-      "relative_time": "21 hours ago",
+      "hours_ago": 21.97,
+      "relative_time": "22 hours ago",
       "url": "https://unstop.com/internships/1784743",
       "direct_job_url": "https://unstop.com/internships/1784743",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Product+Analyst+Internship+Innovexis&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -6117,8 +6220,8 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-01T14:33:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 22.96,
-      "relative_time": "23 hours ago",
+      "hours_ago": 23.5,
+      "relative_time": "24 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-ge-vernova-4469208343",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-ge-vernova-4469208343",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-ge-vernova-4469208343",
@@ -6220,8 +6323,8 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-01T14:11:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 23.31,
-      "relative_time": "23 hours ago",
+      "hours_ago": 23.86,
+      "relative_time": "24 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-thinknovaa-4485415251",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-thinknovaa-4485415251",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-thinknovaa-4485415251",
@@ -6321,7 +6424,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
-      "posted_at": "2026-11-01T13:31:07Z",
+      "posted_at": "2026-11-01T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 23.99,
       "relative_time": "24 hours ago",
@@ -6418,109 +6521,6 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
-      "title": "Hiring: Data Science Intern | Freshers Welcome",
-      "company": "Crossing Infotech",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-01T13:31:07Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 23.99,
-      "relative_time": "24 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485184683",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485184683",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485184683",
-      "naukri_url": "https://www.naukri.com/hiring-data-science-intern-freshers-welcome-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/hiring-data-science-intern-freshers-welcome-at-crossing-infotech-4485184683",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Hiring: Data Science Intern | Freshers Welcome at Crossing Infotech in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Hiring: Data Science Intern | Freshers Welcome at Crossing Infotech in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Crossing Infotech's Hiring: Data Science Intern | Freshers Welcome: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/hiring-data-science-intern-freshers-welcome-jobs-in-india?k=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-hiring-data-science-intern-freshers-welcome-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/hiring-data-science-intern-freshers-welcome-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome+Crossing+Infotech&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/hiring-data-science-intern-freshers-welcome-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
-          "LetsIntern": "https://www.letsintern.com/internships/hiring-data-science-intern-freshers-welcome-internships",
-          "Apna": "https://apna.co/jobs?q=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-hiring-data-science-intern-freshers-welcome-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
-          "Remotive": "https://remotive.com/remote-jobs?search=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Hiring%3A+Data+Science+Intern+%7C+Freshers+Welcome",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Crossing+Infotech+careers"
-      },
-      "is_internship": true
-    },
-    {
       "title": "Associate Data Scientist - Value and Access Strategy",
       "company": "Amgen",
       "location": "Hyderabad, Telangana, India",
@@ -6529,7 +6529,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-01T13:31:07Z",
+      "posted_at": "2026-11-01T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 23.99,
       "relative_time": "24 hours ago",
@@ -6632,7 +6632,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-01T13:31:07Z",
+      "posted_at": "2026-11-01T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 23.99,
       "relative_time": "24 hours ago",
@@ -6735,7 +6735,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-01T13:31:07Z",
+      "posted_at": "2026-11-01T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 23.99,
       "relative_time": "24 hours ago",
@@ -6840,7 +6840,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-01T13:31:07Z",
+      "posted_at": "2026-11-01T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 23.99,
       "relative_time": "24 hours ago",
@@ -6945,7 +6945,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-01T10:33:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 26.96,
+      "hours_ago": 27.5,
       "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-response-evaluation-at-uplevyl-4485151622",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-response-evaluation-at-uplevyl-4485151622",
@@ -7048,7 +7048,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-01T07:11:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 30.31,
+      "hours_ago": 30.86,
       "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/opening-for-healthcare-data-analyst-intern-freshers-welcome-at-crossing-infotech-4485183723",
       "direct_job_url": "https://in.linkedin.com/jobs/view/opening-for-healthcare-data-analyst-intern-freshers-welcome-at-crossing-infotech-4485183723",
@@ -7151,7 +7151,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-01T06:54:33Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 30.6,
+      "hours_ago": 31.14,
       "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/required-data-analyst-intern-freshers-welcome-at-crossing-infotech-4485189635",
       "direct_job_url": "https://in.linkedin.com/jobs/view/required-data-analyst-intern-freshers-welcome-at-crossing-infotech-4485189635",
@@ -7254,7 +7254,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "8",
       "posted_at": "2026-11-01T05:02:46Z",
       "posted_at_source": "published_at",
-      "hours_ago": 32.47,
+      "hours_ago": 33.01,
       "relative_time": "1 day ago",
       "url": "https://unstop.com/internships/1787828",
       "direct_job_url": "https://unstop.com/internships/1787828",
@@ -7357,7 +7357,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "8",
       "posted_at": "2026-11-01T03:19:26Z",
       "posted_at_source": "published_at",
-      "hours_ago": 34.19,
+      "hours_ago": 34.73,
       "relative_time": "1 day ago",
       "url": "https://unstop.com/internships/1769128",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Product+Reviewer%2FBeta-Testing+Internship+Moonshot+Factory+Inc.&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -7462,7 +7462,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "8",
       "posted_at": "2026-11-01T02:06:31Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 35.4,
+      "hours_ago": 35.95,
       "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/associate-consultant-consultant-ai-engineering-generative-ai-solutions-at-kpmg-india-4464004639",
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-consultant-consultant-ai-engineering-generative-ai-solutions-at-kpmg-india-4464004639",
@@ -7565,7 +7565,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-01T02:06:31Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 35.4,
+      "hours_ago": 35.95,
       "relative_time": "1 day ago",
       "url": "https://in.linkedin.com/jobs/view/analyst-data-scientist-go-jc-4768-2026-at-golden-opportunities-4476819070",
       "direct_job_url": "https://in.linkedin.com/jobs/view/analyst-data-scientist-go-jc-4768-2026-at-golden-opportunities-4476819070",
@@ -7668,7 +7668,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-31T22:36:24Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 38.91,
+      "hours_ago": 39.45,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/coffeebeans-io-data-scientist-llm-generative-ai-at-coffeebeans-4485643763",
       "direct_job_url": "https://in.linkedin.com/jobs/view/coffeebeans-io-data-scientist-llm-generative-ai-at-coffeebeans-4485643763",
@@ -7761,109 +7761,6 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
-      "title": "Business Analytics Analyst",
-      "company": "Citi",
-      "location": "Haryana, India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-10-31T13:54:33Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 47.6,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
-      "naukri_url": "https://www.naukri.com/business-analytics-analyst-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
-      "description": "Business Analytics Analyst at Citi in Haryana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "raw_description": "Business Analytics Analyst at Citi in Haryana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Citi's Business Analytics Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Analytics+Analyst+Citi&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/business-analytics-analyst-jobs-in-india?k=Business+Analytics+Analyst+Citi&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Business+Analytics+Analyst+Citi&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Business+Analytics+Analyst+Citi&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-analytics-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/business-analytics-analyst-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Analytics+Analyst+Citi&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Business+Analytics+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Analytics+Analyst+Citi&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Business+Analytics+Analyst&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Business+Analytics+Analyst&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Analytics+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/business-analytics-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Business+Analytics+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/business-analytics-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Business+Analytics+Analyst&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Analytics+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-business-analytics-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Analytics+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Business+Analytics+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Analytics+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Citi+careers"
-      },
-      "is_internship": false
-    },
-    {
       "title": "Intern - Data Analyst",
       "company": "Amber",
       "location": "Pune Division, Maharashtra, India",
@@ -7872,7 +7769,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-31T13:31:07Z",
+      "posted_at": "2026-10-31T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 47.99,
       "relative_time": "2 days ago",
@@ -7975,7 +7872,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-31T13:31:07Z",
+      "posted_at": "2026-10-31T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 47.99,
       "relative_time": "2 days ago",
@@ -8081,7 +7978,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-31T13:31:07Z",
+      "posted_at": "2026-10-31T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 47.99,
       "relative_time": "2 days ago",
@@ -8187,7 +8084,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-31T13:31:07Z",
+      "posted_at": "2026-10-31T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 47.99,
       "relative_time": "2 days ago",
@@ -8290,7 +8187,7 @@ window.JOB_MATCHER_DATA = {
       "category": "OR / Optimization",
       "priority": "Primary",
       "badge": "🏅",
-      "posted_at": "2026-10-31T13:31:07Z",
+      "posted_at": "2026-10-31T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 47.99,
       "relative_time": "2 days ago",
@@ -8393,7 +8290,7 @@ window.JOB_MATCHER_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-10-31T13:31:07Z",
+      "posted_at": "2026-10-31T14:03:40Z",
       "posted_at_source": "relative_time",
       "hours_ago": 47.99,
       "relative_time": "2 days ago",
@@ -8488,6 +8385,109 @@ window.JOB_MATCHER_DATA = {
       "is_internship": false
     },
     {
+      "title": "Business Analytics Analyst",
+      "company": "Citi",
+      "location": "Haryana, India",
+      "score": 0.91,
+      "tier": 2,
+      "category": "Data Science",
+      "priority": "Primary",
+      "badge": "🥈",
+      "posted_at": "2026-10-31T13:54:33Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 48.14,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
+      "naukri_url": "https://www.naukri.com/business-analytics-analyst-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/business-analytics-analyst-at-citi-4484851943",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "Causal Inference & Uplift Modeling",
+        "A/B Testing Power Analysis & Sample Sizing",
+        "Advanced Feature Engineering & Imbalance"
+      ],
+      "description": "Business Analytics Analyst at Citi in Haryana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "raw_description": "Business Analytics Analyst at Citi in Haryana, India. Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "fit_percentage": "91% Core Match",
+        "gap_percentage": "9% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Causal Inference & Uplift Modeling",
+            "impact": "High Impact",
+            "category": "Experimentation",
+            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+          },
+          {
+            "skill": "A/B Testing Power Analysis & Sample Sizing",
+            "impact": "High Impact",
+            "category": "Product Analytics",
+            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
+          },
+          {
+            "skill": "Advanced Feature Engineering & Imbalance",
+            "impact": "Medium Impact",
+            "category": "Modeling",
+            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+          }
+        ],
+        "bridge_roadmap": "For Citi's Business Analytics Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
+        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+      },
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Analytics+Analyst+Citi&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/business-analytics-analyst-jobs-in-india?k=Business+Analytics+Analyst+Citi&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Business+Analytics+Analyst+Citi&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Business+Analytics+Analyst+Citi&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-analytics-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/business-analytics-analyst-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Analytics+Analyst+Citi&cboWorkExp1=0"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Business+Analytics+Analyst&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Analytics+Analyst+Citi&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Business+Analytics+Analyst&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Business+Analytics+Analyst&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Analytics+Analyst"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/business-analytics-analyst-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Business+Analytics+Analyst",
+          "LetsIntern": "https://www.letsintern.com/internships/business-analytics-analyst-internships",
+          "Apna": "https://apna.co/jobs?q=Business+Analytics+Analyst&experience=0"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Analytics+Analyst",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-business-analytics-analyst-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Analytics+Analyst",
+          "Remotive": "https://remotive.com/remote-jobs?search=Business+Analytics+Analyst",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Analytics+Analyst",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Citi+careers"
+      },
+      "is_internship": false
+    },
+    {
       "title": "Associate Data Engineer",
       "company": "Argano",
       "location": "Hyderabad, Telangana, India",
@@ -8498,7 +8498,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "9",
       "posted_at": "2026-10-31T11:10:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 50.34,
+      "hours_ago": 50.88,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-data-engineer-at-argano-4483472898",
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-engineer-at-argano-4483472898",
@@ -8601,7 +8601,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-30T11:27:34Z",
       "posted_at_source": "published_at",
-      "hours_ago": 74.05,
+      "hours_ago": 74.59,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/jobs/1782452",
       "direct_job_url": "https://unstop.com/jobs/1782452",
@@ -8704,7 +8704,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-30T07:29:05Z",
       "posted_at_source": "published_at",
-      "hours_ago": 78.03,
+      "hours_ago": 78.57,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/jobs/1714449",
       "direct_job_url": "https://unstop.com/jobs/1714449",
@@ -8807,7 +8807,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-29T08:57:06Z",
       "posted_at_source": "published_at",
-      "hours_ago": 100.56,
+      "hours_ago": 101.1,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1779014",
       "direct_job_url": "https://unstop.com/internships/1779014",
@@ -8910,7 +8910,7 @@ window.JOB_MATCHER_DATA = {
       "badge": "🥈",
       "posted_at": "2026-10-29T08:22:54Z",
       "posted_at_source": "published_at",
-      "hours_ago": 101.13,
+      "hours_ago": 101.67,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1780911",
       "direct_job_url": "https://unstop.com/internships/1780911",
@@ -9010,13 +9010,12 @@ window.JOB_MATCHER_DATA = {
     "adjacent_matches": 1,
     "full_time_matches": 49,
     "internship_matches": 33,
-    "last_sync": "2026-11-02T13:30Z"
+    "last_sync": "2026-11-02T14:03Z"
   },
   "total_jobs": 82,
-  "last_updated": "2026-11-02T13:30Z",
-  "last_remotive_sync": "2026-11-02T12:59Z",
-  "last_himalayas_sync": "2026-11-02T12:59Z",
-  "last_adzuna_sync": "2026-11-02T12:59Z",
-  "last_jsearch_sync": "2026-11-02T12:59Z"
+  "last_updated": "2026-11-02T14:03Z",
+  "last_remotive_sync": "2026-11-02T14:03Z",
+  "last_himalayas_sync": "2026-11-02T14:03Z",
+  "last_adzuna_sync": "2026-11-02T14:03Z",
+  "last_jsearch_sync": "2026-11-02T14:03Z"
 };
-window.JOB_DATA = window.JOB_MATCHER_DATA;
