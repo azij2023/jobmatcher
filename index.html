@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261102_v12">
+  <link rel="stylesheet" href="styles.css?v=20261102_v13">
   <script>
     (function() {
       try {
@@ -40,6 +40,9 @@
         </button>
         <button class="nav-tab" data-tab="internships" id="tab-btn-internships">
           <span class="tab-icon">🎓</span> Internships (<span id="nav-intern-count">0</span>)
+        </button>
+        <button class="nav-tab" data-tab="company-sites" id="tab-btn-company-sites">
+          <span class="tab-icon">🏢</span> Company Sites (<span id="nav-company-sites-count">0</span>)
         </button>
         <button class="nav-tab" data-tab="strategy" id="tab-btn-strategy">
           <span class="tab-icon">🗺️</span> 9-Tier Strategy
@@ -411,6 +414,67 @@
           <button class="btn btn-primary" id="empty-clear-search-btn" style="display:none;">✕ Clear Search Keyword</button>
           <button class="btn btn-secondary" id="empty-expand-freshness-btn">⏱️ Expand to Anytime (All Jobs)</button>
           <button class="btn btn-outline" id="reset-filters-btn">Reset All Filters</button>
+        </div>
+      </div>
+    </section>
+
+        <!-- TAB: Individual Company Sites & Direct ATS Portals -->
+    <section class="tab-content" id="view-company-sites">
+      <div class="section-card">
+        <div class="section-header">
+          <div>
+            <div class="hero-badge" style="margin-bottom: 0.5rem; display: inline-flex;">
+              <span>🏢 Direct ATS &amp; Company Career Sites</span>
+            </div>
+            <h2 class="section-title">Verified Openings on Individual Company Career Sites</h2>
+            <p class="section-desc">
+              Direct job postings fetched straight from official company career portals (Greenhouse, Lever, Ashby, and internal ATS systems). Zero third-party aggregators or agency recruiters &mdash; apply directly to verified company engineering and data teams.
+            </p>
+          </div>
+        </div>
+
+        <!-- Company Sites Filter & Search Bar -->
+        <div class="company-sites-toolbar">
+          <div class="company-search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="company-sites-search-input" placeholder="Search direct company openings by company name, role, or skills (e.g. Swiggy, Python, APM, Zepto)...">
+          </div>
+          <div class="company-ecosystem-chips">
+            <span class="ecosystem-label">Filter Ecosystem:</span>
+            <button type="button" class="company-filter-chip active" data-ecosystem="all">🌐 All Company Sites (<span id="chip-company-all-count">0</span>)</button>
+            <button type="button" class="company-filter-chip" data-ecosystem="unicorns">🦄 Unicorns &amp; Consumer Tech</button>
+            <button type="button" class="company-filter-chip" data-ecosystem="fintech">💳 Fintech &amp; Banking</button>
+            <button type="button" class="company-filter-chip" data-ecosystem="ai">🤖 AI &amp; Deep Tech Labs</button>
+            <button type="button" class="company-filter-chip" data-ecosystem="consulting">📊 Analytics &amp; Consulting</button>
+          </div>
+        </div>
+
+        <!-- Live Direct Company Openings Grid -->
+        <div class="company-sites-section-title">
+          <h3>⚡ Live Fresher Roles on Direct Company Sites (<span id="company-sites-live-count">0</span> Active)</h3>
+          <span class="section-subtitle">Real-time openings on official ATS portals (Greenhouse, Lever, Ashby, direct career sites)</span>
+        </div>
+        <div class="jobs-grid" id="company-sites-grid">
+          <!-- Dynamically populated by renderCompanySites() in app.js -->
+        </div>
+
+        <!-- Official Company Portals Directory & 1-Click Launchers -->
+        <div class="company-directory-wrapper">
+          <div class="company-directory-header">
+            <div class="hero-badge" style="margin-bottom: 0.5rem; display: inline-flex;">
+              <span>⚡ 1-Click Career Site Launchers</span>
+            </div>
+            <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.35rem;">
+              Direct Company Career Portals Directory
+            </h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+              Direct access to official career pages of top Indian tech employers. Click to open official career portals or launch targeted live 0-year fresher searches directly on their ATS.
+            </p>
+          </div>
+
+          <div class="company-portals-grid" id="company-portals-grid">
+            <!-- Dynamically populated with top tech company portals -->
+          </div>
         </div>
       </div>
     </section>
@@ -1222,7 +1286,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261102_v12"></script>
-  <script src="app.js?v=20261102_v12"></script>
+  <script src="data.js?v=20261102_v13"></script>
+  <script src="app.js?v=20261102_v13"></script>
 </body>
 </html>
