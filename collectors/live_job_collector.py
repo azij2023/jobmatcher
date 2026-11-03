@@ -232,7 +232,7 @@ def get_remote_location_label(location: str) -> str:
         return "Remote (APAC)"
     return "Remote (Worldwide)"
 
-def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
+def fetch_live_linkedin_jobs(max_queries: int = 14) -> list:
     """
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
     Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
@@ -240,7 +240,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
     try:
         from bs4 import BeautifulSoup
     except ImportError:
-        BeautifulSoup = None
+        return []
 
     queries = [
         "data scientist fresher",
@@ -259,15 +259,15 @@ def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
         "business analyst fresher",
     ][:max_queries]
 
-    live_jobs = []
-    seen = set()
-    now = datetime.datetime.now(datetime.timezone.utc)
-
-    for q in queries:
+    def fetch_query(q):
+        live_jobs = []
+        seen = set()
+        now = datetime.datetime.now(datetime.timezone.utc)
         params = urllib.parse.urlencode({
             "keywords": q,
             "location": "India",
-            "f_TPR": "r432000",  # past 120 hours / 5 days (recency 1m to 5d)
+            "f_TPR": "r172800",  # discover the last 48 hours first
+            "sortBy": "DD",  # most recent postings first
             "f_E": "1,2",       # 1=Internship, 2=Entry level
             "start": 0
         })
@@ -311,19 +311,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
 
                     freshness = get_publication_freshness(published_raw, time_raw, now)
                     if freshness is None:
-                        hrs = parse_relative_time_to_hours(time_raw) or 6.0
-                        if hrs < 1:
-                            rel_lbl = f"{max(5, int(hrs * 60))} minutes ago"
-                        elif hrs < 24:
-                            rel_lbl = f"{max(1, int(hrs))} hours ago"
-                        else:
-                            rel_lbl = f"{max(1, int(hrs / 24))} days ago"
-                        freshness = {
-                            "posted_at": (now - datetime.timedelta(hours=hrs)).isoformat(timespec="seconds").replace("+00:00", "Z"),
-                            "hours_ago": round(hrs, 2),
-                            "relative_time": rel_lbl,
-                            "posted_at_source": "relative_time"
-                        }
+                        continue
 
                     # Filter out any stale items older than 48 hours (2 days)
                     if freshness.get("hours_ago", 0) > 48.0:
@@ -357,7 +345,17 @@ def fetch_live_linkedin_jobs(max_queries: int = 12) -> list:
         finally:
             time.sleep(1.2)
 
-    return live_jobs
+        return live_jobs
+
+    from concurrent.futures import ThreadPoolExecutor
+    seen, live_jobs = set(), []
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        for results in executor.map(fetch_query, queries):
+            for job in results:
+                if job['url'] not in seen:
+                    seen.add(job['url'])
+                    live_jobs.append(job)
+    return sorted(live_jobs, key=lambda job: job['hours_ago'])
 
 def fetch_live_jobicy_jobs() -> list:
     """

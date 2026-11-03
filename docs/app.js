@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!isNaN(postedMs) && postedMs <= nowMs) {
           const diffMs = nowMs - postedMs;
           const totalMins = Math.max(1, Math.floor(diffMs / (60 * 1000)));
-          const totalHours = totalMins / 60.0;
+          const totalHours = diffMs / (60 * 60 * 1000);
           
           if (totalMins < 60) {
             const label = `${totalMins}m ago`;
@@ -3138,7 +3138,7 @@ Best regards,
 
   function isCompanySiteJob(job) {
     if (!getCompanyJobUrl(job) || !isZeroExpJob(job)) return false;
-    const age = job.hours_ago;
+    const age = getJobFreshness(job).hours;
     if (typeof age !== 'number' || age < 0 || age > 120) return false;
     const title = (job.title || '').toLowerCase();
     const roles = [...(profile.target_roles || []),
@@ -3303,326 +3303,120 @@ Best regards,
   // 12. Hourly Auto-Sync & Live Refresh Engine
   // ==========================================================================
 
-  // Direct client-side live job fetcher (runs on every Refresh click to guarantee instant fresh jobs)
-  async function refreshJobsLive(isSilent = false) {
-    if (navRefreshIcon) navRefreshIcon.classList.add("spinning");
-    if (navRefreshBtn) navRefreshBtn.disabled = true;
-    if (navRefreshLabel && !isSilent) navRefreshLabel.textContent = "Syncing...";
+  let refreshInFlight = false;
 
+  function chooseLatestFeed(feeds) {
+    return feeds.filter(feed => feed && Array.isArray(feed.jobs) &&
+      Number.isFinite(Date.parse(feed.last_updated)))
+      .sort((a, b) => Date.parse(b.last_updated) - Date.parse(a.last_updated))[0] || null;
+  }
+
+  async function fetchFeedJson(endpoint, options = {}) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
     try {
-      // 1. Fetch fresh payload with robust fallback and HTML safety check
-      let freshData = null;
-      const candidates = [
-        `./data.json?t=${Date.now()}`,
-        `data.json?t=${Date.now()}`,
-        `https://jobmatcher-2.onrender.com/api/jobs?t=${Date.now()}`,
-        `https://raw.githubusercontent.com/azij2023/jobmatcher/main/data.json?t=${Date.now()}`
-      ];
-
-      for (const endpoint of candidates) {
-        try {
-          const resp = await fetch(endpoint, { cache: "no-store" });
-          if (!resp.ok) continue;
-          const text = await resp.text();
-          if (text && text.trim().startsWith("{")) {
-            const parsed = JSON.parse(text);
-            if (parsed && Array.isArray(parsed.jobs) && parsed.jobs.length > 0) {
-              freshData = parsed;
-              break;
-            }
-          }
-        } catch (e) {}
-      }
-
-      if (!freshData) {
-        throw new Error("Could not parse JSON payload from candidate endpoints.");
-      }
-
-      if (freshData && Array.isArray(freshData.jobs)) {
-        data = freshData;
-        jobs = freshData.jobs.filter(hasVerifiedPublicationTime);
-        stats = freshData.stats || stats;
-        profile = freshData.profile || profile;
-        window.JOB_MATCHER_DATA = window.JOB_DATA = freshData;
-
-        // Re-merge user saved custom jobs
-        mergeSavedCustomJobs(jobs);
-
-        // 2. Direct client-side real-time live discovery from Lever, Greenhouse, Remotive, Jobicy
-        let newLiveCount = 0;
-        let latestDiscoveredRole = "";
-
-        // Fast helper to evaluate and register live discovered openings
-        const registerLiveDiscoveredJob = (jObj) => {
-          const exists = jobs.some(j => 
-            (j.url && j.url === jObj.url) || 
-            (j.direct_job_url && j.direct_job_url === jObj.direct_job_url) ||
-            (j.title && j.title.toLowerCase() === jObj.title.toLowerCase() && j.company && j.company.toLowerCase() === jObj.company.toLowerCase())
-          );
-          if (exists) return false;
-
-          jobs.unshift(jObj);
-          newLiveCount++;
-          latestDiscoveredRole = `${jObj.title} @ ${jObj.company}`;
-
-          // Do not write unverified jobs to localStorage
-          return true;
-        };
-
-        // 2a. Live Lever ATS Direct Fetcher (Paytm, Meesho, CRED, Zeta, FamPay)
-        const liveLeverTargets = [
-          { slug: "paytm", name: "Paytm", home: "https://paytm.com" },
-          { slug: "meesho", name: "Meesho", home: "https://www.meesho.com" },
-          { slug: "cred", name: "CRED", home: "https://cred.club" },
-          { slug: "zeta", name: "Zeta", home: "https://www.zeta.tech" },
-          { slug: "fampay", name: "FamPay", home: "https://fampay.in" }
-        ];
-
-        for (const target of liveLeverTargets) {
-          try {
-            const lResp = await fetch(`https://api.lever.co/v0/postings/${target.slug}?mode=json`, { cache: "no-store" });
-            if (!lResp.ok) continue;
-            const postings = await lResp.json();
-            for (const item of (Array.isArray(postings) ? postings : [])) {
-              const title = (item.text || "").trim();
-              if (!title) continue;
-              const tLow = title.toLowerCase();
-
-              // Relevant data/AI/analytics keywords
-              const isRelevant = tLow.includes("data") || tLow.includes("analyst") || tLow.includes("scientist") || 
-                                 tLow.includes("machine learning") || tLow.includes("decision") || tLow.includes("optimization") || 
-                                 tLow.includes("product manager") || tLow.includes("apm") || tLow.includes("ai");
-              if (!isRelevant) continue;
-
-              const isSenior = ["senior", "lead", "principal", "director", "head of", "vp", "staff", "architect"].some(b => tLow.includes(b));
-              if (isSenior) continue;
-
-              const loc = (item.categories && item.categories.location) || "India";
-              const jUrl = item.hostedUrl || `https://jobs.lever.co/${target.slug}`;
-              const createdMs = item.createdAt ? Number(item.createdAt) : Date.now();
-              const diffHrs = Math.max(0.01, (Date.now() - createdMs) / (1000 * 60 * 60));
-              const mins = Math.max(1, Math.round(diffHrs * 60));
-              const relTime = diffHrs < 1 ? `${mins}m ago` : (diffHrs < 24 ? `${Math.floor(diffHrs)}h ago` : `${Math.floor(diffHrs / 24)}d ago`);
-
-              const isIntern = tLow.includes("intern") || tLow.includes("trainee") || tLow.includes("apprentice");
-              const isDs = tLow.includes("scientist") || tLow.includes("science");
-              const isOr = tLow.includes("optimization") || tLow.includes("operations research");
-              const isDec = tLow.includes("decision");
-              const isApm = tLow.includes("product") || tLow.includes("apm");
-              const tier = isOr ? 4 : (isDec ? 3 : (isDs ? 2 : (isApm ? 5 : 2)));
-              const category = isOr ? "OR / Optimization" : (isDec ? "Decision Science" : (isDs ? "Data Science" : (isApm ? "Product" : "Data Science")));
-
-              registerLiveDiscoveredJob({
-                title: title,
-                company: target.name,
-                location: loc,
-                score: 0.92,
-                tier: tier,
-                category: category,
-                priority: "Primary",
-                badge: tier === 4 ? "🏅" : (tier === 3 ? "🥉" : "🥈"),
-                posted_at: new Date(createdMs).toISOString(),
-                posted_at_source: "published_at",
-                hours_ago: Math.round(diffHrs * 10) / 10,
-                relative_time: relTime,
-                url: jUrl,
-                direct_job_url: jUrl,
-                company_url: target.home,
-                source_type: "Official Company Portal",
-                source_domain: `jobs.lever.co/${target.slug}`,
-                is_fresher: true,
-                is_internship: isIntern,
-                matched_skills: ["Python", "SQL", "Quantitative Analysis", "Problem Solving"],
-                missing_skills: [],
-                description: `${title} at ${target.name}. Live verified requisition directly from ${target.name} Lever ATS. 0-1 years / entry-level eligible.`,
-                raw_description: `${title} at ${target.name}.`,
-                is_post: false,
-                is_custom: true
-              });
-            }
-          } catch (e) {
-            // Ignore offline/CORS notice
-          }
-        }
-
-        // 2b. Live Greenhouse ATS Direct Fetcher (Groww, InMobi, Postman)
-        const liveGreenhouseTargets = [
-          { slug: "groww", name: "Groww", home: "https://groww.in" },
-          { slug: "inmobi", name: "InMobi", home: "https://www.inmobi.com" },
-          { slug: "postman", name: "Postman", home: "https://www.postman.com" }
-        ];
-
-        for (const target of liveGreenhouseTargets) {
-          try {
-            const ghResp = await fetch(`https://boards-api.greenhouse.io/v1/boards/${target.slug}/jobs?content=true`, { cache: "no-store" });
-            if (!ghResp.ok) continue;
-            const ghData = await ghResp.json();
-            for (const item of (ghData.jobs || [])) {
-              const title = (item.title || "").trim();
-              if (!title) continue;
-              const tLow = title.toLowerCase();
-
-              const isRelevant = tLow.includes("data") || tLow.includes("analyst") || tLow.includes("scientist") || 
-                                 tLow.includes("machine learning") || tLow.includes("ai") || tLow.includes("product");
-              if (!isRelevant) continue;
-
-              const isSenior = ["senior", "lead", "principal", "director", "vp", "staff", "architect"].some(b => tLow.includes(b));
-              if (isSenior) continue;
-
-              const loc = (item.location && item.location.name) || "India";
-              const jUrl = item.absolute_url || `https://job-boards.greenhouse.io/${target.slug}`;
-              const updatedStr = item.updated_at || new Date().toISOString();
-              const updatedMs = new Date(updatedStr).getTime() || Date.now();
-              const diffHrs = Math.max(0.01, (Date.now() - updatedMs) / (1000 * 60 * 60));
-              const mins = Math.max(1, Math.round(diffHrs * 60));
-              const relTime = diffHrs < 1 ? `${mins}m ago` : (diffHrs < 24 ? `${Math.floor(diffHrs)}h ago` : `${Math.floor(diffHrs / 24)}d ago`);
-
-              const isIntern = tLow.includes("intern") || tLow.includes("trainee");
-              registerLiveDiscoveredJob({
-                title: title,
-                company: target.name,
-                location: loc,
-                score: 0.91,
-                tier: 2,
-                category: "Data Science",
-                priority: "Primary",
-                badge: "🥈",
-                posted_at: updatedStr,
-                posted_at_source: "published_at",
-                hours_ago: Math.round(diffHrs * 10) / 10,
-                relative_time: relTime,
-                url: jUrl,
-                direct_job_url: jUrl,
-                company_url: target.home,
-                source_type: "Official Company Portal",
-                source_domain: `${target.slug}.greenhouse.io`,
-                is_fresher: true,
-                is_internship: isIntern,
-                matched_skills: ["Python", "SQL", "Analytics"],
-                missing_skills: [],
-                description: `${title} at ${target.name}. Live verified requisition on ${target.name} Greenhouse ATS.`,
-                raw_description: `${title} at ${target.name}.`,
-                is_post: false,
-                is_custom: true
-              });
-            }
-          } catch (e) {
-            // Ignore offline/CORS notice
-          }
-        }
-
-        // 2c. Live Remotive & Jobicy discovery
-        try {
-          const liveEndpoints = [
-            "https://remotive.com/api/remote-jobs?category=data&limit=15",
-            "https://jobicy.com/api/v2/remote-jobs?count=15&industry=data-science"
-          ];
-          for (const ep of liveEndpoints) {
-            try {
-              const liveRes = await fetch(ep, { cache: "no-store" });
-              if (!liveRes.ok) continue;
-              const liveJson = await liveRes.json();
-              for (const rj of (liveJson.jobs || [])) {
-                const title = (rj.title || rj.jobTitle || "").trim();
-                const company = (rj.company_name || rj.companyName || "Tech Company").trim();
-                const url = rj.url || "";
-                if (!title || !url) continue;
-
-                const tLow = title.toLowerCase();
-                const badTitles = ["senior", "lead", "principal", "manager", "director", "head of", "vp", "staff", "architect"];
-                if (badTitles.some(b => tLow.includes(b))) continue;
-
-                const isEntry = tLow.includes("intern") || tLow.includes("junior") || tLow.includes("entry") || tLow.includes("fresher") || tLow.includes("associate") || tLow.includes("analyst") || tLow.includes("trainee") || tLow.includes("specialist") || tLow.includes("data") || tLow.includes("ai");
-                if (!isEntry) continue;
-
-                let hoursAgo = 0.5;
-                let relTime = "Just now";
-                const pubStr = rj.publication_date || rj.pubDate;
-                if (pubStr) {
-                  const pubDate = new Date(pubStr);
-                  if (!isNaN(pubDate.getTime())) {
-                    const diffHrs = Math.max(0.01, (Date.now() - pubDate.getTime()) / (1000 * 60 * 60));
-                    hoursAgo = Math.round(diffHrs * 10) / 10;
-                    if (hoursAgo < 1) relTime = `${Math.max(1, Math.round(hoursAgo * 60))}m ago`;
-                    else if (hoursAgo < 24) relTime = `${Math.floor(hoursAgo)}h ago`;
-                    else relTime = `${Math.floor(hoursAgo / 24)}d ago`;
-                  }
-                }
-
-                registerLiveDiscoveredJob({
-                  title: title,
-                  company: company,
-                  location: rj.candidate_required_location || rj.jobGeo || "Remote (Worldwide)",
-                  score: 0.88,
-                  tier: 2,
-                  category: "Data Science",
-                  priority: "Primary",
-                  badge: "🥈",
-                  posted_at: pubStr || new Date().toISOString(),
-                  posted_at_source: "published_at",
-                  hours_ago: hoursAgo,
-                  relative_time: relTime,
-                  url: url,
-                  direct_job_url: url,
-                  linkedin_url: `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(title + " " + company)}`,
-                  naukri_url: `https://www.naukri.com/${title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}-jobs`,
-                  company_url: url,
-                  source_type: ep.includes("remotive") ? "Remotive" : "Jobicy",
-                  source_domain: ep.includes("remotive") ? "remotive.com" : "jobicy.com",
-                  is_fresher: true,
-                  is_internship: tLow.includes("intern") || tLow.includes("trainee"),
-                  matched_skills: ["Python", "SQL", "Data Analysis"],
-                  missing_skills: [],
-                  description: `${title} at ${company}. Live opportunity discovered via real-time feed.`,
-                  raw_description: `${title} at ${company}.`,
-                  is_post: false,
-                  is_custom: true
-                });
-              }
-            } catch (epErr) {}
-          }
-        } catch (liveErr) {}
-
-        // Re-render UI components
-        initStats();
-        updateFilterPillCounts();
-        renderJobs();
-        renderCuratedFeed();
-        renderCompanySites();
-
-        // Update auto-sync status timestamp
-        const feedUpdatedAt = freshData.last_updated
-          ? new Date(freshData.last_updated).toLocaleString()
-          : "just now";
-        const badges = document.querySelectorAll(".auto-sync-badge");
-        badges.forEach(b => {
-          b.innerHTML = `<span class="sync-pulse-dot live-active-pulse"></span> <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: ${feedUpdatedAt}</span></span>`;
-        });
-
-        if (!isSilent) {
-          if (newLiveCount > 0) {
-            showToast(`🔄 Refreshed! Discovered ${newLiveCount} new live jobs (${jobs.length} total active).`);
-          } else {
-            showToast(`🔄 Refreshed! All ${jobs.length} verified listings are up to date.`);
-          }
-        }
-      }
-    } catch (err) {
-      console.error("[TargetMatch AI] Could not refresh the published job feed:", err);
-      if (!isSilent) showToast("Could not refresh listings. Please try again.");
+      const response = await fetch(endpoint, { ...options, cache: 'no-store', signal: controller.signal });
+      if (!response.ok) throw new Error(`Feed request failed (${response.status})`);
+      return await response.json();
     } finally {
-      if (navRefreshIcon) navRefreshIcon.classList.remove("spinning");
-      if (navRefreshLabel) navRefreshLabel.textContent = "Refresh Jobs";
+      clearTimeout(timeout);
+    }
+  }
+
+  async function loadLatestFeed() {
+    const stamp = Date.now();
+    const endpoints = [...new Set([
+      `./api/jobs?t=${stamp}`, `./data.json?t=${stamp}`,
+      `https://jobmatcher-2.onrender.com/api/jobs?t=${stamp}`,
+      `https://raw.githubusercontent.com/azij2023/jobmatcher/main/data.json?t=${stamp}`
+    ].map(endpoint => new URL(endpoint, window.location.href).href))];
+    const responses = await Promise.allSettled(endpoints.map(endpoint => fetchFeedJson(endpoint)));
+    const latest = chooseLatestFeed(responses.filter(response => response.status === 'fulfilled').map(response => response.value));
+    if (!latest) throw new Error('No dated feed snapshot is available.');
+    return chooseLatestFeed([latest, data]);
+  }
+
+  function updateFeedStatus(message = '') {
+    const collected = Date.parse(data.last_updated);
+    const delayed = !Number.isFinite(collected) || Date.now() - collected > 30 * 60 * 1000;
+    const timestamp = Number.isFinite(collected) ? new Date(collected).toLocaleString() : 'unavailable';
+    const collecting = data.sync && ['queued', 'running'].includes(data.sync.status);
+    const label = message || (collecting ? 'Collecting jobs' : delayed ? 'Feed delayed' : 'Feed available');
+    document.querySelectorAll('.auto-sync-badge').forEach(badge => {
+      badge.innerHTML = `<span class="sync-pulse-dot"></span> <span class="sync-badge-text">${escapeHTML(label)}<span class="sync-time-info"> • Last collection: ${escapeHTML(timestamp)}</span></span>`;
+    });
+  }
+
+  function applyPublishedFeed(freshData) {
+    data = freshData;
+    jobs = freshData.jobs.filter(hasVerifiedPublicationTime);
+    stats = freshData.stats || stats;
+    profile = freshData.profile || profile;
+    window.JOB_MATCHER_DATA = window.JOB_DATA = freshData;
+    mergeSavedCustomJobs(jobs);
+    initStats();
+    updateFilterPillCounts();
+    renderJobs();
+    renderCuratedFeed();
+    renderCompanySites();
+    updateFeedStatus();
+  }
+
+  async function refreshJobsLive(isSilent = false) {
+    if (refreshInFlight) return;
+    refreshInFlight = true;
+    if (navRefreshIcon) navRefreshIcon.classList.add('spinning');
+    if (navRefreshBtn) navRefreshBtn.disabled = true;
+    if (navRefreshLabel && !isSilent) navRefreshLabel.textContent = 'Refreshing...';
+    try {
+      applyPublishedFeed(await loadLatestFeed());
+      let collectionRequested = false;
+      let collectionComplete = false;
+      if (!isSilent) {
+        try {
+          const request = await fetchFeedJson('./api/sync', { method: 'POST' });
+          collectionRequested = request.status === 'processing';
+          if (collectionRequested) {
+            updateFeedStatus('Collecting jobs');
+            const deadline = Date.now() + 60000;
+            while (Date.now() < deadline) {
+              await new Promise(resolve => setTimeout(resolve, 3000));
+              const state = await fetchFeedJson('./api/sync/status');
+              if (state.status === 'error') throw new Error(state.error || 'Collection failed.');
+              if (state.status === 'complete') {
+                collectionComplete = true;
+                break;
+              }
+            }
+            applyPublishedFeed(await loadLatestFeed());
+            if (!collectionComplete) updateFeedStatus('Collection running; results will refresh automatically');
+          }
+        } catch (error) {
+          // Static hosting can read published feeds without running the collector.
+          if (collectionRequested) {
+            updateFeedStatus('Collection could not finish; showing last available feed');
+            showToast('Collection could not finish. Showing the last available feed.');
+            return;
+          }
+        }
+        showToast(collectionRequested && !collectionComplete
+          ? 'Collection is still running. New results will appear automatically.'
+          : `Loaded ${jobs.length} listings. Last collection: ${new Date(data.last_updated).toLocaleString()}.`);
+      }
+    } catch (error) {
+      console.error('[TargetMatch AI] Feed refresh failed:', error);
+      updateFeedStatus('Refresh failed; showing last available feed');
+      if (!isSilent) showToast('Could not refresh listings. Showing the last available feed.');
+    } finally {
+      refreshInFlight = false;
+      if (navRefreshIcon) navRefreshIcon.classList.remove('spinning');
+      if (navRefreshLabel) navRefreshLabel.textContent = 'Refresh Jobs';
       if (navRefreshBtn) navRefreshBtn.disabled = false;
     }
   }
 
   function setupRealtimeLiveStream() {
-    // Real-Time Live Streaming Engine: polls every 30 seconds for immediate job detection
-    const THIRTY_SECONDS_MS = 30 * 1000;
-    setInterval(() => {
-      refreshJobsLive(true);
-    }, THIRTY_SECONDS_MS);
+    setInterval(() => { refreshJobsLive(true); }, 30000);
   }
 
   if (navRefreshBtn) {
@@ -3641,11 +3435,6 @@ Best regards,
         renderCompanySites();
   // Immediately re-validate data.json with zero cache on startup
   setTimeout(() => { refreshJobsLive(true); }, 50);
-  const feedUpdatedAt = data.last_updated
-    ? new Date(data.last_updated).toLocaleString()
-    : "not recorded";
-  document.querySelectorAll(".auto-sync-badge").forEach(b => {
-    b.innerHTML = `<span class="sync-pulse-dot live-active-pulse"></span> <span class="sync-badge-text">🟢 Live Stream Active<span class="sync-poll-info"> • Direct ATS Polling every 30s</span><span class="sync-time-info"> • Synced: ${feedUpdatedAt}</span></span>`;
-  });
+  updateFeedStatus();
   setupRealtimeLiveStream();
 });

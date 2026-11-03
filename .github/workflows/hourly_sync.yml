@@ -2,11 +2,12 @@ name: Real-Time Live Job Feed Sync
 
 on:
   schedule:
-    - cron: '0 * * * *'  # Runs automatically at minute 0 of every hour
+    - cron: '7,22,37,52 * * * *'  # Request collection every 15 minutes, away from the hour
   push:
     paths:
       - 'collectors/**'
       - 'matching/**'
+      - 'processing/**'
       - 'hourly_pipeline.py'
       - 'profile.json'
       - 'requirements.txt'

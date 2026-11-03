@@ -2,7 +2,7 @@
 Scheduled Job Fetcher & Pipeline Sync
 TargetMatch AI - Entry-Level Career Engine
 
-Runs every 30 minutes via GitHub Actions.
+Runs every 15 minutes via GitHub Actions and the active API scheduler.
 Fetches dated entry-level opportunities, recalculates age from source timestamps,
 deduplicates, enriches matches, and synchronizes the web payloads.
 """
@@ -10,8 +10,8 @@ deduplicates, enriches matches, and synchronizes the web payloads.
 import os
 import json
 import datetime
-import subprocess
 import sqlite3
+import tempfile
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = SCRIPT_DIR
@@ -52,6 +52,23 @@ def normalize_job_key(company, title, is_post=False):
     suffix = "::post" if is_post else ""
     return f"{c}::{t}{suffix}"
 
+
+def write_snapshot(path, content):
+    """Readers see either the previous payload or the complete new payload."""
+    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", dir=os.path.dirname(path), delete=False) as handle:
+        pending_path = handle.name
+        try:
+            handle.write(content)
+        except Exception:
+            handle.close()
+            os.unlink(pending_path)
+            raise
+    try:
+        os.replace(pending_path, path)
+    finally:
+        if os.path.exists(pending_path):
+            os.unlink(pending_path)
+
 def run_hourly_sync():
     now = datetime.datetime.now(datetime.timezone.utc)
     timestamp_str = now.isoformat(timespec="minutes").replace("+00:00", "Z")
@@ -66,19 +83,9 @@ def run_hourly_sync():
         except Exception as e:
             print(f"[{timestamp_str}] Warning: Failed to parse data.json: {e}")
 
-    # Fallback to pristine baseline if data.json was empty or corrupted
-    if not data or not isinstance(data.get("jobs"), list) or len(data.get("jobs", [])) < 10:
-        try:
-            raw_git = subprocess.check_output(
-                ["git", "show", "cf5b887:data.json"],
-                cwd=ROOT_DIR,
-                stderr=subprocess.DEVNULL
-            ).decode("utf-8")
-            data = json.loads(raw_git)
-            print(f"[{timestamp_str}] Self-healed job pool from baseline commit cf5b887 ({len(data.get('jobs', []))} jobs).")
-        except Exception as e:
-            if not data:
-                data = {"jobs": [], "total_jobs": 0, "profile": {}, "stats": {}}
+    # An empty current feed is valid; never restore an old snapshot as live data.
+    if not data or not isinstance(data.get("jobs"), list):
+        data = {"jobs": [], "total_jobs": 0, "profile": {}, "stats": {}}
 
     # Keep valid existing jobs, strictly purging any pseudo-jobs, search redirects, or expired deadlines
     valid_existing = []
@@ -94,6 +101,8 @@ def run_hourly_sync():
         u_lower = u.lower()
 
         if not t or not c or not u:
+            continue
+        if job.get("is_post") and "/search/results/" in u_lower:
             continue
 
         # Purge fake/pseudo aggregator jobs
@@ -182,6 +191,13 @@ def run_hourly_sync():
         j_url = (job.get("url") or "").lower()
         existing_job = existing_by_url.get(j_url) or existing_by_key.get(j_key)
         if existing_job:
+            # Rounded relative labels must not make the same requisition newer each crawl.
+            if (j_url == (existing_job.get("url") or "").lower()
+                    and job.get("posted_at_source") == "relative_time"):
+                old_date = parse_any_datetime(existing_job.get("posted_at"))
+                new_date = parse_any_datetime(job.get("posted_at"))
+                if old_date and new_date and old_date < new_date:
+                    job["posted_at"] = existing_job["posted_at"]
             existing_job.update(job)
         else:
             existing_jobs.insert(0, job)
@@ -190,139 +206,11 @@ def run_hourly_sync():
             existing_by_key[j_key] = job
             added_count += 1
 
-    # 1b. Collect individual message posts from hiring leads & founders
-    from collectors.linkedin_post_fetcher import get_curated_linkedin_posts
-    individual_posts = get_curated_linkedin_posts()
-    for p in individual_posts:
-        title_lower = p["title"].lower()
-        skills = ["python", "sql"]
-        tier = 2
-        badge = "🥈"
-        category = "Data Science"
-        priority = "Primary"
-        score = 0.95
-
-        if "product" in title_lower or "apm" in title_lower:
-            tier = 5
-            badge = "5"
-            category = "Product"
-            priority = "Primary"
-            skills = ["product_analytics", "sql", "telemetry", "problem_solving"]
-            score = 0.945
-        elif "decision" in title_lower:
-            tier = 3
-            badge = "🥉"
-            category = "Decision Science"
-            priority = "Primary"
-            skills = ["statistical_modeling", "ab_testing", "hypothesis_testing", "sql"]
-            score = 0.950
-        elif "data scientist" in title_lower or "data science" in title_lower:
-            tier = 2
-            badge = "🥈"
-            category = "Data Science"
-            priority = "Primary"
-            skills = ["python", "sql", "pandas", "predictive_modeling"]
-            score = 0.965
-        elif "optimization" in title_lower or "operations research" in title_lower:
-            tier = 4
-            badge = "🏅"
-            category = "OR / Optimization"
-            priority = "Primary"
-            skills = ["linear_programming", "python", "pulp", "optimization"]
-            score = 0.940
-        elif "forecasting" in title_lower or "time series" in title_lower:
-            tier = 7
-            badge = "7"
-            category = "Forecasting"
-            priority = "Primary"
-            skills = ["time_series", "forecasting", "prophet", "arima", "pandas"]
-            score = 0.925
-        elif "ml engineer" in title_lower or "machine learning engineer" in title_lower:
-            tier = 8
-            badge = "8"
-            category = "ML Engineering"
-            priority = "Secondary"
-            skills = ["fastapi", "docker", "mlops", "python", "scikit_learn"]
-            score = 0.910
-        elif "applied scientist" in title_lower or "applied ml" in title_lower:
-            tier = 1
-            badge = "🥇"
-            category = "Applied ML / Research"
-            priority = "Primary"
-            skills = ["pytorch", "deep_learning", "transformers", "vector_search"]
-            score = 0.980
-        elif "strategy" in title_lower or "bizops" in title_lower:
-            tier = 6
-            badge = "6"
-            category = "Strategy / Programs"
-            priority = "Primary"
-            skills = ["excel", "sql", "financial_modeling", "problem_solving"]
-            score = 0.930
-
-        p_hrs = float(p.get("hours_ago", 3.0))
-        p_posted_at = (now - datetime.timedelta(hours=p_hrs)).isoformat(timespec="seconds").replace("+00:00", "Z")
-
-        job_entry = {
-            "title": p["title"],
-            "company": p["company"],
-            "location": p["location"],
-            "hours_ago": p_hrs,
-            "posted_at": p_posted_at,
-            "source_type": "LinkedIn Post",
-            "source_domain": "linkedin.com",
-            "is_post": True,
-            "post_author": p.get("post_author", "Hiring Lead"),
-            "contact_email": p.get("contact_email"),
-            "url": p["url"],
-            "direct_job_url": p["url"],
-            "raw_description": p.get("raw_description", ""),
-            "company_url": p.get("company_url"),
-            "score": score,
-            "tier": tier,
-            "priority": priority,
-            "badge": badge,
-            "category": category,
-            "is_fresher": True,
-            "is_internship": False,
-            "matched_skills": skills,
-            "missing_skills": [],
-            "description": p.get("raw_description", "")
-        }
-        p_key = normalize_job_key(job_entry['company'], job_entry['title'], is_post=True)
-        p_url = job_entry["url"].lower()
-        if p_key not in existing_by_key and p_url not in existing_by_url:
-            existing_jobs.append(job_entry)
-            existing_by_key[p_key] = job_entry
-            existing_by_url[p_url] = job_entry
-            added_count += 1
-
-    # 2. Recalculate age from preserved publication timestamps
+    # Curated example posts are not newly collected jobs.
+    from processing.feed_freshness import dated_jobs
+    now = datetime.datetime.now(datetime.timezone.utc)
+    existing_jobs = dated_jobs(existing_jobs, now=now, max_hours=120)
     for job in existing_jobs:
-        if not job.get("posted_at_source"):
-            job["posted_at_source"] = "published_at"
-
-        posted_at_str = job.get("posted_at")
-        posted_dt = parse_any_datetime(posted_at_str) if posted_at_str else None
-        if posted_dt:
-            elapsed_hrs = (now - posted_dt).total_seconds() / 3600.0
-            if elapsed_hrs >= 0:
-                job["hours_ago"] = round(elapsed_hrs, 2)
-                if elapsed_hrs < 1:
-                    mins = max(1, int(round(elapsed_hrs * 60)))
-                    job["relative_time"] = f"{mins} minute{'s' if mins != 1 else ''} ago"
-                elif elapsed_hrs < 24:
-                    hrs = max(1, int(round(elapsed_hrs)))
-                    job["relative_time"] = f"{hrs} hour{'s' if hrs > 1 else ''} ago"
-                else:
-                    days = max(1, int(round(elapsed_hrs / 24)))
-                    job["relative_time"] = f"{days} day{'s' if days > 1 else ''} ago"
-        else:
-            # If posted_at could not be parsed, preserve existing hours_ago safely
-            if job.get("hours_ago") is None:
-                job["hours_ago"] = 18.0
-            if not job.get("relative_time"):
-                job["relative_time"] = "18 hours ago"
-
         if "semantic_skill_gap" not in job:
             enrich_job_semantic_gaps(job)
 
@@ -410,6 +298,7 @@ def run_hourly_sync():
         final_deduped.append(job)
     existing_jobs = final_deduped
 
+    timestamp_str = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
     data["jobs"] = existing_jobs
     data["total_jobs"] = len(existing_jobs)
     data["last_updated"] = timestamp_str
@@ -432,15 +321,13 @@ def run_hourly_sync():
 
     # 5. Write back data.json and docs/data.json
     for p in [os.path.join(ROOT_DIR, "data.json"), os.path.join(ROOT_DIR, "docs", "data.json")]:
-        with open(p, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=2, ensure_ascii=False)
+        write_snapshot(p, json.dumps(data, indent=2, ensure_ascii=False))
         print(f"Updated {p} ({len(existing_jobs)} jobs)")
 
     # 6. Write back data.js and docs/data.js
     js_content = "window.JOB_MATCHER_DATA = window.JOB_DATA = " + json.dumps(data, indent=2, ensure_ascii=False) + ";\n"
     for p in [os.path.join(ROOT_DIR, "data.js"), os.path.join(ROOT_DIR, "docs", "data.js")]:
-        with open(p, "w", encoding="utf-8") as f:
-            f.write(js_content)
+        write_snapshot(p, js_content)
         print(f"Updated {p}")
 
     # 7. Update SQLite jobs.db
