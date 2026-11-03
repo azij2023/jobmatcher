@@ -2,10 +2,9 @@
 Indian Companies Direct Career Sites & Official ATS Collector
 TargetMatch AI - Direct Requisition Engine
 
-Fetches live verified entry-level (0-2 years, freshers, interns) opportunities directly from
-official career sites and ATS portals (Greenhouse, Lever, Ashby) of premier Indian tech companies:
-Groww, InMobi, Paytm, Razorpay, Zepto, CRED, Swiggy, Zomato, Meesho, PhonePe, Hasura, Postman,
-CleverTap, BrowserStack, Zeta, Shadowfax, Rapido, Atlan, Delhivery, Ola, Slice, and more.
+Fetches employer requisitions with fresher eligibility evidence from public
+Greenhouse, Lever, Ashby and SmartRecruiters feeds. Unavailable boards return
+no results. Dates, descriptions and application URLs come from employer records.
 """
 
 import urllib.request
@@ -58,7 +57,7 @@ SMARTRECRUITERS_COMPANIES = [
     ("freshworks", "Freshworks", "https://www.freshworks.com"),
 ]
 
-from concurrent.futures import ThreadPoolExecutor, as_completed
+from concurrent.futures import ThreadPoolExecutor
 
 ROLE_KEYWORDS = [
     "data scientist", "data science", "applied scientist", "applied ml",
@@ -98,674 +97,189 @@ def is_relevant_role(title: str) -> bool:
         return True
     return False
 
-def fetch_single_greenhouse(company_info) -> list:
-    slug, company_name, company_homepage = company_info
-    url = f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs"
-    now = datetime.datetime.now(datetime.timezone.utc)
+def is_direct_company_job_url(url):
+    """Require a requisition path, rather than an ATS board or career homepage."""
+    try:
+        parsed = urllib.parse.urlsplit(url or "")
+    except ValueError:
+        return False
+    if parsed.scheme not in ("http", "https"):
+        return False
+    host, path = (parsed.hostname or "").lower(), parsed.path.rstrip("/")
+    patterns = {
+        "greenhouse.io": r"/[^/]+/jobs/\d+(?:/.*)?$",
+        "lever.co": r"/[^/]+/[0-9a-f-]{36}(?:/apply)?$",
+        "ashbyhq.com": r"/[^/]+/[0-9a-f-]{36}(?:/application)?$",
+        "smartrecruiters.com": r"/[^/]+/\d+[^/]*$",
+        "myworkdayjobs.com": r"/.*/job/.+/.+$",
+    }
+    return any((host == domain or host.endswith("." + domain)) and re.fullmatch(pattern, path, re.I)
+               for domain, pattern in patterns.items())
+
+
+def is_unverified_company_job(job):
+    # Old snapshots included invented roles, IDs, dates and fresher claims.
+    return job.get("source_type") == "Official Company Portal" and (
+        job.get("company_job_verified") is not True
+        or not is_direct_company_job_url(job.get("direct_job_url") or job.get("url"))
+    )
+
+
+def _get_json(url):
+    with urllib.request.urlopen(urllib.request.Request(url, headers=HEADERS), timeout=12) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
+def _plain_text(value):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html_lib.unescape(value or ""))).strip()
+
+
+def _make_job(company_info, title, location, url, description, published, time_source="published_at"):
+    if not is_relevant_role(title) or not is_direct_company_job_url(url):
+        return None
+    description = _plain_text(description)
+    text = f"{title} {description}".lower()
+    # Evidence must come from the employer, never an appended fresher claim.
+    if not description or not re.search(
+        r"\b(?:freshers?|intern|internship|trainee|apprentice|graduates?|campus|entry[ -]level|no experience|zero experience)\b|\b0\s*(?:[-–]\s*\d+)?\s*years?", text
+    ):
+        return None
+    # A range starting at zero allows freshers; do not read its upper bound as a minimum.
+    exp_text = re.sub(r"\b0\s*(?:[-–]|to)\s*\d+\s*years?", "zero years", text)
+    if re.search(r"\b[1-9]\d*\+?\s*(?:(?:[-–]|to)\s*\d+)?\s*years?(?:\s+of)?\s+(?:(?:relevant|work|professional)\s+)?experience\b", exp_text):
+        return None
+    loc = (location or "").lower()
+    if not any(city in loc for city in ("india", "bengaluru", "bangalore", "mumbai", "delhi", "noida", "gurugram", "gurgaon", "hyderabad", "pune", "chennai", "kolkata", "ahmedabad", "kochi")):
+        return None
+    try:
+        dt = datetime.datetime.fromisoformat(str(published).replace("Z", "+00:00"))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        now = datetime.datetime.now(datetime.timezone.utc)
+        hours = (now - dt).total_seconds() / 3600
+        if hours < 0:
+            return None
+    except (ValueError, TypeError):
+        return None
+    return {
+        "title": title, "company": company_info[1], "company_url": company_info[2],
+        "location": location, "url": url, "direct_job_url": url,
+        "source_type": "Official Company Portal", "source_domain": urllib.parse.urlsplit(url).netloc,
+        "company_job_verified": True,
+        "posted_at": dt.astimezone(datetime.timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
+        "posted_at_source": time_source, "hours_ago": round(hours, 2),
+        "relative_time": f"{max(1, int(hours))} hours ago" if hours < 24 else f"{int(hours / 24)} days ago",
+        "raw_description": description, "is_post": False,
+    }
+
+
+def _fetch_board(company_info, provider):
+    slug = company_info[0]
     jobs = []
     try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=3.5) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            for item in data.get("jobs", []):
-                title = item.get("title", "").strip()
-                if not is_relevant_role(title):
-                    continue
-
-                # Location filter: Must be India or Remote or unassigned
-                loc = (item.get("location") or {}).get("name") or "India"
-                loc_lower = loc.lower()
-                if any(foreign in loc_lower for foreign in ["united states", "usa", "san mateo", "new york", "london", "dubai", "singapore", "egypt"]):
-                    continue
-
-                job_url = item.get("absolute_url")
-                if not job_url:
-                    continue
-
-                updated_at = item.get("updated_at")
-                posted_at = now.isoformat(timespec="seconds").replace("+00:00", "Z")
-                hours_ago = 6.0
-                if updated_at:
-                    try:
-                        clean_dt = updated_at.replace("Z", "+00:00")
-                        dt = datetime.datetime.fromisoformat(clean_dt)
-                        if dt.tzinfo is None:
-                            dt = dt.replace(tzinfo=datetime.timezone.utc)
-                        diff = (now - dt).total_seconds() / 3600.0
-                        if diff >= 0:
-                            hours_ago = round(diff, 1)
-                            posted_at = dt.isoformat(timespec="seconds").replace("+00:00", "Z")
-                    except Exception:
-                        pass
-
-                if hours_ago < 1:
-                    rel_time = f"{max(5, int(hours_ago * 60))} minutes ago"
-                elif hours_ago < 24:
-                    rel_time = f"{max(1, int(hours_ago))} hours ago"
+        if provider == "greenhouse":
+            items = _get_json(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=true").get("jobs", [])
+        elif provider == "lever":
+            items = _get_json(f"https://api.lever.co/v0/postings/{slug}?mode=json")
+        elif provider == "ashby":
+            items = _get_json(f"https://api.ashbyhq.com/posting-api/job-board/{slug}").get("jobs", [])
+        else:
+            items = _get_json(f"https://api.smartrecruiters.com/v1/companies/{slug}/postings").get("content", [])
+        for item in items:
+            title = item.get("title") or item.get("text") or item.get("name") or ""
+            if not is_relevant_role(title):
+                continue
+            try:
+                time_source = "published_at"
+                if provider == "greenhouse":
+                    location = (item.get("location") or {}).get("name", "")
+                    url, desc = item.get("absolute_url"), item.get("content")
+                    published = item.get("updated_at")
+                    time_source = "updated_at"
+                elif provider == "lever":
+                    location = (item.get("categories") or {}).get("location", "")
+                    url = item.get("hostedUrl")
+                    desc = " ".join([item.get("descriptionPlain") or item.get("description") or "",
+                                     item.get("additionalPlain") or item.get("additional") or ""] +
+                                    [section.get("content", "") for section in item.get("lists", [])])
+                    published = datetime.datetime.fromtimestamp(item["createdAt"] / 1000, datetime.timezone.utc).isoformat()
+                elif provider == "ashby":
+                    location, url = item.get("location", ""), item.get("jobUrl")
+                    desc = item.get("descriptionPlain") or item.get("descriptionHtml")
+                    published = item.get("publishedAt")
                 else:
-                    rel_time = f"{max(1, int(hours_ago / 24))} days ago"
-
-                jobs.append({
-                    "title": title,
-                    "company": company_name,
-                    "location": loc,
-                    "url": job_url,
-                    "direct_job_url": job_url,
-                    "company_url": company_homepage,
-                    "source_type": "Official Company Portal",
-                    "source_domain": f"{slug}.greenhouse.io",
-                    "posted_at": posted_at,
-                    "posted_at_source": "published_at",
-                    "hours_ago": hours_ago,
-                    "relative_time": rel_time,
-                    "raw_description": f"{title} at {company_name} in {loc}. Direct verified opening on official {company_name} career portal (Greenhouse). Entry-level & fresher eligible.",
-                    "is_post": False
-                })
-    except Exception:
-        pass
+                    # The list response omits requirements and the canonical apply URL.
+                    detail = _get_json(f"https://api.smartrecruiters.com/v1/companies/{slug}/postings/{item['id']}")
+                    loc = detail.get("location") or {}
+                    location = ", ".join(filter(None, [loc.get("city"), loc.get("region"), loc.get("country")]))
+                    if loc.get("country", "").lower() == "in":
+                        location += ", India"
+                    url = detail.get("postingUrl")
+                    desc = " ".join(section.get("text", "") for section in (detail.get("jobAd", {}).get("sections") or {}).values())
+                    published = detail.get("releasedDate")
+                job = _make_job(company_info, title, location, url, desc, published, time_source)
+                if job:
+                    jobs.append(job)
+            except (KeyError, TypeError, ValueError, OSError):
+                continue
+    except (OSError, ValueError, TypeError) as exc:
+        print(f"[CompanyPortals] {company_info[1]} ({provider}) unavailable: {exc}")
     return jobs
 
-def fetch_single_lever(company_info) -> list:
-    slug, company_name, company_homepage = company_info
-    url = f"https://api.lever.co/v0/postings/{slug}?mode=json"
-    now = datetime.datetime.now(datetime.timezone.utc)
+
+def fetch_single_greenhouse(company_info):
+    return _fetch_board(company_info, "greenhouse")
+
+
+def fetch_single_lever(company_info):
+    return _fetch_board(company_info, "lever")
+
+
+def fetch_single_ashby(company_info):
+    return _fetch_board(company_info, "ashby")
+
+
+def fetch_single_smartrecruiters(company_info):
+    return _fetch_board(company_info, "smartrecruiters")
+
+
+def _fetch_companies(companies, fetcher):
     jobs = []
-    try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=3.5) as resp:
-            postings = json.loads(resp.read().decode("utf-8"))
-            for item in postings:
-                title = item.get("text", "").strip()
-                if not is_relevant_role(title):
-                    continue
-
-                loc = (item.get("categories") or {}).get("location") or "India"
-                loc_lower = loc.lower()
-                if any(foreign in loc_lower for foreign in ["dubai", "jakarta", "indonesia", "united states", "usa", "london", "singapore"]):
-                    continue
-
-                job_url = item.get("hostedUrl")
-                if not job_url:
-                    continue
-
-                created_at = item.get("createdAt")
-                hours_ago = 12.0
-                posted_at = now.isoformat(timespec="seconds").replace("+00:00", "Z")
-                if created_at:
-                    try:
-                        dt = datetime.datetime.fromtimestamp(created_at / 1000.0, tz=datetime.timezone.utc)
-                        diff = (now - dt).total_seconds() / 3600.0
-                        if diff >= 0:
-                            hours_ago = round(diff, 1)
-                            posted_at = dt.isoformat(timespec="seconds").replace("+00:00", "Z")
-                    except Exception:
-                        pass
-
-                if hours_ago < 1:
-                    rel_time = f"{max(5, int(hours_ago * 60))} minutes ago"
-                elif hours_ago < 24:
-                    rel_time = f"{max(1, int(hours_ago))} hours ago"
-                else:
-                    rel_time = f"{max(1, int(hours_ago / 24))} days ago"
-
-                jobs.append({
-                    "title": title,
-                    "company": company_name,
-                    "location": loc,
-                    "url": job_url,
-                    "direct_job_url": job_url,
-                    "company_url": company_homepage,
-                    "source_type": "Official Company Portal",
-                    "source_domain": f"jobs.lever.co/{slug}",
-                    "posted_at": posted_at,
-                    "posted_at_source": "published_at",
-                    "hours_ago": hours_ago,
-                    "relative_time": rel_time,
-                    "raw_description": f"{title} at {company_name} in {loc}. Direct verified opening on official {company_name} careers portal (Lever). Freshers / early career.",
-                    "is_post": False
-                })
-    except Exception:
-        pass
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        for result in executor.map(fetcher, companies):
+            jobs.extend(result)
     return jobs
 
-def fetch_single_ashby(company_info) -> list:
-    slug, company_name, company_homepage = company_info
-    url = f"https://api.ashbyhq.com/posting-api/job-board/{slug}"
-    now = datetime.datetime.now(datetime.timezone.utc)
-    jobs = []
-    try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=3.5) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            for item in data.get("jobs", []):
-                title = item.get("title", "").strip()
-                if not is_relevant_role(title):
-                    continue
 
-                loc = item.get("location") or "India"
-                job_url = item.get("jobUrl")
-                if not job_url:
-                    continue
+def fetch_greenhouse_company_jobs():
+    return _fetch_companies(GREENHOUSE_COMPANIES, fetch_single_greenhouse)
 
-                published_at = item.get("publishedAt")
-                hours_ago = 8.0
-                posted_at = now.isoformat(timespec="seconds").replace("+00:00", "Z")
-                if published_at:
-                    try:
-                        clean_dt = published_at.replace("Z", "+00:00")
-                        dt = datetime.datetime.fromisoformat(clean_dt)
-                        if dt.tzinfo is None:
-                            dt = dt.replace(tzinfo=datetime.timezone.utc)
-                        diff = (now - dt).total_seconds() / 3600.0
-                        if diff >= 0:
-                            hours_ago = round(diff, 1)
-                            posted_at = dt.isoformat(timespec="seconds").replace("+00:00", "Z")
-                    except Exception:
-                        pass
 
-                if hours_ago < 1:
-                    rel_time = f"{max(5, int(hours_ago * 60))} minutes ago"
-                elif hours_ago < 24:
-                    rel_time = f"{max(1, int(hours_ago))} hours ago"
-                else:
-                    rel_time = f"{max(1, int(hours_ago / 24))} days ago"
+def fetch_lever_company_jobs():
+    return _fetch_companies(LEVER_COMPANIES, fetch_single_lever)
 
-                jobs.append({
-                    "title": title,
-                    "company": company_name,
-                    "location": loc,
-                    "url": job_url,
-                    "direct_job_url": job_url,
-                    "company_url": company_homepage,
-                    "source_type": "Official Company Portal",
-                    "source_domain": f"jobs.ashbyhq.com/{slug}",
-                    "posted_at": posted_at,
-                    "posted_at_source": "published_at",
-                    "hours_ago": hours_ago,
-                    "relative_time": rel_time,
-                    "raw_description": f"{title} at {company_name} in {loc}. Direct verified opening on official {company_name} career site (Ashby).",
-                    "is_post": False
-                })
-    except Exception:
-        pass
+
+def fetch_ashby_company_jobs():
+    return _fetch_companies(ASHBY_COMPANIES, fetch_single_ashby)
+
+
+def fetch_smartrecruiters_company_jobs():
+    return _fetch_companies(SMARTRECRUITERS_COMPANIES, fetch_single_smartrecruiters)
+
+
+def fetch_company_jobs():
+    """Only employer API records; an unavailable board contributes no placeholders."""
+    seen, jobs = set(), []
+    for fetcher in (fetch_greenhouse_company_jobs, fetch_lever_company_jobs,
+                    fetch_ashby_company_jobs, fetch_smartrecruiters_company_jobs):
+        for job in fetcher():
+            if job["url"] not in seen:
+                seen.add(job["url"])
+                jobs.append(job)
+    print(f"[CompanyPortals] Fetched {len(jobs)} actual employer requisitions.")
     return jobs
 
-def fetch_single_smartrecruiters(company_info) -> list:
-    slug, company_name, company_homepage = company_info
-    url = f"https://api.smartrecruiters.com/v1/companies/{slug}/postings"
-    now = datetime.datetime.now(datetime.timezone.utc)
-    jobs = []
-    try:
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=4.5) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-            for item in data.get("content", []):
-                title = item.get("name", "").strip()
-                if not is_relevant_role(title):
-                    continue
-
-                loc_dict = item.get("location") or {}
-                country = (loc_dict.get("country") or "").lower()
-                full_loc = loc_dict.get("fullLocation") or loc_dict.get("city") or "India"
-                if country and country not in ["in", "india"] and "india" not in full_loc.lower():
-                    continue
-
-                jid = item.get("id")
-                job_url = f"https://jobs.smartrecruiters.com/{company_name}/{jid}"
-                rel_date = item.get("releasedDate")
-                hours_ago = 4.0
-                posted_at = now.isoformat(timespec="seconds").replace("+00:00", "Z")
-                if rel_date:
-                    try:
-                        clean_dt = rel_date.replace("Z", "+00:00")
-                        dt = datetime.datetime.fromisoformat(clean_dt)
-                        if dt.tzinfo is None:
-                            dt = dt.replace(tzinfo=datetime.timezone.utc)
-                        diff = (now - dt).total_seconds() / 3600.0
-                        if diff >= 0:
-                            hours_ago = round(diff, 1)
-                            posted_at = dt.isoformat(timespec="seconds").replace("+00:00", "Z")
-                    except Exception:
-                        pass
-
-                if hours_ago < 1:
-                    rel_time = f"{max(5, int(hours_ago * 60))} minutes ago"
-                elif hours_ago < 24:
-                    rel_time = f"{max(1, int(hours_ago))} hours ago"
-                else:
-                    rel_time = f"{max(1, int(hours_ago / 24))} days ago"
-
-                jobs.append({
-                    "title": title,
-                    "company": company_name,
-                    "location": full_loc,
-                    "url": job_url,
-                    "direct_job_url": job_url,
-                    "company_url": company_homepage,
-                    "source_type": "Official Company Portal",
-                    "source_domain": f"jobs.smartrecruiters.com/{slug}",
-                    "posted_at": posted_at,
-                    "posted_at_source": "published_at",
-                    "hours_ago": hours_ago,
-                    "relative_time": rel_time,
-                    "raw_description": f"{title} at {company_name} in {full_loc}. Official direct requisition on {company_name} Careers portal (SmartRecruiters). 0 years experience required, freshers eligible.",
-                    "is_post": False,
-                    "is_fresher": True,
-                    "min_years_experience": 0,
-                    "max_years_experience": 0
-                })
-    except Exception:
-        pass
-    return jobs
-
-def fetch_greenhouse_company_jobs() -> list:
-    """Fetch live data/AI/analytics opportunities from Greenhouse boards of Indian tech companies."""
-    jobs = []
-    with ThreadPoolExecutor(max_workers=12) as executor:
-        futures = [executor.submit(fetch_single_greenhouse, c) for c in GREENHOUSE_COMPANIES]
-        for f in as_completed(futures):
-            jobs.extend(f.result())
-    return jobs
-
-def fetch_lever_company_jobs() -> list:
-    """Fetch live data/AI/analytics opportunities from Lever boards of Indian tech companies."""
-    jobs = []
-    with ThreadPoolExecutor(max_workers=12) as executor:
-        futures = [executor.submit(fetch_single_lever, c) for c in LEVER_COMPANIES]
-        for f in as_completed(futures):
-            jobs.extend(f.result())
-    return jobs
-
-def fetch_ashby_company_jobs() -> list:
-    """Fetch live data/AI/analytics opportunities from Ashby boards of Indian tech companies."""
-    jobs = []
-    with ThreadPoolExecutor(max_workers=6) as executor:
-        futures = [executor.submit(fetch_single_ashby, c) for c in ASHBY_COMPANIES]
-        for f in as_completed(futures):
-            jobs.extend(f.result())
-    return jobs
-
-def fetch_smartrecruiters_company_jobs() -> list:
-    """Fetch live data/AI/analytics opportunities from SmartRecruiters boards of Indian tech companies."""
-    jobs = []
-    with ThreadPoolExecutor(max_workers=6) as executor:
-        futures = [executor.submit(fetch_single_smartrecruiters, c) for c in SMARTRECRUITERS_COMPANIES]
-        for f in as_completed(futures):
-            jobs.extend(f.result())
-    return jobs
-
-def fetch_curated_indian_company_jobs() -> list:
-    """
-    Curated, verified direct requisition openings from premier Indian tech employers
-    whose career portals use direct requisition paths (Flipkart, Swiggy, Zomato, PhonePe,
-    Zepto, Razorpay, Delhivery, Tata 1mg, Groww, InMobi, Meesho, CRED, Zeta, Slice, Atlan).
-    Guarantees 100% verified, exact direct requisition URLs with 0-experience fresher eligibility.
-    """
-    now = datetime.datetime.now(datetime.timezone.utc)
-    curated = [
-        {
-            "title": "Associate Data Scientist - Supply Chain Intelligence",
-            "company": "Flipkart",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://www.flipkartcareers.com/",
-            "direct_job_url": "https://www.flipkartcareers.com/",
-            "company_url": "https://www.flipkartcareers.com/",
-            "source_type": "Official Company Portal",
-            "source_domain": "flipkartcareers.com",
-            "hours_ago": 0.75,
-            "relative_time": "45 minutes ago",
-            "raw_description": "Associate Data Scientist at Flipkart focusing on predictive inventory replenishment, automated fulfillment routing, and fulfillment center demand forecasting. Direct verified requisition on official Flipkart Careers portal. 0 years experience required, freshers & Batch 2026 eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Data Scientist I - Machine Learning & Dynamic Dispatch",
-            "company": "Swiggy",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://careers.swiggy.com/",
-            "direct_job_url": "https://careers.swiggy.com/",
-            "company_url": "https://careers.swiggy.com/",
-            "source_type": "Official Company Portal",
-            "source_domain": "careers.swiggy.com",
-            "hours_ago": 3.0,
-            "relative_time": "3 hours ago",
-            "raw_description": "Data Scientist I at Swiggy engineering real-time ETA prediction models, food delivery assignment algorithms, and spatial clustering models. Direct requisition on official Swiggy Careers portal (SmartRecruiters). 0 experience, freshers welcome.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Data Analyst - Payments & Fraud Risk",
-            "company": "PhonePe",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://www.phonepe.com/careers/",
-            "direct_job_url": "https://www.phonepe.com/careers/",
-            "company_url": "https://www.phonepe.com/careers/",
-            "source_type": "Official Company Portal",
-            "source_domain": "phonepe.com/careers",
-            "hours_ago": 4.0,
-            "relative_time": "4 hours ago",
-            "raw_description": "Data Analyst at PhonePe analyzing high-throughput UPI payment pipelines, user velocity risk metrics, and transaction failure telemetry. Direct verified requisition on PhonePe Careers. Strictly 0 years experience / freshers eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Data Scientist - Risk Analytics & Underwriting",
-            "company": "Razorpay",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://razorpay.com/jobs/",
-            "direct_job_url": "https://razorpay.com/jobs/",
-            "company_url": "https://razorpay.com/jobs/",
-            "source_type": "Official Company Portal",
-            "source_domain": "razorpay.com/jobs",
-            "hours_ago": 5.0,
-            "relative_time": "5 hours ago",
-            "raw_description": "Data Scientist at Razorpay building automated merchant credit scoring, payment anomaly detection, and chargeback prevention models. Direct verified opening on Razorpay Careers. 0 years experience required, fresh graduates eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Operations Research Analyst - Micro-Fulfillment",
-            "company": "Zepto",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://www.zeptonow.com/careers",
-            "direct_job_url": "https://www.zeptonow.com/careers",
-            "company_url": "https://www.zeptonow.com/careers",
-            "source_type": "Official Company Portal",
-            "source_domain": "zeptonow.com/careers",
-            "hours_ago": 6.0,
-            "relative_time": "6 hours ago",
-            "raw_description": "Operations Research Analyst at Zepto designing dark store inventory placement, order picker route planning, and 10-minute dispatch optimization. Direct requisition on Zepto Careers portal. 0 years experience required.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Decision Scientist - Freight Network Optimization",
-            "company": "Delhivery",
-            "location": "Gurugram, Haryana",
-            "url": "https://www.delhivery.com/careers",
-            "direct_job_url": "https://www.delhivery.com/careers",
-            "company_url": "https://www.delhivery.com/careers",
-            "source_type": "Official Company Portal",
-            "source_domain": "delhivery.com/careers",
-            "hours_ago": 7.5,
-            "relative_time": "7 hours ago",
-            "raw_description": "Decision Scientist at Delhivery building express logistics network routing, hub load balancing algorithms, and linear programming transport models. Direct on Delhivery Careers. 0 years experience / freshers eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Healthcare Data Analyst",
-            "company": "Tata 1mg",
-            "location": "Gurugram, Haryana",
-            "url": "https://www.1mg.com/jobs",
-            "direct_job_url": "https://www.1mg.com/jobs",
-            "company_url": "https://www.1mg.com/careers",
-            "source_type": "Official Company Portal",
-            "source_domain": "1mg.com/careers",
-            "hours_ago": 8.5,
-            "relative_time": "8 hours ago",
-            "raw_description": "Healthcare Data Analyst at Tata 1mg analyzing e-pharmacy prescription fulfillment, lab test demand forecasting, and inventory turn velocity. Direct on Tata 1mg Careers portal. 0 years experience required.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Product & Growth Analyst",
-            "company": "Zomato",
-            "location": "Gurugram, Haryana",
-            "url": "https://www.zomato.com/careers",
-            "direct_job_url": "https://www.zomato.com/careers",
-            "company_url": "https://www.zomato.com/careers",
-            "source_type": "Official Company Portal",
-            "source_domain": "zomato.com/careers",
-            "hours_ago": 10.0,
-            "relative_time": "10 hours ago",
-            "raw_description": "Product and Growth Analyst at Zomato driving user acquisition cohorts, dining-out conversion analytics, and rider logistics metrics. Direct verified opening on official Zomato Careers portal. 0 years experience required.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Product Research Specialist - Fintech & Wealth Analytics",
-            "company": "Groww",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://groww.in/careers",
-            "direct_job_url": "https://groww.in/careers",
-            "company_url": "https://groww.in",
-            "source_type": "Official Company Portal",
-            "source_domain": "groww.greenhouse.io",
-            "hours_ago": 3.5,
-            "relative_time": "3 hours ago",
-            "raw_description": "Product Research Specialist at Groww analyzing mutual fund transaction flows, retail investor behavioral analytics, and telemetry cohorts. Direct verified requisition on Groww Greenhouse ATS. 0 experience / freshers eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Data Engineer - Applied Telemetry & Ad Sciences",
-            "company": "InMobi",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://job-boards.greenhouse.io/inmobi/jobs/7747785",
-            "direct_job_url": "https://job-boards.greenhouse.io/inmobi/jobs/7747785",
-            "company_url": "https://www.inmobi.com",
-            "source_type": "Official Company Portal",
-            "source_domain": "inmobi.greenhouse.io",
-            "hours_ago": 4.5,
-            "relative_time": "4 hours ago",
-            "raw_description": "Data Engineer at InMobi building high-throughput ad event streaming pipelines, feature stores for real-time bid prediction, and telemetry aggregation. Direct verified opening on InMobi Greenhouse. 0 years experience required.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Product Analyst - Payments & UPI Telemetry",
-            "company": "Paytm",
-            "location": "Noida, Uttar Pradesh",
-            "url": "https://jobs.lever.co/paytm/2294c39e-0394-472b-8ba0-736857fa24a8",
-            "direct_job_url": "https://jobs.lever.co/paytm/2294c39e-0394-472b-8ba0-736857fa24a8",
-            "company_url": "https://paytm.com",
-            "source_type": "Official Company Portal",
-            "source_domain": "jobs.lever.co/paytm",
-            "hours_ago": 5.0,
-            "relative_time": "5 hours ago",
-            "raw_description": "Product Analyst at Paytm focusing on payment funnel optimization, failure root-cause telemetry, and user transaction cohorts. Direct verified opening on Paytm Lever ATS. 0 experience & freshers eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Decision Science Analyst - Marketplace & Pricing",
-            "company": "Meesho",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://www.meesho.io/jobs",
-            "direct_job_url": "https://www.meesho.io/jobs",
-            "company_url": "https://www.meesho.com",
-            "source_type": "Official Company Portal",
-            "source_domain": "jobs.lever.co/meesho",
-            "hours_ago": 6.5,
-            "relative_time": "6 hours ago",
-            "raw_description": "Decision Science Analyst at Meesho designing seller dynamic pricing elasticity, delivery fee sensitivity models, and marketplace health indices. Direct verified opening on Meesho Lever ATS. 0 years experience required.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Associate Decision Scientist - Risk & Growth",
-            "company": "CRED",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://cred.club/careers",
-            "direct_job_url": "https://cred.club/careers",
-            "company_url": "https://cred.club",
-            "source_type": "Official Company Portal",
-            "source_domain": "jobs.lever.co/cred",
-            "hours_ago": 8.0,
-            "relative_time": "8 hours ago",
-            "raw_description": "Associate Decision Scientist at CRED analyzing credit card payment behavior, user reward redemptions, and risk propensity models. Direct verified opening on CRED Lever ATS. Freshers & 0 experience eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Banking Cloud & Transaction Telemetry Analyst",
-            "company": "Zeta",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://jobs.lever.co/zeta/2294c39e-0394-472b-8ba0-736857fa24a8",
-            "direct_job_url": "https://jobs.lever.co/zeta/2294c39e-0394-472b-8ba0-736857fa24a8",
-            "company_url": "https://www.zeta.tech",
-            "source_type": "Official Company Portal",
-            "source_domain": "jobs.lever.co/zeta",
-            "hours_ago": 9.0,
-            "relative_time": "9 hours ago",
-            "raw_description": "Banking Cloud & Transaction Telemetry Analyst at Zeta building analytics dashboards for modern core banking engines and payment switch latency. Direct on Zeta Lever ATS. 0 years experience required.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Card Risk & Decision Analytics Associate",
-            "company": "Slice",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://job-boards.greenhouse.io/slice/jobs/4714061101",
-            "direct_job_url": "https://job-boards.greenhouse.io/slice/jobs/4714061101",
-            "company_url": "https://slice.careers",
-            "source_type": "Official Company Portal",
-            "source_domain": "slice.greenhouse.io",
-            "hours_ago": 12.0,
-            "relative_time": "12 hours ago",
-            "raw_description": "Card Risk and Decision Analytics Associate at Slice analyzing consumer credit limits, repayment delinquency probability, and card swipe telemetry. Direct on Slice Greenhouse ATS. 0 experience / freshers eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Decision Science Consultant (Fresher / Campus)",
-            "company": "Fractal Analytics",
-            "location": "Bengaluru / Mumbai, India",
-            "url": "https://fractal.ai/careers/",
-            "direct_job_url": "https://fractal.ai/careers/",
-            "company_url": "https://fractal.ai/careers/",
-            "source_type": "Official Company Portal",
-            "source_domain": "fractal.ai/careers",
-            "hours_ago": 3.0,
-            "relative_time": "3 hours ago",
-            "raw_description": "Decision Science Consultant at Fractal Analytics analyzing predictive modeling, retail CPG forecasting, customer lifetime value, and causal inference. Direct verified opening on Fractal Careers. 0 years experience required, freshers eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Trainee Decision Scientist",
-            "company": "Mu Sigma",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://www.mu-sigma.com/careers/",
-            "direct_job_url": "https://www.mu-sigma.com/careers/",
-            "company_url": "https://www.mu-sigma.com/careers",
-            "source_type": "Official Company Portal",
-            "source_domain": "mu-sigma.com/careers",
-            "hours_ago": 0.5,
-            "relative_time": "30 minutes ago",
-            "raw_description": "Trainee Decision Scientist at Mu Sigma solving enterprise decision sciences problems, supply chain optimization, and quantitative hypothesis modeling using Python, SQL, and statistics. 0 experience / pure freshers.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "Associate Data Scientist - AI & Advanced Analytics",
-            "company": "Tiger Analytics",
-            "location": "Chennai / Bengaluru / Remote India",
-            "url": "https://www.tigeranalytics.com/careers/",
-            "direct_job_url": "https://www.tigeranalytics.com/careers/",
-            "company_url": "https://www.tigeranalytics.com/careers/",
-            "source_type": "Official Company Portal",
-            "source_domain": "tigeranalytics.com/careers",
-            "hours_ago": 0.35,
-            "relative_time": "21 minutes ago",
-            "raw_description": "Associate Data Scientist at Tiger Analytics building machine learning pipelines, time-series forecasting, and algorithmic optimization models for global Fortune 500 enterprises. Direct opening on Tiger Analytics Careers portal. 0 years experience required, fresh graduates eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        },
-        {
-            "title": "AI Systems & Metadata Platform Trainee",
-            "company": "Atlan",
-            "location": "Bengaluru, Karnataka",
-            "url": "https://jobs.ashbyhq.com/atlan/6a38e34a-3a9c-4fc8-3b40-cca23",
-            "direct_job_url": "https://jobs.ashbyhq.com/atlan/6a38e34a-3a9c-4fc8-3b40-cca23",
-            "company_url": "https://atlan.com",
-            "source_type": "Official Company Portal",
-            "source_domain": "jobs.ashbyhq.com/atlan",
-            "hours_ago": 11.5,
-            "relative_time": "11 hours ago",
-            "raw_description": "AI Systems & Metadata Platform Trainee at Atlan building automated data governance crawlers, active metadata graphs, and GenAI agent connectors. Direct verified opening on Atlan Ashby ATS. 0 experience eligible.",
-            "is_post": False,
-            "is_fresher": True,
-            "min_years_experience": 0,
-            "max_years_experience": 0
-        }
-    ]
-
-    for j in curated:
-        dt = now - datetime.timedelta(hours=j["hours_ago"])
-        j["posted_at"] = dt.isoformat(timespec="seconds").replace("+00:00", "Z")
-        j["posted_at_source"] = "published_at"
-
-    return curated
-
-def fetch_company_jobs() -> list:
-    """
-    Main aggregator for official Indian company career portals and ATS feeds.
-    Returns direct requisitions with 100% verified application URLs.
-    """
-    gh = fetch_greenhouse_company_jobs()
-    lever = fetch_lever_company_jobs()
-    ashby = fetch_ashby_company_jobs()
-    sr = fetch_smartrecruiters_company_jobs()
-    curated = fetch_curated_indian_company_jobs()
-    
-    # Priority order: curated direct requisitions first, then live ATS feeds
-    all_raw = curated + sr + gh + lever + ashby
-    
-    seen = set()
-    deduped = []
-    for j in all_raw:
-        key = f"{j.get('company', '').lower()}::{j.get('title', '').lower()}"
-        url = j.get('url', '').lower()
-        if key in seen or url in seen:
-            continue
-        seen.add(key)
-        if url:
-            seen.add(url)
-        deduped.append(j)
-
-    print(f"[CompanyPortals] Fetched {len(deduped)} unique verified openings directly from Indian company career sites (Curated Requisitions: {len(curated)}, SmartRecruiters: {len(sr)}, Greenhouse: {len(gh)}, Lever: {len(lever)}, Ashby: {len(ashby)}).")
-    return deduped
 
 if __name__ == "__main__":
-    jobs = fetch_company_jobs()
-    for idx, j in enumerate(jobs[:15], 1):
-        print(f"{idx}. [{j['hours_ago']}h ago] {j['title']} @ {j['company']} ({j['location']})")
-        print(f"   URL: {j['url']}")
+    for job in fetch_company_jobs():
+        print(job["title"], job["company"], job["url"])

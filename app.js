@@ -11,7 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const hasVerifiedPublicationTime = job =>
-    Boolean(job && (job.title || job.company) && (job.url || job.linkedin_url));
+    Boolean(job && (job.title || job.company) && (job.url || job.linkedin_url)) &&
+    (job.source_type !== 'Official Company Portal' || job.company_job_verified === true);
 
   let jobs = (data.jobs || []).filter(hasVerifiedPublicationTime);
   let profile = data.profile || {};
@@ -121,13 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Helper source classification functions
   const isCompanyPortalJob = j => {
-    if (!j) return false;
-    const u = (j.url || '').toLowerCase();
-    const t = (j.source_type || '').toLowerCase();
-    const d = (j.source_domain || '').toLowerCase();
-    const isPost = Boolean(j.is_post) || t.includes('post') || u.includes('/posts/');
-    const isAts = u.includes('greenhouse.io') || u.includes('lever.co') || u.includes('ashbyhq') || u.includes('workday') || t.includes('ats');
-    return t.includes('portal') || t.includes('official') || isAts || (!u.includes('linkedin.com') && !u.includes('naukri.com') && !u.includes('unstop.com') && !u.includes('indeed.com') && !isPost && !d.includes('remotive') && !d.includes('jobicy'));
+    return Boolean(getCompanyJobUrl(j));
   };
 
   const isUnstopJob = j => {
@@ -3105,7 +3100,6 @@ Best regards,
   // 13. Individual Company Sites & Direct ATS Hub
   // ==========================================================================
   const companySitesGrid = document.getElementById("company-sites-grid");
-  const companyPortalsGrid = document.getElementById("company-portals-grid");
   const companySitesSearchInput = document.getElementById("company-sites-search-input");
   const companySitesLiveCount = document.getElementById("company-sites-live-count");
   const navCompanySitesCount = document.getElementById("nav-company-sites-count");
@@ -3121,200 +3115,37 @@ Best regards,
     consulting: ["tiger analytics", "mu sigma", "fractal", "latentview"]
   };
 
-  const COMPANY_PORTALS_DATA = [
-    {
-      name: "Swiggy",
-      logo: "🍔",
-      category: "FoodTech & Quick Commerce",
-      ats: "Internal ATS / Greenhouse",
-      portalUrl: "https://careers.swiggy.com/",
-      searchQuery: "Swiggy",
-      desc: "Dynamic delivery routing, demand prediction algorithms, food recommendation engine, and catalog intelligence."
-    },
-    {
-      name: "Groww",
-      logo: "📈",
-      category: "Fintech & WealthTech",
-      ats: "Greenhouse",
-      portalUrl: "https://groww.in/careers",
-      searchQuery: "Groww",
-      desc: "Stock market telemetry, mutual funds risk modeling, wealth management algorithms, and user behavior analytics."
-    },
-    {
-      name: "Razorpay",
-      logo: "💳",
-      category: "Payments Infrastructure",
-      ats: "Greenhouse",
-      portalUrl: "https://razorpay.com/jobs/",
-      searchQuery: "Razorpay",
-      desc: "Real-time payment routing, merchant fraud risk scoring, financial ledger reconciliation, and merchant checkout."
-    },
-    {
-      name: "PhonePe",
-      logo: "📱",
-      category: "Fintech & Payments",
-      ats: "Internal Portal",
-      portalUrl: "https://www.phonepe.com/careers/",
-      searchQuery: "PhonePe",
-      desc: "India's highest scale UPI telemetry, consumer credit underwriting, merchant POS analytics, and fraud protection."
-    },
-    {
-      name: "Flipkart",
-      logo: "🛍️",
-      category: "E-Commerce",
-      ats: "Flipkart Careers ATS",
-      portalUrl: "https://www.flipkartcareers.com/",
-      searchQuery: "Flipkart",
-      desc: "Supply chain network optimization, deep learning visual search, search ranking, and multi-modal recommendations."
-    },
-    {
-      name: "CRED",
-      logo: "💎",
-      category: "Fintech & Decision Science",
-      ats: "Lever",
-      portalUrl: "https://careers.cred.club/",
-      searchQuery: "CRED",
-      desc: "Credit card payment intelligence, causal inference, user reward optimization, and high-trust financial modeling."
-    },
-    {
-      name: "Meesho",
-      logo: "📦",
-      category: "Social E-Commerce",
-      ats: "Lever",
-      portalUrl: "https://www.meesho.io/careers",
-      searchQuery: "Meesho",
-      desc: "Tier-2/3 user personalization, dynamic seller pricing algorithms, reverse logistics prediction, and catalog search."
-    },
-    {
-      name: "Zepto",
-      logo: "⚡",
-      category: "Quick Commerce",
-      ats: "Internal / Greenhouse",
-      portalUrl: "https://www.zeptonow.com/careers",
-      searchQuery: "Zepto",
-      desc: "10-minute dark store time-series forecasting, rider routing optimization, stock perishability modeling, and inventory replenishment."
-    },
-    {
-      name: "Delhivery",
-      logo: "🚚",
-      category: "Logistics & Network Optimization",
-      ats: "Internal ATS",
-      portalUrl: "https://www.delhivery.com/careers",
-      searchQuery: "Delhivery",
-      desc: "Automated linehaul routing, automated sortation dispatch algorithms, package volume forecasting, and network optimization."
-    },
-    {
-      name: "InMobi",
-      logo: "🌐",
-      category: "AdTech & Operations Research",
-      ats: "Greenhouse",
-      portalUrl: "https://www.inmobi.com/company/careers",
-      searchQuery: "InMobi",
-      desc: "Real-time programmatic ad bidding algorithms, user lifetime value prediction, and audience segmentation graph models."
-    },
-    {
-      name: "Postman",
-      logo: "🚀",
-      category: "Developer Tools / SaaS",
-      ats: "Greenhouse",
-      portalUrl: "https://www.postman.com/company/careers/",
-      searchQuery: "Postman",
-      desc: "API collaboration telemetry, developer behavior analytics, automated testing infrastructure, and generative API intelligence."
-    },
-    {
-      name: "Atlan",
-      logo: "🧭",
-      category: "Modern Data Fabric",
-      ats: "Ashby",
-      portalUrl: "https://atlan.com/careers/",
-      searchQuery: "Atlan",
-      desc: "Modern active metadata platform, column-level data lineage parsing, automated data governance, and data cataloging."
-    },
-    {
-      name: "Tiger Analytics",
-      logo: "🐅",
-      category: "Applied AI Consulting",
-      ats: "Internal / Workday",
-      portalUrl: "https://www.tigeranalytics.com/careers/",
-      searchQuery: "Tiger Analytics",
-      desc: "Enterprise AI solutions, dynamic pricing, customer journey analytics, and predictive maintenance for Fortune 500s."
-    },
-    {
-      name: "Mu Sigma",
-      logo: "📊",
-      category: "Decision Sciences Consulting",
-      ats: "Internal Portal",
-      portalUrl: "https://www.mu-sigma.com/careers/",
-      searchQuery: "Mu Sigma",
-      desc: "Pioneering decision science, quantitative business modeling, hypothesis testing, and enterprise optimization."
-    },
-    {
-      name: "Fractal Analytics",
-      logo: "🧠",
-      category: "Enterprise AI",
-      ats: "SmartRecruiters",
-      portalUrl: "https://fractal.ai/careers/",
-      searchQuery: "Fractal Analytics",
-      desc: "Eugenie.ai, Senseforth generative AI, retail forecasting models, behavioral architecture, and healthcare intelligence."
-    },
-    {
-      name: "Paytm",
-      logo: "💳",
-      category: "Fintech & Payments",
-      ats: "Lever",
-      portalUrl: "https://paytm.com/careers/",
-      searchQuery: "Paytm",
-      desc: "Merchant soundbox telemetry, payment gateway transactions, micro-lending risk scoring, and transit card networks."
-    },
-    {
-      name: "Slice",
-      logo: "🍕",
-      category: "Fintech & Banking",
-      ats: "Greenhouse",
-      portalUrl: "https://slice.careers/",
-      searchQuery: "Slice",
-      desc: "Digital banking, credit card fraud prevention, real-time UPI credit underwriting, and consumer financial habits."
-    },
-    {
-      name: "Navi",
-      logo: "🏦",
-      category: "Digital Lending & Insurance",
-      ats: "Ashby",
-      portalUrl: "https://navi.com/careers",
-      searchQuery: "Navi",
-      desc: "Paperless personal loans, home loans, health insurance risk calculation, and automated claims settlement."
-    },
-    {
-      name: "Tata 1mg",
-      logo: "💊",
-      category: "HealthTech / E-Pharmacy",
-      ats: "Internal Portal",
-      portalUrl: "https://www.1mg.com/careers",
-      searchQuery: "Tata 1mg",
-      desc: "Diagnostic lab test dispatch, prescription OCR parsing, medical catalog search, and healthcare logistics."
-    },
-    {
-      name: "Sarvam AI",
-      logo: "✨",
-      category: "Indic Foundation Models",
-      ats: "Direct Careers",
-      portalUrl: "https://www.sarvam.ai/careers",
-      searchQuery: "Sarvam AI",
-      desc: "Multimodal Indic LLMs, acoustic voice speech-to-text models, Indic language reasoning, and Indian AI infrastructure."
+  function getCompanyJobUrl(job) {
+    if (!job || job.is_post) return '';
+    if (job.source_type === 'Official Company Portal' && job.company_job_verified !== true) return '';
+    for (const candidate of [job.direct_job_url, job.url]) {
+      try {
+        const parsed = new URL(candidate);
+        if (!['https:', 'http:'].includes(parsed.protocol)) continue;
+        const host = parsed.hostname.toLowerCase();
+        const path = parsed.pathname.replace(/\/$/, '');
+        const patterns = [
+          ['greenhouse.io', /^\/[^/]+\/jobs\/\d+(?:\/.*)?$/i],
+          ['lever.co', /^\/[^/]+\/[0-9a-f-]{36}(?:\/apply)?$/i],
+          ['ashbyhq.com', /^\/[^/]+\/[0-9a-f-]{36}(?:\/application)?$/i],
+          ['smartrecruiters.com', /^\/[^/]+\/\d+[^/]*$/i],
+          ['myworkdayjobs.com', /^\/.*\/job\/.+\/.+$/i]
+        ];
+        if (patterns.some(([domain, pattern]) =>
+          (host === domain || host.endsWith('.' + domain)) && pattern.test(path))) return candidate;
+      } catch (e) {}
     }
-  ];
+    return '';
+  }
 
-  function isCompanySiteJob(j) {
-    if (!j) return false;
-    const src = (j.source_domain || '').toLowerCase();
-    const url = (j.url || '').toLowerCase();
-    const stype = (j.source_type || '').toLowerCase();
-    if (stype.includes('company') || stype.includes('portal') || stype.includes('ats')) return true;
-    if (url.includes('greenhouse.io') || url.includes('lever.co') || url.includes('ashbyhq.com') || 
-        url.includes('smartrecruiters.com') || url.includes('myworkdayjobs.com') || url.includes('careers.') ||
-        url.includes('/careers/') || url.includes('/careers')) return true;
-    if (!src.includes('linkedin.com') && !src.includes('unstop.com') && !j.is_post) return true;
-    return false;
+  function isCompanySiteJob(job) {
+    if (!getCompanyJobUrl(job) || !isZeroExpJob(job)) return false;
+    const age = job.hours_ago;
+    if (typeof age !== 'number' || age < 0 || age > 120) return false;
+    const title = (job.title || '').toLowerCase();
+    const roles = [...(profile.target_roles || []),
+      ...(profile.role_mapping || []).flatMap(tier => tier.roles || [])];
+    return roles.some(role => title.includes(role.toLowerCase()));
   }
 
   function renderCompanySites() {
@@ -3358,7 +3189,7 @@ Best regards,
           <div class="empty-state" style="display:block; grid-column: 1 / -1; padding: 2.5rem; text-align: center;">
             <span class="empty-icon">🏢</span>
             <h3>No direct company site openings match your search</h3>
-            <p>Try selecting "All Company Sites" or clearing your search keywords.</p>
+            <p>No matching requisitions are available in this feed. Refresh after the next sync, or adjust your company and role search.</p>
           </div>
         `;
       } else {
@@ -3372,9 +3203,9 @@ Best regards,
           const freshness = getJobFreshness(job);
           const freshnessPill = freshness.isMinute
             ? `<span class="freshness-minute-badge"><span class="live-pulse-dot"></span> ⚡ Just Now (${freshness.label})</span>`
-            : `<span class="freshness-badge">⚡ Posted ${freshness.label}</span>`;
+            : `<span class="freshness-badge">⚡ ${job.posted_at_source === "updated_at" ? "Updated" : "Posted"} ${freshness.label}</span>`;
 
-          const targetUrl = resolveJobTargetUrl(job);
+          const targetUrl = getCompanyJobUrl(job);
           const isSaved = isJobSaved(job.id || job.url);
           const saveBtnClass = isSaved ? "btn-save-job saved" : "btn-save-job";
           const saveBtnText = isSaved ? "★ Saved" : "☆ Save";
@@ -3385,9 +3216,6 @@ Best regards,
           else if (uLow.includes("lever.co")) atsTag = "🏢 Lever ATS";
           else if (uLow.includes("ashbyhq.com")) atsTag = "🏢 Ashby ATS";
           else if (uLow.includes("smartrecruiters.com")) atsTag = "🏢 SmartRecruiters";
-
-          const companyQuery = encodeURIComponent(`${job.company} fresher hiring`.trim());
-          const activeSearchUrl = `https://www.linkedin.com/jobs/search/?keywords=${companyQuery}&location=India&f_TPR=r604800`;
 
           return `
             <div class="job-card" data-job-id="${escapeHTML(job.id || job.url)}">
@@ -3411,7 +3239,7 @@ Best regards,
                 <div class="job-meta">
                   <span class="meta-item">📍 ${escapeHTML(job.location || 'India')}</span>
                   <span class="meta-item">💼 Direct Company ATS</span>
-                  <span class="meta-item fresher-pill" style="color: #10b981; font-weight:700;">✓ 0 Yrs Exp</span>
+                  <span class="meta-item fresher-pill" style="color: #10b981; font-weight:700;">✓ Fresher Match</span>
                 </div>
                 <div class="job-skills-matched">
                   ${matchedTags || '<span class="skill-tag matched">✓ Direct Application</span>'}
@@ -3421,10 +3249,7 @@ Best regards,
 
               <div class="job-card-footer">
                 <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-direct-portal" style="flex:1; justify-content:center;">
-                  <span>🚀 Apply on Company Site ↗</span>
-                </a>
-                <a href="${activeSearchUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="Search all live openings at ${escapeHTML(job.company)}">
-                  <span>🔍 Active Roles ↗</span>
+                  <span>🚀 View Job &amp; Apply ↗</span>
                 </a>
                 <button class="${saveBtnClass}" data-job-id="${escapeHTML(job.id || job.url)}">
                   ${saveBtnText}
@@ -3439,7 +3264,7 @@ Best regards,
           btn.addEventListener("click", e => {
             e.stopPropagation();
             const jobId = btn.getAttribute("data-job-id");
-            toggleJobSave(jobId);
+            toggleSavedJob(jobId);
             const nowSaved = isJobSaved(jobId);
             btn.className = nowSaved ? "btn-save-job saved" : "btn-save-job";
             btn.textContent = nowSaved ? "★ Saved" : "☆ Save";
@@ -3449,35 +3274,6 @@ Best regards,
       }
     }
 
-    // 3. Render Official Portals Directory
-    if (companyPortalsGrid && companyPortalsGrid.children.length === 0) {
-      companyPortalsGrid.innerHTML = COMPANY_PORTALS_DATA.map(c => {
-        const fresherSearch = `https://www.linkedin.com/jobs/search/?keywords=${encodeURIComponent(c.searchQuery + " fresher")}&location=India&f_TPR=r604800`;
-        return `
-          <div class="company-portal-card">
-            <div>
-              <div class="portal-card-header">
-                <span class="portal-logo-icon">${c.logo}</span>
-                <div>
-                  <div class="portal-company-name">${escapeHTML(c.name)}</div>
-                  <div class="portal-category-tag">${escapeHTML(c.category)}</div>
-                </div>
-              </div>
-              <div class="portal-ats-pill">⚡ ${escapeHTML(c.ats)}</div>
-              <p class="portal-desc">${escapeHTML(c.desc)}</p>
-            </div>
-            <div class="portal-card-actions">
-              <a href="${escapeHTML(c.portalUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                <span>🌐 Visit Careers ↗</span>
-              </a>
-              <a href="${fresherSearch}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="View 0-year fresher openings for ${escapeHTML(c.name)}">
-                <span>🔍 Fresher Roles ↗</span>
-              </a>
-            </div>
-          </div>
-        `;
-      }).join("");
-    }
   }
 
   // Hook up Company Sites Search Input & Ecosystem Filter Chips

@@ -82,7 +82,10 @@ def run_hourly_sync():
 
     # Keep valid existing jobs, strictly purging any pseudo-jobs, search redirects, or expired deadlines
     valid_existing = []
+    from collectors.company_pages import is_unverified_company_job
     for job in data.get("jobs", []):
+        if is_unverified_company_job(job):
+            continue
         t = (job.get("title") or "").strip()
         c = (job.get("company") or "").strip()
         u = (job.get("url") or job.get("linkedin_url") or "").strip()

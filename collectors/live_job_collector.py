@@ -1042,6 +1042,7 @@ def collect_and_score_all_live_jobs(
             "company_url": raw.get("company_url") or raw["url"],
             "source_type": raw["source_type"],
             "source_domain": raw["source_domain"],
+            "company_job_verified": raw.get("company_job_verified", False),
             "job_publisher": raw.get("job_publisher"),
             "location_unverified": raw.get("location_unverified", False),
             "is_fresher": True,

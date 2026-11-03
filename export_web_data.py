@@ -5,6 +5,7 @@ import os
 import datetime
 from collectors.live_job_collector import collect_and_score_all_live_jobs
 from matching.scoring import score_job
+from collectors.company_pages import is_unverified_company_job
 from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url, build_multi_source_urls
 
 def export_data():
@@ -44,6 +45,8 @@ def export_data():
     detailed_jobs = []
 
     for raw in all_raw_jobs:
+        if is_unverified_company_job(raw):
+            continue
         title = raw.get("title", "Specialist")
         company = raw.get("company", "Tech Company")
         loc = raw.get("location", "Bengaluru, Karnataka, India")
@@ -126,6 +129,7 @@ def export_data():
             "relative_time": raw.get("relative_time") or rel_time,
             "source_type": raw.get("source_type") or scored.get("platform") or "Official Portal",
             "source_domain": source_domain or "Company Website",
+            "company_job_verified": raw.get("company_job_verified", False),
             "is_fresher": scored.get("is_fresher", True),
             "is_internship": is_internship,
             "multi_source_urls": build_multi_source_urls(title, company),
