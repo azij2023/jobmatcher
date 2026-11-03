@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261102_v14">
+  <link rel="stylesheet" href="styles.css?v=20261103_applied1">
   <script>
     (function() {
       try {
@@ -40,6 +40,9 @@
         </button>
         <button class="nav-tab" data-tab="internships" id="tab-btn-internships">
           <span class="tab-icon">🎓</span> Internships (<span id="nav-intern-count">0</span>)
+        </button>
+        <button class="nav-tab" data-tab="applied" id="tab-btn-applied">
+          <span class="tab-icon">✓</span> Applied Jobs (<span id="nav-applied-count">0</span>)
         </button>
         <button class="nav-tab" data-tab="company-sites" id="tab-btn-company-sites">
           <span class="tab-icon">🏢</span> Company Sites (<span id="nav-company-sites-count">0</span>)
@@ -458,6 +461,22 @@
           <!-- Dynamically populated by renderCompanySites() in app.js -->
         </div>
 
+      </div>
+    </section>
+
+    <section class="tab-content" id="view-applied">
+      <div class="section-card">
+        <div class="section-header"><div>
+          <h2 class="section-title">Applied Jobs</h2>
+          <p class="section-desc">Keep track of jobs you have already applied for. These roles are hidden from your available jobs and stay here even after they leave the live feed.</p>
+          <p class="applied-storage-note">Saved in this browser on this device.</p>
+        </div></div>
+        <div class="applied-jobs-toolbar">
+          <label for="applied-jobs-search">Search applied jobs</label>
+          <input type="search" id="applied-jobs-search" placeholder="Job title, company or location" autocomplete="off">
+          <span id="applied-jobs-count" role="status" aria-live="polite">0 applied jobs</span>
+        </div>
+        <div class="jobs-grid" id="applied-jobs-grid"></div>
       </div>
     </section>
 
@@ -1248,6 +1267,7 @@
       </div>
 
       <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-mark-applied" id="modal-mark-applied">✓ Mark as Applied</button>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" id="modal-apply-linkedin">
           <span>💼 Apply on LinkedIn (Past 24h & Fresher) ↗</span>
         </a>
@@ -1269,6 +1289,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261102_v14"></script>
+  <script src="app.js?v=20261103_applied1"></script>
 </body>
 </html>

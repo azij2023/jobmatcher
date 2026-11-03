@@ -70,6 +70,77 @@ document.addEventListener("DOMContentLoaded", () => {
     return isSavedNow;
   }
 
+  // Applied jobs retain a snapshot even after they leave the live feed.
+  const APPLIED_STORAGE_KEY = 'targetmatch_applied_jobs';
+  let appliedJobs = readAppliedJobs();
+
+  function getAppliedJobKey(job) {
+    const original = getJobId(job);
+    try {
+      const url = new URL(original);
+      for (const key of [...url.searchParams.keys()]) {
+        if (/^utm_/i.test(key) || ['trackingId', 'refId', 'gh_src', 'source', 'ref'].includes(key)) {
+          url.searchParams.delete(key);
+        }
+      }
+      return url.href.replace(/\/$/, '');
+    } catch (error) {
+      return original;
+    }
+  }
+
+  function readAppliedJobs() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(APPLIED_STORAGE_KEY) || '[]');
+      if (!Array.isArray(stored)) return [];
+      const unique = new Map();
+      for (const job of stored) {
+        if (!job || typeof job.title !== 'string' || typeof job.company !== 'string' || typeof job.url !== 'string' || !job.url.trim()) continue;
+        unique.set(getAppliedJobKey(job), job);
+      }
+      return [...unique.values()];
+    } catch (error) {
+      return [];
+    }
+  }
+
+  function isJobApplied(job) {
+    const key = getAppliedJobKey(job);
+    return appliedJobs.some(applied => getAppliedJobKey(applied) === key);
+  }
+
+  function getAvailableSavedJobIds() {
+    return getSavedJobIds().filter(url => !isJobApplied({ url }));
+  }
+
+  function storeAppliedJobs(next) {
+    try {
+      localStorage.setItem(APPLIED_STORAGE_KEY, JSON.stringify(next));
+      appliedJobs = next;
+      return true;
+    } catch (error) {
+      showToast('Could not save your applied jobs. Check browser storage and try again.');
+      return false;
+    }
+  }
+
+  function markJobApplied(job) {
+    if (!job || isJobApplied(job)) return false;
+    const snapshot = {
+      title: job.title, company: job.company, location: job.location,
+      url: job.url || job.direct_job_url, direct_job_url: job.direct_job_url,
+      applied_url: resolveJobTargetUrl(job), tier: job.tier, category: job.category,
+      description: job.description || '', is_internship: isInternshipJob(job),
+      applied_at: new Date().toISOString()
+    };
+    return storeAppliedJobs([snapshot, ...appliedJobs]);
+  }
+
+  function restoreAppliedJob(key) {
+    const next = appliedJobs.filter(job => getAppliedJobKey(job) !== key);
+    return next.length !== appliedJobs.length && storeAppliedJobs(next);
+  }
+
   // DOM Elements
   const jobsGrid = document.getElementById("jobs-grid");
   const emptyState = document.getElementById("empty-state");
@@ -250,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
 
   function updateShortlistStats() {
-    const savedCount = getSavedJobIds().length;
+    const savedCount = getAvailableSavedJobIds().length;
     const statSavedEl = document.getElementById("stat-saved-val");
     if (statSavedEl) statSavedEl.textContent = savedCount;
     const countSavedEl = document.getElementById("count-saved");
@@ -258,12 +329,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function initStats() {
-    const fullTimeJobsCount = jobs.filter(j => !isInternshipJob(j)).length;
-    const internshipJobsCount = jobs.filter(isInternshipJob).length;
-    const primaryCount = jobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4, 5, 6, 7].includes(j.tier)).length;
-    const portalCount = jobs.filter(isCompanyPortalJob).length;
-    const unstopCount = jobs.filter(isUnstopJob).length;
-    const savedCount = getSavedJobIds().length;
+    const availableJobs = jobs.filter(job => !isJobApplied(job));
+    const fullTimeJobsCount = availableJobs.filter(j => !isInternshipJob(j)).length;
+    const internshipJobsCount = availableJobs.filter(isInternshipJob).length;
+    const primaryCount = availableJobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4, 5, 6, 7].includes(j.tier)).length;
+    const portalCount = availableJobs.filter(isCompanyPortalJob).length;
+    const unstopCount = availableJobs.filter(isUnstopJob).length;
+    const savedCount = getAvailableSavedJobIds().length;
 
     const statFullJobsEl = document.getElementById("stat-full-jobs-val");
     const statInternshipsEl = document.getElementById("stat-internships-val");
@@ -280,7 +352,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (statUnstopEl) statUnstopEl.textContent = unstopCount;
     if (statSavedEl) statSavedEl.textContent = savedCount;
 
-    const validScores = jobs.map(j => j.score || 0).filter(s => typeof s === "number");
+    const validScores = availableJobs.map(j => j.score || 0).filter(s => typeof s === "number");
     const topScore = validScores.length > 0 ? Math.max(...validScores) : 0;
     if (statAvgScoreEl) statAvgScoreEl.textContent = `${Math.round(topScore * 100)}%`;
 
@@ -294,13 +366,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const segAllEl = document.getElementById("segment-count-all");
     if (segJobsEl) segJobsEl.textContent = fullTimeJobsCount;
     if (segInternEl) segInternEl.textContent = internshipJobsCount;
-    if (segAllEl) segAllEl.textContent = jobs.length;
+    if (segAllEl) segAllEl.textContent = availableJobs.length;
 
     updateFilterPillCounts();
   }
 
   function updateFilterPillCounts() {
-    const savedIds = getSavedJobIds();
+    const availableJobs = jobs.filter(job => !isJobApplied(job));
+    const savedIds = getAvailableSavedJobIds();
     const countAllEl = document.getElementById("count-all");
     const countCompanyEl = document.getElementById("count-company");
     const countUnstopEl = document.getElementById("count-unstop");
@@ -313,21 +386,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const countMleEl = document.getElementById("count-mle");
     const count24hEl = document.getElementById("count-24h");
 
-    if (countAllEl) countAllEl.textContent = jobs.length;
-    if (countZeroExpEl) countZeroExpEl.textContent = jobs.filter(isZeroExpJob).length;
-    if (countCompanyEl) countCompanyEl.textContent = jobs.filter(isCompanyPortalJob).length;
-    if (countUnstopEl) countUnstopEl.textContent = jobs.filter(isUnstopJob).length;
+    if (countAllEl) countAllEl.textContent = availableJobs.length;
+    if (countZeroExpEl) countZeroExpEl.textContent = availableJobs.filter(isZeroExpJob).length;
+    if (countCompanyEl) countCompanyEl.textContent = availableJobs.filter(isCompanyPortalJob).length;
+    if (countUnstopEl) countUnstopEl.textContent = availableJobs.filter(isUnstopJob).length;
     if (countSavedEl) countSavedEl.textContent = savedIds.length;
-    if (countAsEl) countAsEl.textContent = jobs.filter(j => j.tier === 1).length;
-    if (countDsEl) countDsEl.textContent = jobs.filter(j => j.tier === 2).length;
-    if (countDecEl) countDecEl.textContent = jobs.filter(j => j.tier === 3).length;
-    if (countOrEl) countOrEl.textContent = jobs.filter(j => j.tier === 4).length;
-    if (countMleEl) countMleEl.textContent = jobs.filter(j => j.tier === 8).length;
-    if (count24hEl) count24hEl.textContent = jobs.filter(j => getJobFreshness(j).hours <= 24).length;
+    if (countAsEl) countAsEl.textContent = availableJobs.filter(j => j.tier === 1).length;
+    if (countDsEl) countDsEl.textContent = availableJobs.filter(j => j.tier === 2).length;
+    if (countDecEl) countDecEl.textContent = availableJobs.filter(j => j.tier === 3).length;
+    if (countOrEl) countOrEl.textContent = availableJobs.filter(j => j.tier === 4).length;
+    if (countMleEl) countMleEl.textContent = availableJobs.filter(j => j.tier === 8).length;
+    if (count24hEl) count24hEl.textContent = availableJobs.filter(j => getJobFreshness(j).hours <= 24).length;
     const countInternEl = document.getElementById("count-internships");
     const countFullJobEl = document.getElementById("count-full-jobs");
-    if (countInternEl) countInternEl.textContent = jobs.filter(isInternshipJob).length;
-    if (countFullJobEl) countFullJobEl.textContent = jobs.filter(j => !isInternshipJob(j)).length;
+    if (countInternEl) countInternEl.textContent = availableJobs.filter(isInternshipJob).length;
+    if (countFullJobEl) countFullJobEl.textContent = availableJobs.filter(j => !isInternshipJob(j)).length;
   }
 
   // ==========================================================================
@@ -555,6 +628,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderJobs() {
     let filtered = jobs.filter(job => {
+      if (isJobApplied(job)) return false;
       // Shortlist filter
       if (currentFilter.onlySaved) {
         const jId = getJobId(job);
@@ -1034,6 +1108,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
+            <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
             <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Direct application link for ${escapeHTML(job.title)} at ${escapeHTML(job.company)}">
               <span>${applyBtnText}</span>
             </a>
@@ -1103,7 +1178,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".job-card").forEach(card => {
       card.addEventListener("click", (e) => {
         // Prevent opening if clicking an <a> tag, copy button, or bookmark star
-        if (e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn")) return;
+        if (e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn") || e.target.closest("[data-mark-applied]") || e.target.closest("[data-restore-applied]")) return;
         const cardId = card.id;
         const found = jobs.find(j => cardId.includes((j.company || '').replace(/\s+/g, '-').toLowerCase()));
         if (found) openJobModal(found);
@@ -1307,6 +1382,12 @@ document.addEventListener("DOMContentLoaded", () => {
           : `🏢 Apply to Exact Post ↗`;
     modalApplyLinkedin.href = modalTargetUrl;
     modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalUnstop ? "btn btn-primary btn-unstop" : (isModalAts ? "btn btn-primary btn-ats" : "btn btn-primary btn-direct-portal"));
+    const appliedButton = document.getElementById('modal-mark-applied');
+    if (appliedButton) {
+      appliedButton.setAttribute('data-mark-applied', getJobId(job));
+      appliedButton.disabled = isJobApplied(job);
+      appliedButton.textContent = isJobApplied(job) ? '✓ Applied' : '✓ Mark as Applied';
+    }
     modalApplyLinkedin.title = `Direct application link for ${job.title} at ${job.company}`;
     // Populate Cross-Platform Application Hub in Modal
     const multiGrid = document.getElementById("modal-multi-source-grid");
@@ -3020,7 +3101,7 @@ Best regards,
   // Render Curated Feed Section
   function renderCuratedFeed() {
     if (!curatedFeedGrid) return;
-    const postJobs = jobs.filter(j => j.is_post || j.source_type === "LinkedIn Post");
+    const postJobs = jobs.filter(j => !isJobApplied(j) && (j.is_post || j.source_type === "LinkedIn Post"));
     if (postJobs.length === 0) {
       curatedFeedGrid.innerHTML = `<p style="color:var(--text-dim)">No curated LinkedIn feed posts found.</p>`;
       return;
@@ -3148,7 +3229,7 @@ Best regards,
 
   function renderCompanySites() {
     // 1. Filter company site jobs
-    const allCompanyJobs = jobs.filter(isCompanySiteJob);
+    const allCompanyJobs = jobs.filter(job => !isJobApplied(job) && isCompanySiteJob(job));
 
     // Update global counters
     if (navCompanySitesCount) navCompanySitesCount.textContent = allCompanyJobs.length;
@@ -3246,6 +3327,7 @@ Best regards,
               </div>
 
               <div class="job-card-footer">
+                <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
                 <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-direct-portal" style="flex:1; justify-content:center;">
                   <span>🚀 View Job &amp; Apply ↗</span>
                 </a>
@@ -3303,6 +3385,85 @@ Best regards,
   // 12. Hourly Auto-Sync & Live Refresh Engine
   // ==========================================================================
 
+  function renderAppliedJobs() {
+    const grid = document.getElementById('applied-jobs-grid');
+    const navCount = document.getElementById('nav-applied-count');
+    if (navCount) navCount.textContent = appliedJobs.length;
+    if (!grid) return;
+    const query = (document.getElementById('applied-jobs-search')?.value || '').trim().toLowerCase();
+    const filtered = appliedJobs.filter(job => `${job.title} ${job.company} ${job.location || ''}`.toLowerCase().includes(query))
+      .sort((a, b) => (Date.parse(b.applied_at) || 0) - (Date.parse(a.applied_at) || 0));
+    const count = document.getElementById('applied-jobs-count');
+    if (count) count.textContent = `${filtered.length} of ${appliedJobs.length} applied jobs`;
+    if (!filtered.length) {
+      grid.innerHTML = `<div class="empty-state applied-empty-state"><h3>${query ? 'No applied jobs match your search' : 'No applied jobs yet'}</h3><p>${query ? 'Try another company or job title.' : 'After applying, choose Mark as Applied on a job card to move it here.'}</p></div>`;
+      return;
+    }
+    grid.innerHTML = filtered.map(job => {
+      let target = '';
+      try {
+        const url = new URL(job.applied_url || job.direct_job_url || job.url);
+        if (['https:', 'http:'].includes(url.protocol)) target = url.href;
+      } catch (error) {}
+      const appliedAt = Date.parse(job.applied_at);
+      const date = Number.isFinite(appliedAt) ? new Date(appliedAt).toLocaleString() : 'Date not recorded';
+      return `<article class="job-card applied-job-card">
+        <div>
+          <span class="applied-status-badge">✓ Applied</span>
+          <h3 class="job-title">${escapeHTML(job.title)}</h3>
+          <div class="job-company-loc"><span class="job-company">${escapeHTML(job.company)}</span><span class="job-location">${escapeHTML(job.location || '')}</span></div>
+          <p class="applied-date">Marked applied: ${escapeHTML(date)}</p>
+          <p class="job-description">${escapeHTML(job.description || '')}</p>
+        </div>
+        <div class="card-actions">
+          ${target ? `<a class="btn btn-primary" href="${escapeHTML(target)}" target="_blank" rel="noopener noreferrer">View Job ↗</a>` : ''}
+          <button type="button" class="btn btn-secondary" data-restore-applied="${escapeHTML(getAppliedJobKey(job))}">Move Back to Jobs</button>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+  function refreshApplicationViews() {
+    currentPage = 1;
+    initStats();
+    updateShortlistStats();
+    renderJobs();
+    renderCompanySites();
+    renderCuratedFeed();
+    renderAppliedJobs();
+  }
+
+  document.addEventListener('click', event => {
+    const mark = event.target.closest('[data-mark-applied]');
+    const restore = event.target.closest('[data-restore-applied]');
+    if (!mark && !restore) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (mark) {
+      const job = jobs.find(candidate => getJobId(candidate) === mark.getAttribute('data-mark-applied'));
+      if (markJobApplied(job)) {
+        closeJobModal();
+        refreshApplicationViews();
+        showToast('Moved to Applied Jobs.');
+      }
+    } else {
+      const key = restore.getAttribute('data-restore-applied');
+      if (restoreAppliedJob(key)) {
+        refreshApplicationViews();
+        const inFeed = jobs.some(job => getAppliedJobKey(job) === key);
+        showToast(inFeed ? 'Moved back to available jobs.' : 'Removed from Applied Jobs. This role is no longer in the live feed.');
+      }
+    }
+  });
+
+  document.getElementById('applied-jobs-search')?.addEventListener('input', renderAppliedJobs);
+  window.addEventListener('storage', event => {
+    if (event.key === APPLIED_STORAGE_KEY || event.key === null) {
+      appliedJobs = readAppliedJobs();
+      refreshApplicationViews();
+    }
+  });
+
   let refreshInFlight = false;
 
   function chooseLatestFeed(feeds) {
@@ -3359,6 +3520,7 @@ Best regards,
     renderJobs();
     renderCuratedFeed();
     renderCompanySites();
+    renderAppliedJobs();
     updateFeedStatus();
   }
 
@@ -3435,6 +3597,7 @@ Best regards,
         renderCompanySites();
   // Immediately re-validate data.json with zero cache on startup
   setTimeout(() => { refreshJobsLive(true); }, 50);
+  renderAppliedJobs();
   updateFeedStatus();
   setupRealtimeLiveStream();
 });

@@ -15,7 +15,7 @@ async function check(file) {
     document: { querySelectorAll: () => [] }, escapeHTML: value => value,
     navRefreshBtn: null, navRefreshIcon: null, navRefreshLabel: null,
     hasVerifiedPublicationTime: () => true, mergeSavedCustomJobs() {}, initStats() {}, updateFilterPillCounts() {},
-    renderJobs() {}, renderCuratedFeed() {}, renderCompanySites() {}, showToast() {}, console,
+    renderJobs() {}, renderCuratedFeed() {}, renderCompanySites() {}, renderAppliedJobs() {}, showToast() {}, console,
     fetch: async endpoint => {
       calls.push(endpoint);
       return { ok: true, json: async () => endpoint.includes('/api/jobs') ? latest : old };

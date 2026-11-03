@@ -4202,3 +4202,32 @@ input[type="range"] {
   text-align: center;
   justify-content: center;
 }
+
+
+/* Applied job tracking */
+.nav-tabs { min-width: 0; flex: 1 1 auto; overflow-x: auto; }
+.nav-tab { flex-shrink: 0; white-space: nowrap; }
+.btn-mark-applied { white-space: nowrap; }
+.applied-status-badge {
+  display: inline-flex;
+  margin-bottom: 0.8rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-full);
+  color: var(--text-main);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.applied-date, .applied-storage-note { color: var(--text-muted); font-size: 0.85rem; margin: 0.65rem 0; }
+.applied-jobs-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin: 1rem 0 1.5rem; }
+.applied-jobs-toolbar label { font-weight: 600; }
+.applied-jobs-toolbar input {
+  flex: 1; min-width: 12rem; padding: 0.7rem 0.9rem;
+  border: 1px solid var(--border-color); border-radius: var(--radius-md);
+  background: var(--bg-secondary); color: var(--text-main); font: inherit;
+}
+.applied-jobs-toolbar input:focus-visible { outline: 2px solid var(--brand-primary); outline-offset: 2px; }
+.applied-jobs-toolbar [role="status"] { color: var(--text-muted); font-size: 0.85rem; }
+.applied-empty-state { display: block; grid-column: 1 / -1; }
+.card-actions:has(.btn-mark-applied), .job-card-footer:has(.btn-mark-applied), .applied-job-card .card-actions { flex-wrap: wrap; }
