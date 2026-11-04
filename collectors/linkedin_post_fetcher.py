@@ -156,7 +156,7 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
         f"Best regards,\n[Your Name]"
     )
 
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(datetime.timezone.utc)
 
     # 8. Detect relative time (e.g. "17 hours ago", "2 days ago", "17h ago")
     detected_hours_ago = 2
@@ -172,7 +172,7 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
             detected_hours_ago = val * 168
             detected_relative_time = f"{val} weeks ago"
         elif unit.startswith('m'):
-            detected_hours_ago = max(1, round(val / 60))
+            detected_hours_ago = val / 60
             detected_relative_time = f"{val} minutes ago"
         else:
             detected_hours_ago = val
@@ -204,7 +204,7 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
         "missing_skills": [],
         "hours_ago": detected_hours_ago,
         "relative_time": detected_relative_time,
-        "posted_at": (now - datetime.timedelta(hours=detected_hours_ago)).strftime("%Y-%m-%d %H:%M"),
+        "posted_at": (now - datetime.timedelta(hours=detected_hours_ago)).isoformat(timespec="seconds").replace("+00:00", "Z"),
         "raw_description": clean_text,
         "description": clean_text[:280] + ("..." if len(clean_text) > 280 else ""),
         "outreach_dm": outreach_dm

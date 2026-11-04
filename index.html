@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261103_applied1">
+  <link rel="stylesheet" href="styles.css?v=20261104_rejected1">
   <script>
     (function() {
       try {
@@ -43,6 +43,9 @@
         </button>
         <button class="nav-tab" data-tab="applied" id="tab-btn-applied">
           <span class="tab-icon">✓</span> Applied Jobs (<span id="nav-applied-count">0</span>)
+        </button>
+        <button class="nav-tab" data-tab="rejected" id="tab-btn-rejected">
+          Rejected Jobs (<span id="nav-rejected-count">0</span>)
         </button>
         <button class="nav-tab" data-tab="company-sites" id="tab-btn-company-sites">
           <span class="tab-icon">🏢</span> Company Sites (<span id="nav-company-sites-count">0</span>)
@@ -477,6 +480,22 @@
           <span id="applied-jobs-count" role="status" aria-live="polite">0 applied jobs</span>
         </div>
         <div class="jobs-grid" id="applied-jobs-grid"></div>
+      </div>
+    </section>
+
+    <section class="tab-content" id="view-rejected">
+      <div class="section-card">
+        <div class="section-header"><div>
+          <h2 class="section-title">Rejected Jobs</h2>
+          <p class="section-desc">Jobs you reject stay hidden from your available jobs, even after a feed refresh. Move them back anytime.</p>
+          <p class="applied-storage-note">Saved in this browser on this device.</p>
+        </div></div>
+        <div class="applied-jobs-toolbar">
+          <label for="rejected-jobs-search">Search rejected jobs</label>
+          <input type="search" id="rejected-jobs-search" placeholder="Job title, company or location" autocomplete="off">
+          <span id="rejected-jobs-count" role="status" aria-live="polite">0 rejected jobs</span>
+        </div>
+        <div class="jobs-grid" id="rejected-jobs-grid"></div>
       </div>
     </section>
 
@@ -1267,6 +1286,7 @@
       </div>
 
       <div class="modal-footer">
+        <button type="button" class="btn btn-secondary btn-reject-job" id="modal-reject-job">Reject Job</button>
         <button type="button" class="btn btn-secondary btn-mark-applied" id="modal-mark-applied">✓ Mark as Applied</button>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" id="modal-apply-linkedin">
           <span>💼 Apply on LinkedIn (Past 24h & Fresher) ↗</span>
@@ -1289,6 +1309,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261103_applied1"></script>
+  <script src="app.js?v=20261104_rejected1"></script>
 </body>
 </html>

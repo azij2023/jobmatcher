@@ -104,7 +104,7 @@ async def start_hourly_background_sync():
                 await asyncio.to_thread(run_sync_task)
             except Exception as e:
                 print(f"[Hourly Scheduler] Error: {e}")
-            await asyncio.sleep(900)
+            await asyncio.sleep(300)
     app.state.sync_scheduler = asyncio.create_task(hourly_loop())
 
 

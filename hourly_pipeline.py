@@ -2,7 +2,7 @@
 Scheduled Job Fetcher & Pipeline Sync
 TargetMatch AI - Entry-Level Career Engine
 
-Runs every 15 minutes via GitHub Actions and the active API scheduler.
+Runs every 5 minutes via GitHub Actions and the active API scheduler.
 Fetches dated entry-level opportunities, recalculates age from source timestamps,
 deduplicates, enriches matches, and synchronizes the web payloads.
 """

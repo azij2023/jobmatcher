@@ -4231,3 +4231,6 @@ input[type="range"] {
 .applied-jobs-toolbar [role="status"] { color: var(--text-muted); font-size: 0.85rem; }
 .applied-empty-state { display: block; grid-column: 1 / -1; }
 .card-actions:has(.btn-mark-applied), .job-card-footer:has(.btn-mark-applied), .applied-job-card .card-actions { flex-wrap: wrap; }
+
+.btn-reject-job { white-space: nowrap; }
+.modal-footer:has(.btn-reject-job) { flex-wrap: wrap; }

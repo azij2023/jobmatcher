@@ -21,7 +21,8 @@ async function check(file) {
       return { ok: true, json: async () => endpoint.includes('/api/jobs') ? latest : old };
     }
   });
-  vm.runInContext(helpers, context);
+  const freshness = source.slice(source.indexOf('  function getJobFreshness('), source.indexOf('  const DOMAIN_EXPANSIONS'));
+  vm.runInContext(freshness + helpers, context);
   assert.equal(context.chooseLatestFeed([old, latest]), latest);
   assert.equal(context.chooseLatestFeed([old, latest, empty]), empty);
   assert.equal(context.chooseLatestFeed([{ last_updated: 'invalid', jobs: [] }]), null);

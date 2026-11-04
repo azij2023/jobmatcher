@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getAvailableSavedJobIds() {
-    return getSavedJobIds().filter(url => !isJobApplied({ url }));
+    return getSavedJobIds().filter(url => !isJobApplied({ url }) && !isJobRejected({ url }));
   }
 
   function storeAppliedJobs(next) {
@@ -139,6 +139,52 @@ document.addEventListener("DOMContentLoaded", () => {
   function restoreAppliedJob(key) {
     const next = appliedJobs.filter(job => getAppliedJobKey(job) !== key);
     return next.length !== appliedJobs.length && storeAppliedJobs(next);
+  }
+
+  // Rejected jobs stay hidden across feed refreshes and can be restored.
+  const REJECTED_STORAGE_KEY = 'targetmatch_rejected_jobs';
+  let rejectedJobs = readRejectedJobs();
+
+  function readRejectedJobs() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(REJECTED_STORAGE_KEY) || '[]');
+      if (!Array.isArray(stored)) return [];
+      const unique = new Map();
+      for (const job of stored) {
+        if (!job || typeof job.title !== 'string' || typeof job.company !== 'string' || typeof job.url !== 'string' || !job.url.trim()) continue;
+        unique.set(getAppliedJobKey(job), job);
+      }
+      return [...unique.values()];
+    } catch (error) { return []; }
+  }
+
+  function isJobRejected(job) {
+    const key = getAppliedJobKey(job);
+    return rejectedJobs.some(rejected => getAppliedJobKey(rejected) === key);
+  }
+
+  function storeRejectedJobs(next) {
+    try {
+      localStorage.setItem(REJECTED_STORAGE_KEY, JSON.stringify(next));
+      rejectedJobs = next;
+      return true;
+    } catch (error) {
+      showToast('Could not save your rejected jobs. Check browser storage and try again.');
+      return false;
+    }
+  }
+
+  function rejectJob(job) {
+    if (!job || isJobRejected(job) || isJobApplied(job)) return false;
+    return storeRejectedJobs([{ title: job.title, company: job.company,
+      location: job.location, url: job.url || job.direct_job_url,
+      direct_job_url: job.direct_job_url, description: job.description || '',
+      rejected_at: new Date().toISOString() }, ...rejectedJobs]);
+  }
+
+  function restoreRejectedJob(key) {
+    const next = rejectedJobs.filter(job => getAppliedJobKey(job) !== key);
+    return next.length !== rejectedJobs.length && storeRejectedJobs(next);
   }
 
   // DOM Elements
@@ -329,7 +375,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function initStats() {
-    const availableJobs = jobs.filter(job => !isJobApplied(job));
+    const availableJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job));
     const fullTimeJobsCount = availableJobs.filter(j => !isInternshipJob(j)).length;
     const internshipJobsCount = availableJobs.filter(isInternshipJob).length;
     const primaryCount = availableJobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4, 5, 6, 7].includes(j.tier)).length;
@@ -372,7 +418,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateFilterPillCounts() {
-    const availableJobs = jobs.filter(job => !isJobApplied(job));
+    const availableJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job));
     const savedIds = getAvailableSavedJobIds();
     const countAllEl = document.getElementById("count-all");
     const countCompanyEl = document.getElementById("count-company");
@@ -628,7 +674,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderJobs() {
     let filtered = jobs.filter(job => {
-      if (isJobApplied(job)) return false;
+      if (isJobApplied(job) || isJobRejected(job)) return false;
       // Shortlist filter
       if (currentFilter.onlySaved) {
         const jId = getJobId(job);
@@ -859,7 +905,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentFilter.onlySaved) {
           emptyDesc.textContent = "Click the ★ star on any job card to bookmark roles you want to save and track.";
         } else if (jobs.length === 0) {
-          emptyDesc.textContent = "Listings appear here after the scheduled feeds return jobs with a source-provided posting date. The feed sync runs every 30 minutes.";
+          emptyDesc.textContent = "Listings appear here after the scheduled feeds return jobs with a source-provided posting date. Collection is scheduled every 5 minutes. New listings depend on source availability.";
         } else if (currentFilter.maxAgeHours <= 24) {
           emptyDesc.textContent = `No jobs found within the past ${currentFilter.maxAgeHours}h window. Try expanding to Anytime or clearing your search.`;
         } else {
@@ -1108,6 +1154,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
 
           <div class="card-actions">
+            <button type="button" class="btn btn-secondary btn-reject-job" data-reject-job="${escapeHTML(getJobId(job))}">Reject Job</button>
             <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
             <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Direct application link for ${escapeHTML(job.title)} at ${escapeHTML(job.company)}">
               <span>${applyBtnText}</span>
@@ -1178,7 +1225,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".job-card").forEach(card => {
       card.addEventListener("click", (e) => {
         // Prevent opening if clicking an <a> tag, copy button, or bookmark star
-        if (e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn") || e.target.closest("[data-mark-applied]") || e.target.closest("[data-restore-applied]")) return;
+        if (e.target.closest("[data-reject-job]") || e.target.closest("[data-restore-rejected]") || e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn") || e.target.closest("[data-mark-applied]") || e.target.closest("[data-restore-applied]")) return;
         const cardId = card.id;
         const found = jobs.find(j => cardId.includes((j.company || '').replace(/\s+/g, '-').toLowerCase()));
         if (found) openJobModal(found);
@@ -1382,6 +1429,8 @@ document.addEventListener("DOMContentLoaded", () => {
           : `🏢 Apply to Exact Post ↗`;
     modalApplyLinkedin.href = modalTargetUrl;
     modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalUnstop ? "btn btn-primary btn-unstop" : (isModalAts ? "btn btn-primary btn-ats" : "btn btn-primary btn-direct-portal"));
+    const rejectButton = document.getElementById('modal-reject-job');
+    if (rejectButton) rejectButton.setAttribute('data-reject-job', getJobId(job));
     const appliedButton = document.getElementById('modal-mark-applied');
     if (appliedButton) {
       appliedButton.setAttribute('data-mark-applied', getJobId(job));
@@ -2724,7 +2773,7 @@ Best regards,
         detectedPostedAt = `${val}w ago`;
         detectedRelativeTime = `${val} weeks ago`;
       } else if (unit.startsWith('m')) {
-        detectedHoursAgo = Math.max(1, Math.round(val / 60));
+        detectedHoursAgo = val / 60;
         detectedPostedAt = `${val}m ago`;
         detectedRelativeTime = `${val} minutes ago`;
       } else {
@@ -3101,7 +3150,7 @@ Best regards,
   // Render Curated Feed Section
   function renderCuratedFeed() {
     if (!curatedFeedGrid) return;
-    const postJobs = jobs.filter(j => !isJobApplied(j) && (j.is_post || j.source_type === "LinkedIn Post"));
+    const postJobs = jobs.filter(j => !isJobApplied(j) && !isJobRejected(j) && (j.is_post || j.source_type === "LinkedIn Post"));
     if (postJobs.length === 0) {
       curatedFeedGrid.innerHTML = `<p style="color:var(--text-dim)">No curated LinkedIn feed posts found.</p>`;
       return;
@@ -3229,7 +3278,7 @@ Best regards,
 
   function renderCompanySites() {
     // 1. Filter company site jobs
-    const allCompanyJobs = jobs.filter(job => !isJobApplied(job) && isCompanySiteJob(job));
+    const allCompanyJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job) && isCompanySiteJob(job));
 
     // Update global counters
     if (navCompanySitesCount) navCompanySitesCount.textContent = allCompanyJobs.length;
@@ -3327,7 +3376,8 @@ Best regards,
               </div>
 
               <div class="job-card-footer">
-                <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
+                <button type="button" class="btn btn-secondary btn-reject-job" data-reject-job="${escapeHTML(getJobId(job))}">Reject Job</button>
+            <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
                 <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-direct-portal" style="flex:1; justify-content:center;">
                   <span>🚀 View Job &amp; Apply ↗</span>
                 </a>
@@ -3423,6 +3473,45 @@ Best regards,
     }).join('');
   }
 
+  function renderRejectedJobs() {
+    const grid = document.getElementById('rejected-jobs-grid');
+    const navCount = document.getElementById('nav-rejected-count');
+    if (navCount) navCount.textContent = rejectedJobs.length;
+    if (!grid) return;
+    const query = (document.getElementById('rejected-jobs-search')?.value || '').trim().toLowerCase();
+    const filtered = rejectedJobs.filter(job => `${job.title} ${job.company} ${job.location || ''}`.toLowerCase().includes(query))
+      .sort((a, b) => (Date.parse(b.rejected_at) || 0) - (Date.parse(a.rejected_at) || 0));
+    const count = document.getElementById('rejected-jobs-count');
+    if (count) count.textContent = `${filtered.length} of ${rejectedJobs.length} rejected jobs`;
+    if (!filtered.length) {
+      grid.innerHTML = `<div class="empty-state applied-empty-state"><h3>${query ? 'No rejected jobs match your search' : 'No rejected jobs yet'}</h3><p>${query ? 'Try another company or job title.' : 'Choose Reject Job on a job card to hide it from your feed. Restore it here anytime.'}</p></div>`;
+      return;
+    }
+    grid.innerHTML = filtered.map(job => {
+      let target = '';
+      try {
+        const url = new URL(job.direct_job_url || job.url);
+        if (['https:', 'http:'].includes(url.protocol)) target = url.href;
+      } catch (error) {}
+      const rejectedAt = Date.parse(job.rejected_at);
+      const date = Number.isFinite(rejectedAt) ? new Date(rejectedAt).toLocaleString() : 'Date not recorded';
+      return `<article class="job-card applied-job-card">
+        <div>
+          <span class="applied-status-badge">Rejected</span>
+          <h3 class="job-title">${escapeHTML(job.title)}</h3>
+          <div class="job-company-loc"><span class="job-company">${escapeHTML(job.company)}</span><span class="job-location">${escapeHTML(job.location || '')}</span></div>
+          <p class="applied-date">Rejected: ${escapeHTML(date)}</p>
+          <p class="job-description">${escapeHTML(job.description || '')}</p>
+        </div>
+        <div class="card-actions">
+          ${target ? `<a class="btn btn-primary" href="${escapeHTML(target)}" target="_blank" rel="noopener noreferrer">View Job ↗</a>` : ''}
+          <button type="button" class="btn btn-secondary" data-restore-rejected="${escapeHTML(getAppliedJobKey(job))}">Move Back to Jobs</button>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
+
   function refreshApplicationViews() {
     currentPage = 1;
     initStats();
@@ -3431,6 +3520,7 @@ Best regards,
     renderCompanySites();
     renderCuratedFeed();
     renderAppliedJobs();
+    renderRejectedJobs();
   }
 
   document.addEventListener('click', event => {
@@ -3460,6 +3550,34 @@ Best regards,
   window.addEventListener('storage', event => {
     if (event.key === APPLIED_STORAGE_KEY || event.key === null) {
       appliedJobs = readAppliedJobs();
+      refreshApplicationViews();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    const reject = event.target.closest('[data-reject-job]');
+    const restore = event.target.closest('[data-restore-rejected]');
+    if (!reject && !restore) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (reject) {
+      const job = jobs.find(candidate => getJobId(candidate) === reject.getAttribute('data-reject-job'));
+      if (!rejectJob(job)) return;
+      closeJobModal();
+      refreshApplicationViews();
+      showToast('Moved to Rejected Jobs. You can restore it there anytime.');
+    } else {
+      const key = restore.getAttribute('data-restore-rejected');
+      if (!restoreRejectedJob(key)) return;
+      refreshApplicationViews();
+      const inFeed = jobs.some(job => getAppliedJobKey(job) === key);
+      showToast(inFeed ? 'Moved back to available jobs.' : 'Removed from Rejected Jobs. This role is no longer in the live feed.');
+    }
+  });
+  document.getElementById('rejected-jobs-search')?.addEventListener('input', renderRejectedJobs);
+  window.addEventListener('storage', event => {
+    if (event.key === REJECTED_STORAGE_KEY || event.key === null) {
+      rejectedJobs = readRejectedJobs();
       refreshApplicationViews();
     }
   });
@@ -3499,12 +3617,17 @@ Best regards,
 
   function updateFeedStatus(message = '') {
     const collected = Date.parse(data.last_updated);
-    const delayed = !Number.isFinite(collected) || Date.now() - collected > 30 * 60 * 1000;
+    const delayed = !Number.isFinite(collected) || Date.now() - collected > 10 * 60 * 1000;
     const timestamp = Number.isFinite(collected) ? new Date(collected).toLocaleString() : 'unavailable';
+    const newest = jobs.reduce((latest, job) => {
+      const freshness = getJobFreshness(job);
+      return freshness.hours < latest.hours ? freshness : latest;
+    }, { hours: Infinity });
+    const newestText = Number.isFinite(newest.hours) ? `Newest listing: ${newest.label}` : 'No dated listings available';
     const collecting = data.sync && ['queued', 'running'].includes(data.sync.status);
     const label = message || (collecting ? 'Collecting jobs' : delayed ? 'Feed delayed' : 'Feed available');
     document.querySelectorAll('.auto-sync-badge').forEach(badge => {
-      badge.innerHTML = `<span class="sync-pulse-dot"></span> <span class="sync-badge-text">${escapeHTML(label)}<span class="sync-time-info"> • Last collection: ${escapeHTML(timestamp)}</span></span>`;
+      badge.innerHTML = `<span class="sync-pulse-dot"></span> <span class="sync-badge-text">${escapeHTML(label)}<span class="sync-time-info"> • Last collection: ${escapeHTML(timestamp)} &bull; ${escapeHTML(newestText)}</span></span>`;
     });
   }
 
@@ -3598,6 +3721,7 @@ Best regards,
   // Immediately re-validate data.json with zero cache on startup
   setTimeout(() => { refreshJobsLive(true); }, 50);
   renderAppliedJobs();
+  renderRejectedJobs();
   updateFeedStatus();
   setupRealtimeLiveStream();
 });
