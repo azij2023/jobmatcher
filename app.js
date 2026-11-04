@@ -731,6 +731,29 @@ document.addEventListener("DOMContentLoaded", () => {
       .filter(t => t.length > 0);
   }
 
+  function updateResultsSummary(totalJobs) {
+    if (bannerJobCount) bannerJobCount.textContent = totalJobs;
+    const role = document.getElementById('banner-role-label');
+    if (role) {
+      role.textContent = currentFilter.roleType === 'jobs'
+        ? (totalJobs === 1 ? 'full-time job' : 'full-time jobs')
+        : currentFilter.roleType === 'internships'
+          ? (totalJobs === 1 ? 'internship or traineeship' : 'internships & traineeships')
+          : (totalJobs === 1 ? 'job or internship' : 'jobs & internships');
+    }
+    if (bannerScopePill) {
+      const hours = currentFilter.maxAgeHours;
+      const amount = hours < 1 ? Math.round(hours * 60) : hours % 24 === 0 ? hours / 24 : hours;
+      const unit = hours < 1 ? 'minute' : hours % 24 === 0 ? 'day' : 'hour';
+      bannerScopePill.textContent = hours >= 9000 ? 'Any time' : `Past ${amount} ${unit}${amount === 1 ? '' : 's'}`;
+    }
+    const caption = document.getElementById('banner-caption');
+    if (caption) {
+      caption.hidden = !currentFilter.search;
+      caption.textContent = currentFilter.search ? `Matching ?${currentFilter.search}?` : '';
+    }
+  }
+
   function renderJobs() {
     let filtered = jobs.filter(job => {
       if (isJobApplied(job) || isJobRejected(job)) return false;
@@ -904,38 +927,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const totalJobs = filtered.length;
 
-    // Update banner & counter elements
-    if (bannerJobCount) bannerJobCount.textContent = totalJobs;
-    const bannerHeadlineEl = document.getElementById("banner-headline");
-    if (bannerHeadlineEl) {
-      const freshnessText = currentFilter.maxAgeHours >= 9000
-        ? "Anytime"
-        : currentFilter.maxAgeHours % 24 === 0
-          ? `${currentFilter.maxAgeHours / 24} Days`
-          : `${currentFilter.maxAgeHours} Hours`;
-      let roleLabel = "Opportunities";
-      if (currentFilter.roleType === "jobs") {
-        roleLabel = "Full-Time Jobs (Internships Separated)";
-      } else if (currentFilter.roleType === "internships") {
-        roleLabel = "Verified Internships & Traineeships";
-      } else {
-        roleLabel = "Roles (Jobs & Internships Combined)";
-      }
-
-      if (currentFilter.search) {
-        bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> ${roleLabel} Matching "${escapeHTML(currentFilter.search)}"`;
-      } else {
-        bannerHeadlineEl.innerHTML = `🎯 Found <span id="banner-job-count" class="highlight-count">${totalJobs}</span> ${roleLabel} Posted Within ${freshnessText}`;
-      }
-    }
-    if (bannerScopePill) {
-      const scopeHrs = currentFilter.maxAgeHours || 120;
-      bannerScopePill.textContent = scopeHrs >= 9000
-        ? '🌐 Anytime (All Jobs)'
-        : scopeHrs % 24 === 0
-          ? `📅 Past ${scopeHrs / 24} days`
-          : `⚡ Past ${scopeHrs} hours`;
-    }
+    updateResultsSummary(totalJobs);
 
     // Render cards
     if (totalJobs === 0) {

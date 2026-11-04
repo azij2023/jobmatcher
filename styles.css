@@ -4407,3 +4407,26 @@ input[type="range"] {
 @media (max-width: 480px) {
   .jobs-grid { grid-template-columns: minmax(0, 1fr); gap: 0.6rem; }
 }
+
+/* One unified page heading and results summary. */
+.hero-section { margin-bottom: 1.5rem; }
+.hero-section .hero-title { font-size: clamp(1.8rem, 3.2vw, 3.25rem); line-height: 1.12; letter-spacing: -0.04em; margin-bottom: 0.8rem; }
+.hero-section .hero-subtitle { max-width: 44rem; margin: 0 auto 1.15rem; font-size: 0.95rem; line-height: 1.65; }
+.hero-section .hero-results-summary {
+  display: inline-flex; flex-direction: column; gap: 0.4rem; max-width: 100%;
+  padding: 0.6rem 1rem; margin: 0;
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: var(--radius-full); box-shadow: var(--shadow-sm);
+}
+.hero-results-summary .banner-headline-row { justify-content: center; gap: 0.85rem; }
+.hero-results-summary .banner-headline { font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; }
+.hero-results-summary .highlight-count { background: transparent; padding: 0; font-size: 1.1rem; }
+.hero-results-summary .banner-pill { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); font-weight: 500; font-size: 0.75rem; padding: 0.25rem 0.65rem; }
+.hero-results-summary .banner-caption { text-align: center; font-size: 0.8rem; overflow-wrap: anywhere; }
+.main-content:not(:has(#view-jobs.active)) .hero-results-summary { display: none; }
+@media (max-width: 480px) {
+  .hero-section .hero-subtitle { font-size: 0.85rem; }
+  .hero-description-break { display: none; }
+  .hero-section .hero-results-summary { border-radius: var(--radius-lg); padding: 0.65rem 0.85rem; }
+  .hero-results-summary .banner-headline-row { gap: 0.5rem; }
+}
