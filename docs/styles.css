@@ -4409,25 +4409,22 @@ input[type="range"] {
 }
 
 /* One unified page heading and results summary. */
-.hero-section { margin-bottom: 0.75rem; }
-.hero-section .hero-title { font-size: clamp(1.4rem, 2.2vw, 2.1rem); line-height: 1.15; letter-spacing: -0.035em; margin-bottom: 0.35rem; }
-.hero-section .hero-subtitle { max-width: 44rem; margin: 0 auto 0.5rem; font-size: 0.8rem; line-height: 1.4; }
+.hero-section { margin-bottom: 1rem; padding: 0.2rem 0 0.35rem; }
+.hero-section .hero-title { font-size: clamp(1.65rem, 2.7vw, 2.5rem); line-height: 1.15; letter-spacing: -0.035em; margin-bottom: 0.55rem; }
 .hero-section .hero-results-summary {
   display: inline-flex; flex-direction: column; gap: 0.4rem; max-width: 100%;
-  padding: 0.35rem 0.7rem; margin: 0;
-  background: var(--bg-card); border: 1px solid var(--border-color);
-  border-radius: var(--radius-full); box-shadow: var(--shadow-sm);
+  padding: 0; margin: 0;
+  background: transparent; border: 0;
+  border-radius: 0; box-shadow: none;
 }
-.hero-results-summary .banner-headline-row { justify-content: center; gap: 0.6rem; }
-.hero-results-summary .banner-headline { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; }
-.hero-results-summary .highlight-count { background: transparent; padding: 0; font-size: 0.95rem; }
+.hero-results-summary .banner-headline-row { justify-content: center; gap: 0.65rem; }
+.hero-results-summary .banner-headline { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; }
+.hero-results-summary .highlight-count { background: transparent; padding: 0; font-size: 1rem; }
 .hero-results-summary .banner-pill { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); font-weight: 500; font-size: 0.7rem; padding: 0.15rem 0.5rem; }
 .hero-results-summary .banner-caption { text-align: center; font-size: 0.8rem; overflow-wrap: anywhere; }
 .main-content:not(:has(#view-jobs.active)) .hero-results-summary { display: none; }
 @media (max-width: 480px) {
-  .hero-section .hero-subtitle { font-size: 0.75rem; }
-  .hero-description-break { display: none; }
-  .hero-section .hero-results-summary { border-radius: var(--radius-lg); padding: 0.35rem 0.6rem; }
+  .hero-section .hero-results-summary { padding: 0; }
   .hero-results-summary .banner-headline-row { gap: 0.5rem; }
 }
 
