@@ -3,6 +3,31 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Collapsible overview sidebar; retain the user's layout preference.
+  const sidebarToggle = document.getElementById('stats-sidebar-toggle');
+  function updateSidebarToggle() {
+    const collapsed = document.documentElement.classList.contains('stats-sidebar-collapsed');
+    if (!sidebarToggle) return;
+    sidebarToggle.setAttribute('aria-expanded', String(!collapsed));
+    sidebarToggle.setAttribute('aria-label', `${collapsed ? 'Expand' : 'Collapse'} overview sidebar`);
+    sidebarToggle.title = `${collapsed ? 'Expand' : 'Collapse'} overview sidebar`;
+    sidebarToggle.querySelector('.stats-sidebar-toggle-text').textContent = collapsed ? 'Expand' : 'Collapse';
+  }
+  if (sidebarToggle) {
+    updateSidebarToggle();
+    sidebarToggle.addEventListener('click', () => {
+      const collapsed = document.documentElement.classList.toggle('stats-sidebar-collapsed');
+      try { localStorage.setItem('targetmatch_sidebar_collapsed', String(collapsed)); } catch (error) {}
+      updateSidebarToggle();
+    });
+  }
+  const navbar = document.getElementById('navbar');
+  if (navbar && typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(() => {
+      document.documentElement.style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
+    }).observe(navbar);
+  }
+
   // 1. Data Initialization
   let data = window.JOB_MATCHER_DATA || window.JOB_DATA || {
     jobs: [],

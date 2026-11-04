@@ -8,12 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261104_rejected1">
+  <link rel="stylesheet" href="styles.css?v=20261104_sidebar1">
   <script>
     (function() {
       try {
         var savedTheme = localStorage.getItem('targetmatch_theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
+        if (localStorage.getItem('targetmatch_sidebar_collapsed') === 'true') {
+          document.documentElement.classList.add('stats-sidebar-collapsed');
+        }
       } catch (e) {}
     })();
   </script>
@@ -85,6 +88,88 @@
   </header>
 
   <!-- Main Content Container -->
+  <div class="dashboard-layout" id="dashboard-layout">
+    <aside class="stats-sidebar" id="stats-sidebar" aria-label="Job overview and quick filters">
+      <div class="stats-sidebar-header">
+        <span class="stats-sidebar-heading">Overview</span>
+        <button type="button" class="stats-sidebar-toggle" id="stats-sidebar-toggle" aria-expanded="true" aria-controls="stats-grid" aria-label="Collapse overview sidebar" title="Collapse overview sidebar">
+          <span class="stats-sidebar-toggle-icon" aria-hidden="true">&#10094;</span>
+          <span class="stats-sidebar-toggle-text">Collapse</span>
+        </button>
+      </div>
+      <!-- Interactive Stats Deck -->
+      <div class="stats-grid interactive-stats" id="stats-grid">
+        <button type="button" class="stat-card clickable active-stat" id="stat-full-jobs" data-stat-filter="full-jobs" title="Click to filter Full-Time Jobs (Internships separated)" aria-label="Click to filter Full-Time Jobs (Internships separated)">
+          <div class="stat-header">
+            <span class="stat-badge badge-portal">💼 Full-Time</span>
+            <span class="stat-icon">💼</span>
+          </div>
+          <div class="stat-value" id="stat-full-jobs-val">0</div>
+          <div class="stat-label">Full-Time Fresher Roles</div>
+          <span class="stat-action-hint">Click to isolate</span>
+        </button>
+
+        <button type="button" class="stat-card clickable" id="stat-internships" data-stat-filter="internships" title="Click to filter Internships &amp; Traineeships" aria-label="Click to filter Internships &amp; Traineeships">
+          <div class="stat-header">
+            <span class="stat-badge badge-unstop">🎓 Internships</span>
+            <span class="stat-icon">🎓</span>
+          </div>
+          <div class="stat-value" id="stat-internships-val">0</div>
+          <div class="stat-label">Internships &amp; Trainees</div>
+          <span class="stat-action-hint">Click to isolate</span>
+        </button>
+
+        <button type="button" class="stat-card clickable" id="stat-primary" data-stat-filter="primary" title="Click to filter by Primary Roles (Tiers 1–7)" aria-label="Click to filter by Primary Roles (Tiers 1–7)">
+          <div class="stat-header">
+            <span class="stat-badge badge-primary">Primary Roles</span>
+            <span class="stat-icon">🥇</span>
+          </div>
+          <div class="stat-value" id="stat-primary-val">0</div>
+          <div class="stat-label">ML, DS, OR &amp; Analytics</div>
+          <span class="stat-action-hint">Click to filter</span>
+        </button>
+
+        <button type="button" class="stat-card clickable" id="stat-portals" data-stat-filter="source-company" title="Click to filter by Indian Company Direct Career Sites" aria-label="Click to filter by Indian Company Direct Career Sites">
+          <div class="stat-header">
+            <span class="stat-badge badge-portal">Indian Portals</span>
+            <span class="stat-icon">🏢</span>
+          </div>
+          <div class="stat-value" id="stat-portals-val">0</div>
+          <div class="stat-label">Swiggy, Zepto, Flipkart &amp; ATS</div>
+          <span class="stat-action-hint">Click to filter</span>
+        </button>
+
+        <button type="button" class="stat-card clickable" id="stat-unstop" data-stat-filter="source-unstop" title="Click to filter by Unstop Campus &amp; Fresher Openings" aria-label="Click to filter by Unstop Campus &amp; Fresher Openings">
+          <div class="stat-header">
+            <span class="stat-badge badge-unstop">Campus / Unstop</span>
+            <span class="stat-icon">🎯</span>
+          </div>
+          <div class="stat-value" id="stat-unstop-val">0</div>
+          <div class="stat-label">Freshers &amp; Early Careers</div>
+          <span class="stat-action-hint">Click to filter</span>
+        </button>
+
+        <button type="button" class="stat-card clickable" id="stat-saved" data-stat-filter="saved" title="Click to view your bookmarked job shortlist" aria-label="Click to view your bookmarked job shortlist">
+          <div class="stat-header">
+            <span class="stat-badge badge-saved">⭐ Shortlist</span>
+            <span class="stat-icon">⭐</span>
+          </div>
+          <div class="stat-value" id="stat-saved-val">0</div>
+          <div class="stat-label">Candidate Bookmarks</div>
+          <span class="stat-action-hint">Click to view</span>
+        </button>
+
+        <button type="button" class="stat-card clickable" id="stat-score" data-stat-filter="score" title="Click to sort by Highest Match Score" aria-label="Click to sort by Highest Match Score">
+          <div class="stat-header">
+            <span class="stat-badge badge-highlight">Top Fit Score</span>
+            <span class="stat-icon">⚡</span>
+          </div>
+          <div class="stat-value" id="stat-avg-score-val">0%</div>
+          <div class="stat-label">Weighted Profile Fit Rate</div>
+          <span class="stat-action-hint">Click to sort</span>
+        </button>
+      </div>
+    </aside>
   <main class="main-content">
 
     <!-- Hero Section -->
@@ -105,78 +190,6 @@
         Curated <strong>Strictly 0 Years / Pure Fresher Roles</strong> across Applied AI, Machine Learning, Data Science, Decision Science, and Analytics for 2024–2026 graduates, freshers, and interns.
       </p>
 
-      <!-- Interactive Stats Deck -->
-      <div class="stats-grid interactive-stats" id="stats-grid">
-        <div class="stat-card clickable active-stat" id="stat-full-jobs" data-stat-filter="full-jobs" title="Click to filter Full-Time Jobs (Internships separated)">
-          <div class="stat-header">
-            <span class="stat-badge badge-portal">💼 Full-Time</span>
-            <span class="stat-icon">💼</span>
-          </div>
-          <div class="stat-value" id="stat-full-jobs-val">0</div>
-          <div class="stat-label">Full-Time Fresher Roles</div>
-          <span class="stat-action-hint">Click to isolate</span>
-        </div>
-
-        <div class="stat-card clickable" id="stat-internships" data-stat-filter="internships" title="Click to filter Internships &amp; Traineeships">
-          <div class="stat-header">
-            <span class="stat-badge badge-unstop">🎓 Internships</span>
-            <span class="stat-icon">🎓</span>
-          </div>
-          <div class="stat-value" id="stat-internships-val">0</div>
-          <div class="stat-label">Internships &amp; Trainees</div>
-          <span class="stat-action-hint">Click to isolate</span>
-        </div>
-
-        <div class="stat-card clickable" id="stat-primary" data-stat-filter="primary" title="Click to filter by Primary Roles (Tiers 1–7)">
-          <div class="stat-header">
-            <span class="stat-badge badge-primary">Primary Roles</span>
-            <span class="stat-icon">🥇</span>
-          </div>
-          <div class="stat-value" id="stat-primary-val">0</div>
-          <div class="stat-label">ML, DS, OR &amp; Analytics</div>
-          <span class="stat-action-hint">Click to filter</span>
-        </div>
-
-        <div class="stat-card clickable" id="stat-portals" data-stat-filter="source-company" title="Click to filter by Indian Company Direct Career Sites">
-          <div class="stat-header">
-            <span class="stat-badge badge-portal">Indian Portals</span>
-            <span class="stat-icon">🏢</span>
-          </div>
-          <div class="stat-value" id="stat-portals-val">0</div>
-          <div class="stat-label">Swiggy, Zepto, Flipkart &amp; ATS</div>
-          <span class="stat-action-hint">Click to filter</span>
-        </div>
-
-        <div class="stat-card clickable" id="stat-unstop" data-stat-filter="source-unstop" title="Click to filter by Unstop Campus &amp; Fresher Openings">
-          <div class="stat-header">
-            <span class="stat-badge badge-unstop">Campus / Unstop</span>
-            <span class="stat-icon">🎯</span>
-          </div>
-          <div class="stat-value" id="stat-unstop-val">0</div>
-          <div class="stat-label">Freshers &amp; Early Careers</div>
-          <span class="stat-action-hint">Click to filter</span>
-        </div>
-
-        <div class="stat-card clickable" id="stat-saved" data-stat-filter="saved" title="Click to view your bookmarked job shortlist">
-          <div class="stat-header">
-            <span class="stat-badge badge-saved">⭐ Shortlist</span>
-            <span class="stat-icon">⭐</span>
-          </div>
-          <div class="stat-value" id="stat-saved-val">0</div>
-          <div class="stat-label">Candidate Bookmarks</div>
-          <span class="stat-action-hint">Click to view</span>
-        </div>
-
-        <div class="stat-card clickable" id="stat-score" data-stat-filter="score" title="Click to sort by Highest Match Score">
-          <div class="stat-header">
-            <span class="stat-badge badge-highlight">Top Fit Score</span>
-            <span class="stat-icon">⚡</span>
-          </div>
-          <div class="stat-value" id="stat-avg-score-val">0%</div>
-          <div class="stat-label">Weighted Profile Fit Rate</div>
-          <span class="stat-action-hint">Click to sort</span>
-        </div>
-      </div>
     </section>
 
     <!-- TAB 1: Matched Jobs Board -->
@@ -1205,6 +1218,7 @@
     </section>
 
   </main>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -1309,6 +1323,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261104_rejected1"></script>
+  <script src="app.js?v=20261104_sidebar1"></script>
 </body>
 </html>
