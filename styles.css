@@ -4409,8 +4409,8 @@ input[type="range"] {
 }
 
 /* One unified page heading and results summary. */
-.hero-section { margin-bottom: 0.35rem; padding: 0; }
-.hero-section .hero-title { font-size: clamp(1.1rem, 1.5vw, 1.35rem); line-height: 1.1; letter-spacing: -0.025em; margin-bottom: 0.15rem; }
+.hero-section { margin-bottom: 0.8rem; padding: 0.2rem 0; }
+.hero-section .hero-title { font-size: clamp(1.65rem, 2.5vw, 2.25rem); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 0.45rem; }
 .hero-section .hero-results-summary {
   display: inline-flex; flex-direction: column; gap: 0.2rem; max-width: 100%;
   padding: 0; margin: 0;
@@ -4420,7 +4420,7 @@ input[type="range"] {
 .hero-results-summary .banner-headline-row { justify-content: center; gap: 0.4rem; }
 .hero-results-summary .banner-headline { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; }
 .hero-results-summary .highlight-count { background: transparent; padding: 0; font-size: 1rem; }
-.hero-results-summary .banner-pill { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); font-weight: 500; font-size: 0.6rem; padding: 0.05rem 0.3rem; }
+.hero-results-summary .banner-pill { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); font-weight: 500; font-size: 0.75rem; padding: 0.2rem 0.55rem; }
 .hero-results-summary .banner-caption { text-align: center; font-size: 0.8rem; overflow-wrap: anywhere; }
 .main-content:not(:has(#view-jobs.active)) .hero-results-summary { display: none; }
 @media (max-width: 480px) {
@@ -4431,13 +4431,13 @@ input[type="range"] {
 .dashboard-layout > .main-content { padding-top: 0; }
 .main-content .results-header { margin-bottom: 0.65rem; gap: 0.5rem; }
 
-.hero-results-summary .results-count { font-size: 0.7rem; font-weight: 600; color: var(--text-main); line-height: 1.25; }
+.hero-results-summary .results-count { font-size: 0.9rem; font-weight: 600; color: var(--text-main); line-height: 1.45; }
 .hero-results-summary .banner-pill { font-weight: 600; }
 .results-meta-left:has(.active-filter-indicator:empty) { display: none; }
 
-.hero-feed-status { display: flex; justify-content: center; margin-top: 0.15rem; }
-.hero-feed-status .auto-sync-badge { max-width: 100%; text-align: center; line-height: 1.25; font-size: 0.6rem; padding: 0.1rem 0.4rem; gap: 0.25rem; }
-.hero-feed-status .sync-pulse-dot { flex-shrink: 0; width: 5px; height: 5px; }
+.hero-feed-status { display: flex; justify-content: center; margin-top: 0.45rem; }
+.hero-feed-status .auto-sync-badge { max-width: 100%; text-align: center; line-height: 1.45; font-size: 0.75rem; padding: 0.25rem 0.7rem; gap: 0.4rem; }
+.hero-feed-status .sync-pulse-dot { flex-shrink: 0; width: 7px; height: 7px; }
 .hero-feed-status .sync-badge-text { min-width: 0; overflow-wrap: anywhere; }
 .main-content:not(:has(#view-jobs.active)) .hero-feed-status,
 .results-header:has(.active-filter-indicator:empty) { display: none; }
