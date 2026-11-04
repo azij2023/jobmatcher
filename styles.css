@@ -4379,25 +4379,25 @@ input[type="range"] {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
   gap: 0.75rem;
 }
-.jobs-grid .job-card { min-width: 0; padding: 0.85rem; border-radius: var(--radius-md); }
+.jobs-grid .job-card { min-width: 0; padding: 0.65rem; border-radius: var(--radius-md); }
 .jobs-grid .job-card > *, .jobs-grid .job-card-header > div:first-child { min-width: 0; }
-.jobs-grid .job-card-header { gap: 0.5rem; margin-bottom: 0.6rem; }
+.jobs-grid .job-card-header { gap: 0.35rem; margin-bottom: 0.4rem; }
 .jobs-grid .job-meta-badges { gap: 0.25rem; margin-bottom: 0.4rem; }
 .jobs-grid .job-meta-badges > span,
 .jobs-grid .job-card .job-tier-badge { font-size: 0.65rem; padding: 0.16rem 0.4rem; margin-bottom: 0; }
-.jobs-grid .job-title { font-size: 1.05rem; line-height: 1.25; margin-bottom: 0.3rem; overflow-wrap: anywhere; }
+.jobs-grid .job-title { font-size: 0.95rem; line-height: 1.25; margin-bottom: 0.3rem; overflow-wrap: anywhere; }
 .jobs-grid .job-company-loc { gap: 0.4rem; font-size: 0.75rem; flex-wrap: wrap; }
 .jobs-grid .job-location { min-width: 0; overflow-wrap: anywhere; }
-.jobs-grid .score-badge-circle { width: 42px; height: 42px; }
-.jobs-grid .score-badge-val { font-size: 0.8rem; }
+.jobs-grid .score-badge-circle { width: 34px; height: 34px; }
+.jobs-grid .score-badge-val { font-size: 0.7rem; }
 .jobs-grid .score-badge-label { font-size: 0.5rem; }
 .jobs-grid .card-header-actions { gap: 0.35rem; }
 .jobs-grid .card-star-btn { width: 28px; height: 28px; font-size: 1rem; }
 .jobs-grid .job-description, .jobs-grid .job-desc-snippet {
-  font-size: 0.78rem; line-height: 1.4; margin-bottom: 0.65rem;
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden;
+  font-size: 0.73rem; line-height: 1.35; margin-bottom: 0.4rem;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; overflow: hidden;
 }
-.jobs-grid .skills-container { margin-bottom: 0.65rem; }
+.jobs-grid .skills-container { margin-bottom: 0.4rem; }
 .jobs-grid .skills-label { font-size: 0.64rem; margin-bottom: 0.25rem; }
 .jobs-grid .skills-tags { gap: 0.25rem; }
 .jobs-grid .skill-tag { max-width: 100%; font-size: 0.65rem; padding: 0.15rem 0.35rem; overflow-wrap: anywhere; }
@@ -4464,3 +4464,25 @@ input[type="range"] {
   .navbar .system-status, .navbar .theme-mode-text, .navbar #nav-refresh-label { display: none; }
   .navbar .btn-nav-refresh, .navbar .theme-toggle-btn { min-width: 32px; }
 }
+
+/* Dense cards: badges use the full header width; actions occupy three short rows. */
+.jobs-grid { align-items: start; }
+.jobs-grid .skill-gaps-container { margin-top: 0 !important; }
+.jobs-grid .job-card:has(.card-header-actions) .job-card-header { display: block; }
+.jobs-grid .job-card .card-header-actions { position: absolute; top: 0.6rem; right: 0.6rem; flex-direction: column; gap: 0.15rem; }
+.jobs-grid .job-card .card-header-actions .score-badge-circle { order: -1; }
+.jobs-grid .job-card:has(.card-header-actions) .job-meta-badges { padding-right: 42px; gap: 0.2rem; }
+.jobs-grid .job-card .card-star-btn { width: 24px; height: 24px; font-size: 0.85rem; }
+.jobs-grid .job-card .job-meta-badges > span { font-size: 0.6rem; padding: 0.1rem 0.3rem; }
+.jobs-grid .job-card .skill-tag { font-size: 0.6rem; padding: 0.1rem 0.3rem; }
+.jobs-grid .card-actions:has([data-mark-applied]) {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 28px;
+  align-items: stretch; gap: 0.3rem; padding-top: 0.45rem;
+}
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn { min-width: 0; min-height: 28px; padding: 0.3rem 0.35rem; font-size: 0.65rem; line-height: 1.25; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn-primary { grid-column: 1 / -1; grid-row: 1; white-space: normal; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn-reject-job { grid-column: 1; grid-row: 2; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn-mark-applied { grid-column: 2; grid-row: 2; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .copy-btn { grid-column: 3; grid-row: 2; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn-backup-search { grid-column: 1; grid-row: 3; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .view-details-btn { grid-column: 2 / -1; grid-row: 3; }
