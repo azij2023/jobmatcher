@@ -4409,18 +4409,18 @@ input[type="range"] {
 }
 
 /* One unified page heading and results summary. */
-.hero-section { margin-bottom: 1rem; padding: 0.2rem 0 0.35rem; }
-.hero-section .hero-title { font-size: clamp(1.65rem, 2.7vw, 2.5rem); line-height: 1.15; letter-spacing: -0.035em; margin-bottom: 0.55rem; }
+.hero-section { margin-bottom: 0.6rem; padding: 0; }
+.hero-section .hero-title { font-size: clamp(1.25rem, 2vw, 1.75rem); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 0.3rem; }
 .hero-section .hero-results-summary {
   display: inline-flex; flex-direction: column; gap: 0.4rem; max-width: 100%;
   padding: 0; margin: 0;
   background: transparent; border: 0;
   border-radius: 0; box-shadow: none;
 }
-.hero-results-summary .banner-headline-row { justify-content: center; gap: 0.65rem; }
+.hero-results-summary .banner-headline-row { justify-content: center; gap: 0.4rem; }
 .hero-results-summary .banner-headline { font-family: var(--font-body); font-size: 0.85rem; font-weight: 500; }
 .hero-results-summary .highlight-count { background: transparent; padding: 0; font-size: 1rem; }
-.hero-results-summary .banner-pill { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); font-weight: 500; font-size: 0.7rem; padding: 0.15rem 0.5rem; }
+.hero-results-summary .banner-pill { background: var(--bg-secondary); color: var(--text-muted); border: 1px solid var(--border-color); font-weight: 500; font-size: 0.65rem; padding: 0.1rem 0.4rem; }
 .hero-results-summary .banner-caption { text-align: center; font-size: 0.8rem; overflow-wrap: anywhere; }
 .main-content:not(:has(#view-jobs.active)) .hero-results-summary { display: none; }
 @media (max-width: 480px) {
@@ -4431,13 +4431,13 @@ input[type="range"] {
 .dashboard-layout > .main-content { padding-top: 0.35rem; }
 .main-content .results-header { margin-bottom: 0.65rem; gap: 0.5rem; }
 
-.hero-results-summary .results-count { font-size: 0.85rem; font-weight: 600; color: var(--text-main); line-height: 1.5; }
+.hero-results-summary .results-count { font-size: 0.75rem; font-weight: 600; color: var(--text-main); line-height: 1.4; }
 .hero-results-summary .banner-pill { font-weight: 600; }
 .results-meta-left:has(.active-filter-indicator:empty) { display: none; }
 
-.hero-feed-status { display: flex; justify-content: center; margin-top: 0.6rem; }
-.hero-feed-status .auto-sync-badge { max-width: 100%; text-align: center; line-height: 1.5; }
-.hero-feed-status .sync-pulse-dot { flex-shrink: 0; }
+.hero-feed-status { display: flex; justify-content: center; margin-top: 0.3rem; }
+.hero-feed-status .auto-sync-badge { max-width: 100%; text-align: center; line-height: 1.4; font-size: 0.65rem; padding: 0.15rem 0.55rem; gap: 0.3rem; }
+.hero-feed-status .sync-pulse-dot { flex-shrink: 0; width: 5px; height: 5px; }
 .hero-feed-status .sync-badge-text { min-width: 0; overflow-wrap: anywhere; }
 .main-content:not(:has(#view-jobs.active)) .hero-feed-status,
 .results-header:has(.active-filter-indicator:empty) { display: none; }
