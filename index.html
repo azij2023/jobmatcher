@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261104_resultssummary3">
+  <link rel="stylesheet" href="styles.css?v=20261104_centeredheader2">
   <script>
     (function() {
       try {
@@ -182,7 +182,7 @@
       </h1>
       <div class="search-results-banner hero-results-summary" id="search-results-banner" aria-live="polite" aria-atomic="true">
         <div class="banner-headline-row">
-          <h2 class="banner-headline" id="banner-headline"><span class="results-count" id="results-count">Showing 0 matching jobs</span><span id="banner-job-count" hidden>0</span></h2>
+          <h2 class="banner-headline" id="banner-headline"><span id="banner-job-count" class="highlight-count">0</span> <span id="banner-role-label">full-time jobs</span></h2>
           <span class="banner-pill" id="banner-scope-pill">Past 5 days</span>
         </div>
         <p class="banner-caption" id="banner-caption" hidden></p>
@@ -194,6 +194,7 @@
       <!-- Results Info -->
       <div class="results-header">
         <div class="results-meta-left">
+          <span class="results-count" id="results-count">Showing 0 matching jobs</span>
           <span class="active-filter-indicator" id="active-filter-indicator"></span>
         </div>
         <div class="auto-sync-badge results-sync-badge" title="Checks published feeds every 30 seconds. Refresh Jobs requests collection when the backend is available.">
@@ -1312,6 +1313,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261104_resultssummary3"></script>
+  <script src="app.js?v=20261104_centeredheader2"></script>
 </body>
 </html>

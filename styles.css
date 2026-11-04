@@ -4430,7 +4430,3 @@ input[type="range"] {
 
 .dashboard-layout > .main-content { padding-top: 0.35rem; }
 .main-content .results-header { margin-bottom: 0.65rem; gap: 0.5rem; }
-
-.hero-results-summary .results-count { font-size: 0.85rem; font-weight: 600; color: var(--text-main); line-height: 1.5; }
-.hero-results-summary .banner-pill { font-weight: 600; }
-.results-meta-left:has(.active-filter-indicator:empty) { display: none; }
