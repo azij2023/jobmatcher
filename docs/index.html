@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261104_resultssummary3">
+  <link rel="stylesheet" href="styles.css?v=20261105_feedstatus1">
   <script>
     (function() {
       try {
@@ -187,6 +187,12 @@
         </div>
         <p class="banner-caption" id="banner-caption" hidden></p>
       </div>
+      <div class="hero-feed-status">
+        <div class="auto-sync-badge results-sync-badge" title="Checks published feeds every 30 seconds. Refresh Jobs requests collection when the backend is available.">
+          <span class="sync-pulse-dot live-active-pulse"></span>
+          <span class="sync-badge-text">Checking feed freshness…</span>
+        </div>
+      </div>
     </section>
 
     <!-- TAB 1: Matched Jobs Board -->
@@ -196,10 +202,7 @@
         <div class="results-meta-left">
           <span class="active-filter-indicator" id="active-filter-indicator"></span>
         </div>
-        <div class="auto-sync-badge results-sync-badge" title="Checks published feeds every 30 seconds. Refresh Jobs requests collection when the backend is available.">
-          <span class="sync-pulse-dot live-active-pulse"></span>
-          <span class="sync-badge-text">Checking feed freshness…</span>
-        </div>
+
       </div>
 
       <!-- Jobs Grid -->
@@ -1312,6 +1315,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261104_resultssummary3"></script>
+  <script src="app.js?v=20261105_feedstatus1"></script>
 </body>
 </html>

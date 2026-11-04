@@ -4434,3 +4434,10 @@ input[type="range"] {
 .hero-results-summary .results-count { font-size: 0.85rem; font-weight: 600; color: var(--text-main); line-height: 1.5; }
 .hero-results-summary .banner-pill { font-weight: 600; }
 .results-meta-left:has(.active-filter-indicator:empty) { display: none; }
+
+.hero-feed-status { display: flex; justify-content: center; margin-top: 0.6rem; }
+.hero-feed-status .auto-sync-badge { max-width: 100%; text-align: center; line-height: 1.5; }
+.hero-feed-status .sync-pulse-dot { flex-shrink: 0; }
+.hero-feed-status .sync-badge-text { min-width: 0; overflow-wrap: anywhere; }
+.main-content:not(:has(#view-jobs.active)) .hero-feed-status,
+.results-header:has(.active-filter-indicator:empty) { display: none; }
