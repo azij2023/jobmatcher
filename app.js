@@ -733,14 +733,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateResultsSummary(totalJobs) {
     if (bannerJobCount) bannerJobCount.textContent = totalJobs;
-    const role = document.getElementById('banner-role-label');
-    if (role) {
-      role.textContent = currentFilter.roleType === 'jobs'
-        ? (totalJobs === 1 ? 'full-time job' : 'full-time jobs')
-        : currentFilter.roleType === 'internships'
-          ? (totalJobs === 1 ? 'internship or traineeship' : 'internships & traineeships')
-          : (totalJobs === 1 ? 'job or internship' : 'jobs & internships');
-    }
     if (bannerScopePill) {
       const hours = currentFilter.maxAgeHours;
       const amount = hours < 1 ? Math.round(hours * 60) : hours % 24 === 0 ? hours / 24 : hours;
@@ -984,7 +976,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const pagedJobs = filtered.slice(startIndex, endIndex);
 
     // Update results header
-    resultsCount.textContent = `Showing ${startIndex + 1}–${endIndex} of ${totalJobs} matching jobs (Posted within past ${currentFilter.maxAgeHours} hours)`;
+    const postingWindow = currentFilter.maxAgeHours >= 9000 ? '' : ` (Posted within past ${currentFilter.maxAgeHours} hours)`;
+    resultsCount.textContent = `Showing ${startIndex + 1}\u2013${endIndex} of ${totalJobs} matching jobs${postingWindow}`;
 
     jobsGrid.innerHTML = pagedJobs.map(job => {
       const tierClass = getTierBadgeClass(job.tier);
