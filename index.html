@@ -8,10 +8,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261104_sidebar1">
+  <link rel="stylesheet" href="styles.css?v=20261104_sidebars2">
   <script>
     (function() {
       try {
+        if (localStorage.getItem('targetmatch_filters_sidebar_collapsed') === 'true') {
+          document.documentElement.classList.add('filters-sidebar-collapsed');
+        }
         var savedTheme = localStorage.getItem('targetmatch_theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
         if (localStorage.getItem('targetmatch_sidebar_collapsed') === 'true') {
@@ -194,187 +197,6 @@
 
     <!-- TAB 1: Matched Jobs Board -->
     <section class="tab-content active" id="view-jobs">
-      <!-- Unified Search Command Deck -->
-      <div class="search-command-deck" id="search-command-deck">
-        <!-- Prominent Role Type Separation Switch -->
-        <div class="role-type-segmented-control" id="role-type-segmented-control" role="tablist" aria-label="Separate Jobs from Internships">
-          <button class="type-segment-btn active" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="true" title="Full-time entry-level positions only">
-            <span class="segment-icon">💼</span>
-            <span class="segment-title">Full-Time Jobs</span>
-            <span class="segment-badge" id="segment-count-jobs">0</span>
-          </button>
-          <button class="type-segment-btn" data-role-type="internships" id="btn-type-internships" role="tab" aria-selected="false" title="Internships, Traineeships &amp; Apprenticeships only">
-            <span class="segment-icon">🎓</span>
-            <span class="segment-title">Internships</span>
-            <span class="segment-badge" id="segment-count-internships">0</span>
-          </button>
-          <button class="type-segment-btn" data-role-type="all" id="btn-type-all" role="tab" aria-selected="false" title="View all roles (Jobs and Internships together)">
-            <span class="segment-icon">🔥</span>
-            <span class="segment-title">All Roles Combined</span>
-            <span class="segment-badge" id="segment-count-all">0</span>
-          </button>
-        </div>
-
-        <!-- Main Search Bar Row -->
-        <div class="search-main-row">
-          <div class="search-input-box">
-            <span class="search-box-icon">🔍</span>
-            <input type="text" id="search-input" placeholder="Search by role, company, or skill (e.g. Applied Scientist, PyTorch, Swiggy, LP)..." autocomplete="off">
-            <button class="clear-search-btn" id="clear-search-btn" title="Clear search" style="display:none;">✕</button>
-          </div>
-          <button class="btn-command-search" id="btn-search-exec" type="button" title="Execute search">
-            <span class="search-exec-icon">⚡</span>
-            <span class="search-exec-text">Search</span>
-          </button>
-          <button class="btn-toggle-filters" id="btn-toggle-filters" type="button" aria-expanded="false" title="Toggle fine-tuning filters">
-            <span>⚙️ Filters</span>
-            <span class="filter-count-badge" id="active-filter-badge" style="display:none;">0</span>
-          </button>
-        </div>
-
-        <!-- Quick Filter Pills with Dynamic Counts -->
-        <div class="quick-filter-pills" id="quick-filter-pills">
-          <button class="quick-pill active" data-filter-type="all">
-            🔥 All Roles <span class="pill-count" id="count-all">0</span>
-          </button>
-          <button class="quick-pill pill-zero-exp" data-filter-type="zero-exp" id="pill-zero-exp" title="Filter strictly for 0 experience / freshers & interns">
-            🎓 0 Experience <span class="pill-count" id="count-zero-exp">0</span>
-          </button>
-          <button class="quick-pill pill-intern" data-filter-type="internships" id="pill-internships" title="Filter internships, traineeships & apprenticeships only">
-            🎓 Internships <span class="pill-count" id="count-internships">0</span>
-          </button>
-          <button class="quick-pill pill-full-job" data-filter-type="full-jobs" id="pill-full-jobs" title="Filter full-time jobs only (exclude internships)">
-            💼 Full-Time Jobs <span class="pill-count" id="count-full-jobs">0</span>
-          </button>
-          <button class="quick-pill pill-portal" data-filter-type="source-company">
-            🏢 Indian Portals <span class="pill-count" id="count-company">0</span>
-          </button>
-          <button class="quick-pill pill-unstop" data-filter-type="source-unstop">
-            🎯 Unstop Freshers <span class="pill-count" id="count-unstop">0</span>
-          </button>
-          <button class="quick-pill pill-saved" data-filter-type="saved" id="pill-saved">
-            ⭐ Shortlist <span class="pill-count" id="count-saved">0</span>
-          </button>
-          <button class="quick-pill" data-filter-type="tier-1">
-            🔬 Applied Scientist <span class="pill-count" id="count-as">0</span>
-          </button>
-          <button class="quick-pill" data-filter-type="tier-2">
-            📊 Data Science <span class="pill-count" id="count-ds">0</span>
-          </button>
-          <button class="quick-pill" data-filter-type="tier-3">
-            🎯 Decision Science <span class="pill-count" id="count-dec">0</span>
-          </button>
-          <button class="quick-pill" data-filter-type="tier-4">
-            📦 OR / Optimization <span class="pill-count" id="count-or">0</span>
-          </button>
-          <button class="quick-pill" data-filter-type="tier-8">
-            🤖 ML Engineering <span class="pill-count" id="count-mle">0</span>
-          </button>
-          <button class="quick-pill" data-filter-type="fresh-24">
-            ⚡ Past 24h <span class="pill-count" id="count-24h">0</span>
-          </button>
-        </div>
-
-        <!-- Collapsible Advanced Filters Drawer -->
-        <div class="advanced-filters-drawer" id="advanced-filters-drawer" style="display:none;">
-          <div class="filter-drawer-grid">
-            <div class="drawer-group">
-              <label for="role-type-select">Opportunity Type</label>
-              <select id="role-type-select">
-                <option value="jobs" selected>💼 Full-Time Jobs Only (Internships Separated)</option>
-                <option value="internships">🎓 Internships &amp; Traineeships Only</option>
-                <option value="all">🔥 All Opportunities (Jobs + Internships)</option>
-              </select>
-            </div>
-
-            <div class="drawer-group">
-              <label for="tier-select">Category / Role Tier</label>
-              <select id="tier-select">
-                <option value="all" selected>All Tiers (1–9)</option>
-                <option value="primary">🥇 Primary Roles (Tiers 1–7)</option>
-                <option value="secondary">🥈 Secondary Roles (Tier 8: ML Engineering)</option>
-                <option value="adjacent">⚡ Optional Roles (Tier 9: Data Engineering)</option>
-                <option value="1">🥇 Tier 1: Applied Scientist &amp; ML (Primary)</option>
-                <option value="2">Tier 2: Data Science</option>
-                <option value="3">Tier 3: Decision Science</option>
-                <option value="4">🏅 Tier 4: OR / Optimization (Primary)</option>
-                <option value="5">Tier 5: Product (Management)</option>
-                <option value="6">Tier 6: Strategy (Management)</option>
-                <option value="7">Tier 7: Forecasting</option>
-                <option value="8">Tier 8: ML Engineering (Secondary)</option>
-                <option value="9">Tier 9: Data Engineering Adjacent</option>
-              </select>
-            </div>
-
-            <div class="drawer-group">
-              <label for="location-select">Location (India &amp; Remote)</label>
-              <select id="location-select">
-                <option value="all" selected>🇮🇳 All India</option>
-                <option value="bengaluru">Bengaluru / Bangalore</option>
-                <option value="hyderabad">Hyderabad</option>
-                <option value="pune">Pune</option>
-                <option value="gurugram">Gurugram / Noida / Delhi NCR</option>
-                <option value="mumbai">Mumbai</option>
-                <option value="remote">🌐 Remote (India / Worldwide)</option>
-              </select>
-            </div>
-
-            <div class="drawer-group">
-              <label for="freshness-select">Posting Freshness</label>
-              <select id="freshness-select">
-                <option value="120" selected>⚡ Live & Fresh (1 min to 5 days / 120h)</option>
-                <option value="1">⏱️ Past 1 Hour (0-60m)</option>
-                <option value="12">🌅 Past 12 Hours</option>
-                <option value="24">📅 Past 24 Hours (Today)</option>
-                <option value="48">⏳ Past 2 Days (48h)</option>
-                <option value="120">🗓️ Past 5 Days (120h)</option>
-                <option value="168">📆 Past 7 Days</option>
-                <option value="any">🌐 Anytime (All Jobs)</option>
-              </select>
-            </div>
-
-            <div class="drawer-group">
-              <label for="source-select">Source Platform</label>
-              <select id="source-select">
-                <option value="all" selected>All Platforms (Verified Openings)</option>
-                <option value="Company Portal">🏢 Indian Companies (Direct Portals)</option>
-                <option value="Unstop">🎯 Unstop (Campus &amp; Freshers)</option>
-                <option value="Direct ATS">🚀 Direct ATS (Greenhouse / Lever / Ashby)</option>
-                <option value="LinkedIn">💼 LinkedIn Direct</option>
-                <option value="LinkedIn Post">👤 Individual Public Posts</option>
-                <option value="Remotive">🌐 Remotive</option>
-                <option value="Jobicy">🌐 Jobicy</option>
-              </select>
-            </div>
-
-            <div class="drawer-group">
-              <label for="score-slider">Min Fit Score: <span id="score-slider-val" class="slider-val">50%</span></label>
-              <input type="range" id="score-slider" min="50" max="95" step="1" value="50">
-            </div>
-
-            <div class="drawer-group">
-              <label for="sort-select">Sort Feed By</label>
-              <select id="sort-select">
-                <option value="latest" selected>⚡ Newest to Oldest</option>
-                <option value="score-desc">⭐ Highest Fit Score</option>
-                <option value="tier-asc">🥇 Priority Tier (1 to 9)</option>
-                <option value="company-asc">🏢 Company Name (A–Z)</option>
-                <option value="farthest">⏳ Oldest to Newest</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="filter-drawer-actions">
-            <button class="btn-drawer-reset" id="reset-filters-btn" type="button">
-              ↺ Reset All Filters
-            </button>
-            <button class="btn-drawer-close" id="btn-close-drawer" type="button">
-              ✕ Close Drawer
-            </button>
-          </div>
-        </div>
-      </div>
-
       <!-- Live Search Results Header Banner -->
       <div class="search-results-banner" id="search-results-banner">
         <div class="banner-content">
@@ -1218,6 +1040,195 @@
     </section>
 
   </main>
+    <aside class="filters-sidebar" id="filters-sidebar" aria-label="Job search and filters">
+      <div class="stats-sidebar-header">
+        <span class="stats-sidebar-heading filters-sidebar-heading">Search &amp; Filters</span>
+        <button type="button" class="stats-sidebar-toggle" id="filters-sidebar-toggle" aria-expanded="true" aria-controls="search-command-deck" aria-label="Collapse search and filters sidebar" title="Collapse search and filters sidebar">
+          <span class="filters-sidebar-toggle-icon" aria-hidden="true">&#10095;</span>
+          <span class="filters-sidebar-toggle-text">Collapse</span>
+        </button>
+      </div>
+      <!-- Unified Search Command Deck -->
+      <div class="search-command-deck" id="search-command-deck">
+        <!-- Prominent Role Type Separation Switch -->
+        <div class="role-type-segmented-control" id="role-type-segmented-control" role="tablist" aria-orientation="vertical" aria-label="Separate Jobs from Internships">
+          <button class="type-segment-btn active" data-role-type="jobs" id="btn-type-jobs" role="tab" aria-selected="true" title="Full-time entry-level positions only">
+            <span class="segment-icon">💼</span>
+            <span class="segment-title">Full-Time Jobs</span>
+            <span class="segment-badge" id="segment-count-jobs">0</span>
+          </button>
+          <button class="type-segment-btn" data-role-type="internships" id="btn-type-internships" role="tab" aria-selected="false" title="Internships, Traineeships &amp; Apprenticeships only">
+            <span class="segment-icon">🎓</span>
+            <span class="segment-title">Internships</span>
+            <span class="segment-badge" id="segment-count-internships">0</span>
+          </button>
+          <button class="type-segment-btn" data-role-type="all" id="btn-type-all" role="tab" aria-selected="false" title="View all roles (Jobs and Internships together)">
+            <span class="segment-icon">🔥</span>
+            <span class="segment-title">All Roles Combined</span>
+            <span class="segment-badge" id="segment-count-all">0</span>
+          </button>
+        </div>
+
+        <!-- Main Search Bar Row -->
+        <div class="search-main-row">
+          <div class="search-input-box">
+            <span class="search-box-icon">🔍</span>
+            <input type="text" id="search-input" aria-label="Search by role, company, or skill" placeholder="Search by role, company, or skill (e.g. Applied Scientist, PyTorch, Swiggy, LP)..." autocomplete="off">
+            <button class="clear-search-btn" id="clear-search-btn" title="Clear search" style="display:none;">✕</button>
+          </div>
+          <button class="btn-command-search" id="btn-search-exec" type="button" title="Execute search">
+            <span class="search-exec-icon">⚡</span>
+            <span class="search-exec-text">Search</span>
+          </button>
+          <button class="btn-toggle-filters" id="btn-toggle-filters" type="button" aria-expanded="false" title="Toggle fine-tuning filters">
+            <span>⚙️ Filters</span>
+            <span class="filter-count-badge" id="active-filter-badge" style="display:none;">0</span>
+          </button>
+        </div>
+
+        <!-- Quick Filter Pills with Dynamic Counts -->
+        <div class="quick-filter-pills" id="quick-filter-pills">
+          <button class="quick-pill active" data-filter-type="all">
+            🔥 All Roles <span class="pill-count" id="count-all">0</span>
+          </button>
+          <button class="quick-pill pill-zero-exp" data-filter-type="zero-exp" id="pill-zero-exp" title="Filter strictly for 0 experience / freshers & interns">
+            🎓 0 Experience <span class="pill-count" id="count-zero-exp">0</span>
+          </button>
+          <button class="quick-pill pill-intern" data-filter-type="internships" id="pill-internships" title="Filter internships, traineeships & apprenticeships only">
+            🎓 Internships <span class="pill-count" id="count-internships">0</span>
+          </button>
+          <button class="quick-pill pill-full-job" data-filter-type="full-jobs" id="pill-full-jobs" title="Filter full-time jobs only (exclude internships)">
+            💼 Full-Time Jobs <span class="pill-count" id="count-full-jobs">0</span>
+          </button>
+          <button class="quick-pill pill-portal" data-filter-type="source-company">
+            🏢 Indian Portals <span class="pill-count" id="count-company">0</span>
+          </button>
+          <button class="quick-pill pill-unstop" data-filter-type="source-unstop">
+            🎯 Unstop Freshers <span class="pill-count" id="count-unstop">0</span>
+          </button>
+          <button class="quick-pill pill-saved" data-filter-type="saved" id="pill-saved">
+            ⭐ Shortlist <span class="pill-count" id="count-saved">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-1">
+            🔬 Applied Scientist <span class="pill-count" id="count-as">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-2">
+            📊 Data Science <span class="pill-count" id="count-ds">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-3">
+            🎯 Decision Science <span class="pill-count" id="count-dec">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-4">
+            📦 OR / Optimization <span class="pill-count" id="count-or">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="tier-8">
+            🤖 ML Engineering <span class="pill-count" id="count-mle">0</span>
+          </button>
+          <button class="quick-pill" data-filter-type="fresh-24">
+            ⚡ Past 24h <span class="pill-count" id="count-24h">0</span>
+          </button>
+        </div>
+
+        <!-- Collapsible Advanced Filters Drawer -->
+        <div class="advanced-filters-drawer" id="advanced-filters-drawer" style="display:none;">
+          <div class="filter-drawer-grid">
+            <div class="drawer-group">
+              <label for="role-type-select">Opportunity Type</label>
+              <select id="role-type-select">
+                <option value="jobs" selected>💼 Full-Time Jobs Only (Internships Separated)</option>
+                <option value="internships">🎓 Internships &amp; Traineeships Only</option>
+                <option value="all">🔥 All Opportunities (Jobs + Internships)</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="tier-select">Category / Role Tier</label>
+              <select id="tier-select">
+                <option value="all" selected>All Tiers (1–9)</option>
+                <option value="primary">🥇 Primary Roles (Tiers 1–7)</option>
+                <option value="secondary">🥈 Secondary Roles (Tier 8: ML Engineering)</option>
+                <option value="adjacent">⚡ Optional Roles (Tier 9: Data Engineering)</option>
+                <option value="1">🥇 Tier 1: Applied Scientist &amp; ML (Primary)</option>
+                <option value="2">Tier 2: Data Science</option>
+                <option value="3">Tier 3: Decision Science</option>
+                <option value="4">🏅 Tier 4: OR / Optimization (Primary)</option>
+                <option value="5">Tier 5: Product (Management)</option>
+                <option value="6">Tier 6: Strategy (Management)</option>
+                <option value="7">Tier 7: Forecasting</option>
+                <option value="8">Tier 8: ML Engineering (Secondary)</option>
+                <option value="9">Tier 9: Data Engineering Adjacent</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="location-select">Location (India &amp; Remote)</label>
+              <select id="location-select">
+                <option value="all" selected>🇮🇳 All India</option>
+                <option value="bengaluru">Bengaluru / Bangalore</option>
+                <option value="hyderabad">Hyderabad</option>
+                <option value="pune">Pune</option>
+                <option value="gurugram">Gurugram / Noida / Delhi NCR</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="remote">🌐 Remote (India / Worldwide)</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="freshness-select">Posting Freshness</label>
+              <select id="freshness-select">
+                <option value="120" selected>⚡ Live & Fresh (1 min to 5 days / 120h)</option>
+                <option value="1">⏱️ Past 1 Hour (0-60m)</option>
+                <option value="12">🌅 Past 12 Hours</option>
+                <option value="24">📅 Past 24 Hours (Today)</option>
+                <option value="48">⏳ Past 2 Days (48h)</option>
+                <option value="120">🗓️ Past 5 Days (120h)</option>
+                <option value="168">📆 Past 7 Days</option>
+                <option value="any">🌐 Anytime (All Jobs)</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="source-select">Source Platform</label>
+              <select id="source-select">
+                <option value="all" selected>All Platforms (Verified Openings)</option>
+                <option value="Company Portal">🏢 Indian Companies (Direct Portals)</option>
+                <option value="Unstop">🎯 Unstop (Campus &amp; Freshers)</option>
+                <option value="Direct ATS">🚀 Direct ATS (Greenhouse / Lever / Ashby)</option>
+                <option value="LinkedIn">💼 LinkedIn Direct</option>
+                <option value="LinkedIn Post">👤 Individual Public Posts</option>
+                <option value="Remotive">🌐 Remotive</option>
+                <option value="Jobicy">🌐 Jobicy</option>
+              </select>
+            </div>
+
+            <div class="drawer-group">
+              <label for="score-slider">Min Fit Score: <span id="score-slider-val" class="slider-val">50%</span></label>
+              <input type="range" id="score-slider" min="50" max="95" step="1" value="50">
+            </div>
+
+            <div class="drawer-group">
+              <label for="sort-select">Sort Feed By</label>
+              <select id="sort-select">
+                <option value="latest" selected>⚡ Newest to Oldest</option>
+                <option value="score-desc">⭐ Highest Fit Score</option>
+                <option value="tier-asc">🥇 Priority Tier (1 to 9)</option>
+                <option value="company-asc">🏢 Company Name (A–Z)</option>
+                <option value="farthest">⏳ Oldest to Newest</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-drawer-actions">
+            <button class="btn-drawer-reset" id="reset-filters-btn" type="button">
+              ↺ Reset All Filters
+            </button>
+            <button class="btn-drawer-close" id="btn-close-drawer" type="button">
+              ✕ Close Drawer
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
   </div>
 
   <!-- Footer -->
@@ -1323,6 +1334,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261104_sidebar1"></script>
+  <script src="app.js?v=20261104_sidebars2"></script>
 </body>
 </html>

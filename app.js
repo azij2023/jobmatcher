@@ -28,6 +28,38 @@ document.addEventListener("DOMContentLoaded", () => {
     }).observe(navbar);
   }
 
+  // The search sidebar has its own saved expand/collapse preference.
+  const filtersSidebar = document.getElementById('filters-sidebar');
+  const filtersSidebarToggle = document.getElementById('filters-sidebar-toggle');
+  function updateFiltersSidebarToggle() {
+    if (!filtersSidebarToggle) return;
+    const collapsed = document.documentElement.classList.contains('filters-sidebar-collapsed');
+    filtersSidebarToggle.setAttribute('aria-expanded', String(!collapsed));
+    filtersSidebarToggle.setAttribute('aria-label', `${collapsed ? 'Expand' : 'Collapse'} search and filters sidebar`);
+    filtersSidebarToggle.title = `${collapsed ? 'Expand' : 'Collapse'} search and filters sidebar`;
+    filtersSidebarToggle.querySelector('.filters-sidebar-toggle-text').textContent = collapsed ? 'Expand' : 'Collapse';
+    const deck = document.getElementById('search-command-deck');
+    if (deck) deck.hidden = collapsed;
+  }
+  if (filtersSidebarToggle) {
+    updateFiltersSidebarToggle();
+    filtersSidebarToggle.addEventListener('click', () => {
+      const collapsed = document.documentElement.classList.toggle('filters-sidebar-collapsed');
+      try { localStorage.setItem('targetmatch_filters_sidebar_collapsed', String(collapsed)); } catch (error) {}
+      updateFiltersSidebarToggle();
+    });
+  }
+  function showSidebarJobResults(event) {
+    if (!event.target.closest('#search-command-deck')) return;
+    document.querySelectorAll('.tab-content').forEach(content => content.classList.toggle('active', content.id === 'view-jobs'));
+    const tabId = currentFilter.roleType === 'internships' ? 'tab-btn-internships' : 'tab-btn-jobs';
+    document.querySelectorAll('.nav-tab').forEach(button => button.classList.toggle('active', button.id === tabId));
+  }
+  if (filtersSidebar) {
+    filtersSidebar.addEventListener('focusin', showSidebarJobResults);
+    filtersSidebar.addEventListener('click', showSidebarJobResults, true);
+  }
+
   // 1. Data Initialization
   let data = window.JOB_MATCHER_DATA || window.JOB_DATA || {
     jobs: [],

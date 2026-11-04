@@ -4299,3 +4299,68 @@ input[type="range"] {
   .stats-sidebar-collapsed .stats-sidebar-toggle-icon { transform: rotate(-90deg); }
   .dashboard-layout > .main-content { padding-top: 0; }
 }
+
+/* Search and filters live in an independently collapsible right sidebar. */
+.dashboard-layout {
+  --overview-width: 256px;
+  --filters-width: 300px;
+  grid-template-columns: var(--overview-width) minmax(0, 1fr) var(--filters-width);
+  grid-template-areas: "overview content filters";
+  gap: 1.25rem;
+  max-width: 1840px;
+}
+.stats-sidebar { grid-area: overview; }
+.dashboard-layout > .main-content { grid-area: content; }
+.filters-sidebar {
+  grid-area: filters;
+  min-width: 0;
+  position: sticky;
+  top: calc(var(--navbar-height, 100px) + 1rem);
+  max-height: calc(100dvh - var(--navbar-height, 100px) - 2rem);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--bg-secondary);
+}
+.stats-sidebar-collapsed .dashboard-layout { --overview-width: 80px; grid-template-columns: var(--overview-width) minmax(0, 1fr) var(--filters-width); }
+.filters-sidebar-collapsed .dashboard-layout { --filters-width: 64px; }
+.filters-sidebar-collapsed .filters-sidebar { padding: 0.6rem; }
+.filters-sidebar-collapsed .filters-sidebar .stats-sidebar-header { justify-content: center; margin-bottom: 0; }
+.filters-sidebar-collapsed .filters-sidebar-heading,
+.filters-sidebar-collapsed .filters-sidebar-toggle-text { display: none; }
+.filters-sidebar-collapsed .filters-sidebar-toggle-icon { transform: rotate(180deg); }
+.filters-sidebar .search-command-deck { padding: 0; margin: 0; border: 0; box-shadow: none; background: transparent; backdrop-filter: none; }
+.filters-sidebar .search-command-deck[hidden],
+.filters-sidebar-collapsed .filters-sidebar .search-command-deck { display: none; }
+.filters-sidebar .role-type-segmented-control { flex-direction: column; align-items: stretch; gap: 0.35rem; padding: 0.3rem; margin-bottom: 1rem; }
+.filters-sidebar .type-segment-btn { flex: none; justify-content: flex-start; min-width: 0; padding: 0.65rem; font-size: 0.8rem; }
+.filters-sidebar .segment-badge { margin-left: auto; }
+.filters-sidebar .search-main-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0.5rem; }
+.filters-sidebar .search-input-box { grid-column: 1 / -1; min-width: 0; }
+.filters-sidebar .search-input-box input { min-width: 0; font-size: 0.8rem; }
+.filters-sidebar .btn-command-search, .filters-sidebar .btn-toggle-filters { min-width: 0; justify-content: center; padding: 0.65rem 0.5rem; font-size: 0.8rem; }
+.filters-sidebar .quick-filter-pills { flex-direction: column; align-items: stretch; gap: 0.45rem; padding-top: 1rem; }
+.filters-sidebar .quick-pill { justify-content: space-between; white-space: normal; text-align: left; font-size: 0.75rem; }
+.filters-sidebar .filter-drawer-grid { grid-template-columns: minmax(0, 1fr); }
+.filters-sidebar .drawer-group, .filters-sidebar .drawer-group select { min-width: 0; width: 100%; }
+.filters-sidebar .filter-drawer-actions { flex-wrap: wrap; }
+@media (max-width: 1100px) {
+  .dashboard-layout, .stats-sidebar-collapsed .dashboard-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "overview" "filters" "content";
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .stats-sidebar, .filters-sidebar { position: static; max-height: none; }
+  .stats-sidebar .stats-grid.interactive-stats { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
+  .filters-sidebar-collapsed .filters-sidebar-heading,
+  .filters-sidebar-collapsed .filters-sidebar-toggle-text { display: inline; }
+  .filters-sidebar-collapsed .filters-sidebar .stats-sidebar-header { justify-content: space-between; }
+  .filters-sidebar-toggle-icon { transform: rotate(90deg); }
+  .filters-sidebar-collapsed .filters-sidebar-toggle-icon { transform: rotate(-90deg); }
+  .filters-sidebar .quick-filter-pills { flex-direction: row; flex-wrap: wrap; }
+  .filters-sidebar .quick-pill { flex: 1 1 150px; }
+  .dashboard-layout > .main-content { padding-top: 0; }
+}
