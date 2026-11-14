@@ -30,6 +30,7 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from matching.scoring import score_job
+from llm.analysis import JobAnalyzer
 from matching.semantic_gaps import enrich_job_semantic_gaps
 from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url
 
@@ -962,6 +963,7 @@ def collect_and_score_all_live_jobs(
     scored_jobs = []
     seen_keys = set()
     rejection_counts = Counter()
+    analyzer = JobAnalyzer()
 
     for raw in all_raw:
         title = raw["title"].strip()
@@ -991,15 +993,16 @@ def collect_and_score_all_live_jobs(
         desc = raw["raw_description"]
         hours_ago = raw["hours_ago"]
 
+        extracted = analyzer.analyze(title, desc)
         scored = score_job({
+            **extracted,
             "title": title,
             "company": company,
             "raw_description": desc,
             "location": loc,
-            "seniority": raw.get("seniority") or "junior",
+            "seniority": extracted["seniority"],
             "hours_ago": hours_ago,
             "url": raw["url"],
-            "required_skills": [],
             "location_unverified": raw.get("location_unverified", False),
         }, profile)
 
@@ -1021,6 +1024,7 @@ def collect_and_score_all_live_jobs(
         naukri_url = build_naukri_jobs_url(title)
 
         job_entry = {
+            **extracted,
             "title": title,
             "company": company,
             "location": loc,

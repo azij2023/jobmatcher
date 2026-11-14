@@ -123,8 +123,10 @@ def enrich_job_semantic_gaps(job):
     role = job.get("title", "this role")
     roadmap = f"For {comp}'s {role}: {knowledge['roadmap']}"
     
-    job["missing_skills"] = missing_skill_names
+    # Keep actual requirements from scoring; template suggestions are separate.
+    job.setdefault("missing_skills", missing_skill_names)
     job["semantic_skill_gap"] = {
+        "method": "template",
         "fit_percentage": f"{core_fit_pct}% Core Match",
         "gap_percentage": f"{gap_pct}% Skill Gap",
         "gaps": gaps,

@@ -12,6 +12,7 @@ class GroqClient:
         self.api_key = api_key
         # openai/gpt-oss-20b is fast (1-2s) and reliable on this key
         self.model = model or os.getenv("GROQ_MODEL", "openai/gpt-oss-20b")
+        self.last_model = self.model
         self.is_configured = bool(api_key and not api_key.startswith("your_"))
 
     def chat(self, system_prompt: str, user_prompt: str) -> str:
@@ -41,6 +42,7 @@ class GroqClient:
         try:
             with urllib.request.urlopen(req, timeout=25) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
+                self.last_model = data.get("model", self.model)
                 return data["choices"][0]["message"]["content"]
         except urllib.error.HTTPError as e:
             # Fallback to 20b if 120b rate-limits or is busy
@@ -53,5 +55,6 @@ class GroqClient:
                 )
                 with urllib.request.urlopen(req, timeout=25) as resp2:
                     data2 = json.loads(resp2.read().decode("utf-8"))
+                    self.last_model = data2.get("model", "openai/gpt-oss-20b")
                     return data2["choices"][0]["message"]["content"]
-            raise e
+            raise RuntimeError(f"Groq request failed (HTTP {e.code})") from None

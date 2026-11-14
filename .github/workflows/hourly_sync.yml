@@ -7,6 +7,7 @@ on:
     paths:
       - 'collectors/**'
       - 'matching/**'
+      - 'llm/**'
       - 'processing/**'
       - 'hourly_pipeline.py'
       - 'profile.json'
@@ -41,6 +42,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Restore LLM extraction cache
+        uses: actions/cache/restore@v4
+        with:
+          path: scratch/llm_analysis.sqlite3
+          key: llm-analysis-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: llm-analysis-v1-
+
       - name: Run Job Feed Pipeline
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -49,6 +57,12 @@ jobs:
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
         run: |
           python hourly_pipeline.py
+
+      - name: Save LLM extraction cache
+        uses: actions/cache/save@v4
+        with:
+          path: scratch/llm_analysis.sqlite3
+          key: llm-analysis-v1-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Commit and Push Fresh Jobs
         run: |

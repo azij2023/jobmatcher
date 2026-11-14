@@ -604,6 +604,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // 4. Job Rendering & Filtering
   // ==========================================================================
 
+  function analysisBadge(job) {
+    const method = job.analysis_method;
+    const label = method === 'llm' ? 'LLM analysed' : method === 'fallback' ? 'Fallback parser' : 'Rule-based matching';
+    return `<span class="source-domain-badge">${label}</span>`;
+  }
+
   function getTierBadgeClass(tier) {
     if (tier === 1) return "tier-badge-1";
     if (tier === 2) return "tier-badge-2";
@@ -981,7 +987,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const tierClass = getTierBadgeClass(job.tier);
       const scorePct = Math.round(job.score * 100);
       const matchedTags = (job.matched_skills || []).map(s => 
-        `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`
+        `<span class="skill-tag matched">✓ ${escapeHTML(s.replace(/_/g, ' '))}</span>`
       ).join("");
 
       const freshness = getJobFreshness(job);
@@ -1149,6 +1155,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span class="job-tier-badge ${tierClass}">
                     ${job.badge || '📌'} Tier ${job.tier} • ${job.category}
                   </span>
+                  ${analysisBadge(job)}
                   ${fresherPill}
                   ${internPill}
                   ${freshnessPill}
@@ -1187,7 +1194,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             ${job.missing_skills && job.missing_skills.length > 0 ? `
               <div class="skills-container skill-gaps-container" style="margin-top: -0.5rem;">
-                <div class="skills-label gaps-label">⚡ Semantic Skill Gaps (${job.missing_skills.length}):</div>
+                <div class="skills-label gaps-label">⚡ Missing Requirements (${job.missing_skills.length}):</div>
                 <div class="skills-tags">
                   ${job.missing_skills.slice(0, 3).map(s => `<span class="skill-tag missing">⚡ ${escapeHTML(s.replace(/_/g, ' '))}</span>`).join("")}
                 </div>
@@ -1374,18 +1381,19 @@ document.addEventListener("DOMContentLoaded", () => {
     modalScoreVal.textContent = `${scorePct}%`;
     modalTierBadge.textContent = `${job.badge || '📌'} Tier ${job.tier} • ${job.category} (${job.priority || 'Standard'})`;
     modalTierBadge.className = `job-tier-badge ${getTierBadgeClass(job.tier)}`;
-    modalDescription.textContent = job.description || "Entry-level position aligned with your target role category.";
+    const analysisLabel = job.analysis_method === 'llm' ? 'LLM analysed' : job.analysis_method === 'fallback' ? 'Fallback parser' : 'Rule-based matching';
+    modalDescription.textContent = `${analysisLabel}. ${job.description || "Entry-level position aligned with your target role category."}`;
 
     // Render skills
     const matched = (job.matched_skills || []);
     const missing = (job.missing_skills || []);
 
     modalSkillsMatched.innerHTML = matched.length > 0
-      ? `<strong>Matched (${matched.length}):</strong> ` + matched.map(s => `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`).join(" ")
+      ? `<strong>Matched (${matched.length}):</strong> ` + matched.map(s => `<span class="skill-tag matched">✓ ${escapeHTML(s.replace(/_/g, ' '))}</span>`).join(" ")
       : "<span style='color:var(--text-dim)'>No exact skills matched yet</span>";
 
     modalSkillsMissing.innerHTML = missing.length > 0
-      ? `<strong>Missing / Gaps (${missing.length}):</strong> ` + missing.map(s => `<span class="skill-tag missing">⚡ ${s.replace(/_/g, ' ')}</span>`).join(" ")
+      ? `<strong>Missing / Gaps (${missing.length}):</strong> ` + missing.map(s => `<span class="skill-tag missing">⚡ ${escapeHTML(s.replace(/_/g, ' '))}</span>`).join(" ")
       : "<span style='color:var(--accent-emerald)'>✓ 0 critical gaps identified</span>";
 
     // Populate Semantic Skill Gap & Bridge Roadmap
@@ -3367,7 +3375,7 @@ Best regards,
           const tierClass = getTierBadgeClass(job.tier);
           const scorePct = Math.round(job.score * 100);
           const matchedTags = (job.matched_skills || []).map(s => 
-            `<span class="skill-tag matched">✓ ${s.replace(/_/g, ' ')}</span>`
+            `<span class="skill-tag matched">✓ ${escapeHTML(s.replace(/_/g, ' '))}</span>`
           ).join("");
 
           const freshness = getJobFreshness(job);
@@ -3397,6 +3405,7 @@ Best regards,
                 <div style="display:flex; flex-direction:column; align-items:flex-end; gap:0.25rem;">
                   <span class="job-tier-badge ${tierClass}">${job.badge} Tier ${job.tier} • ${job.category}</span>
                   ${freshnessPill}
+                  ${analysisBadge(job)}
                 </div>
               </div>
 
