@@ -29,6 +29,7 @@ ROOT_DIR = os.path.dirname(SCRIPT_DIR)
 if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
+from matching.management_roles import has_excluded_title, is_entry_management_title
 from matching.scoring import score_job
 from llm.analysis import JobAnalyzer
 from matching.semantic_gaps import enrich_job_semantic_gaps
@@ -178,9 +179,9 @@ def _is_entry_level_listing(title: str, seniority: str, description: str = "") -
     combined_text = f"{title_text} {level_text} {description_text}"
 
     # 1. Hard reject senior titles or explicit 2+, 3+, 4+, 5+ year requirements
-    if any(term in title_text for term in EXCLUDE_TITLES):
+    if has_excluded_title(title_text, EXCLUDE_TITLES):
         return False
-    if any(term in level_text for term in ("mid level", "mid-level", "senior", "lead", "principal", "director", "manager")):
+    if has_excluded_title(level_text, ("mid level", "mid-level", "senior", "lead", "principal", "director")) or ("manager" in level_text and not is_entry_management_title(title_text)):
         return False
     if re.search(r"\b(?:[2-9]|\d{2,})\+?\s*(?:-|to)?\s*\d*\s*years?(?:\s+of)?\s*(?:relevant\s+)?experience\b", combined_text):
         return False
@@ -191,7 +192,7 @@ def _is_entry_level_listing(title: str, seniority: str, description: str = "") -
         return True
     if any(term in description_text for term in (
         "entry-level", "entry level", "fresher", "freshers", "internship",
-        "early career", "new graduate", "recent graduate",
+        "early career", "new graduate", "recent graduate", "fresh graduate",
     )):
         return True
     return bool(re.search(
@@ -233,7 +234,7 @@ def get_remote_location_label(location: str) -> str:
         return "Remote (APAC)"
     return "Remote (Worldwide)"
 
-def fetch_live_linkedin_jobs(max_queries: int = 14) -> list:
+def fetch_live_linkedin_jobs(max_queries: int = 19) -> list:
     """
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
     Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
@@ -244,6 +245,11 @@ def fetch_live_linkedin_jobs(max_queries: int = 14) -> list:
         return []
 
     queries = [
+        "associate AI product manager",
+        "data product management intern",
+        "analytics management trainee",
+        "data science project coordinator fresher",
+        "AI program coordinator entry level",
         "data scientist fresher",
         "data analyst fresher",
         "associate data scientist",
@@ -304,7 +310,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 14) -> list:
                     seen.add(key)
 
                     lower_t = raw_title.lower()
-                    if any(bad in lower_t for bad in EXCLUDE_TITLES):
+                    if has_excluded_title(lower_t, EXCLUDE_TITLES):
                         continue
 
                     time_raw = time_el.get_text(strip=True) if time_el else ""
@@ -381,7 +387,7 @@ def fetch_live_jobicy_jobs() -> list:
 
         for job in data.get("jobs", []):
             title = (job.get("jobTitle") or "").strip()
-            if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+            if not title or has_excluded_title(title.lower(), EXCLUDE_TITLES):
                 continue
 
             level = (job.get("jobLevel") or "").lower()
@@ -439,6 +445,9 @@ def fetch_live_jsearch_jobs() -> list:
         "junior data scientist India",
         "machine learning intern India",
         "AI engineer fresher India",
+        "associate AI product manager India",
+        "analytics management trainee India",
+        "data science project coordinator entry level India",
     )
     live_jobs = []
     for query in queries:
@@ -603,6 +612,9 @@ def fetch_live_adzuna_jobs() -> list:
         "data scientist",
         "machine learning engineer",
         "AI engineer",
+        "associate data product manager",
+        "analytics management trainee",
+        "data science project coordinator",
     )
     live_jobs = []
     for query in queries:
@@ -696,7 +708,7 @@ def fetch_live_remotive_jobs() -> list:
                         continue
 
                     title = j.get("title", "")
-                    if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                    if not title or has_excluded_title(title.lower(), EXCLUDE_TITLES):
                         continue
 
                     company = j.get("company_name", "Tech Company")
@@ -769,7 +781,7 @@ def fetch_live_unstop_jobs() -> list:
                             continue  # Application closed / deadline passed!
 
                     title = item.get('title', '').strip()
-                    if not title or any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                    if not title or has_excluded_title(title.lower(), EXCLUDE_TITLES):
                         continue
 
                     # 3. Real publication timestamp check
@@ -836,7 +848,7 @@ def fetch_live_naukri_rss_jobs() -> list:
                 title = parts[0]
                 if title.lower().startswith(('20', '30', '40', '50', '10', '15', 'search', 'jobs')):
                     continue
-                if any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                if has_excluded_title(title.lower(), EXCLUDE_TITLES):
                     continue
 
                 company = "Tech Company"
@@ -890,7 +902,7 @@ def fetch_live_indeed_rss_jobs() -> list:
                 if not parts:
                     continue
                 title = parts[0]
-                if any(bad in title.lower() for bad in EXCLUDE_TITLES):
+                if has_excluded_title(title.lower(), EXCLUDE_TITLES):
                     continue
 
                 pub_el = item.find('pubDate')

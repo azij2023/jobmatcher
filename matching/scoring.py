@@ -1,4 +1,5 @@
 import re
+from matching.management_roles import is_entry_management_title
 
 def flatten_skills(skills: dict) -> dict:
     flat = {}
@@ -123,7 +124,7 @@ def score_job(job: dict, profile: dict) -> dict:
 
     # Reject Senior / Lead / Principal / Staff / Manager in title
     if re.search(r'\b(?:senior|sr\b|sr\.|staff|principal|lead|head of|director|vp|vice president|manager|architect)\b', title_lower):
-        if not re.search(r'\b(?:associate product manager|apm|intern|trainee)\b', title_lower):
+        if not (is_entry_management_title(title_lower) or re.search(r'\b(?:intern|trainee)\b', title_lower)):
             return {
                 "rejected": True,
                 "final_score": 0.0,
@@ -143,7 +144,7 @@ def score_job(job: dict, profile: dict) -> dict:
         
         # Exception: Allow APM / Associate Product Manager despite 'manager'
         if bad_lower == "manager":
-            if "associate product manager" in title_lower or "apm" in title_lower or "junior product manager" in title_lower:
+            if is_entry_management_title(title_lower):
                 continue
 
         pattern = rf"\b{re.escape(bad_lower)}\b" if not bad_lower.endswith(("+", ".")) else re.escape(bad_lower)
@@ -205,7 +206,7 @@ def score_job(job: dict, profile: dict) -> dict:
     acceptable_seniorities = set(profile.get("seniority", {}).get("acceptable", []))
     exclude_seniorities = set(profile.get("seniority", {}).get("exclude", []))
 
-    if seniority in exclude_seniorities:
+    if seniority in exclude_seniorities and not (seniority == "manager" and is_entry_management_title(title_lower)):
         return {
             "rejected": True,
             "final_score": 0.0,

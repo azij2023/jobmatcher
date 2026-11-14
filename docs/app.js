@@ -307,6 +307,15 @@ document.addEventListener("DOMContentLoaded", () => {
     return u.includes('unstop.com') || d.includes('unstop') || t.includes('unstop');
   };
 
+  function isEntryManagementTitle(title) {
+    title = (title || '').toLowerCase();
+    if (/\b(?:senior|sr\.?|lead|staff|principal|director|head|vp|vice president)\b/.test(title)) return false;
+    if (/\b(?:associate product manager|junior product manager|apm)\b/.test(title)) return true;
+    return /\b(?:data|analytics|ai|ml|machine learning|artificial intelligence)\b/.test(title)
+      && /\b(?:manager|management|project|program|product)\b/.test(title)
+      && /\b(?:associate|junior|intern|internship|trainee|graduate|fresher|entry[ -]level|new grad)\b|\bmanager\s+i\b/.test(title);
+  }
+
   const isZeroExpJob = j => {
     if (!j) return false;
     const minExp = j.min_years_experience != null ? Number(j.min_years_experience) : null;
@@ -316,7 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Reject Senior / Lead / Principal / Staff / Manager
     if (/\b(?:senior|sr\b|sr\.|staff|principal|lead|head of|director|vp|manager|architect)\b/i.test(title)) {
-      if (!/\b(?:associate product manager|apm|intern|trainee)\b/i.test(title)) return false;
+      if (!(isEntryManagementTitle(title) || /\b(?:intern|trainee)\b/i.test(title))) return false;
     }
 
     // Reject Level II, III, IV, etc. (e.g. Applied Scientist II, Research Scientist III)
@@ -335,7 +344,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Require entry-level / fresher marker for full-time jobs
     const isIntern = (typeof isInternshipJob === 'function') ? isInternshipJob(j) : false;
     if (!isIntern) {
-      const hasEntryMarker = /\b(?:fresher|intern|internship|trainee|campus|graduate|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b/i.test(text);
+      const hasEntryMarker = /\b(?:freshers?|intern|internship|trainee|campus|graduates?|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b/i.test(text);
       if (!hasEntryMarker) return false;
     }
 
@@ -2172,7 +2181,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     for (const bad of excludeKeywords) {
-      if (bad === "manager" && (title.includes("associate product manager") || title.includes("apm"))) {
+      if (bad === "manager" && isEntryManagementTitle(title)) {
         continue;
       }
       const regex = new RegExp(`\\b${bad}\\b`, 'i');
@@ -2195,7 +2204,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 3. Seniority exclusion
-    if (["senior", "lead", "staff", "principal", "manager"].includes(seniority)) {
+    if (["senior", "lead", "staff", "principal", "manager"].includes(seniority) && !(seniority === "manager" && isEntryManagementTitle(title))) {
       return {
         rejected: true,
         reason: `Seniority '${seniority}' is excluded for entry-level matching`,

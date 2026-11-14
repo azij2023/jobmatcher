@@ -12,6 +12,7 @@ Ingests verified 0-year fresher & early-career opportunities across all 6 Career
 """
 
 import os
+from matching.management_roles import has_excluded_title
 import re
 import json
 import urllib.request
@@ -44,7 +45,7 @@ def is_fresher_eligible(title: str, text: str = "") -> bool:
     text_low = text.lower()
     
     # Exclude senior roles
-    if any(bad in t_low for bad in EXCLUDE_TITLE_WORDS):
+    if has_excluded_title(t_low, EXCLUDE_TITLE_WORDS):
         return False
         
     # Check experience regex in text
@@ -171,7 +172,7 @@ def parse_rss_listing(raw_title: str, link: str, pub_date_str: str, domain: str,
 
 def fetch_platform_rss(domain: str, platform_name: str, category_name: str, query_filter: str = "when:7d") -> list:
     """Queries indexed search feeds for recent openings on a platform."""
-    query = f'site:{domain} ("data analyst" OR "data scientist" OR "machine learning" OR "decision scientist" OR "APM" OR "AI intern") {query_filter}'
+    query = f'site:{domain} ("data analyst" OR "data scientist" OR "machine learning" OR "decision scientist" OR "APM" OR "AI intern" OR "analytics management trainee" OR "data product manager" OR "AI project coordinator") {query_filter}'
     url = f"https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-IN&gl=IN&ceid=IN:en"
     jobs = []
     seen = set()
@@ -217,7 +218,7 @@ def fetch_remoteok_jobs() -> list:
                 tags = [t.lower() for t in item.get("tags", [])]
                 pos_low = pos.lower()
                 
-                if not pos or not company or any(bad in pos_low for bad in EXCLUDE_TITLE_WORDS):
+                if not pos or not company or has_excluded_title(pos_low, EXCLUDE_TITLE_WORDS):
                     continue
                     
                 is_match = any(k in pos_low for k in ["data", "ml", "machine learning", "ai", "analyst", "python", "analytics", "product"]) or any(t in ["data", "machine learning", "python", "ai"] for t in tags)

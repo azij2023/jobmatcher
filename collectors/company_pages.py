@@ -11,6 +11,7 @@ import urllib.request
 import urllib.parse
 import json
 import re
+from matching.management_roles import is_entry_management_title
 import datetime
 import html as html_lib
 
@@ -66,6 +67,9 @@ ROLE_KEYWORDS = [
     "ai engineer", "ai applied", "quantitative analyst", "analytics",
     "statistician", "decision science", "optimization", "product research",
     "risk analyst", "credit risk", "analytics specialist", "research scientist",
+    "data science project coordinator", "data analytics project coordinator", "ai project coordinator",
+    "data science program coordinator", "ai program coordinator", "data program analyst",
+    "analytics program analyst", "data strategy analyst", "analytics strategy associate",
     "ml engineer", "business analyst", "product manager i", "associate product manager", "apm"
 ]
 
@@ -82,9 +86,11 @@ def is_relevant_role(title: str) -> bool:
     if re.search(r'\b(?:[3-9]|\d{2,})\+?\s*(?:-|to)?\s*\d*\s*(?:years?|yrs?)\b', t):
         return False
     # If title contains 'manager', only allow APM, Product Manager I, or Decision Science / Analytics Manager
-    if "manager" in t:
+    if "manager" in t and not is_entry_management_title(t):
         if not ("associate product manager" in t or "product manager i" in t or "apm" in t or "decision science" in t or "analytics" in t or "risk" in t):
             return False
+    if is_entry_management_title(t):
+        return True
     # Direct match on role keywords
     if any(k in t for k in ROLE_KEYWORDS):
         return True
