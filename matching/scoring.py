@@ -177,10 +177,9 @@ def score_job(job: dict, profile: dict) -> dict:
     # 2b. Check Description for experience requirements (1+ years or 2+ years)
     full_text = f"{title_lower} {raw_desc}".lower()
     exp_threshold = "1" if strict_zero or max_allowed_exp == 0 else "2"
-    exp_pattern = rf"(?:minimum(?:\s+of)?|at\s+least|\b)\s*([{exp_threshold}-9]|\d{{2,}})\+?\s*(?:-\s*\d+)?\s*years?(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?experience"
+    exp_pattern = rf"\b([{exp_threshold}-9]|\d{{2,}})\+?\s*(?:[-–]|to)?\s*\d*\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b"
     exp_match = re.search(exp_pattern, full_text)
-    is_zero_explicit = re.search(r"\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b|\bentry\s*level\b", full_text)
-    if exp_match and not is_zero_explicit:
+    if exp_match:
         return {
             "rejected": True,
             "final_score": 0.0,
@@ -188,12 +187,11 @@ def score_job(job: dict, profile: dict) -> dict:
         }
 
     # 2c. Require entry-level / fresher verification for full-time jobs
-    is_internship = any(kw in title_lower for kw in ['intern', 'internship', 'trainee', 'apprentice'])
+    is_internship = job.get('is_internship') is True or any(kw in title_lower for kw in ['intern', 'internship', 'trainee', 'apprentice'])
     if not is_internship:
         has_entry_marker = bool(
-            job.get("is_fresher") or
             job.get("seniority") in ["junior", "entry_level", "entry", "fresher", "graduate", "intern"] or
-            re.search(r'\b(?:fresher|intern|internship|trainee|campus|graduate|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567]|\b[a-z]+\s+[i1]\b)\b', full_text)
+            re.search(r'\b(?:freshers?|fresh\s+graduates?|entry[ -]level|junior|new\s*grad(?:uate)?|recent\s+graduate|no\s+(?:prior\s+|previous\s+)?experience|0\s*(?:[-–]|to)?\s*\d*\s*years?(?:\s+of)?\s+experience)\b', full_text)
         )
         if not has_entry_marker:
             return {

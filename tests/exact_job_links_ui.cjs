@@ -25,5 +25,10 @@ for (const file of ['app.js', 'docs/app.js']) {
     title: 'Data Scientist', company: 'Example', url: 'https://www.linkedin.com/jobs/view/1234567890',
     source_type: 'LinkedIn', posted_at_source: 'published_at'
   }), true);
+  assert.equal(context.isDisplayable({
+    title: 'Business Analyst', company: 'Example', url: 'https://www.linkedin.com/jobs/view/1234567890',
+    source_type: 'LinkedIn', posted_at_source: 'published_at',
+    raw_description: 'Verified entry-level fresher role (0-1 years exp) listed on LinkedIn (entry-level filter f_E=1,2).'
+  }), false);
   console.log(`${file}: legacy RSS search cards hidden, direct posts retained`);
 }

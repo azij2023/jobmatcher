@@ -324,10 +324,6 @@ def fetch_live_linkedin_jobs(max_queries: int = 19) -> list:
                     if freshness.get("hours_ago", 0) > 48.0:
                         continue
 
-                    is_intern = any(kw in lower_t for kw in ['intern', 'internship', 'trainee', 'apprentice'])
-                    desc_type = "Verified internship position" if is_intern else "Verified entry-level fresher role (0-1 years exp)"
-                    desc = f"{raw_title} at {company} in {loc}. {desc_type} listed on LinkedIn (entry-level filter f_E=1,2)."
-
                     live_jobs.append({
                         "title": raw_title,
                         "company": company,
@@ -337,11 +333,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 19) -> list:
                         **freshness,
                         "source_type": "LinkedIn",
                         "source_domain": "linkedin.com",
-                        "raw_description": desc,
                         "is_post": False,
-                        "is_fresher": True,
-                        "seniority": "junior",
-                        "is_internship": is_intern
                     })
         except urllib.error.HTTPError as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
@@ -362,7 +354,43 @@ def fetch_live_linkedin_jobs(max_queries: int = 19) -> list:
                 if job['url'] not in seen:
                     seen.add(job['url'])
                     live_jobs.append(job)
-    return sorted(live_jobs, key=lambda job: job['hours_ago'])
+
+    # The search card's f_E filter is not evidence of the employer's requirements.
+    # Only keep postings whose public detail page provides an actual description.
+    def enrich(job):
+        try:
+            req = urllib.request.Request(job['url'], headers=HEADERS)
+            with urllib.request.urlopen(req, timeout=8) as response:
+                detail = BeautifulSoup(response.read().decode('utf-8', errors='ignore'), 'html.parser')
+            body = detail.select_one('.show-more-less-html__markup')
+            if body is None:
+                return None
+            description = body.get_text(' ', strip=True)
+            if not description:
+                return None
+            criteria = {}
+            for item in detail.select('.description__job-criteria-item'):
+                heading = item.find('h3')
+                if heading:
+                    value = item.find('span') or item.find('dd')
+                    if value:
+                        criteria[heading.get_text(' ', strip=True).lower()] = value.get_text(' ', strip=True).lower()
+            level = criteria.get('seniority level', '')
+            employment = criteria.get('employment type', '')
+            if not _is_entry_level_listing(job['title'], level, description):
+                return None
+            internship = ('internship' in level or 'internship' in employment or
+                          bool(re.search(r'\b(?:intern|internship|trainee|apprentice)\b', job['title'], re.I)))
+            job['raw_description'] = description
+            job['seniority'] = _normalize_seniority(level)
+            job['is_internship'] = internship
+            return job
+        except (OSError, ValueError, TypeError):
+            return None
+
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        verified = [job for job in executor.map(enrich, live_jobs) if job is not None]
+    return sorted(verified, key=lambda job: job['hours_ago'])
 
 def fetch_live_jobicy_jobs() -> list:
     """
@@ -1015,7 +1043,8 @@ def collect_and_score_all_live_jobs(
             "company": company,
             "raw_description": desc,
             "location": loc,
-            "seniority": extracted["seniority"],
+            "seniority": raw.get("seniority") or extracted["seniority"],
+            "is_internship": raw.get("is_internship", False),
             "hours_ago": hours_ago,
             "url": raw["url"],
             "location_unverified": raw.get("location_unverified", False),
@@ -1062,7 +1091,8 @@ def collect_and_score_all_live_jobs(
             "company_job_verified": raw.get("company_job_verified", False),
             "job_publisher": raw.get("job_publisher"),
             "location_unverified": raw.get("location_unverified", False),
-            "is_fresher": True,
+            "is_fresher": scored.get("is_fresher", False),
+            "is_internship": raw.get("is_internship", False),
             "matched_skills": scored.get("matched_skills", []),
             "missing_skills": scored.get("missing_skills", []),
             "description": desc[:280] + ("..." if len(desc) > 280 else ""),

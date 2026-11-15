@@ -73,6 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ]);
   const hasVerifiedPublicationTime = job =>
     Boolean(job && (job.title || job.company) && (job.url || job.linkedin_url)) &&
+    !(job.source_type === 'LinkedIn' &&
+      /Verified (?:entry-level fresher role|internship position).*listed on LinkedIn/.test(job.raw_description || '')) &&
     !(unverifiedRssSources.has(job.source_type) &&
       job.posted_at_source === `${job.source_type} Live Feed`) &&
     (job.source_type !== 'Official Company Portal' || job.company_job_verified === true);
@@ -422,10 +424,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reject if minimum years of experience > 0
     if (minExp !== null && minExp > 0) return false;
 
-    // Reject if demands 1+ years experience without explicit zero / fresher
-    const hasExpReq = /\b(?:[1-9]\d*)\+?\s*(?:-|to)?\s*\d*\s*years?(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?experience\b/i.test(text);
+    const hasExpReq = /\b[1-9]\d*\+?\s*(?:[-–]|to)?\s*\d*\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b/i.test(text);
     const isExplicitZero = /\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b|\bentry\s*level\b/i.test(text);
-    if (hasExpReq && !isExplicitZero) return false;
+    if (hasExpReq) return false;
 
     // Require entry-level / fresher marker for full-time jobs
     const isIntern = (typeof isInternshipJob === 'function') ? isInternshipJob(j) : false;
