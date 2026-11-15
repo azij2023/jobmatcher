@@ -6,6 +6,7 @@ import datetime
 from collectors.live_job_collector import collect_and_score_all_live_jobs
 from matching.scoring import score_job
 from collectors.company_pages import is_unverified_company_job
+from collectors.multi_channel_collector import is_unverified_rss_job
 from collectors.career_urls import build_linkedin_jobs_url, build_naukri_jobs_url, build_multi_source_urls
 
 def export_data():
@@ -36,6 +37,8 @@ def export_data():
 
     # Include existing valid jobs
     for ej in existing_jobs:
+        if is_unverified_rss_job(ej):
+            continue
         key = (ej.get("company", "").strip().lower(), ej.get("title", "").strip().lower())
         if key not in seen_keys:
             seen_keys.add(key)
@@ -45,7 +48,7 @@ def export_data():
     detailed_jobs = []
 
     for raw in all_raw_jobs:
-        if is_unverified_company_job(raw):
+        if is_unverified_company_job(raw) or is_unverified_rss_job(raw):
             continue
         title = raw.get("title", "Specialist")
         company = raw.get("company", "Tech Company")

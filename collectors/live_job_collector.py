@@ -954,7 +954,7 @@ def collect_and_score_all_live_jobs(
 
     print("[LiveCollector] Fetching from verified platforms (Multi-Channel, Company Portals, Unstop, LinkedIn, Remotive, Jobicy)...")
     from collectors.company_pages import fetch_company_jobs
-    from collectors.multi_channel_collector import fetch_all_channel_jobs
+    from collectors.multi_channel_collector import fetch_all_channel_jobs, is_unverified_rss_job
     raw_company = fetch_company_jobs()
     raw_unstop = fetch_live_unstop_jobs()
     raw_linkedin = fetch_live_linkedin_jobs()
@@ -978,6 +978,9 @@ def collect_and_score_all_live_jobs(
     analyzer = JobAnalyzer()
 
     for raw in all_raw:
+        if is_unverified_rss_job(raw):
+            rejection_counts["unverified_rss_search_result"] += 1
+            continue
         title = raw["title"].strip()
         company = raw["company"].strip()
         url = raw["url"].strip()

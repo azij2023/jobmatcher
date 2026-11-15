@@ -90,8 +90,9 @@ def run_hourly_sync():
     # Keep valid existing jobs, strictly purging any pseudo-jobs, search redirects, or expired deadlines
     valid_existing = []
     from collectors.company_pages import is_unverified_company_job
+    from collectors.multi_channel_collector import is_unverified_rss_job
     for job in data.get("jobs", []):
-        if is_unverified_company_job(job):
+        if is_unverified_company_job(job) or is_unverified_rss_job(job):
             continue
         t = (job.get("title") or "").strip()
         c = (job.get("company") or "").strip()
@@ -187,6 +188,8 @@ def run_hourly_sync():
     added_count = 0
 
     for job in live_scraped_jobs:
+        if is_unverified_rss_job(job):
+            continue
         j_key = normalize_job_key(job.get('company'), job.get('title'), job.get('is_post'))
         j_url = (job.get("url") or "").lower()
         existing_job = existing_by_url.get(j_url) or existing_by_key.get(j_key)

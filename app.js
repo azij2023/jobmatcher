@@ -67,8 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
     stats: {}
   };
 
+  const unverifiedRssSources = new Set([
+    'Naukri', 'Indeed India', 'Foundit', 'Shine', 'TimesJobs',
+    'Wellfound', 'Instahyre', 'Cutshort', 'Hirist', 'Internshala', 'Apna'
+  ]);
   const hasVerifiedPublicationTime = job =>
     Boolean(job && (job.title || job.company) && (job.url || job.linkedin_url)) &&
+    !(unverifiedRssSources.has(job.source_type) &&
+      job.posted_at_source === `${job.source_type} Live Feed`) &&
     (job.source_type !== 'Official Company Portal' || job.company_job_verified === true);
 
   let jobs = (data.jobs || []).filter(hasVerifiedPublicationTime);

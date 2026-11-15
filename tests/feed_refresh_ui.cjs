@@ -12,10 +12,10 @@ async function check(file) {
   const context = vm.createContext({
     URL, AbortController, setTimeout: (fn, ms) => ms === 3000 ? setImmediate(fn) : setTimeout(fn, ms), clearTimeout, setInterval,
     window: { location: { href: 'https://example.com/' } }, data: old, jobs: old.jobs, stats: {}, profile: {},
-    document: { querySelectorAll: () => [] }, escapeHTML: value => value,
+    document: { querySelectorAll: () => [], addEventListener() {} }, escapeHTML: value => value,
     navRefreshBtn: null, navRefreshIcon: null, navRefreshLabel: null,
     hasVerifiedPublicationTime: () => true, mergeSavedCustomJobs() {}, initStats() {}, updateFilterPillCounts() {},
-    renderJobs() {}, renderCuratedFeed() {}, renderCompanySites() {}, renderAppliedJobs() {}, showToast() {}, console,
+    renderJobs() {}, renderCuratedFeed() {}, renderCompanySites() {}, renderAppliedJobs() {}, renderSpamJobs() {}, showToast() {}, console,
     fetch: async endpoint => {
       calls.push(endpoint);
       return { ok: true, json: async () => endpoint.includes('/api/jobs') ? latest : old };

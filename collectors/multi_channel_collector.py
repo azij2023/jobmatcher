@@ -1,17 +1,5 @@
-"""
-Multi-Channel Career Network Collector
-TargetMatch AI - Multi-Platform Real-Time Job Ingestion Engine
+"""RemoteOK API collection and identification of legacy Google News RSS cards."""
 
-Ingests verified 0-year fresher & early-career opportunities across all 6 Career Channel categories:
-1. General (India): Naukri, Indeed India, Foundit, Shine, TimesJobs
-2. Tech / Startup: Wellfound, Instahyre, Cutshort, Hirist
-3. Internships / Freshers: Internshala, Unstop, Apna
-4. Data / Analytics-Specific: Analytics Vidhya, Analytics India Mag
-5. Remote / Global: RemoteOK, Remotive, Jobicy
-6. Direct Company Career Portals: Swiggy, Flipkart, PhonePe, Razorpay, Meesho, CRED, Zepto, etc.
-"""
-
-import os
 from matching.management_roles import has_excluded_title
 import re
 import json
@@ -19,7 +7,17 @@ import urllib.request
 import urllib.parse
 import datetime
 import xml.etree.ElementTree as ET
-from concurrent.futures import ThreadPoolExecutor, as_completed
+
+LEGACY_RSS_SOURCES = frozenset({
+    "Naukri", "Indeed India", "Foundit", "Shine", "TimesJobs",
+    "Wellfound", "Instahyre", "Cutshort", "Hirist", "Internshala", "Apna",
+})
+
+
+def is_unverified_rss_job(job: dict) -> bool:
+    """Legacy cards used Google News dates and constructed search URLs, not job posts."""
+    source = job.get("source_type")
+    return source in LEGACY_RSS_SOURCES and job.get("posted_at_source") == f"{source} Live Feed"
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -258,68 +256,10 @@ def fetch_remoteok_jobs() -> list:
     return jobs
 
 def fetch_all_channel_jobs() -> list:
-    """
-    Coordinates simultaneous collection across all 6 Career Channel groups.
-    Returns deduplicated, structured jobs covering Naukri, Indeed, Foundit, Shine,
-    Wellfound, Instahyre, Cutshort, Hirist, Internshala, Apna, RemoteOK, and Company Sites.
-    """
-    channel_targets = [
-        # 1. General (India)
-        ("naukri.com", "Naukri", "General (India)"),
-        ("in.indeed.com", "Indeed India", "General (India)"),
-        ("foundit.in", "Foundit", "General (India)"),
-        ("shine.com", "Shine", "General (India)"),
-        ("timesjobs.com", "TimesJobs", "General (India)"),
-
-        # 2. Tech / Startup
-        ("wellfound.com", "Wellfound", "Tech / Startup"),
-        ("instahyre.com", "Instahyre", "Tech / Startup"),
-        ("cutshort.io", "Cutshort", "Tech / Startup"),
-        ("hirist.tech", "Hirist", "Tech / Startup"),
-
-        # 3. Internships / Freshers
-        ("internshala.com", "Internshala", "Internships / Freshers"),
-        ("apna.co", "Apna", "Internships / Freshers")
-    ]
-
-    all_jobs = []
-
-    # Parallelize fetch across all platform search endpoints
-    with ThreadPoolExecutor(max_workers=8) as executor:
-        futures = {
-            executor.submit(fetch_platform_rss, dom, name, cat): (name, dom)
-            for dom, name, cat in channel_targets
-        }
-        # Also submit RemoteOK API
-        remoteok_future = executor.submit(fetch_remoteok_jobs)
-        
-        for future in as_completed(futures):
-            name, dom = futures[future]
-            try:
-                res = future.result()
-                all_jobs.extend(res)
-                print(f"[MultiChannel] Ingested {len(res)} jobs from {name}")
-            except Exception as e:
-                print(f"[MultiChannel] Error on {name}: {e}")
-
-        try:
-            ro_jobs = remoteok_future.result()
-            all_jobs.extend(ro_jobs)
-            print(f"[MultiChannel] Ingested {len(ro_jobs)} jobs from RemoteOK")
-        except Exception as e:
-            print(f"[MultiChannel] Error on RemoteOK: {e}")
-
-    # Deduplicate by (title, company)
-    deduped = []
-    seen = set()
-    for j in all_jobs:
-        k = (j["title"].lower(), j["company"].lower())
-        if k not in seen:
-            seen.add(k)
-            deduped.append(j)
-
-    print(f"[MultiChannel] Total unified multi-channel jobs collected: {len(deduped)}")
-    return deduped
+    """Only return source-provided job records; indexed RSS headlines are not jobs."""
+    jobs = fetch_remoteok_jobs()
+    print(f"[MultiChannel] Ingested {len(jobs)} jobs from RemoteOK")
+    return jobs
 
 if __name__ == "__main__":
     jobs = fetch_all_channel_jobs()
