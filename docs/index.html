@@ -53,6 +53,9 @@
         <button class="nav-tab" data-tab="rejected" id="tab-btn-rejected">
           Rejected Jobs (<span id="nav-rejected-count">0</span>)
         </button>
+        <button class="nav-tab" data-tab="spam" id="tab-btn-spam">
+          Spam (<span id="nav-spam-count">0</span>)
+        </button>
         <button class="nav-tab" data-tab="company-sites" id="tab-btn-company-sites">
           <span class="tab-icon">🏢</span> Company Sites (<span id="nav-company-sites-count">0</span>)
         </button>
@@ -312,6 +315,22 @@
           <span id="rejected-jobs-count" role="status" aria-live="polite">0 rejected jobs</span>
         </div>
         <div class="jobs-grid" id="rejected-jobs-grid"></div>
+      </div>
+    </section>
+
+    <section class="tab-content" id="view-spam">
+      <div class="section-card">
+        <div class="section-header"><div>
+          <h2 class="section-title">Spam</h2>
+          <p class="section-desc">Flagged jobs stay here for 24 hours, then are removed automatically. They remain blocked from your feed unless you restore them before then.</p>
+          <p class="applied-storage-note">Saved only in this browser on this device; this does not report the job to its publisher.</p>
+        </div></div>
+        <div class="applied-jobs-toolbar">
+          <label for="spam-jobs-search">Search spam jobs</label>
+          <input type="search" id="spam-jobs-search" placeholder="Job title, company or location" autocomplete="off">
+          <span id="spam-jobs-count" role="status" aria-live="polite">0 flagged jobs</span>
+        </div>
+        <div class="jobs-grid" id="spam-jobs-grid"></div>
       </div>
     </section>
 
@@ -1294,6 +1313,7 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary btn-reject-job" id="modal-reject-job">Reject Job</button>
         <button type="button" class="btn btn-secondary btn-mark-applied" id="modal-mark-applied">✓ Mark as Applied</button>
+        <button type="button" class="btn btn-secondary btn-scam-job" id="modal-scam-job">Scam</button>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" id="modal-apply-linkedin">
           <span>💼 Apply on LinkedIn (Past 24h & Fresher) ↗</span>
         </a>
@@ -1315,6 +1335,6 @@
 
   <!-- Data & Logic Scripts -->
   <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261114_datamanagement1"></script>
+  <script src="app.js?v=20261115_spam2"></script>
 </body>
 </html>

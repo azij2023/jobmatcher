@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function getAvailableSavedJobIds() {
-    return getSavedJobIds().filter(url => !isJobApplied({ url }) && !isJobRejected({ url }));
+    return getSavedJobIds().filter(url => !isJobApplied({ url }) && !isJobRejected({ url }) && !isJobSpam({ url }));
   }
 
   function storeAppliedJobs(next) {
@@ -242,6 +242,86 @@ document.addEventListener("DOMContentLoaded", () => {
   function restoreRejectedJob(key) {
     const next = rejectedJobs.filter(job => getAppliedJobKey(job) !== key);
     return next.length !== rejectedJobs.length && storeRejectedJobs(next);
+  }
+
+  // Scam flags are private to this browser; they do not report a listing to its publisher.
+  const SPAM_STORAGE_KEY = 'targetmatch_spam_jobs';
+  const SPAM_RETENTION_MS = 24 * 60 * 60 * 1000;
+  let spamState = readSpamState();
+  let spamJobs = spamState.jobs;
+  let blockedSpamJobKeys = new Set(spamState.blocked);
+
+  function readSpamState() {
+    try {
+      const stored = JSON.parse(localStorage.getItem(SPAM_STORAGE_KEY) || '[]');
+      // Older versions stored only the visible folder. Migrate those flags to the blocklist.
+      const records = Array.isArray(stored) ? stored : stored?.jobs;
+      if (!Array.isArray(records)) return { jobs: [], blocked: [] };
+      const unique = new Map();
+      const blocked = new Set(Array.isArray(stored?.blocked)
+        ? stored.blocked.filter(key => typeof key === 'string' && key.trim()) : []);
+      const now = Date.now();
+      for (const job of records) {
+        if (!job || typeof job.title !== 'string' || typeof job.company !== 'string' || typeof job.url !== 'string' || !job.url.trim()) continue;
+        const key = getAppliedJobKey(job);
+        blocked.add(key);
+        const flaggedAt = Date.parse(job.flagged_at);
+        const validTime = Number.isFinite(flaggedAt) && flaggedAt <= now ? flaggedAt : now;
+        if (now - validTime < SPAM_RETENTION_MS) {
+          unique.set(key, { ...job, flagged_at: new Date(validTime).toISOString() });
+        }
+      }
+      const next = { jobs: [...unique.values()], blocked: [...blocked] };
+      if (JSON.stringify(next) !== JSON.stringify(stored)) {
+        try { localStorage.setItem(SPAM_STORAGE_KEY, JSON.stringify(next)); } catch (error) {}
+      }
+      return next;
+    } catch (error) { return { jobs: [], blocked: [] }; }
+  }
+
+  function readSpamJobs() {
+    return readSpamState().jobs;
+  }
+
+  function isJobSpam(job) {
+    return blockedSpamJobKeys.has(getAppliedJobKey(job));
+  }
+
+  function storeSpamJobs(next, blocked = blockedSpamJobKeys) {
+    try {
+      const nextBlocked = [...blocked];
+      localStorage.setItem(SPAM_STORAGE_KEY, JSON.stringify({ jobs: next, blocked: nextBlocked }));
+      spamJobs = next;
+      blockedSpamJobKeys = new Set(nextBlocked);
+      return true;
+    } catch (error) {
+      showToast('Could not save your Spam folder. Check browser storage and try again.');
+      return false;
+    }
+  }
+
+  function markJobSpam(job) {
+    if (!job || isJobSpam(job) || isJobApplied(job) || isJobRejected(job)) return false;
+    const key = getAppliedJobKey(job);
+    return storeSpamJobs([{ title: job.title, company: job.company,
+      location: job.location, url: job.url || job.direct_job_url,
+      direct_job_url: job.direct_job_url, description: job.description || '',
+      flagged_at: new Date().toISOString() }, ...spamJobs], new Set([...blockedSpamJobKeys, key]));
+  }
+
+  function restoreSpamJob(key) {
+    const next = spamJobs.filter(job => getAppliedJobKey(job) !== key);
+    if (next.length === spamJobs.length) return false;
+    const blocked = new Set(blockedSpamJobKeys);
+    blocked.delete(key);
+    return storeSpamJobs(next, blocked);
+  }
+
+  function expireSpamJobs() {
+    const now = Date.now();
+    const next = spamJobs.filter(job => now - Date.parse(job.flagged_at) < SPAM_RETENTION_MS);
+    if (next.length === spamJobs.length || !storeSpamJobs(next)) return;
+    renderSpamJobs();
   }
 
   // DOM Elements
@@ -443,7 +523,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function initStats() {
-    const availableJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job));
+    const availableJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job) && !isJobSpam(job));
     const fullTimeJobsCount = availableJobs.filter(j => !isInternshipJob(j)).length;
     const internshipJobsCount = availableJobs.filter(isInternshipJob).length;
     const primaryCount = availableJobs.filter(j => j.priority === "Primary" || [1, 2, 3, 4, 5, 6, 7].includes(j.tier)).length;
@@ -486,7 +566,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateFilterPillCounts() {
-    const availableJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job));
+    const availableJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job) && !isJobSpam(job));
     const savedIds = getAvailableSavedJobIds();
     const countAllEl = document.getElementById("count-all");
     const countCompanyEl = document.getElementById("count-company");
@@ -763,7 +843,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderJobs() {
     let filtered = jobs.filter(job => {
-      if (isJobApplied(job) || isJobRejected(job)) return false;
+      if (isJobApplied(job) || isJobRejected(job) || isJobSpam(job)) return false;
       // Shortlist filter
       if (currentFilter.onlySaved) {
         const jId = getJobId(job);
@@ -1216,6 +1296,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="card-actions">
             <button type="button" class="btn btn-secondary btn-reject-job" data-reject-job="${escapeHTML(getJobId(job))}">Reject Job</button>
             <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
+            <button type="button" class="btn btn-secondary btn-scam-job" data-scam-job="${escapeHTML(getJobId(job))}" aria-label="Mark ${escapeHTML(job.title)} at ${escapeHTML(job.company)} as scam">Scam</button>
             <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="${applyBtnClass}" title="Direct application link for ${escapeHTML(job.title)} at ${escapeHTML(job.company)}">
               <span>${applyBtnText}</span>
             </a>
@@ -1285,7 +1366,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".job-card").forEach(card => {
       card.addEventListener("click", (e) => {
         // Prevent opening if clicking an <a> tag, copy button, or bookmark star
-        if (e.target.closest("[data-reject-job]") || e.target.closest("[data-restore-rejected]") || e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn") || e.target.closest("[data-mark-applied]") || e.target.closest("[data-restore-applied]")) return;
+        if (e.target.closest("[data-reject-job]") || e.target.closest("[data-restore-rejected]") || e.target.closest("[data-scam-job]") || e.target.closest("[data-restore-spam]") || e.target.closest("a") || e.target.closest(".copy-btn") || e.target.closest(".card-star-btn") || e.target.closest("[data-mark-applied]") || e.target.closest("[data-restore-applied]")) return;
         const cardId = card.id;
         const found = jobs.find(j => cardId.includes((j.company || '').replace(/\s+/g, '-').toLowerCase()));
         if (found) openJobModal(found);
@@ -1492,6 +1573,8 @@ document.addEventListener("DOMContentLoaded", () => {
     modalApplyLinkedin.className = isModalLinkedIn ? "btn btn-primary btn-linkedin" : (isModalUnstop ? "btn btn-primary btn-unstop" : (isModalAts ? "btn btn-primary btn-ats" : "btn btn-primary btn-direct-portal"));
     const rejectButton = document.getElementById('modal-reject-job');
     if (rejectButton) rejectButton.setAttribute('data-reject-job', getJobId(job));
+    const scamButton = document.getElementById('modal-scam-job');
+    if (scamButton) scamButton.setAttribute('data-scam-job', getJobId(job));
     const appliedButton = document.getElementById('modal-mark-applied');
     if (appliedButton) {
       appliedButton.setAttribute('data-mark-applied', getJobId(job));
@@ -3211,7 +3294,7 @@ Best regards,
   // Render Curated Feed Section
   function renderCuratedFeed() {
     if (!curatedFeedGrid) return;
-    const postJobs = jobs.filter(j => !isJobApplied(j) && !isJobRejected(j) && (j.is_post || j.source_type === "LinkedIn Post"));
+    const postJobs = jobs.filter(j => !isJobApplied(j) && !isJobRejected(j) && !isJobSpam(j) && (j.is_post || j.source_type === "LinkedIn Post"));
     if (postJobs.length === 0) {
       curatedFeedGrid.innerHTML = `<p style="color:var(--text-dim)">No curated LinkedIn feed posts found.</p>`;
       return;
@@ -3251,6 +3334,7 @@ Best regards,
             <button class="btn btn-secondary btn-sm copy-feed-pitch-btn" data-outreach="${escapeHTML(p.outreach_dm || '')}" title="Copy Outreach DM">
               📋 DM
             </button>
+            <button type="button" class="btn btn-secondary btn-sm btn-scam-job" data-scam-job="${escapeHTML(getJobId(p))}">Scam</button>
           </div>
         </div>
       `;
@@ -3339,7 +3423,7 @@ Best regards,
 
   function renderCompanySites() {
     // 1. Filter company site jobs
-    const allCompanyJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job) && isCompanySiteJob(job));
+    const allCompanyJobs = jobs.filter(job => !isJobApplied(job) && !isJobRejected(job) && !isJobSpam(job) && isCompanySiteJob(job));
 
     // Update global counters
     if (navCompanySitesCount) navCompanySitesCount.textContent = allCompanyJobs.length;
@@ -3440,6 +3524,7 @@ Best regards,
               <div class="job-card-footer">
                 <button type="button" class="btn btn-secondary btn-reject-job" data-reject-job="${escapeHTML(getJobId(job))}">Reject Job</button>
             <button type="button" class="btn btn-secondary btn-mark-applied" data-mark-applied="${escapeHTML(getJobId(job))}">✓ Mark as Applied</button>
+                <button type="button" class="btn btn-secondary btn-scam-job" data-scam-job="${escapeHTML(getJobId(job))}">Scam</button>
                 <a href="${escapeHTML(targetUrl)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-direct-portal" style="flex:1; justify-content:center;">
                   <span>🚀 View Job &amp; Apply ↗</span>
                 </a>
@@ -3573,6 +3658,38 @@ Best regards,
     }).join('');
   }
 
+  function renderSpamJobs() {
+    const grid = document.getElementById('spam-jobs-grid');
+    const navCount = document.getElementById('nav-spam-count');
+    if (navCount) navCount.textContent = spamJobs.length;
+    if (!grid) return;
+    const query = (document.getElementById('spam-jobs-search')?.value || '').trim().toLowerCase();
+    const filtered = spamJobs.filter(job => `${job.title} ${job.company} ${job.location || ''}`.toLowerCase().includes(query))
+      .sort((a, b) => (Date.parse(b.flagged_at) || 0) - (Date.parse(a.flagged_at) || 0));
+    const count = document.getElementById('spam-jobs-count');
+    if (count) count.textContent = `${filtered.length} of ${spamJobs.length} flagged jobs`;
+    if (!filtered.length) {
+      grid.innerHTML = `<div class="empty-state applied-empty-state"><h3>${query ? 'No spam jobs match your search' : 'Spam folder is empty'}</h3><p>${query ? 'Try another company or job title.' : 'Choose Scam on a job card to move it here for 24 hours. Its link stays blocked afterward.'}</p></div>`;
+      return;
+    }
+    grid.innerHTML = filtered.map(job => {
+      const flaggedAt = Date.parse(job.flagged_at);
+      const date = Number.isFinite(flaggedAt) ? new Date(flaggedAt).toLocaleString() : 'Date not recorded';
+      return `<article class="job-card applied-job-card">
+        <div>
+          <span class="applied-status-badge">Flagged as scam</span>
+          <h3 class="job-title">${escapeHTML(job.title)}</h3>
+          <div class="job-company-loc"><span class="job-company">${escapeHTML(job.company)}</span><span class="job-location">${escapeHTML(job.location || '')}</span></div>
+          <p class="applied-date">Flagged: ${escapeHTML(date)}</p>
+          <p class="job-description">${escapeHTML(job.description || '')}</p>
+        </div>
+        <div class="card-actions">
+          <button type="button" class="btn btn-secondary" data-restore-spam="${escapeHTML(getAppliedJobKey(job))}">Move Back to Jobs</button>
+        </div>
+      </article>`;
+    }).join('');
+  }
+
 
   function refreshApplicationViews() {
     currentPage = 1;
@@ -3583,6 +3700,7 @@ Best regards,
     renderCuratedFeed();
     renderAppliedJobs();
     renderRejectedJobs();
+    renderSpamJobs();
   }
 
   document.addEventListener('click', event => {
@@ -3640,6 +3758,36 @@ Best regards,
   window.addEventListener('storage', event => {
     if (event.key === REJECTED_STORAGE_KEY || event.key === null) {
       rejectedJobs = readRejectedJobs();
+      refreshApplicationViews();
+    }
+  });
+
+  document.addEventListener('click', event => {
+    const scam = event.target.closest('[data-scam-job]');
+    const restore = event.target.closest('[data-restore-spam]');
+    if (!scam && !restore) return;
+    event.preventDefault();
+    event.stopPropagation();
+    if (scam) {
+      const job = jobs.find(candidate => getJobId(candidate) === scam.getAttribute('data-scam-job'));
+      if (!markJobSpam(job)) return;
+      closeJobModal();
+      refreshApplicationViews();
+      showToast('Moved to Spam. This flag is saved only in this browser.');
+    } else {
+      const key = restore.getAttribute('data-restore-spam');
+      if (!restoreSpamJob(key)) return;
+      refreshApplicationViews();
+      const inFeed = jobs.some(job => getAppliedJobKey(job) === key);
+      showToast(inFeed ? 'Moved back to available jobs.' : 'Removed from Spam. This role is no longer in the live feed.');
+    }
+  });
+  document.getElementById('spam-jobs-search')?.addEventListener('input', renderSpamJobs);
+  window.addEventListener('storage', event => {
+    if (event.key === SPAM_STORAGE_KEY || event.key === null) {
+      spamState = readSpamState();
+      spamJobs = spamState.jobs;
+      blockedSpamJobKeys = new Set(spamState.blocked);
       refreshApplicationViews();
     }
   });
@@ -3706,6 +3854,7 @@ Best regards,
     renderCuratedFeed();
     renderCompanySites();
     renderAppliedJobs();
+    renderSpamJobs();
     updateFeedStatus();
   }
 
@@ -3763,8 +3912,14 @@ Best regards,
   }
 
   function setupRealtimeLiveStream() {
-    setInterval(() => { refreshJobsLive(true); }, 30000);
+    setInterval(() => {
+      expireSpamJobs();
+      refreshJobsLive(true);
+    }, 30000);
   }
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) expireSpamJobs();
+  });
 
   if (navRefreshBtn) {
     navRefreshBtn.addEventListener("click", () => {
@@ -3784,6 +3939,7 @@ Best regards,
   setTimeout(() => { refreshJobsLive(true); }, 50);
   renderAppliedJobs();
   renderRejectedJobs();
+  renderSpamJobs();
   updateFeedStatus();
   setupRealtimeLiveStream();
 });

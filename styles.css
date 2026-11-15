@@ -4233,6 +4233,7 @@ input[type="range"] {
 .card-actions:has(.btn-mark-applied), .job-card-footer:has(.btn-mark-applied), .applied-job-card .card-actions { flex-wrap: wrap; }
 
 .btn-reject-job { white-space: nowrap; }
+.btn-scam-job { white-space: nowrap; }
 .modal-footer:has(.btn-reject-job) { flex-wrap: wrap; }
 
 /* Collapsible overview sidebar */
@@ -4484,5 +4485,6 @@ input[type="range"] {
 .jobs-grid .card-actions:has([data-mark-applied]) > .btn-reject-job { grid-column: 1; grid-row: 2; }
 .jobs-grid .card-actions:has([data-mark-applied]) > .btn-mark-applied { grid-column: 2; grid-row: 2; }
 .jobs-grid .card-actions:has([data-mark-applied]) > .copy-btn { grid-column: 3; grid-row: 2; }
-.jobs-grid .card-actions:has([data-mark-applied]) > .btn-backup-search { grid-column: 1; grid-row: 3; }
-.jobs-grid .card-actions:has([data-mark-applied]) > .view-details-btn { grid-column: 2 / -1; grid-row: 3; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn-scam-job { grid-column: 1; grid-row: 3; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .btn-backup-search { grid-column: 2 / -1; grid-row: 3; }
+.jobs-grid .card-actions:has([data-mark-applied]) > .view-details-btn { grid-column: 1 / -1; grid-row: 4; }
