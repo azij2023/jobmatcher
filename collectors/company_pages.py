@@ -70,6 +70,12 @@ ROLE_KEYWORDS = [
     "data science project coordinator", "data analytics project coordinator", "ai project coordinator",
     "data science program coordinator", "ai program coordinator", "data program analyst",
     "analytics program analyst", "data strategy analyst", "analytics strategy associate",
+    "strategy analyst", "business strategy analyst", "corporate strategy analyst",
+    "marketing analyst", "marketing analytics", "operations analyst", "operations analytics",
+    "hr analytics", "human resources analytics", "people analytics", "workforce analytics",
+    "talent analytics", "financial analytics", "finance analytics", "financial data analyst",
+    "finance data analyst", "supply chain analyst", "supply chain analytics", "logistics analyst",
+    "inventory analyst", "demand planning analyst", "supply planning analyst",
     "ml engineer", "business analyst", "product manager i", "associate product manager", "apm"
 ]
 

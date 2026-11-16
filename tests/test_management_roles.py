@@ -37,6 +37,35 @@ class ManagementRoleTests(unittest.TestCase):
                 self.assertFalse(result['rejected'], result)
                 self.assertEqual(result['category'], category)
 
+    def test_additional_analytics_roles_survive_collection_and_scoring(self):
+        for title, category in [
+            ('Strategy Analyst', 'Strategy / Programs'),
+            ('Marketing Analyst', 'Strategy / Programs'),
+            ('Marketing Analytics Intern', 'Strategy / Programs'),
+            ('Marketing Data Analyst', 'Strategy / Programs'),
+            ('Operations Analyst', 'Strategy / Programs'),
+            ('Operations Analytics Intern', 'Strategy / Programs'),
+            ('HR Analytics Analyst', 'Strategy / Programs'),
+            ('HR Analytics Intern', 'Strategy / Programs'),
+            ('People Analytics Analyst', 'Strategy / Programs'),
+            ('People Analytics Intern', 'Strategy / Programs'),
+            ('Financial Analytics Analyst', 'Decision Science'),
+            ('Financial Analytics Intern', 'Decision Science'),
+            ('Finance Data Analyst', 'Decision Science'),
+            ('Supply Chain Analytics Analyst', 'OR / Optimization'),
+            ('Supply Chain Analytics Intern', 'OR / Optimization'),
+            ('Logistics Analyst', 'OR / Optimization'),
+            ('Inventory Analyst', 'OR / Optimization'),
+            ('Demand Planning Analyst', 'OR / Optimization'),
+        ]:
+            with self.subTest(title=title):
+                self.assertTrue(is_relevant_role(title))
+                self.assertTrue(is_fresher_eligible(title))
+                self.assertTrue(_is_entry_level_listing(title, 'fresher', 'Fresh graduates welcome.'))
+                result = score_job(self.job(title), self.profile)
+                self.assertFalse(result['rejected'], result)
+                self.assertEqual(result['category'], category)
+
     def test_senior_and_experienced_managers_still_rejected(self):
         for title, years in [('Senior Analytics Manager', 0), ('Data Science Manager', 0),
                              ('Junior Analytics Manager', 2), ('Associate AI Product Manager', 1)]:

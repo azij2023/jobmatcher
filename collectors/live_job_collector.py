@@ -234,7 +234,7 @@ def get_remote_location_label(location: str) -> str:
         return "Remote (APAC)"
     return "Remote (Worldwide)"
 
-def fetch_live_linkedin_jobs(max_queries: int = 19) -> list:
+def fetch_live_linkedin_jobs(max_queries: int = 25) -> list:
     """
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
     Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
@@ -264,6 +264,12 @@ def fetch_live_linkedin_jobs(max_queries: int = 19) -> list:
         "applied scientist fresher",
         "decision scientist fresher",
         "business analyst fresher",
+        "strategy analyst fresher India",
+        "marketing analyst fresher India",
+        "operations analyst fresher India",
+        "HR people analytics analyst India",
+        "financial analytics analyst fresher India",
+        "supply chain analytics analyst fresher India",
     ][:max_queries]
 
     def fetch_query(q):
@@ -476,6 +482,12 @@ def fetch_live_jsearch_jobs() -> list:
         "associate AI product manager India",
         "analytics management trainee India",
         "data science project coordinator entry level India",
+        "strategy analyst fresher India",
+        "marketing analyst fresher India",
+        "operations analyst fresher India",
+        "people analytics analyst fresher India",
+        "financial analytics analyst fresher India",
+        "supply chain analytics analyst fresher India",
     )
     live_jobs = []
     for query in queries:
@@ -643,6 +655,12 @@ def fetch_live_adzuna_jobs() -> list:
         "associate data product manager",
         "analytics management trainee",
         "data science project coordinator",
+        "strategy analyst",
+        "marketing analyst",
+        "operations analyst",
+        "people analytics analyst",
+        "financial analytics analyst",
+        "supply chain analyst",
     )
     live_jobs = []
     for query in queries:
@@ -852,7 +870,7 @@ def fetch_live_unstop_jobs() -> list:
 
 def fetch_live_naukri_rss_jobs() -> list:
     """Fetch live entry-level and fresher postings indexed from Naukri.com."""
-    query = 'site:naukri.com ("data analyst" OR "data scientist" OR "machine learning") fresher when:7d'
+    query = 'site:naukri.com ("data analyst" OR "data scientist" OR "machine learning" OR "strategy analyst" OR "marketing analyst" OR "operations analyst" OR "people analytics" OR "financial analytics" OR "supply chain analyst") fresher when:7d'
     url = f"https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-IN&gl=IN&ceid=IN:en"
     jobs = []
     seen = set()
@@ -912,7 +930,7 @@ def fetch_live_naukri_rss_jobs() -> list:
 
 def fetch_live_indeed_rss_jobs() -> list:
     """Fetch live entry-level postings indexed from Indeed India."""
-    query = 'site:in.indeed.com ("data analyst" OR "data scientist" OR "machine learning intern") fresher when:7d'
+    query = 'site:in.indeed.com ("data analyst" OR "data scientist" OR "machine learning intern" OR "strategy analyst" OR "marketing analyst" OR "operations analyst" OR "people analytics" OR "financial analytics" OR "supply chain analyst") fresher when:7d'
     url = f"https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-IN&gl=IN&ceid=IN:en"
     jobs = []
     seen = set()

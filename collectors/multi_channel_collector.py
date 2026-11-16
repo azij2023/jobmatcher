@@ -170,7 +170,7 @@ def parse_rss_listing(raw_title: str, link: str, pub_date_str: str, domain: str,
 
 def fetch_platform_rss(domain: str, platform_name: str, category_name: str, query_filter: str = "when:7d") -> list:
     """Queries indexed search feeds for recent openings on a platform."""
-    query = f'site:{domain} ("data analyst" OR "data scientist" OR "machine learning" OR "decision scientist" OR "APM" OR "AI intern" OR "analytics management trainee" OR "data product manager" OR "AI project coordinator") {query_filter}'
+    query = f'site:{domain} ("data analyst" OR "data scientist" OR "machine learning" OR "decision scientist" OR "APM" OR "AI intern" OR "analytics management trainee" OR "data product manager" OR "AI project coordinator" OR "strategy analyst" OR "marketing analyst" OR "operations analyst" OR "people analytics" OR "financial analytics" OR "supply chain analyst") {query_filter}'
     url = f"https://news.google.com/rss/search?q={urllib.parse.quote(query)}&hl=en-IN&gl=IN&ceid=IN:en"
     jobs = []
     seen = set()
