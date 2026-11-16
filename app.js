@@ -3821,13 +3821,8 @@ Best regards,
 
   async function loadLatestFeed() {
     const stamp = Date.now();
-    const endpoints = [...new Set([
-      `./api/jobs?t=${stamp}`, `./data.json?t=${stamp}`,
-      `https://jobmatcher-2.onrender.com/api/jobs?t=${stamp}`,
-      `https://raw.githubusercontent.com/azij2023/jobmatcher/main/data.json?t=${stamp}`
-    ].map(endpoint => new URL(endpoint, window.location.href).href))];
-    const responses = await Promise.allSettled(endpoints.map(endpoint => fetchFeedJson(endpoint)));
-    const latest = chooseLatestFeed(responses.filter(response => response.status === 'fulfilled').map(response => response.value));
+    const snapshot = await fetchFeedJson(`./data.json?t=${stamp}`);
+    const latest = chooseLatestFeed([snapshot]);
     if (!latest) throw new Error('No dated feed snapshot is available.');
     return chooseLatestFeed([latest, data]);
   }
@@ -3873,38 +3868,8 @@ Best regards,
     if (navRefreshLabel && !isSilent) navRefreshLabel.textContent = 'Refreshing...';
     try {
       applyPublishedFeed(await loadLatestFeed());
-      let collectionRequested = false;
-      let collectionComplete = false;
       if (!isSilent) {
-        try {
-          const request = await fetchFeedJson('./api/sync', { method: 'POST' });
-          collectionRequested = request.status === 'processing';
-          if (collectionRequested) {
-            updateFeedStatus('Collecting jobs');
-            const deadline = Date.now() + 60000;
-            while (Date.now() < deadline) {
-              await new Promise(resolve => setTimeout(resolve, 3000));
-              const state = await fetchFeedJson('./api/sync/status');
-              if (state.status === 'error') throw new Error(state.error || 'Collection failed.');
-              if (state.status === 'complete') {
-                collectionComplete = true;
-                break;
-              }
-            }
-            applyPublishedFeed(await loadLatestFeed());
-            if (!collectionComplete) updateFeedStatus('Collection running; results will refresh automatically');
-          }
-        } catch (error) {
-          // Static hosting can read published feeds without running the collector.
-          if (collectionRequested) {
-            updateFeedStatus('Collection could not finish; showing last available feed');
-            showToast('Collection could not finish. Showing the last available feed.');
-            return;
-          }
-        }
-        showToast(collectionRequested && !collectionComplete
-          ? 'Collection is still running. New results will appear automatically.'
-          : `Loaded ${jobs.length} listings. Last collection: ${new Date(data.last_updated).toLocaleString()}.`);
+        showToast(`Loaded ${jobs.length} listings. New jobs sync automatically every few minutes.`);
       }
     } catch (error) {
       console.error('[TargetMatch AI] Feed refresh failed:', error);
