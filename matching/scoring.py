@@ -1,6 +1,6 @@
 import re
 from matching.management_roles import is_entry_management_title
-from matching.experience import experience_requirement_ranges
+from matching.experience import experience_requirement_ranges, has_explicit_fresher_signal
 
 def flatten_skills(skills: dict) -> dict:
     flat = {}
@@ -122,6 +122,7 @@ def score_job(job: dict, profile: dict) -> dict:
     # 1. Check Hard Exclusion Keywords & Senior / Experienced Levels in Title
     title_lower = title.lower()
     raw_desc = job.get('raw_description', '').lower()
+    full_text = f"{title_lower} {raw_desc}"
 
     # Reject Senior / Lead / Principal / Staff / Manager in title
     if re.search(r'\b(?:senior|sr\b|sr\.|staff|principal|lead|head of|director|vp|vice president|manager|architect)\b', title_lower):
@@ -165,6 +166,19 @@ def score_job(job: dict, profile: dict) -> dict:
                     "rejection_reason": f"Description contains excluded domain/stale keyword: '{bad}'"
                 }
 
+    # Older fallback-parser feed entries stored zero years when requirements were absent.
+    if job.get("analysis_method") == "fallback":
+        experience_ranges = experience_requirement_ranges(full_text)
+        if experience_ranges:
+            min_exp = min(lower for lower, _ in experience_ranges)
+            max_exp = max(upper for _, upper in experience_ranges)
+        elif has_explicit_fresher_signal(full_text):
+            min_exp = 0
+            max_exp = None
+        else:
+            min_exp = None
+            max_exp = None
+
     # 2. Enforce the configured experience cap without requiring a fresher label.
     max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 4)
     if min_exp is not None and min_exp > max_allowed_exp:
@@ -174,7 +188,6 @@ def score_job(job: dict, profile: dict) -> dict:
             "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} years)"
         }
 
-    full_text = f"{title_lower} {raw_desc}".lower()
     over_cap = next(
         (upper for _, upper in experience_requirement_ranges(full_text) if upper > max_allowed_exp),
         None,
@@ -282,16 +295,10 @@ def score_job(job: dict, profile: dict) -> dict:
         location_score = 0.50
 
     # 8. Early-career alignment bonus (+0.05)
-    fresher_indicators = [
-        "fresher", "freshers", "0 year", "0-1 year", "0 to 1 year",
-        "new grad", "new graduate", "graduate trainee", "campus",
-        "entry level", "entry-level", "intern", "internship", "apprentice",
-        "trainee", "associate", "batch 2024", "batch 2025", "batch 2026", "batch 2027"
-    ]
     fresher_text = f"{title} {desc}".lower()
     is_fresher = (
-        seniority in ["fresher", "intern", "associate", "trainee", "apprentice", "junior"] or
-        any(ind in fresher_text for ind in fresher_indicators) or
+        seniority in ["fresher", "intern", "trainee", "apprentice"] or
+        has_explicit_fresher_signal(fresher_text) or
         (min_exp is not None and min_exp == 0)
     )
     fresher_bonus = 0.05 if is_fresher else 0.0
@@ -321,6 +328,8 @@ def score_job(job: dict, profile: dict) -> dict:
         "category": role_match.get("category"),
         "platform": platform,
         "is_fresher": is_fresher,
+        "min_years_experience": min_exp,
+        "max_years_experience": max_exp if job.get("analysis_method") == "fallback" else job.get("max_years_experience"),
         "skill_match_rate": round(len(matched_required) / len(required_skills), 2) if required_skills else 1.0,
         "matched_skills": matched_required,
         "missing_skills": missing_required,

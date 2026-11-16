@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
     location: "all",
     source: "all",
     minScore: 0.50,
-    sortBy: "latest",
+    sortBy: "fresher-first",
     maxAgeHours: 120, // Live jobs from 1 minute to 5 days (120 hours)
     onlySaved: false,
     onlyZeroExp: false,
@@ -424,19 +424,34 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reject if minimum years of experience > 0
     if (minExp !== null && minExp > 0) return false;
 
-    const hasExpReq = /\b[1-9]\d*\+?\s*(?:[-–]|to)?\s*\d*\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b/i.test(text);
-    const isExplicitZero = /\b(?:0|zero)\s*(?:-|to)?\s*0?\s*years?\b|\bfresher\b|\bintern\b|\binternship\b|\btrainee\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+experience\b|\bnew\s+grad\b|\bentry\s*level\b/i.test(text);
+    const zeroRange = /\b0\s*(?:-|–|to)\s*\d+\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b/i;
+    const experienceText = text.replace(zeroRange, '');
+    const hasExpReq = /\b[1-9]\d*\+?\s*(?:[-–]|to)?\s*\d*\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b/i.test(experienceText);
+    const isExplicitZero = /\b(?:0|zero)\s*(?:(?:-|–|to)\s*\d+\s*)?(?:years?|yrs?)\b|\bfreshers?\b|\bintern\b|\binternship\b|\btrainee\b|\bapprentice\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+(?:prior\s+)?experience\b|\bnew\s+grad(?:uate)?\b|\bentry[ -]level\b|\bearly[ -]career\b/i.test(text);
     if (hasExpReq) return false;
+    if (isExplicitZero) return true;
+    if (minExp === 0 && j.analysis_method === 'fallback') return false;
 
-    // Require entry-level / fresher marker for full-time jobs
-    const isIntern = (typeof isInternshipJob === 'function') ? isInternshipJob(j) : false;
-    if (!isIntern) {
-      const hasEntryMarker = /\b(?:freshers?|intern|internship|trainee|campus|graduates?|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b/i.test(text);
-      if (!hasEntryMarker) return false;
-    }
-
-    return true;
+    // Keep eligible junior/associate listings when their structured experience is zero.
+    const hasEntryMarker = /\b(?:freshers?|intern|internship|trainee|campus|graduates?|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b/i.test(text);
+    return hasEntryMarker;
   };
+
+  const isFresherPriorityJob = j => {
+    if (!j) return false;
+    const text = `${j.title || ''} ${j.description || ''} ${j.raw_description || ''}`.toLowerCase();
+    return /\b(?:fresher|freshers|intern|internship|trainee|apprentice|apprenticeship|campus|new\s+grad(?:uate)?s?|graduate\s+trainee|entry[ -]level|early[ -]career)\b|\b(?:no|zero)\s+(?:prior\s+)?experience\b|\b0\s*(?:(?:-|–|to)\s*\d+\s*)?(?:years?|yrs?)\b/i.test(text);
+  };
+
+  function compareFresherFirst(a, b) {
+    const aFresher = isFresherPriorityJob(a);
+    const bFresher = isFresherPriorityJob(b);
+    if (aFresher !== bFresher) return aFresher ? -1 : 1;
+    const aHours = getJobFreshness(a).hours;
+    const bHours = getJobFreshness(b).hours;
+    if (aHours !== bHours) return aHours - bHours;
+    return (b.score || 0) - (a.score || 0);
+  }
 
   const isInternshipJob = j => {
     if (!j) return false;
@@ -992,13 +1007,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return true;
     });
 
-    // Sorting: Default is "latest" (latest to farthest / newest to oldest based on dynamic elapsed time)
+    // Fresher/zero-experience roles lead, with freshness and fit as tie-breakers.
     filtered.sort((a, b) => {
       const aFreshness = getJobFreshness(a);
       const bFreshness = getJobFreshness(b);
       const aHours = aFreshness.hours;
       const bHours = bFreshness.hours;
 
+      if (currentFilter.sortBy === "fresher-first") {
+        return compareFresherFirst(a, b);
+      }
       if (currentFilter.sortBy === "latest") {
         if (aHours !== bHours) return aHours - bHours; // lowest hours (latest) first
         return (b.score || 0) - (a.score || 0); // secondary tie-breaker: highest match score
@@ -1907,7 +1925,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const statScoreCard = document.getElementById("stat-score");
   if (statScoreCard) {
     statScoreCard.addEventListener("click", () => {
-      currentFilter.sortBy = (currentFilter.sortBy === "score-desc") ? "latest" : "score-desc";
+      currentFilter.sortBy = (currentFilter.sortBy === "score-desc") ? "fresher-first" : "score-desc";
       if (sortSelect) sortSelect.value = currentFilter.sortBy;
       currentPage = 1;
       renderJobs();
@@ -2127,14 +2145,14 @@ document.addEventListener("DOMContentLoaded", () => {
       if (sourceSelect) sourceSelect.value = "all";
       if (scoreSlider) scoreSlider.value = 50;
       if (scoreSliderVal) scoreSliderVal.textContent = "50%";
-      if (sortSelect) sortSelect.value = "latest";
+      if (sortSelect) sortSelect.value = "fresher-first";
 
       currentFilter.search = "";
       currentFilter.tier = "all";
       currentFilter.location = "all";
       currentFilter.source = "all";
       currentFilter.minScore = 0.50;
-      currentFilter.sortBy = "latest";
+      currentFilter.sortBy = "fresher-first";
       currentFilter.maxAgeHours = 48;
       currentFilter.onlySaved = false;
       currentFilter.onlyInternships = false;

@@ -1,6 +1,7 @@
 import json
 import re
 from llm.groq_client import GroqClient
+from matching.experience import experience_requirement_ranges, has_explicit_fresher_signal
 
 SYSTEM_PROMPT = """You are an expert AI talent recruiter and job parser.
 Analyze the job description and extract key attributes into valid JSON.
@@ -108,11 +109,14 @@ class JobExtractor:
         elif any(w in t_lower for w in ["associate", "analyst"]):
             seniority = "associate"
 
-        # Years of experience extraction
-        min_exp = 0
-        exp_match = re.search(r"(\d+)\+?\s*(?:-\s*\d+)?\s*years?", t_lower)
-        if exp_match:
-            min_exp = int(exp_match.group(1))
+        # Leave experience unspecified unless the posting states a requirement.
+        experience_ranges = experience_requirement_ranges(f"{title} {text}")
+        if experience_ranges:
+            min_exp = min(lower for lower, _ in experience_ranges)
+            max_exp = max(upper for _, upper in experience_ranges)
+        else:
+            min_exp = 0 if has_explicit_fresher_signal(f"{title} {text}") else None
+            max_exp = None
 
         # Skill keyword scanning
         found_skills = []
@@ -148,7 +152,7 @@ class JobExtractor:
             "role_category": role_cat,
             "seniority": seniority,
             "min_years_experience": min_exp,
-            "max_years_experience": min_exp + 2,
+            "max_years_experience": max_exp,
             "required_skills": found_skills[:8],
             "nice_to_have": found_skills[8:],
             "domain": "technology"

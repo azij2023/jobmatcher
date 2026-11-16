@@ -243,7 +243,11 @@ def run_hourly_sync():
             if scored.get("rejected"):
                 continue
             job["score"] = scored["final_score"]
-            for field in ("tier", "priority", "badge", "category", "matched_skills", "missing_skills", "skill_match_rate"):
+            for field in (
+                "tier", "priority", "badge", "category", "matched_skills",
+                "missing_skills", "skill_match_rate", "is_fresher",
+                "min_years_experience", "max_years_experience",
+            ):
                 if field in scored:
                     job[field] = scored[field]
             eligible_jobs.append(job)

@@ -9,6 +9,7 @@ from contextlib import nullcontext
 from unittest.mock import patch
 
 from matching.scoring import score_job
+from llm.job_extractor import JobExtractor
 from collectors.live_job_collector import _is_entry_level_listing, fetch_live_linkedin_jobs
 from collectors.linkedin_post_fetcher import parse_linkedin_post_text
 
@@ -29,6 +30,41 @@ class EntryLevelConditionsTests(unittest.TestCase):
         }, PROFILE)
 
         self.assertFalse(result["rejected"])
+
+    def test_fallback_parser_does_not_turn_unspecified_experience_into_zero(self):
+        result = JobExtractor()._heuristic_extract(
+            "Analyze business data and communicate results.", title="Data Analyst"
+        )
+
+        self.assertIsNone(result["min_years_experience"])
+        self.assertIsNone(result["max_years_experience"])
+
+    def test_fallback_parser_preserves_zero_to_four_year_fresher_range(self):
+        result = JobExtractor()._heuristic_extract(
+            "Freshers welcome; candidates with 0-4 years of experience may apply.",
+            title="Data Analyst",
+        )
+
+        self.assertEqual(result["min_years_experience"], 0)
+        self.assertEqual(result["max_years_experience"], 4)
+
+    def test_legacy_fallback_zero_default_is_not_mislabeled_as_fresher(self):
+        result = score_job({
+            "title": "Data Analyst",
+            "company": "Example",
+            "location": "Bengaluru, India",
+            "url": "https://example.com/job/123",
+            "seniority": "junior",
+            "analysis_method": "fallback",
+            "min_years_experience": 0,
+            "max_years_experience": 2,
+            "role_category": "Data Science",
+            "raw_description": "Analyze business data and communicate results.",
+        }, PROFILE)
+
+        self.assertFalse(result["rejected"], result)
+        self.assertFalse(result["is_fresher"])
+        self.assertIsNone(result["min_years_experience"])
 
     def test_accepts_up_to_four_years_without_a_fresher_marker(self):
         for requirement in ("0-4 years of experience", "4 years experience",

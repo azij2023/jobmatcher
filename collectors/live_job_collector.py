@@ -223,7 +223,7 @@ def get_remote_location_label(location: str) -> str:
         return "Remote (APAC)"
     return "Remote (Worldwide)"
 
-def fetch_live_linkedin_jobs(max_queries: int = 25) -> list:
+def fetch_live_linkedin_jobs(max_queries: int = 30) -> list:
     """
     Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
     Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
@@ -259,6 +259,11 @@ def fetch_live_linkedin_jobs(max_queries: int = 25) -> list:
         "HR people analytics analyst India",
         "financial analytics analyst fresher India",
         "supply chain analytics analyst fresher India",
+        "decision science analyst fresher India",
+        "quantitative analyst entry level India",
+        "forecasting analyst entry level India",
+        "time series analyst fresher India",
+        "demand planning analyst fresher India",
     ][:max_queries]
 
     def fetch_query(q):
