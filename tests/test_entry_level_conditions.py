@@ -16,6 +16,34 @@ PROFILE = json.loads((Path(__file__).resolve().parents[1] / "profile.json").read
 
 
 class EntryLevelConditionsTests(unittest.TestCase):
+    def test_accepts_entry_level_role_when_experience_is_unspecified(self):
+        result = score_job({
+            "title": "Junior Data Scientist",
+            "company": "Example",
+            "location": "Bengaluru, India",
+            "url": "https://example.com/job/123",
+            "seniority": "junior",
+            "role_category": "Data Science",
+            "raw_description": "Junior role on the data science team.",
+        }, PROFILE)
+
+        self.assertFalse(result["rejected"])
+
+    def test_rejects_data_entry_job_misclassified_as_data_science(self):
+        result = score_job({
+            "title": "Data Entry Operator",
+            "company": "Example",
+            "location": "India",
+            "url": "https://example.com/job/123",
+            "seniority": "fresher",
+            "role_category": "Data Science",
+            "min_years_experience": 0,
+            "raw_description": "Fresher data entry role.",
+        }, PROFILE)
+
+        self.assertTrue(result["rejected"])
+        self.assertIn("excluded keyword: 'data entry'", result["rejection_reason"])
+
     def test_linkedin_reads_employer_description_and_internship_type(self):
         posted = datetime.datetime.now(datetime.timezone.utc).isoformat()
         search = f'''<li><h3 class="base-search-card__title">Business Analyst</h3>
