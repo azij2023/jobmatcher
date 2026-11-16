@@ -54,6 +54,52 @@ class FeedFreshnessTests(unittest.TestCase):
             self.assertEqual((count, added), (0, 0))
             self.assertEqual(json.loads((root / 'data.json').read_text(encoding='utf-8'))['jobs'], [])
 
+    def test_pipeline_rechecks_existing_jobs_with_current_profile(self):
+        now = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        jobs = [
+            {
+                'title': 'Junior Data Scientist',
+                'company': 'Example',
+                'location': 'Bengaluru, India',
+                'url': 'https://example.com/jobs/junior-data-scientist',
+                'source_type': 'LinkedIn',
+                'seniority': 'junior',
+                'role_category': 'Data Science',
+                'raw_description': 'Junior data science role in Bengaluru.',
+                'posted_at': now,
+                'hours_ago': 1,
+                'semantic_skill_gap': {},
+            },
+            {
+                'title': 'Data Entry Operator',
+                'company': 'Example',
+                'location': 'India',
+                'url': 'https://example.com/jobs/data-entry-operator',
+                'source_type': 'LinkedIn',
+                'seniority': 'fresher',
+                'role_category': 'Data Science',
+                'raw_description': 'Fresher data entry role.',
+                'posted_at': now,
+                'hours_ago': 1,
+                'semantic_skill_gap': {},
+            },
+        ]
+        profile_path = Path(__file__).resolve().parents[1] / 'profile.json'
+        profile = json.loads(profile_path.read_text(encoding='utf-8'))
+
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'docs').mkdir()
+            (root / 'data.json').write_text(json.dumps({'jobs': jobs}), encoding='utf-8')
+            (root / 'profile.json').write_text(json.dumps(profile), encoding='utf-8')
+            with patch.object(hourly_pipeline, 'ROOT_DIR', folder), \
+                 patch.object(hourly_pipeline, 'collect_and_score_all_live_jobs', return_value=[]):
+                count, added = hourly_pipeline.run_hourly_sync()
+
+            refreshed = json.loads((root / 'data.json').read_text(encoding='utf-8'))
+            self.assertEqual((count, added), (1, 0))
+            self.assertEqual([job['title'] for job in refreshed['jobs']], ['Junior Data Scientist'])
+
 
 class SyncApiTests(unittest.TestCase):
     def test_api_recalculates_age_and_disables_caching(self):

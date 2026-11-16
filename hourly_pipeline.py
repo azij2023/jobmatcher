@@ -234,16 +234,20 @@ def run_hourly_sync():
                 job["badge"] = role_match.get("badge")
                 job["category"] = role_match.get("category")
 
-    # 2b. Re-evaluate strict 0-experience eligibility against profile
-    strict_zero = loaded_profile.get("job_filters", {}).get("strict_zero_experience", True)
-    if strict_zero:
+    # 2b. Re-evaluate every retained job against the current profile.
+    if loaded_profile:
         from matching.scoring import score_job
-        clean_zero_jobs = []
+        eligible_jobs = []
         for job in existing_jobs:
             scored = score_job(job, loaded_profile)
-            if not scored.get("rejected"):
-                clean_zero_jobs.append(job)
-        existing_jobs = clean_zero_jobs
+            if scored.get("rejected"):
+                continue
+            job["score"] = scored["final_score"]
+            for field in ("tier", "priority", "badge", "category", "matched_skills", "missing_skills", "skill_match_rate"):
+                if field in scored:
+                    job[field] = scored[field]
+            eligible_jobs.append(job)
+        existing_jobs = eligible_jobs
 
     # 2c-1. Enrich multi_source_urls across 6 channel categories
     from collectors.career_urls import build_multi_source_urls
