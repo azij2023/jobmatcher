@@ -2,7 +2,7 @@
 Indian Companies Direct Career Sites & Official ATS Collector
 TargetMatch AI - Direct Requisition Engine
 
-Fetches employer requisitions with fresher eligibility evidence from public
+Fetches employer requisitions with requirements up to four years from public
 Greenhouse, Lever, Ashby and SmartRecruiters feeds. Unavailable boards return
 no results. Dates, descriptions and application URLs come from employer records.
 """
@@ -12,6 +12,7 @@ import urllib.parse
 import json
 import re
 from matching.management_roles import is_entry_management_title
+from matching.experience import exceeds_experience_cap
 import datetime
 import html as html_lib
 
@@ -81,7 +82,7 @@ ROLE_KEYWORDS = [
 
 EXCLUDE_TITLES = [
     "senior", "sr.", "lead", "principal", "director", "head of", "vp",
-    "staff", "architect", "5+", "6+", "7+", "8+", "10+", "years experience", "yr exp", "yrs exp",
+    "staff", "architect", "5+", "6+", "7+", "8+", "10+",
     " iii", " iv", " v", " vi"
 ]
 
@@ -89,7 +90,7 @@ def is_relevant_role(title: str) -> bool:
     t = title.lower()
     if any(bad in t for bad in EXCLUDE_TITLES):
         return False
-    if re.search(r'\b(?:[3-9]|\d{2,})\+?\s*(?:-|to)?\s*\d*\s*(?:years?|yrs?)\b', t):
+    if exceeds_experience_cap(t, 4):
         return False
     # If title contains 'manager', only allow APM, Product Manager I, or Decision Science / Analytics Manager
     if "manager" in t and not is_entry_management_title(t):
@@ -151,14 +152,7 @@ def _make_job(company_info, title, location, url, description, published, time_s
         return None
     description = _plain_text(description)
     text = f"{title} {description}".lower()
-    # Evidence must come from the employer, never an appended fresher claim.
-    if not description or not re.search(
-        r"\b(?:freshers?|intern|internship|trainee|apprentice|graduates?|campus|entry[ -]level|no experience|zero experience)\b|\b0\s*(?:[-–]\s*\d+)?\s*years?", text
-    ):
-        return None
-    # A range starting at zero allows freshers; do not read its upper bound as a minimum.
-    exp_text = re.sub(r"\b0\s*(?:[-–]|to)\s*\d+\s*years?", "zero years", text)
-    if re.search(r"\b[1-9]\d*\+?\s*(?:(?:[-–]|to)\s*\d+)?\s*years?(?:\s+of)?\s+(?:(?:relevant|work|professional)\s+)?experience\b", exp_text):
+    if not description or exceeds_experience_cap(text, 4):
         return None
     loc = (location or "").lower()
     if not any(city in loc for city in ("india", "bengaluru", "bangalore", "mumbai", "delhi", "noida", "gurugram", "gurgaon", "hyderabad", "pune", "chennai", "kolkata", "ahmedabad", "kochi")):

@@ -1,5 +1,6 @@
 import re
 from matching.management_roles import is_entry_management_title
+from matching.experience import experience_requirement_ranges
 
 def flatten_skills(skills: dict) -> dict:
     flat = {}
@@ -131,12 +132,12 @@ def score_job(job: dict, profile: dict) -> dict:
                 "rejection_reason": f"Senior title keyword in '{title}'"
             }
 
-    # Reject Experienced Level II, III, IV, etc. in title
-    if re.search(r'\b(?:ii|iii|iv|v|2|3|4)\b', title_lower) and any(w in title_lower for w in ['scientist', 'engineer', 'analyst', 'specialist', 'researcher', 'consultant', 'developer']):
+    # Reject explicit level-number suffixes, not experience ranges in the title.
+    if re.search(r'\b(?:ii|iii|iv|v)\b|\s+(?:2|3|4)\s*$', title_lower) and any(w in title_lower for w in ['scientist', 'engineer', 'analyst', 'specialist', 'researcher', 'consultant', 'developer']):
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Experienced level (II/III/IV) in title '{title}' (not a fresher role)"
+            "rejection_reason": f"Experienced level (II/III/IV) in title '{title}'"
         }
 
     for bad in profile.get("job_filters", {}).get("exclude_keywords", []):
@@ -164,41 +165,26 @@ def score_job(job: dict, profile: dict) -> dict:
                     "rejection_reason": f"Description contains excluded domain/stale keyword: '{bad}'"
                 }
 
-    # 2. Strict Fresher / 0 Experience Check
-    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 0)
-    strict_zero = profile.get("job_filters", {}).get("strict_zero_experience", True)
+    # 2. Enforce the configured experience cap without requiring a fresher label.
+    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 4)
     if min_exp is not None and min_exp > max_allowed_exp:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} years for pure freshers)"
+            "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} years)"
         }
 
-    # 2b. Check Description for experience requirements (1+ years or 2+ years)
     full_text = f"{title_lower} {raw_desc}".lower()
-    exp_threshold = "1" if strict_zero or max_allowed_exp == 0 else "2"
-    exp_pattern = rf"\b([{exp_threshold}-9]|\d{{2,}})\+?\s*(?:[-–]|to)?\s*\d*\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b"
-    exp_match = re.search(exp_pattern, full_text)
-    if exp_match:
+    over_cap = next(
+        (upper for _, upper in experience_requirement_ranges(full_text) if upper > max_allowed_exp),
+        None,
+    )
+    if over_cap is not None:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": f"Job demands '{exp_match.group(0).strip()}' (exceeds 0-experience fresher limit)"
+            "rejection_reason": f"Requires up to {over_cap} years experience (max allowed: {max_allowed_exp} years)"
         }
-
-    # 2c. Require entry-level / fresher verification for full-time jobs
-    is_internship = job.get('is_internship') is True or any(kw in title_lower for kw in ['intern', 'internship', 'trainee', 'apprentice'])
-    if not is_internship:
-        has_entry_marker = bool(
-            job.get("seniority") in ["junior", "entry_level", "entry", "fresher", "graduate", "intern"] or
-            re.search(r'\b(?:freshers?|fresh\s+graduates?|entry[ -]level|junior|new\s*grad(?:uate)?|recent\s+graduate|no\s+(?:prior\s+|previous\s+)?experience|0\s*(?:[-–]|to)?\s*\d*\s*years?(?:\s+of)?\s+experience)\b', full_text)
-        )
-        if not has_entry_marker:
-            return {
-                "rejected": True,
-                "final_score": 0.0,
-                "rejection_reason": f"No entry-level or fresher indicator found for '{title}' (pure freshers only)"
-            }
 
     # 3. Check Seniority / Level Filter
     acceptable_seniorities = set(profile.get("seniority", {}).get("acceptable", []))
@@ -217,7 +203,7 @@ def score_job(job: dict, profile: dict) -> dict:
         return {
             "rejected": True,
             "final_score": 0.0,
-            "rejection_reason": "Job does not match any target entry-level role category"
+            "rejection_reason": "Job does not match any target role category"
         }
 
     role_priority_weight = role_match.get("weight", 0.7)
@@ -295,7 +281,7 @@ def score_job(job: dict, profile: dict) -> dict:
     else:
         location_score = 0.50
 
-    # 8. Fresher Level Alignment Bonus (+0.05)
+    # 8. Early-career alignment bonus (+0.05)
     fresher_indicators = [
         "fresher", "freshers", "0 year", "0-1 year", "0 to 1 year",
         "new grad", "new graduate", "graduate trainee", "campus",

@@ -1,6 +1,6 @@
 """
 LinkedIn Post Harvester & Intelligent Parser
-TargetMatch AI - Entry-Level Career Engine
+TargetMatch AI - Early-Career Job Engine
 
 Parses, extracts, and evaluates informal job opportunities posted by hiring managers,
 founders, recruiters, and tech leads on LinkedIn feeds and posts.
@@ -8,6 +8,7 @@ founders, recruiters, and tech leads on LinkedIn feeds and posts.
 
 import re
 import datetime
+from matching.experience import experience_requirement_ranges, exceeds_experience_cap
 
 INDIA_CITIES = [
     "bengaluru", "bangalore", "hyderabad", "pune", "gurgaon", "gurugram",
@@ -116,17 +117,9 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
             break
 
     # 4. Detect Experience & Fresher Eligibility
-    is_fresher = True
-    min_years = 0
-    exp_match = re.search(r"(\d+)\+?\s*years?(?:\s+of)?\s+exp", lower)
-    if exp_match:
-        min_years = int(exp_match.group(1))
-        if min_years > 1:
-            is_fresher = False
-
-    if any(term in lower for term in ["fresher", "fresh grad", "new grad", "0-1", "0 to 1", "campus", "intern", "trainee"]):
-        is_fresher = True
-        min_years = 0
+    experience_ranges = experience_requirement_ranges(lower)
+    min_years = experience_ranges[0][0] if experience_ranges else 0
+    is_fresher = not exceeds_experience_cap(lower, 4)
 
     # 5. Detect Email or Application Link
     email_match = re.search(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", clean_text)

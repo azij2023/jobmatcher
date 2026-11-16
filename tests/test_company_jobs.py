@@ -23,14 +23,16 @@ class CompanyJobTests(unittest.TestCase):
         def make(desc, date=None):
             return collector._make_job(self.company, 'Data Scientist', 'Bengaluru, India',
                                        self.url, desc, date or self.date)
-        self.assertIsNone(make('Build predictive models.'))
-        self.assertIsNone(make('Graduate position requiring 3 years of experience.'))
+        self.assertIsNotNone(make('Build predictive models.'))
+        self.assertIsNotNone(make('Graduate position requiring 3 years of experience.'))
         self.assertIsNone(make('Freshers welcome.', 'invalid'))
         job = make('Freshers welcome. Use Python and SQL.')
         self.assertTrue(job['company_job_verified'])
         self.assertEqual(job['raw_description'], 'Freshers welcome. Use Python and SQL.')
-        self.assertIsNotNone(make('Graduate position. 0 - 2 years of experience.'))
-        self.assertIsNone(make('Graduate position. 1 to 3 years of experience.'))
+        self.assertIsNotNone(make('Graduate position. 0 - 4 years of experience.'))
+        self.assertIsNotNone(make('Graduate position. 1 to 3 years of experience.'))
+        self.assertIsNone(make('Graduate position. 3 to 5 years of experience.'))
+        self.assertIsNone(make('Graduate position. 5+ years of experience.'))
 
     def test_greenhouse_preserves_description_and_update_provenance(self):
         response = {'jobs': [{'title': 'Data Science Intern', 'location': {'name': 'Bengaluru, India'},
@@ -53,17 +55,17 @@ class CompanyJobTests(unittest.TestCase):
         self.assertEqual(jobs[0]['url'], url)
         self.assertNotIn('min_years_experience', jobs[0])
 
-    def test_lever_includes_requirements_before_checking_eligibility(self):
+    def test_lever_includes_requirements_before_checking_experience_cap(self):
         url = 'https://jobs.lever.co/example/12345678-1234-1234-1234-123456789abc'
         item = {'text': 'Data Scientist', 'categories': {'location': 'Bengaluru, India'},
                 'hostedUrl': url, 'createdAt': datetime.datetime.now(datetime.timezone.utc).timestamp() * 1000,
                 'descriptionPlain': 'Graduate role.',
-                'lists': [{'content': '<li>Requires 2 years of experience.</li>'}]}
+                'lists': [{'content': '<li>Requires 4 years of experience.</li>'}]}
+        with patch.object(collector, '_get_json', return_value=[item]):
+            self.assertEqual(len(collector.fetch_single_lever(self.company)), 1)
+        item['lists'] = [{'content': '<li>Requires 5 years of experience.</li>'}]
         with patch.object(collector, '_get_json', return_value=[item]):
             self.assertEqual(collector.fetch_single_lever(self.company), [])
-        item['lists'] = [{'content': '<li>No experience required. Use Python.</li>'}]
-        with patch.object(collector, '_get_json', return_value=[item]):
-            self.assertEqual(collector.fetch_single_lever(self.company)[0]['url'], url)
 
     def test_ashby_does_not_default_missing_location_to_india(self):
         item = {'title': 'Data Science Intern', 'descriptionPlain': 'Internship using Python.',

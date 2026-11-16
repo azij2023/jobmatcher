@@ -370,8 +370,8 @@ document.addEventListener("DOMContentLoaded", () => {
     sortBy: "latest",
     maxAgeHours: 120, // Live jobs from 1 minute to 5 days (120 hours)
     onlySaved: false,
-    onlyZeroExp: true, // Strictly 0 experience / freshers by default
-    roleType: "jobs" // Strictly "jobs" (full-time fresher roles) by default; internships isolated to Internships tab
+    onlyZeroExp: false,
+    roleType: "jobs" // Full-time jobs by default; internships remain in their own tab
   };
 
   let currentPage = 1;
@@ -975,7 +975,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (selectedDomain && !domainLower.includes(selectedDomain)) return false;
       }
 
-      // Zero experience filter (strictly 0 years / freshers & interns only)
+      // Optional zero-experience-only filter
       if (currentFilter.onlyZeroExp && !isZeroExpJob(job)) {
         return false;
       }
@@ -1220,13 +1220,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let fresherPill = '';
       if (isZeroExpJob(job)) {
-        fresherPill = `<span class="fresher-badge" title="Strictly 0 years experience required / freshers & interns eligible">🎓 0 Exp • Fresher</span>`;
+        fresherPill = `<span class="fresher-badge" title="No experience required / freshers eligible">🎓 0 Exp • Fresher</span>`;
       } else {
-        fresherPill = `<span class="fresher-badge badge-early-career" title="0–2 years / early career eligible">🌱 Early Career (0–2 Yrs)</span>`;
+        fresherPill = `<span class="fresher-badge badge-early-career" title="Up to 4 years experience / early career eligible">🌱 Early Career (0–4 Yrs)</span>`;
       }
       const internPill = isInternshipJob(job)
         ? `<span class="intern-badge" title="Internship / Traineeship position">🎓 Internship</span>`
-        : `<span class="fulltime-badge" title="Full-time entry-level job">💼 Full-Time</span>`;
+        : `<span class="fulltime-badge" title="Full-time early-career job">💼 Full-Time</span>`;
       const remotePill = (job.is_remote || (job.location && job.location.toLowerCase().includes('remote')))
         ? `<span class="remote-badge">🌐 Remote</span>`
         : '';
@@ -1594,28 +1594,28 @@ document.addEventListener("DOMContentLoaded", () => {
     if (multiGrid) {
       const title = job.title || 'Data Scientist';
       const company = job.company || '';
-      const cleanTitle = title.replace(/\(.*?\)/g, '').replace(/-\s*(Fresher|Campus|0-1 Yrs|Batch\s*\d+).*/i, '').trim();
+      const cleanTitle = title.replace(/\(.*?\)/g, '').replace(/-\s*(Fresher|Campus|0-[1-4] Yrs|Batch\s*\d+).*/i, '').trim();
       const encTitle = encodeURIComponent(cleanTitle);
       const encAll = encodeURIComponent(`${cleanTitle} ${company}`.trim());
       const slug = cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
       const channels = [
-        { name: "💼 LinkedIn (Past 24h)", url: `https://www.linkedin.com/jobs/search/?keywords=${encAll}&location=India&f_TPR=r86400&f_E=1%2C2` },
-        { name: "🔷 Naukri (0 Yrs)", url: `https://www.naukri.com/${slug}-jobs-in-india?experience=0` },
-        { name: "🎯 Indeed India", url: `https://in.indeed.com/jobs?q=${encAll}&l=India&fromage=1&explvl=entry_level` },
-        { name: "⚡ Foundit (Monster)", url: `https://www.foundit.in/srp/results?query=${encAll}&locations=India&experience=0` },
-        { name: "🚪 Glassdoor", url: `https://www.glassdoor.co.in/Job/india-${slug}-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel` },
-        { name: "✨ Shine", url: `https://www.shine.com/job-search/${slug}-jobs-in-india?experience=0` },
+        { name: "💼 LinkedIn (Past 24h)", url: `https://www.linkedin.com/jobs/search/?keywords=${encAll}&location=India&f_TPR=r86400&f_E=1%2C2%2C3` },
+        { name: "🔷 Naukri", url: `https://www.naukri.com/${slug}-jobs-in-india` },
+        { name: "🎯 Indeed India", url: `https://in.indeed.com/jobs?q=${encAll}&l=India&fromage=1` },
+        { name: "⚡ Foundit (Monster)", url: `https://www.foundit.in/srp/results?query=${encAll}&locations=India` },
+        { name: "🚪 Glassdoor", url: `https://www.glassdoor.co.in/Job/india-${slug}-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1` },
+        { name: "✨ Shine", url: `https://www.shine.com/job-search/${slug}-jobs-in-india` },
         { name: "📰 TimesJobs", url: `https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=${encAll}&cboWorkExp1=0` },
         { name: "✌️ Wellfound", url: `https://wellfound.com/jobs?role=${encTitle}&location=India` },
-        { name: "⚡ Instahyre", url: `https://www.instahyre.com/jobs-search?search=${encAll}&experience=0` },
-        { name: "✂️ Cutshort", url: `https://cutshort.io/jobs?query=${encTitle}&experience=0` },
-        { name: "💻 Hirist", url: `https://www.hirist.tech/search?keyword=${encTitle}&exp=0-1` },
+        { name: "⚡ Instahyre", url: `https://www.instahyre.com/jobs-search?search=${encAll}` },
+        { name: "✂️ Cutshort", url: `https://cutshort.io/jobs?query=${encTitle}` },
+        { name: "💻 Hirist", url: `https://www.hirist.tech/search?keyword=${encTitle}&exp=0-4` },
         { name: "🟧 YC Startups", url: `https://www.workatastartup.com/jobs?query=${encTitle}` },
         { name: "🎓 Internshala", url: `https://internshala.com/internships/${slug}-internship/` },
         { name: "🎯 Unstop", url: `https://unstop.com/internships?keyword=${encTitle}` },
         { name: "🌱 LetsIntern", url: `https://www.letsintern.com/internships/${slug}-internships` },
-        { name: "📱 Apna", url: `https://apna.co/jobs?q=${encTitle}&experience=0` },
+        { name: "📱 Apna", url: `https://apna.co/jobs?q=${encTitle}` },
         { name: "📈 Analytics Vidhya", url: `https://jobs.analyticsvidhya.com/jobs?search=${encTitle}` },
         { name: "🏆 Kaggle Jobs", url: "https://www.kaggle.com/jobs" },
         { name: "📰 AIM Jobs", url: "https://analyticsindiamag.com/careers/" },
@@ -2286,11 +2286,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // 2. Experience check (Fresher limit ≤ 1 year)
-    if (exp > 1) {
+    // 2. Experience check (early-career limit ≤ 4 years)
+    if (exp > 4) {
       return {
         rejected: true,
-        reason: `Requires ${exp} years experience (fresher threshold is ≤ 1 year; 2+ years excluded)`,
+        reason: `Requires ${exp} years experience (maximum allowed is 4 years)`,
         score: 0
       };
     }
@@ -2299,7 +2299,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (["senior", "lead", "staff", "principal", "manager"].includes(seniority) && !(seniority === "manager" && isEntryManagementTitle(title))) {
       return {
         rejected: true,
-        reason: `Seniority '${seniority}' is excluded for entry-level matching`,
+        reason: `Seniority '${seniority}' is excluded for early-career matching`,
         score: 0
       };
     }
@@ -2343,7 +2343,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!matchedTier) {
       return {
         rejected: true,
-        reason: "Job does not match any targeted entry-level role category",
+        reason: "Job does not match any targeted role category",
         score: 0
       };
     }
@@ -2451,7 +2451,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scoreNum.textContent = `${Math.round(res.score * 100)}%`;
       roleWeight.textContent = `${Math.round(res.tierWeight * 100)}%`;
       skillRate.textContent = `${res.skillRate}%`;
-      senStatus.textContent = "Passed (0–2 Yrs)";
+      senStatus.textContent = "Passed (0–4 Yrs)";
 
       const matchedHtml = res.matchedSkills.map(s => `<span class="skill-tag matched">✓ ${s}</span>`).join(" ") || "None listed";
       const missingHtml = res.missingSkills.map(s => `<span class="skill-tag missing">✗ ${s}</span>`).join(" ") || "None";
@@ -2482,28 +2482,28 @@ document.addEventListener("DOMContentLoaded", () => {
   function updateChannelLinks() {
     const role = (channelRoleInput ? channelRoleInput.value.trim() : "") || "Data Scientist";
     const company = (channelCompanyInput ? channelCompanyInput.value.trim() : "");
-    const clean = role.replace(/\(.*?\)/g, '').replace(/-\s*(Fresher|Campus|0-1 Yrs|Batch\s*\d+).*/i, '').trim();
+    const clean = role.replace(/\(.*?\)/g, '').replace(/-\s*(Fresher|Campus|0-[1-4] Yrs|Batch\s*\d+).*/i, '').trim();
     const encRole = encodeURIComponent(clean);
     const encAll = encodeURIComponent(`${clean} ${company}`.trim());
     const slug = clean.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
     const platformSelectors = {
-      linkedin: `https://www.linkedin.com/jobs/search/?keywords=${encAll}&location=India&f_TPR=r86400&f_E=1%2C2`,
-      naukri: `https://www.naukri.com/${slug}-jobs-in-india?experience=0`,
-      indeed: `https://in.indeed.com/jobs?q=${encAll}&l=India&fromage=1&explvl=entry_level`,
-      foundit: `https://www.foundit.in/srp/results?query=${encAll}&locations=India&experience=0`,
-      glassdoor: `https://www.glassdoor.co.in/Job/india-${slug}-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel`,
-      shine: `https://www.shine.com/job-search/${slug}-jobs-in-india?experience=0`,
+      linkedin: `https://www.linkedin.com/jobs/search/?keywords=${encAll}&location=India&f_TPR=r86400&f_E=1%2C2%2C3`,
+      naukri: `https://www.naukri.com/${slug}-jobs-in-india`,
+      indeed: `https://in.indeed.com/jobs?q=${encAll}&l=India&fromage=1`,
+      foundit: `https://www.foundit.in/srp/results?query=${encAll}&locations=India`,
+      glassdoor: `https://www.glassdoor.co.in/Job/india-${slug}-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1`,
+      shine: `https://www.shine.com/job-search/${slug}-jobs-in-india`,
       timesjobs: `https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=${encAll}&cboWorkExp1=0`,
       wellfound: `https://wellfound.com/jobs?role=${encRole}&location=India`,
-      instahyre: `https://www.instahyre.com/jobs-search?search=${encAll}&experience=0`,
-      cutshort: `https://cutshort.io/jobs?query=${encRole}&experience=0`,
-      hirist: `https://www.hirist.tech/search?keyword=${encRole}&exp=0-1`,
+      instahyre: `https://www.instahyre.com/jobs-search?search=${encAll}`,
+      cutshort: `https://cutshort.io/jobs?query=${encRole}`,
+      hirist: `https://www.hirist.tech/search?keyword=${encRole}&exp=0-4`,
       ycombinator: `https://www.workatastartup.com/jobs?query=${encRole}`,
       internshala: `https://internshala.com/internships/${slug}-internship/`,
       unstop: `https://unstop.com/internships?keyword=${encRole}`,
       letsintern: `https://www.letsintern.com/internships/${slug}-internships`,
-      apna: `https://apna.co/jobs?q=${encRole}&experience=0`,
+      apna: `https://apna.co/jobs?q=${encRole}`,
       analyticsvidhya: `https://jobs.analyticsvidhya.com/jobs?search=${encRole}`,
       kaggle: "https://www.kaggle.com/jobs",
       aim: "https://analyticsindiamag.com/careers/",
@@ -2545,10 +2545,10 @@ document.addEventListener("DOMContentLoaded", () => {
       skills: "python, pytorch, deep_learning, machine_learning, statistics"
     },
     {
-      title: "Fresher Data Scientist (0-1 Yrs) (Naukri)",
+      title: "Data Scientist (up to 4 Yrs) (Naukri)",
       category: "Data Science",
-      seniority: "fresher",
-      exp: 0,
+      seniority: "entry_level",
+      exp: 4,
       skills: "python, sql, predictive_modeling, machine_learning, pandas"
     },
     {
@@ -3189,7 +3189,7 @@ Best regards,
         if (isZeroExpJob(job)) {
           evalFresherStatus.innerHTML = `<span style="color:#10b981">✓ 100% Fresher Eligible: 0 Years Experience Required</span>`;
         } else {
-          evalFresherStatus.innerHTML = `<span style="color:#3b82f6">ℹ Early Career: 0–2 Years Experience Preferred</span>`;
+          evalFresherStatus.innerHTML = `<span style="color:#3b82f6">ℹ Early Career: Up to 4 Years Experience</span>`;
         }
       }
 

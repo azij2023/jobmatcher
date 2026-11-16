@@ -12,7 +12,7 @@ def clean_job_title(title: str) -> str:
     if not title:
         return ""
     cleaned = re.sub(r'\(.*?\)', '', title)
-    cleaned = re.sub(r'-\s*(Fresher|Campus|Early Career|0-1 Yrs|Batch\s*\d+|India|Bengaluru|Bangalore|Hyderabad|Pune|Gurugram|Noida).*', '', cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r'-\s*(Fresher|Campus|Early Career|0-[1-4] Yrs|Batch\s*\d+|India|Bengaluru|Bangalore|Hyderabad|Pune|Gurugram|Noida).*', '', cleaned, flags=re.IGNORECASE)
     cleaned = re.sub(r'\s+', ' ', cleaned).strip()
     return cleaned or title
 
@@ -27,37 +27,37 @@ def title_to_slug(title: str) -> str:
 def build_linkedin_jobs_url(title: str, company: str = "") -> str:
     kw = f"{clean_job_title(title)} {company}".strip()
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://www.linkedin.com/jobs/search/?keywords={encoded}&location=India&f_TPR=r86400&f_E=1%2C2"
+    return f"https://www.linkedin.com/jobs/search/?keywords={encoded}&location=India&f_TPR=r86400&f_E=1%2C2%2C3"
 
 def build_naukri_jobs_url(title: str, company: str = "") -> str:
     slug = title_to_slug(title)
     if company:
         kw = urllib.parse.quote_plus(f"{clean_job_title(title)} {company}".strip())
-        return f"https://www.naukri.com/{slug}-jobs-in-india?k={kw}&experience=0"
-    return f"https://www.naukri.com/{slug}-jobs-in-india?experience=0"
+        return f"https://www.naukri.com/{slug}-jobs-in-india?k={kw}"
+    return f"https://www.naukri.com/{slug}-jobs-in-india"
 
 def build_indeed_jobs_url(title: str, company: str = "") -> str:
     kw = f"{clean_job_title(title)} {company}".strip()
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://in.indeed.com/jobs?q={encoded}&l=India&fromage=1&explvl=entry_level"
+    return f"https://in.indeed.com/jobs?q={encoded}&l=India&fromage=1"
 
 def build_foundit_jobs_url(title: str, company: str = "") -> str:
     kw = f"{clean_job_title(title)} {company}".strip()
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://www.foundit.in/srp/results?query={encoded}&locations=India&experience=0"
+    return f"https://www.foundit.in/srp/results?query={encoded}&locations=India"
 
 def build_glassdoor_jobs_url(title: str, company: str = "") -> str:
     slug = title_to_slug(title)
-    return f"https://www.glassdoor.co.in/Job/india-{slug}-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel"
+    return f"https://www.glassdoor.co.in/Job/india-{slug}-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1"
 
 def build_shine_jobs_url(title: str, company: str = "") -> str:
     slug = title_to_slug(title)
-    return f"https://www.shine.com/job-search/{slug}-jobs-in-india?experience=0"
+    return f"https://www.shine.com/job-search/{slug}-jobs-in-india"
 
 def build_timesjobs_url(title: str, company: str = "") -> str:
     kw = f"{clean_job_title(title)} {company}".strip()
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords={encoded}&cboWorkExp1=0"
+    return f"https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords={encoded}"
 
 # ==============================================================================
 # 2. Tech / Startup
@@ -71,17 +71,17 @@ def build_wellfound_jobs_url(title: str, company: str = "") -> str:
 def build_instahyre_jobs_url(title: str, company: str = "") -> str:
     kw = f"{clean_job_title(title)} {company}".strip()
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://www.instahyre.com/jobs-search?search={encoded}&experience=0"
+    return f"https://www.instahyre.com/jobs-search?search={encoded}"
 
 def build_cutshort_jobs_url(title: str, company: str = "") -> str:
     kw = clean_job_title(title)
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://cutshort.io/jobs?query={encoded}&experience=0"
+    return f"https://cutshort.io/jobs?query={encoded}"
 
 def build_hirist_jobs_url(title: str, company: str = "") -> str:
     kw = clean_job_title(title)
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://www.hirist.tech/search?keyword={encoded}&exp=0-1"
+    return f"https://www.hirist.tech/search?keyword={encoded}&exp=0-4"
 
 def build_ycombinator_jobs_url(title: str, company: str = "") -> str:
     kw = clean_job_title(title)
@@ -108,7 +108,7 @@ def build_letsintern_jobs_url(title: str) -> str:
 def build_apna_jobs_url(title: str) -> str:
     kw = clean_job_title(title)
     encoded = urllib.parse.quote_plus(kw)
-    return f"https://apna.co/jobs?q={encoded}&experience=0"
+    return f"https://apna.co/jobs?q={encoded}"
 
 # ==============================================================================
 # 4. Data / Analytics-Specific

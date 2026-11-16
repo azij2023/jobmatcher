@@ -66,11 +66,20 @@ class ManagementRoleTests(unittest.TestCase):
                 self.assertFalse(result['rejected'], result)
                 self.assertEqual(result['category'], category)
 
-    def test_senior_and_experienced_managers_still_rejected(self):
+    def test_senior_managers_stay_rejected_but_early_career_management_roles_pass(self):
         for title, years in [('Senior Analytics Manager', 0), ('Data Science Manager', 0),
-                             ('Junior Analytics Manager', 2), ('Associate AI Product Manager', 1)]:
+                             ('Associate AI Product Manager', 5)]:
             with self.subTest(title=title, years=years):
                 self.assertTrue(score_job(self.job(title, years), self.profile)['rejected'])
+        for title, years in [('Junior Analytics Manager', 2), ('Associate AI Product Manager', 1)]:
+            with self.subTest(title=title, years=years):
+                self.assertFalse(score_job(self.job(title, years), self.profile)['rejected'])
+
+    def test_collectors_enforce_the_four_year_cap(self):
+        self.assertTrue(is_fresher_eligible('Data Analyst', 'Requires 4 years of experience.'))
+        self.assertFalse(is_fresher_eligible('Data Analyst', 'Requires 5 years of experience.'))
+        self.assertTrue(_is_entry_level_listing('Data Analyst', '', 'Requires 4 years of experience.'))
+        self.assertFalse(_is_entry_level_listing('Data Analyst', '', 'Requires 5 years of experience.'))
 
     def test_unrelated_management_roles_are_not_targeted(self):
         self.assertFalse(is_relevant_role('Retail Management Trainee'))

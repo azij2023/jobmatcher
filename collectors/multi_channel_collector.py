@@ -1,6 +1,7 @@
 """RemoteOK API collection and identification of legacy Google News RSS cards."""
 
 from matching.management_roles import has_excluded_title
+from matching.experience import exceeds_experience_cap
 import re
 import json
 import urllib.request
@@ -26,8 +27,8 @@ HEADERS = {
 
 EXCLUDE_TITLE_WORDS = [
     "senior", "lead", "principal", "staff", "architect", "director", "vp",
-    "vice president", "head of", "manager", "years of exp", "3+ years", "5+ years",
-    "4+ years", "7+ years", "8+ years", "10+ years"
+    "vice president", "head of", "manager", "5+ years", "6+ years", "7+ years",
+    "8+ years", "10+ years"
 ]
 
 TARGET_KEYWORDS = [
@@ -38,22 +39,14 @@ TARGET_KEYWORDS = [
 ]
 
 def is_fresher_eligible(title: str, text: str = "") -> bool:
-    """Verifies that the role is strictly suitable for freshers / 0-1 yr exp."""
+    """Accept roles with unspecified experience or requirements up to four years."""
     t_low = title.lower()
-    text_low = text.lower()
     
     # Exclude senior roles
     if has_excluded_title(t_low, EXCLUDE_TITLE_WORDS):
         return False
         
-    # Check experience regex in text
-    exp_m = re.search(r'(\d+)\+?\s*years?(?:\s+of)?\s+exp', text_low)
-    if exp_m:
-        yrs = int(exp_m.group(1))
-        if yrs > 1:
-            return False
-
-    return True
+    return not exceeds_experience_cap(f"{t_low} {text or ''}", 4)
 
 def parse_rss_listing(raw_title: str, link: str, pub_date_str: str, domain: str, platform_name: str, category_name: str):
     """Robustly extracts clean job title, company, location, and metadata from Google RSS news item."""
@@ -124,31 +117,31 @@ def parse_rss_listing(raw_title: str, link: str, pub_date_str: str, domain: str,
     target_url = link
     if "naukri.com" in domain:
         slug = re.sub(r'[^a-z0-9]+', '-', f"{company} {title}".lower()).strip('-')
-        target_url = f"https://www.naukri.com/{slug}-jobs-in-india?experience=0"
+        target_url = f"https://www.naukri.com/{slug}-jobs-in-india"
     elif "indeed.com" in domain:
         q_enc = urllib.parse.quote_plus(f"{title} {company}".strip())
-        target_url = f"https://in.indeed.com/jobs?q={q_enc}&l=India&explvl=entry_level"
+        target_url = f"https://in.indeed.com/jobs?q={q_enc}&l=India"
     elif "foundit.in" in domain:
         q_enc = urllib.parse.quote_plus(title)
-        target_url = f"https://www.foundit.in/srp/results?query={q_enc}&locations=India&experience=0"
+        target_url = f"https://www.foundit.in/srp/results?query={q_enc}&locations=India"
     elif "internshala.com" in domain:
         q_enc = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')
         target_url = f"https://internshala.com/internships/{q_enc}-internship/"
     elif "hirist.tech" in domain:
         q_enc = urllib.parse.quote_plus(title)
-        target_url = f"https://www.hirist.tech/search?keyword={q_enc}&exp=0-1"
+        target_url = f"https://www.hirist.tech/search?keyword={q_enc}&exp=0-4"
     elif "instahyre.com" in domain:
         q_enc = urllib.parse.quote_plus(f"{title} {company}".strip())
-        target_url = f"https://www.instahyre.com/jobs-search?search={q_enc}&experience=0"
+        target_url = f"https://www.instahyre.com/jobs-search?search={q_enc}"
     elif "cutshort.io" in domain:
         q_enc = urllib.parse.quote_plus(title)
-        target_url = f"https://cutshort.io/jobs?query={q_enc}&experience=0"
+        target_url = f"https://cutshort.io/jobs?query={q_enc}"
     elif "wellfound.com" in domain:
         q_enc = urllib.parse.quote_plus(title)
         target_url = f"https://wellfound.com/jobs?role={q_enc}&location=India"
     elif "apna.co" in domain:
         q_enc = urllib.parse.quote_plus(title)
-        target_url = f"https://apna.co/jobs?q={q_enc}&experience=0"
+        target_url = f"https://apna.co/jobs?q={q_enc}"
 
     return {
         "title": title,

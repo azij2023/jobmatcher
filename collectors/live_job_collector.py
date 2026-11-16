@@ -30,6 +30,7 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from matching.management_roles import has_excluded_title, is_entry_management_title
+from matching.experience import exceeds_experience_cap
 from matching.scoring import score_job
 from llm.analysis import JobAnalyzer
 from matching.semantic_gaps import enrich_job_semantic_gaps
@@ -43,10 +44,10 @@ HEADERS = {
 
 EXCLUDE_TITLES = [
     "senior", "sr.", "lead", "principal", "manager", "director", "head of", "vp",
-    "staff", "architect", "5+", "6+", "7+", "8+", "10+", "years experience",
-    " ii", " iii", " iv", "-ii", "-iii", " 2", " 3", "scientist ii", "scientist iii",
+    "staff", "architect", "5+", "6+", "7+", "8+", "10+", " ii", " iii", " iv",
+    "-ii", "-iii", "scientist ii", "scientist iii",
     "engineer ii", "engineer iii", "analyst ii", "analyst iii", "specialist ii", "specialist iii",
-    "mid-level", "mid level", "experienced", "1+ years", "2+ years", "3+ years"
+    "mid-level", "mid level", "experienced"
 ]
 
 def parse_relative_time_to_hours(time_str: str) -> float | None:
@@ -178,27 +179,15 @@ def _is_entry_level_listing(title: str, seniority: str, description: str = "") -
     description_text = (description or "").lower()
     combined_text = f"{title_text} {level_text} {description_text}"
 
-    # 1. Hard reject senior titles or explicit 2+, 3+, 4+, 5+ year requirements
+    # 1. Reject senior titles and experience requirements above the configured cap.
     if has_excluded_title(title_text, EXCLUDE_TITLES):
         return False
     if has_excluded_title(level_text, ("mid level", "mid-level", "senior", "lead", "principal", "director")) or ("manager" in level_text and not is_entry_management_title(title_text)):
         return False
-    if re.search(r"\b(?:[2-9]|\d{2,})\+?\s*(?:-|to)?\s*\d*\s*years?(?:\s+of)?\s*(?:relevant\s+)?experience\b", combined_text):
+    if exceeds_experience_cap(combined_text, 4):
         return False
 
-    # 2. Explicit entry terms (excluding standalone 'associate' which can be 5+ yrs at banks like BlackRock)
-    entry_terms = ("entry", "junior", "intern", "graduate", "fresher", "trainee", "early career", "new grad", "apprentice")
-    if any(term in title_text or term in level_text for term in entry_terms):
-        return True
-    if any(term in description_text for term in (
-        "entry-level", "entry level", "fresher", "freshers", "internship",
-        "early career", "new graduate", "recent graduate", "fresh graduate",
-    )):
-        return True
-    return bool(re.search(
-        r"\b(?:0|one|1)\s*(?:-|to)?\s*(?:1)?\s*years?\s+(?:of\s+)?experience\b",
-        description_text,
-    ))
+    return True
 
 
 def _epoch_to_iso(value) -> str | None:
@@ -281,7 +270,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 25) -> list:
             "location": "India",
             "f_TPR": "r172800",  # discover the last 48 hours first
             "sortBy": "DD",  # most recent postings first
-            "f_E": "1,2",       # 1=Internship, 2=Entry level
+            "f_E": "1,2,3",     # Internship, entry level, and associate
             "start": 0
         })
         url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?{params}"
@@ -906,7 +895,7 @@ def fetch_live_naukri_rss_jobs() -> list:
                     company = parts[1].replace("Naukri.com", "").strip() or "Tech Company"
 
                 slug = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')
-                naukri_url = f"https://www.naukri.com/{slug}-jobs-in-india?experience=0"
+                naukri_url = f"https://www.naukri.com/{slug}-jobs-in-india"
                 if naukri_url in seen:
                     continue
                 seen.add(naukri_url)
@@ -959,7 +948,7 @@ def fetch_live_indeed_rss_jobs() -> list:
 
                 company = parts[1] if len(parts) > 1 else "Tech Company"
                 slug = urllib.parse.quote_plus(title)
-                indeed_url = f"https://in.indeed.com/jobs?q={slug}&l=India&explvl=entry_level"
+                indeed_url = f"https://in.indeed.com/jobs?q={slug}&l=India"
                 if indeed_url in seen:
                     continue
                 seen.add(indeed_url)

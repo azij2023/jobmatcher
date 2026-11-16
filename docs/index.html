@@ -111,7 +111,7 @@
             <span class="stat-icon">💼</span>
           </div>
           <div class="stat-value" id="stat-full-jobs-val">0</div>
-          <div class="stat-label">Full-Time Fresher Roles</div>
+          <div class="stat-label">Full-Time Early-Career Roles</div>
           <span class="stat-action-hint">Click to isolate</span>
         </button>
 
@@ -181,7 +181,7 @@
     <!-- Hero Section -->
     <section class="hero-section">
       <h1 class="hero-title">
-        Verified Fresher <span class="gradient-text">AI &amp; Data Jobs</span>
+        Early-Career <span class="gradient-text">AI &amp; Data Jobs</span>
       </h1>
       <div class="search-results-banner hero-results-summary" id="search-results-banner" aria-live="polite" aria-atomic="true">
         <div class="banner-headline-row">
@@ -276,7 +276,7 @@
 
         <!-- Live Direct Company Openings Grid -->
         <div class="company-sites-section-title">
-          <h3>⚡ Live Fresher Roles on Direct Company Sites (<span id="company-sites-live-count">0</span> Active)</h3>
+          <h3>⚡ Live Early-Career Roles on Direct Company Sites (<span id="company-sites-live-count">0</span> Active)</h3>
           <span class="section-subtitle">Employer job listings from the latest feed sync (Greenhouse, Lever, Ashby and SmartRecruiters)</span>
         </div>
         <div class="jobs-grid" id="company-sites-grid">
@@ -351,7 +351,7 @@
                 <th>Tier</th>
                 <th>Priority</th>
                 <th>Role Category</th>
-                <th>Target Roles (Entry-Level)</th>
+                <th>Target Roles (Early-Career)</th>
                 <th>Core Competencies</th>
                 <th>Weight</th>
               </tr>
@@ -365,13 +365,13 @@
         <div class="strategy-guidelines">
           <div class="guideline-card">
             <span class="guideline-icon">🛡️</span>
-            <h4>Strict Fresher (0–1 Yr) Gate</h4>
-            <p>Titles containing <code>senior</code>, <code>staff</code>, <code>lead</code>, <code>director</code>, <code>principal</code>, or requiring &ge;2 years experience are rejected immediately.</p>
+            <h4>Early-Career Experience Range</h4>
+            <p>Roles with unspecified experience or requirements up to 4 years are eligible. Senior, staff, lead, director, and principal roles remain excluded.</p>
           </div>
           <div class="guideline-card">
             <span class="guideline-icon">🌐</span>
             <h4>Multi-Platform Postings</h4>
-            <p>Ingests and verifies fresher job postings directly from LinkedIn, Naukri, Indeed, and top-tier direct ATS platforms.</p>
+            <p>Ingests and verifies early-career job postings directly from LinkedIn, Naukri, Indeed, and top-tier direct ATS platforms.</p>
           </div>
           <div class="guideline-card">
             <span class="guideline-icon">🎯</span>
@@ -537,7 +537,7 @@
             <h2 class="section-title">Fetch Jobs Posted by Individuals in Public Messages</h2>
             <p class="section-desc">
               Directly fetch, parse, and evaluate informal hiring announcements published by individuals (hiring managers, founders, tech leads) in public LinkedIn feed messages.
-              Checks strict fresher seniority gates (&le; 1 year exp), calculates multi-tier match score, and generates a personalized cold recruiter outreach pitch.
+              Checks seniority exclusions and the 4-year experience cap, calculates a multi-tier match score, and generates a personalized recruiter outreach pitch.
             </p>
           </div>
         </div>
@@ -682,7 +682,7 @@
               <div class="eval-meta-grid">
                 <div class="eval-meta-item">
                   <span class="eval-meta-label">Seniority / Gate:</span>
-                  <span class="eval-meta-val" id="eval-fresher-status">✓ Fresher (0-1 Yr) Eligible</span>
+                  <span class="eval-meta-val" id="eval-fresher-status">✓ Early Career (up to 4 Yrs) Eligible</span>
                 </div>
                 <div class="eval-meta-item">
                   <span class="eval-meta-label">Category:</span>
@@ -811,29 +811,29 @@
               </div>
             </div>
             <div class="channel-links-grid" id="cat-general-india">
-              <a href="https://www.linkedin.com/jobs/search/?keywords=Data+Scientist&location=India&f_TPR=r86400&f_E=1%2C2" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="linkedin">
+              <a href="https://www.linkedin.com/jobs/search/?keywords=Data+Scientist&location=India&f_TPR=r86400&f_E=1%2C2%2C3" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="linkedin">
                 <span class="chip-brand">💼 LinkedIn India</span>
-                <span class="chip-tag">Past 24h • 0-1 Yr</span>
+                <span class="chip-tag">Past 24h • Early Career</span>
               </a>
-              <a href="https://www.naukri.com/data-scientist-jobs-in-india?experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="naukri">
+              <a href="https://www.naukri.com/data-scientist-jobs-in-india" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="naukri">
                 <span class="chip-brand">🔷 Naukri</span>
-                <span class="chip-tag">0 Years • Freshers</span>
+                <span class="chip-tag">Early Career</span>
               </a>
-              <a href="https://in.indeed.com/jobs?q=Data+Scientist&l=India&fromage=1&explvl=entry_level" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="indeed">
+              <a href="https://in.indeed.com/jobs?q=Data+Scientist&l=India&fromage=1" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="indeed">
                 <span class="chip-brand">🎯 Indeed India</span>
                 <span class="chip-tag">Entry Level</span>
               </a>
-              <a href="https://www.foundit.in/srp/results?query=Data+Scientist&locations=India&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="foundit">
+              <a href="https://www.foundit.in/srp/results?query=Data+Scientist&locations=India" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="foundit">
                 <span class="chip-brand">⚡ Foundit (ex-Monster)</span>
                 <span class="chip-tag">0 Yrs Exp</span>
               </a>
-              <a href="https://www.glassdoor.co.in/Job/india-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="glassdoor">
+              <a href="https://www.glassdoor.co.in/Job/india-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="glassdoor">
                 <span class="chip-brand">🚪 Glassdoor India</span>
                 <span class="chip-tag">Verified Fresh</span>
               </a>
-              <a href="https://www.shine.com/job-search/data-scientist-jobs-in-india?experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="shine">
+              <a href="https://www.shine.com/job-search/data-scientist-jobs-in-india" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="shine">
                 <span class="chip-brand">✨ Shine</span>
-                <span class="chip-tag">Freshers</span>
+                <span class="chip-tag">Early Career</span>
               </a>
               <a href="https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist&cboWorkExp1=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="timesjobs">
                 <span class="chip-brand">📰 TimesJobs</span>
@@ -856,15 +856,15 @@
                 <span class="chip-brand">✌️ Wellfound (AngelList)</span>
                 <span class="chip-tag">Startups</span>
               </a>
-              <a href="https://www.instahyre.com/jobs-search?search=Data+Scientist&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="instahyre">
+              <a href="https://www.instahyre.com/jobs-search?search=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="instahyre">
                 <span class="chip-brand">⚡ Instahyre</span>
                 <span class="chip-tag">Top Tech</span>
               </a>
-              <a href="https://cutshort.io/jobs?query=Data+Scientist&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="cutshort">
+              <a href="https://cutshort.io/jobs?query=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="cutshort">
                 <span class="chip-brand">✂️ Cutshort</span>
-                <span class="chip-tag">0-1 Yr</span>
+                <span class="chip-tag">0-4 Yrs</span>
               </a>
-              <a href="https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-1" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="hirist">
+              <a href="https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-4" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="hirist">
                 <span class="chip-brand">💻 Hirist</span>
                 <span class="chip-tag">Tech Jobs</span>
               </a>
@@ -897,9 +897,9 @@
                 <span class="chip-brand">🌱 LetsIntern</span>
                 <span class="chip-tag">Internships</span>
               </a>
-              <a href="https://apna.co/jobs?q=Data+Scientist&experience=0" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="apna">
+              <a href="https://apna.co/jobs?q=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="apna">
                 <span class="chip-brand">📱 Apna</span>
-                <span class="chip-tag">Freshers</span>
+                <span class="chip-tag">Early Career</span>
               </a>
             </div>
           </div>
@@ -1091,8 +1091,8 @@
           <button class="quick-pill active" data-filter-type="all">
             🔥 All Roles <span class="pill-count" id="count-all">0</span>
           </button>
-          <button class="quick-pill pill-zero-exp" data-filter-type="zero-exp" id="pill-zero-exp" title="Filter strictly for 0 experience / freshers & interns">
-            🎓 0 Experience <span class="pill-count" id="count-zero-exp">0</span>
+          <button class="quick-pill pill-zero-exp" data-filter-type="zero-exp" id="pill-zero-exp" title="Optional filter for jobs requiring no prior experience">
+            🎓 Fresher Only <span class="pill-count" id="count-zero-exp">0</span>
           </button>
           <button class="quick-pill pill-intern" data-filter-type="internships" id="pill-internships" title="Filter internships, traineeships & apprenticeships only">
             🎓 Internships <span class="pill-count" id="count-internships">0</span>
@@ -1315,7 +1315,7 @@
         <button type="button" class="btn btn-secondary btn-mark-applied" id="modal-mark-applied">✓ Mark as Applied</button>
         <button type="button" class="btn btn-secondary btn-scam-job" id="modal-scam-job">Scam</button>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-linkedin" id="modal-apply-linkedin">
-          <span>💼 Apply on LinkedIn (Past 24h & Fresher) ↗</span>
+          <span>💼 Apply on LinkedIn (Past 24h & Early Career) ↗</span>
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-naukri-link" id="modal-apply-google">
           <span>🔷 Apply on Naukri (0 Yrs Exp) ↗</span>
