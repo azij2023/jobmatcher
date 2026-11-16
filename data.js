@@ -625,15 +625,15 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Operations Internship",
       "company": "Atomyc Content Marketing Solutions",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T10:43:02Z",
       "posted_at_source": "published_at",
-      "hours_ago": 0.6563,
-      "relative_time": "39 minutes ago",
+      "hours_ago": 0.7188,
+      "relative_time": "43 minutes ago",
       "url": "https://unstop.com/internships/1796552",
       "direct_job_url": "https://unstop.com/internships/1796552",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Operations+Internship+Atomyc+Content+Marketing+Solutions&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -720,7 +720,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Atomyc+Content+Marketing+Solutions+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -739,14 +740,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Intern",
       "company": "Valvoline Global Operations",
       "location": "Gurugram, Haryana, India",
-      "score": 0.99,
+      "score": 0.986,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T10:16:07Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 1.1049,
+      "hours_ago": 1.1674,
       "relative_time": "1 hours ago",
       "url": "https://in.linkedin.com/jobs/view/intern-at-valvoline-global-operations-4491502502",
       "direct_job_url": "https://in.linkedin.com/jobs/view/intern-at-valvoline-global-operations-4491502502",
@@ -837,7 +838,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=Valvoline+Global+Operations+careers"
-      }
+      },
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -856,14 +858,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Product Intern Fluento",
       "company": "LEAD Group",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.96,
+      "score": 0.956,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T10:12:07Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 1.1716,
+      "hours_ago": 1.2341,
       "relative_time": "1 hours ago",
       "url": "https://in.linkedin.com/jobs/view/product-intern-fluento-at-lead-group-4491511299",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-intern-fluento-at-lead-group-4491511299",
@@ -954,7 +956,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=LEAD+Group+careers"
-      }
+      },
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -970,14 +973,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Campus Ambassador Internship",
       "company": "Masters' Union School of Business",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T09:59:40Z",
       "posted_at_source": "published_at",
-      "hours_ago": 1.3791,
+      "hours_ago": 1.4416,
       "relative_time": "1 hours ago",
       "url": "https://unstop.com/internships/1798032",
       "direct_job_url": "https://unstop.com/internships/1798032",
@@ -1065,7 +1068,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Masters%27+Union+School+of+Business+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -1085,14 +1089,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst",
       "company": "Dexterz Technology",
       "location": "India",
-      "score": 0.98,
+      "score": 0.977,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-16T09:45:07Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 1.6216,
+      "hours_ago": 1.6841,
       "relative_time": "1 hours ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-at-dexterz-technology-4490275666",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-at-dexterz-technology-4490275666",
@@ -1184,7 +1188,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Dexterz+Technology+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -1200,14 +1205,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Marketing Analyst Internship",
       "company": "Radora",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T09:44:18Z",
       "posted_at_source": "published_at",
-      "hours_ago": 1.6352,
+      "hours_ago": 1.6977,
       "relative_time": "1 hours ago",
       "url": "https://unstop.com/internships/1812980",
       "direct_job_url": "https://unstop.com/internships/1812980",
@@ -1295,7 +1300,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=Radora+careers"
-      }
+      },
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -1315,14 +1321,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst Intern",
       "company": "Dexterz Technology",
       "location": "India",
-      "score": 0.98,
+      "score": 0.977,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-16T09:22:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 2.0046,
+      "hours_ago": 2.0671,
       "relative_time": "2 hours ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-dexterz-technology-4490290034",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-dexterz-technology-4490290034",
@@ -1414,7 +1420,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Dexterz+Technology+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -1432,14 +1439,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Junior Research Fellow (JRF) & Research Associate-I (RA)",
       "company": "VNR Vignana Jyothi Institute of Engineering and Technology (VNRVJIET)",
       "location": "Hyderabad, Telangana, India",
-      "score": 0.96,
+      "score": 0.956,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T08:45:09Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 2.621,
+      "hours_ago": 2.6835,
       "relative_time": "2 hours ago",
       "url": "https://in.linkedin.com/jobs/view/junior-research-fellow-jrf-research-associate-i-ra-at-vnr-vignana-jyothi-institute-of-engineering-and-technology-vnrvjiet-4485809582",
       "direct_job_url": "https://in.linkedin.com/jobs/view/junior-research-fellow-jrf-research-associate-i-ra-at-vnr-vignana-jyothi-institute-of-engineering-and-technology-vnrvjiet-4485809582",
@@ -1529,7 +1536,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=VNR+Vignana+Jyothi+Institute+of+Engineering+and+Technology+%28VNRVJIET%29+careers"
-      }
+      },
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -1545,14 +1553,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Product Evaluator Internship",
       "company": "Oxyzen",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T08:43:12Z",
       "posted_at_source": "published_at",
-      "hours_ago": 2.6535,
+      "hours_ago": 2.716,
       "relative_time": "2 hours ago",
       "url": "https://unstop.com/internships/1812989",
       "direct_job_url": "https://unstop.com/internships/1812989",
@@ -1640,7 +1648,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=Oxyzen+careers"
-      }
+      },
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -1656,14 +1665,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Automation Internship",
       "company": "PPS Anantams Corporation Pvt Ltd",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T08:00:03Z",
       "posted_at_source": "published_at",
-      "hours_ago": 3.3727,
+      "hours_ago": 3.4352,
       "relative_time": "3 hours ago",
       "url": "https://unstop.com/internships/1812339",
       "direct_job_url": "https://unstop.com/internships/1812339",
@@ -1751,137 +1760,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PPS+Anantams+Corporation+Pvt+Ltd+careers"
       },
-      "is_internship": true
-    },
-    {
-      "role_type": "standardized",
-      "role_category": "ML Engineering",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": 2,
-      "required_skills": [
-        "python",
-        "pandas",
-        "numpy",
-        "machine_learning",
-        "optimization"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Machine Learning Intern",
-      "company": "Dexter's Tech",
-      "location": "India",
-      "score": 0.94,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-16T07:45:09Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 3.621,
-      "relative_time": "3 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
-      "naukri_url": "https://www.naukri.com/machine-learning-intern-jobs-in-india?experience=0",
-      "company_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [
-        "python",
-        "pandas",
-        "numpy",
-        "machine_learning",
-        "optimization"
-      ],
-      "missing_skills": [],
-      "description": "MACHINE LEARNING INTERN Company: Dexter's Tech Location: Remote Employment Type: Full-Time Compensation: Performance-Based, up to ₹35,000/- ABOUT THE COMPANY Dexter's Tech is a technology-driven company focused on developing innovative digital solutions using artificial intellige...",
-      "raw_description": "MACHINE LEARNING INTERN Company: Dexter's Tech Location: Remote Employment Type: Full-Time Compensation: Performance-Based, up to ₹35,000/- ABOUT THE COMPANY Dexter's Tech is a technology-driven company focused on developing innovative digital solutions using artificial intelligence, machine learning, and modern technologies to solve real-world business challenges. ABOUT THE ROLE Dexter's Tech is looking for an analytical and enthusiastic Machine Learning Engineer to develop and improve intelligent systems using data and machine learning algorithms. The selected candidate will work on data preprocessing, model development, testing, and optimization to build effective AI-powered solutions. KEY RESPONSIBILITIES Collect, clean, and prepare datasets for analysis. Develop, train, and test machine learning models. Perform exploratory data analysis and feature engineering. Apply supervised and unsupervised learning techniques. Evaluate and optimize model performance. Identify patterns and insights from complex datasets. Document experiments and technical findings. Collaborate with the team on AI and ML projects. Research emerging machine learning technologies. ELIGIBILITY Bachelor's degree in Computer Science, Data Science, AI, Mathematics, or a related field. Freshers and experienced candidates are welcome. Understanding of machine learning concepts and algorithms. Strong interest in artificial intelligence and data-driven solutions. Ability to solve technical and analytical problems. REQUIRED SKILLS Python programming. Knowledge of Pandas, NumPy, and Scikit-learn. Understanding of statistics and data analysis. Familiarity with machine learning algorithms. Knowledge of data preprocessing and model evaluation. Strong analytical and problem-solving abilities. Good communication and teamwork skills. PERKS & BENEFITS Performance-based compensation up to ₹35,000/-. Opportunity to work on practical AI and ML projects. Professional development and career growth. Exposure to modern technologies and tools. Collaborative work environment. Recognition for outstanding contributions. EQUAL OPPORTUNITY Dexter's Tech is committed to creating an inclusive and supportive workplace. We welcome candidates from diverse backgrounds who are passionate about artificial intelligence, innovation, and technology.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "94% Core Match",
-        "gap_percentage": "6% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Dexter's Tech's Machine Learning Intern: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Intern+Dexter%27s+Tech&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/machine-learning-intern-jobs-in-india?k=Machine+Learning+Intern+Dexter%27s+Tech&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Intern+Dexter%27s+Tech&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Intern+Dexter%27s+Tech&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/machine-learning-intern-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Intern+Dexter%27s+Tech&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Intern&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Intern+Dexter%27s+Tech&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Intern&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Intern&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Intern"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/machine-learning-intern-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Intern",
-          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-intern-internships",
-          "Apna": "https://apna.co/jobs?q=Machine+Learning+Intern&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Intern",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-machine-learning-intern-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Intern",
-          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Intern",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Intern",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Dexter%27s+Tech+careers"
-      },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst",
       "company": "Zetheta Algorithms Private Limited",
       "location": "India",
-      "score": 0.99,
+      "score": 0.988,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T07:45:07Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 3.6216,
+      "hours_ago": 3.6841,
       "relative_time": "3 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4490255981",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4490255981",
@@ -1987,118 +1880,126 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
-      "role_category": "Data Science",
-      "seniority": "junior",
+      "role_category": "ML Engineering",
+      "seniority": "intern",
       "min_years_experience": 0,
       "max_years_experience": 2,
-      "required_skills": [],
+      "required_skills": [
+        "python",
+        "pandas",
+        "numpy",
+        "machine_learning",
+        "optimization"
+      ],
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
       "analysis_cached": false,
-      "title": "Data Entry Operator",
-      "company": "Balaji Caterers",
+      "title": "Machine Learning Intern",
+      "company": "Dexter's Tech",
       "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-16T07:23:23Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 3.9838,
-      "relative_time": "3 hours ago",
-      "url": "https://unstop.com/jobs/1805896",
-      "direct_job_url": "https://unstop.com/jobs/1805896",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Entry+Operator+Balaji+Caterers&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-entry-operator-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/jobs/1805896",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
+      "score": 0.94,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-16T07:25:51Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 4.0052,
+      "relative_time": "4 hours ago",
+      "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
+      "naukri_url": "https://www.naukri.com/machine-learning-intern-jobs-in-india?experience=0",
+      "company_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-dexter-s-tech-4491290766",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
       "company_job_verified": false,
       "job_publisher": null,
       "location_unverified": false,
       "is_fresher": true,
-      "matched_skills": [],
+      "matched_skills": [
+        "python",
+        "pandas",
+        "numpy",
+        "machine_learning",
+        "optimization"
+      ],
       "missing_skills": [],
-      "description": "Data Entry Operator at Balaji Caterers in India. Active hiring opportunity on Unstop (Deadline: 2026-11-25).",
-      "raw_description": "Data Entry Operator at Balaji Caterers in India. Active hiring opportunity on Unstop (Deadline: 2026-11-25).",
+      "description": "MACHINE LEARNING INTERN Company: Dexter's Tech Location: Remote Employment Type: Full-Time Compensation: Performance-Based, up to ₹35,000/- ABOUT THE COMPANY Dexter's Tech is a technology-driven company focused on developing innovative digital solutions using artificial intellige...",
+      "raw_description": "MACHINE LEARNING INTERN Company: Dexter's Tech Location: Remote Employment Type: Full-Time Compensation: Performance-Based, up to ₹35,000/- ABOUT THE COMPANY Dexter's Tech is a technology-driven company focused on developing innovative digital solutions using artificial intelligence, machine learning, and modern technologies to solve real-world business challenges. ABOUT THE ROLE Dexter's Tech is looking for an analytical and enthusiastic Machine Learning Engineer to develop and improve intelligent systems using data and machine learning algorithms. The selected candidate will work on data preprocessing, model development, testing, and optimization to build effective AI-powered solutions. KEY RESPONSIBILITIES Collect, clean, and prepare datasets for analysis. Develop, train, and test machine learning models. Perform exploratory data analysis and feature engineering. Apply supervised and unsupervised learning techniques. Evaluate and optimize model performance. Identify patterns and insights from complex datasets. Document experiments and technical findings. Collaborate with the team on AI and ML projects. Research emerging machine learning technologies. ELIGIBILITY Bachelor's degree in Computer Science, Data Science, AI, Mathematics, or a related field. Freshers and experienced candidates are welcome. Understanding of machine learning concepts and algorithms. Strong interest in artificial intelligence and data-driven solutions. Ability to solve technical and analytical problems. REQUIRED SKILLS Python programming. Knowledge of Pandas, NumPy, and Scikit-learn. Understanding of statistics and data analysis. Familiarity with machine learning algorithms. Knowledge of data preprocessing and model evaluation. Strong analytical and problem-solving abilities. Good communication and teamwork skills. PERKS & BENEFITS Performance-based compensation up to ₹35,000/-. Opportunity to work on practical AI and ML projects. Professional development and career growth. Exposure to modern technologies and tools. Collaborative work environment. Recognition for outstanding contributions. EQUAL OPPORTUNITY Dexter's Tech is committed to creating an inclusive and supportive workplace. We welcome candidates from diverse backgrounds who are passionate about artificial intelligence, innovation, and technology.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
       "post_author": null,
-      "deadline": "2026-11-25T00:00:00+05:30",
-      "end_date": "2026-11-25T00:00:00+05:30",
+      "deadline": null,
+      "end_date": null,
       "semantic_skill_gap": {
         "method": "template",
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
+        "fit_percentage": "94% Core Match",
+        "gap_percentage": "6% Skill Gap",
         "gaps": [
           {
-            "skill": "Causal Inference & Uplift Modeling",
+            "skill": "Docker Containerization & Multi-Stage Builds",
             "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
           },
           {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
             "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
           }
         ],
-        "bridge_roadmap": "For Balaji Caterers's Data Entry Operator: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
+        "bridge_roadmap": "For Dexter's Tech's Machine Learning Intern: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
       },
       "multi_source_urls": {
         "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Entry+Operator+Balaji+Caterers&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-entry-operator-jobs-in-india?k=Data+Entry+Operator+Balaji+Caterers&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Entry+Operator+Balaji+Caterers&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Entry+Operator+Balaji+Caterers&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-entry-operator-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-entry-operator-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Entry+Operator+Balaji+Caterers&cboWorkExp1=0"
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Intern+Dexter%27s+Tech&location=India&f_TPR=r86400&f_E=1%2C2",
+          "Naukri": "https://www.naukri.com/machine-learning-intern-jobs-in-india?k=Machine+Learning+Intern+Dexter%27s+Tech&experience=0",
+          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Intern+Dexter%27s+Tech&l=India&fromage=1&explvl=entry_level",
+          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Intern+Dexter%27s+Tech&locations=India&experience=0",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
+          "Shine": "https://www.shine.com/job-search/machine-learning-intern-jobs-in-india?experience=0",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Intern+Dexter%27s+Tech&cboWorkExp1=0"
         },
         "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Entry+Operator&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Entry+Operator+Balaji+Caterers&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Entry+Operator&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Entry+Operator&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Entry+Operator"
+          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Intern&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Intern+Dexter%27s+Tech&experience=0",
+          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Intern&experience=0",
+          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Intern&exp=0-1",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Intern"
         },
         "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-entry-operator-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Entry+Operator",
-          "LetsIntern": "https://www.letsintern.com/internships/data-entry-operator-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Entry+Operator&experience=0"
+          "Internshala": "https://internshala.com/internships/machine-learning-intern-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Intern",
+          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-intern-internships",
+          "Apna": "https://apna.co/jobs?q=Machine+Learning+Intern&experience=0"
         },
         "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Entry+Operator",
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Intern",
           "Kaggle Jobs": "https://www.kaggle.com/jobs",
           "AIM Jobs": "https://analyticsindiamag.com/careers/",
           "Data Elixir": "https://dataelixir.com/jobs"
         },
         "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-entry-operator-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Entry+Operator",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Entry+Operator",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Entry+Operator",
+          "RemoteOK": "https://remoteok.com/remote-machine-learning-intern-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Intern",
+          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Intern",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Intern",
           "Otta": "https://app.otta.com/jobs"
         },
-        "direct_company_portal": "https://www.google.com/search?q=Balaji+Caterers+careers"
+        "direct_company_portal": "https://www.google.com/search?q=Dexter%27s+Tech+careers"
       },
-      "is_internship": false
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -2114,14 +2015,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Video Creation Internship",
       "company": "PrepClever",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T07:18:11Z",
       "posted_at_source": "published_at",
-      "hours_ago": 4.0705,
+      "hours_ago": 4.133,
       "relative_time": "4 hours ago",
       "url": "https://unstop.com/internships/1796156",
       "direct_job_url": "https://unstop.com/internships/1796156",
@@ -2209,7 +2110,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PrepClever+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -2225,14 +2127,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Data Research Internship",
       "company": "G S Enterprises",
       "location": "India",
-      "score": 0.93,
+      "score": 0.925,
       "tier": 1,
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-11-16T06:59:43Z",
       "posted_at_source": "published_at",
-      "hours_ago": 4.3782,
+      "hours_ago": 4.4408,
       "relative_time": "4 hours ago",
       "url": "https://unstop.com/internships/1811170",
       "direct_job_url": "https://unstop.com/internships/1811170",
@@ -2320,7 +2222,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=G+S+Enterprises+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -2336,14 +2239,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Financial Analyst Internship",
       "company": "Shewings Healthcare Private Limited",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T06:34:18Z",
       "posted_at_source": "published_at",
-      "hours_ago": 4.8019,
+      "hours_ago": 4.8644,
       "relative_time": "4 hours ago",
       "url": "https://unstop.com/internships/1802719",
       "direct_job_url": "https://unstop.com/internships/1802719",
@@ -2431,7 +2334,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Shewings+Healthcare+Private+Limited+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
@@ -2443,7 +2347,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T04:45:09Z",
-      "hours_ago": 6.621,
+      "hours_ago": 6.6835,
       "relative_time": "6 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4490256451",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-devryxa-4490256451",
@@ -2552,7 +2456,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -2571,14 +2476,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analytics Intern",
       "company": "Devryxa",
       "location": "India",
-      "score": 0.99,
+      "score": 0.991,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-16T04:45:07Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 6.6216,
+      "hours_ago": 6.6841,
       "relative_time": "6 hours ago",
       "url": "https://in.linkedin.com/jobs/view/business-analytics-intern-at-devryxa-4490272061",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analytics-intern-at-devryxa-4490272061",
@@ -2669,7 +2574,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Devryxa+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -2685,14 +2591,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Design & Content Internship - AI (Remote)",
       "company": "Smartshopz LLP",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T20:16:24Z",
       "posted_at_source": "published_at",
-      "hours_ago": 15.1002,
+      "hours_ago": 15.1627,
       "relative_time": "15 hours ago",
       "url": "https://unstop.com/internships/1797680",
       "direct_job_url": "https://unstop.com/internships/1797680",
@@ -2780,118 +2686,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Smartshopz+LLP+careers"
       },
-      "is_internship": true
-    },
-    {
-      "role_type": "standardized",
-      "role_category": "Data Science",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": 2,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Data Entry and Email Marketing Internship",
-      "company": "iSpecia Technologies Private Limited",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-15T18:22:53Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 16.9921,
-      "relative_time": "16 hours ago",
-      "url": "https://unstop.com/internships/1793041",
-      "direct_job_url": "https://unstop.com/internships/1793041",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-entry-and-email-marketing-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1793041",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Data Entry and Email Marketing Internship at iSpecia Technologies Private Limited in India. Active hiring opportunity on Unstop (Deadline: 2026-11-17).",
-      "raw_description": "Data Entry and Email Marketing Internship at iSpecia Technologies Private Limited in India. Active hiring opportunity on Unstop (Deadline: 2026-11-17).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-17T00:00:00+05:30",
-      "end_date": "2026-11-17T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For iSpecia Technologies Private Limited's Data Entry and Email Marketing Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-entry-and-email-marketing-internship-jobs-in-india?k=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-entry-and-email-marketing-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-entry-and-email-marketing-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Entry+and+Email+Marketing+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Entry+and+Email+Marketing+Internship+iSpecia+Technologies+Private+Limited&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Entry+and+Email+Marketing+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Entry+and+Email+Marketing+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Entry+and+Email+Marketing+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-entry-and-email-marketing-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Entry+and+Email+Marketing+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/data-entry-and-email-marketing-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Entry+and+Email+Marketing+Internship&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Entry+and+Email+Marketing+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-entry-and-email-marketing-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Entry+and+Email+Marketing+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Entry+and+Email+Marketing+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Entry+and+Email+Marketing+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=iSpecia+Technologies+Private+Limited+careers"
-      },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -2907,14 +2703,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Data Creation Internship",
       "company": "Techphotonsolutions Pvt",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:58:53Z",
       "posted_at_source": "published_at",
-      "hours_ago": 17.3921,
+      "hours_ago": 17.4546,
       "relative_time": "17 hours ago",
       "url": "https://unstop.com/internships/1792303",
       "direct_job_url": "https://unstop.com/internships/1792303",
@@ -3002,7 +2798,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Techphotonsolutions+Pvt+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3018,14 +2815,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence & Generative AI Internship - Maharashtra",
       "company": "Cognirex Solutions",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:28:32Z",
       "posted_at_source": "published_at",
-      "hours_ago": 17.898,
+      "hours_ago": 17.9605,
       "relative_time": "17 hours ago",
       "url": "https://unstop.com/internships/1808429",
       "direct_job_url": "https://unstop.com/internships/1808429",
@@ -3113,7 +2910,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Cognirex+Solutions+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3129,14 +2927,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Intern",
       "company": "Intuitive Research and Development Pvt Ltd (IRDPL)",
       "location": "Pune City, Maharashtra, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:22:13Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.0032,
+      "hours_ago": 18.0658,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-intuitive-research-and-development-pvt-ltd-irdpl-4489394594",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-intuitive-research-and-development-pvt-ltd-irdpl-4489394594",
@@ -3224,7 +3022,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Intuitive+Research+and+Development+Pvt+Ltd+%28IRDPL%29+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3245,14 +3044,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Engineer/Intern ( VLA )",
       "company": "Intuitive Research and Development Pvt Ltd (IRDPL)",
       "location": "Pune City, Maharashtra, India",
-      "score": 0.99,
+      "score": 0.991,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:22:13Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.0032,
+      "hours_ago": 18.0658,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-intern-vla-at-intuitive-research-and-development-pvt-ltd-irdpl-4489399388",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-engineer-intern-vla-at-intuitive-research-and-development-pvt-ltd-irdpl-4489399388",
@@ -3345,20 +3144,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Intuitive+Research+and+Development+Pvt+Ltd+%28IRDPL%29+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "DATA ANALYST INTERN",
       "company": "Devryxa",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:22:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.0035,
+      "hours_ago": 18.066,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-devryxa-4490227875",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-devryxa-4490227875",
@@ -3456,7 +3256,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3472,14 +3273,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Apprentice(Finance)",
       "company": "Illumina",
       "location": "Greater Bengaluru Area",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:22:09Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.0044,
+      "hours_ago": 18.0669,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/apprentice-finance-at-illumina-4483379823",
       "direct_job_url": "https://in.linkedin.com/jobs/view/apprentice-finance-at-illumina-4483379823",
@@ -3567,7 +3368,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Illumina+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3583,14 +3385,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Scientist Internship",
       "company": "Sakthi Software",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:19:19Z",
       "posted_at_source": "published_at",
-      "hours_ago": 18.0516,
+      "hours_ago": 18.1141,
       "relative_time": "18 hours ago",
       "url": "https://unstop.com/internships/1811860",
       "direct_job_url": "https://unstop.com/internships/1811860",
@@ -3678,7 +3480,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Sakthi+Software+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3694,14 +3497,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Automation Internship",
       "company": "Acumem Advisory LLC",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T17:07:03Z",
       "posted_at_source": "published_at",
-      "hours_ago": 18.256,
+      "hours_ago": 18.3185,
       "relative_time": "18 hours ago",
       "url": "https://unstop.com/internships/1792994",
       "direct_job_url": "https://unstop.com/internships/1792994",
@@ -3789,20 +3592,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Acumem+Advisory+LLC+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "DATA ANALYST INTERN",
       "company": "Webs IT Solution",
       "location": "India",
-      "score": 1.0,
+      "score": 0.996,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T16:44:24Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.6335,
+      "hours_ago": 18.696,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-webs-it-solution-4491267005",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-webs-it-solution-4491267005",
@@ -3910,7 +3714,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -3938,7 +3743,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-15T16:44:22Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.6341,
+      "hours_ago": 18.6966,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-devryxa-4491256380",
       "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-devryxa-4491256380",
@@ -4031,7 +3836,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Devryxa+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -4051,14 +3857,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "BUSINESS ANALYTICS INTERN",
       "company": "Webs IT Solution",
       "location": "India",
-      "score": 0.98,
+      "score": 0.984,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T16:44:21Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.6344,
+      "hours_ago": 18.6969,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/business-analytics-intern-at-webs-it-solution-4491250647",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analytics-intern-at-webs-it-solution-4491250647",
@@ -4150,7 +3956,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Webs+IT+Solution+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
@@ -4163,7 +3970,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-15T16:31:31Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.8482,
+      "hours_ago": 18.9108,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-dexter-s-tech-4491256390",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-dexter-s-tech-4491256390",
@@ -4271,7 +4078,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -4291,14 +4099,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "BUSINESS ANALYTICS INTERN",
       "company": "Dexter's Tech",
       "location": "India",
-      "score": 0.98,
+      "score": 0.977,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-15T16:31:30Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 18.8485,
+      "hours_ago": 18.911,
       "relative_time": "18 hours ago",
       "url": "https://in.linkedin.com/jobs/view/business-analytics-intern-at-dexter-s-tech-4491250648",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analytics-intern-at-dexter-s-tech-4491250648",
@@ -4390,20 +4198,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Dexter%27s+Tech+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "DATA ANALYST INTERN",
       "company": "Vortenza Systems",
       "location": "India",
-      "score": 1.0,
+      "score": 0.996,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T16:22:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 19.0035,
+      "hours_ago": 19.066,
       "relative_time": "19 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-vortenza-systems-4491256377",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-vortenza-systems-4491256377",
@@ -4511,20 +4320,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "DATA ANALYST INTERN",
       "company": "Talent to Job",
       "location": "India",
-      "score": 1.0,
+      "score": 0.996,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T16:22:12Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 19.0035,
+      "hours_ago": 19.066,
       "relative_time": "19 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-talent-to-job-4491255431",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-talent-to-job-4491255431",
@@ -4632,7 +4442,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
@@ -4644,7 +4455,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T16:22:10Z",
-      "hours_ago": 19.0041,
+      "hours_ago": 19.0666,
       "relative_time": "19 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4490227789",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-vortenza-systems-4490227789",
@@ -4753,7 +4564,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
@@ -4766,7 +4578,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-15T16:22:10Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 19.0041,
+      "hours_ago": 19.0666,
       "relative_time": "19 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-talent-to-job-4491266001",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-talent-to-job-4491266001",
@@ -4874,7 +4686,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -4890,14 +4703,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Science Trainer - Delhi",
       "company": "Ndmit",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T16:04:35Z",
       "posted_at_source": "published_at",
-      "hours_ago": 19.2971,
+      "hours_ago": 19.3596,
       "relative_time": "19 hours ago",
       "url": "https://unstop.com/jobs/1811418",
       "direct_job_url": "https://unstop.com/jobs/1811418",
@@ -4985,7 +4798,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Ndmit+careers"
       },
-      "is_internship": false
+      "is_internship": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -5001,14 +4815,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Intern",
       "company": "Ascende",
       "location": "India",
-      "score": 0.97,
+      "score": 0.971,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T15:31:30Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 19.8485,
+      "hours_ago": 19.911,
       "relative_time": "19 hours ago",
       "url": "https://in.linkedin.com/jobs/view/intern-at-ascende-4490228660",
       "direct_job_url": "https://in.linkedin.com/jobs/view/intern-at-ascende-4490228660",
@@ -5098,7 +4912,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Ascende+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -5114,14 +4929,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Operations Project Assistant-OPA",
       "company": "Iron Systems, Inc",
       "location": "Sahibzada Ajit Singh Nagar, Punjab, India",
-      "score": 0.97,
+      "score": 0.971,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T14:59:48Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 20.3769,
+      "hours_ago": 20.4394,
       "relative_time": "20 hours ago",
       "url": "https://in.linkedin.com/jobs/view/operations-project-assistant-opa-at-iron-systems-inc-4491247602",
       "direct_job_url": "https://in.linkedin.com/jobs/view/operations-project-assistant-opa-at-iron-systems-inc-4491247602",
@@ -5211,7 +5026,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=Iron+Systems%2C+Inc+careers"
-      }
+      },
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -5227,14 +5043,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Intern",
       "company": "Jobs4PanIndia",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T13:47:36Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 21.5802,
+      "hours_ago": 21.6427,
       "relative_time": "21 hours ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4490243105",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-jobs4panindia-4490243105",
@@ -5322,20 +5138,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Jobs4PanIndia+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "Dexterz Technology",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T13:44:27Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 21.6327,
+      "hours_ago": 21.6952,
       "relative_time": "21 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-dexterz-technology-4490242108",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-dexterz-technology-4490242108",
@@ -5433,19 +5250,20 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
       "company": "Jobs4PanIndia",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T13:44:27Z",
-      "hours_ago": 21.6327,
+      "hours_ago": 21.6952,
       "relative_time": "21 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4490227687",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-jobs4panindia-4490227687",
@@ -5544,7 +5362,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -5562,14 +5381,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Graduate Engineer Trainee - R&D PTM",
       "company": "Valeo",
       "location": "Chennai, Tamil Nadu, India",
-      "score": 0.96,
+      "score": 0.956,
       "tier": 5,
       "category": "Product",
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-11-15T13:44:22Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 21.6341,
+      "hours_ago": 21.6966,
       "relative_time": "21 hours ago",
       "url": "https://in.linkedin.com/jobs/view/graduate-engineer-trainee-r-d-ptm-at-valeo-4331169803",
       "direct_job_url": "https://in.linkedin.com/jobs/view/graduate-engineer-trainee-r-d-ptm-at-valeo-4331169803",
@@ -5653,7 +5472,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Valeo+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -5680,7 +5500,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-15T13:06:36Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 22.2635,
+      "hours_ago": 22.326,
       "relative_time": "22 hours ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-azimuthforge-4489382427",
       "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-azimuthforge-4489382427",
@@ -5772,20 +5592,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=AzimuthForge+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
       "company": "ThinkNovaa",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T12:44:27Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 22.6327,
+      "hours_ago": 22.6952,
       "relative_time": "22 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4490226705",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-thinknovaa-4490226705",
@@ -5883,7 +5704,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -5899,14 +5721,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Intern",
       "company": "ThinkNovaa",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T12:44:26Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 22.633,
+      "hours_ago": 22.6955,
       "relative_time": "22 hours ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-thinknovaa-4490221939",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-thinknovaa-4490221939",
@@ -5994,7 +5816,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=ThinkNovaa+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6012,14 +5835,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Machine Learning Intern",
       "company": "ThinkNovaa",
       "location": "India",
-      "score": 0.99,
+      "score": 0.991,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T12:44:26Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 22.633,
+      "hours_ago": 22.6955,
       "relative_time": "22 hours ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-thinknovaa-4490226712",
       "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-thinknovaa-4490226712",
@@ -6109,7 +5932,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=ThinkNovaa+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6131,14 +5955,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst Intern",
       "company": "ThinkNovaa",
       "location": "India",
-      "score": 0.98,
+      "score": 0.984,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-15T12:31:30Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 22.8485,
+      "hours_ago": 22.911,
       "relative_time": "22 hours ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-thinknovaa-4490237171",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-thinknovaa-4490237171",
@@ -6232,7 +6056,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=ThinkNovaa+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6250,14 +6075,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence (AI) & Machine Learning Internship",
       "company": "Cognirex Solutions",
       "location": "India",
-      "score": 0.99,
+      "score": 0.991,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T11:07:29Z",
       "posted_at_source": "published_at",
-      "hours_ago": 24.2488,
+      "hours_ago": 24.3113,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1808045",
       "direct_job_url": "https://unstop.com/internships/1808045",
@@ -6347,7 +6172,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Cognirex+Solutions+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6369,14 +6195,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "SDE Intern (Full Stack & AI)",
       "company": "Aleph Technologies",
       "location": "Pune Division, Maharashtra, India",
-      "score": 0.96,
+      "score": 0.959,
       "tier": 4,
       "category": "OR / Optimization",
       "priority": "Primary",
       "badge": "🏅",
       "posted_at": "2026-11-15T10:59:47Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 24.3771,
+      "hours_ago": 24.4396,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/sde-intern-full-stack-ai-at-aleph-technologies-4490204903",
       "direct_job_url": "https://in.linkedin.com/jobs/view/sde-intern-full-stack-ai-at-aleph-technologies-4490204903",
@@ -6470,20 +6296,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Aleph+Technologies+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
       "company": "WebBoost Solutions by UM",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T09:06:33Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 26.2644,
+      "hours_ago": 26.3269,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-webboost-solutions-by-um-4491234272",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-webboost-solutions-by-um-4491234272",
@@ -6581,7 +6408,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6597,14 +6425,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Engineer Intern",
       "company": "Plearun",
       "location": "India",
-      "score": 0.85,
+      "score": 0.848,
       "tier": 8,
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-11-15T08:44:29Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 26.6321,
+      "hours_ago": 26.6946,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-plearun-4491206894",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-plearun-4491206894",
@@ -6692,7 +6520,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Plearun+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6708,14 +6537,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Video Editor & AI Video Generation Internship",
       "company": "PhotoGPT AI",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 5,
       "category": "Product",
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-11-15T08:26:31Z",
       "posted_at_source": "published_at",
-      "hours_ago": 26.9316,
+      "hours_ago": 26.9941,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1794436",
       "direct_job_url": "https://unstop.com/internships/1794436",
@@ -6803,7 +6632,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PhotoGPT+AI+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6819,14 +6649,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Generalist",
       "company": "Futurebits",
       "location": "Pune Division, Maharashtra, India",
-      "score": 0.98,
+      "score": 0.976,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T07:44:22Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 27.6341,
+      "hours_ago": 27.6966,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-generalist-at-futurebits-4489371663",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-generalist-at-futurebits-4489371663",
@@ -6916,7 +6746,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Futurebits+careers"
       },
-      "is_internship": false
+      "is_internship": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -6932,14 +6763,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Science Trainer",
       "company": "Ndmit",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T07:20:22Z",
       "posted_at_source": "published_at",
-      "hours_ago": 28.0341,
+      "hours_ago": 28.0966,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/jobs/1810278",
       "direct_job_url": "https://unstop.com/jobs/1810278",
@@ -7027,7 +6858,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Ndmit+careers"
       },
-      "is_internship": false
+      "is_internship": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7043,14 +6875,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Analytics Intern",
       "company": "DataQ Labs by PrimrIQ",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T07:06:38Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 28.263,
+      "hours_ago": 28.3255,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analytics-intern-at-dataq-labs-by-primriq-4490219440",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analytics-intern-at-dataq-labs-by-primriq-4490219440",
@@ -7138,7 +6970,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=DataQ+Labs+by+PrimrIQ+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7154,14 +6987,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Intern",
       "company": "SkillOrbit",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T06:12:41Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 29.1621,
+      "hours_ago": 29.2246,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-skillorbit-4490217473",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-skillorbit-4490217473",
@@ -7249,7 +7082,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=SkillOrbit+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7265,14 +7099,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Developer Advocate Internship: AI Observability",
       "company": "Moonshot Factory Inc.",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T05:11:32Z",
       "posted_at_source": "published_at",
-      "hours_ago": 30.1813,
+      "hours_ago": 30.2438,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1783259",
       "direct_job_url": "https://unstop.com/internships/1783259",
@@ -7360,20 +7194,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Moonshot+Factory+Inc.+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "PrimrIQ",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T05:06:38Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 30.263,
+      "hours_ago": 30.3255,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-primriq-4490219271",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-primriq-4490219271",
@@ -7471,7 +7306,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7497,7 +7333,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-15T05:06:36Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 30.2635,
+      "hours_ago": 30.326,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-primriq-4490215412",
       "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-intern-at-primriq-4490215412",
@@ -7588,7 +7424,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PrimrIQ+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7604,14 +7441,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Product Management Intern",
       "company": "Enrichmentors",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T04:18:36Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 31.0635,
+      "hours_ago": 31.126,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-management-intern-at-enrichmentors-4490211363",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-management-intern-at-enrichmentors-4490211363",
@@ -7699,7 +7536,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Enrichmentors+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7715,14 +7553,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "DATA ANALYST INTERN",
       "company": "Zenithbyte",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T04:06:35Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 31.2638,
+      "hours_ago": 31.3263,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-zenithbyte-4491209583",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-zenithbyte-4491209583",
@@ -7810,20 +7648,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Zenithbyte+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "ThinkNovaa",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-15T03:18:43Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 32.0616,
+      "hours_ago": 32.1241,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-thinknovaa-4490219155",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-thinknovaa-4490219155",
@@ -7921,7 +7760,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -7937,14 +7777,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Founder's Office Intern",
       "company": "PMS AIF Club",
       "location": "Gurugram, Haryana, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T19:35:31Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 39.7816,
+      "hours_ago": 39.8441,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/founder-s-office-intern-at-pms-aif-club-4489894744",
       "direct_job_url": "https://in.linkedin.com/jobs/view/founder-s-office-intern-at-pms-aif-club-4489894744",
@@ -8032,7 +7872,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PMS+AIF+Club+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8048,14 +7889,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Business Development & Investor Relations Internship",
       "company": "Chakravarthyateet Mythitecture Private Limited",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T16:42:38Z",
       "posted_at_source": "published_at",
-      "hours_ago": 42.663,
+      "hours_ago": 42.7255,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1806931",
       "direct_job_url": "https://unstop.com/internships/1806931",
@@ -8143,7 +7984,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Chakravarthyateet+Mythitecture+Private+Limited+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8159,14 +8001,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Development Engineer Internship",
       "company": "NxtGenSec Private Limited",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T16:23:28Z",
       "posted_at_source": "published_at",
-      "hours_ago": 42.9824,
+      "hours_ago": 43.0449,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1810541",
       "direct_job_url": "https://unstop.com/internships/1810541",
@@ -8254,7 +8096,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=NxtGenSec+Private+Limited+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8270,14 +8113,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Science Intern",
       "company": "MediNex Workforce",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T16:18:43Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 43.0616,
+      "hours_ago": 43.1241,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-medinex-workforce-4491090326",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-medinex-workforce-4491090326",
@@ -8365,7 +8208,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=MediNex+Workforce+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8385,14 +8229,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst Intern",
       "company": "MediNex Workforce",
       "location": "India",
-      "score": 0.98,
+      "score": 0.977,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-14T16:06:32Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 43.2646,
+      "hours_ago": 43.3271,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-medinex-workforce-4491097004",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-medinex-workforce-4491097004",
@@ -8484,118 +8328,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=MediNex+Workforce+careers"
       },
-      "is_internship": true
-    },
-    {
-      "role_type": "standardized",
-      "role_category": "Data Science",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": 2,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Data Entry Internship",
-      "company": "Abuem Workifying LLP",
-      "location": "India",
-      "score": 0.91,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-14T14:34:29Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 44.7988,
-      "relative_time": "1 days ago",
-      "url": "https://unstop.com/internships/1784779",
-      "direct_job_url": "https://unstop.com/internships/1784779",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Entry+Internship+Abuem+Workifying+LLP&location=India&f_TPR=r86400&f_E=1%2C2",
-      "naukri_url": "https://www.naukri.com/data-entry-internship-jobs-in-india?experience=0",
-      "company_url": "https://unstop.com/internships/1784779",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Data Entry Internship at Abuem Workifying LLP in India. Active hiring opportunity on Unstop (Deadline: 2026-11-29).",
-      "raw_description": "Data Entry Internship at Abuem Workifying LLP in India. Active hiring opportunity on Unstop (Deadline: 2026-11-29).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-29T00:00:00+05:30",
-      "end_date": "2026-11-29T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Abuem Workifying LLP's Data Entry Internship: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Entry+Internship+Abuem+Workifying+LLP&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/data-entry-internship-jobs-in-india?k=Data+Entry+Internship+Abuem+Workifying+LLP&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Entry+Internship+Abuem+Workifying+LLP&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Entry+Internship+Abuem+Workifying+LLP&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-entry-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/data-entry-internship-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Entry+Internship+Abuem+Workifying+LLP&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Entry+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Entry+Internship+Abuem+Workifying+LLP&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Entry+Internship&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Entry+Internship&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Entry+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-entry-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Entry+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/data-entry-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Entry+Internship&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Entry+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-entry-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Entry+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Entry+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Entry+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Abuem+Workifying+LLP+careers"
-      },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8613,14 +8347,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Associate",
       "company": "PwC India",
       "location": "Greater Kolkata Area",
-      "score": 1.0,
+      "score": 0.996,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T14:24:17Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 44.9688,
+      "hours_ago": 45.0313,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-at-pwc-india-4291063798",
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-at-pwc-india-4291063798",
@@ -8710,7 +8444,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PwC+India+careers"
       },
-      "is_internship": false
+      "is_internship": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8726,14 +8461,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Intern",
       "company": "PrimrIQ",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T14:06:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 45.2588,
+      "hours_ago": 45.3213,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-primriq-4489836425",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-primriq-4489836425",
@@ -8821,20 +8556,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PrimrIQ+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "MediNex Workforce",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T14:06:38Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 45.263,
+      "hours_ago": 45.3255,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-medinex-workforce-4490202129",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-medinex-workforce-4490202129",
@@ -8932,7 +8668,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -8948,14 +8685,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Engineering Internship",
       "company": "AIONDATA",
       "location": "Noida, Uttar Pradesh, India",
-      "score": 0.85,
+      "score": 0.853,
       "tier": 8,
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-11-14T13:06:55Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 46.2582,
+      "hours_ago": 46.3208,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-engineering-internship-at-aiondata-4489888531",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineering-internship-at-aiondata-4489888531",
@@ -9043,7 +8780,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=AIONDATA+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -9059,14 +8797,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Intern | Bidadi",
       "company": "GO DESi",
       "location": "Ramanagara, Karnataka, India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T13:06:55Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 46.2582,
+      "hours_ago": 46.3208,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-intern-bidadi-at-go-desi-4489890449",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-intern-bidadi-at-go-desi-4489890449",
@@ -9154,7 +8892,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=GO+DESi+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -9172,14 +8911,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence & Machine Learning Intern",
       "company": "Letsintern.in",
       "location": "India",
-      "score": 0.99,
+      "score": 0.991,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T12:06:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 47.2588,
+      "hours_ago": 47.3213,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-machine-learning-intern-at-letsintern-in-4489873829",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-machine-learning-intern-at-letsintern-in-4489873829",
@@ -9269,7 +9008,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Letsintern.in+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -9285,14 +9025,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst Intern",
       "company": "PrimrIQ",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T11:29:31Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 47.8816,
+      "hours_ago": 47.9441,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-primriq-4489880180",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-primriq-4489880180",
@@ -9380,7 +9120,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=PrimrIQ+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -9396,15 +9137,15 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI & React Developer Internship",
       "company": "SmaranAI.in",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T11:23:02Z",
       "posted_at_source": "published_at",
-      "hours_ago": 47.9896,
-      "relative_time": "1 days ago",
+      "hours_ago": 48.0521,
+      "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1805059",
       "direct_job_url": "https://unstop.com/internships/1805059",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+%26+React+Developer+Internship+SmaranAI.in&location=India&f_TPR=r86400&f_E=1%2C2",
@@ -9491,20 +9232,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=SmaranAI.in+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst | Internship",
       "company": "PrimrIQ",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T10:58:24Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 48.4002,
+      "hours_ago": 48.4627,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-internship-at-primriq-4489852982",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-internship-at-primriq-4489852982",
@@ -9602,7 +9344,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -9622,14 +9365,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Artificial Intelligence Intern",
       "company": "DataQ Labs by PrimrIQ",
       "location": "India",
-      "score": 0.98,
+      "score": 0.984,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T10:06:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 49.2588,
+      "hours_ago": 49.3213,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-dataq-labs-by-primriq-4489879081",
       "direct_job_url": "https://in.linkedin.com/jobs/view/artificial-intelligence-intern-at-dataq-labs-by-primriq-4489879081",
@@ -9721,20 +9464,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=DataQ+Labs+by+PrimrIQ+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Internship",
       "company": "Zenotalent",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T09:39:55Z",
       "posted_at_source": "published_at",
-      "hours_ago": 49.7082,
+      "hours_ago": 49.7708,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1810486",
       "direct_job_url": "https://unstop.com/internships/1810486",
@@ -9832,7 +9576,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -9848,14 +9593,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Campus Executive Officer Internship",
       "company": "Ashna AI",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T09:32:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 49.836,
+      "hours_ago": 49.8985,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1798816",
       "direct_job_url": "https://unstop.com/internships/1798816",
@@ -9943,20 +9688,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Ashna+AI+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "AzimuthForge",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T09:24:14Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 49.9696,
+      "hours_ago": 50.0321,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-azimuthforge-4489337035",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-azimuthforge-4489337035",
@@ -10054,7 +9800,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10070,14 +9817,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "ML/AI Intern",
       "company": "ATRISI",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T08:06:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 51.2588,
+      "hours_ago": 51.3213,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ml-ai-intern-at-atrisi-4489322537",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ml-ai-intern-at-atrisi-4489322537",
@@ -10165,20 +9912,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=ATRISI+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Internship",
       "company": "Information Security Goverance",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T07:36:31Z",
       "posted_at_source": "published_at",
-      "hours_ago": 51.7649,
+      "hours_ago": 51.8274,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1808105",
       "direct_job_url": "https://unstop.com/internships/1808105",
@@ -10276,7 +10024,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10292,14 +10041,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Product Engineering Intern",
       "company": "Leaf singularity",
       "location": "Chennai, Tamil Nadu, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T07:29:31Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 51.8816,
+      "hours_ago": 51.9441,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-engineering-intern-at-leaf-singularity-4489866519",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-engineering-intern-at-leaf-singularity-4489866519",
@@ -10387,7 +10136,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Leaf+singularity+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10406,14 +10156,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst",
       "company": "Multiplier AI",
       "location": "Noida, Uttar Pradesh, India",
-      "score": 0.99,
+      "score": 0.989,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-14T07:18:38Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 52.063,
+      "hours_ago": 52.1255,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-at-multiplier-ai-4491062095",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-at-multiplier-ai-4491062095",
@@ -10504,7 +10254,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Multiplier+AI+careers"
       },
-      "is_internship": false
+      "is_internship": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10520,14 +10271,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Tech Systems and Products Intern",
       "company": "A4G Impact Collaborative",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T06:18:36Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 53.0635,
+      "hours_ago": 53.126,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/tech-systems-and-products-intern-at-a4g-impact-collaborative-4489579151",
       "direct_job_url": "https://in.linkedin.com/jobs/view/tech-systems-and-products-intern-at-a4g-impact-collaborative-4489579151",
@@ -10615,7 +10366,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=A4G+Impact+Collaborative+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10631,14 +10383,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Forward Deployed Engineer Intern",
       "company": "Opptra",
       "location": "Bangalore Urban, Karnataka, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T05:06:55Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 54.2582,
+      "hours_ago": 54.3208,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/forward-deployed-engineer-intern-at-opptra-4489571490",
       "direct_job_url": "https://in.linkedin.com/jobs/view/forward-deployed-engineer-intern-at-opptra-4489571490",
@@ -10726,7 +10478,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Opptra+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10742,14 +10495,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Mining Internship",
       "company": "GAO Tech Inc.",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T04:35:02Z",
       "posted_at_source": "published_at",
-      "hours_ago": 54.7896,
+      "hours_ago": 54.8521,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1802722",
       "direct_job_url": "https://unstop.com/internships/1802722",
@@ -10837,7 +10590,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=GAO+Tech+Inc.+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10853,14 +10607,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Compliance Engineer Intern",
       "company": "CertiK",
       "location": "Remote (APAC)",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T02:50:33Z",
       "posted_at_source": "published_at",
-      "hours_ago": 56.531,
+      "hours_ago": 56.5935,
       "relative_time": "2 days ago",
       "url": "https://jobicy.com/jobs/153136-compliance-engineer-intern",
       "direct_job_url": "https://jobicy.com/jobs/153136-compliance-engineer-intern",
@@ -10948,7 +10702,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=CertiK+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -10964,14 +10719,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Business Analyst Cum Data Managing Internship in Noida",
       "company": "Arihant Publications India Limited",
       "location": "Noida, Uttar Pradesh, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T01:07:30Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 58.2485,
+      "hours_ago": 58.311,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/business-analyst-cum-data-managing-internship-in-noida-at-arihant-publications-india-limited-4491017438",
       "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-cum-data-managing-internship-in-noida-at-arihant-publications-india-limited-4491017438",
@@ -11059,7 +10814,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Arihant+Publications+India+Limited+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11075,14 +10831,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Design Internship in Noida",
       "company": "FabAlley",
       "location": "Noida, Uttar Pradesh, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-14T00:29:39Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 58.8794,
+      "hours_ago": 58.9419,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-design-internship-in-noida-at-faballey-4491026048",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-design-internship-in-noida-at-faballey-4491026048",
@@ -11170,20 +10926,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=FabAlley+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "AI/ML Engineer Internship in Delhi",
       "company": "Isourse",
       "location": "Delhi, India",
-      "score": 0.85,
+      "score": 0.853,
       "tier": 8,
       "category": "ML Engineering",
       "priority": "Secondary",
       "badge": "8",
       "posted_at": "2026-11-14T00:29:20Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 58.8846,
+      "hours_ago": 58.9471,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-internship-in-delhi-at-isourse-4491029012",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-internship-in-delhi-at-isourse-4491029012",
@@ -11197,11 +10954,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "FastAPI REST Serving & Latency Optimization",
-        "Docker Containerization & Multi-Stage Builds",
-        "Model Registry & Drift Monitoring"
-      ],
+      "missing_skills": [],
       "description": "AI/ML Engineer Internship in Delhi at Isourse in Delhi, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "AI/ML Engineer Internship in Delhi at Isourse in Delhi, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -11274,7 +11027,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Isourse+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11295,14 +11049,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Young Apprentice - C00 - Gurugram",
       "company": "Citi",
       "location": "Gurgaon, Haryana, India",
-      "score": 0.97,
+      "score": 1.0,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T23:31:30Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 59.8485,
+      "hours_ago": 59.911,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/young-apprentice-c00-gurugram-at-citi-4489831501",
       "direct_job_url": "https://in.linkedin.com/jobs/view/young-apprentice-c00-gurugram-at-citi-4489831501",
@@ -11395,7 +11149,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Citi+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11411,14 +11166,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Generative AI Internship",
       "company": "Bleep Education LLP",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T20:32:30Z",
       "posted_at_source": "published_at",
-      "hours_ago": 62.8319,
+      "hours_ago": 62.8944,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1798604",
       "direct_job_url": "https://unstop.com/internships/1798604",
@@ -11506,20 +11261,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Bleep+Education+LLP+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Trainee",
       "company": "MedTourEasy Dhanbad",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T18:45:05Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 64.6221,
+      "hours_ago": 64.6846,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-trainee-at-medtoureasy-dhanbad-4490346927",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-trainee-at-medtoureasy-dhanbad-4490346927",
@@ -11533,11 +11289,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Data Analyst Trainee at MedTourEasy Dhanbad in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Data Analyst Trainee at MedTourEasy Dhanbad in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -11610,7 +11362,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=MedTourEasy+Dhanbad+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11628,14 +11381,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Apprentice (R-20025)",
       "company": "Dun & Bradstreet",
       "location": "Mumbai Metropolitan Region",
-      "score": 0.96,
+      "score": 0.956,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T18:24:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 64.9713,
+      "hours_ago": 65.0338,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/apprentice-r-20025-at-dun-bradstreet-4482050508",
       "direct_job_url": "https://in.linkedin.com/jobs/view/apprentice-r-20025-at-dun-bradstreet-4482050508",
@@ -11719,7 +11472,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Dun+%26+Bradstreet+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11735,14 +11489,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "IBM Research/Research Software - Intern",
       "company": "IBM",
       "location": "Gurgaon, Haryana, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T18:06:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 65.2588,
+      "hours_ago": 65.3213,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ibm-research-research-software-intern-at-ibm-4480620993",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ibm-research-research-software-intern-at-ibm-4480620993",
@@ -11830,7 +11584,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=IBM+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11846,14 +11601,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Data Analytics Internship",
       "company": "Vortizo AI",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:38:14Z",
       "posted_at_source": "published_at",
-      "hours_ago": 66.7363,
+      "hours_ago": 66.7988,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1809347",
       "direct_job_url": "https://unstop.com/internships/1809347",
@@ -11941,7 +11696,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Vortizo+AI+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -11957,14 +11713,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Management Trainee - Target Market Management",
       "company": "Sika",
       "location": "Delhi, Delhi, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:24:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 66.9713,
+      "hours_ago": 67.0338,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/management-trainee-target-market-management-at-sika-4483013183",
       "direct_job_url": "https://in.linkedin.com/jobs/view/management-trainee-target-market-management-at-sika-4483013183",
@@ -12052,7 +11808,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Sika+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -12068,14 +11825,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Business Consultant Intern",
       "company": "CBOSIT (Premium Zoho Partner)",
       "location": "Dehradun, Uttarakhand, India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:24:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 66.9713,
+      "hours_ago": 67.0338,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-business-consultant-intern-at-cbosit-premium-zoho-partner-4489563394",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-business-consultant-intern-at-cbosit-premium-zoho-partner-4489563394",
@@ -12163,7 +11920,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=CBOSIT+%28Premium+Zoho+Partner%29+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -12179,14 +11937,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Product Owner Intern",
       "company": "ClearancePort",
       "location": "Delhi, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:24:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 66.9713,
+      "hours_ago": 67.0338,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-owner-intern-at-clearanceport-4489556825",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-owner-intern-at-clearanceport-4489556825",
@@ -12274,7 +12032,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=ClearancePort+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -12290,14 +12049,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Product Management Internship in Mumbai, Navi Mumbai, Thane",
       "company": "FynTune Solution Private Limited",
       "location": "Mumbai Metropolitan Region",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:24:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 66.9713,
+      "hours_ago": 67.0338,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-management-internship-in-mumbai-navi-mumbai-thane-at-fyntune-solution-private-limited-4490546377",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-management-internship-in-mumbai-navi-mumbai-thane-at-fyntune-solution-private-limited-4490546377",
@@ -12385,7 +12144,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=FynTune+Solution+Private+Limited+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -12403,14 +12163,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI/ML Intern – Agentic AI (Autonomous Agents)",
       "company": "Stackular",
       "location": "Hyderabad, Telangana, India",
-      "score": 0.94,
+      "score": 0.936,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:06:55Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 67.2582,
+      "hours_ago": 67.3208,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-ml-intern-%E2%80%93-agentic-ai-autonomous-agents-at-stackular-4489585002",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-%E2%80%93-agentic-ai-autonomous-agents-at-stackular-4489585002",
@@ -12500,7 +12260,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Stackular+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -12516,14 +12277,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI-ML Intern",
       "company": "Voice Arena",
       "location": "Gurugram, Haryana, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T16:06:53Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 67.2588,
+      "hours_ago": 67.3213,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-voice-arena-4489538423",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-intern-at-voice-arena-4489538423",
@@ -12611,7 +12372,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Voice+Arena+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "AI Agent Engineer Intern",
@@ -12624,7 +12386,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-13T15:36:38Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 67.763,
+      "hours_ago": 67.8255,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-agent-engineer-intern-at-lexsi-labs-4489577785",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-agent-engineer-intern-at-lexsi-labs-4489577785",
@@ -12722,7 +12484,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "AI Research Internship",
@@ -12735,7 +12498,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-13T13:45:04Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 69.6224,
+      "hours_ago": 69.6849,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-research-internship-at-lexsi-labs-4489558978",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-research-internship-at-lexsi-labs-4489558978",
@@ -12833,7 +12596,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -12849,14 +12613,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Human Resources Internship",
       "company": "Croevo AI",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T09:40:08Z",
       "posted_at_source": "published_at",
-      "hours_ago": 73.7046,
+      "hours_ago": 73.7671,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1808428",
       "direct_job_url": "https://unstop.com/internships/1808428",
@@ -12944,20 +12708,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Croevo+AI+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "MTAB Technology Center P LTD - MTC",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T08:45:05Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 74.6221,
+      "hours_ago": 74.6846,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-mtab-technology-center-p-ltd-mtc-4489560048",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-mtab-technology-center-p-ltd-mtc-4489560048",
@@ -13055,20 +12820,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "Crossing Infotech",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-13T07:59:59Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 75.3738,
+      "hours_ago": 75.4363,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-crossing-infotech-4489540734",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-crossing-infotech-4489540734",
@@ -13082,11 +12848,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Data Analyst Intern at Crossing Infotech in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Data Analyst Intern at Crossing Infotech in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -13159,7 +12921,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Crossing+Infotech+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -13175,14 +12938,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Educator & School Workshop Coordinator Internship",
       "company": "Vision AI Learning",
       "location": "India",
-      "score": 0.9,
+      "score": 0.904,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-13T07:48:35Z",
       "posted_at_source": "published_at",
-      "hours_ago": 75.5638,
+      "hours_ago": 75.6263,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1777248",
       "direct_job_url": "https://unstop.com/internships/1777248",
@@ -13270,7 +13033,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Vision+AI+Learning+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -13286,14 +13050,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Binance Accelerator Program - Applied AI Application Engineer",
       "company": "Binance",
       "location": "Remote (APAC)",
-      "score": 0.93,
+      "score": 0.925,
       "tier": 1,
       "category": "Applied Scientist / ML Research",
       "priority": "Primary",
       "badge": "🥇",
       "posted_at": "2026-11-13T03:05:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 80.286,
+      "hours_ago": 80.3485,
       "relative_time": "3 days ago",
       "url": "https://jobicy.com/jobs/153014-binance-accelerator-program-applied-ai-application-engineer",
       "direct_job_url": "https://jobicy.com/jobs/153014-binance-accelerator-program-applied-ai-application-engineer",
@@ -13381,20 +13145,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Binance+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
       "company": "Delhivery",
       "location": "Gurugram, Haryana, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-12T18:41:14Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 88.6863,
+      "hours_ago": 88.7488,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-delhivery-4488543648",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-delhivery-4488543648",
@@ -13408,11 +13173,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Data Science Intern at Delhivery in Gurugram, Haryana, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Data Science Intern at Delhivery in Gurugram, Haryana, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -13485,20 +13246,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.delhivery.com/careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Reliability Data Analyst-Intern",
       "company": "Pinnacle",
       "location": "Greater Hyderabad Area",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-12T16:41:16Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 90.6857,
+      "hours_ago": 90.7483,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/reliability-data-analyst-intern-at-pinnacle-4489261418",
       "direct_job_url": "https://in.linkedin.com/jobs/view/reliability-data-analyst-intern-at-pinnacle-4489261418",
@@ -13512,11 +13274,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Reliability Data Analyst-Intern at Pinnacle in Greater Hyderabad Area. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Reliability Data Analyst-Intern at Pinnacle in Greater Hyderabad Area. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -13589,7 +13347,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Pinnacle+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -13612,9 +13371,9 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
-      "posted_at": "2026-11-12 15:58",
+      "posted_at": "2026-11-12 16:02",
       "posted_at_source": "RemoteOK Live API",
-      "hours_ago": 91.4069,
+      "hours_ago": 91.4027,
       "relative_time": "3 days ago",
       "url": "https://remoteOK.com/remote-jobs/remote-research-engineer-privacy-and-anonymization-pragmatike-1137792",
       "direct_job_url": "https://remoteOK.com/remote-jobs/remote-research-engineer-privacy-and-anonymization-pragmatike-1137792",
@@ -13632,7 +13391,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       ],
       "missing_skills": [],
       "description": "<p style=\"min-height:1.5em\"><strong>Location:</strong> San Francisco or Singapore (on-site), or remote (Singapore or US Pacific time zones)<br /><strong>Start Date:</strong> ASAP<br /><strong>Languages:</strong> English<br /><strong>Team:</strong> Engineering</p><p style=\"min-hei...",
-      "raw_description": "<p style=\"min-height:1.5em\"><strong>Location:</strong> San Francisco or Singapore (on-site), or remote (Singapore or US Pacific time zones)<br /><strong>Start Date:</strong> ASAP<br /><strong>Languages:</strong> English<br /><strong>Team:</strong> Engineering</p><p style=\"min-height:1.5em\"></p><h2>About the Role</h2><p style=\"min-height:1.5em\">Our client is a fast-growing AI company building reliable, fair and open infrastructure for AI training data. Their marketplace helps the people who create data get value for it, and gives AI labs trustworthy data to train on. It is already used by startups, Fortune 500 companies and frontier labs, and the company is backed by leading venture investors, including Y Combinator. They are scaling quickly to meet strong demand.</p><p style=\"min-height:1.5em\">We are looking for a <strong>Research Engineer, Privacy and Anonymization</strong> to build the systems that make sensitive, real-world data safe and still useful for AI training. You will develop methods to detect and remove personally identifiable information, secrets and other sensitive content from raw data before it enters processing and synthetic data pipelines â protecting privacy without destroying the structure and signal that make the data valuable for training agents.</p><p style=\"min-height:1.5em\">This is a privacy and data-protection engineering seat, not a synthetic-task design role. You will own the pipeline that stands in front of downstream processing, training, evaluation and synthetic generation.</p><p style=\"min-height:1.5em\">This is a full-time role, starting ASAP. Offices are in San Francisco and Singapore; remote candidates are welcome if their working hours can overlap about 70â80% with either San Francisco (US Pacific) or Singapore business hours. The exact daily schedule will be agreed during hiring.</p><p style=\"min-height:1.5em\"></p><h2>What You'll Do</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Build systems to detect PII, quasi-identifiers, credentials and other sensitive information, and design transformations based on the data type and the downstream use case.</p></li><li><p style=\"min-height:1.5em\">Develop and benchmark detection approaches that combine rules, statistical models, classifiers and LLM-based methods.</p></li><li><p style=\"min-height:1.5em\">Build production pipelines that anonymize raw data before it enters downstream processing, training, evaluation or synthetic data generation.</p></li><li><p style=\"min-height:1.5em\">Create evaluation frameworks that measure privacy risk and retained data utility, including recall-weighted metrics, leakage tests and adversarial re-identification attempts.</p></li><li><p style=\"min-height:1.5em\">Design systems that stay robust to new data sources, schema drift, unusual formats and sensitive information embedded in unexpected fields.</p></li><li><p style=\"min-height:1.5em\">Work with engineering, research, operations and customers to translate privacy requirements into practical technical policies and safeguards.</p></li></ul><p style=\"min-height:1.5em\"></p><h2>What We're Looking For</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Strong proficiency in Python, and experience building reliable production data or machine-learning systems.</p></li><li><p style=\"min-height:1.5em\">Experience with information extraction, named-entity recognition, classification, or related methods for detecting rare or sensitive content.</p></li><li><p style=\"min-height:1.5em\">Strong experimental instincts, and the ability to compare approaches across recall, precision, latency, cost and downstream data utility.</p></li><li><p style=\"min-height:1.5em\">An understanding of the difference between redaction, masking, pseudonymization, anonymization and synthetic data â and when each is appropriate.</p></li><li><p style=\"min-height:1.5em\">High attention to detail, and the ability to reason about subtle leakage paths, edge cases and adversarial failure modes.</p></li><li><p style=\"min-height:1.5em\">Experience building data-processing pipelines end to end, including where there was no fully prescribed roadmap.</p></li><li><p style=\"min-height:1.5em\">Clear written and spoken English, and comfort collaborating across teams and time zones.</p></li><li><p style=\"min-height:1.5em\">Strong candidates may also have hands-on experience with privacy-enhancing technologies (such as differential privacy, k-anonymity, secure aggregation or format-preserving encryption); have worked with sensitive data in healthcare, finance or security; have built low-latency or high-throughput ML inference or data-processing systems; or have taken work from early research through to production.</p></li><li><p style=\"min-height:1.5em\">Technical aptitude and learning potential matter more than years of experience. Motivated candidates are encouraged to apply even if they don't meet every point above.</p></li></ul><p style=\"min-height:1.5em\"></p><h2>Why This Role Matters for You</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><strong>Make real-world data safe to train on:</strong> You will build the systems that let sensitive data be used for AI training without exposing people or secrets.</p></li><li><p style=\"min-height:1.5em\"><strong>Privacy without wrecking utility:</strong> The job is not only to redact, but to keep the structure and signal that downstream training and synthetic pipelines need.</p></li><li><p style=\"min-height:1.5em\"><strong>From detection to production:</strong> You will own the full path: detection methods, transformations, evaluation, and the pipeline that sits in front of training and generation.</p></li><li><p style=\"min-height:1.5em\"><strong>Hard, high-stakes edge cases:</strong> Work on leakage paths, schema drift and adversarial failure modes, not only clean benchmark datasets.</p></li><li><p style=\"min-height:1.5em\"><strong>San Francisco, Singapore, or remote:</strong> Work on-site in San Francisco or Singapore, or remotely, with hours that overlap about 70â80% with either US Pacific or Singapore business hours. The exact daily schedule will be agreed during hiring.</p></li></ul><p style=\"min-height:1.5em\">Pragmatike is an Equal Opportunity Employer and is committed to providing equal employment opportunities to all applicants without discrimination. We recruit on behalf of our clients and prohibit discrimination and harassment based on race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state, or local laws. This policy applies to all terms and conditions of employment, including recruiting, hiring, placement, promotion, termination, layoff, recall, transfer, leaves of absence, compensation, and training. We are committed to a fair and inclusive hiring process. We process your personal data solely for recruitment purposes, in accordance with applicable privacy laws, and maintain reasonable safeguards to protect your information. Your data may be shared with our client(s) for hiring consideration, but will not be disclosed to third parties outside of the recruitment process.</p><br/><br/>Please mention the word **CONFIDENT** and tag RNjQuMjM2LjE0MS4xOTk= when applying to show you read the job post completely (#RNjQuMjM2LjE0MS4xOTk=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
+      "raw_description": "<p style=\"min-height:1.5em\"><strong>Location:</strong> San Francisco or Singapore (on-site), or remote (Singapore or US Pacific time zones)<br /><strong>Start Date:</strong> ASAP<br /><strong>Languages:</strong> English<br /><strong>Team:</strong> Engineering</p><p style=\"min-height:1.5em\"></p><h2>About the Role</h2><p style=\"min-height:1.5em\">Our client is a fast-growing AI company building reliable, fair and open infrastructure for AI training data. Their marketplace helps the people who create data get value for it, and gives AI labs trustworthy data to train on. It is already used by startups, Fortune 500 companies and frontier labs, and the company is backed by leading venture investors, including Y Combinator. They are scaling quickly to meet strong demand.</p><p style=\"min-height:1.5em\">We are looking for a <strong>Research Engineer, Privacy and Anonymization</strong> to build the systems that make sensitive, real-world data safe and still useful for AI training. You will develop methods to detect and remove personally identifiable information, secrets and other sensitive content from raw data before it enters processing and synthetic data pipelines â protecting privacy without destroying the structure and signal that make the data valuable for training agents.</p><p style=\"min-height:1.5em\">This is a privacy and data-protection engineering seat, not a synthetic-task design role. You will own the pipeline that stands in front of downstream processing, training, evaluation and synthetic generation.</p><p style=\"min-height:1.5em\">This is a full-time role, starting ASAP. Offices are in San Francisco and Singapore; remote candidates are welcome if their working hours can overlap about 70â80% with either San Francisco (US Pacific) or Singapore business hours. The exact daily schedule will be agreed during hiring.</p><p style=\"min-height:1.5em\"></p><h2>What You'll Do</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Build systems to detect PII, quasi-identifiers, credentials and other sensitive information, and design transformations based on the data type and the downstream use case.</p></li><li><p style=\"min-height:1.5em\">Develop and benchmark detection approaches that combine rules, statistical models, classifiers and LLM-based methods.</p></li><li><p style=\"min-height:1.5em\">Build production pipelines that anonymize raw data before it enters downstream processing, training, evaluation or synthetic data generation.</p></li><li><p style=\"min-height:1.5em\">Create evaluation frameworks that measure privacy risk and retained data utility, including recall-weighted metrics, leakage tests and adversarial re-identification attempts.</p></li><li><p style=\"min-height:1.5em\">Design systems that stay robust to new data sources, schema drift, unusual formats and sensitive information embedded in unexpected fields.</p></li><li><p style=\"min-height:1.5em\">Work with engineering, research, operations and customers to translate privacy requirements into practical technical policies and safeguards.</p></li></ul><p style=\"min-height:1.5em\"></p><h2>What We're Looking For</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\">Strong proficiency in Python, and experience building reliable production data or machine-learning systems.</p></li><li><p style=\"min-height:1.5em\">Experience with information extraction, named-entity recognition, classification, or related methods for detecting rare or sensitive content.</p></li><li><p style=\"min-height:1.5em\">Strong experimental instincts, and the ability to compare approaches across recall, precision, latency, cost and downstream data utility.</p></li><li><p style=\"min-height:1.5em\">An understanding of the difference between redaction, masking, pseudonymization, anonymization and synthetic data â and when each is appropriate.</p></li><li><p style=\"min-height:1.5em\">High attention to detail, and the ability to reason about subtle leakage paths, edge cases and adversarial failure modes.</p></li><li><p style=\"min-height:1.5em\">Experience building data-processing pipelines end to end, including where there was no fully prescribed roadmap.</p></li><li><p style=\"min-height:1.5em\">Clear written and spoken English, and comfort collaborating across teams and time zones.</p></li><li><p style=\"min-height:1.5em\">Strong candidates may also have hands-on experience with privacy-enhancing technologies (such as differential privacy, k-anonymity, secure aggregation or format-preserving encryption); have worked with sensitive data in healthcare, finance or security; have built low-latency or high-throughput ML inference or data-processing systems; or have taken work from early research through to production.</p></li><li><p style=\"min-height:1.5em\">Technical aptitude and learning potential matter more than years of experience. Motivated candidates are encouraged to apply even if they don't meet every point above.</p></li></ul><p style=\"min-height:1.5em\"></p><h2>Why This Role Matters for You</h2><ul style=\"min-height:1.5em\"><li><p style=\"min-height:1.5em\"><strong>Make real-world data safe to train on:</strong> You will build the systems that let sensitive data be used for AI training without exposing people or secrets.</p></li><li><p style=\"min-height:1.5em\"><strong>Privacy without wrecking utility:</strong> The job is not only to redact, but to keep the structure and signal that downstream training and synthetic pipelines need.</p></li><li><p style=\"min-height:1.5em\"><strong>From detection to production:</strong> You will own the full path: detection methods, transformations, evaluation, and the pipeline that sits in front of training and generation.</p></li><li><p style=\"min-height:1.5em\"><strong>Hard, high-stakes edge cases:</strong> Work on leakage paths, schema drift and adversarial failure modes, not only clean benchmark datasets.</p></li><li><p style=\"min-height:1.5em\"><strong>San Francisco, Singapore, or remote:</strong> Work on-site in San Francisco or Singapore, or remotely, with hours that overlap about 70â80% with either US Pacific or Singapore business hours. The exact daily schedule will be agreed during hiring.</p></li></ul><p style=\"min-height:1.5em\">Pragmatike is an Equal Opportunity Employer and is committed to providing equal employment opportunities to all applicants without discrimination. We recruit on behalf of our clients and prohibit discrimination and harassment based on race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state, or local laws. This policy applies to all terms and conditions of employment, including recruiting, hiring, placement, promotion, termination, layoff, recall, transfer, leaves of absence, compensation, and training. We are committed to a fair and inclusive hiring process. We process your personal data solely for recruitment purposes, in accordance with applicable privacy laws, and maintain reasonable safeguards to protect your information. Your data may be shared with our client(s) for hiring consideration, but will not be disclosed to third parties outside of the recruitment process.</p><br/><br/>Please mention the word **CONFIDENT** and tag RMjAuMTcxLjEuMzg= when applying to show you read the job post completely (#RMjAuMTcxLjEuMzg=). This is a beta feature to avoid spam applicants. Companies can search these words to find applicants that read this and see they're human.",
       "contact_email": null,
       "outreach_dm": null,
       "is_post": false,
@@ -13704,20 +13463,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Pragmatike+careers"
       },
-      "is_internship": false
+      "is_internship": false,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
       "company": "Future Interns",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-12T15:16:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 92.1046,
+      "hours_ago": 92.1671,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-future-interns-4489246997",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-future-interns-4489246997",
@@ -13731,11 +13491,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Data Science Intern at Future Interns in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Data Science Intern at Future Interns in India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -13808,20 +13564,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Future+Interns+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Balance Sheet Management - Product Analyst (Intern)",
       "company": "Acies",
       "location": "Goa, India",
-      "score": 0.88,
+      "score": 0.911,
       "tier": 5,
       "category": "Product",
       "priority": "Primary",
       "badge": "5",
       "posted_at": "2026-11-12T12:59:57Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 94.3744,
+      "hours_ago": 94.4369,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/balance-sheet-management-product-analyst-intern-at-acies-4490330915",
       "direct_job_url": "https://in.linkedin.com/jobs/view/balance-sheet-management-product-analyst-intern-at-acies-4490330915",
@@ -13835,11 +13592,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Product Teardown & PRD Documentation",
-        "Telemetry Schema Design & Event Tracking",
-        "User Journey Mapping & Prioritization"
-      ],
+      "missing_skills": [],
       "description": "Balance Sheet Management - Product Analyst (Intern) at Acies in Goa, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Balance Sheet Management - Product Analyst (Intern) at Acies in Goa, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -13912,20 +13665,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Acies+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Intern",
       "company": "GE Aerospace",
       "location": "Bengaluru, Karnataka, India",
-      "score": 0.92,
+      "score": 0.916,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-12T10:16:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 97.1046,
+      "hours_ago": 97.1671,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-ge-aerospace-4490309600",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-ge-aerospace-4490309600",
@@ -13939,11 +13693,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Data Science Intern at GE Aerospace in Bengaluru, Karnataka, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "raw_description": "Data Science Intern at GE Aerospace in Bengaluru, Karnataka, India. Verified internship position listed on LinkedIn (entry-level filter f_E=1,2).",
       "contact_email": null,
@@ -14016,7 +13766,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=GE+Aerospace+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -14032,14 +13783,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Internship",
       "company": "Zenotalent",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-12T05:13:27Z",
       "posted_at_source": "published_at",
-      "hours_ago": 102.1494,
+      "hours_ago": 102.2119,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1806418",
       "direct_job_url": "https://unstop.com/internships/1806418",
@@ -14127,7 +13878,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Zenotalent+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -14143,14 +13895,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "Software Development Engineer Internship",
       "company": "Hoogway.ai",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-11T18:35:51Z",
       "posted_at_source": "published_at",
-      "hours_ago": 112.776,
+      "hours_ago": 112.8385,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1805800",
       "direct_job_url": "https://unstop.com/internships/1805800",
@@ -14238,20 +13990,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Hoogway.ai+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Science Internship",
       "company": "Vortizo AI",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-11T17:23:14Z",
       "posted_at_source": "published_at",
-      "hours_ago": 113.9863,
+      "hours_ago": 114.0488,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1806039",
       "direct_job_url": "https://unstop.com/internships/1806039",
@@ -14349,7 +14102,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -14365,14 +14119,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI/ML Data and Model Internship",
       "company": "Codonyx india",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-11T17:04:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 114.3027,
+      "hours_ago": 114.3652,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1805291",
       "direct_job_url": "https://unstop.com/internships/1805291",
@@ -14460,20 +14214,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Codonyx+india+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Analyst Intern",
       "company": "Cloud Counselage Pvt Ltd",
       "location": "Remote (India)",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-11T16:48:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 114.5694,
+      "hours_ago": 114.6319,
       "relative_time": "4 days ago",
       "url": "https://himalayas.app/companies/cloud-counselage-pvt-ltd/jobs/data-analyst-intern?utm_source=api",
       "direct_job_url": "https://himalayas.app/companies/cloud-counselage-pvt-ltd/jobs/data-analyst-intern?utm_source=api",
@@ -14487,11 +14242,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "matched_skills": [],
-      "missing_skills": [
-        "Causal Inference & Uplift Modeling",
-        "A/B Testing Power Analysis & Sample Sizing",
-        "Advanced Feature Engineering & Imbalance"
-      ],
+      "missing_skills": [],
       "description": "Data Analyst Intern at Cloud Counselage Pvt Ltd.   TO GET TIMELY UPDATES ON JOB OPENINGS, FEEL FREE TO JOIN OUR COMMUNITY @    (5L+  MEMBERS FROM 40+ COUNTRIES)    Job Description:   We are seeking a detail-oriented Data Analyst to join our team at Cloud Counselage. The ideal can...",
       "raw_description": "Data Analyst Intern at Cloud Counselage Pvt Ltd.   TO GET TIMELY UPDATES ON JOB OPENINGS, FEEL FREE TO JOIN OUR COMMUNITY @    (5L+  MEMBERS FROM 40+ COUNTRIES)    Job Description:   We are seeking a detail-oriented Data Analyst to join our team at Cloud Counselage. The ideal candidate will have strong analytical skills, experience with data tools, and the ability to communicate insights effectively. You will collect, process, and analyze data from various sources, turning data into actionable insights to support business decisions and improve processes.    What's for the candidate:   \n Satisfaction of Working for a Social Cause to eradicate the perpetual unemployability issue amongst freshers, by helping millions of students get job-ready, in time! \n Internship Certificate from Cloud Counselage Pvt. Ltd. \n Opportunity for apprenticeship and stipend w.e.f. the completion of 3 months full-time internship \n Letter of Recommendation based on performance \n Work from Home & Flexible working hours \n Mentorship from Industry experts \n Caree",
       "contact_email": null,
@@ -14564,20 +14315,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Cloud+Counselage+Pvt+Ltd+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     },
     {
       "title": "Data Scientist",
       "company": "Trent Limited",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-11T15:56:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 115.4355,
+      "hours_ago": 115.498,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/jobs/1714449",
       "direct_job_url": "https://unstop.com/jobs/1714449",
@@ -14675,7 +14427,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "nice_to_have": [],
       "domain": "technology",
       "analysis_method": "fallback",
-      "analysis_cached": false
+      "analysis_cached": false,
+      "skill_match_rate": 1.0
     },
     {
       "role_type": "standardized",
@@ -14691,14 +14444,14 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "title": "AI Learning Support Internship",
       "company": "Clapingo",
       "location": "India",
-      "score": 0.91,
+      "score": 0.911,
       "tier": 2,
       "category": "Data Science",
       "priority": "Primary",
       "badge": "🥈",
       "posted_at": "2026-11-11T14:06:37Z",
       "posted_at_source": "published_at",
-      "hours_ago": 117.2632,
+      "hours_ago": 117.3258,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1804607",
       "direct_job_url": "https://unstop.com/internships/1804607",
@@ -14786,20 +14539,21 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Clapingo+careers"
       },
-      "is_internship": true
+      "is_internship": true,
+      "skill_match_rate": 1.0
     }
   ],
   "stats": {
-    "total_jobs_evaluated": 126,
-    "primary_matches": 122,
+    "total_jobs_evaluated": 123,
+    "primary_matches": 119,
     "secondary_matches": 4,
     "adjacent_matches": 0,
-    "full_time_matches": 9,
-    "internship_matches": 117,
-    "last_sync": "2026-11-16T11:22:24Z"
+    "full_time_matches": 8,
+    "internship_matches": 115,
+    "last_sync": "2026-11-16T11:26:09Z"
   },
-  "total_jobs": 126,
-  "last_updated": "2026-11-16T11:22:24Z",
+  "total_jobs": 123,
+  "last_updated": "2026-11-16T11:26:09Z",
   "last_remotive_sync": "2026-11-16T10:44Z",
   "last_himalayas_sync": "2026-11-16T10:44Z",
   "last_adzuna_sync": "2026-11-16T10:44Z",
