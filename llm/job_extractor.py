@@ -127,7 +127,7 @@ class JobExtractor:
 
         # Role Category detection using both title and body
         combined = f"{title_lower} {t_lower}"
-        role_cat = "Data Science"
+        role_cat = "Other"
         if any(w in title_lower for w in ["applied scientist", "applied science", "ai agent", "applied ai", "ai research", "applied ml research", "applied ml intern", "research intern", "research scientist", "computer vision researcher", "researcher"]) or any(w in t_lower for w in ["applied scientist", "applied ml", "ml research", "research scientist"]):
             role_cat = "Applied Scientist / ML Research"
         elif any(w in title_lower for w in ["fresher data scientist", "fraud operations", "fraud analysis", "credit risk", "risk data science", "risk analytics", "data scientist", "data science"]):

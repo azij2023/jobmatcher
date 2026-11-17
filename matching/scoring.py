@@ -14,7 +14,7 @@ def match_role_category(job: dict, profile: dict) -> dict | None:
     Matches the job title and extracted role against the prioritized role mapping.
     1. First evaluates specific role title matches (sorted by pattern length descending,
        with lower tier number as tie-breaker so Tier 1 Applied Scientist takes precedence).
-    2. Then evaluates direct category match if no specific role title matched.
+    2. Checks an extracted category when the posting also supports that field.
     3. Finally checks fallback in general target_roles list.
     """
     title = job.get("title", "").lower()
@@ -33,20 +33,34 @@ def match_role_category(job: dict, profile: dict) -> dict | None:
 
     for _, _, role_pattern, tier_info in all_role_candidates:
         pattern = rf"\b{re.escape(role_pattern)}\b"
-        if re.search(pattern, title) or re.search(pattern, extracted_role) or role_pattern in title:
+        if re.search(pattern, title) or re.search(pattern, extracted_role):
             return tier_info
 
-    # Pass 2: Direct Category match fallback
-    if extracted_category:
+    # A predicted category alone does not establish that the actual job is a target role.
+    category_evidence = {
+        "data science": r"\b(?:data|analytics?|machine learning|artificial intelligence|ai|ml|statistics?|quantitative)\b",
+        "applied scientist / ml research": r"\b(?:scientist|research|machine learning|artificial intelligence|ai|ml)\b",
+        "decision science": r"\b(?:decision|quantitative|analytics?|data)\b",
+        "or / optimization": r"\b(?:optimization|operations research|supply chain|logistics|inventory)\b",
+        "product": r"\b(?:product|apm)\b",
+        "strategy / programs": r"\b(?:strategy|program|project|operations|analytics?|business analyst)\b",
+        "forecasting": r"\b(?:forecast|time series|demand planning)\b",
+        "ml engineering": r"\b(?:machine learning|ml|ai|artificial intelligence)\b",
+        "data engineering adjacent": r"\b(?:data|analytics?|etl|software engineer)\b",
+    }
+    unrelated_activity = re.search(r"\b(?:ambassador|video creation|video editor|trainer|recruiter)\b", title)
+    if extracted_category and not unrelated_activity:
         for tier_info in role_mapping:
-            cat_name = tier_info["category"].lower()
-            if extracted_category == cat_name or extracted_category in cat_name or cat_name in extracted_category:
+            category = tier_info["category"].lower()
+            evidence = category_evidence.get(category)
+            if extracted_category == category and evidence and re.search(evidence, title):
                 return tier_info
 
     # Pass 3: Fallback check in general target_roles list
     for target in profile.get("target_roles", []):
         target_lower = target.lower()
-        if target_lower in title or target_lower in extracted_role:
+        pattern = rf"\b{re.escape(target_lower)}\b"
+        if re.search(pattern, title) or re.search(pattern, extracted_role):
             return {
                 "tier": 99,
                 "priority": "General",

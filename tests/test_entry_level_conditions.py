@@ -18,6 +18,40 @@ PROFILE = json.loads((Path(__file__).resolve().parents[1] / "profile.json").read
 
 
 class EntryLevelConditionsTests(unittest.TestCase):
+    def test_predicted_category_cannot_make_unrelated_title_a_match(self):
+        result = score_job({
+            "title": "AI Campus Ambassador Internship",
+            "company": "Example",
+            "location": "India",
+            "url": "https://example.com/job/123",
+            "role_type": "standardized",
+            "role_category": "Data Science",
+            "seniority": "intern",
+            "raw_description": "Promote the campus program to students.",
+        }, PROFILE)
+
+        self.assertTrue(result["rejected"])
+        self.assertIn("does not match any target role", result["rejection_reason"])
+
+    def test_fallback_extractor_does_not_default_unknown_roles_to_data_science(self):
+        result = JobExtractor()._heuristic_extract(
+            "Promote the campus program to students.", title="Campus Ambassador Internship"
+        )
+        self.assertEqual(result["role_category"], "Other")
+
+    def test_category_match_with_relevant_title_is_retained(self):
+        result = score_job({
+            "title": "Business Analytics Intern",
+            "company": "Example",
+            "location": "India",
+            "url": "https://example.com/job/456",
+            "role_type": "standardized",
+            "role_category": "Data Science",
+            "seniority": "intern",
+            "raw_description": "Analyze business data with Python.",
+        }, PROFILE)
+        self.assertFalse(result["rejected"], result)
+
     def test_accepts_entry_level_role_when_experience_is_unspecified(self):
         result = score_job({
             "title": "Junior Data Scientist",

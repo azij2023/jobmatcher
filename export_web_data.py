@@ -68,23 +68,22 @@ def export_data():
             continue
 
         scored = score_job({
+            **raw,
             "title": title,
+            "company": company,
             "raw_description": desc,
-            "role_category": raw.get("category", "Data Science"),
             "location": loc,
-            "seniority": "junior",
             "hours_ago": hours_ago,
             "url": direct_url,
-            "required_skills": []
         }, profile)
 
         if scored.get("rejected"):
             continue
 
-        final_tier = scored.get("tier") or 2
-        final_cat = scored.get("category") or "Data Science"
-        final_priority = scored.get("priority") or "Primary"
-        final_score = scored.get("final_score") or 0.85
+        final_tier = scored["tier"]
+        final_cat = scored["category"]
+        final_priority = scored["priority"]
+        final_score = scored["final_score"]
         badge = scored.get("badge") or ("🥇" if final_tier == 1 else ("🥈" if final_tier == 2 else ("🥉" if final_tier == 3 else str(final_tier))))
 
         # Format relative time
