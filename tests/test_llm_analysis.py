@@ -41,9 +41,9 @@ class AnalysisTests(unittest.TestCase):
                 analyzer = self.analyzer()
                 self.assertEqual(analyzer.analyze('Intern', 'Python')['analysis_method'], 'fallback')
                 analyzer.analyze('Another intern', 'SQL')
-                self.assertEqual(chat.call_count, 1)
-                self.analyzer().analyze('Intern', 'Python')
                 self.assertEqual(chat.call_count, 2)
+                self.analyzer().analyze('Intern', 'Python')
+                self.assertEqual(chat.call_count, 3)
 
     def test_missing_key_and_budget_never_call_api(self):
         with patch.object(self.extractor.llm, 'chat') as chat:
@@ -53,13 +53,30 @@ class AnalysisTests(unittest.TestCase):
             chat.assert_not_called()
 
     def test_timeout_falls_back(self):
-        with patch.object(self.extractor.llm, 'chat', side_effect=TimeoutError):
-            self.assertEqual(self.analyzer().analyze('Intern', 'Python')['analysis_method'], 'fallback')
+        with patch.object(self.extractor.llm, 'chat', side_effect=TimeoutError) as chat:
+            analyzer = self.analyzer()
+            self.assertEqual(analyzer.analyze('Intern', 'Python')['analysis_method'], 'fallback')
+            analyzer.analyze('Another intern', 'SQL')
+            self.assertEqual(chat.call_count, 1)
 
     def test_templates_preserve_real_missing_requirements(self):
         job = enrich_job_semantic_gaps({'tier': 2, 'missing_skills': ['apache_spark']})
         self.assertEqual(job['missing_skills'], ['apache_spark'])
         self.assertEqual(job['semantic_skill_gap']['method'], 'template')
+
+    def test_saved_fallback_jobs_are_reanalyzed(self):
+        from hourly_pipeline import backfill_ai_analysis
+        saved = {'title': 'Associate Data Analyst', 'raw_description': 'Analyze data with SQL and Power BI. ' * 5,
+                 'analysis_method': 'fallback', 'is_internship': False}
+        with patch('llm.analysis.JobAnalyzer') as analyzer:
+            analyzer.return_value.extractor.llm.is_configured = True
+            analyzer.return_value.max_calls = 20
+            analyzer.return_value.calls = 0
+            analyzer.return_value.failed = False
+            analyzer.return_value.analyze.return_value = {'analysis_method': 'llm', 'role_category': 'Data Science'}
+            self.assertEqual(backfill_ai_analysis([saved]), 1)
+        self.assertEqual(saved['analysis_method'], 'llm')
+        self.assertEqual(saved['role_category'], 'Data Science')
 
     def test_collector_passes_extracted_requirements_to_scoring(self):
         from collectors import live_job_collector as collector

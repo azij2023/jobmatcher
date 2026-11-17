@@ -13,7 +13,7 @@ class JobAnalyzer:
     def __init__(self, cache_path=None, extractor=None, max_calls=None):
         self.extractor = extractor or JobExtractor()
         self.cache_path = Path(cache_path or Path(__file__).resolve().parents[1] / "scratch" / "llm_analysis.sqlite3")
-        self.max_calls = max_calls if max_calls is not None else int(os.getenv("LLM_MAX_CALLS_PER_SYNC", "40"))
+        self.max_calls = max_calls if max_calls is not None else int(os.getenv("LLM_MAX_CALLS_PER_SYNC", "3"))
         self.calls = 0
         self.failed = False
 
@@ -46,7 +46,9 @@ class JobAnalyzer:
                 except sqlite3.Error:
                     pass
             else:
-                self.failed = True  # Avoid repeated timeouts/rate limits this run.
+                # Invalid model output is specific to one listing. Only stop the
+                # run when the API itself is unavailable or rejects requests.
+                self.failed = getattr(self.extractor, "last_failure", None) == "api"
         else:
             result = self.extractor._heuristic_extract(description, title=title)
             result["analysis_method"] = "fallback"

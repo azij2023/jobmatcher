@@ -69,6 +69,35 @@ def write_snapshot(path, content):
         if os.path.exists(pending_path):
             os.unlink(pending_path)
 
+def backfill_ai_analysis(jobs):
+    """Retry saved fallback listings in bounded batches as the feed refreshes."""
+    from llm.analysis import JobAnalyzer
+
+    analyzer = JobAnalyzer(max_calls=int(os.getenv("LLM_BACKFILL_CALLS_PER_SYNC", "3")))
+    if not analyzer.extractor.llm.is_configured or analyzer.max_calls <= 0:
+        return 0
+
+    candidates = [job for job in jobs
+                  if job.get("analysis_method") != "llm"
+                  and len(job.get("raw_description") or "") >= 80]
+    candidates.sort(key=lambda job: (
+        bool(job.get("is_internship")) or "intern" in (job.get("title") or "").lower(),
+        0 if job.get("priority") == "Primary" else 1,
+        job.get("tier") or 99,
+        -len(job.get("raw_description") or ""),
+        job.get("hours_ago") or 0,
+    ))
+    updated = 0
+    for job in candidates:
+        if analyzer.failed or analyzer.calls >= analyzer.max_calls:
+            break
+        result = analyzer.analyze(job.get("title") or "", job["raw_description"])
+        if result["analysis_method"] == "llm":
+            job.update(result)
+            updated += 1
+    print(f"[JobAnalyzer] AI backfill: {updated} saved listings analyzed; {analyzer.calls} API calls.")
+    return updated
+
 def run_hourly_sync():
     now = datetime.datetime.now(datetime.timezone.utc)
     timestamp_str = now.isoformat(timespec="minutes").replace("+00:00", "Z")
@@ -213,6 +242,7 @@ def run_hourly_sync():
     from processing.feed_freshness import dated_jobs
     now = datetime.datetime.now(datetime.timezone.utc)
     existing_jobs = dated_jobs(existing_jobs, now=now, max_hours=120)
+    backfill_ai_analysis(existing_jobs)
     for job in existing_jobs:
         if "semantic_skill_gap" not in job:
             enrich_job_semantic_gaps(job)

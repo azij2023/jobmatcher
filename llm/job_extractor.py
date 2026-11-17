@@ -1,5 +1,6 @@
 import json
 import re
+import urllib.error
 from llm.groq_client import GroqClient
 from matching.experience import experience_requirement_ranges, has_explicit_fresher_signal
 
@@ -37,8 +38,10 @@ KNOWN_SKILLS = [
 class JobExtractor:
     def __init__(self, model: str = None):
         self.llm = GroqClient(model=model)
+        self.last_failure = None
 
     def extract(self, text: str, title: str = "") -> dict:
+        self.last_failure = None
         # Use Groq LLM if key is configured
         if self.llm.is_configured:
             try:
@@ -54,7 +57,13 @@ class JobExtractor:
                 result["analysis_model"] = self.llm.last_model
                 return result
             except Exception as e:
-                print("[JobExtractor] LLM extraction unavailable or invalid; using fallback parser.")
+                self.last_failure = "api" if isinstance(e, (RuntimeError, urllib.error.URLError, TimeoutError, OSError)) else "invalid_output"
+                status = getattr(e, "code", None)
+                if status is None:
+                    match = re.search(r"HTTP (\d{3})", str(e))
+                    status = match.group(1) if match else None
+                detail = f" HTTP {status}" if status else f" {type(e).__name__}"
+                print(f"[JobExtractor] AI extraction failed ({self.last_failure}{detail}); using fallback parser.")
 
         # Heuristic fallback parser
         result = self._heuristic_extract(text, title=title)
