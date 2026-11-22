@@ -139,19 +139,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const APPLIED_STORAGE_KEY = 'targetmatch_applied_jobs';
   let appliedJobs = readAppliedJobs();
 
-  function getAppliedJobKey(job) {
-    const original = getJobId(job);
+  function normalizeJobUrl(value) {
     try {
-      const url = new URL(original);
+      const url = new URL(value);
+      if (!['http:', 'https:'].includes(url.protocol)) return value;
+      let hostname = url.hostname.toLowerCase().replace(/^www\./, '');
+      if (hostname === 'in.linkedin.com') hostname = 'linkedin.com';
+      url.pathname = url.pathname.replace(/\/apply\/?$/i, '').replace(/\/+$/, '') || '/';
       for (const key of [...url.searchParams.keys()]) {
-        if (/^utm_/i.test(key) || ['trackingId', 'refId', 'gh_src', 'source', 'ref'].includes(key)) {
+        if (/^(?:utm_|tracking|ref|source|trk|campaign|session|position|pagenum|lipi|midtoken|midsig|ebp)/i.test(key) ||
+            key.toLowerCase() === 'gh_src') {
           url.searchParams.delete(key);
         }
       }
-      return url.href.replace(/\/$/, '');
+      url.searchParams.sort();
+      const query = url.searchParams.toString();
+      return `https://${hostname}${url.pathname}${query ? `?${query}` : ''}`;
     } catch (error) {
-      return original;
+      return typeof value === 'string' ? value.trim() : '';
     }
+  }
+
+  function getAppliedJobKey(job) {
+    const stableUrl = job?.direct_job_url || job?.url || getJobId(job);
+    return normalizeJobUrl(stableUrl);
   }
 
   function readAppliedJobs() {
@@ -267,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!Array.isArray(records)) return { jobs: [], blocked: [] };
       const unique = new Map();
       const blocked = new Set(Array.isArray(stored?.blocked)
-        ? stored.blocked.filter(key => typeof key === 'string' && key.trim()) : []);
+        ? stored.blocked.filter(key => typeof key === 'string' && key.trim()).map(normalizeJobUrl) : []);
       const now = Date.now();
       for (const job of records) {
         if (!job || typeof job.title !== 'string' || typeof job.company !== 'string' || typeof job.url !== 'string' || !job.url.trim()) continue;
