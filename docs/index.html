@@ -365,8 +365,8 @@
         <div class="strategy-guidelines">
           <div class="guideline-card">
             <span class="guideline-icon">🛡️</span>
-            <h4>Early-Career Experience Range</h4>
-            <p>Roles with unspecified experience or requirements up to 4 years are eligible. Senior, staff, lead, director, and principal roles remain excluded.</p>
+            <h4>Fresher Experience Requirements</h4>
+            <p>Listings must explicitly indicate fresher eligibility and allow 0 years of experience. Requirements may extend up to 2 years only when the minimum is 0; positive minimums and ranges above 2 years are excluded.</p>
           </div>
           <div class="guideline-card">
             <span class="guideline-icon">🌐</span>
@@ -409,7 +409,7 @@
         <div class="section-header">
           <div>
             <h2 class="section-title">Interactive Job Match Simulator</h2>
-            <p class="section-desc">Paste any job title, role category, and skills to test the client-side scoring engine in real time.</p>
+            <p class="section-desc">Test roles against your profile: an explicit fresher signal, a zero-year minimum, and a maximum experience of two years are required.</p>
           </div>
         </div>
 
@@ -418,7 +418,7 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="test-title">Job Title <span class="req">*</span></label>
-                <input type="text" id="test-title" placeholder="e.g. Junior Applied Scientist" required>
+                <input type="text" id="test-title" placeholder="e.g. Fresher Applied Scientist" required>
               </div>
               <div class="form-group">
                 <label for="test-company">Company</label>
@@ -447,8 +447,9 @@
                 <label for="test-seniority">Seniority / Level</label>
                 <select id="test-seniority">
                   <option value="junior">Junior (Entry-Level)</option>
-                  <option value="fresher">Fresher / Graduate</option>
+                  <option value="fresher" selected>Fresher / Graduate</option>
                   <option value="intern">Intern / Internship</option>
+                  <option value="trainee">Trainee / Apprentice</option>
                   <option value="associate">Associate</option>
                   <option value="mid">Mid-Level</option>
                   <option value="senior">Senior (Exclusion Test)</option>
@@ -459,8 +460,13 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="test-exp">Years of Experience Required</label>
-                <input type="number" id="test-exp" value="0" min="0" max="10">
+                <label for="test-exp">Experience range (minimum to maximum years)</label>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <input type="number" id="test-exp" aria-label="Minimum experience required" value="0" min="0" max="2" step="1">
+                  <span>to</span>
+                  <input type="number" id="test-max-exp" aria-label="Maximum experience allowed" value="2" min="0" max="2" step="1">
+                </div>
+                <span class="form-hint">The minimum must be 0; the maximum may be up to 2 years.</span>
               </div>
               <div class="form-group">
                 <label for="test-location">Location</label>
@@ -682,7 +688,7 @@
               <div class="eval-meta-grid">
                 <div class="eval-meta-item">
                   <span class="eval-meta-label">Seniority / Gate:</span>
-                  <span class="eval-meta-val" id="eval-fresher-status">✓ Early Career (up to 4 Yrs) Eligible</span>
+                  <span class="eval-meta-val" id="eval-fresher-status">Requires a fresher signal and 0–2 years of experience</span>
                 </div>
                 <div class="eval-meta-item">
                   <span class="eval-meta-label">Category:</span>
@@ -724,7 +730,7 @@
               </div>
 
               <div class="eval-actions">
-                <button class="btn btn-primary" id="linkedin-save-job-btn">
+                <button class="btn btn-primary" id="linkedin-save-job-btn" disabled>
                   <span>📥 Save to My Matched Jobs</span>
                 </button>
                 <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="eval-view-post-link">
@@ -862,9 +868,9 @@
               </a>
               <a href="https://cutshort.io/jobs?query=Data+Scientist" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="cutshort">
                 <span class="chip-brand">✂️ Cutshort</span>
-                <span class="chip-tag">0-4 Yrs</span>
+                <span class="chip-tag">0-2 Yrs</span>
               </a>
-              <a href="https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-4" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="hirist">
+              <a href="https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-2" target="_blank" rel="noopener noreferrer" class="channel-chip" data-platform="hirist">
                 <span class="chip-brand">💻 Hirist</span>
                 <span class="chip-tag">Tech Jobs</span>
               </a>
@@ -1335,7 +1341,7 @@
   <div class="toast" id="toast">Details copied to clipboard!</div>
 
   <!-- Data & Logic Scripts -->
-  <script src="data.js?v=20261102_v14"></script>
-  <script src="app.js?v=20261115_exactlinks1"></script>
+  <script src="data.js?v=20261123_fresher02"></script>
+  <script src="app.js?v=20261123_fresher02"></script>
 </body>
 </html>

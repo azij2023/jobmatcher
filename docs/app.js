@@ -415,38 +415,59 @@ document.addEventListener("DOMContentLoaded", () => {
       && /\b(?:associate|junior|intern|internship|trainee|graduate|fresher|entry[ -]level|new grad)\b|\bmanager\s+i\b/.test(title);
   }
 
+  const FRESHER_SIGNAL = /\b(?:freshers?|fresh\s+graduates?|intern(?:ship)?|trainee|apprentice(?:ship)?|campus|new\s+grad(?:uate)?s?|graduate\s+trainee|entry[- _]level|early[- _]career)\b|\b(?:no|zero)\s+(?:prior\s+)?experience\b|\bzero\s+years?\b|\b0\s*(?:(?:-|–|to)\s*\d+\s*)?(?:years?|yrs?)\b/i;
+  const ZERO_EXPERIENCE_SIGNAL = /\b(?:no|zero)\s+(?:prior\s+)?experience\b|\bzero\s+years?\b|\b0\s*(?:years?|yrs?)\b/i;
+
+  function getExperienceRequirementRanges(text) {
+    const pattern = /\b(\d{1,2})\s*(?:\+|plus)?(?:\s*(?:-|–|to)\s*(\d{1,2}))?\s*(?:years?|yrs?)\b\s*(?:(?:of\s+)?|['’]\s*)(?:(?:relevant|work|professional)\s+)?(?:experience|exp)\b/gi;
+    return [...String(text || '').matchAll(pattern)].map(match => [
+      Number(match[1]),
+      Number(match[2] || match[1])
+    ]);
+  }
+
+  function meetsFresherExperienceRule(text, minExperience = null, maxExperience = null) {
+    const normalizedText = String(text || '');
+    const minExp = minExperience == null ? null : Number(minExperience);
+    const maxExp = maxExperience == null ? null : Number(maxExperience);
+    const maxAllowed = Number(profile.job_filters?.max_experience_years ?? 2);
+    const ranges = getExperienceRequirementRanges(normalizedText);
+    const hasZeroSignal = ZERO_EXPERIENCE_SIGNAL.test(normalizedText) ||
+      ranges.some(([lower]) => lower === 0);
+
+    if (!FRESHER_SIGNAL.test(normalizedText)) return false;
+    if (minExp != null && (!Number.isFinite(minExp) || minExp > 0)) return false;
+    if (maxExp != null && (!Number.isFinite(maxExp) || maxExp > maxAllowed)) return false;
+    if (minExp !== 0 && !hasZeroSignal) return false;
+    if (ranges.some(([lower, upper]) => lower > 0 || upper > maxAllowed)) return false;
+    return true;
+  }
+
   const isZeroExpJob = j => {
     if (!j) return false;
-    const minExp = j.min_years_experience != null ? Number(j.min_years_experience) : null;
     const title = (j.title || '').toLowerCase();
-    const desc = `${j.description || ''} ${j.raw_description || ''}`.toLowerCase();
-    const text = `${title} ${desc}`;
+    const text = `${title} ${j.seniority || ''} ${j.description || ''} ${j.raw_description || ''}`;
 
-    // Reject Senior / Lead / Principal / Staff / Manager
     if (/\b(?:senior|sr\b|sr\.|staff|principal|lead|head of|director|vp|manager|architect)\b/i.test(title)) {
       if (!(isEntryManagementTitle(title) || /\b(?:intern|trainee)\b/i.test(title))) return false;
     }
 
-    // Reject Level II, III, IV, etc. (e.g. Applied Scientist II, Research Scientist III)
-    if (/\b(?:ii|iii|iv|v|2|3|4)\b/i.test(title) && /(?:scientist|engineer|analyst|specialist|researcher|consultant|developer)/i.test(title)) {
+    if (/\b(?:ii|iii|iv|v|2|3|4)\b/i.test(title) &&
+        /(?:scientist|engineer|analyst|specialist|researcher|consultant|developer)/i.test(title)) {
       return false;
     }
 
-    // Reject if minimum years of experience > 0
-    if (minExp !== null && minExp > 0) return false;
-
-    const zeroRange = /\b0\s*(?:-|–|to)\s*\d+\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b/i;
-    const experienceText = text.replace(zeroRange, '');
-    const hasExpReq = /\b[1-9]\d*\+?\s*(?:[-–]|to)?\s*\d*\s*(?:years?|yrs?)(?:\s+of)?\s*(?:relevant\s+|work\s+|professional\s+)?(?:experience|exp)\b/i.test(experienceText);
-    const isExplicitZero = /\b(?:0|zero)\s*(?:(?:-|–|to)\s*\d+\s*)?(?:years?|yrs?)\b|\bfreshers?\b|\bintern\b|\binternship\b|\btrainee\b|\bapprentice\b|\bcampus\b|\bbatch\s*202[4567]\b|\bno\s+(?:prior\s+)?experience\b|\bnew\s+grad(?:uate)?\b|\bentry[ -]level\b|\bearly[ -]career\b/i.test(text);
-    if (hasExpReq) return false;
-    if (isExplicitZero) return true;
-    if (minExp === 0 && j.analysis_method === 'fallback') return false;
-
-    // Keep eligible junior/associate listings when their structured experience is zero.
-    const hasEntryMarker = /\b(?:freshers?|intern|internship|trainee|campus|graduates?|new\s*grad|junior|associate|entry|0\s*years?|zero|batch\s*202[4567])\b/i.test(text);
-    return hasEntryMarker;
+    return meetsFresherExperienceRule(
+      text,
+      j.min_years_experience,
+      j.max_years_experience
+    );
   };
+
+  const filterEligibleJobs = jobList =>
+    profile.job_filters?.pure_freshers_only ? jobList.filter(isZeroExpJob) : jobList;
+
+  jobs = filterEligibleJobs(jobs);
 
   const isFresherPriorityJob = j => {
     if (!j) return false;
@@ -1247,9 +1268,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       let fresherPill = '';
       if (isZeroExpJob(job)) {
-        fresherPill = `<span class="fresher-badge" title="No experience required / freshers eligible">🎓 0 Exp • Fresher</span>`;
+        fresherPill = `<span class="fresher-badge" title="Explicit zero-year fresher eligibility; up to 2 years allowed when the minimum is 0">🎓 Fresher • 0–2 Yrs</span>`;
       } else {
-        fresherPill = `<span class="fresher-badge badge-early-career" title="Up to 4 years experience / early career eligible">🌱 Early Career (0–4 Yrs)</span>`;
+        fresherPill = `<span class="fresher-badge badge-early-career" title="Requires a fresher signal and explicit zero-year eligibility">🌱 Fresher • 0–2 Yrs</span>`;
       }
       const internPill = isInternshipJob(job)
         ? `<span class="intern-badge" title="Internship / Traineeship position">🎓 Internship</span>`
@@ -1637,7 +1658,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "✌️ Wellfound", url: `https://wellfound.com/jobs?role=${encTitle}&location=India` },
         { name: "⚡ Instahyre", url: `https://www.instahyre.com/jobs-search?search=${encAll}` },
         { name: "✂️ Cutshort", url: `https://cutshort.io/jobs?query=${encTitle}` },
-        { name: "💻 Hirist", url: `https://www.hirist.tech/search?keyword=${encTitle}&exp=0-4` },
+        { name: "💻 Hirist", url: `https://www.hirist.tech/search?keyword=${encTitle}&exp=0-2` },
         { name: "🟧 YC Startups", url: `https://www.workatastartup.com/jobs?query=${encTitle}` },
         { name: "🎓 Internshala", url: `https://internshala.com/internships/${slug}-internship/` },
         { name: "🎯 Unstop", url: `https://unstop.com/internships?keyword=${encTitle}` },
@@ -2291,7 +2312,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function evaluateJobClient(input) {
     const title = input.title.toLowerCase().trim();
     const seniority = input.seniority.toLowerCase().trim();
-    const exp = parseInt(input.exp, 10) || 0;
+    const minExp = input.exp === "" ? null : Number(input.exp);
+    const maxExp = input.maxExp === "" ? null : Number(input.maxExp);
     const reqSkills = input.skills.split(",").map(s => s.trim().toLowerCase().replace(/[\s-]/g, '_')).filter(Boolean);
 
     // 1. Exclude keywords
@@ -2313,11 +2335,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    // 2. Experience check (early-career limit ≤ 4 years)
-    if (exp > 4) {
+    // 2. Require an explicit fresher signal and a zero-year minimum.
+    if (!FRESHER_SIGNAL.test(`${title} ${seniority}`) ||
+        minExp !== 0 ||
+        maxExp == null ||
+        !Number.isFinite(maxExp) ||
+        maxExp < minExp ||
+        maxExp > Number(profile.job_filters?.max_experience_years ?? 2)) {
       return {
         rejected: true,
-        reason: `Requires ${exp} years experience (maximum allowed is 4 years)`,
+        reason: "Requires an explicit fresher signal, a 0-year minimum, and a maximum of 2 years",
         score: 0
       };
     }
@@ -2394,9 +2421,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 6. Seniority fit & Fresher bonus
-    const isEntry = ["intern", "fresher", "junior", "associate", "trainee"].includes(seniority) || 
-                    ["intern", "fresher", "junior", "associate", "trainee", "campus", "new grad"].some(w => title.includes(w)) ||
-                    exp === 0;
+    const isEntry = minExp === 0 && FRESHER_SIGNAL.test(`${title} ${seniority}`);
     const seniorityScore = isEntry ? 1.0 : 0.80;
     const fresherBonus = isEntry ? 0.05 : 0.0;
 
@@ -2440,6 +2465,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: document.getElementById("test-category").value,
       seniority: document.getElementById("test-seniority").value,
       exp: document.getElementById("test-exp").value,
+      maxExp: document.getElementById("test-max-exp").value,
       location: document.getElementById("test-location").value,
       skills: document.getElementById("test-skills").value
     };
@@ -2478,7 +2504,7 @@ document.addEventListener("DOMContentLoaded", () => {
       scoreNum.textContent = `${Math.round(res.score * 100)}%`;
       roleWeight.textContent = `${Math.round(res.tierWeight * 100)}%`;
       skillRate.textContent = `${res.skillRate}%`;
-      senStatus.textContent = "Passed (0–4 Yrs)";
+      senStatus.textContent = "Passed (0–2 Yrs; 0 required)";
 
       const matchedHtml = res.matchedSkills.map(s => `<span class="skill-tag matched">✓ ${s}</span>`).join(" ") || "None listed";
       const missingHtml = res.missingSkills.map(s => `<span class="skill-tag missing">✗ ${s}</span>`).join(" ") || "None";
@@ -2525,7 +2551,7 @@ document.addEventListener("DOMContentLoaded", () => {
       wellfound: `https://wellfound.com/jobs?role=${encRole}&location=India`,
       instahyre: `https://www.instahyre.com/jobs-search?search=${encAll}`,
       cutshort: `https://cutshort.io/jobs?query=${encRole}`,
-      hirist: `https://www.hirist.tech/search?keyword=${encRole}&exp=0-4`,
+      hirist: `https://www.hirist.tech/search?keyword=${encRole}&exp=0-2`,
       ycombinator: `https://www.workatastartup.com/jobs?query=${encRole}`,
       internshala: `https://internshala.com/internships/${slug}-internship/`,
       unstop: `https://unstop.com/internships?keyword=${encRole}`,
@@ -2569,13 +2595,15 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Applied ML / Research",
       seniority: "intern",
       exp: 0,
+      maxExp: 2,
       skills: "python, pytorch, deep_learning, machine_learning, statistics"
     },
     {
-      title: "Data Scientist (up to 4 Yrs) (Naukri)",
+      title: "Data Scientist Fresher (0–2 Yrs)",
       category: "Data Science",
-      seniority: "entry_level",
-      exp: 4,
+      seniority: "fresher",
+      exp: 0,
+      maxExp: 2,
       skills: "python, sql, predictive_modeling, machine_learning, pandas"
     },
     {
@@ -2583,6 +2611,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Decision Science",
       seniority: "fresher",
       exp: 0,
+      maxExp: 2,
       skills: "sql, python, statistical_modeling, decision_analysis, ab_testing"
     },
     {
@@ -2590,6 +2619,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "OR / Optimization",
       seniority: "trainee",
       exp: 0,
+      maxExp: 2,
       skills: "python, operations_research, linear_programming, optimization, pulp"
     },
     {
@@ -2597,6 +2627,7 @@ document.addEventListener("DOMContentLoaded", () => {
       category: "Applied ML / Research",
       seniority: "senior",
       exp: 8,
+      maxExp: 2,
       skills: "python, pytorch"
     }
   ];
@@ -2610,6 +2641,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("test-category").value = p.category;
     document.getElementById("test-seniority").value = p.seniority;
     document.getElementById("test-exp").value = p.exp;
+    document.getElementById("test-max-exp").value = p.maxExp;
     document.getElementById("test-skills").value = p.skills;
 
     showToast(`Loaded preset: ${p.title}`);
@@ -2890,16 +2922,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // 4. Fresher Eligibility Gate
-    let isFresher = true;
-    let minYears = 0;
-    const expMatch = lower.match(/(\d+)\+?\s*years?(?:\s+of)?\s+exp/);
-    if (expMatch) {
-      minYears = parseInt(expMatch[1], 10);
-      if (minYears > 1) isFresher = false;
-    }
-    if (lower.includes("fresher") || lower.includes("0-1") || lower.includes("fresh grad") || lower.includes("intern") || lower.includes("trainee") || lower.includes("batch")) {
-      isFresher = true;
-    }
+    const experienceRanges = getExperienceRequirementRanges(lower);
+    const minYears = experienceRanges.length
+      ? Math.min(...experienceRanges.map(([minimum]) => minimum))
+      : ZERO_EXPERIENCE_SIGNAL.test(lower) ? 0 : null;
+    const maxYears = experienceRanges.length
+      ? Math.max(...experienceRanges.map(([, maximum]) => maximum))
+      : null;
+    const isFresher = meetsFresherExperienceRule(lower, minYears, maxYears);
 
     // 5. Contact Email
     const emailMatch = text.match(/[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+/);
@@ -2981,6 +3011,7 @@ Best regards,
       is_remote: isRemote,
       applicants_count: applicantsCount,
       min_years_experience: minYears,
+      max_years_experience: maxYears,
       contact_email: contactEmail,
       url: postUrl || "https://www.linkedin.com/feed/",
       source_type: "LinkedIn Post",
@@ -3186,6 +3217,13 @@ Best regards,
 
       const job = parseLinkedInPostClient(rawText, author, postUrl);
       lastParsedPostJob = job;
+      const eligibleFresherPost = isZeroExpJob(job);
+      if (linkedinSaveJobBtn) {
+        linkedinSaveJobBtn.disabled = !eligibleFresherPost;
+        linkedinSaveJobBtn.title = eligibleFresherPost
+          ? "Save this eligible zero-to-two-year fresher role"
+          : "This post does not explicitly meet the fresher and zero-year requirements";
+      }
 
       // Populate Evaluation Card
       if (evalEmptyState) evalEmptyState.style.display = "none";
@@ -3213,10 +3251,10 @@ Best regards,
       if (evalScoreVal) evalScoreVal.textContent = `${Math.round(job.score * 100)}%`;
 
       if (evalFresherStatus) {
-        if (isZeroExpJob(job)) {
-          evalFresherStatus.innerHTML = `<span style="color:#10b981">✓ 100% Fresher Eligible: 0 Years Experience Required</span>`;
+        if (eligibleFresherPost) {
+          evalFresherStatus.innerHTML = `<span style="color:#10b981">✓ Fresher eligible: 0-year minimum, up to 2 years</span>`;
         } else {
-          evalFresherStatus.innerHTML = `<span style="color:#3b82f6">ℹ Early Career: Up to 4 Years Experience</span>`;
+          evalFresherStatus.innerHTML = `<span style="color:#f43f5e">✕ Not eligible: explicit fresher and zero-year eligibility required (0–2 years maximum)</span>`;
         }
       }
 
@@ -3273,6 +3311,7 @@ Best regards,
       if (linkedinPostInput) linkedinPostInput.value = "";
       if (linkedinAuthorInput) linkedinAuthorInput.value = "";
       if (linkedinUrlInput) linkedinUrlInput.value = "";
+      if (linkedinSaveJobBtn) linkedinSaveJobBtn.disabled = true;
       if (evalEmptyState) evalEmptyState.style.display = "flex";
       if (evalResultCard) evalResultCard.style.display = "none";
       lastParsedPostJob = null;
@@ -3295,6 +3334,10 @@ Best regards,
     linkedinSaveJobBtn.addEventListener("click", () => {
       if (!lastParsedPostJob) {
         showToast("⚠️ Please parse a post first!");
+        return;
+      }
+      if (!isZeroExpJob(lastParsedPostJob)) {
+        showToast("⚠️ This post must explicitly indicate fresher eligibility and allow 0 years of experience (up to 2 years maximum).");
         return;
       }
 
@@ -3872,9 +3915,9 @@ Best regards,
 
   function applyPublishedFeed(freshData) {
     data = freshData;
-    jobs = freshData.jobs.filter(hasVerifiedPublicationTime);
     stats = freshData.stats || stats;
     profile = freshData.profile || profile;
+    jobs = filterEligibleJobs(freshData.jobs.filter(hasVerifiedPublicationTime));
     window.JOB_MATCHER_DATA = window.JOB_DATA = freshData;
     mergeSavedCustomJobs(jobs);
     initStats();
