@@ -3,8 +3,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     "target_level": "early_career",
     "job_filters": {
       "target_level": "early_career",
-      "pure_freshers_only": false,
-      "max_experience_years": 4,
+      "pure_freshers_only": true,
+      "max_experience_years": 2,
       "strict_zero_experience": false,
       "reject_if_requires_any_experience": false,
       "minimum_match_score": 0.5,
@@ -174,6 +174,9 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "finance analytics",
           "financial analytics analyst",
           "finance analytics analyst",
+          "financial analyst",
+          "finance analyst",
+          "financial planning analyst",
           "financial data analyst",
           "finance data analyst",
           "financial risk analyst",
@@ -492,6 +495,9 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "finance analytics",
       "financial analytics analyst",
       "finance analytics analyst",
+      "financial analyst",
+      "finance analyst",
+      "financial planning analyst",
       "financial data analyst",
       "finance data analyst",
       "financial risk analyst",
@@ -529,7 +535,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "junior",
         "associate"
       ],
-      "max_years_experience": 4,
+      "max_years_experience": 2,
       "exclude": [
         "senior",
         "sr",
@@ -672,119 +678,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   },
   "jobs": [
     {
-      "role_type": "data analyst",
-      "role_category": "data science",
-      "seniority": "junior",
-      "domain": "data analytics",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "analysis_method": "llm",
-      "analysis_model": "openai/gpt-oss-20b",
-      "analysis_cached": true,
-      "title": "Data Analyst",
-      "company": "Caliper Lab",
-      "location": "India",
-      "score": 0.861,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-22T18:57:14Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 0.2853,
-      "relative_time": "17 minutes ago",
-      "url": "https://unstop.com/jobs/1822710",
-      "direct_job_url": "https://unstop.com/jobs/1822710",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Caliper+Lab&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://unstop.com/jobs/1822710",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Data Analyst at Caliper Lab in India. Active hiring opportunity on Unstop (Deadline: 2026-12-06).",
-      "raw_description": "Data Analyst at Caliper Lab in India. Active hiring opportunity on Unstop (Deadline: 2026-12-06).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-12-06T00:00:00+05:30",
-      "end_date": "2026-12-06T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "86% Core Match",
-        "gap_percentage": "14% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Caliper Lab's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Caliper+Lab&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Caliper+Lab",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Caliper+Lab&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Caliper+Lab&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Caliper+Lab"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Caliper+Lab",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Caliper+Lab+careers"
-      }
-    },
-    {
       "role_type": "AI Engineer Internship",
       "role_category": "ML Engineering",
       "seniority": "intern",
@@ -806,11 +699,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-22T16:46:08Z",
       "posted_at_source": "published_at",
-      "hours_ago": 2.4703,
-      "relative_time": "2 hours ago",
+      "hours_ago": 3.3274,
+      "relative_time": "3 hours ago",
       "url": "https://unstop.com/internships/1823388",
       "direct_job_url": "https://unstop.com/internships/1823388",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+%26+Forward+Deployed+Engineer+Internship+RBP+Finivis+Private+Limited&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+%26+Forward+Deployed+Engineer+Internship+RBP+Finivis+Private+Limited&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/ai-forward-deployed-engineer-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1823388",
       "source_type": "Unstop",
@@ -898,418 +791,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       }
     },
     {
-      "role_type": "associate data scientist",
-      "role_category": "Applied ML / Research",
-      "seniority": "associate",
-      "min_years_experience": 2,
-      "max_years_experience": 6,
-      "required_skills": [
-        "python",
-        "pyspark",
-        "sql",
-        "data_structures_and_algorithms",
-        "oop",
-        "system_design",
-        "machine_learning",
-        "nlp",
-        "llm",
-        "prompt_engineering",
-        "genai_workflows",
-        "pandas",
-        "numpy",
-        "rest_api",
-        "backend_development",
-        "ai_ml_projects",
-        "llm_chatbot_with_rag",
-        "ai_summarization_tools",
-        "agent_based_multi_step_reasoning",
-        "ml_model_deployment",
-        "data_pipelines"
-      ],
-      "nice_to_have": [
-        "rag_pipelines",
-        "vector_databases",
-        "langchain",
-        "llamaindex",
-        "agent_frameworks",
-        "mlops_tools",
-        "time_series_forecasting",
-        "anomaly_detection",
-        "frontend_basics",
-        "cloud_platforms",
-        "databricks",
-        "pharma_ecosystem_understanding",
-        "certifications"
-      ],
-      "domain": "pharmaceutical",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Associate Data Scientist - Value & Access Strategy",
-      "company": "Amgen",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.691,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-22T16:26:11Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 2.8028,
-      "relative_time": "2 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-value-access-strategy-at-amgen-4485959036",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-value-access-strategy-at-amgen-4485959036",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-value-access-strategy-at-amgen-4485959036",
-      "naukri_url": "https://www.naukri.com/associate-data-scientist-value-access-strategy-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-value-access-strategy-at-amgen-4485959036",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "python",
-        "sql",
-        "machine_learning",
-        "nlp",
-        "pandas",
-        "numpy"
-      ],
-      "missing_skills": [
-        "pyspark",
-        "data_structures_and_algorithms",
-        "oop",
-        "system_design",
-        "llm",
-        "prompt_engineering",
-        "genai_workflows",
-        "rest_api",
-        "backend_development",
-        "ai_ml_projects",
-        "llm_chatbot_with_rag",
-        "ai_summarization_tools",
-        "agent_based_multi_step_reasoning",
-        "ml_model_deployment",
-        "data_pipelines"
-      ],
-      "description": "About Amgen At Amgen, if you feel like you're part of something bigger, it's because you are. Our shared mission—to serve patients living with serious illnesses—drives all that we do. Since 1980, we've helped pioneer the world of biotech in our fight against the world's toughest ...",
-      "raw_description": "About Amgen At Amgen, if you feel like you're part of something bigger, it's because you are. Our shared mission—to serve patients living with serious illnesses—drives all that we do. Since 1980, we've helped pioneer the world of biotech in our fight against the world's toughest diseases. With our focus on four therapeutic areas –Oncology, Inflammation, General Medicine, and Rare Disease– we reach millions of patients each year. As a member of the Amgen team, you'll help make a lasting impact on the lives of patients as we research, manufacture, and deliver innovative medicines to help people live longer, fuller happier lives. Our award-winning culture is collaborative, innovative, and science based. If you have a passion for challenges and the opportunities that lay within them, you'll thrive as part of the Amgen team. Join us and transform the lives of patients while transforming your career. About The Role Role Description: As an Associate Data Scientist, you will help build next-generation AI-powered platforms that transform how commercial, contracting, and patient access strategies are designed and executed across the US Value & Access organization. Our AI portfolio includes AI copilots, intelligent contract systems, anomaly detection engines, and real-time decision platforms that directly impact how Amgen serves patients and partners. In this role, you will work on production-grade AI systems, contributing to the development of scalable, intelligent solutions that integrate structured and unstructured data, power decision-making, and deliver measurable business impact. You will collaborate with senior data scientists, engineers, and business partners to bring cutting-edge GenAI, LLM, and ML solutions from prototype to production. Roles & Responsibilities: You will contribute to one or more of the following high-impact areas: AI Copilots & Agents: Build LLM-powered assistants, implement prompt engineering, Retrieval-Augmented Generation (RAG) pipelines, and agentic workflows and related applications Intelligent Document & Contract AI: Extract, classify, and query insights from unstructured documents (contracts, policies, SOPs); build NLP pipelines for semantic search and summarization Data & AI Platforms: Work on data ingestion, transformation, and feature engineering pipelines; contribute to scalable AI/ML infrastructure Real-time AI Systems: Build APIs, dashboards, and backend services that power AI-driven insights for end users Analytics & Decision Engines: Develop anomaly detection models (e.g., claims, pricing, Gross-to-Net); build forecasting and optimization models to support commercial decisions Collaborate with cross-functional technical teams to translate business needs into technical specifications, focusing on AI-driven automation and insights Participate in code reviews, design discussions, and adopt best practices across MLOps and software engineering Functional Skills: Must-Have Skills: Strong programming skills in Python, PySpark, and SQL Solid understanding of Data Structures & Algorithms, OOP, and System Design fundamentals Hands-on experience with core Machine Learning techniques (Regression, Classification, Clustering) Working knowledge of NLP fundamentals (tokenization, embeddings, transformers) Exposure to LLMs (OpenAI, HuggingFace, Anthropic, etc.) and prompt engineering / GenAI workflows Experience with data manipulation libraries (Pandas, NumPy) and working with both structured and unstructured data Familiarity with REST APIs and backend development basics Mandatory hands-on experience with 2–3 real AI/ML projects AI/GenAI: LLM-based chatbot with RAG (document Q&A), AI summarization tools, or agent-based multi-step reasoning systems Engineering: Deployed ML models (API or web app), data pipelines (ETL/ELT) Good-to-Have Skills: Experience with RAG pipelines and vector databases (FAISS, Pinecone, Chroma, Weaviate) Hands-on experience with LangChain, LlamaIndex, or agent frameworks (AutoGen, CrewAI) Exposure to MLOps tools (Docker, CI/CD, MLflow, Kubeflow, Airflow) Knowledge of time-series forecasting and anomaly detection techniques Frontend basics (Streamlit, React) for building dashboards and demos Familiarity with cloud platforms (AWS, Azure, or GCP) Experience with Databricks for data analytics and ML workflows Foundational understanding of the US pharmaceutical ecosystem, relevant datasets (e.g., claims, prescription data), and Patient Support Services offerings Professional Certifications (optional): Any AWS / Azure / GCP certification (preferred) Any Python, Machine Learning, or GenAI certification (preferred) Soft Skills: Initiative to explore new technologies and alternate approaches to solving problems Strong analytical and troubleshooting skills with the ability to break down complex problems Excellent verbal and written communication skills Ability to work effectively with global, virtual, cross-functional teams High degree of curiosity, initiative, and self-motivation Team-oriented mindset with a focus on collective goals Ability to manage multiple priorities and learn quickly in a fast-paced environment Basic Qualifications: Bachelor's or master’s degree in computer science, Artificial Intelligence, Data Science, Statistics, Engineering, or other STEM majors 2–6 years of hands-on experience in AI/ML, data science, or software engineering roles Demonstrated portfolio of AI/ML projects (GitHub, publications, or production deployments) EQUAL OPPORTUNITY STATEMENT Amgen is an Equal Opportunity employer and will consider you without regard to your race, color, religion, sex, sexual orientation, gender identity, national origin, protected veteran status, or disability status. We will ensure that individuals with disabilities are provided with reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. Please contact us to request an accommodation.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Amgen's Associate Data Scientist - Value & Access Strategy: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.29,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+-+Value+%26+Access+Strategy+Amgen&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-data-scientist-value-access-strategy-jobs-in-india?k=Associate+Data+Scientist+-+Value+%26+Access+Strategy+Amgen",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Data+Scientist+-+Value+%26+Access+Strategy+Amgen&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Data+Scientist+-+Value+%26+Access+Strategy+Amgen&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-data-scientist-value-access-strategy-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-data-scientist-value-access-strategy-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Data+Scientist+-+Value+%26+Access+Strategy+Amgen"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Data+Scientist+-+Value+%26+Access+Strategy&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Data+Scientist+-+Value+%26+Access+Strategy+Amgen",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Data+Scientist+-+Value+%26+Access+Strategy",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Data+Scientist+-+Value+%26+Access+Strategy&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Data+Scientist+-+Value+%26+Access+Strategy"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-data-scientist-value-access-strategy-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Data+Scientist+-+Value+%26+Access+Strategy",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-data-scientist-value-access-strategy-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Data+Scientist+-+Value+%26+Access+Strategy"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Data+Scientist+-+Value+%26+Access+Strategy",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-data-scientist-value-access-strategy-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Data+Scientist+-+Value+%26+Access+Strategy",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Data+Scientist+-+Value+%26+Access+Strategy",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Data+Scientist+-+Value+%26+Access+Strategy",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Amgen+careers"
-      }
-    },
-    {
-      "role_type": "standardized",
-      "role_category": "Strategy / Programs",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [
-        "sql",
-        "power_bi",
-        "excel"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Business Analyst Intern",
-      "company": "Dexterz Technology",
-      "location": "India",
-      "score": 0.977,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-22T16:26:11Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 2.8028,
-      "relative_time": "2 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-dexterz-technology-4493192813",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-dexterz-technology-4493192813",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-dexterz-technology-4493192813",
-      "naukri_url": "https://www.naukri.com/business-analyst-intern-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/business-analyst-intern-at-dexterz-technology-4493192813",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [
-        "sql",
-        "power_bi",
-        "excel"
-      ],
-      "missing_skills": [],
-      "description": "BUSINESS ANALYST INTERN | REMOTE Company: Dexterz Technology Location: Remote Duration: 3 Months Stipend: Up to ₹10,000 (Performance-Based) Internship Type: Paid, Remote Eligibility: College Students Only Start Your Career in Business Analysis! Looking to gain practical experienc...",
-      "raw_description": "BUSINESS ANALYST INTERN | REMOTE Company: Dexterz Technology Location: Remote Duration: 3 Months Stipend: Up to ₹10,000 (Performance-Based) Internship Type: Paid, Remote Eligibility: College Students Only Start Your Career in Business Analysis! Looking to gain practical experience in business analysis while pursuing your studies? Dexterz Technology is inviting motivated college students to join its 3-month remote Business Analyst Internship Program. Work on business-focused projects, explore analytical tools, and develop practical skills in data analysis, market research, business reporting, and problem-solving. No previous internship experience required. Basic knowledge and a willingness to learn are welcome! What You'll Do Analyze business data using Excel or Google Sheets to identify trends and insights. Conduct market research and competitor analysis. Prepare reports, dashboards, and business presentations. Assist in documenting business requirements and improving workflows. Support business decisions through research and data interpretation. Collaborate on assigned projects and complete deliverables within deadlines. Who Can Apply? College students pursuing BBA, B.Com, B.Tech, BCA, MBA, or related degrees. Candidates familiar with basic Excel, Google Sheets, or data analysis. Students with analytical thinking, communication, and problem-solving skills. Knowledge of Power BI, SQL, or Tableau is an advantage, not mandatory . Why Join Dexterz Technology? Remote Internship: Gain practical experience from your location. Industry-Relevant Skills: Explore business analysis, reporting, research, and analytical tools. Practical Projects: Apply academic knowledge to business-oriented assignments. Career Development: Build skills relevant to Business Analyst, Data Analyst, and Business Operations roles. Performance-Based Stipend: Opportunity to earn up to ₹10,000, subject to performance evaluation. Take Your First Step! If you're a college student interested in business strategy, analytics, and problem-solving, this opportunity could be a starting point for your professional journey. Apply Now and Explore a Career in Business Analysis with Dexterz Technology!",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Dexterz Technology's Business Analyst Intern: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Analyst+Intern+Dexterz+Technology&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/business-analyst-intern-jobs-in-india?k=Business+Analyst+Intern+Dexterz+Technology&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Business+Analyst+Intern+Dexterz+Technology&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Business+Analyst+Intern+Dexterz+Technology&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-analyst-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/business-analyst-intern-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Analyst+Intern+Dexterz+Technology&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Business+Analyst+Intern&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Analyst+Intern+Dexterz+Technology&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Business+Analyst+Intern&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Business+Analyst+Intern&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Analyst+Intern"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/business-analyst-intern-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Business+Analyst+Intern",
-          "LetsIntern": "https://www.letsintern.com/internships/business-analyst-intern-internships",
-          "Apna": "https://apna.co/jobs?q=Business+Analyst+Intern&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Analyst+Intern",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-business-analyst-intern-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Analyst+Intern",
-          "Remotive": "https://remotive.com/remote-jobs?search=Business+Analyst+Intern",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Analyst+Intern",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Dexterz+Technology+careers"
-      },
-      "is_internship": true,
-      "skill_match_rate": 1.0
-    },
-    {
-      "role_type": "standardized",
-      "role_category": "Strategy / Programs",
-      "seniority": "associate",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [
-        "sql",
-        "power_bi",
-        "excel"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Business Analyst",
-      "company": "Dexterz Technology",
-      "location": "India",
-      "score": 0.977,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-22T16:26:11Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 2.8028,
-      "relative_time": "2 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/business-analyst-at-dexterz-technology-4493194701",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/business-analyst-at-dexterz-technology-4493194701",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/business-analyst-at-dexterz-technology-4493194701",
-      "naukri_url": "https://www.naukri.com/business-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/business-analyst-at-dexterz-technology-4493194701",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "matched_skills": [
-        "sql",
-        "power_bi",
-        "excel"
-      ],
-      "missing_skills": [],
-      "description": "BUSINESS ANALYST INTERN | REMOTE Company: Dexterz Technology Location: Remote Duration: 3 Months Stipend: Up to ₹10,000 (Performance-Based) Internship Type: Paid, Remote Eligibility: College Students Only Start Your Career in Business Analysis! Looking to gain practical experienc...",
-      "raw_description": "BUSINESS ANALYST INTERN | REMOTE Company: Dexterz Technology Location: Remote Duration: 3 Months Stipend: Up to ₹10,000 (Performance-Based) Internship Type: Paid, Remote Eligibility: College Students Only Start Your Career in Business Analysis! Looking to gain practical experience in business analysis while pursuing your studies? Dexterz Technology is inviting motivated college students to join its 3-month remote Business Analyst Internship Program. Work on business-focused projects, explore analytical tools, and develop practical skills in data analysis, market research, business reporting, and problem-solving. No previous internship experience required. Basic knowledge and a willingness to learn are welcome! What You'll Do Analyze business data using Excel or Google Sheets to identify trends and insights. Conduct market research and competitor analysis. Prepare reports, dashboards, and business presentations. Assist in documenting business requirements and improving workflows. Support business decisions through research and data interpretation. Collaborate on assigned projects and complete deliverables within deadlines. Who Can Apply? College students pursuing BBA, B.Com, B.Tech, BCA, MBA, or related degrees. Candidates familiar with basic Excel, Google Sheets, or data analysis. Students with analytical thinking, communication, and problem-solving skills. Knowledge of Power BI, SQL, or Tableau is an advantage, not mandatory . Why Join Dexterz Technology? Remote Internship: Gain practical experience from your location. Industry-Relevant Skills: Explore business analysis, reporting, research, and analytical tools. Practical Projects: Apply academic knowledge to business-oriented assignments. Career Development: Build skills relevant to Business Analyst, Data Analyst, and Business Operations roles. Performance-Based Stipend: Opportunity to earn up to ₹10,000, subject to performance evaluation. Take Your First Step! If you're a college student interested in business strategy, analytics, and problem-solving, this opportunity could be a starting point for your professional journey. Apply Now and Explore a Career in Business Analysis with Dexterz Technology!",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Dexterz Technology's Business Analyst: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Analyst+Dexterz+Technology&location=India&f_TPR=r86400&f_E=1%2C2",
-          "Naukri": "https://www.naukri.com/business-analyst-jobs-in-india?k=Business+Analyst+Dexterz+Technology&experience=0",
-          "Indeed India": "https://in.indeed.com/jobs?q=Business+Analyst+Dexterz+Technology&l=India&fromage=1&explvl=entry_level",
-          "Foundit": "https://www.foundit.in/srp/results?query=Business+Analyst+Dexterz+Technology&locations=India&experience=0",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1&seniorityType=entrylevel",
-          "Shine": "https://www.shine.com/job-search/business-analyst-jobs-in-india?experience=0",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Analyst+Dexterz+Technology&cboWorkExp1=0"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Business+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Analyst+Dexterz+Technology&experience=0",
-          "Cutshort": "https://cutshort.io/jobs?query=Business+Analyst&experience=0",
-          "Hirist": "https://www.hirist.tech/search?keyword=Business+Analyst&exp=0-1",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/business-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Business+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/business-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Business+Analyst&experience=0"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-business-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Business+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Dexterz+Technology+careers"
-      },
-      "is_internship": true,
-      "skill_match_rate": 1.0
-    },
-    {
       "role_type": "intern",
       "role_category": "ml_engineering",
       "seniority": "intern",
@@ -1330,11 +811,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-22T15:29:05Z",
       "posted_at_source": "published_at",
-      "hours_ago": 3.7544,
-      "relative_time": "3 hours ago",
+      "hours_ago": 4.6116,
+      "relative_time": "4 hours ago",
       "url": "https://unstop.com/internships/1813142",
       "direct_job_url": "https://unstop.com/internships/1813142",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Trainer+Internship+SKILL3X&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Trainer+Internship+SKILL3X&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/ai-trainer-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1813142",
       "source_type": "Unstop",
@@ -1444,11 +925,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T13:53:36Z",
       "posted_at_source": "published_at",
-      "hours_ago": 5.3458,
-      "relative_time": "5 hours ago",
+      "hours_ago": 6.203,
+      "relative_time": "6 hours ago",
       "url": "https://unstop.com/internships/1775184",
       "direct_job_url": "https://unstop.com/internships/1775184",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analytics+Internship+IntelleQAcademy&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analytics+Internship+IntelleQAcademy&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-analytics-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1775184",
       "source_type": "Unstop",
@@ -1556,11 +1037,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-22T12:34:24Z",
       "posted_at_source": "published_at",
-      "hours_ago": 6.6658,
-      "relative_time": "6 hours ago",
+      "hours_ago": 7.523,
+      "relative_time": "7 hours ago",
       "url": "https://unstop.com/internships/1812989",
       "direct_job_url": "https://unstop.com/internships/1812989",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Product+Evaluator+Internship+Oxyzen&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Product+Evaluator+Internship+Oxyzen&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/ai-product-evaluator-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1812989",
       "source_type": "Unstop",
@@ -1680,8 +1161,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T12:26:13Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 6.8022,
-      "relative_time": "6 hours ago",
+      "hours_ago": 7.6593,
+      "relative_time": "7 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
@@ -1785,296 +1266,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       }
     },
     {
-      "role_type": "supply chain analyst",
-      "role_category": "decision science",
-      "seniority": "junior",
-      "min_years_experience": 0,
-      "max_years_experience": 3,
-      "required_skills": [
-        "supply_chain_management",
-        "sql",
-        "power_bi",
-        "databricks",
-        "snowflake",
-        "data_lakes",
-        "oracle",
-        "data_sources",
-        "analytical_thinking",
-        "problem_solving",
-        "project_management",
-        "communication_skills",
-        "cross_functional_collaboration",
-        "pfep",
-        "materials_planning_system",
-        "inventory_management",
-        "inventory_optimization",
-        "business_intelligence",
-        "root_cause_analysis",
-        "materials_kpi_management",
-        "excel",
-        "access",
-        "toad",
-        "oms",
-        "data_integrity",
-        "data_reporting",
-        "data_transformation",
-        "data_modeling",
-        "dax"
-      ],
-      "nice_to_have": [
-        "six_sigma",
-        "advanced_planning_command_center"
-      ],
-      "domain": "supply chain",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Supply Chain Analyst",
-      "company": "Cummins India",
-      "location": "Pune Division, Maharashtra, India",
-      "score": 0.687,
-      "tier": 4,
-      "category": "OR / Optimization",
-      "priority": "Primary",
-      "badge": "🏅",
-      "posted_at": "2026-11-22T11:13:53Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 8.0078,
-      "relative_time": "8 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/supply-chain-analyst-at-cummins-india-4413167059",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/supply-chain-analyst-at-cummins-india-4413167059",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/supply-chain-analyst-at-cummins-india-4413167059",
-      "naukri_url": "https://www.naukri.com/supply-chain-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/supply-chain-analyst-at-cummins-india-4413167059",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "power_bi",
-        "analytical_thinking",
-        "problem_solving",
-        "excel",
-        "data_modeling"
-      ],
-      "missing_skills": [
-        "supply_chain_management",
-        "databricks",
-        "snowflake",
-        "data_lakes",
-        "oracle",
-        "data_sources",
-        "project_management",
-        "communication_skills",
-        "cross_functional_collaboration",
-        "pfep",
-        "materials_planning_system",
-        "inventory_management",
-        "inventory_optimization",
-        "business_intelligence",
-        "root_cause_analysis",
-        "materials_kpi_management",
-        "access",
-        "toad",
-        "oms",
-        "data_integrity",
-        "data_reporting",
-        "data_transformation",
-        "dax"
-      ],
-      "description": "Job Summary Use analytical and quantitative methods to understand, predict, and enhance supply chain processes. Responsible for analyzing performance, identifying problems, and developing recommendations to improve the organization's Supply Chain. Key Responsibilities Provide ana...",
-      "raw_description": "Job Summary Use analytical and quantitative methods to understand, predict, and enhance supply chain processes. Responsible for analyzing performance, identifying problems, and developing recommendations to improve the organization's Supply Chain. Key Responsibilities Provide analytical support to one or more functional areas Use common processes tools, and information systems to enable supply chain analysis. Ensure data integrity of all analytics and reports. Analyze and interpret Key Performance Indicators to identify areas for improvement and action plans. Participate in six sigma and supply chain improvement projects Use existing business systems to provide analytics and reporting that are capable and repeatable. Competencies Communicates effectively - Developing and delivering multi-mode communications that convey a clear understanding of the unique needs of different audiences. Drives results - Consistently achieving results, even under tough circumstances. Global perspective - Taking a broad view when approaching issues, using a global lens. Manages complexity - Making sense of complex, high quantity, and sometimes contradictory information to effectively solve problems. Optimizes work processes - Knowing the most effective and efficient processes to get things done, with a focus on continuous improvement. Materials Planning System Utilization - Uses the materials planning system to manage supply and demand plans taking long-term corrective action on exception messages and other alerts based on root cause analysis; occasionally refers to adhoc tools such as Excel, Access, TOAD, OMS, etc. in performing problem solving, while leveraging the materials planning system as the primary tool in day-to-day operations. Plan for Every Part (PFEP) - Uses PFEP in planning, designing, and management of systems and processes within a facility to ensure delivery of right part at the right time in the right quantity to the right place, which in turn guarantees smooth operations; applies PFEP principles on the end to end supply chain with particular attention to the relationships between master data management, materials planning parameters, engineered material flows, transport management, and warehouse management. Analysis and Troubleshooting - Extracts, transforms, models, interprets, and presents planning data with the goal of mining useful information, troubleshooting, suggesting conclusions, and supporting value creating decision making. Inventory Management and Optimization - Uses analytics and algorithms to determine the optimal level of inventory investment across the end-to-end supply chain within specific constraints (warehouse space, customer delivery, etc.); provides guidance and expertise on planning parameter refinement; develops inventory strategies to support Cummins' strategy and not just a business unit strategy. Material Planning - Uses advanced tools (e.g. Advanced Planning Command Centre, Business Intelligence (BI) Dashboards etc.) to take a decision related to parts availability, inventory optimization and root cause analysis. Materials KPI Management - Operates in relation to recent or historical outputs as compared to expectations of the organization to determine next steps to drive improvement; assesses gaps to the supply chain performance against the expectation of achieving target deliverables; interprets KPIs to understand end-customer impact; strategically balances trade-offs to influence one KPI while minimizing the impact to others. Values differences - Recognizing the value that different perspectives and cultures bring to an organization. Education, Licenses, Certifications College, university, or equivalent degree required. This position may require licensing for compliance with export controls or sanctions regulations. Experience Minimal to intermediate level of experience required. Shift: EMEA shift (12:30pm to 9:30pm) Hybrid working (3 days from office) Required Skills & Qualifications Strong knowledge of Supply Chain Management concepts Hands-on experience in SQL (intermediate level) Proficiency in Power BI (dashboarding, DAX, data modeling) Experience working with modern data platforms such as Databricks, Snowflake, Data Lakes Understanding of database systems like Oracle Ability to connect and work with multiple data sources Strong analytical thinking and problem-solving skills Good project management & communication skills to interact with cross-functional teams Note: Candidates with a strong mix of supply chain understanding and data analytics expertise will be preferred. Job Supply Chain Planning Organization Cummins Inc. Role Category On-site with Flexibility Job Type Exempt - Experienced ReqID 2427947 Relocation Package No 100% On-Site No",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Vehicle Routing & Network Flow Formulations",
-            "impact": "High Impact",
-            "category": "Operations Research",
-            "action": "Formulate a Capacitated Vehicle Routing Problem (CVRP) in PuLP or Google OR-Tools and visualize route costs."
-          },
-          {
-            "skill": "Mixed Integer Linear Programming (MILP)",
-            "impact": "High Impact",
-            "category": "Mathematical Programming",
-            "action": "Model a facility location and hub allocation problem with binary variables and capacity constraints."
-          },
-          {
-            "skill": "Heuristic Algorithms & Metaheuristics",
-            "impact": "Medium Impact",
-            "category": "Algorithm Design",
-            "action": "Implement simulated annealing or genetic algorithms for NP-hard scheduling bottlenecks."
-          }
-        ],
-        "bridge_roadmap": "For Cummins India's Supply Chain Analyst: Code a reproducible logistics network optimizer in Python with PuLP, benchmarking solver runtimes and constraint violations against baseline heuristics.",
-        "interview_talk_track": "My strength is translating complex real-world operational bottlenecks into mathematical linear and integer programs that solve efficiently within production bounds."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.21,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Supply+Chain+Analyst+Cummins+India&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/supply-chain-analyst-jobs-in-india?k=Supply+Chain+Analyst+Cummins+India",
-          "Indeed India": "https://in.indeed.com/jobs?q=Supply+Chain+Analyst+Cummins+India&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Supply+Chain+Analyst+Cummins+India&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-supply-chain-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/supply-chain-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Supply+Chain+Analyst+Cummins+India"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Supply+Chain+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Supply+Chain+Analyst+Cummins+India",
-          "Cutshort": "https://cutshort.io/jobs?query=Supply+Chain+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Supply+Chain+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Supply+Chain+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/supply-chain-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Supply+Chain+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/supply-chain-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Supply+Chain+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Supply+Chain+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-supply-chain-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Supply+Chain+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Supply+Chain+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Supply+Chain+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Cummins+India+careers"
-      }
-    },
-    {
-      "role_type": "operations analyst",
-      "role_category": "Other",
-      "seniority": "junior",
-      "domain": "operations",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "analysis_method": "llm",
-      "analysis_model": "openai/gpt-oss-20b",
-      "analysis_cached": true,
-      "title": "Customer Operations Analyst",
-      "company": "Eclerx",
-      "location": "India",
-      "score": 0.854,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-22T11:12:46Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 8.0264,
-      "relative_time": "8 hours ago",
-      "url": "https://unstop.com/jobs/1806853",
-      "direct_job_url": "https://unstop.com/jobs/1806853",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Customer+Operations+Analyst+Eclerx&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-      "naukri_url": "https://www.naukri.com/customer-operations-analyst-jobs-in-india",
-      "company_url": "https://unstop.com/jobs/1806853",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Customer Operations Analyst at Eclerx in India. Active hiring opportunity on Unstop (Deadline: 2026-11-26).",
-      "raw_description": "Customer Operations Analyst at Eclerx in India. Active hiring opportunity on Unstop (Deadline: 2026-11-26).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-26T00:00:00+05:30",
-      "end_date": "2026-11-26T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Eclerx's Customer Operations Analyst: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Customer+Operations+Analyst+Eclerx&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/customer-operations-analyst-jobs-in-india?k=Customer+Operations+Analyst+Eclerx",
-          "Indeed India": "https://in.indeed.com/jobs?q=Customer+Operations+Analyst+Eclerx&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Customer+Operations+Analyst+Eclerx&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-customer-operations-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/customer-operations-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Customer+Operations+Analyst+Eclerx"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Customer+Operations+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Customer+Operations+Analyst+Eclerx",
-          "Cutshort": "https://cutshort.io/jobs?query=Customer+Operations+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Customer+Operations+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Customer+Operations+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/customer-operations-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Customer+Operations+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/customer-operations-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Customer+Operations+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Customer+Operations+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-customer-operations-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Customer+Operations+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Customer+Operations+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Customer+Operations+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Eclerx+careers"
-      }
-    },
-    {
       "role_type": "data analyst",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -2120,8 +1311,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T10:26:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 8.8028,
-      "relative_time": "8 hours ago",
+      "hours_ago": 9.6599,
+      "relative_time": "9 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
@@ -2264,8 +1455,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T05:52:21Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 13.3667,
-      "relative_time": "13 hours ago",
+      "hours_ago": 14.2238,
+      "relative_time": "14 hours ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
       "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
@@ -2371,360 +1562,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "standardized",
-      "role_category": "Strategy / Programs",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [
-        "optimization"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "We're Hiring: 5 Internship Positions | 6-Month Internship Program",
-      "company": "American Dream",
-      "location": "New Delhi, Delhi, India",
-      "score": 0.969,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-21T22:47:10Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 20.4531,
-      "relative_time": "20 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/we-re-hiring-5-internship-positions-6-month-internship-program-at-american-dream-4492895870",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/we-re-hiring-5-internship-positions-6-month-internship-program-at-american-dream-4492895870",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/we-re-hiring-5-internship-positions-6-month-internship-program-at-american-dream-4492895870",
-      "naukri_url": "https://www.naukri.com/we-re-hiring-5-internship-positions-6-month-internship-program-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/we-re-hiring-5-internship-positions-6-month-internship-program-at-american-dream-4492895870",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": true,
-      "matched_skills": [
-        "optimization"
-      ],
-      "missing_skills": [],
-      "description": "About the job We're Hiring: 5 Internship Positions | 6-Month Internship ProgramAmerican Dream| A FRAMEBOTIX Holding Company Location: Neu Delhi India Duration: 6 Months Positions Available: 5 Opportunity: International Internship Program Build Your Career. Gain International Expe...",
-      "raw_description": "About the job We're Hiring: 5 Internship Positions | 6-Month Internship ProgramAmerican Dream| A FRAMEBOTIX Holding Company Location: Neu Delhi India Duration: 6 Months Positions Available: 5 Opportunity: International Internship Program Build Your Career. Gain International Experience. Grow With American Dream. American Dream, a FRAMEBOTIX Holding Company, is inviting ambitious, motivated, and talented individuals to join our 6-Month Internship Program. We are looking for individuals who are eager to develop professional skills, gain practical international business experience, and contribute to innovative projects in a dynamic, growth-oriented environment.This is more than an internship. It's an opportunity to work on real business challenges, collaborate with an international team, and build valuable experience for your future career. Available Internship Positions1. Business Development & Strategic Partnerships Intern Identify potential business opportunities and strategic partner's Research prospective clients and Asia/US/European markets. Support business outreach and relationship development. Assist with partnership proposals and business expansion initiatives. Position 2: Digital Marketing & Brand Development Intern Support digital marketing and brand awareness initiatives. Conduct market and competitor research. Assist with social media content and marketing campaigns. Contribute to lead generation and audience engagement. Position 3: Technology, AI & Digital Innovation Intern Support digital transformation and automation initiatives. Assist with technology-focused projects and documentation. Explore innovative solutions to improve business processes. Research emerging technologies and AI applications. Position 4. Operations & Project Management Intern Maintain project documentation and progress reports. Assist with workflow optimization and operational planning. Collaborate with different departments on ongoing initiatives. Support daily business operations and project coordination. Position 5. International Business & Market Research Intern Research market opportunities across Latvia and the European Union. Analyze industry trends, competitors, and potential customers. Identify international business development opportunities. Support market-entry strategies and expansion planning. Who We're Looking For University students, recent graduates, and early-career professionals. Strong written and spoken English communication skills. Interest in international business, technology, innovation, or entrepreneurship. Comfortable using digital tools, AI platforms, and online research resources. Strong organizational, analytical, and problem-solving skills. Self-motivated, proactive, adaptable, and willing to learn. Ability to commit to a six-month internship program. What You'll Gain ✅ Six months of practical professional experience. ✅ Exposure to international business American and European markets. ✅ Experience working on real projects and business initiatives. ✅ Opportunities to develop technical, analytical, and communication skills. ✅ Professional mentorship and collaboration with an international team. ✅ Networking opportunities and exposure to a growing business environment. ✅ Potential consideration for future opportunities based on performance and business requirements. Internship Duration 6 Months | Candidates will participate in structured onboarding, practical assignments, project activities, and periodic performance evaluations throughout the internship. How to Apply Interested candidates are invited to submit: Updated CV or LinkedIn profile. Preferred internship position. A short introduction explaining their interests and relevant skills. A brief statement describing why they would like to join American Dreams. Application Email: info@american-dreams.si Email Subject: American Dreams 6-Month Internship Application – [Position Name]Application Deadline: 31. November 2026 American Dreams| A FRAMEBOTIX Holding Company Innovate. Collaborate. Build Your Future. 🚀 Ready to take the next step in your professional journey? Apply now and grow with us! #Internship2027 #InternshipOpportunities #india #EuropeanUnion #usa #canada #BusinessDevelopment #DigitalMarketing #ArtificialIntelligence #Technology #InternationalInternship #CareerOpportunities #Hiring #FutureTalent #datacenters #auperintellegence",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For American Dream's We're Hiring: 5 Internship Positions | 6-Month Internship Program: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program+American+Dream&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/we-re-hiring-5-internship-positions-6-month-internship-program-jobs-in-india?k=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program+American+Dream",
-          "Indeed India": "https://in.indeed.com/jobs?q=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program+American+Dream&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program+American+Dream&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-we-re-hiring-5-internship-positions-6-month-internship-program-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/we-re-hiring-5-internship-positions-6-month-internship-program-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program+American+Dream"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program+American+Dream",
-          "Cutshort": "https://cutshort.io/jobs?query=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program",
-          "Hirist": "https://www.hirist.tech/search?keyword=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/we-re-hiring-5-internship-positions-6-month-internship-program-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program",
-          "LetsIntern": "https://www.letsintern.com/internships/we-re-hiring-5-internship-positions-6-month-internship-program-internships",
-          "Apna": "https://apna.co/jobs?q=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-we-re-hiring-5-internship-positions-6-month-internship-program-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program",
-          "Remotive": "https://remotive.com/remote-jobs?search=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=We%27re+Hiring%3A+5+Internship+Positions+%7C+6-Month+Internship+Program",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=American+Dream+careers"
-      }
-    },
-    {
-      "role_type": "data analyst",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [
-        "spreadsheets",
-        "data_analysis",
-        "dashboard_design",
-        "clear_communication",
-        "clean_and_organise_datasets"
-      ],
-      "nice_to_have": [],
-      "domain": "data analytics",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Analyst",
-      "company": "Skillora Ai",
-      "location": "Ajmer, Rajasthan, India",
-      "score": 0.581,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-21T20:47:14Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 22.4519,
-      "relative_time": "22 hours ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-skillora-ai-4493295562",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-skillora-ai-4493295562",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-skillora-ai-4493295562",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-skillora-ai-4493295562",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [
-        "spreadsheets",
-        "data_analysis",
-        "dashboard_design",
-        "clear_communication",
-        "clean_and_organise_datasets"
-      ],
-      "description": "What the role can involve Clean and organise datasets Build reports and dashboards Explain trends to non-technical colleagues Skills to build SpreadsheetsData analysisDashboard designClear communication",
-      "raw_description": "What the role can involve Clean and organise datasets Build reports and dashboards Explain trends to non-technical colleagues Skills to build SpreadsheetsData analysisDashboard designClear communication",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Skillora Ai's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "skill_match_rate": 0.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Skillora+Ai&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Skillora+Ai",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Skillora+Ai&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Skillora+Ai&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Skillora+Ai"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Skillora+Ai",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Skillora+Ai+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
-      "role_type": "data scientist",
-      "role_category": "data science",
-      "seniority": "fresher",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Data Scientist",
-      "company": "Saarthi",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.916,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-21T17:05:17Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 26.1511,
-      "relative_time": "1 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-scientist-at-saarthi-4493300050",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-saarthi-4493300050",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-saarthi-4493300050",
-      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-scientist-at-saarthi-4493300050",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Quick Application Tools Get a resume, cover letter and intro email written for this role — ATS-ready, in one click. Free to start — sign in to generate.",
-      "raw_description": "Quick Application Tools Get a resume, cover letter and intro email written for this role — ATS-ready, in one click. Free to start — sign in to generate.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "87% Core Match",
-        "gap_percentage": "13% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Saarthi's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Saarthi&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-scientist-jobs-in-india?k=Data+Scientist+Saarthi",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+Saarthi&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+Saarthi&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-scientist-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+Saarthi"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+Saarthi",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-scientist-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist",
-          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Scientist"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-scientist-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Saarthi+careers"
-      }
-    },
-    {
       "role_type": "data_science_internship",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -2746,11 +1583,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-21T16:56:38Z",
       "posted_at_source": "published_at",
-      "hours_ago": 26.2953,
+      "hours_ago": 27.1524,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1806039",
       "direct_job_url": "https://unstop.com/internships/1806039",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Internship+Vortizo+AI&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Internship+Vortizo+AI&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-science-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1806039",
       "source_type": "Unstop",
@@ -2858,11 +1695,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-21T14:40:27Z",
       "posted_at_source": "published_at",
-      "hours_ago": 28.565,
+      "hours_ago": 29.4221,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1822315",
       "direct_job_url": "https://unstop.com/internships/1822315",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Codeatrix&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Codeatrix&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1822315",
       "source_type": "Unstop",
@@ -2971,11 +1808,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-21T13:25:19Z",
       "posted_at_source": "published_at",
-      "hours_ago": 29.8172,
+      "hours_ago": 30.6743,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1819896",
       "direct_job_url": "https://unstop.com/internships/1819896",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Engineer+Internship+Meritixlabs.ai&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Engineer+Internship+Meritixlabs.ai&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/ai-ml-engineer-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1819896",
       "source_type": "Unstop",
@@ -3064,426 +1901,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "business_operations_analyst",
-      "role_category": "Strategy / Programs",
-      "seniority": "junior",
-      "min_years_experience": 1,
-      "max_years_experience": 2,
-      "required_skills": [
-        "business_operations",
-        "stakeholder_management",
-        "process_improvement",
-        "execution",
-        "partner_relationships",
-        "operational_issue_resolution",
-        "automation",
-        "data_analysis",
-        "root_cause_analysis",
-        "performance_improvement",
-        "customer_experience",
-        "reporting",
-        "excel",
-        "google_sheets",
-        "finance_reconciliation",
-        "cross_functional_collaboration",
-        "risk_management",
-        "ambiguity_management",
-        "multi_priority_management",
-        "communication",
-        "negotiation",
-        "analytical_skills",
-        "sql"
-      ],
-      "nice_to_have": [
-        "b_tech",
-        "mba"
-      ],
-      "domain": "fintech",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Business Operations Analyst",
-      "company": "PhonePe",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.675,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-21T13:04:20Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 30.1669,
-      "relative_time": "1 days ago",
-      "url": "https://in.linkedin.com/jobs/view/business-operations-analyst-at-phonepe-4466652884",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/business-operations-analyst-at-phonepe-4466652884",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/business-operations-analyst-at-phonepe-4466652884",
-      "naukri_url": "https://www.naukri.com/business-operations-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/business-operations-analyst-at-phonepe-4466652884",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "excel",
-        "communication",
-        "sql"
-      ],
-      "missing_skills": [
-        "business_operations",
-        "stakeholder_management",
-        "process_improvement",
-        "execution",
-        "partner_relationships",
-        "operational_issue_resolution",
-        "automation",
-        "data_analysis",
-        "root_cause_analysis",
-        "performance_improvement",
-        "customer_experience",
-        "reporting",
-        "google_sheets",
-        "finance_reconciliation",
-        "cross_functional_collaboration",
-        "risk_management",
-        "ambiguity_management",
-        "multi_priority_management",
-        "negotiation",
-        "analytical_skills"
-      ],
-      "description": "PhonePe Limited (Formerly PhonePe Private Limited) is a technology company that builds digital platforms for Payments, Digital Distribution Services and Financial Services. Headquartered in India, the PhonePe digital payments app was launched in 2016. As of April 2026, PhonePe ha...",
-      "raw_description": "PhonePe Limited (Formerly PhonePe Private Limited) is a technology company that builds digital platforms for Payments, Digital Distribution Services and Financial Services. Headquartered in India, the PhonePe digital payments app was launched in 2016. As of April 2026, PhonePe has over 70 Crore life-till-date registered users and a digital payments acceptance network spread across over 5 Crore merchants. PhonePe’s products and services include Consumer Payments (including Digital Distribution Services), Merchant Payments, Lending and Insurance Distribution services, and New Platforms, which comprise Share.Market (stock broking and mutual funds distribution platform), and Indus Appstore (Android-based mobile app marketplace). Culture: At PhonePe, we go the extra mile to make sure you can bring your best self to work, Everyday!. And that starts with creating the right environment for you. We empower people and trust them to do the right thing. Here, you own your work from start to finish, right from day one. PhonePe-rs solve complex problems and execute quickly; often building frameworks from scratch. If you’re excited by the idea of building platforms that touch millions, ideating with some of the best minds in the country and executing on your dreams with purpose and speed, join us! Job Description We are looking for a Business Operations Analyst to drive day-to-day operations, stakeholder management, process improvements, and execution across a fast-paced business environment. Own day-to-day operations and coordinate with internal and external stakeholders to ensure smooth execution. Manage partner relationships, operational issues, escalations, and dependencies through to resolution. Identify process gaps and opportunities for automation or technological intervention, and work with business and technical teams to implement solutions. Track key operational metrics, analyze data, identify root causes, and drive improvements in performance and customer experience. Own recurring and ad-hoc reporting, with strong proficiency in Excel/Google Sheets. Partner with finance and relevant teams on reconciliations, exceptions, and operational corrections. Collaborate with cross-functional teams to drive initiatives, integrations, launches, and process changes from planning through execution. Proactively identify risks, bring clarity to ambiguous problems, and drive issues towards closure. Maintain a strong customer-first mindset while balancing operational efficiency and business priorities. Qualifications 1–2 years of experience in business operations, fintech, financial services, technology, or a similar environment. Strong ownership and execution mindset with a bias towards action and problem-solving. Excellent communication, stakeholder management, and negotiation skills. Strong analytical skills with the ability to interpret data and derive actionable insights. Advanced Excel/Google Sheets skills; basic knowledge of SQL. Comfortable working with ambiguity and managing multiple priorities. B.Tech/MBA preferred. Additional Information PhonePe Full Time Employee Benefits (Not applicable for Intern or Contract Roles) Insurance Benefits - Medical Insurance, Critical Illness Insurance, Accidental Insurance, Life Insurance Wellness Program - Employee Assistance Program, Onsite Medical Center, Emergency Support System Parental Support - Maternity Benefit, Paternity Benefit Program, Adoption Assistance Program, Day-care Support Program Mobility Benefits - Relocation benefits, Transfer Support Policy, Travel Policy Retirement Benefits - Employee PF Contribution, Flexible PF Contribution, Gratuity, NPS, Leave Encashment Other Benefits - Higher Education Assistance, Car Lease, Salary Advance Policy",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For PhonePe's Business Operations Analyst: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.13,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Business+Operations+Analyst+PhonePe&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/business-operations-analyst-jobs-in-india?k=Business+Operations+Analyst+PhonePe",
-          "Indeed India": "https://in.indeed.com/jobs?q=Business+Operations+Analyst+PhonePe&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Business+Operations+Analyst+PhonePe&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-business-operations-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/business-operations-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Business+Operations+Analyst+PhonePe"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Business+Operations+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Business+Operations+Analyst+PhonePe",
-          "Cutshort": "https://cutshort.io/jobs?query=Business+Operations+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Business+Operations+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Business+Operations+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/business-operations-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Business+Operations+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/business-operations-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Business+Operations+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Business+Operations+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-business-operations-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Business+Operations+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Business+Operations+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Business+Operations+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.phonepe.com/careers/"
-      }
-    },
-    {
-      "role_type": "standardized",
-      "role_category": "Strategy / Programs",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "operations management trainee",
-      "company": "Brandola",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.909,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-21T12:47:10Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 30.4531,
-      "relative_time": "1 days ago",
-      "url": "https://in.linkedin.com/jobs/view/operations-management-trainee-at-brandola-4492310436",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/operations-management-trainee-at-brandola-4492310436",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/operations-management-trainee-at-brandola-4492310436",
-      "naukri_url": "https://www.naukri.com/operations-management-trainee-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/operations-management-trainee-at-brandola-4492310436",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": true,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Management Trainee – Supply Chain & Operations (Interested candidates please send cvs on 7249472569 - whatsapp) position is only for Mumbai candidates We are looking for fresh graduates with a bachelor's degree in mechanical or electrical engineering (2025-2026), along with an MB...",
-      "raw_description": "Management Trainee – Supply Chain & Operations (Interested candidates please send cvs on 7249472569 - whatsapp) position is only for Mumbai candidates We are looking for fresh graduates with a bachelor's degree in mechanical or electrical engineering (2025-2026), along with an MBA/MMS, for our Management Trainee programme. We are also hiring Graduates passed outs freshers BBA/BMS only from Mumbai Workplace Address - Kaledonia, Andheri (East) We are looking for immediate joiners only (candidates pursuing currently with studies dont apply) Programme Details: Duration: 1-year Management Trainee programme. Stipend: ₹25,000 per month. Joining: Immediate starters preferred. Eligibility: Freshers with the relevant engineering and management qualifications. What We Offer: Structured on-the-job training across relevant company functions. Exposure to our business operations, supply chain processes and operational management. Opportunity to understand different functional areas and identify your strengths and areas of interest. Practical learning, mentoring and professional development. Upon successful completion of the one-year programme, an opportunity to transition into a regular employee position, offering long-term career growth and stability. We are looking for enthusiastic, committed and quick-learning candidates who are keen to build their careers in Supply Chain and Operations.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Brandola's operations management trainee: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=operations+management+trainee+Brandola&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/operations-management-trainee-jobs-in-india?k=operations+management+trainee+Brandola",
-          "Indeed India": "https://in.indeed.com/jobs?q=operations+management+trainee+Brandola&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=operations+management+trainee+Brandola&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-operations-management-trainee-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/operations-management-trainee-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=operations+management+trainee+Brandola"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=operations+management+trainee&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=operations+management+trainee+Brandola",
-          "Cutshort": "https://cutshort.io/jobs?query=operations+management+trainee",
-          "Hirist": "https://www.hirist.tech/search?keyword=operations+management+trainee&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=operations+management+trainee"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/operations-management-trainee-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=operations+management+trainee",
-          "LetsIntern": "https://www.letsintern.com/internships/operations-management-trainee-internships",
-          "Apna": "https://apna.co/jobs?q=operations+management+trainee"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=operations+management+trainee",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-operations-management-trainee-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=operations+management+trainee",
-          "Remotive": "https://remotive.com/remote-jobs?search=operations+management+trainee",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=operations+management+trainee",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Brandola+careers"
-      }
-    },
-    {
-      "role_type": "data analyst",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": 1,
-      "max_years_experience": 2,
-      "required_skills": [
-        "sql",
-        "excel",
-        "power_bi",
-        "tableau",
-        "data_cleaning",
-        "data_validation",
-        "data_visualization",
-        "data_analysis",
-        "analytical_skills",
-        "problem_solving",
-        "communication_skills",
-        "presentation_skills",
-        "attention_to_detail"
-      ],
-      "nice_to_have": [
-        "python",
-        "r",
-        "etl",
-        "data_management",
-        "relational_databases",
-        "interactive_dashboards"
-      ],
-      "domain": "technology",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Data Analyst",
-      "company": "Arise TechGlobal",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.755,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-21T08:40:21Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 34.5667,
-      "relative_time": "1 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-arise-techglobal-4492871882",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-arise-techglobal-4492871882",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-arise-techglobal-4492871882",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-arise-techglobal-4492871882",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "excel",
-        "power_bi",
-        "problem_solving"
-      ],
-      "missing_skills": [
-        "tableau",
-        "data_cleaning",
-        "data_validation",
-        "data_visualization",
-        "data_analysis",
-        "analytical_skills",
-        "communication_skills",
-        "presentation_skills",
-        "attention_to_detail"
-      ],
-      "description": "Data Analyst Company: Arise Tech Global Experience: 1–2 Years Location: Hyderabad, Telangana, India Employment Type: Full-time About Arise Tech Global Arise Tech Global is a technology and talent solutions company helping organizations build high-performing teams across enterpris...",
-      "raw_description": "Data Analyst Company: Arise Tech Global Experience: 1–2 Years Location: Hyderabad, Telangana, India Employment Type: Full-time About Arise Tech Global Arise Tech Global is a technology and talent solutions company helping organizations build high-performing teams across enterprise technology, infrastructure, cloud, cybersecurity, and digital transformation. About the Role We are looking for a detail-oriented Data Analyst with 1–2 years of experience in data analysis, reporting, and visualization. The ideal candidate should have strong analytical skills and the ability to transform raw data into meaningful insights that support business decisions. Key Responsibilities Collect, clean, validate, and analyse data from multiple sources. Develop and maintain reports, dashboards, and data visualizations. Identify trends, patterns, and insights to support business decisions. Write SQL queries to retrieve and analyse data. Work with internal teams to understand reporting requirements. Monitor data quality, accuracy, and consistency. Prepare analytical reports and present findings to stakeholders. Support process improvements through data-driven recommendations. Required Skills & Qualifications Bachelor's degree in Computer Science, Statistics, Mathematics, Business Analytics, or a related field. 1–2 years of experience in data analysis or reporting. Good knowledge of Microsoft Excel and SQL. Familiarity with Power BI or Tableau. Understanding of data cleaning, validation, and visualization. Strong analytical and problem-solving abilities. Good communication and presentation skills. Attention to detail and ability to manage multiple tasks. Preferred Skills Basic knowledge of Python or R. Exposure to ETL processes and data management. Familiarity with relational databases. Experience creating interactive dashboards and reports. How to Apply Interested candidates can share their updated resumes with the Arise Tech Global recruitment team.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          }
-        ],
-        "bridge_roadmap": "For Arise TechGlobal's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.31,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Arise+TechGlobal&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Arise+TechGlobal",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Arise+TechGlobal&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Arise+TechGlobal&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Arise+TechGlobal"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Arise+TechGlobal",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Arise+TechGlobal+careers"
-      }
-    },
-    {
       "role_type": "data science internship",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -3504,11 +1921,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-21T08:06:28Z",
       "posted_at_source": "published_at",
-      "hours_ago": 35.1314,
+      "hours_ago": 35.9885,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1820705",
       "direct_job_url": "https://unstop.com/internships/1820705",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+and+ML+Internship+Seemons+Technologies&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+and+ML+Internship+Seemons+Technologies&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-science-and-ml-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1820705",
       "source_type": "Unstop",
@@ -3618,11 +2035,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-21T08:05:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 35.1558,
+      "hours_ago": 36.013,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1820708",
       "direct_job_url": "https://unstop.com/internships/1820708",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analytics+Internship+Seemons+Technologies&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analytics+Internship+Seemons+Technologies&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-analytics-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1820708",
       "source_type": "Unstop",
@@ -3730,11 +2147,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-21T07:24:44Z",
       "posted_at_source": "published_at",
-      "hours_ago": 35.8269,
+      "hours_ago": 36.6841,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1775187",
       "direct_job_url": "https://unstop.com/internships/1775187",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+and+ML+Internship+IntelleQAcademy&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+and+ML+Internship+IntelleQAcademy&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-science-and-ml-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1775187",
       "source_type": "Unstop",
@@ -3823,161 +2240,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "associate product manager",
-      "role_category": "Product",
-      "seniority": "associate",
-      "min_years_experience": 1,
-      "max_years_experience": 3,
-      "required_skills": [
-        "product_management",
-        "product_lifecycle",
-        "roadmap_management",
-        "cross_functional_collaboration",
-        "data_analysis",
-        "web_analytics",
-        "sql",
-        "wireframing",
-        "user_testing",
-        "metrics_tracking",
-        "market_research",
-        "competitive_analysis",
-        "communication",
-        "stakeholder_management",
-        "presentation",
-        "technical_understanding",
-        "block_diagram"
-      ],
-      "nice_to_have": [
-        "online_travel_experience",
-        "loyalty_program_experience",
-        "cross_sell_experience",
-        "platform_design_experience"
-      ],
-      "domain": "online travel",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Product Manager - Growth and Commons",
-      "company": "MakeMyTrip",
-      "location": "Gurgaon, Haryana, India",
-      "score": 0.627,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-21T06:07:34Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 37.1131,
-      "relative_time": "1 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-manager-growth-and-commons-at-makemytrip-4483454232",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-growth-and-commons-at-makemytrip-4483454232",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-manager-growth-and-commons-at-makemytrip-4483454232",
-      "naukri_url": "https://www.naukri.com/associate-product-manager-growth-and-commons-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-manager-growth-and-commons-at-makemytrip-4483454232",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "communication"
-      ],
-      "missing_skills": [
-        "product_management",
-        "product_lifecycle",
-        "roadmap_management",
-        "cross_functional_collaboration",
-        "data_analysis",
-        "web_analytics",
-        "wireframing",
-        "user_testing",
-        "metrics_tracking",
-        "market_research",
-        "competitive_analysis",
-        "stakeholder_management",
-        "presentation",
-        "technical_understanding",
-        "block_diagram"
-      ],
-      "description": "Role: Associate Product Manager Location: Gurgaon About The Function MMT Growth & Commons Function at MakeMyTrip is responsible for building common product experiences for our users such as Homepage, Cross-sell products, Loyalty program, Login & Onboarding, Wallet, Offers, and so...",
-      "raw_description": "Role: Associate Product Manager Location: Gurgaon About The Function MMT Growth & Commons Function at MakeMyTrip is responsible for building common product experiences for our users such as Homepage, Cross-sell products, Loyalty program, Login & Onboarding, Wallet, Offers, and so on. This team focuses on growth — be it new user acquisition, activating never-transacted customers, retention, etc. As a horizontal product team in the organization, the team works with all other business units very closely to deliver seamless and scalable user experiences. About The Role The Associate Product Manager role in the Growth & Commons team at MakeMyTrip is a high impact, strategic position at the core of our platform experience. This role is central to shaping critical, high-traffic user journeys—from the Homepage and Login to Wallets, Offers, and our Loyalty Program—touchpoints that influence the experience of every MakeMyTrip user. This role plays a pivotal part in driving MakeMyTrip’s growth charter, with direct influence on key levers such as new user acquisition, user activation, retention, and cross-sell effectiveness. As a part of a mature, scaled platform serving millions over 25+ years, this role requires a nuanced balance of creative product thinking, user empathy, and data rigor. Operating at the intersection of user experience, platform design, and business growth, the position offers the opportunity to reimagine foundational user flows in online travel. It demands strong ownership, cross-functional influence, and a mindset tuned toward long-term impact and platform scalability. What Will You Be Doing Own the Product Lifecycle: Drive end-to-end product development—from discovery and conceptualization to launch and ongoing enhancements. Define the Roadmap: Shape and manage the product roadmap aligned with business goals and user needs. Build Cross-Functional Alignment: Work closely with engineering, design, marketing, and other stakeholders to translate product vision into executable plans. Drive Continuous Improvement: Analyze product performance post-launch, gather feedback, and iterate to enhance user experience and business impact. Identify Growth Opportunities: Conduct market research and competitive analysis to uncover emerging trends and whitespace opportunities. Translate Ideas into Action: Develop detailed product requirements, including user stories, wireframes, and specifications. Validate with Users: Support user testing and feedback loops to ensure the product resonates with real-world use cases. Measure Success: Define and track key product metrics (KPIs) to evaluate performance and guide future decisions. Stay Ahead of the Curve: Keep abreast of industry trends, best practices, and evolving technologies to inform product strategy. Qualification & Experience Engineering or Management graduate from reputed institute with 1 to 3 years of experience in product management role for a consumer facing, technology enabled business/product. Key Success Factors for the Role You will need a very customer-first mindset. Example: how can you make our homepage better for the user without impacting business metrics? Be comfortable with web analytics and, to some extent, SQL. You should be able to roll up your sleeves when it comes to pulling out data. You should be comfortable with technology and be able to build a basic block diagram of how a feature can potentially work. Meticulous in execution. Can you scope down a complex product on the fly to meet a GTM deadline? Can you wireframe and not depend on designers all the time? Super communication skills. You will be presenting to top leadership from time to time. Ability to craft a compelling product narrative/roadmap while incorporating feedback from multiple stakeholders.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For MakeMyTrip's Associate Product Manager - Growth and Commons: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.12,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+-+Growth+and+Commons+MakeMyTrip&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-manager-growth-and-commons-jobs-in-india?k=Associate+Product+Manager+-+Growth+and+Commons+MakeMyTrip",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+-+Growth+and+Commons+MakeMyTrip&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+-+Growth+and+Commons+MakeMyTrip&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-growth-and-commons-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-growth-and-commons-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+-+Growth+and+Commons+MakeMyTrip"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager+-+Growth+and+Commons&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+-+Growth+and+Commons+MakeMyTrip",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager+-+Growth+and+Commons",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager+-+Growth+and+Commons&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager+-+Growth+and+Commons"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-growth-and-commons-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager+-+Growth+and+Commons",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-growth-and-commons-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager+-+Growth+and+Commons"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager+-+Growth+and+Commons",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-growth-and-commons-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager+-+Growth+and+Commons",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager+-+Growth+and+Commons",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager+-+Growth+and+Commons",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=MakeMyTrip+careers"
-      }
-    },
-    {
       "role_type": "data science intern",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -4009,7 +2271,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-21T04:56:27Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 38.2983,
+      "hours_ago": 39.1555,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-at-jobsphere-4492857794",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-at-jobsphere-4492857794",
@@ -4170,7 +2432,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-21T04:34:34Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 38.6631,
+      "hours_ago": 39.5202,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-at-data-eminence-4492860862",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-at-data-eminence-4492860862",
@@ -4282,149 +2544,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "machine_learning_engineer",
-      "role_category": "ml_engineering",
-      "seniority": "junior",
-      "min_years_experience": 1,
-      "max_years_experience": null,
-      "required_skills": [
-        "tensorflow",
-        "scikit_learn",
-        "python",
-        "sql",
-        "statistics",
-        "model_evaluation"
-      ],
-      "nice_to_have": [
-        "fraud_detection",
-        "risk_management",
-        "anomaly_detection",
-        "payments",
-        "aws",
-        "azure",
-        "gcp",
-        "spark",
-        "xgboost",
-        "lightgbm",
-        "transformer",
-        "git",
-        "software_engineering_fundamentals",
-        "master_degree"
-      ],
-      "domain": "payments",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Machine Learning Engineer, Fraud (Crypto & Debit Card)",
-      "company": "PayPal",
-      "location": "Chennai, Tamil Nadu, India",
-      "score": 0.953,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-20T18:10:17Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 49.0678,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/machine-learning-engineer-fraud-crypto-debit-card-at-paypal-4492971206",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/machine-learning-engineer-fraud-crypto-debit-card-at-paypal-4492971206",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/machine-learning-engineer-fraud-crypto-debit-card-at-paypal-4492971206",
-      "naukri_url": "https://www.naukri.com/machine-learning-engineer-fraud-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/machine-learning-engineer-fraud-crypto-debit-card-at-paypal-4492971206",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": true,
-      "matched_skills": [
-        "tensorflow",
-        "scikit_learn",
-        "python",
-        "sql",
-        "statistics"
-      ],
-      "missing_skills": [
-        "model_evaluation"
-      ],
-      "description": "The Company PayPal has been revolutionizing commerce globally for more than 25 years. Creating innovative experiences that make moving money, selling, and shopping simple, personalized, and secure, PayPal empowers consumers and businesses in approximately 200 markets to join and ...",
-      "raw_description": "The Company PayPal has been revolutionizing commerce globally for more than 25 years. Creating innovative experiences that make moving money, selling, and shopping simple, personalized, and secure, PayPal empowers consumers and businesses in approximately 200 markets to join and thrive in the global economy. We operate a global, two-sided network at scale that connects hundreds of millions of merchants and consumers. We help merchants and consumers connect, transact, and complete payments, whether they are online or in person. PayPal is more than a connection to third-party payment networks. We provide proprietary payment solutions accepted by merchants that enable the completion of payments on our platform on behalf of our customers. We offer our customers the flexibility to use their accounts to purchase and receive payments for goods and services, as well as the ability to transfer and withdraw funds. We enable consumers to exchange funds more safely with merchants using a variety of funding sources, which may include a bank account, a PayPal or Venmo account balance, PayPal and Venmo branded credit products, a credit card, a debit card, certain cryptocurrencies, or other stored value products such as gift cards, and eligible credit card rewards. Our PayPal, Venmo, and Xoom products also make it safer and simpler for friends and family to transfer funds to each other. We offer merchants an end-to-end payments solution that provides authorization and settlement capabilities, as well as instant access to funds and payouts. We also help merchants connect with their customers, process exchanges and returns, and manage risk. We enable consumers to engage in cross-border shopping and merchants to extend their global reach while reducing the complexity and friction involved in enabling cross-border trade. Our beliefs are the foundation for how we conduct business every day. We live each day guided by our core values of Inclusion, Innovation, Collaboration, and Wellness. Together, our values ensure that we work together as one global team with our customers at the center of everything we do – and they push us to ensure we take care of ourselves, each other, and our communities. Job Summary: This job will support the development and implementation of machine learning models that detect and prevent fraud across our Crypto and Debit Card portfolios. You will work alongside senior ML engineers, data scientists, software engineers, and fraud strategy teams to build and improve AI/ML solutions that protect customers and reduce losses. Your role will involve preparing data, building features, training and evaluating models, and helping deploy and monitor them in production. This is a great opportunity to grow your ML engineering skills on real-time systems that make high-impact decisions. Job Description: Essential Responsibilities: Assist in the development and optimization of machine learning models. Preprocess and analyze datasets to ensure data quality. Collaborate with senior engineers and data scientists on model deployment. Conduct experiments and run machine learning tests. Stay updated with the latest advancements in machine learning. Minimum Qualifications: 1+ years relevant experience and a Bachelor’s degree OR Any equivalent combination of education and experience. Familiarity with ML frameworks like TensorFlow or scikit-learn. Strong analytical and problem-solving skills. Additional Responsibilities & Preferred Qualifications: Responsibilities: Assist in developing and improving ML models to detect fraud across debit card transactions and crypto buy/sell/transfer activity. Preprocess, clean, and analyze large transactional, behavioral, and device datasets to support model development. Build and test features under the guidance of senior engineers, such as transaction velocity and behavioral signals. Train, evaluate, and compare models using appropriate fraud metrics (precision, recall, false positive rates). Support the deployment and maintenance of ML models in production, including pipeline updates and testing. Help monitor deployed models for performance and drift, and flag issues to the team. Collaborate with data scientists, engineers, and fraud operations partners to understand fraud patterns and business needs. Write clean, well-tested code and contribute to model documentation. Qualifications: 1+ years of relevant experience (internships, co-ops, or academic projects count) and a Bachelor’s degree OR any equivalent combination of education and experience. Familiarity with ML frameworks like TensorFlow, PyTorch, or scikit-learn. Proficiency in Python and SQL. Foundational understanding of machine learning concepts, statistics, and model evaluation. Preferred Qualifications: Internship or project experience in fraud detection, risk, anomaly detection, or payments. Exposure to cloud platforms (AWS, Azure, GCP) and big data tools such as Spark. Familiarity with gradient-boosted models (XGBoost, LightGBM) and transformer architecture. Experience with version control (Git) and software engineering fundamentals. Master’s degree in Computer Science, Machine Learning, Statistics, or a related field. Subsidiary: PayPal Travel Percent: 0 PayPal does not charge candidates any fees for courses, applications, resume reviews, interviews, background checks, or onboarding. When making an application directly, we will never ask you to share passwords, one-time passcodes (OTP), or verification codes. Any such request is a red flag and likely part of a scam. All communication regarding your application will come from official PayPal email domains. If you suspect fraudulent activity, please report it immediately. To learn more about how to identify and avoid recruitment fraud please visit https://careers.pypl.com/contact-us. For the majority of employees, PayPal's balanced hybrid work model offers 3 days in the office for effective in-person collaboration and 2 days at your choice of either the PayPal office or your home workspace, ensuring that you equally have the benefits and conveniences of both locations. Our Benefits: At PayPal, we’re committed to building an equitable and inclusive global economy. And we can’t do this without our most important asset-you. That’s why we offer comprehensive, choice-based programs, to support all aspects of personal wellbeing—physical, emotional, and financial—delivering meaningful value where it matters most. We strive to create a flexible, balanced work culture with a holistic approach to benefits, including generous paid time off, healthcare coverage for you and your family, and resources to create financial security and support your mental health. Who We Are: Click Here to learn more about our culture and community. Commitment to Diversity and Inclusion PayPal provides equal employment opportunity (EEO) to all persons regardless of age, color, national origin, citizenship status, physical or mental disability, race, religion, creed, gender, sex, pregnancy, sexual orientation, gender identity and/or expression, genetic information, marital status, status with regard to public assistance, veteran status, or any other characteristic protected by federal, state, or local law. In addition, PayPal will provide reasonable accommodations for qualified individuals with disabilities. If you are unable to submit an application because of incompatible assistive technology or a disability, please contact us at paypalglobaltalentacquisition@paypal.com. Belonging at PayPal: Our employees are central to advancing our mission, and we strive to create an environment where everyone can do their best work with a sense of purpose and belonging. Belonging at PayPal means creating a workplace with a sense of acceptance and security where all employees feel included and valued. We are proud to have a diverse workforce reflective of the merchants, consumers, and communities that we serve, and we continue to take tangible actions to cultivate inclusivity and belonging at PayPal. Any general requests for consideration of your skills, please Join our Talent Community. We know the confidence gap and imposter syndrome can get in the way of meeting spectacular candidates. Please don’t hesitate to apply.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "92% Core Match",
-        "gap_percentage": "8% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For PayPal's Machine Learning Engineer, Fraud (Crypto & Debit Card): Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "skill_match_rate": 0.83,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Machine+Learning+Engineer%2C+Fraud+PayPal&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/machine-learning-engineer-fraud-jobs-in-india?k=Machine+Learning+Engineer%2C+Fraud+PayPal",
-          "Indeed India": "https://in.indeed.com/jobs?q=Machine+Learning+Engineer%2C+Fraud+PayPal&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Machine+Learning+Engineer%2C+Fraud+PayPal&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-machine-learning-engineer-fraud-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/machine-learning-engineer-fraud-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Machine+Learning+Engineer%2C+Fraud+PayPal"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Machine+Learning+Engineer%2C+Fraud&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Machine+Learning+Engineer%2C+Fraud+PayPal",
-          "Cutshort": "https://cutshort.io/jobs?query=Machine+Learning+Engineer%2C+Fraud",
-          "Hirist": "https://www.hirist.tech/search?keyword=Machine+Learning+Engineer%2C+Fraud&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Machine+Learning+Engineer%2C+Fraud"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/machine-learning-engineer-fraud-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Machine+Learning+Engineer%2C+Fraud",
-          "LetsIntern": "https://www.letsintern.com/internships/machine-learning-engineer-fraud-internships",
-          "Apna": "https://apna.co/jobs?q=Machine+Learning+Engineer%2C+Fraud"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Machine+Learning+Engineer%2C+Fraud",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-machine-learning-engineer-fraud-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Machine+Learning+Engineer%2C+Fraud",
-          "Remotive": "https://remotive.com/remote-jobs?search=Machine+Learning+Engineer%2C+Fraud",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Machine+Learning+Engineer%2C+Fraud",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=PayPal+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "role_type": "ai engineer internship",
       "role_category": "ml engineering",
       "seniority": "intern",
@@ -4445,11 +2564,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-20T17:17:41Z",
       "posted_at_source": "published_at",
-      "hours_ago": 49.9444,
+      "hours_ago": 50.8016,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1782330",
       "direct_job_url": "https://unstop.com/internships/1782330",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+The+AI+Signal&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+The+AI+Signal&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/ai-engineer-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1782330",
       "source_type": "Unstop",
@@ -4587,7 +2706,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-20T17:01:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 50.2203,
+      "hours_ago": 51.0774,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-user-research-intern-at-sarvam-4492810296",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-user-research-intern-at-sarvam-4492810296",
@@ -4702,266 +2821,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "data analyst",
-      "role_category": "Data Science",
-      "seniority": "junior",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [
-        "analytical_skills",
-        "data_analytics",
-        "statistics",
-        "communication",
-        "data_modeling",
-        "excel",
-        "sql",
-        "power_bi",
-        "tableau"
-      ],
-      "nice_to_have": [
-        "python",
-        "r",
-        "education",
-        "edtech",
-        "training_programs",
-        "revit_bim"
-      ],
-      "domain": "education technology",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Analyst",
-      "company": "Skill Beings",
-      "location": "New Delhi, Delhi, India",
-      "score": 0.855,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-20T14:03:33Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 53.18,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-skill-beings-4492504167",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-skill-beings-4492504167",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-skill-beings-4492504167",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-skill-beings-4492504167",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "statistics",
-        "communication",
-        "data_modeling",
-        "excel",
-        "sql",
-        "power_bi"
-      ],
-      "missing_skills": [
-        "analytical_skills",
-        "data_analytics",
-        "tableau"
-      ],
-      "description": "Company Description Skill Beings offers a Professional Revit & BIM Certificate Program designed to build practical, industry-relevant skills in digital design and building information modeling. The organization focuses on structured, competency-based training that helps learners ...",
-      "raw_description": "Company Description Skill Beings offers a Professional Revit & BIM Certificate Program designed to build practical, industry-relevant skills in digital design and building information modeling. The organization focuses on structured, competency-based training that helps learners become job-ready for roles in data-driven design and construction workflows. Course content is developed with input from industry practitioners to ensure alignment with current tools, standards, and methodologies. Skill Beings emphasizes flexible learning and applied projects, making it a strong environment for data-oriented professionals who want to work at the intersection of technology and the built environment. Role Description The Data Analyst at Skill Beings is a full-time, remote role responsible for collecting, cleaning, and analyzing data related to program performance, learner outcomes, and operational efficiency. This role includes building dashboards and reports, interpreting trends, and translating data into actionable insights for academic, product, and marketing teams. The Data Analyst will partner with stakeholders to define metrics, design experiments, and optimize processes based on evidence. Day-to-day activities involve working with datasets, performing statistical analyses, supporting data modeling initiatives, and presenting findings in clear, accessible formats to both technical and non-technical audiences. Qualifications Candidates should possess strong Analytical Skills and proficiency in Data Analytics for interpreting complex datasets and generating insights. Candidates should possess solid Statistics knowledge to perform quantitative analysis, hypothesis testing, and measure program impact. Candidates should possess effective Communication skills to present findings clearly and collaborate with cross-functional teams. Candidates should possess Data Modeling capabilities to design, structure, and maintain data models that support reporting and decision-making. Bachelor’s degree in Data Science, Statistics, Mathematics, Computer Science, Engineering, or a related field, or equivalent practical experience. Experience with data tools such as Excel, SQL, and at least one analytics or visualization platform (e.g., Power BI, Tableau, or similar). Familiarity with a programming language used for data analysis (e.g., Python or R) is beneficial. Ability to work independently in a remote environment, manage multiple tasks, and maintain high attention to detail. Interest in education, EdTech, or training programs such as Revit & BIM is a plus.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Skill Beings's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.67,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Skill+Beings&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Skill+Beings",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Skill+Beings&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Skill+Beings&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Skill+Beings"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Skill+Beings",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Skill+Beings+careers"
-      }
-    },
-    {
-      "role_type": "data analyst",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [
-        "marathi_language",
-        "data_analysis"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Analyst (Marathi Language Required)",
-      "company": "Peroptyx",
-      "location": "India",
-      "score": 0.581,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-20T13:02:30Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 54.1975,
-      "relative_time": "2 days ago",
-      "url": "https://unstop.com/jobs/1782452",
-      "direct_job_url": "https://unstop.com/jobs/1782452",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Peroptyx&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://unstop.com/jobs/1782452",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [
-        "marathi_language",
-        "data_analysis"
-      ],
-      "description": "Data Analyst (Marathi Language Required) at Peroptyx in India. Active hiring opportunity on Unstop (Deadline: 2026-11-27).",
-      "raw_description": "Data Analyst (Marathi Language Required) at Peroptyx in India. Active hiring opportunity on Unstop (Deadline: 2026-11-27).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-11-27T15:57:23+05:30",
-      "end_date": "2026-11-27T15:57:23+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Peroptyx's Data Analyst (Marathi Language Required): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "skill_match_rate": 0.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Peroptyx&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Peroptyx",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Peroptyx&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Peroptyx&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Peroptyx"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Peroptyx",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Peroptyx+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "title": "Data Science Intern",
       "company": "Talent to Job",
       "location": "India",
@@ -4972,7 +2831,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-20T12:45:58Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 54.4731,
+      "hours_ago": 55.3302,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-at-talent-to-job-4492925104",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-at-talent-to-job-4492925104",
@@ -5122,11 +2981,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "9",
       "posted_at": "2026-11-20T12:19:27Z",
       "posted_at_source": "published_at",
-      "hours_ago": 54.915,
+      "hours_ago": 55.7721,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1818333",
       "direct_job_url": "https://unstop.com/internships/1818333",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineer+Internship+Zenotalent&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineer+Internship+Zenotalent&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-engineer-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1818333",
       "source_type": "Unstop",
@@ -5215,163 +3074,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "associate product manager",
-      "role_category": "product",
-      "seniority": "associate",
-      "min_years_experience": 2,
-      "max_years_experience": 4,
-      "required_skills": [
-        "product_management",
-        "product_owner",
-        "problem_solving",
-        "data_analysis",
-        "sql",
-        "analytics_tools",
-        "user_story_creation",
-        "roadmap_management",
-        "cross_functional_collaboration",
-        "stakeholder_management",
-        "customer_insights",
-        "product_metrics",
-        "feature_performance_tracking",
-        "requirement_gathering",
-        "prd_writing",
-        "design_collaboration",
-        "engineering_collaboration",
-        "business_analysis"
-      ],
-      "nice_to_have": [
-        "ai_interest",
-        "emerging_technologies",
-        "automation",
-        "data_driven_mindset"
-      ],
-      "domain": "logistics",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Product Manager",
-      "company": "Shipway by Unicommerce",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.626,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-20T12:16:40Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 54.9614,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-shipway-by-unicommerce-4491918571",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-shipway-by-unicommerce-4491918571",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-shipway-by-unicommerce-4491918571",
-      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-shipway-by-unicommerce-4491918571",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "problem_solving",
-        "sql"
-      ],
-      "missing_skills": [
-        "product_management",
-        "product_owner",
-        "data_analysis",
-        "analytics_tools",
-        "user_story_creation",
-        "roadmap_management",
-        "cross_functional_collaboration",
-        "stakeholder_management",
-        "customer_insights",
-        "product_metrics",
-        "feature_performance_tracking",
-        "requirement_gathering",
-        "prd_writing",
-        "design_collaboration",
-        "engineering_collaboration",
-        "business_analysis"
-      ],
-      "description": "Associate Product Manager (APM) – Shipway Location: Gurugram Experience: 2–4 Years Function: Product Management About Shipway Shipway is a technology-driven shipping and logistics platform that helps e-commerce businesses streamline their shipping operations. From courier aggrega...",
-      "raw_description": "Associate Product Manager (APM) – Shipway Location: Gurugram Experience: 2–4 Years Function: Product Management About Shipway Shipway is a technology-driven shipping and logistics platform that helps e-commerce businesses streamline their shipping operations. From courier aggregation and intelligent courier allocation to shipment tracking, NDR management, returns automation and post-order customer experience, Shipway simplifies the complexities of e-commerce logistics. We are building solutions that help businesses improve delivery efficiency, reduce operational costs and create seamless post-purchase experiences for their customers. Role Overview We are looking for a driven and analytical Associate Product Manager to join the Shipway Product team. The role involves working closely with engineering, design, business and operations teams to build, improve and scale product capabilities. The ideal candidate should have strong problem-solving abilities, a data-driven mindset and the ability to translate complex business problems into simple, scalable product solutions. We are particularly interested in candidates who are curious about AI and emerging technologies and can identify opportunities to build smarter, more automated product experiences. Key Responsibilities Product Ownership: Own specific product features and modules end-to-end, from problem discovery and requirement gathering to development, launch and performance tracking. Problem Solving: Understand customer pain points, identify product gaps and translate business requirements into actionable product solutions. Product Execution: Work closely with engineering and design teams to define product requirements, write PRDs, create user stories and manage product development roadmaps. Data & Analytics: Use product metrics, SQL and analytical tools to track feature performance, identify trends and drive data-backed product decisions. Customer Insights: Engage with internal stakeholders, customers and business teams to understand user behaviour and continuously improve product experience. Cross-functional Collaboration: Coordinate with engineering, sales, customer success and operations teams to ensure successful",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Shipway by Unicommerce's Associate Product Manager: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "skill_match_rate": 0.11,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Shipway+by+Unicommerce&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-manager-jobs-in-india?k=Associate+Product+Manager+Shipway+by+Unicommerce",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+Shipway+by+Unicommerce&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+Shipway+by+Unicommerce&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+Shipway+by+Unicommerce"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+Shipway+by+Unicommerce",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Shipway+by+Unicommerce+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "role_type": "data science intern",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -5413,7 +3115,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-20T11:46:04Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 55.4714,
+      "hours_ago": 56.3285,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-science-intern-python-statistics-machine-learning-at-medinex-workforce-4492567778",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-intern-python-statistics-machine-learning-at-medinex-workforce-4492567778",
@@ -5526,714 +3228,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "AI/ML Engineer",
-      "role_category": "ML Engineering",
-      "seniority": "junior",
-      "min_years_experience": 1,
-      "max_years_experience": 2,
-      "required_skills": [
-        "python_programming",
-        "pandas",
-        "numpy",
-        "scikit_learn",
-        "tensorflow",
-        "pytorch",
-        "git_version_control",
-        "data_preprocessing",
-        "feature_engineering",
-        "model_selection",
-        "training",
-        "hyperparameter_tuning",
-        "performance_evaluation",
-        "docker_containerization",
-        "technical_documentation",
-        "reporting"
-      ],
-      "nice_to_have": [
-        "master's_degree",
-        "cloud_services",
-        "mlflow",
-        "kubeflow",
-        "published_project",
-        "time_series_forecasting",
-        "natural_language_processing",
-        "automated_testing",
-        "sql"
-      ],
-      "domain": "technology",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "AI/ML Engineer",
-      "company": "Zepcruit",
-      "location": "Pune Division, Maharashtra, India",
-      "score": 0.654,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-20T11:46:01Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 55.4722,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-at-zepcruit-4468357948",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-at-zepcruit-4468357948",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-at-zepcruit-4468357948",
-      "naukri_url": "https://www.naukri.com/ai-ml-engineer-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/ai-ml-engineer-at-zepcruit-4468357948",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "pandas",
-        "numpy",
-        "scikit_learn",
-        "tensorflow",
-        "pytorch"
-      ],
-      "missing_skills": [
-        "python_programming",
-        "git_version_control",
-        "data_preprocessing",
-        "feature_engineering",
-        "model_selection",
-        "training",
-        "hyperparameter_tuning",
-        "performance_evaluation",
-        "docker_containerization",
-        "technical_documentation",
-        "reporting"
-      ],
-      "description": "The AI/ML Engineer will design, develop, and validate machine learning models that support product features and internal analytics. Working closely with data engineers and product owners, the engineer translates business requirements into data pipelines, feature sets, and model p...",
-      "raw_description": "The AI/ML Engineer will design, develop, and validate machine learning models that support product features and internal analytics. Working closely with data engineers and product owners, the engineer translates business requirements into data pipelines, feature sets, and model prototypes. The role owns end-to-end model development for assigned use cases, including data preparation, algorithm selection, training, evaluation, and documentation. By monitoring model performance in production, the engineer helps identify drift and suggests improvements. This position requires independent execution of defined projects, clear communication of technical findings, and collaboration with cross‑functional teams to ensure models meet accuracy and reliability standards. Key Responsibilities Gather and clean structured and unstructured data sets required for model training, documenting data lineage and quality checks. Develop feature engineering pipelines using Python and pandas to create reproducible inputs for machine learning algorithms. Select, implement, and fine‑tune supervised learning models (e.g., regression, classification) with scikit-learn or TensorFlow, adhering to project constraints. Conduct systematic model evaluation, generating performance reports and visualizations for stakeholder review. Write reusable code modules and unit tests, maintaining version control with Git and following team coding standards. Deploy trained models to a staging environment using Docker containers and validate inference latency and resource usage. Monitor deployed models for performance decay, collect feedback, and propose retraining or parameter adjustments. Collaborate with product managers to translate business objectives into measurable model success criteria. Document model architecture, training procedures, and operational guidelines in the team's knowledge base. Required Qualifications Bachelor's degree in computer science, Electrical Engineering, Statistics, or a related quantitative field. 1 to 2 years of professional experience building and deploying machine learning models. Proficiency in Python programming, including libraries such as pandas, NumPy, and scikit-learn. Experience with at least one deep learning framework (TensorFlow or PyTorch). Demonstrated ability to write clear, maintainable code and use Git for version control. Strong analytical skills with the ability to interpret model results and communicate findings to non‑technical stakeholders. Required Skills Data preprocessing and feature engineering Model selection, training, and hyperparameter tuning Performance evaluation metrics (accuracy, precision, recall, AUC) Version control with Git Containerization basics using Docker Clear technical documentation and reporting Preferred Qualifications Master's degree in a quantitative discipline. Experience with cloud services for data storage or model hosting (e.g., AWS S3, Azure Blob). Exposure to MLOps tools such as MLflow or Kubeflow. Published project or paper demonstrating end‑to‑end machine learning workflow. Preferred Skills Time‑series forecasting techniques Natural language processing using spaCy or Hugging Face Transformers Automated testing of model pipelines Knowledge of SQL for data extraction",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Zepcruit's AI/ML Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "skill_match_rate": 0.31,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=AI%2FML+Engineer+Zepcruit&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/ai-ml-engineer-jobs-in-india?k=AI%2FML+Engineer+Zepcruit",
-          "Indeed India": "https://in.indeed.com/jobs?q=AI%2FML+Engineer+Zepcruit&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=AI%2FML+Engineer+Zepcruit&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-ai-ml-engineer-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/ai-ml-engineer-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=AI%2FML+Engineer+Zepcruit"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=AI%2FML+Engineer&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=AI%2FML+Engineer+Zepcruit",
-          "Cutshort": "https://cutshort.io/jobs?query=AI%2FML+Engineer",
-          "Hirist": "https://www.hirist.tech/search?keyword=AI%2FML+Engineer&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=AI%2FML+Engineer"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/ai-ml-engineer-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=AI%2FML+Engineer",
-          "LetsIntern": "https://www.letsintern.com/internships/ai-ml-engineer-internships",
-          "Apna": "https://apna.co/jobs?q=AI%2FML+Engineer"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=AI%2FML+Engineer",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-ai-ml-engineer-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=AI%2FML+Engineer",
-          "Remotive": "https://remotive.com/remote-jobs?search=AI%2FML+Engineer",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=AI%2FML+Engineer",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Zepcruit+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
-      "role_type": "data analyst",
-      "role_category": "Data Science",
-      "seniority": "junior",
-      "min_years_experience": 1,
-      "max_years_experience": 2,
-      "required_skills": [
-        "ms_office",
-        "sql",
-        "spark_sql",
-        "hiveql",
-        "unix_scripting",
-        "data_visualization",
-        "data_analysis",
-        "problem_solving",
-        "communication",
-        "attention_to_detail"
-      ],
-      "nice_to_have": [
-        "google_cloud_platform",
-        "bigquery",
-        "python"
-      ],
-      "domain": "financial services",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Analyst",
-      "company": "TransUnion",
-      "location": "Hyderabad, Telangana, India",
-      "score": 0.712,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-20T11:14:42Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 55.9942,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-transunion-4492569694",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-transunion-4492569694",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-transunion-4492569694",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-transunion-4492569694",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "problem_solving",
-        "communication"
-      ],
-      "missing_skills": [
-        "ms_office",
-        "spark_sql",
-        "hiveql",
-        "unix_scripting",
-        "data_visualization",
-        "data_analysis",
-        "attention_to_detail"
-      ],
-      "description": "TransUnion's Job Applicant Privacy Notice Team Overview At TransUnion, we strive to build an environment where our associates are in the driver’s seat of their professional development, while having access to help along the way. We encourage everyone to pursue passions and take o...",
-      "raw_description": "TransUnion's Job Applicant Privacy Notice Team Overview At TransUnion, we strive to build an environment where our associates are in the driver’s seat of their professional development, while having access to help along the way. We encourage everyone to pursue passions and take ownership of their careers. With the support of colleagues and mentors, our associates are given the tools needed to get where they want to go. Regardless of job titles, our associates have the opportunity to learn new things and be a leader every day. Come be a part of our team – you’ll work with great people, pioneering products and cutting-edge technology. Our team provides data analytics support to OneTru Identity Products and US Credit project(s). This is a hybrid position and involves regular performance of job responsibilities virtually as well as in-person at an assigned TU office location for a minimum of two days a week. Role Overview And Core Responsibilities Impact You’ll Make: This role reports directly to Analytics Manager and need to collaborate with Engineering and Product teams In the first 90 days, you'll need to understand the infrastructure, the environment that we operate in, data and the jargon to carry out the analyses effectively. Typical day-to-day role responsibilities include understanding the requirements, analyze thoroughly, prepare relevant stats/metrics and present to the Product team. Required Knowledge And Experiences What You’ll Bring: 1-2 years (preferably less than 2 years) of experience in MS Office, SQL, SparkSql, HiveQL, UNIX Scripting and commands and Data Visualization tool 1 -2 years of data analysis project experience in medium to high complexity projects Problem solving skills, strong communication skills (both verbal and written), attention to detail and willing to go the extra mile in delivering quality work on time Preferred Skills We’re also looking for the preferred skills below. Whether you are proficient or could use some brushing up, we’re happy to support your development in: Exposure to Google Cloud Platform (or any other Cloud platform), BigQuery and Python TransUnion Overview At TransUnion, we encourage and are committed to creating a real, positive impact and shared sense of purpose within our Workforce for Good , which empowers our people to grow, innovate and contribute to a better future for our communities and customers. We strive to build an environment where our associates are in the driver’s seat of their professional development— while having access to help along the way. We recognize that success comes when our associates thrive both professionally and personally; that’s why we prioritize work/life flexibility and offer resources for our teams across the globe to collaborate and drive excellence. Be a part of our Workforce for Good – you’ll work with great people, pioneering products and cutting-edge technology. TransUnion Job Title Analyst, Data Analysis",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For TransUnion's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.3,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+TransUnion&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+TransUnion",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+TransUnion&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+TransUnion&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+TransUnion"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+TransUnion",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=TransUnion+careers"
-      }
-    },
-    {
-      "role_type": "data analyst",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": 0,
-      "max_years_experience": 3,
-      "required_skills": [
-        "sql",
-        "excel",
-        "google_sheets",
-        "metabase",
-        "power_bi",
-        "tableau",
-        "looker_studio",
-        "python",
-        "r",
-        "data_analysis",
-        "data_visualization",
-        "reporting",
-        "dashboards",
-        "communication",
-        "curiosity",
-        "attention_to_detail",
-        "ownership"
-      ],
-      "nice_to_have": [
-        "product_analytics",
-        "marketing_analytics",
-        "funnels",
-        "cohorts",
-        "ab_tests",
-        "crm",
-        "lead_data",
-        "immigration",
-        "education",
-        "global_careers"
-      ],
-      "domain": "global talent mobility",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Analyst",
-      "company": "TerraTern",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.781,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-20T06:45:57Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 60.4733,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-terratern-4492564172",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-terratern-4492564172",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-terratern-4492564172",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-terratern-4492564172",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "excel",
-        "power_bi",
-        "python",
-        "r",
-        "communication"
-      ],
-      "missing_skills": [
-        "google_sheets",
-        "metabase",
-        "tableau",
-        "looker_studio",
-        "data_analysis",
-        "data_visualization",
-        "reporting",
-        "dashboards",
-        "curiosity",
-        "attention_to_detail",
-        "ownership"
-      ],
-      "description": "About The Job Department: Technology & Product Employment Type: Full-time About TerraTern TerraTern is one of India’s fastest-growing Global Talent Mobility startups, helping individuals navigate international relocation with confidence. We deliver end-to-end visa support, job se...",
-      "raw_description": "About The Job Department: Technology & Product Employment Type: Full-time About TerraTern TerraTern is one of India’s fastest-growing Global Talent Mobility startups, helping individuals navigate international relocation with confidence. We deliver end-to-end visa support, job search guidance, and mobility resources designed for global aspirants. Transparency, precision, and client trust are the foundation of everything we build. Role Overview We are looking for a Data Analyst who enjoys finding the story hidden in numbers. You will work with our product, tech, sales and marketing teams to turn raw data into clear answers that help us make better decisions. Freshers with good projects and a strong interest in data are welcome to apply. Key Responsibilities Pull and clean data from our databases and tools using SQL, so the numbers the team uses are correct. Build dashboards and regular reports that show how leads, users and products are doing. Study how users move through our website and product, and point out where they drop off and why. Answer questions from sales, marketing and product teams with clear, simple analysis. Track the results of campaigns and product changes, and tell us what worked and what did not. Spot unusual changes in the data early and flag them before they become a problem. Write short notes on how each report is built, so anyone on the team can understand and reuse it. Eligibility & Requirements 1 to 3 years of experience in data analysis, or a fresher with strong projects, internships or a good portfolio. Bachelor’s or Master’s degree in Statistics, Computer Science, Maths, Engineering or a related field. Good SQL skills and comfort with Excel or Google Sheets. Hands-on use of a dashboard tool such as Metabase, Power BI, Tableau or Looker Studio. Basic Python or R for cleaning and analysing data is a plus, not a must. Clear communication, and the ability to explain numbers to people who are not from a data background. Curiosity, attention to detail and a sense of ownership over your work. Nice to Have Experience with product or marketing analytics, such as funnels, cohorts or A/B tests. Experience working with CRM or lead data. Interest in immigration, education or global careers. Why Join TerraTern Impactful Work: Your analysis will shape real decisions that help people reach jobs and study options abroad. Professional Growth: Learn from the team and work on real business problems from day one. Entrepreneurial Culture: Share your ideas, test them and own the result. Collaborative Environment: Work closely with product, tech, sales and marketing in a team that likes to learn together. Skills: data analysis,sql,analgesia,data visualization,reporting,python,dashboards,excel",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "78% Core Match",
-        "gap_percentage": "22% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          }
-        ],
-        "bridge_roadmap": "For TerraTern's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.35,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+TerraTern&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+TerraTern",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+TerraTern&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+TerraTern&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+TerraTern"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+TerraTern",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=TerraTern+careers"
-      }
-    },
-    {
-      "role_type": "ai_engineer",
-      "role_category": "ml_engineering",
-      "seniority": "associate",
-      "domain": "it_services",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "analysis_method": "llm",
-      "analysis_model": "openai/gpt-oss-20b",
-      "analysis_cached": true,
-      "title": "Associate AI Engineer",
-      "company": "Blue Data Consulting & IT Services Pvt Ltd",
-      "location": "India",
-      "score": 0.798,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-20T06:44:33Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 60.4967,
-      "relative_time": "2 days ago",
-      "url": "https://unstop.com/jobs/1819596",
-      "direct_job_url": "https://unstop.com/jobs/1819596",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-      "naukri_url": "https://www.naukri.com/associate-ai-engineer-jobs-in-india",
-      "company_url": "https://unstop.com/jobs/1819596",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Associate AI Engineer at Blue Data Consulting & IT Services Pvt Ltd in India. Active hiring opportunity on Unstop (Deadline: 2026-12-03).",
-      "raw_description": "Associate AI Engineer at Blue Data Consulting & IT Services Pvt Ltd in India. Active hiring opportunity on Unstop (Deadline: 2026-12-03).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-12-03T00:00:00+05:30",
-      "end_date": "2026-12-03T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Blue Data Consulting & IT Services Pvt Ltd's Associate AI Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-ai-engineer-jobs-in-india?k=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-ai-engineer-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-ai-engineer-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+AI+Engineer&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+AI+Engineer+Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+AI+Engineer",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+AI+Engineer&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+AI+Engineer"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-ai-engineer-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+AI+Engineer",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-ai-engineer-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+AI+Engineer"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+AI+Engineer",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-ai-engineer-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+AI+Engineer",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+AI+Engineer",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+AI+Engineer",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Blue+Data+Consulting+%26+IT+Services+Pvt+Ltd+careers"
-      }
-    },
-    {
-      "role_type": "Associate Product Designer",
-      "role_category": "Product",
-      "seniority": "associate",
-      "min_years_experience": 1,
-      "max_years_experience": 3,
-      "required_skills": [
-        "figma",
-        "design_systems",
-        "dashboard_design",
-        "ai_experience_design",
-        "wireframing",
-        "prototyping",
-        "data_visualization",
-        "user_flow_design",
-        "high_fidelity_design",
-        "e_commerce_domain",
-        "dense_data_handling",
-        "complex_workflows"
-      ],
-      "nice_to_have": [
-        "ai_tools_prototyping",
-        "html_css",
-        "react",
-        "tailwind",
-        "shadcn_ui",
-        "micro_interactions",
-        "b2b_saas_ai_startup_experience",
-        "analytics_ecommerce_marketplace_tools"
-      ],
-      "domain": "ecommerce",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Product Designer (B2B SaaS and AI)",
-      "company": "Mark8 IQ",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.586,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-20T05:16:40Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 61.9614,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-designer-b2b-saas-and-ai-at-mark8-iq-4491611580",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-designer-b2b-saas-and-ai-at-mark8-iq-4491611580",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-designer-b2b-saas-and-ai-at-mark8-iq-4491611580",
-      "naukri_url": "https://www.naukri.com/associate-product-designer-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-designer-b2b-saas-and-ai-at-mark8-iq-4491611580",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [
-        "figma",
-        "design_systems",
-        "dashboard_design",
-        "ai_experience_design",
-        "wireframing",
-        "prototyping",
-        "data_visualization",
-        "user_flow_design",
-        "high_fidelity_design",
-        "e_commerce_domain",
-        "dense_data_handling",
-        "complex_workflows"
-      ],
-      "description": "About Mark8 IQ Running an e-commerce brand today means juggling seven marketplaces, a dozen dashboards and numbers that never match. Mark8 IQ fixes that. We are building an AI-powered platform that gives e-commerce brands one clear view of their business, with AI agents that help...",
-      "raw_description": "About Mark8 IQ Running an e-commerce brand today means juggling seven marketplaces, a dozen dashboards and numbers that never match. Mark8 IQ fixes that. We are building an AI-powered platform that gives e-commerce brands one clear view of their business, with AI agents that help them act on it. We work with some of the best brands in the industry, partner with The Foundry and Dentsu, and are now expanding into the UAE. We’re a young team, and we believe great design is what turns powerful technology into something people love to use. About the Role We’re looking for an Associate Product Designer who loves complex products. You’ll design the dashboards, workflows and AI experiences that e-commerce teams use every day to run their business. You’ll work directly with our Design Lead, product managers and developers. If you enjoy untangling dense data, building clean components and designing how people work with AI, this role is for you. What You’ll Do Design dashboards and data-heavy screens: tables, filters, charts and multi-step workflows Design AI experiences: an AI assistant that answers differently for an analyst, a manager and a CXO, and AI agents users can set up, monitor and trust Build and maintain our design system across six products: components, variants, tokens and documentation Turn complex requirements into user flows, wireframes and high-fidelity screens, covering empty, loading and error states Prototype ideas quickly in Figma and with AI tools Hand off designs to developers and check that the final build matches Learn the e-commerce domain deeply: ads, inventory, returns and marketplace data What We’re Looking For A B.Des or equivalent degree in design (mandatory) 1 to 3 years of full-time experience in product, UI or UX design Experience working on B2B SaaS, dashboard or enterprise products A portfolio with at least one B2B SaaS or dashboard case study, showing your process, not just final screens At least one AI project in your portfolio: a chat assistant, copilot, agent flow or AI feature, whether shipped or self-initiated Hands-on design system work: components, variants, Auto Layout and tokens Patience with complexity. You enjoy working through dense data and long workflows until they feel simple Fluency in Figma Bonus Points Experience at a B2B SaaS or AI startup Work on analytics, e-commerce or marketplace tools Prototyping with AI tools like Cursor, Claude, Lovable or Figma Make A basic understanding of HTML, CSS, React, Tailwind or shadcn/ui Experience with micro-interactions What This Role Isn’t Not a senior, lead or managerial role, and not for anyone with more than 3 years of full-time experience Not consumer app, landing page or marketing design. If you’d rather design Dribbble shots than dense dashboards, this isn’t the right fit Not a role where AI does the thinking. We use AI to move faster, but the judgment has to be yours Why Join Us Learn directly from the Design Lead, with regular feedback on your work Design AI agents and assistants at the frontier of e-commerce technology Help build a design system from the ground up, across six products Your work ships to e-commerce brands in India and the UAE A young team that genuinely values design and the process behind it Laptop provided, health insurance, PF, Fun Fridays and annual events How to Apply Apply with your CV and put your portfolio link at the top. Your portfolio must include at least one B2B SaaS or AI case study. Applications without one will not be shortlisted.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Mark8 IQ's Associate Product Designer (B2B SaaS and AI): Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "skill_match_rate": 0.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Designer+Mark8+IQ&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-designer-jobs-in-india?k=Associate+Product+Designer+Mark8+IQ",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Designer+Mark8+IQ&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Designer+Mark8+IQ&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-designer-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-designer-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Designer+Mark8+IQ"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Designer&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Designer+Mark8+IQ",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Designer",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Designer&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Designer"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-designer-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Designer",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-designer-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Designer"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Designer",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-designer-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Designer",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Designer",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Designer",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Mark8+IQ+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "role_type": "data analyst",
       "role_category": "data engineering adjacent",
       "seniority": "junior",
@@ -6272,7 +3266,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-20T04:16:42Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 62.9608,
+      "hours_ago": 63.818,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-time-hack-consulting-4492541445",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-time-hack-consulting-4492541445",
@@ -6422,7 +3416,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "6",
       "posted_at": "2026-11-20T03:46:00Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 63.4725,
+      "hours_ago": 64.3296,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/hr-analytics-fresher-at-scouto-ai-4492536637",
       "direct_job_url": "https://in.linkedin.com/jobs/view/hr-analytics-fresher-at-scouto-ai-4492536637",
@@ -6527,468 +3521,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "data analyst",
-      "role_category": "Decision Science",
-      "seniority": "junior",
-      "min_years_experience": 0,
-      "max_years_experience": 3,
-      "required_skills": [
-        "advanced_excel",
-        "sql",
-        "analytical_reasoning",
-        "ai_tools_for_analytics",
-        "business_sense",
-        "ownership_and_detail"
-      ],
-      "nice_to_have": [
-        "google_apps_script",
-        "mongodb_aggregation",
-        "metabase",
-        "procurement_experience",
-        "logistics_experience"
-      ],
-      "domain": "logistics",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Executive – Data Analyst (Ops Strategy)",
-      "company": "RentoMojo",
-      "location": "Noida, Uttar Pradesh, India",
-      "score": 0.696,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-20T03:34:37Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 63.6622,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/executive-%E2%80%93-data-analyst-ops-strategy-at-rentomojo-4492543363",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/executive-%E2%80%93-data-analyst-ops-strategy-at-rentomojo-4492543363",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/executive-%E2%80%93-data-analyst-ops-strategy-at-rentomojo-4492543363",
-      "naukri_url": "https://www.naukri.com/executive-data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/executive-%E2%80%93-data-analyst-ops-strategy-at-rentomojo-4492543363",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "sql"
-      ],
-      "missing_skills": [
-        "advanced_excel",
-        "analytical_reasoning",
-        "ai_tools_for_analytics",
-        "business_sense",
-        "ownership_and_detail"
-      ],
-      "description": "About The Role We are looking for a Data Analyst Executive to sit at the centre of how operations performs and what it costs. From last-mile delivery and warehousing to fleet and vendor management, you will build the reporting and analysis that tells us what is working, what is s...",
-      "raw_description": "About The Role We are looking for a Data Analyst Executive to sit at the centre of how operations performs and what it costs. From last-mile delivery and warehousing to fleet and vendor management, you will build the reporting and analysis that tells us what is working, what is slipping, and where money is leaking. This is not a passive reporting role. You will own recurring dashboards, dig into performance and cost deviations, and build the analysis that supports network, vendor, and process decisions. Key Responsibilities Operational Performance Analytics Own daily and weekly dashboards across delivery performance, TAT/SLA adherence, cancellations, and warehouse throughput. Investigate deviations — late dispatches, failed tasks, out-of-stock incidents, vehicle idling — and identify root causes. Track productivity and utilisation across manpower, fleet, and warehouse capacity. Cost & Unit Economics Track cost per delivery, cost per trip, cost per item handled, and city-level cost-to-serve. Maintain month-on-month cost dashboards by city, cost head, and vendor with clear variance commentary. Reconcile PO vs. GRN vs. invoice; audit vendor billing against rate cards and escalate deviations. Identify cost leakages — idle capacity, empty return trips, excess deployment — and size the savings. Ops Strategy & Projects Build business cases for network and vendor decisions: in-house vs. 3PL, fleet mix, warehouse footprint, route restructuring. Support demand and capacity planning with volume trends and forecasting inputs. Run what-if analysis before rollout and measure impact after; support pilots and process improvement projects end to end. Automation & Reporting Hygiene Automate recurring MIS using scripting or scheduled queries. Use AI tools (ChatGPT, Claude, and similar) to speed up script writing, query building, and data cleaning — with validation owned by you, not the tool. Maintain metric definitions and data quality checks so numbers stay consistent across teams. Stakeholder Management Partner with city ops, fleet, warehouse, procurement, and finance to align on definitions, targets, and cut-offs. Present reviews to leadership in a decision-ready format — insight first, method second. Must-Have Skills Advanced Excel / Google Sheets — can build a reporting workbook or cost model from scratch. SQL — joins, aggregations, window functions, CTEs; comfortable with large transactional tables. Analytical reasoning — can decompose a number into its drivers and explain what actually moved. AI tools for analytics — uses ChatGPT, Claude, or similar to accelerate analysis, and validates every output before it reaches a report. Business sense — connects a metric to the operational decision behind it. Ownership and detail — reconciles before publishing; treats an unexplained variance as their problem to close. Good-to-Have Skills Google Apps Script (or equivalent) for report automation and trigger-based workflows. MongoDB aggregation pipelines and Metabase or a similar query/dashboard layer. Exposure to procurement / P2P flows — PO, GRN, invoicing, cost heads. Prior experience in logistics, e-commerce, supply chain, or rental/subscription operations. Qualifications Bachelor's degree in Engineering, Statistics, Mathematics, Economics, Commerce, or a related quantitative field. 0–3 years in data analytics, MIS, business analysis, or operations strategy. Freshers with strong SQL and spreadsheet skills are encouraged to apply. Why Join Us Direct line of sight into how operational decisions get made; your analysis reaches decision-makers the same week. Autonomy to build the reporting stack from first principles. Steep learning curve across supply chain, fleet, warehousing, procurement, and commercial negotiation. Skills: dashboards,data,operations,analytics",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For RentoMojo's Executive – Data Analyst (Ops Strategy): Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.17,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Executive+%E2%80%93+Data+Analyst+RentoMojo&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/executive-data-analyst-jobs-in-india?k=Executive+%E2%80%93+Data+Analyst+RentoMojo",
-          "Indeed India": "https://in.indeed.com/jobs?q=Executive+%E2%80%93+Data+Analyst+RentoMojo&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Executive+%E2%80%93+Data+Analyst+RentoMojo&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-executive-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/executive-data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Executive+%E2%80%93+Data+Analyst+RentoMojo"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Executive+%E2%80%93+Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Executive+%E2%80%93+Data+Analyst+RentoMojo",
-          "Cutshort": "https://cutshort.io/jobs?query=Executive+%E2%80%93+Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Executive+%E2%80%93+Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Executive+%E2%80%93+Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/executive-data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Executive+%E2%80%93+Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/executive-data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Executive+%E2%80%93+Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Executive+%E2%80%93+Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-executive-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Executive+%E2%80%93+Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Executive+%E2%80%93+Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Executive+%E2%80%93+Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=RentoMojo+careers"
-      }
-    },
-    {
-      "role_type": "associate product manager",
-      "role_category": "Product",
-      "seniority": "associate",
-      "min_years_experience": 2,
-      "max_years_experience": 4,
-      "required_skills": [
-        "product_management",
-        "retail_consumer_product_management",
-        "marketplace_product_management",
-        "analytical_skills",
-        "data_driven_decision_making",
-        "communication",
-        "stakeholder_management",
-        "problem_simplification",
-        "customer_experience_design",
-        "ambiguity_tolerance",
-        "fast_moving_environment",
-        "ownership",
-        "roadmap_management",
-        "metrics_analysis",
-        "experimentation",
-        "outcome_measurement"
-      ],
-      "nice_to_have": [
-        "startup_experience",
-        "side_project_experience",
-        "entrepreneurial_mindset"
-      ],
-      "domain": "retail consumer products",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Associate Product Manager - Travel",
-      "company": "Nuclei",
-      "location": "Bengaluru East, Karnataka, India",
-      "score": 0.628,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-20T01:22:33Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 65.8633,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-manager-travel-at-nuclei-4492529396",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-travel-at-nuclei-4492529396",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-manager-travel-at-nuclei-4492529396",
-      "naukri_url": "https://www.naukri.com/associate-product-manager-travel-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-manager-travel-at-nuclei-4492529396",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "communication",
-        "experimentation"
-      ],
-      "missing_skills": [
-        "product_management",
-        "retail_consumer_product_management",
-        "marketplace_product_management",
-        "analytical_skills",
-        "data_driven_decision_making",
-        "stakeholder_management",
-        "problem_simplification",
-        "customer_experience_design",
-        "ambiguity_tolerance",
-        "fast_moving_environment",
-        "ownership",
-        "roadmap_management",
-        "metrics_analysis",
-        "outcome_measurement"
-      ],
-      "description": "About Nuclei Nuclei’s vision is to build a well-respected global product company. We build products that help enterprises deepen customer engagement and relationships through value-added services. We are bootstrapped and profitable. We think global, build for the long term, and w...",
-      "raw_description": "About Nuclei Nuclei’s vision is to build a well-respected global product company. We build products that help enterprises deepen customer engagement and relationships through value-added services. We are bootstrapped and profitable. We think global, build for the long term, and want to change how the world sees India: not as a back-office destination, but as a product destination. About The Role We are building consumer products used by millions of retail customers across global markets, including Europe and the Middle East. You will own a product category end to end, from identifying the customer problem to launch, and then keep improving it through data, experiments and customer feedback. This role doesn’t end at launch. This is a permanent work from home and a remote role. What You’ll Do Own a product category and its roadmap, metrics and outcomes Own product initiatives from discovery and problem definition through launch and post-launch optimization. Work closely with engineering, design, business, and external partners to deliver high-quality product experiences. Translate customer problems and business opportunities into clear product requirements and PRDs. Define priorities, manage execution, and ensure timely delivery of product initiatives. Analyze user behavior, funnel metrics, customer feedback, and business performance to identify opportunities for improvement. Design, prioritize, and execute product-led growth initiatives to improve acquisition, conversion, engagement, repeat usage, and retention. Run experiments, measure outcomes, and iterate rapidly based on customer insights and data. Coordinate with integration partners to ensure reliable and scalable customer experiences. Continuously refine the product based on user feedback, analytics, and evolving business needs. What We’re Looking For 2 to 4 years of product management experience building retail consumer or marketplace products Strong analytical skills and comfort making decisions with data Excellent communication and stakeholder management, including with external clients Ability to simplify complex problems into intuitive customer experiences Comfort with ambiguity and fast-moving environments A strong sense of ownership: you treat the product as your own and act without waiting to be asked Nice to have A builder mindset outside your day job, such as founding or joining an early-stage startup, or building a side project or business of your own. Life at Nuclei Profitable company with a team-first culture and 25% team ownership Permanently remote: work from anywhere Unlimited leaves 5-day week, with Friday second halves reserved for learning and development Book club, hackathons, chess club and expert talks Nuclei championship with year-round house-based competition",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Nuclei's Associate Product Manager - Travel: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.12,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+-+Travel+Nuclei&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-manager-travel-jobs-in-india?k=Associate+Product+Manager+-+Travel+Nuclei",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+-+Travel+Nuclei&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+-+Travel+Nuclei&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-travel-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-travel-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+-+Travel+Nuclei"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager+-+Travel&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+-+Travel+Nuclei",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager+-+Travel",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager+-+Travel&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager+-+Travel"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-travel-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager+-+Travel",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-travel-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager+-+Travel"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager+-+Travel",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-travel-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager+-+Travel",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager+-+Travel",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager+-+Travel",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Nuclei+careers"
-      }
-    },
-    {
-      "role_type": "project_coordinator",
-      "role_category": "Strategy / Programs",
-      "seniority": "junior",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [
-        "project_management",
-        "agile",
-        "waterfall",
-        "critical_chain",
-        "earned_value",
-        "dynamic_modeling",
-        "multi_constraint_analysis",
-        "ms_project",
-        "oracle",
-        "risk_analysis",
-        "pm_bok",
-        "program_management",
-        "portfolio_management",
-        "estimation",
-        "planning",
-        "tracking",
-        "risk_assessment",
-        "negotiation",
-        "communication",
-        "decision_making",
-        "presentation",
-        "microsoft_office",
-        "facilitation",
-        "influencing",
-        "teamwork",
-        "problem_solving",
-        "customer_focus",
-        "time_management",
-        "organizational_skills"
-      ],
-      "nice_to_have": [
-        "project_management_certification"
-      ],
-      "domain": "other",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Project Coordinator",
-      "company": "Vertex Inc.",
-      "location": "Itanagar, Arunachal Pradesh, India",
-      "score": 0.66,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-20T00:22:35Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 66.8628,
-      "relative_time": "2 days ago",
-      "url": "https://in.linkedin.com/jobs/view/project-coordinator-at-vertex-inc-4492529237",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/project-coordinator-at-vertex-inc-4492529237",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/project-coordinator-at-vertex-inc-4492529237",
-      "naukri_url": "https://www.naukri.com/project-coordinator-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/project-coordinator-at-vertex-inc-4492529237",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "communication",
-        "problem_solving",
-        "time_management"
-      ],
-      "missing_skills": [
-        "project_management",
-        "agile",
-        "waterfall",
-        "critical_chain",
-        "earned_value",
-        "dynamic_modeling",
-        "multi_constraint_analysis",
-        "ms_project",
-        "oracle",
-        "risk_analysis",
-        "pm_bok",
-        "program_management",
-        "portfolio_management",
-        "estimation",
-        "planning",
-        "tracking",
-        "risk_assessment",
-        "negotiation",
-        "decision_making",
-        "presentation",
-        "microsoft_office",
-        "facilitation",
-        "influencing",
-        "teamwork",
-        "customer_focus",
-        "organizational_skills"
-      ],
-      "description": "Job Description: Job Summary This position is responsible for following industry-standard project management practices in planning and managing the development and execution of projects. Key responsibilities include: Create the project scope and charter. Define project guidelines...",
-      "raw_description": "Job Description: Job Summary This position is responsible for following industry-standard project management practices in planning and managing the development and execution of projects. Key responsibilities include: Create the project scope and charter. Define project guidelines. Obtain project sponsor approvals. Estimate tasks and determine dependencies. Coordinate the resources necessary to successfully complete the project. Essential Job Functions And Responsibilities Responsible for managing all aspects of multiple projects. Prioritizes work efforts on projects within a program. Defines/refines the project scope, estimates project cost, further defines project deliverables, and develops/updates the charter to be submitted for approval. Determines staffing requirements and is able to recommend project teams consisting of representatives from multiple entities filling necessary roles for the project based on a staffing estimate and schedule. Provides work direction and leadership to assigned projects, including scheduling, assignment of work, and review of project efforts. Ensures that all project members understand their role, expected deliverables, and task completion dates. Proactively resolves dependencies with other projects and activities. Monitors project milestones, critical dates, and dependencies to identify potential issues that could jeopardize the project schedule. Implements strategies to resolve schedule issues. Keeps management aware of major issues. Proactively manages any effects on related projects. Assesses variances from the project plan, analyzes them, gathers metrics, and develops and implements changes as necessary to ensure that the project remains within specified: Scope, including the original charter and all approved changes. Budget, including time and cost. Quality objectives. Manages effects on related sub-projects and projects with dependencies. Reports status to the project sponsor during project execution. At project completion, informs the project sponsor of the deliverables and confirms their acceptance. Evaluates internal customer satisfaction levels and develops strategies to increase satisfaction when needed. Develops and enhances productive working relationships with project sponsors, vendors, and key entities, which may include making project team changes. Occasional travel may be required. Participates in other projects or duties. Supervisory Responsibilities N/A Knowledge, Skills And Abilities Basic knowledge of facilitation, influencing, and project management methods. Basic ability to apply project management: Methodologies, such as Agile, Waterfall, Iterative, and Critical Chain. Concepts, such as Earned Value, Dynamic Modeling, and Multi-constraint Analysis. Tools, such as MS Project, Oracle, and @Risk. Basic knowledge of project planning, execution, controlling, and closing as described in the Project Management Body of Knowledge (PMBOK), with beginning-to-working knowledge of program and portfolio methods. Basic ability to estimate using multiple methods and to plan and track complex, technical, and dependent tasks. Performs work under direct supervision. Handles basic issues and problems and refers more complex issues to higher-level staff. Ability to work as part of a team. Ability to build collaborative relationships. Strong problem-solving, risk assessment, and negotiation skills. Advanced interpersonal skills with the ability to serve as the primary liaison for internal customers. Good time management, communication, decision-making, presentation skills across all levels of leadership, and organizational skills. Results-oriented and customer-focused with good interpersonal skills. Proficiency in Microsoft Office packages. Sufficient knowledge of business communications, including telephone, voicemail, and email, as well as the operation of office equipment such as photocopiers, scanners, and fax machines. EDUCATION AND TRAINING Bachelor’s degree or equivalent required. Zero (0) plus years of Project Management experience. Project Management certification preferred. Or an equivalent combination of education and/or experience. COMMENTS: The above statements are intended to describe the general nature and level of work being performed by individuals in this position. Other functions may be assigned, and management retains the right to add or change the duties at any time. Vertex Values: Together We Win We're building a team of people who are passionate about making an impact for our customers and committed to how that impact is achieved. Our values define the behaviors, mindset, and culture that make Vertex a great place to grow and do meaningful work. Play to Win or We Don't Play — If we choose to do something, we're choosing to do it because we plan to win. That mindset raises our bar on product quality, customer outcomes, and how we show up for one another. Work As a Team, Putting the Customer At the Core — Our customers are our true north. Whatever your role, ask: how will this help a customer succeed today? We earn trust through outcomes, not promises. Achieve Excellence With Integrity, Speed, and Agility — The market isn't slowing down. We'll move faster, adapt quickly, and never compromise on doing things the right way — for teammates, customers, and partners. Innovate Boldly With a Growth Mindset — Progress demands smart risk. We'll try new approaches, learn fast, and keep pushing the boundaries — especially where AI can remove friction and unlock value. Communicate with Care, Candor and Transparency — Honest, constructive conversations make us better. Let's speak plainly about what's working and what isn't and help each other improve. Pay Transparency Statement: Pay Basis: Monthly The expected base salary range for this role varies by location and is expressed in local currency. The posted range reflects the anticipated hiring range for successful candidates at the time of hire, based on relevant job‑related skills, experience, geographic location, and business needs. Base pay offered to new hires may vary within the posted range depending on individual qualifications and market considerations. The posted salary range reflects compensation at the time of hire. Employees may experience additional compensation growth over time through performance‑based increases, expanded responsibilities, role progression, or internal career opportunities, in accordance with company policies and local practices. In addition to base pay, this role may be eligible for other elements of Vertex’s total compensation package, which may include participation in the Vertex Bonus Plan (VOB), a role‑specific sales commission or bonus, and/or equity grants, where applicable. Learn more about Life at Vertex and connect with your recruiter for more details regarding Vertex's compensation and benefit programs. In all cases, compensation will comply with applicable local pay transparency and minimum wage requirements.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Vertex Inc.'s Project Coordinator: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "skill_match_rate": 0.1,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Project+Coordinator+Vertex+Inc.&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/project-coordinator-jobs-in-india?k=Project+Coordinator+Vertex+Inc.",
-          "Indeed India": "https://in.indeed.com/jobs?q=Project+Coordinator+Vertex+Inc.&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Project+Coordinator+Vertex+Inc.&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-project-coordinator-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/project-coordinator-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Project+Coordinator+Vertex+Inc."
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Project+Coordinator&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Project+Coordinator+Vertex+Inc.",
-          "Cutshort": "https://cutshort.io/jobs?query=Project+Coordinator",
-          "Hirist": "https://www.hirist.tech/search?keyword=Project+Coordinator&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Project+Coordinator"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/project-coordinator-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Project+Coordinator",
-          "LetsIntern": "https://www.letsintern.com/internships/project-coordinator-internships",
-          "Apna": "https://apna.co/jobs?q=Project+Coordinator"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Project+Coordinator",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-project-coordinator-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Project+Coordinator",
-          "Remotive": "https://remotive.com/remote-jobs?search=Project+Coordinator",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Project+Coordinator",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Vertex+Inc.+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "role_type": "data analyst intern",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -7031,7 +3563,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-19T21:14:46Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 69.9931,
+      "hours_ago": 70.8502,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-axentriax-by-elevate-labs-4491614819",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-axentriax-by-elevate-labs-4491614819",
@@ -7185,7 +3717,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-19T18:45:57Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 72.4733,
+      "hours_ago": 73.3305,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-management-intern-at-indmoney-4492488988",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-management-intern-at-indmoney-4492488988",
@@ -7302,118 +3834,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "standardized",
-      "role_category": "Data Engineering Adjacent",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Data Engineering Internship",
-      "company": "Springer Capital",
-      "location": "India",
-      "score": 0.802,
-      "tier": 9,
-      "category": "Data Engineering Adjacent",
-      "priority": "Optional",
-      "badge": "9",
-      "posted_at": "2026-11-19T16:39:45Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 74.5767,
-      "relative_time": "3 days ago",
-      "url": "https://unstop.com/internships/1816025",
-      "direct_job_url": "https://unstop.com/internships/1816025",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Internship+Springer+Capital&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-      "naukri_url": "https://www.naukri.com/data-engineering-internship-jobs-in-india",
-      "company_url": "https://unstop.com/internships/1816025",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": true,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Data Engineering Internship at Springer Capital in India. Active hiring opportunity on Unstop (Deadline: 2026-12-01).",
-      "raw_description": "Data Engineering Internship at Springer Capital in India. Active hiring opportunity on Unstop (Deadline: 2026-12-01).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-12-01T00:00:00+05:30",
-      "end_date": "2026-12-01T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "80% Core Match",
-        "gap_percentage": "20% Skill Gap",
-        "gaps": [
-          {
-            "skill": "dbt Transformations & Data Modeling",
-            "impact": "High Impact",
-            "category": "Analytics Engineering",
-            "action": "Design a Kimball star-schema dimensional model with dbt staging, intermediate, and mart SQL models."
-          },
-          {
-            "skill": "Workflow Orchestration (Airflow / Prefect)",
-            "impact": "High Impact",
-            "category": "Data Pipelines",
-            "action": "Write an Airflow DAG that orchestrates data extraction, transformation, and automated schema tests."
-          },
-          {
-            "skill": "Automated Data Quality & Schema Testing",
-            "impact": "Medium Impact",
-            "category": "Data Reliability",
-            "action": "Implement dbt-expectations or Great Expectations tests verifying uniqueness, nullability, and referential integrity."
-          }
-        ],
-        "bridge_roadmap": "For Springer Capital's Data Engineering Internship: Build a modular dbt-core repository transforming raw event streams into dimensional star schema marts with automated data quality schema tests.",
-        "interview_talk_track": "I treat data as a software product, writing tested, version-controlled SQL models in dbt with dimensional star schemas that serve reliable reporting."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Engineering+Internship+Springer+Capital&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-engineering-internship-jobs-in-india?k=Data+Engineering+Internship+Springer+Capital",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Engineering+Internship+Springer+Capital&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Engineering+Internship+Springer+Capital&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-engineering-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-engineering-internship-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Engineering+Internship+Springer+Capital"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Engineering+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Engineering+Internship+Springer+Capital",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Engineering+Internship",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Engineering+Internship&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Engineering+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-engineering-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Engineering+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/data-engineering-internship-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Engineering+Internship"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Engineering+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-engineering-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Engineering+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Engineering+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Engineering+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Springer+Capital+careers"
-      }
-    },
-    {
       "role_type": "healthcare data analyst intern",
       "role_category": "data science",
       "seniority": "intern",
@@ -7443,7 +3863,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-19T15:43:08Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 75.5203,
+      "hours_ago": 76.3774,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/healthcare-data-analyst-intern-at-milliman-india-4491604625",
       "direct_job_url": "https://in.linkedin.com/jobs/view/healthcare-data-analyst-intern-at-milliman-india-4491604625",
@@ -7546,27 +3966,51 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "standardized",
-      "role_category": "Strategy / Programs",
+      "role_type": "operations associate",
+      "role_category": "Other",
       "seniority": "associate",
       "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
+      "max_years_experience": 2,
+      "required_skills": [
+        "ai_prompt_engineering",
+        "automation",
+        "tool_building",
+        "workflow_design",
+        "record_keeping",
+        "reporting",
+        "client_relationship_management",
+        "vendor_management",
+        "operations_management",
+        "problem_solving",
+        "process_improvement",
+        "organization",
+        "adaptability",
+        "curiosity",
+        "agency",
+        "ai_usage"
+      ],
+      "nice_to_have": [
+        "operations_experience",
+        "client_facing_experience",
+        "tool_building_experience",
+        "fintech_interest",
+        "legal_tech_interest",
+        "ai_interest"
+      ],
+      "domain": "fintech",
+      "analysis_method": "llm",
       "analysis_cached": false,
       "title": "Operations Associate",
       "company": "Resollect",
       "location": "Mumbai, Maharashtra, India",
-      "score": 0.909,
+      "score": 0.651,
       "tier": 6,
       "category": "Strategy / Programs",
       "priority": "Primary",
       "badge": "6",
       "posted_at": "2026-11-19T13:22:35Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 77.8628,
+      "hours_ago": 78.7199,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/operations-associate-at-resollect-4492142204",
       "direct_job_url": "https://in.linkedin.com/jobs/view/operations-associate-at-resollect-4492142204",
@@ -7580,8 +4024,26 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "location_unverified": false,
       "is_fresher": true,
       "is_internship": true,
-      "matched_skills": [],
-      "missing_skills": [],
+      "matched_skills": [
+        "problem_solving"
+      ],
+      "missing_skills": [
+        "ai_prompt_engineering",
+        "automation",
+        "tool_building",
+        "workflow_design",
+        "record_keeping",
+        "reporting",
+        "client_relationship_management",
+        "vendor_management",
+        "operations_management",
+        "process_improvement",
+        "organization",
+        "adaptability",
+        "curiosity",
+        "agency",
+        "ai_usage"
+      ],
       "description": "About Us Resollect builds software that banks and asset reconstruction companies (ARCs, firms that take on loans that have stopped being repaid and work to recover them) use to manage loan recovery and the legal process around it. Recovering a loan can involve many parties, deadl...",
       "raw_description": "About Us Resollect builds software that banks and asset reconstruction companies (ARCs, firms that take on loans that have stopped being repaid and work to recover them) use to manage loan recovery and the legal process around it. Recovering a loan can involve many parties, deadlines and court steps, and our tools help lenders keep all of it organised and moving. Role: Operations Associate Apply here: https://helios.resollect.com/apply/operations-associate The Role This is a broad operations role at Resollect, where you'll help keep the company running day to day while making the work itself faster and smarter. You'll be the person our clients and vendors deal with, you'll own operational tasks from start to finish, and you'll use AI to take the repetitive work off everyone's plate. One day you're on calls and follow-ups keeping a client and a vendor moving in step, the next you're building a small automation so a weekly report puts itself together, and the day after you're refining the prompts behind one of our internal AI tools. We're big on AI here. When something needs doing, we reach for AI first, build our own tools and automate the boring parts, and in this role that's your everyday way of working. What You'll Do • Front client and vendor relationships: You'll be the main point of contact for clients and vendors, handling the calls, follow-ups and coordination that keep everyone moving. • Own operations end to end: Whatever needs doing to keep things running, you'll take it from start to finish rather than passing pieces along. • Automate the repetitive work: When a task is dull and keeps coming back, you'll use AI to automate it instead of grinding through it by hand. • Build your own tools and workflows: You'll put together small tools and workflows that make you and the rest of the team faster. • Write and refine prompts: You'll do hands-on prompt engineering for our internal AI tools, testing and improving prompts until they reliably do their job. • Keep records and reports in order: You'll maintain records and pull together reports so that nothing slips through the cracks. • Fix what's broken or slow: You'll spot where things are stuck or slow, then fix them yourself or build something that does. What We're Looking For • High agency: You figure things out on your own and act without waiting to be told what to do next. • AI-native: You already use AI every day and build with it, so reaching for it first is how you work, not something you'd need to learn here. • Extremely organised: You track everything, close loops and follow up, which matters when clients and vendors are counting on you to keep things moving. • Scrappy and adaptable: You're comfortable when the path isn't fully mapped out, and you'll work with what you have to get something done. • Low ego, high curiosity: You're happy to take on whatever task needs doing, and you want to understand how every part of the business works. Nice to Have (Not Required) • Operations or client-facing experience: A previous internship or job in operations, coordination or client-facing work will help you settle in quickly. • A record of building things: Side projects, automations or tools you've made yourself are something we'd love to see. • Interest in fintech, legal-tech or AI: Curiosity about fintech, legal-tech or bringing AI into traditional industries will make this work even more interesting for you. Why This Might Be Worth Your Time • See every part of a startup: In a small, founder-led team, you'll touch every part of how the company runs rather than one narrow corner of it. • Direct access to the founders: You'll work closely with founders who have deep expertise in this field, so your ideas go straight to the people who can act on them. • Room to grow: There's clear room to take on more responsibility as you show what you can do. • AI as the default: You'll be encouraged to build your own tools and automate the boring work, which is a rare chance to make AI central to how you work from the start. Where and When Full-time, working from our office in Marol, Mumbai, six days a week. This role is aimed at people graduating in 2026 or 2027, and up to about two years of experience is welcome too. If you're the kind of person who figures things out without being asked, reaches for AI before doing anything by hand, and never lets a follow-up slip, we'd love to hear from you, so please apply.",
       "contact_email": null,
@@ -7617,7 +4079,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "bridge_roadmap": "For Resollect's Operations Associate: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
         "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
       },
-      "skill_match_rate": 1.0,
+      "skill_match_rate": 0.06,
       "multi_source_urls": {
         "general_india": {
           "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Operations+Associate+Resollect&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
@@ -7655,120 +4117,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
           "Otta": "https://app.otta.com/jobs"
         },
         "direct_company_portal": "https://www.google.com/search?q=Resollect+careers"
-      }
-    },
-    {
-      "role_type": "data scientist",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "fintech",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Scientist - Professional I",
-      "company": "Fiserv",
-      "location": "Thane, Maharashtra, India",
-      "score": 0.861,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-19T13:16:42Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 77.9608,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-scientist-professional-i-at-fiserv-4492141608",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-professional-i-at-fiserv-4492141608",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-professional-i-at-fiserv-4492141608",
-      "naukri_url": "https://www.naukri.com/data-scientist-professional-i-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-scientist-professional-i-at-fiserv-4492141608",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "Calling all innovators – find your future at Fiserv. We’re Fiserv, a global leader in Fintech and payments, and we move money and information in a way that moves the world. We connect financial institutions, corporations, merchants, and consumers to one another millions of times ...",
-      "raw_description": "Calling all innovators – find your future at Fiserv. We’re Fiserv, a global leader in Fintech and payments, and we move money and information in a way that moves the world. We connect financial institutions, corporations, merchants, and consumers to one another millions of times a day – quickly, reliably, and securely. Any time you swipe your credit card, pay through a mobile app, or withdraw money from the bank, we’re involved. If you want to make an impact on a global scale, come make a difference at Fiserv. Job Title Data Scientist - Professional I TBD Thank You For Considering Employment With Fiserv. Please Apply using your legal name Complete the step-by-step profile and attach your resume (either is acceptable, both are preferable). Our Commitment To Diversity And Inclusion Fiserv is proud to be an Equal Opportunity Employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, national origin, gender, gender identity, sexual orientation, age, disability, protected veteran status, or any other category protected by law. Note To Agencies Fiserv does not accept resume submissions from agencies outside of existing agreements. Please do not send resumes to Fiserv associates. Fiserv is not responsible for any fees associated with unsolicited resume submissions. Warning About Fake Job Posts Please be aware of fraudulent job postings that are not affiliated with Fiserv. Fraudulent job postings may be used by cyber criminals to target your personally identifiable information and/or to steal money or financial information. Any communications from a Fiserv representative will come from a legitimate Fiserv email address.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "86% Core Match",
-        "gap_percentage": "14% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Fiserv's Data Scientist - Professional I: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
       },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+-+Professional+I+Fiserv&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-scientist-professional-i-jobs-in-india?k=Data+Scientist+-+Professional+I+Fiserv",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+-+Professional+I+Fiserv&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+-+Professional+I+Fiserv&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-professional-i-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-scientist-professional-i-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+-+Professional+I+Fiserv"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist+-+Professional+I&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+-+Professional+I+Fiserv",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist+-+Professional+I",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist+-+Professional+I&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist+-+Professional+I"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-scientist-professional-i-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist+-+Professional+I",
-          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-professional-i-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Scientist+-+Professional+I"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist+-+Professional+I",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-scientist-professional-i-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist+-+Professional+I",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist+-+Professional+I",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist+-+Professional+I",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Fiserv+careers"
-      }
+      "analysis_model": "openai/gpt-oss-20b"
     },
     {
       "role_type": "associate product manager",
@@ -7820,7 +4170,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-19T13:16:40Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 77.9614,
+      "hours_ago": 78.8185,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-product-manager-systems-thinking-at-jetbro-4492552814",
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-systems-thinking-at-jetbro-4492552814",
@@ -7942,7 +4292,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-19T12:30:43Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 78.7272,
+      "hours_ago": 79.5843,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-dexterz-technology-4492159229",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-at-dexterz-technology-4492159229",
@@ -8106,7 +4456,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-19T11:30:35Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 79.7294,
+      "hours_ago": 80.5866,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-product-manager-university-graduate-2027-start-at-google-4483016048",
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-university-graduate-2027-start-at-google-4483016048",
@@ -8253,7 +4603,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-19T09:22:33Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 81.8633,
+      "hours_ago": 82.7205,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/full-time-interns-product-growth-ops-design-jan-june-2027-ppo-track-at-voy-4492140251",
       "direct_job_url": "https://in.linkedin.com/jobs/view/full-time-interns-product-growth-ops-design-jan-june-2027-ppo-track-at-voy-4492140251",
@@ -8395,7 +4745,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-19T07:30:39Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 83.7283,
+      "hours_ago": 84.5855,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/junior-data-analyst-at-leadershipretros-4492408078",
       "direct_job_url": "https://in.linkedin.com/jobs/view/junior-data-analyst-at-leadershipretros-4492408078",
@@ -8494,490 +4844,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       }
     },
     {
-      "role_type": "associate product manager",
-      "role_category": "Product",
-      "seniority": "associate",
-      "min_years_experience": 1,
-      "max_years_experience": 3,
-      "required_skills": [
-        "product_management",
-        "data_analysis",
-        "user_research",
-        "experimentation",
-        "metrics_tracking",
-        "cross_functional_collaboration",
-        "stakeholder_management",
-        "project_management",
-        "analytical_skills",
-        "communication",
-        "remote_collaboration",
-        "bias_for_action",
-        "resourcefulness",
-        "learning_agility",
-        "problem_solving",
-        "product_strategy",
-        "roadmap_planning",
-        "customer_empathy",
-        "hypothesis_testing",
-        "ab_testing",
-        "data_driven_decision_making"
-      ],
-      "nice_to_have": [
-        "fintech_experience"
-      ],
-      "domain": "fintech",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Product Manager",
-      "company": "Branch International",
-      "location": "India",
-      "score": 0.647,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-19T06:22:33Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 84.8633,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-branch-international-4491363994",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-branch-international-4491363994",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-branch-international-4491363994",
-      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-branch-international-4491363994",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "experimentation",
-        "communication",
-        "problem_solving",
-        "ab_testing"
-      ],
-      "missing_skills": [
-        "product_management",
-        "data_analysis",
-        "user_research",
-        "metrics_tracking",
-        "cross_functional_collaboration",
-        "stakeholder_management",
-        "project_management",
-        "analytical_skills",
-        "remote_collaboration",
-        "bias_for_action",
-        "resourcefulness",
-        "learning_agility",
-        "product_strategy",
-        "roadmap_planning",
-        "customer_empathy",
-        "hypothesis_testing",
-        "data_driven_decision_making"
-      ],
-      "description": "About Branch Branch is a leading AI-powered lending fintech with 50M+ downloads across India and Africa. We use alternative data and machine learning to expand financial access for millions of people traditionally excluded from the formal financial system. Founded by the former C...",
-      "raw_description": "About Branch Branch is a leading AI-powered lending fintech with 50M+ downloads across India and Africa. We use alternative data and machine learning to expand financial access for millions of people traditionally excluded from the formal financial system. Founded by the former CEO of Kiva.org and backed by leading investors including Andreessen Horowitz, Visa, and the IFC, Branch combines mission-driven impact with world-class technology and scale. In India, Branch operates as a regulated digital lending institution and Middle Layer NBFC, building trusted and accessible financial products for millions of customers across the country. Our 250+ member India team is growing rapidly and works across technology, data science, risk, product, and operations to solve high-impact problems at scale. Certified as a Great Place to Work in 2025, Branch offers the opportunity to build meaningful careers while shaping the future of inclusive fintech in one of the world’s fastest-growing digital economies. About the role Branch launched its lending business in India in 2019 and has seen rapid adoption and growth. We are growing our product and engineering team in India. As part of the product team, you will work closely with our global engineering team (distributed across three continents) to strengthen the capabilities of our existing product and build out new products for Branch. As a company, we are passionate about our customers, fearless in the face of barriers, and driven by data. As a product-driven org, we value bottom-up innovation and decentralized decision-making. We believe the best ideas can come from anyone in the company, and we create an environment where everyone feels empowered to propose solutions to the challenges we face. As a Product Manager, you will help the team achieve its goals through deep product work and servant-style leadership. Responsibilities Obsess over the customer. Understand customer problems through data analysis, user research, and direct customer feedback. Turn ambiguity into clarity. Break complex business problems into clear product opportunities and actionable roadmaps. Build products people love. Define product requirements and partner closely with Engineering and Design to deliver high-quality solutions. Experiment relentlessly. Design experiments, analyze results, and use evidence—not opinions—to make product decisions. Own outcomes, not outputs. Track product performance through metrics, identify opportunities, and continuously improve customer and business outcomes. Win as one team. Collaborate with Risk, Operations, Data Science, Compliance, Design, and Engineering to solve customer problems together. Expand what's possible. Evaluate and manage third-party partnerships and integrations that accelerate our roadmap. Shape the future. Contribute to product strategy by identifying opportunities that create long-term value for our customers and the business. What Success Looks Like Within your first year, you'll likely have: Shipped multiple customer-facing product improvements. Independently owned one or more product initiatives. Designed and analyzed experiments that influenced roadmap decisions. Improved key business metrics such as conversion, activation, repayment, retention, or operational efficiency. Become a trusted partner to Engineering, Design, Risk, and Operations teams. About you You thrive in ambiguity. Demonstrated the ability to manage projects, bring clarity to ambiguous questions, and chart a path forward. You think in numbers. Top-notch analytical abilities. You can measure initiatives quantitatively, and you draw actionable insights to guide decisions. You elevate the team. You know that startups are a team sport. You listen to others, speak your mind, and ask the right questions. You are a great collaborator and teacher. Effective written communication skills and the ability to work with remote teams are essential. You never stop learning. You are eager to learn new skills, solve complex problems, and work closely with diverse teams, including Design and Engineering. You have a bias for action. You are resourceful. You know how to do more with less, and you've worked on lean teams that have had a large impact. You are not afraid of big challenges, and you do whatever it takes to get the job done. Additional Criteria 1 to 3 years of total experience Experience with Fintech industry would be good, but not a must-have Benefits of Joining Competitive salary and equity package Fast-paced, collaborative, and high-autonomy work culture Hybrid work setup designed for flexibility and work-life balance Fully paid group medical insurance and personal accident insurance Generous paid time off, plus company-declared public holidays Fully paid parental leave for fathers and non-birthing parents (12 weeks), in addition to 26 weeks of statutory maternity leave Monthly WFH stipend, along with a one-time home office setup budget $500 annual professional development budget Quarterly social meet-ups and sponsored monthly team lunches We’re looking for more than just qualifications -- if you’re unsure that you meet the criteria but identify with our vision of providing equal opportunity to everyone to access financial services, please do not hesitate to apply! Branch International is an Equal Opportunity Employer. The company does not and will not discriminate in employment on any basis prohibited by applicable law.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Branch International's Associate Product Manager: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.19,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Branch+International&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-manager-jobs-in-india?k=Associate+Product+Manager+Branch+International",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+Branch+International&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+Branch+International&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+Branch+International"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+Branch+International",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Branch+International+careers"
-      }
-    },
-    {
-      "role_type": "product manager",
-      "role_category": "Product",
-      "seniority": "associate",
-      "min_years_experience": 1,
-      "max_years_experience": null,
-      "required_skills": [
-        "customer_empathy",
-        "business_acumen",
-        "data_driven",
-        "ai",
-        "ml",
-        "model_training",
-        "model_deployment",
-        "model_evaluation",
-        "data_analysis",
-        "ab_testing",
-        "data_tools",
-        "sql",
-        "python",
-        "data_science_collaboration",
-        "product_roadmap",
-        "product_strategy",
-        "experimentation",
-        "data_narratives",
-        "cross_functional_communication",
-        "problem_solving",
-        "ownership",
-        "agile",
-        "backlog_management",
-        "prioritization",
-        "user_experience",
-        "personalization",
-        "automation",
-        "decision_making",
-        "technical_fluency",
-        "research",
-        "global_scans",
-        "data_visualization",
-        "evidence_based_decision_making",
-        "communication_skills",
-        "stakeholder_management",
-        "customer_obsession"
-      ],
-      "nice_to_have": [],
-      "domain": "telecommunications",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Product Manager",
-      "company": "Airtel Digital",
-      "location": "Gurugram, Haryana, India",
-      "score": 0.636,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-19T06:22:33Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 84.8633,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-airtel-digital-4491374623",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-airtel-digital-4491374623",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-airtel-digital-4491374623",
-      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-airtel-digital-4491374623",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "ab_testing",
-        "sql",
-        "python",
-        "experimentation",
-        "problem_solving"
-      ],
-      "missing_skills": [
-        "customer_empathy",
-        "business_acumen",
-        "data_driven",
-        "ai",
-        "ml",
-        "model_training",
-        "model_deployment",
-        "model_evaluation",
-        "data_analysis",
-        "data_tools",
-        "data_science_collaboration",
-        "product_roadmap",
-        "product_strategy",
-        "data_narratives",
-        "cross_functional_communication",
-        "ownership",
-        "agile",
-        "backlog_management",
-        "prioritization",
-        "user_experience",
-        "personalization",
-        "automation",
-        "decision_making",
-        "technical_fluency",
-        "research",
-        "global_scans",
-        "data_visualization",
-        "evidence_based_decision_making",
-        "communication_skills",
-        "stakeholder_management",
-        "customer_obsession"
-      ],
-      "description": "Airtel Digital is at the forefront of digital transformation, redefining how millions of customers experience telecom, content, and financial services. Our mission is to build scalable, AI-driven solutions that create seamless and personalized experiences for our users. If you ar...",
-      "raw_description": "Airtel Digital is at the forefront of digital transformation, redefining how millions of customers experience telecom, content, and financial services. Our mission is to build scalable, AI-driven solutions that create seamless and personalized experiences for our users. If you are passionate about solving complex problems, leveraging data, and implementing cutting-edge AI-driven solutions, we’d love to have you on board. Role Overview We are looking for a Product Manager with deep customer empathy, strong business acumen, and a data-driven mindset. You will own and drive AI-driven product initiatives that enhance customer experience, optimize business processes, and significant growth. This role requires a mix of strategic thinking, hands-on problem-solving, and technical fluency in AI/ML models. Key Responsibilities Customer-Centric Product Thinking You have a deep understanding of customer pain points and business challenges and be well versed with skills such as global scans and research, and data analysis. You champion customer empathy in every product decision and ensure AI-driven solutions enhance user experience. You are able to translate customer needs into product roadmaps, constantly ensuring and obsessing about business impact. Data Fluency & Experimentation You define, track, and analyze product KPIs using data tools and technology to drive key product decisions. You run A/B tests, interpret results, and iterate to improve customer experience and business impact. Leverage data to create compelling narratives that influence leadership and cross-functional teams. AI & Machine Learning Implementation You work closely with data scientists and engineers to build, train, and deploy AI/ML models that enhance user experience and business processes. Identify use cases where AI can drive automation, personalization, and decision-making improvements. Stay up-to-date with the latest advancements in AI/ML and apply best practices to solve business problems. Execution & Problem-Solving You own end-to-end execution of product initiatives with a high degree of ownership and attention to detail. Break down complex problems into actionable insights and work cross-functionally to drive solutions. You go deep into data, user feedback, and engineering architecture to identify root causes and drive meaningful improvements. Why Join Us? At Airtel Digital, you won’t just build products—you’ll shape the future of digital experiences for millions. Here’s why you should consider joining us: Work on high-impact, AI-driven solutions that directly touch over 400+ million customers across telecom, payments, entertainment, and enterprise services. Solve complex challenges that have real-world impact—from personalizing digital experiences to optimizing business operations using AI. Stay ahead of the curve with access to upskilling programs, conferences, and mentorship to fuel your professional growth. Experience a high-ownership culture where you have the freedom to take ideas from concept to execution. Collaborate with some of the sharpest problem solvers and innovators in the industry who are building worldclass digital products at scale. Work closely with Airtel’s senior leadership, including CXOs, as you drive high-impact AI and digital initiatives. Gain mentorship from industry veterans who have built and scaled some of the largest digital platforms. Who You Are Curious & Adaptable : You thrive in a fast-paced environment and continuously seek to learn new technologies and methodologies. High Ownership : You take initiative, dive deep into problems, and see things through to execution. AI-Savvy : You have hands-on experience with AI/ML applications and understand model training, deployment, and evaluation. Data-Driven & Analytical : You have a strong ability to interpret data, run experiments, and make evidencebased decisions. Rockstar in Communication : Drive clarity across cross functional teams on how business and customer problems are being solved and ensure that concerns from CFTs (including experience, growth, analytics, finance) are addressed. Customer Obsessed : You deeply understand customer pain points and prioritize solving them effectively. Qualifications Proven track record of building products with a mix of business, design, and technical considerations. Excellent communication skills to collaborate with engineering, design, and leadership teams. 1+years of product management experience, preferably in AI/ML-driven products. Strong analytical skills with experience using SQL, Python, or other data tools. Experience working with data science teams, defining ML product requirements, and deploying AI-driven features. Effective prioritization framework to focus on the right features and capability to ship. Demonstrated experience in running agile squads, create, prioritize and execute a backlog to incrementally deliver value to the customer.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Airtel Digital's Associate Product Manager: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "skill_match_rate": 0.14,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Airtel+Digital&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-manager-jobs-in-india?k=Associate+Product+Manager+Airtel+Digital",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+Airtel+Digital&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+Airtel+Digital&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+Airtel+Digital"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+Airtel+Digital",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Airtel+Digital+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
-      "role_type": "data scientist",
-      "role_category": "Data Science",
-      "seniority": "junior",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [
-        "python",
-        "sql",
-        "statistics",
-        "probability",
-        "machine_learning",
-        "deep_learning",
-        "predictive_analytics",
-        "data_mining",
-        "data_wrangling",
-        "data_visualization"
-      ],
-      "nice_to_have": [],
-      "domain": "software engineering",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Science",
-      "company": "Ascendion",
-      "location": "Pune Division, Maharashtra, India",
-      "score": 0.766,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-19T04:22:36Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 86.8625,
-      "relative_time": "3 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-science-at-ascendion-4491849794",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-science-at-ascendion-4491849794",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-science-at-ascendion-4491849794",
-      "naukri_url": "https://www.naukri.com/data-science-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-science-at-ascendion-4491849794",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "python",
-        "sql",
-        "statistics",
-        "machine_learning",
-        "deep_learning"
-      ],
-      "missing_skills": [
-        "probability",
-        "predictive_analytics",
-        "data_mining",
-        "data_wrangling",
-        "data_visualization"
-      ],
-      "description": "About Ascendion Ascendion is a leader in AI-Native platform driven software engineering company that underwrites outcomes, helping businesses innovate faster, smarter, and with greater impact. We partner with Global 2000 clients across North America, UK, Europe, and APAC to solve...",
-      "raw_description": "About Ascendion Ascendion is a leader in AI-Native platform driven software engineering company that underwrites outcomes, helping businesses innovate faster, smarter, and with greater impact. We partner with Global 2000 clients across North America, UK, Europe, and APAC to solve complex challenges in data, experience design, software product engineering, and workforce transformation. Powered by expert engineers, thousands of AI agents, and our Engineering to the Power of AI™ (EngineeringAI) method, we deliver measurable outcomes that build trust, unlock value, and accelerate growth. Learn more at ascendion.com Ascendion | Engineering to elevate life We have a culture built on opportunity, inclusion, and a spirit of partnership. Come, change the world with us: Build the coolest tech for world's leading brands Solve complex problems – and learn new skills Experience the power of transforming digital engineering for Fortune 500 clients Master your craft with leading training programs and hands-on experience Experience a community of change makers! Join a culture of high-performing innovators with endless ideas and a passion for tech. Our culture is the fabric of our company, and it is what makes us unique and diverse. The way we share ideas, learning, experiences, successes, and joy allows everyone to be their best at Ascendion. About The Role We are looking for a Data Scientist to join our team. In this role, you will develop and implement statistical models and machine learning algorithms to solve business problems. Job Title: Data Scientist Key Responsibilities Develop and implement statistical models and machine learning algorithms to solve business problems. Build predictive models using supervised and unsupervised learning techniques. Develop, train, test, and optimize machine learning models. Work with structured and unstructured data. Minimum Qualifications Collect, clean, process, and analyze large datasets to identify trends, patterns, and business insights. Apply Python, SQL, and data visualization tools for data analysis and reporting. Python SQL Statistics and Probability Machine Learning Deep Learning Predictive Analytics Data Mining Data Wrangling Location: Pune Want to change the world? Let us know. Tell us about your experiences, education, and ambitions. Bring your knowledge, unique viewpoint, and creativity to the table. Let's talk!",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "74% Core Match",
-        "gap_percentage": "26% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Ascendion's Data Science: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.5,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Science+Ascendion&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-science-jobs-in-india?k=Data+Science+Ascendion",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Science+Ascendion&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Science+Ascendion&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-science-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-science-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Science+Ascendion"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Science&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Science+Ascendion",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Science",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Science&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Science"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-science-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Science",
-          "LetsIntern": "https://www.letsintern.com/internships/data-science-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Science"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Science",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-science-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Science",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Science",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Science",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Ascendion+careers"
-      }
-    },
-    {
       "role_type": "data engineer",
       "role_category": "data engineering adjacent",
       "seniority": "junior",
@@ -9023,7 +4889,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "9",
       "posted_at": "2026-11-18T18:24:44Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 96.8269,
+      "hours_ago": 97.6841,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-engineer-at-hp-4492077009",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-engineer-at-hp-4492077009",
@@ -9134,139 +5000,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "data analyst",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [
-        "data_collection",
-        "data_organization",
-        "data_accuracy",
-        "reporting",
-        "trend_analysis",
-        "record_keeping",
-        "file_management",
-        "business_reporting",
-        "deadline_management"
-      ],
-      "nice_to_have": [],
-      "domain": "business",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Data Analyst",
-      "company": "Aspirantspro IT Solutions LLC",
-      "location": "India",
-      "score": 0.581,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-18T17:56:23Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 97.2994,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-aspirantspro-it-solutions-llc-4492057683",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-aspirantspro-it-solutions-llc-4492057683",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-aspirantspro-it-solutions-llc-4492057683",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-aspirantspro-it-solutions-llc-4492057683",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [
-        "data_collection",
-        "data_organization",
-        "data_accuracy",
-        "reporting",
-        "trend_analysis",
-        "record_keeping",
-        "file_management",
-        "business_reporting",
-        "deadline_management"
-      ],
-      "description": "Collect, organize, and maintain company data. Review data to ensure accuracy and completeness. Prepare daily, weekly, and monthly reports. Identify trends and patterns in business information. Maintain records and update information regularly. Support different departments with d...",
-      "raw_description": "Collect, organize, and maintain company data. Review data to ensure accuracy and completeness. Prepare daily, weekly, and monthly reports. Identify trends and patterns in business information. Maintain records and update information regularly. Support different departments with data-related tasks. Review information and identify missing or incorrect details. Organize files, documents, and reports. Assist management with reporting and business decisions. Complete assigned tasks while maintaining accuracy and meeting deadlines.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "86% Core Match",
-        "gap_percentage": "14% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Aspirantspro IT Solutions LLC's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "skill_match_rate": 0.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Aspirantspro+IT+Solutions+LLC&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+Aspirantspro+IT+Solutions+LLC",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+Aspirantspro+IT+Solutions+LLC&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+Aspirantspro+IT+Solutions+LLC&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+Aspirantspro+IT+Solutions+LLC"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+Aspirantspro+IT+Solutions+LLC",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Aspirantspro+IT+Solutions+LLC+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "role_type": "data analyst internship",
       "role_category": "data science",
       "seniority": "intern",
@@ -9292,11 +5025,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T17:50:58Z",
       "posted_at_source": "published_at",
-      "hours_ago": 97.3897,
+      "hours_ago": 98.2468,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1817655",
       "direct_job_url": "https://unstop.com/internships/1817655",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Delta+Mind+Research&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Delta+Mind+Research&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-analyst-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1817655",
       "source_type": "Unstop",
@@ -9411,11 +5144,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "6",
       "posted_at": "2026-11-18T17:50:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 97.4058,
+      "hours_ago": 98.263,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1812980",
       "direct_job_url": "https://unstop.com/internships/1812980",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Marketing+Analyst+Internship+Radora&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Marketing+Analyst+Internship+Radora&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/marketing-analyst-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1812980",
       "source_type": "Unstop",
@@ -9504,126 +5237,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "standardized",
-      "role_category": "ML Engineering",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [
-        "python",
-        "machine_learning",
-        "llms",
-        "agentic_ai",
-        "optimization",
-        "experimentation"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "fallback",
-      "analysis_cached": false,
-      "title": "Software Engineer Intern – AI/ML & Agentic AI (Fully Remote) | AI-Native Specialist Talent Cloud | Global Tech Talent Venture",
-      "company": "SkillsCapital",
-      "location": "India",
-      "score": 0.908,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-18T17:30:44Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 97.7269,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/software-engineer-intern-%E2%80%93-ai-ml-agentic-ai-fully-remote-ai-native-specialist-talent-cloud-global-tech-talent-venture-at-skillscapital-4491830484",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/software-engineer-intern-%E2%80%93-ai-ml-agentic-ai-fully-remote-ai-native-specialist-talent-cloud-global-tech-talent-venture-at-skillscapital-4491830484",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/software-engineer-intern-%E2%80%93-ai-ml-agentic-ai-fully-remote-ai-native-specialist-talent-cloud-global-tech-talent-venture-at-skillscapital-4491830484",
-      "naukri_url": "https://www.naukri.com/software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/software-engineer-intern-%E2%80%93-ai-ml-agentic-ai-fully-remote-ai-native-specialist-talent-cloud-global-tech-talent-venture-at-skillscapital-4491830484",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": true,
-      "matched_skills": [
-        "python",
-        "machine_learning",
-        "llms",
-        "agentic_ai",
-        "optimization",
-        "experimentation"
-      ],
-      "missing_skills": [],
-      "description": "Are you passionate about AI, LLMs and intelligent systems? Do you want to build production-grade AI products instead of classroom projects and toy models? Do you want to build enterprise AI systems that solve complex real-world problems and power the next generation of intelligen...",
-      "raw_description": "Are you passionate about AI, LLMs and intelligent systems? Do you want to build production-grade AI products instead of classroom projects and toy models? Do you want to build enterprise AI systems that solve complex real-world problems and power the next generation of intelligent applications? At SkillsCapital , you will work on AI products used by real customers across the U.S., U.K., Europe and the Middle East — helping organizations identify, evaluate and access exceptional specialist technology talent. This isn't another internship where you'll spend months cleaning datasets or building isolated models. You'll work alongside experienced architects, engineers and product leaders to build the next generation of Agentic AI Recruiters, Talent Intelligence Systems, Custom LLMs, Semantic Search Engines and AI-powered Decision Intelligence Platforms. If you're looking for an opportunity where your code ships to production, your ideas matter and your engineering skills grow through solving real problems, we'd love to meet you. About SkillsCapital We are building an AI-Native Specialist Talent Cloud. Our vision is to make the world's top 1% of specialist technology talent accessible to organizations on demand. Enterprises increasingly need exceptional engineering capabilities, deep domain expertise and highly specialized technology professionals to build, modernize and scale their businesses. Yet identifying, evaluating and accessing genuinely exceptional talent remains difficult, fragmented and time-consuming. SkillsCapital is changing this. We enable enterprises, technology companies and consulting organizations to access deeply vetted, evidence-backed, Day-1 performance-ready technology professionals across scarce, niche and hard-to-find technology domains. Our ecosystem brings together: AI-Native Talent Intelligence: Intelligent systems that understand, evaluate and match specialist technology talent. Agentic AI Recruiters & Talent Partners: AI agents capable of reasoning, planning and executing complex talent acquisition workflows. Custom Domain LLMs: Domain-specialized language models designed to understand enterprise technology skills, experience and requirements. Deep Semantic Matching: Advanced semantic search, retrieval and multi-dimensional matching systems. DeepVet 360™ – Proprietary Deep Experience Validation: An agentic intelligence framework for evaluating technical depth, domain expertise, engineering capabilities and professional experience. Delivery Readiness Intelligence: Systems that help evaluate candidate suitability, availability and readiness for specific opportunities. Enterprise Talent Cloud: A deeply vetted ecosystem of specialist technology professionals across multiple technology domains. Our platform powers hiring across specialized technology domains, including SAP, Salesforce, Microsoft, Oracle, Cloud & DevOps, Data & AI, Cybersecurity, Software Engineering and Enterprise Architecture. We are not building another recruitment software product. We are building the intelligence layer that enables organizations to make faster, smarter and more confident talent decisions. Where We Are Today We have moved well beyond the idea and early experimentation stages. Our core technology platform, talent intelligence infrastructure, deep vetting capabilities and delivery ecosystem are already built, operational and serving clients across international markets. In our journey so far, we have: Established strong product-market fit, with live customers and commercial traction across international markets. Built and operationalized our AI-native talent intelligence platform, proprietary deep vetting infrastructure and intelligent matching capabilities. Bootstrapped the business to profitability with zero external funding. Built a business with a multi-million-dollar annual revenue run rate . We are now entering our next phase of growth: 20 → 100 and beyond. Our AI platform continues to evolve through real-world customer requirements, specialist talent data, evaluation signals and hiring outcomes. Leadership & Founding Team SkillsCapital is built by a highly experienced leadership team bringing together 120+ years of combined professional experience across global technology companies, enterprise software, consulting, high-growth product businesses and entrepreneurship. Our leadership team brings experience from organizations including IBM, Accenture, PwC, Deloitte, Hewlett Packard and Trilogy, with academic backgrounds spanning leading global institutions including Wharton, London Business School, University of Pennsylvania, IIT Delhi, IIIT Hyderabad and BITS Pilani. You will work alongside experienced architects, technology leaders and product professionals, gaining exposure to real-world AI engineering, enterprise software architecture and production systems. Why This Internship Is Different Unlike traditional AI/ML internships, you'll work on complex, real-world enterprise AI products rather than isolated academic experiments or proof-of-concept models. You'll contribute to systems such as: Agentic AI Recruiters and multi-agent intelligence workflows. Custom LLMs and domain-specific AI systems. Talent Intelligence and Precision Matching Engines. Semantic Search and Retrieval Systems. Multi-dimensional Candidate Evaluation and Ranking Engines. AI-powered Resume and Job Description Intelligence. RAG-based Enterprise Knowledge and Retrieval Systems. AI Interviewing, Assessment and Evaluation Platforms. Recommendation and Decision Intelligence Engines. AI Copilots for recruiters and hiring managers. Your work won't simply sit in a notebook or remain a prototype. You will contribute to software that is integrated into our platform, deployed into production and used to solve real customer problems. You will have the opportunity to understand how modern AI systems are architected, engineered, evaluated, deployed and continuously improved in a real enterprise environment. What You Will Build Depending on your interests, strengths and project requirements, you will contribute across multiple engineering and AI initiatives. Agentic AI Engineering: Build intelligent agents, multi-agent workflows, autonomous reasoning systems, AI planning, orchestration and intelligent workflow automation. LLM Engineering & RAG: Work on prompt engineering, retrieval-augmented generation pipelines, vector search, structured AI outputs, domain-specific LLM applications and evaluation frameworks. Machine Learning & Intelligence: Develop semantic similarity models, recommendation systems, ranking algorithms, talent scoring models, search relevance optimization and classification models. Data & Knowledge Engineering: Build systems for resume and job description intelligence, entity extraction, embeddings, feature engineering and enterprise knowledge graphs. AI Platform & Backend Engineering: Develop Python services, APIs, AI microservices, data pipelines, model integrations and scalable backend components. Production Engineering: Work on model deployment, system integration, performance optimization, testing, monitoring and reliability. You will be expected to understand the underlying engineering problems, experiment with approaches, implement solutions and contribute to production-ready systems. What You'll Learn Over the course of your internship, you'll gain practical experience in: Production AI Engineering. Enterprise LLM Systems. Agentic AI Architecture and Multi-Agent Systems. Retrieval-Augmented Generation and Semantic Search. Machine Learning and Recommendation Systems. AI Product Development and Evaluation. Scalable Backend and Platform Engineering. Model Deployment and MLOps Fundamentals. Enterprise Software Architecture. Product Thinking and Startup Execution. Few internships offer the opportunity to work across such a broad AI engineering stack while contributing to a live enterprise technology platform. Capability, Ownership & Results Matter We value engineering ability, problem-solving, learning agility and the ability to build working solutions over academic credentials or years of experience. This opportunity is open to exceptional students and fresh graduates. What matters is your ability to understand technical problems, write quality code, experiment intelligently and contribute to building reliable software. We value: Capability over pedigree. Engineering depth over superficial familiarity. Working solutions over theoretical knowledge. Ownership over supervision. Builders over spectators. Compensation & Growth Opportunity We believe in providing an environment where talented engineers can learn, build and grow through meaningful work. The opportunity includes: Fixed monthly internship stipend Opportunity to work on production-grade AI systems and real enterprise applications. Direct mentorship from experienced architects, engineers, founders and product leaders. High ownership, meaningful technical challenges and exposure to modern AI engineering practices. Flexible, remote-first working environment. Potential conversion into a full-time Software Engineer role based on performance, capability and business requirements. For exceptional performers, this can be the foundation for a career in AI Engineering, Machine Learning, Agentic AI, LLM Engineering or advanced software development. Internship Details Duration: 3–6 months. Mode: Remote (India). Engagement: Full-time preferred; substantial part-time availability may be considered. Stipend: Monthly fixed stipend Opportunity: Potential conversion into a full-time engineering role based on performance. How to Apply Send your application to careers@skillscapital.io Please include: Your updated resume. Your GitHub profile. Your portfolio or links to personal and technical projects, if available. Your expected internship start date. A short introductory note explaining why this opportunity excites you and what you've built that you're most proud of. SkillsCapital | AI-Native Specialist Talent Cloud Access the Top 1% of Specialist Tech Talent.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "91% Core Match",
-        "gap_percentage": "9% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For SkillsCapital's Software Engineer Intern – AI/ML & Agentic AI (Fully Remote) | AI-Native Specialist Talent Cloud | Global Tech Talent Venture: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture+SkillsCapital&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-jobs-in-india?k=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture+SkillsCapital",
-          "Indeed India": "https://in.indeed.com/jobs?q=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture+SkillsCapital&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture+SkillsCapital&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture+SkillsCapital"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture+SkillsCapital",
-          "Cutshort": "https://cutshort.io/jobs?query=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture",
-          "Hirist": "https://www.hirist.tech/search?keyword=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture",
-          "LetsIntern": "https://www.letsintern.com/internships/software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-internships",
-          "Apna": "https://apna.co/jobs?q=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-software-engineer-intern-ai-ml-agentic-ai-ai-native-specialist-talent-cloud-global-tech-talent-venture-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture",
-          "Remotive": "https://remotive.com/remote-jobs?search=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Software+Engineer+Intern+%E2%80%93+AI%2FML+%26+Agentic+AI+%7C+AI-Native+Specialist+Talent+Cloud+%7C+Global+Tech+Talent+Venture",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=SkillsCapital+careers"
-      }
-    },
-    {
       "role_type": "data analyst",
       "role_category": "Other",
       "seniority": "intern",
@@ -9657,7 +5270,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T17:30:43Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 97.7272,
+      "hours_ago": 98.5843,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/healthcare-data-analyst-intern-at-medinex-workforce-4491868005",
       "direct_job_url": "https://in.linkedin.com/jobs/view/healthcare-data-analyst-intern-at-medinex-workforce-4491868005",
@@ -9798,7 +5411,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-18T16:57:05Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 98.2878,
+      "hours_ago": 99.1449,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/product-management-intern-%E2%80%93-ai-analytics-at-g-p-4491315252",
       "direct_job_url": "https://in.linkedin.com/jobs/view/product-management-intern-%E2%80%93-ai-analytics-at-g-p-4491315252",
@@ -9902,158 +5515,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "data analyst",
-      "role_category": "decision science",
-      "seniority": "junior",
-      "min_years_experience": 0,
-      "max_years_experience": 3,
-      "required_skills": [
-        "microsoft_office",
-        "excel",
-        "power_point",
-        "power_bi",
-        "sql",
-        "data_analysis",
-        "data_visualization",
-        "presentation_development",
-        "analytical_mindset",
-        "attention_to_detail",
-        "communication_skills",
-        "organization",
-        "time_management",
-        "autonomous_work",
-        "database_structures",
-        "data_querying"
-      ],
-      "nice_to_have": [
-        "business_intelligence",
-        "predictive_analysis",
-        "advanced_microsoft_office"
-      ],
-      "domain": "professional services",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "SMI Data Analyst  1",
-      "company": "RSM US LLP",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.724,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-18T16:56:23Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 98.2994,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/smi-data-analyst-1-at-rsm-us-llp-4491866085",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/smi-data-analyst-1-at-rsm-us-llp-4491866085",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/smi-data-analyst-1-at-rsm-us-llp-4491866085",
-      "naukri_url": "https://www.naukri.com/smi-data-analyst-1-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/smi-data-analyst-1-at-rsm-us-llp-4491866085",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "excel",
-        "power_bi",
-        "sql",
-        "time_management"
-      ],
-      "missing_skills": [
-        "microsoft_office",
-        "power_point",
-        "data_analysis",
-        "data_visualization",
-        "presentation_development",
-        "analytical_mindset",
-        "attention_to_detail",
-        "communication_skills",
-        "organization",
-        "autonomous_work",
-        "database_structures",
-        "data_querying"
-      ],
-      "description": "We are the leading provider of professional services to the middle market globally, our purpose is to instill confidence in a world of change, empowering our clients and people to realize their full potential. Our exceptional people are the key to our unrivaled, inclusive culture...",
-      "raw_description": "We are the leading provider of professional services to the middle market globally, our purpose is to instill confidence in a world of change, empowering our clients and people to realize their full potential. Our exceptional people are the key to our unrivaled, inclusive culture and talent experience and our ability to be compelling to our clients. You’ll find an environment that inspires and empowers you to thrive both personally and professionally. There’s no one like you and that’s why there’s nowhere like RSM. Focused on supporting the creation of Enterprise level analysis, insights, and reporting on Sales and Marketing performance through high-quality presentation development and foundational data analysis. This role partners closely with senior analysts to translate data into clear, executive ready deliverables that enable leadership decision making. The position also supports deeper dive analysis by extracting and interpreting data from existing reporting tools such as Power BI. Strong attention to detail and a developing analytical mindset is critical for success in this role. Essential Duties Key Responsibilities: Presentation & Deliverable Development: Develop and refine executive-ready PowerPoint presentations, ensuring clarity, consistency, and alignment with leadership expectations Translate data outputs, dashboards, and analyst insights into compelling visual narratives Partner with US/Canada-based analysts to iterate on “next level deep” requests and enhance storytelling Data Analysis & Insight Support: Extract, compile, and analyze data from existing reporting tools (e.g., Power BI, Excel) Support deeper-dive analyses by identifying trends, variances, and key performance drivers Validate data accuracy and ensure alignment between reporting outputs and presentation materials Reporting & BI Support Leverage existing Power BI dashboards to retrieve and format data for business use Perform light report modifications to existing reports to quickly answer business questions Assist in maintaining data consistency across reporting outputs Ad Hoc & Team Support: Respond to ad hoc data and presentation requests from the SMI team Support turnaround of time-sensitive deliverables for leadership meetings Collaborate across global team members to ensure timely and high-quality outputs Minimum Qualifications EDUCATION/CERTIFICATIONS Bachelor’s degree or equivalent experience – Required Economics, Business Analytics, Marketing major - Preferred Technical/Soft Skills Strong Microsoft Office skills – Required Analytical mindset with the ability to interpret and work with large datasets - Required Business Intelligence skills – Preferred Ability to communicate effectively both verbally and written – Required Strong attention to detail and accuracy – Required Ability to work autonomously and part of a team – Required Effective organization and time management skills – Required Ability to communicate report update ideas to developers – Required Knowledge of Excel, BI, SQL, and understanding of concepts of database structures and data querying – Required Ability to manage multiple tasks and prioritize in a fast paced environment - Required Experience 0-3 years relevant experience – Required Advanced Microsoft Office skills – Required Previous experience with SQL – Preferred Previous experience with a Business Intelligence (BI) tool – Preferred Previous experience analyzing data and predicting future outcomes – Preferred At RSM, we offer a competitive benefits and compensation package for all our people. We offer flexibility in your schedule, empowering you to balance life’s demands, while also maintaining your ability to serve clients. Learn more about our total rewards at https://rsmus.com/careers/india.html. RSM does not tolerate discrimination and/or harassment based on race; colour; creed; sincerely held religious beliefs, practices or observances; sex (including pregnancy or disabilities related to nursing); gender (including gender identity and/or gender expression); sexual orientation; HIV Status; national origin; ancestry; familial or marital status; age; physical or mental disability; citizenship; political affiliation; medical condition (including family and medical leave); domestic violence victim status; past, current or prospective service in the Indian Armed Forces; Indian Armed Forces Veterans, and Indian Armed Forces Personnel status; pre-disposing genetic characteristics or any other characteristic protected under applicable provincial employment legislation. Accommodation for applicants with disabilities is available upon request in connection with the recruitment process and/or employment/partnership. RSM is committed to providing equal opportunity and reasonable accommodation for people with disabilities. If you require a reasonable accommodation to complete an application, interview, or otherwise participate in the recruiting process, please send us an email at careers@rsmus.com.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "72% Core Match",
-        "gap_percentage": "28% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For RSM US LLP's SMI Data Analyst  1: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.25,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=SMI+Data+Analyst+1+RSM+US+LLP&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/smi-data-analyst-1-jobs-in-india?k=SMI+Data+Analyst+1+RSM+US+LLP",
-          "Indeed India": "https://in.indeed.com/jobs?q=SMI+Data+Analyst+1+RSM+US+LLP&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=SMI+Data+Analyst+1+RSM+US+LLP&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-smi-data-analyst-1-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/smi-data-analyst-1-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=SMI+Data+Analyst+1+RSM+US+LLP"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=SMI+Data+Analyst+1&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=SMI+Data+Analyst+1+RSM+US+LLP",
-          "Cutshort": "https://cutshort.io/jobs?query=SMI+Data+Analyst+1",
-          "Hirist": "https://www.hirist.tech/search?keyword=SMI+Data+Analyst+1&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=SMI+Data+Analyst+1"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/smi-data-analyst-1-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=SMI+Data+Analyst+1",
-          "LetsIntern": "https://www.letsintern.com/internships/smi-data-analyst-1-internships",
-          "Apna": "https://apna.co/jobs?q=SMI+Data+Analyst+1"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=SMI+Data+Analyst+1",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-smi-data-analyst-1-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=SMI+Data+Analyst+1",
-          "Remotive": "https://remotive.com/remote-jobs?search=SMI+Data+Analyst+1",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=SMI+Data+Analyst+1",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=RSM+US+LLP+careers"
-      }
-    },
-    {
       "role_type": "data analytics internship",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -10075,11 +5536,11 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T12:51:56Z",
       "posted_at_source": "published_at",
-      "hours_ago": 102.3736,
+      "hours_ago": 103.2307,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1817030",
       "direct_job_url": "https://unstop.com/internships/1817030",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analytics+Internship+Research+Engine&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analytics+Internship+Research+Engine&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
       "naukri_url": "https://www.naukri.com/data-analytics-internship-jobs-in-india",
       "company_url": "https://unstop.com/internships/1817030",
       "source_type": "Unstop",
@@ -10201,7 +5662,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T12:16:32Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 102.9636,
+      "hours_ago": 103.8207,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-intern-fresher-at-inframind-technologies-4491808560",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-intern-fresher-at-inframind-technologies-4491808560",
@@ -10338,7 +5799,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T11:56:23Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 103.2994,
+      "hours_ago": 104.1566,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/healthcare-data-analyst-at-milliman-india-4490884520",
       "direct_job_url": "https://in.linkedin.com/jobs/view/healthcare-data-analyst-at-milliman-india-4490884520",
@@ -10441,350 +5902,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       }
     },
     {
-      "role_type": "associate product manager",
-      "role_category": "product",
-      "seniority": "associate",
-      "min_years_experience": 3,
-      "max_years_experience": null,
-      "required_skills": [
-        "product_management",
-        "collaboration",
-        "interpersonal_skills",
-        "problem_solving",
-        "analysis",
-        "strategic_thinking",
-        "lean_product_development",
-        "travel",
-        "legal_tech_experience",
-        "saas_experience",
-        "ai_experience"
-      ],
-      "nice_to_have": [
-        "sales_collateral_development",
-        "market_research",
-        "wireframing",
-        "project_management"
-      ],
-      "domain": "legal tech",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Product Manager",
-      "company": "Leah",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.619,
-      "tier": 5,
-      "category": "Product",
-      "priority": "Primary",
-      "badge": "5",
-      "posted_at": "2026-11-18T09:39:28Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 105.5814,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-leah-4488140224",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-leah-4488140224",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-leah-4488140224",
-      "naukri_url": "https://www.naukri.com/associate-product-manager-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-product-manager-at-leah-4488140224",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "problem_solving"
-      ],
-      "missing_skills": [
-        "product_management",
-        "collaboration",
-        "interpersonal_skills",
-        "analysis",
-        "strategic_thinking",
-        "lean_product_development",
-        "travel",
-        "legal_tech_experience",
-        "saas_experience",
-        "ai_experience"
-      ],
-      "description": "By submitting your email address and any other personal information to this website, you consent to such information being collected, held, used and disclosed in accordance with our PRIVACY POLICY and our website TERMS AND CONDITIONS. Our Story: Leah empowers enterprises to build...",
-      "raw_description": "By submitting your email address and any other personal information to this website, you consent to such information being collected, held, used and disclosed in accordance with our PRIVACY POLICY and our website TERMS AND CONDITIONS. Our Story: Leah empowers enterprises to build, orchestrate, and govern intelligent AI agents across legal, procurement, finance, and beyond. Our solution combines advanced AI with deep domain expertise across three core products: Leah Agentic OS, Leah Contract Lifecycle Management (CLM), and Leah Legal. Founded in 2015 on the principle of elevating human judgment rather than replacing it, Leah automates complex workflows, connects data silos, and drives measurable ROI at scale. Trusted by over 400 global enterprises and backed by leading investors including Insight Partners and SoftBank, Leah, a ContractPod Technologies Limited company, has been recognized as a CLM Visionary by Gartner for five consecutive years and a Leader in the 2025 IDC MarketScape for AI-Enabled Buy-Side CLM Applications. Headquartered in London with offices in New York, Glasgow, San Francisco, Toronto, Sydney, Mumbai, and Pune, we're helping enterprises worldwide build the AI intelligent infrastructure of the future. Join our team and shape what's next in enterprise AI. The Opportunity: Associate Product Manager is an integral member of Leah's technology team and will be responsible for developing and owning products and features; conducting market research; generating product requirements; determining specifications, coordinating communication between engineering and business, and time-integrated plans for product introduction. What you will do: Collaborate closely with sales and marketing to develop and deliver sales training, sales collateral, product collateral, and other product assets Develop and maintain a comprehensive knowledge of the legal, Contract Lifecycle Management (CLM) market, and customer use cases to guide strategic product decisions Determines customers' needs and desires by engaging with business partners and understanding where the market is headed Analyze proposed products, features, and bring new product proposals that create competitive advantage. Manage new product changes and enhancements by assessing the requirements and formulating the product/ feature Manage prioritizing new features, and product enhancements in each development sprint Formulate new products, determine the scope, product success factors, and KPIs, and create product requirements and wireframes Work with the project management, development team members, and third-party partners to execute the plan Coordinate communication between Engineering and Business teams regarding the current project and new requests Prepare product/feature marketing communications Represent the voice of the product and customer in the engineering team What you will need: 3+ years of experience in product management role Collaboration and interpersonal skills to work closely with various teams throughout the organization Problem solving/analysis and strategic thinking. An Innovator and specialist in lean product development strategy Must be able to travel both domestically and internationally to customer, industry and partner gathering events. Experience in Legal tech experience, SaaS and AI environment a plus Benefits: Competitive salary aligned with experience, skills, and the impact of the role. Flexible, modern working environment designed to support autonomy, collaboration, and high performance. Opportunity to work in a high-growth, creative, and innovative company, helping shape the future of AI and intelligent automation. Generous paid time off to support a healthy and sustainable work-life balance. At Leah we believe in creating a diverse and inclusive workplace where everyone feels heard and valued. We are proud to be an Equal Opportunity Employer. We do not discriminate in employment on the basis of race, color, religion, sex, national origin, political affiliation, sexual orientation, marital status, disability, genetic information, age, membership in an employee organization, retaliation, parental status, military service, or other non-merit factor.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Product Teardown & PRD Documentation",
-            "impact": "High Impact",
-            "category": "Product Thinking",
-            "action": "Write a 3-page product requirements document (PRD) with user stories, acceptance criteria, and KPI definitions."
-          },
-          {
-            "skill": "Telemetry Schema Design & Event Tracking",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Map out an event logging taxonomy (clickstream, funnel steps) and write SQL queries for conversion drop-offs."
-          },
-          {
-            "skill": "User Journey Mapping & Prioritization",
-            "impact": "Medium Impact",
-            "category": "Execution",
-            "action": "Score feature ideas using the RICE framework (Reach, Impact, Confidence, Effort) with explicit data justification."
-          }
-        ],
-        "bridge_roadmap": "For Leah's Associate Product Manager: Publish a comprehensive 2-page teardown of a core consumer flow (e.g. Swiggy Instamart checkout or Groww onboarding) detailing telemetry tracking and metric trade-offs.",
-        "interview_talk_track": "I combine analytical rigor in SQL and metric decomposition with first-principles customer empathy to ruthlessly prioritize high-impact feature experiments."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.09,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Product+Manager+Leah&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-product-manager-jobs-in-india?k=Associate+Product+Manager+Leah",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Product+Manager+Leah&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Product+Manager+Leah&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-product-manager-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-product-manager-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Product+Manager+Leah"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Product+Manager&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Product+Manager+Leah",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Product+Manager",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Product+Manager&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Product+Manager"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-product-manager-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Product+Manager",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-product-manager-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Product+Manager"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Product+Manager",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-product-manager-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Product+Manager",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Product+Manager",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Product+Manager",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Leah+careers"
-      }
-    },
-    {
-      "role_type": "associate data scientist",
-      "role_category": "data science",
-      "seniority": "associate",
-      "min_years_experience": 1,
-      "max_years_experience": 3,
-      "required_skills": [
-        "python",
-        "nlp",
-        "machine_learning",
-        "deep_learning",
-        "llm",
-        "text_analytics",
-        "unstructured_data",
-        "prompt_engineering",
-        "responsible_ai",
-        "evaluation_frameworks",
-        "embeddings",
-        "cloud_platforms",
-        "vector_databases",
-        "distributed_computing",
-        "data_preparation",
-        "data_cleaning",
-        "data_normalization",
-        "large_scale_text_data",
-        "git",
-        "confluence",
-        "visualization",
-        "pandas",
-        "numpy",
-        "scikit_learn",
-        "tensorflow",
-        "pytorch",
-        "spacy",
-        "nltk",
-        "rag",
-        "tuning",
-        "advanced_prompting",
-        "knowledge_retrieval",
-        "model_lifecycle_management",
-        "compliance",
-        "privacy",
-        "auditability"
-      ],
-      "nice_to_have": [
-        "azure",
-        "aws",
-        "gcp",
-        "spark",
-        "databricks",
-        "streamlit",
-        "power_bi",
-        "excel",
-        "stakeholder_management",
-        "communication",
-        "problem_solving",
-        "fast_paced_environment"
-      ],
-      "domain": "technology consulting",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Data Scientist",
-      "company": "Gartner",
-      "location": "Gurgaon, Haryana, India",
-      "score": 0.763,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-18T09:16:28Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 105.9647,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425",
-      "naukri_url": "https://www.naukri.com/associate-data-scientist-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-at-gartner-4481608425",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "python",
-        "nlp",
-        "machine_learning",
-        "deep_learning",
-        "git",
-        "pandas",
-        "numpy",
-        "scikit_learn",
-        "tensorflow",
-        "pytorch"
-      ],
-      "missing_skills": [
-        "llm",
-        "text_analytics",
-        "unstructured_data",
-        "prompt_engineering",
-        "responsible_ai",
-        "evaluation_frameworks",
-        "embeddings",
-        "cloud_platforms",
-        "vector_databases",
-        "distributed_computing",
-        "data_preparation",
-        "data_cleaning",
-        "data_normalization",
-        "large_scale_text_data",
-        "confluence",
-        "visualization",
-        "spacy",
-        "nltk",
-        "rag",
-        "tuning",
-        "advanced_prompting",
-        "knowledge_retrieval",
-        "model_lifecycle_management",
-        "compliance",
-        "privacy",
-        "auditability"
-      ],
-      "description": "About this Role: We are seeking an Associate Data Scientist in the Insights & Product Analytics team for high-impact data science initiatives that convert diverse data into actionable insights and decision support . At the core we are looking for a person who is passionate about ...",
-      "raw_description": "About this Role: We are seeking an Associate Data Scientist in the Insights & Product Analytics team for high-impact data science initiatives that convert diverse data into actionable insights and decision support . At the core we are looking for a person who is passionate about learning new technologies, text analytics, digging into rows of unstructured data, drawing recommendations & insights, and using creative ways to visualize & interpret it for research. This person will have a flair for innovation along with a strong exposure to Python, Data Science, NLP, Machine Learning, LLMs and the analysis of unstructured data. They would be working closely with various stakeholders to explore opportunities to optimize data mining techniques and improve the accuracy of insights generated using NLP or various types of Machine Learning/Deep Learning/LLM models Key Responsibilities: Execute large scale high impact data science projects. Harness advanced technologies to extract, interpret, and visualize insights from large volumes of structured and unstructured data. Collaborate with internal & external stakeholders to improvise on the findings, design, develop, and execute cutting-edge solutions that deliver insights through Machine Learning, Deep Learning, and Generative AI techniques. Innovate in text analytics and develop creative approaches for interpreting complex datasets to deliver impactful recommendations. Own high-visibility programs that translate business objectives into measurable results such as improved engagement, retention, and cost efficiency. Build text analytics and knowledge retrieval capabilities for large-scale unstructured data to generate accurate, explainable insights. Define standards for evaluation, guardrails, prompt engineering, retrieval quality, and hallucination control to ensure trustworthy AI. Enforce best practices in documentation, code reuse, and model lifecycle management while enhancing algorithms to meet evolving needs. Ensure responsible AI practices covering data privacy, IP, safety, and auditability. Solve most pressing business challenges with data science, ML and NLP in the center Work as part of a team in an extremely fast-paced work environment with strict SLA’s and less turnaround time What We’re Looking For: Expertise with LLM customization techniques (RAG, tuning, advanced prompting, etc.) Passionate professional with a strong appetite for learning and applying emerging AI and data science technologies. Experience analysing unstructured data and exposure to scalable solutions. Proven expertise in python, LLMs, NLP, advanced ML/DL algorithms, embeddings, and cloud platforms (Azure/AWS). Proficiency in prompt engineering, responsible AI practices, and governance (privacy, auditability, compliance). What You’ll Need: Education: Bachelor’s or Master’s in Computer science, Engineering, Statistics, Mathematics, or related field from a reputed college with focus on AI/Data Science. Experience: Overall: 1-3 years in data science/AI/ML roles. Technical Skills: Expertise in Data Science, ML/DL/LLM/Transformers, LLMs, prompt engineering, and evaluation frameworks. Well-versed in a wide range of ML algorithms, advanced statistics, and natural language processing. Advanced proficiency in Python, Databricks/AWS, with strong experience in libraries such as Pandas, NumPy, scikit-learn, TensorFlow, PyTorch, SpaCy, NLTK. Hands-on experience with vector databases (FAISS, pgvector etc) Practical experience with AWS, Azure, or GCP for model training, deployment, and scaling. Familiarity with distributed computing (Spark/Databricks). Strong background in data preparation, cleaning, normalization, and handling large-scale unstructured text data. Knowledge of responsible AI, privacy, auditability, and code management using GitHub/Bitbucket and confluence for project documentation Basic visualization skills in Excel, Power BI, or Streamlit for dashboards and insights. Soft Skills: Excellent communication, stakeholder management, problem-solving, and ability to work in fast-paced, milestone-driven environments. What you will get: Competitive salary, generous paid time off policy, charity match program, Group Medical Insurance, Parental Leave, Employee Assistance Program (EAP) and more! Collaborative, team-oriented culture that embraces diversity Professional development and unlimited growth opportunities Who are we? At Gartner, Inc. (NYSE:IT), we guide the leaders who shape the world. Our mission relies on expert analysis and bold ideas to deliver actionable, objective business and technology insights, helping enterprise leaders and their teams succeed with their mission-critical priorities. Since our founding in 1979, we’ve grown to 20,000 associates globally who support over 13,000 client enterprises in ~90 countries and territories. We do important, interesting and substantive work that matters. That’s why we hire associates with the intellectual curiosity, energy and drive to want to make a difference. The bar is unapologetically high. So is the impact you can have here. What makes Gartner a great place to work? Our vast, virtually untapped market potential offers limitless opportunities – opportunities that may not even exist right now – for you to grow professionally and flourish personally. How far you go is driven by your passion and performance. We hire remarkable people who collaborate and win as a team. Together, our singular, unifying goal is to deliver results for our clients. Our teams are inclusive and composed of individuals from different geographies, cultures, religions, ethnicities, races, genders, sexual orientations, abilities and generations. We invest in great leaders who bring out the best in you and the company, enabling us to multiply our impact and results. This is why, year after year, we are recognized worldwide as a great place to work. Gartner is the world authority on AI At Gartner, you’ll join a company at the very center of the AI revolution. Gartner has proactive, objective guidance throughout clients’ AI journeys. We set the standard for how organizations leverage artificial intelligence to drive meaningful impact. You’ll have access to unmatched resources, expertise, and technology, and play a key role in helping Gartner and our clients innovate and grow as we leverage AI to transform business and technology landscapes. It’s an exciting time to be at Gartner, with limitless opportunities to make a real impact, grow your skills, and build a lasting, meaningful career in a field that’s reshaping the way we operate. If you’re passionate about AI and want to be part of a team that’s guiding the leaders who shape the world, Gartner is the place for you. What do we offer? Gartner offers world-class benefits, highly competitive compensation and disproportionate rewards for top performers. In our hybrid work environment, we provide the flexibility and support for you to thrive — working virtually when it's productive to do so and getting together with colleagues in a vibrant community that is purposeful, engaging and inspiring. Ready to grow your career with Gartner? Join us. The policy of Gartner is to provide equal employment opportunities to all applicants and employees without regard to race, color, creed, religion, sex, sexual orientation, gender identity, marital status, citizenship status, age, national origin, ancestry, disability, veteran status, or any other legally protected status and to seek to advance the principles of equal employment opportunity. Gartner is committed to being an Equal Opportunity Employer and offers opportunities to all job seekers, including job seekers with disabilities. If you are a qualified individual with a disability or a disabled veteran, you may request a reasonable accommodation if you are unable or limited in your ability to use or access the Company’s career webpage as a result of your disability. You may request reasonable accommodations by calling Human Resources at +1 (203) 964-0096 or by sending an email to ApplicantAccommodations@gartner.com. Job Requisition ID:113044 By submitting your information and application, you confirm that you have read and agree to the country or regional recruitment notice linked below applicable to your place of residence. Gartner Applicant Privacy Link: https://jobs.gartner.com/applicant-privacy-policy For efficient navigation through the application, please only use the back button within the application, not the back arrow within your browser.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "76% Core Match",
-        "gap_percentage": "24% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Gartner's Associate Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.28,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+Gartner&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-data-scientist-jobs-in-india?k=Associate+Data+Scientist+Gartner",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Data+Scientist+Gartner&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Data+Scientist+Gartner&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-data-scientist-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Data+Scientist+Gartner"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Data+Scientist&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Data+Scientist+Gartner",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Data+Scientist",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Data+Scientist&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Data+Scientist"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-data-scientist-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Data+Scientist",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-data-scientist-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Data+Scientist"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Data+Scientist",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-data-scientist-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Data+Scientist",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Data+Scientist",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Data+Scientist",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Gartner+careers"
-      }
-    },
-    {
       "role_type": "data scientist",
       "role_category": "data science",
       "seniority": "intern",
@@ -10817,7 +5934,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T08:57:52Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 106.2747,
+      "hours_ago": 107.1318,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-talent-to-job-4491794570",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-talent-to-job-4491794570",
@@ -10921,261 +6038,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       }
     },
     {
-      "role_type": "data scientist",
-      "role_category": "data science",
-      "seniority": "junior",
-      "min_years_experience": 1,
-      "max_years_experience": 3,
-      "required_skills": [
-        "python",
-        "sql",
-        "pandas",
-        "statistics",
-        "machine_learning",
-        "data_cleaning",
-        "data_exploration",
-        "model_evaluation",
-        "communication",
-        "collaboration"
-      ],
-      "nice_to_have": [
-        "scikit_learn",
-        "text_processing",
-        "embeddings",
-        "information_retrieval",
-        "ranking_systems"
-      ],
-      "domain": "recruitment",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Data Scientist",
-      "company": "Ladel",
-      "location": "Mumbai, Maharashtra, India",
-      "score": 0.826,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-18T05:56:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 109.2992,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-scientist-at-ladel-4491482435",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-ladel-4491482435",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-scientist-at-ladel-4491482435",
-      "naukri_url": "https://www.naukri.com/data-scientist-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-scientist-at-ladel-4491482435",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "python",
-        "sql",
-        "pandas",
-        "statistics",
-        "machine_learning",
-        "communication"
-      ],
-      "missing_skills": [
-        "data_cleaning",
-        "data_exploration",
-        "model_evaluation",
-        "collaboration"
-      ],
-      "description": "Data Scientist | Ladel Mumbai · On-site · Full-time Experience: 1–3 years Ladel is building people and company search for Indian recruiters and sales teams. We’re looking for a Data Scientist to improve the quality, relevance and usefulness of the data behind that experience. Wha...",
-      "raw_description": "Data Scientist | Ladel Mumbai · On-site · Full-time Experience: 1–3 years Ladel is building people and company search for Indian recruiters and sales teams. We’re looking for a Data Scientist to improve the quality, relevance and usefulness of the data behind that experience. What you’ll work on • Analyse professional and company datasets using Python and SQL; investigate missing data, duplicates and inconsistencies. • Build and evaluate models and experiments for matching, ranking and search relevance. • Explore how skills, job titles and industries can be organised to improve search quality. • Define evaluation metrics, analyse experiment results and communicate actionable findings. • Work with engineering to turn analytical prototypes into reliable product improvements. • Document assumptions, methods and results so experiments can be reproduced. What we’re looking for • 1–3 years of relevant experience in data science, machine learning or quantitative analytics. • Strong working knowledge of Python, SQL and pandas. • Understanding of statistics, model evaluation and core machine-learning methods. • Ability to clean, explore and reason carefully about real-world datasets. • A project or production example demonstrating your approach to solving a data problem. • Clear communication and collaborative problem-solving. • Availability to work on-site in Mumbai. Experience with scikit-learn, text processing, embeddings, information retrieval or ranking systems is a plus. Apply through LinkedIn Easy Apply with your résumé. A GitHub, portfolio or project link is welcome.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "95% Core Match",
-        "gap_percentage": "5% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For Ladel's Data Scientist: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "skill_match_rate": 0.6,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Scientist+Ladel&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-scientist-jobs-in-india?k=Data+Scientist+Ladel",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Scientist+Ladel&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Scientist+Ladel&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-scientist-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-scientist-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Scientist+Ladel"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Scientist&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Scientist+Ladel",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Scientist",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Scientist&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Scientist"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-scientist-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Scientist",
-          "LetsIntern": "https://www.letsintern.com/internships/data-scientist-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Scientist"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Scientist",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-scientist-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Scientist",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Scientist",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Scientist",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Ladel+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
-      "role_type": "network_operations_analyst",
-      "role_category": "other",
-      "seniority": "junior",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "domain": "information_technology",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Network Operations Analyst I",
-      "company": "Levi Strauss & Co.",
-      "location": "Bengaluru, Karnataka, India",
-      "score": 0.909,
-      "tier": 6,
-      "category": "Strategy / Programs",
-      "priority": "Primary",
-      "badge": "6",
-      "posted_at": "2026-11-18T00:57:16Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 114.2847,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/network-operations-analyst-i-at-levi-strauss-co-4474212778",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/network-operations-analyst-i-at-levi-strauss-co-4474212778",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/network-operations-analyst-i-at-levi-strauss-co-4474212778",
-      "naukri_url": "https://www.naukri.com/network-operations-analyst-i-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/network-operations-analyst-i-at-levi-strauss-co-4474212778",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "LOCATION FULL TIME/PART TIME Current LS&Co Employees, apply via your Workday account.",
-      "raw_description": "LOCATION FULL TIME/PART TIME Current LS&Co Employees, apply via your Workday account.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "83% Core Match",
-        "gap_percentage": "17% Skill Gap",
-        "gaps": [
-          {
-            "skill": "3-Statement Financial & Unit Economics Modeling",
-            "impact": "High Impact",
-            "category": "Financial Analysis",
-            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
-          },
-          {
-            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
-            "impact": "Medium Impact",
-            "category": "Market Intelligence",
-            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
-          },
-          {
-            "skill": "Executive Board Deck & Memo Synthesis",
-            "impact": "High Impact",
-            "category": "Executive Communication",
-            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
-          }
-        ],
-        "bridge_roadmap": "For Levi Strauss & Co.'s Network Operations Analyst I: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
-        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Network+Operations+Analyst+I+Levi+Strauss+%26+Co.&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/network-operations-analyst-i-jobs-in-india?k=Network+Operations+Analyst+I+Levi+Strauss+%26+Co.",
-          "Indeed India": "https://in.indeed.com/jobs?q=Network+Operations+Analyst+I+Levi+Strauss+%26+Co.&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Network+Operations+Analyst+I+Levi+Strauss+%26+Co.&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-network-operations-analyst-i-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/network-operations-analyst-i-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Network+Operations+Analyst+I+Levi+Strauss+%26+Co."
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Network+Operations+Analyst+I&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Network+Operations+Analyst+I+Levi+Strauss+%26+Co.",
-          "Cutshort": "https://cutshort.io/jobs?query=Network+Operations+Analyst+I",
-          "Hirist": "https://www.hirist.tech/search?keyword=Network+Operations+Analyst+I&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Network+Operations+Analyst+I"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/network-operations-analyst-i-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Network+Operations+Analyst+I",
-          "LetsIntern": "https://www.letsintern.com/internships/network-operations-analyst-i-internships",
-          "Apna": "https://apna.co/jobs?q=Network+Operations+Analyst+I"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Network+Operations+Analyst+I",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-network-operations-analyst-i-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Network+Operations+Analyst+I",
-          "Remotive": "https://remotive.com/remote-jobs?search=Network+Operations+Analyst+I",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Network+Operations+Analyst+I",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Levi+Strauss+%26+Co.+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
       "role_type": "associate data analyst",
       "role_category": "data science",
       "seniority": "associate",
@@ -11212,7 +6074,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-18T00:57:05Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 114.2878,
+      "hours_ago": 115.1449,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/associate-data-analyst-csa-at-pivotroots-4483586375",
       "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-analyst-csa-at-pivotroots-4483586375",
@@ -11320,319 +6182,22 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         "direct_company_portal": "https://www.google.com/search?q=PivotRoots+careers"
       },
       "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
-      "role_type": "ml engineer",
-      "role_category": "ML Engineering",
-      "seniority": "associate",
-      "min_years_experience": 0,
-      "max_years_experience": 3,
-      "required_skills": [
-        "python",
-        "pytorch",
-        "numpy",
-        "pandas",
-        "machine_learning_fundamentals",
-        "speech",
-        "audio",
-        "computer_vision",
-        "git",
-        "command_line",
-        "gpu",
-        "communication"
-      ],
-      "nice_to_have": [
-        "fine_tuning_pretrained_speech_models",
-        "fine_tuning_pretrained_vision_models",
-        "model_serving",
-        "quantization",
-        "inference_on_cpu_or_mobile",
-        "experiment_tracking",
-        "reproducible_training",
-        "low_resource_language_work",
-        "child_speech",
-        "field_data_collection",
-        "health_tech",
-        "education_tech",
-        "low_resource_settings"
-      ],
-      "domain": "healthcare",
-      "analysis_method": "llm",
-      "analysis_cached": false,
-      "title": "Associate ML Engineer",
-      "company": "Wadhwani AI Global",
-      "location": "Delhi, Delhi, India",
-      "score": 0.753,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-18T00:56:24Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 114.2992,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-ml-engineer-at-wadhwani-ai-global-4491851805",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-ml-engineer-at-wadhwani-ai-global-4491851805",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-ml-engineer-at-wadhwani-ai-global-4491851805",
-      "naukri_url": "https://www.naukri.com/associate-ml-engineer-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-ml-engineer-at-wadhwani-ai-global-4491851805",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "python",
-        "pytorch",
-        "numpy",
-        "pandas",
-        "git",
-        "communication"
-      ],
-      "missing_skills": [
-        "machine_learning_fundamentals",
-        "speech",
-        "audio",
-        "computer_vision",
-        "command_line",
-        "gpu"
-      ],
-      "description": "About The Role We build AI products for public health and early grade education, deployed in real field conditions across sub-Saharan Africa and South Asia. The products are used by data collectors, health workers, and teachers, often on low cost devices, often without reliable c...",
-      "raw_description": "About The Role We build AI products for public health and early grade education, deployed in real field conditions across sub-Saharan Africa and South Asia. The products are used by data collectors, health workers, and teachers, often on low cost devices, often without reliable connectivity, and always under data protection obligations that vary by country. Our models work on speech, audio, and vision, on data that is noisy and underrepresented in public datasets. You will work on these models from data preparation through training and evaluation to handing a model over for deployment. The team is small, so you will work on the whole pipeline rather than one stage of it. We are looking for someone with solid fundamentals who wants to learn what it takes to make a model work outside a notebook. What You Will Do Prepare and clean field data for training: audio, images, and their annotations, including quality checks and dataset splits. Run training and fine tuning experiments on speech, audio, and vision models, track them properly, and report what worked and what did not. Build evaluation sets and metrics that reflect how the model will actually be used, not just a held out test split. Run error analysis: listen to the audio, look at the images, and find the patterns behind the failures. Write clean, tested Python for data pipelines and inference code that an engineer can deploy. Build internal annotation and review tools with the engineering team when the project needs them. Document experiments, datasets, and decisions so that others can reproduce your work. Follow our data protection practices when handling health and child data, and flag anything that looks off. Required What we are looking for 0 to 3 years of experience, or a strong record of ML projects you built yourself. Internships, research projects, Kaggle work, and open source contributions count. Solid Python, with PyTorch or a comparable deep learning framework, and comfort with NumPy and pandas. Sound understanding of ML fundamentals: training and validation, overfitting, loss functions, and how to read a learning curve. At least one project involving speech, audio, or computer vision that you can walk us through end to end. Basic familiarity with Git, the command line, and running jobs on a remote GPU machine. Clear written communication, since most coordination is asynchronous and across time zones. Curiosity and rigour: you check your results before believing them and ask for help early when stuck. Nice to have Experience fine tuning pretrained speech models such as Whisper or wav2vec, or vision and OCR models. Exposure to model serving, quantisation, or running inference on CPU or mobile. Experience with experiment tracking tools and reproducible training setups. Familiarity with low resource language work, child speech, or data collected in field conditions. Interest in health or education technology, or in working on products deployed in low resource settings.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "93% Core Match",
-        "gap_percentage": "7% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Wadhwani AI Global's Associate ML Engineer: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "skill_match_rate": 0.5,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+ML+Engineer+Wadhwani+AI+Global&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-ml-engineer-jobs-in-india?k=Associate+ML+Engineer+Wadhwani+AI+Global",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+ML+Engineer+Wadhwani+AI+Global&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+ML+Engineer+Wadhwani+AI+Global&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-ml-engineer-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-ml-engineer-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+ML+Engineer+Wadhwani+AI+Global"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+ML+Engineer&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+ML+Engineer+Wadhwani+AI+Global",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+ML+Engineer",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+ML+Engineer&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+ML+Engineer"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-ml-engineer-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+ML+Engineer",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-ml-engineer-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+ML+Engineer"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+ML+Engineer",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-ml-engineer-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+ML+Engineer",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+ML+Engineer",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+ML+Engineer",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Wadhwani+AI+Global+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
-    },
-    {
-      "role_type": "associate data scientist",
-      "role_category": "data science",
-      "seniority": "associate",
-      "min_years_experience": null,
-      "max_years_experience": null,
-      "required_skills": [
-        "sql",
-        "etl",
-        "data_quality",
-        "data_warehouse",
-        "lakehouse",
-        "kpi_documentation",
-        "dashboard_development",
-        "stakeholder_communication",
-        "exploratory_data_analysis",
-        "feature_engineering",
-        "basic_modeling",
-        "model_evaluation"
-      ],
-      "nice_to_have": [
-        "nlp",
-        "cnn",
-        "rnn"
-      ],
-      "domain": "data science",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Associate Data Scientist in Gurgaon, Jaipur",
-      "company": "SoftSensor.ai",
-      "location": "Jaipur, Rajasthan, India",
-      "score": 0.656,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-18T00:16:28Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 114.9647,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/associate-data-scientist-in-gurgaon-jaipur-at-softsensor-ai-4491782247",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-in-gurgaon-jaipur-at-softsensor-ai-4491782247",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-in-gurgaon-jaipur-at-softsensor-ai-4491782247",
-      "naukri_url": "https://www.naukri.com/associate-data-scientist-in-gurgaon-jaipur-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/associate-data-scientist-in-gurgaon-jaipur-at-softsensor-ai-4491782247",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": false,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "etl"
-      ],
-      "missing_skills": [
-        "data_quality",
-        "data_warehouse",
-        "lakehouse",
-        "kpi_documentation",
-        "dashboard_development",
-        "stakeholder_communication",
-        "exploratory_data_analysis",
-        "feature_engineering",
-        "basic_modeling",
-        "model_evaluation"
-      ],
-      "description": "Key Responsibilities Write and troubleshoot SQL for data extraction, validation, and reporting. Support ETL/ELT pipeline development under guidance. Perform data quality checks for nulls, duplicates, mismatches, and outliers, and report findings clearly. Support data warehouse/La...",
-      "raw_description": "Key Responsibilities Write and troubleshoot SQL for data extraction, validation, and reporting. Support ETL/ELT pipeline development under guidance. Perform data quality checks for nulls, duplicates, mismatches, and outliers, and report findings clearly. Support data warehouse/Lakehouse design, including table structures, dimensions, fact tables, and documentation. Support KPI documentation, dashboard development, and stakeholder-facing analytics. Support data science tasks such as EDA, feature engineering, basic modeling, and evaluation when assigned. Identify and communicate blockers or unclear requirements early. About Company: Softsensor.ai is a USA and India-based corporation focused on delivering outcomes to clients using data. Our expertise lies in a collection of people, methods, and accelerators to rapidly deploy solutions for our clients. Our principals have significant experience with leading global consulting firms & corporations and delivering large-scale solutions. We are focused on data science and analytics for improving the process and organizational performance. We are working on cutting-edge data science technologies like NLP, CNN, and RNN, and applying them in the business context.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "70% Core Match",
-        "gap_percentage": "30% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For SoftSensor.ai's Associate Data Scientist in Gurgaon, Jaipur: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "analysis_model": "openai/gpt-oss-20b",
-      "skill_match_rate": 0.17,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur+SoftSensor.ai&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/associate-data-scientist-in-gurgaon-jaipur-jobs-in-india?k=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur+SoftSensor.ai",
-          "Indeed India": "https://in.indeed.com/jobs?q=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur+SoftSensor.ai&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur+SoftSensor.ai&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-associate-data-scientist-in-gurgaon-jaipur-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/associate-data-scientist-in-gurgaon-jaipur-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur+SoftSensor.ai"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur+SoftSensor.ai",
-          "Cutshort": "https://cutshort.io/jobs?query=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur",
-          "Hirist": "https://www.hirist.tech/search?keyword=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/associate-data-scientist-in-gurgaon-jaipur-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur",
-          "LetsIntern": "https://www.letsintern.com/internships/associate-data-scientist-in-gurgaon-jaipur-internships",
-          "Apna": "https://apna.co/jobs?q=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-associate-data-scientist-in-gurgaon-jaipur-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur",
-          "Remotive": "https://remotive.com/remote-jobs?search=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Associate+Data+Scientist+in+Gurgaon%2C+Jaipur",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=SoftSensor.ai+careers"
-      }
     }
   ],
   "stats": {
-    "total_jobs_evaluated": 80,
-    "primary_matches": 68,
-    "secondary_matches": 9,
-    "adjacent_matches": 3,
-    "full_time_matches": 41,
-    "internship_matches": 39,
-    "last_sync": "2026-11-22T19:14:24Z"
+    "total_jobs_evaluated": 41,
+    "primary_matches": 35,
+    "secondary_matches": 4,
+    "adjacent_matches": 2,
+    "full_time_matches": 9,
+    "internship_matches": 32,
+    "last_sync": "2026-11-22T20:05:50Z"
   },
-  "total_jobs": 80,
-  "last_updated": "2026-11-22T19:14:24Z",
+  "total_jobs": 41,
+  "last_updated": "2026-11-22T20:05:50Z",
   "last_remotive_sync": "2026-11-22T19:13Z",
   "last_himalayas_sync": "2026-11-22T19:13Z",
   "last_adzuna_sync": "2026-11-22T19:13Z",
-  "last_jsearch_sync": "2026-11-22T19:13Z"
+  "last_jsearch_sync": "2026-11-22T19:13Z",
+  "last_linkedin_sync": "2026-11-22T20:04Z"
 };
