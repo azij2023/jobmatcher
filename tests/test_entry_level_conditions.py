@@ -3,6 +3,7 @@
 import json
 import datetime
 import io
+import os
 import unittest
 from pathlib import Path
 from contextlib import nullcontext
@@ -10,7 +11,11 @@ from unittest.mock import patch
 
 from matching.scoring import score_job
 from llm.job_extractor import JobExtractor
-from collectors.live_job_collector import _is_entry_level_listing, fetch_live_linkedin_jobs
+from collectors.live_job_collector import (
+    _is_entry_level_listing,
+    fetch_live_jsearch_jobs,
+    fetch_live_linkedin_jobs,
+)
 from collectors.linkedin_post_fetcher import parse_linkedin_post_text
 
 
@@ -27,7 +32,7 @@ class EntryLevelConditionsTests(unittest.TestCase):
             "role_type": "standardized",
             "role_category": "Data Science",
             "seniority": "intern",
-            "raw_description": "Promote the campus program to students.",
+            "raw_description": "Promote the campus program to students. No experience required.",
         }, PROFILE)
 
         self.assertTrue(result["rejected"])
@@ -39,6 +44,12 @@ class EntryLevelConditionsTests(unittest.TestCase):
         )
         self.assertEqual(result["role_category"], "Other")
 
+    def test_fallback_parser_does_not_infer_zero_years_from_fresher_label_alone(self):
+        result = JobExtractor()._heuristic_extract(
+            "Freshers welcome.", title="Data Analyst"
+        )
+        self.assertIsNone(result["min_years_experience"])
+
     def test_category_match_with_relevant_title_is_retained(self):
         result = score_job({
             "title": "Business Analytics Intern",
@@ -48,11 +59,25 @@ class EntryLevelConditionsTests(unittest.TestCase):
             "role_type": "standardized",
             "role_category": "Data Science",
             "seniority": "intern",
-            "raw_description": "Analyze business data with Python.",
+            "raw_description": "Analyze business data with Python. No experience required.",
         }, PROFILE)
         self.assertFalse(result["rejected"], result)
 
-    def test_accepts_entry_level_role_when_experience_is_unspecified(self):
+    def test_rejects_fresher_label_without_explicit_zero_year_eligibility(self):
+        result = score_job({
+            "title": "Junior Data Scientist",
+            "company": "Example",
+            "location": "Bengaluru, India",
+            "url": "https://example.com/job/123",
+            "seniority": "junior",
+            "role_category": "Data Science",
+            "raw_description": "Fresh graduate applicants welcome for this data science role.",
+        }, PROFILE)
+
+        self.assertTrue(result["rejected"])
+        self.assertIn("explicit fresher/zero-year signal", result["rejection_reason"])
+
+    def test_rejects_unspecified_experience_without_fresher_signal(self):
         result = score_job({
             "title": "Junior Data Scientist",
             "company": "Example",
@@ -63,7 +88,8 @@ class EntryLevelConditionsTests(unittest.TestCase):
             "raw_description": "Junior role on the data science team.",
         }, PROFILE)
 
-        self.assertFalse(result["rejected"])
+        self.assertTrue(result["rejected"])
+        self.assertIn("explicit fresher/zero-year signal", result["rejection_reason"])
 
     def test_fallback_parser_does_not_turn_unspecified_experience_into_zero(self):
         result = JobExtractor()._heuristic_extract(
@@ -73,14 +99,14 @@ class EntryLevelConditionsTests(unittest.TestCase):
         self.assertIsNone(result["min_years_experience"])
         self.assertIsNone(result["max_years_experience"])
 
-    def test_fallback_parser_preserves_zero_to_four_year_fresher_range(self):
+    def test_fallback_parser_preserves_zero_to_two_year_fresher_range(self):
         result = JobExtractor()._heuristic_extract(
-            "Freshers welcome; candidates with 0-4 years of experience may apply.",
+            "Freshers welcome; candidates with 0-2 years of experience may apply.",
             title="Data Analyst",
         )
 
         self.assertEqual(result["min_years_experience"], 0)
-        self.assertEqual(result["max_years_experience"], 4)
+        self.assertEqual(result["max_years_experience"], 2)
 
     def test_legacy_fallback_zero_default_is_not_mislabeled_as_fresher(self):
         result = score_job({
@@ -96,26 +122,24 @@ class EntryLevelConditionsTests(unittest.TestCase):
             "raw_description": "Analyze business data and communicate results.",
         }, PROFILE)
 
-        self.assertFalse(result["rejected"], result)
-        self.assertFalse(result["is_fresher"])
-        self.assertIsNone(result["min_years_experience"])
+        self.assertTrue(result["rejected"])
+        self.assertIn("explicit fresher/zero-year signal", result["rejection_reason"])
 
-    def test_accepts_up_to_four_years_without_a_fresher_marker(self):
-        for requirement in ("0-4 years of experience", "4 years experience",
-                            "4+ years experience", "2 yrs exp"):
+    def test_accepts_zero_to_two_years_only_with_fresher_signal(self):
+        for requirement in ("0-2 years of experience", "0 to 2 years experience"):
             with self.subTest(requirement=requirement):
                 result = score_job({
                     "title": "Data Scientist",
                     "company": "Example",
                     "location": "Bengaluru, India",
                     "url": "https://example.com/job/123",
-                    "raw_description": f"Build models and analyze data. Requires {requirement}.",
+                    "raw_description": f"Freshers welcome. Requires {requirement}.",
                 }, PROFILE)
                 self.assertFalse(result["rejected"], result)
 
-    def test_experience_cap_rejects_over_four_even_if_freshers_are_welcome(self):
-        for requirement in ("5 years of experience", "5+ years experience",
-                            "3-5 years of experience"):
+    def test_requires_zero_year_eligibility_and_rejects_above_two_years(self):
+        for requirement in ("1-2 years of experience", "3 years of experience",
+                            "3+ years experience", "0-3 years of experience"):
             with self.subTest(requirement=requirement):
                 result = score_job({
                     "title": "Junior Data Analyst",
@@ -126,14 +150,31 @@ class EntryLevelConditionsTests(unittest.TestCase):
                     "raw_description": f"Freshers welcome. Requires {requirement}.",
                 }, PROFILE)
                 self.assertTrue(result["rejected"])
-                self.assertIn("max allowed: 4 years", result["rejection_reason"])
+                self.assertIn("zero-year eligibility", result["rejection_reason"])
+
+    def test_structured_experience_values_enforce_zero_to_two_years(self):
+        base_job = {
+            "title": "Data Analyst",
+            "company": "Example",
+            "location": "Bengaluru, India",
+            "url": "https://example.com/job/123",
+            "raw_description": "Freshers welcome.",
+        }
+        for experience, expected_rejected in (
+            ({"min_years_experience": 0, "max_years_experience": 2}, False),
+            ({"min_years_experience": 1, "max_years_experience": 2}, True),
+            ({"min_years_experience": 0, "max_years_experience": 3}, True),
+        ):
+            with self.subTest(experience=experience):
+                result = score_job({**base_job, **experience}, PROFILE)
+                self.assertEqual(result["rejected"], expected_rejected, result)
 
     def test_linkedin_post_parser_preserves_experience_requirement(self):
         job = parse_linkedin_post_text(
             "Hiring a data scientist in Bengaluru with 4 years of experience."
         )
         self.assertEqual(job["min_years_experience"], 4)
-        self.assertTrue(job["is_fresher"])
+        self.assertFalse(job["is_fresher"])
 
     def test_rejects_data_entry_job_misclassified_as_data_science(self):
         result = score_job({
@@ -144,7 +185,7 @@ class EntryLevelConditionsTests(unittest.TestCase):
             "seniority": "fresher",
             "role_category": "Data Science",
             "min_years_experience": 0,
-            "raw_description": "Fresher data entry role.",
+            "raw_description": "Fresher data entry role. 0 years experience required.",
         }, PROFILE)
 
         self.assertTrue(result["rejected"])
@@ -190,13 +231,56 @@ class EntryLevelConditionsTests(unittest.TestCase):
                     with patch('collectors.live_job_collector.time.sleep'):
                         self.assertEqual(fetch_live_linkedin_jobs(max_queries=1), [])
 
-    def test_live_linkedin_accepts_unspecified_and_up_to_four_years(self):
-        self.assertTrue(_is_entry_level_listing("Data Analyst", "", "Analyze business data."))
-        self.assertTrue(_is_entry_level_listing("Data Analyst", "", "Requires 4 years of experience."))
-        self.assertFalse(_is_entry_level_listing("Data Analyst", "", "Requires 5 years of experience."))
+    def test_live_linkedin_requires_fresher_signal_and_zero_to_two_years(self):
+        self.assertTrue(_is_entry_level_listing("Data Analyst", "", "Freshers welcome; 0-2 years experience."))
+        self.assertTrue(_is_entry_level_listing(
+            "Data Analyst Intern", "", "Internship; no experience required."
+        ))
+        self.assertFalse(_is_entry_level_listing("Data Analyst", "", "Analyze business data."))
+        self.assertFalse(_is_entry_level_listing("Data Analyst", "", "Freshers welcome; 1-2 years experience."))
+        self.assertFalse(_is_entry_level_listing("Data Analyst", "", "Freshers welcome; requires 3 years experience."))
+
+    def test_jsearch_maps_explicit_zero_year_metadata_and_skips_positive_minimums(self):
+        published = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        data = {
+            "data": [
+                {
+                    "job_title": "Data Scientist",
+                    "employer_name": "Example",
+                    "job_city": "Bengaluru",
+                    "job_country": "India",
+                    "job_apply_link": "https://example.com/jobs/data-scientist",
+                    "job_posted_at_datetime_utc": published,
+                    "job_required_experience": {"no_experience_required": True},
+                    "job_description": "Build data models with Python.",
+                },
+                {
+                    "job_title": "Fresher Data Analyst",
+                    "employer_name": "Example",
+                    "job_city": "Bengaluru",
+                    "job_country": "India",
+                    "job_apply_link": "https://example.com/jobs/data-analyst",
+                    "job_posted_at_datetime_utc": published,
+                    "job_required_experience": {"required_experience_in_months": 6},
+                    "job_description": "Freshers welcome.",
+                },
+            ]
+        }
+
+        with patch.dict(os.environ, {"RAPIDAPI_KEY": "test-key"}):
+            with patch(
+                "collectors.live_job_collector.urllib.request.urlopen",
+                return_value=nullcontext(io.BytesIO(json.dumps(data).encode("utf-8"))),
+            ):
+                jobs = fetch_live_jsearch_jobs()
+
+        self.assertTrue(jobs)
+        self.assertTrue(all(job["title"] == "Data Scientist" for job in jobs))
+        self.assertTrue(all(job["min_years_experience"] == 0 for job in jobs))
+        self.assertTrue(all("No experience required." in job["raw_description"] for job in jobs))
 
     def test_experience_requirement_wins_over_fresher_claim(self):
-        for requirement in ("5 years of experience", "3-5 years experience"):
+        for requirement in ("3 years of experience", "0-3 years experience", "1-2 years experience"):
             with self.subTest(requirement=requirement):
                 result = score_job({
                     "title": "Junior Data Analyst",
@@ -208,7 +292,7 @@ class EntryLevelConditionsTests(unittest.TestCase):
                     "raw_description": f"Freshers welcome. Requires {requirement}.",
                 }, PROFILE)
                 self.assertTrue(result["rejected"])
-                self.assertIn("max allowed: 4 years", result["rejection_reason"])
+                self.assertIn("zero-year eligibility", result["rejection_reason"])
 
 
 if __name__ == "__main__":

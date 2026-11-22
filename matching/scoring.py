@@ -1,6 +1,12 @@
 import re
 from matching.management_roles import is_entry_management_title
-from matching.experience import experience_requirement_ranges, has_explicit_fresher_signal
+from matching.experience import (
+    DEFAULT_MAX_EXPERIENCE_YEARS,
+    experience_requirement_ranges,
+    has_explicit_fresher_signal,
+    has_explicit_zero_experience_signal,
+    meets_fresher_experience_rule,
+)
 
 def flatten_skills(skills: dict) -> dict:
     flat = {}
@@ -75,6 +81,7 @@ def score_job(job: dict, profile: dict) -> dict:
     title = job.get("title", "").lower()
     seniority = job.get("seniority", "").lower()
     min_exp = job.get("min_years_experience")
+    max_exp = job.get("max_years_experience")
     hours_ago = job.get("hours_ago")
     url = job.get("url", "").lower()
 
@@ -180,26 +187,51 @@ def score_job(job: dict, profile: dict) -> dict:
                     "rejection_reason": f"Description contains excluded domain/stale keyword: '{bad}'"
                 }
 
+    max_allowed_exp = profile.get("job_filters", {}).get(
+        "max_experience_years", DEFAULT_MAX_EXPERIENCE_YEARS
+    )
+
     # Older fallback-parser feed entries stored zero years when requirements were absent.
     if job.get("analysis_method") == "fallback":
         experience_ranges = experience_requirement_ranges(full_text)
         if experience_ranges:
             min_exp = min(lower for lower, _ in experience_ranges)
             max_exp = max(upper for _, upper in experience_ranges)
-        elif has_explicit_fresher_signal(full_text):
+        elif has_explicit_zero_experience_signal(full_text):
             min_exp = 0
             max_exp = None
         else:
             min_exp = None
             max_exp = None
 
-    # 2. Enforce the configured experience cap without requiring a fresher label.
-    max_allowed_exp = profile.get("job_filters", {}).get("max_experience_years", 4)
+    if profile.get("job_filters", {}).get("pure_freshers_only", False):
+        if not meets_fresher_experience_rule(
+            f"{full_text} {seniority}",
+            max_allowed_exp,
+            min_years_experience=min_exp,
+        ):
+            return {
+                "rejected": True,
+                "final_score": 0.0,
+                "rejection_reason": (
+                    f"Requires an explicit fresher/zero-year signal and no more than "
+                    f"{max_allowed_exp} years with zero-year eligibility"
+                )
+            }
+
+    # 2. Enforce the configured experience cap.
     if min_exp is not None and min_exp > max_allowed_exp:
         return {
             "rejected": True,
             "final_score": 0.0,
             "rejection_reason": f"Requires {min_exp} years experience (max allowed: {max_allowed_exp} years)"
+        }
+
+    if max_exp is not None and max_exp > max_allowed_exp:
+        return {
+            "rejected": True,
+            "final_score": 0.0,
+            "rejection_reason": f"Requires up to {max_exp} years experience (max allowed: {max_allowed_exp} years)"
         }
 
     over_cap = next(

@@ -192,7 +192,8 @@ def run_hourly_sync():
         except Exception:
             return True
 
-    # Check due sources (Remotive every 1h, others every 30m-1h)
+    # Check due sources (LinkedIn and other rate-limited feeds at most hourly)
+    include_linkedin = source_is_due(data.get("last_linkedin_sync"), "last_linkedin_sync", cooldown_hours=1)
     include_remotive = source_is_due(data.get("last_remotive_sync"), "last_remotive_sync", cooldown_hours=1)
     include_himalayas = source_is_due(data.get("last_himalayas_sync"), "last_himalayas_sync", cooldown_hours=1)
     include_adzuna = source_is_due(data.get("last_adzuna_sync"), "last_adzuna_sync", cooldown_hours=1)
@@ -201,11 +202,14 @@ def run_hourly_sync():
     # 1. Collect dated listings from the available public feeds.
     print(f"[{timestamp_str}] Scraping & aggregating live job boards...")
     live_scraped_jobs = collect_and_score_all_live_jobs(
+        include_linkedin=include_linkedin,
         include_remotive=include_remotive,
         include_himalayas=include_himalayas,
         include_adzuna=include_adzuna,
         include_jsearch=include_jsearch,
     )
+    if include_linkedin:
+        data["last_linkedin_sync"] = timestamp_str
     if include_remotive:
         data["last_remotive_sync"] = timestamp_str
     if include_himalayas:

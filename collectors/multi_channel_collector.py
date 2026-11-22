@@ -1,7 +1,7 @@
 """RemoteOK API collection and identification of legacy Google News RSS cards."""
 
 from matching.management_roles import has_excluded_title
-from matching.experience import exceeds_experience_cap
+from matching.experience import meets_fresher_experience_rule
 import re
 import json
 import urllib.request
@@ -39,14 +39,14 @@ TARGET_KEYWORDS = [
 ]
 
 def is_fresher_eligible(title: str, text: str = "") -> bool:
-    """Accept roles with unspecified experience or requirements up to four years."""
+    """Require a fresher signal and a zero-to-two-year experience range."""
     t_low = title.lower()
     
     # Exclude senior roles
     if has_excluded_title(t_low, EXCLUDE_TITLE_WORDS):
         return False
         
-    return not exceeds_experience_cap(f"{t_low} {text or ''}", 4)
+    return meets_fresher_experience_rule(f"{t_low} {text or ''}")
 
 def parse_rss_listing(raw_title: str, link: str, pub_date_str: str, domain: str, platform_name: str, category_name: str):
     """Robustly extracts clean job title, company, location, and metadata from Google RSS news item."""
@@ -129,7 +129,7 @@ def parse_rss_listing(raw_title: str, link: str, pub_date_str: str, domain: str,
         target_url = f"https://internshala.com/internships/{q_enc}-internship/"
     elif "hirist.tech" in domain:
         q_enc = urllib.parse.quote_plus(title)
-        target_url = f"https://www.hirist.tech/search?keyword={q_enc}&exp=0-4"
+        target_url = f"https://www.hirist.tech/search?keyword={q_enc}&exp=0-2"
     elif "instahyre.com" in domain:
         q_enc = urllib.parse.quote_plus(f"{title} {company}".strip())
         target_url = f"https://www.instahyre.com/jobs-search?search={q_enc}"

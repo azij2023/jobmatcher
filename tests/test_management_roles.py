@@ -16,7 +16,7 @@ class ManagementRoleTests(unittest.TestCase):
     def job(self, title, years=0):
         return dict(title=title, company='Example', location='Bengaluru, India',
                     url='https://example.com/jobs/123', hours_ago=1,
-                    raw_description='Fresh graduates welcome. Python, SQL and communication required.',
+                    raw_description='Fresh graduates welcome; 0-2 years experience. Python, SQL and communication required.',
                     min_years_experience=years, seniority='manager' if 'manager' in title.lower() else 'fresher',
                     required_skills=['python', 'sql', 'communication'])
 
@@ -31,8 +31,10 @@ class ManagementRoleTests(unittest.TestCase):
         ]:
             with self.subTest(title=title):
                 self.assertTrue(is_relevant_role(title))
-                self.assertTrue(is_fresher_eligible(title))
-                self.assertTrue(_is_entry_level_listing(title, self.job(title)['seniority'], 'Fresh graduates welcome.'))
+                self.assertTrue(is_fresher_eligible(title, self.job(title)['raw_description']))
+                self.assertTrue(_is_entry_level_listing(
+                    title, self.job(title)['seniority'], 'Fresh graduates welcome; 0-2 years experience.'
+                ))
                 result = score_job(self.job(title), self.profile)
                 self.assertFalse(result['rejected'], result)
                 self.assertEqual(result['category'], category)
@@ -51,6 +53,9 @@ class ManagementRoleTests(unittest.TestCase):
             ('People Analytics Intern', 'Strategy / Programs'),
             ('Financial Analytics Analyst', 'Decision Science'),
             ('Financial Analytics Intern', 'Decision Science'),
+            ('Financial Analyst', 'Decision Science'),
+            ('Finance Analyst', 'Decision Science'),
+            ('Financial Planning Analyst', 'Decision Science'),
             ('Finance Data Analyst', 'Decision Science'),
             ('Supply Chain Analytics Analyst', 'OR / Optimization'),
             ('Supply Chain Analytics Intern', 'OR / Optimization'),
@@ -60,8 +65,10 @@ class ManagementRoleTests(unittest.TestCase):
         ]:
             with self.subTest(title=title):
                 self.assertTrue(is_relevant_role(title))
-                self.assertTrue(is_fresher_eligible(title))
-                self.assertTrue(_is_entry_level_listing(title, 'fresher', 'Fresh graduates welcome.'))
+                self.assertTrue(is_fresher_eligible(title, self.job(title)['raw_description']))
+                self.assertTrue(_is_entry_level_listing(
+                    title, 'fresher', 'Fresh graduates welcome; 0-2 years experience.'
+                ))
                 result = score_job(self.job(title), self.profile)
                 self.assertFalse(result['rejected'], result)
                 self.assertEqual(result['category'], category)
@@ -71,15 +78,19 @@ class ManagementRoleTests(unittest.TestCase):
                              ('Associate AI Product Manager', 5)]:
             with self.subTest(title=title, years=years):
                 self.assertTrue(score_job(self.job(title, years), self.profile)['rejected'])
-        for title, years in [('Junior Analytics Manager', 2), ('Associate AI Product Manager', 1)]:
+        for title, years in [('Junior Analytics Manager', 0), ('Associate AI Product Manager', 0)]:
             with self.subTest(title=title, years=years):
                 self.assertFalse(score_job(self.job(title, years), self.profile)['rejected'])
 
-    def test_collectors_enforce_the_four_year_cap(self):
-        self.assertTrue(is_fresher_eligible('Data Analyst', 'Requires 4 years of experience.'))
-        self.assertFalse(is_fresher_eligible('Data Analyst', 'Requires 5 years of experience.'))
-        self.assertTrue(_is_entry_level_listing('Data Analyst', '', 'Requires 4 years of experience.'))
-        self.assertFalse(_is_entry_level_listing('Data Analyst', '', 'Requires 5 years of experience.'))
+    def test_collectors_require_zero_year_signal_and_enforce_two_year_cap(self):
+        valid = 'Fresher role; 0-2 years of experience.'
+        self.assertTrue(is_fresher_eligible('Data Analyst', valid))
+        self.assertFalse(is_fresher_eligible('Data Analyst', 'Requires 2 years of experience.'))
+        self.assertFalse(is_fresher_eligible('Data Analyst', 'Fresher role; 1-2 years of experience.'))
+        self.assertFalse(is_fresher_eligible('Data Analyst', 'Fresher role; 0-3 years of experience.'))
+        self.assertTrue(_is_entry_level_listing('Data Analyst', '', valid))
+        self.assertFalse(_is_entry_level_listing('Data Analyst', '', 'Analyze business data.'))
+        self.assertFalse(_is_entry_level_listing('Data Analyst', '', 'Fresher role; 1-2 years of experience.'))
 
     def test_unrelated_management_roles_are_not_targeted(self):
         self.assertFalse(is_relevant_role('Retail Management Trainee'))

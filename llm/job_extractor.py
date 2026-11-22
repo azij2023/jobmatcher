@@ -2,7 +2,7 @@ import json
 import re
 import urllib.error
 from llm.groq_client import GroqClient
-from matching.experience import experience_requirement_ranges, has_explicit_fresher_signal
+from matching.experience import experience_requirement_ranges, has_explicit_zero_experience_signal
 
 SYSTEM_PROMPT = """You are an expert AI talent recruiter and job parser.
 Analyze the job description and extract key attributes into valid JSON.
@@ -124,7 +124,7 @@ class JobExtractor:
             min_exp = min(lower for lower, _ in experience_ranges)
             max_exp = max(upper for _, upper in experience_ranges)
         else:
-            min_exp = 0 if has_explicit_fresher_signal(f"{title} {text}") else None
+            min_exp = 0 if has_explicit_zero_experience_signal(f"{title} {text}") else None
             max_exp = None
 
         # Skill keyword scanning

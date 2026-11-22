@@ -19,6 +19,7 @@ import datetime
 import html as html_lib
 import os
 import sys
+import threading
 import time
 from collections import Counter
 import xml.etree.ElementTree as ET
@@ -30,7 +31,7 @@ if ROOT_DIR not in sys.path:
     sys.path.insert(0, ROOT_DIR)
 
 from matching.management_roles import has_excluded_title, is_entry_management_title
-from matching.experience import exceeds_experience_cap
+from matching.experience import meets_fresher_experience_rule
 from matching.scoring import score_job
 from llm.analysis import JobAnalyzer
 from matching.semantic_gaps import enrich_job_semantic_gaps
@@ -184,7 +185,7 @@ def _is_entry_level_listing(title: str, seniority: str, description: str = "") -
         return False
     if has_excluded_title(level_text, ("mid level", "mid-level", "senior", "lead", "principal", "director")) or ("manager" in level_text and not is_entry_management_title(title_text)):
         return False
-    if exceeds_experience_cap(combined_text, 4):
+    if not meets_fresher_experience_rule(combined_text):
         return False
 
     return True
@@ -223,10 +224,10 @@ def get_remote_location_label(location: str) -> str:
         return "Remote (APAC)"
     return "Remote (Worldwide)"
 
-def fetch_live_linkedin_jobs(max_queries: int = 30) -> list:
+def fetch_live_linkedin_jobs(max_queries: int = 32) -> list:
     """
-    Fetches live verified entry-level job postings from LinkedIn public guest endpoint using BeautifulSoup.
-    Filters: India location, Past 24–48 Hours (strictly 5 min to 2 days), Entry-level / Internships.
+    Fetches live verified early-career job postings from LinkedIn's public guest endpoint.
+    Filters: India location, past five days, and the configured experience cap.
     """
     try:
         from bs4 import BeautifulSoup
@@ -237,45 +238,50 @@ def fetch_live_linkedin_jobs(max_queries: int = 30) -> list:
         "associate AI product manager",
         "data product management intern",
         "analytics management trainee",
-        "data science project coordinator fresher",
-        "AI program coordinator entry level",
-        "data scientist fresher",
-        "data analyst fresher",
+        "data science project coordinator India",
+        "AI program coordinator India",
+        "data scientist India",
+        "data analyst India",
         "associate data scientist",
         "junior data scientist",
         "junior data analyst",
-        "graduate trainee data",
+        "business strategy analyst India",
         "machine learning intern",
         "applied scientist intern",
         "data science intern",
         "data analyst intern",
         "ai intern",
-        "applied scientist fresher",
-        "decision scientist fresher",
-        "business analyst fresher",
-        "strategy analyst fresher India",
-        "marketing analyst fresher India",
-        "operations analyst fresher India",
-        "HR people analytics analyst India",
-        "financial analytics analyst fresher India",
-        "supply chain analytics analyst fresher India",
-        "decision science analyst fresher India",
-        "quantitative analyst entry level India",
-        "forecasting analyst entry level India",
-        "time series analyst fresher India",
-        "demand planning analyst fresher India",
+        "applied scientist India",
+        "decision scientist India",
+        "business analyst data India",
+        "strategy analyst India",
+        "marketing analyst India",
+        "operations analyst India",
+        "HR analytics analyst India",
+        "people analytics analyst India",
+        "financial analytics analyst India",
+        "financial analyst India",
+        "supply chain analyst India",
+        "decision science analyst India",
+        "quantitative analyst India",
+        "forecasting analyst India",
+        "time series analyst India",
+        "demand planning analyst India",
     ][:max_queries]
+
+    rate_limited = threading.Event()
 
     def fetch_query(q):
         live_jobs = []
         seen = set()
+        if rate_limited.is_set():
+            return live_jobs
         now = datetime.datetime.now(datetime.timezone.utc)
         params = urllib.parse.urlencode({
             "keywords": q,
             "location": "India",
-            "f_TPR": "r172800",  # discover the last 48 hours first
+            "f_TPR": "r432000",  # Match the feed's five-day freshness window.
             "sortBy": "DD",  # most recent postings first
-            "f_E": "1,2,3",     # Internship, entry level, and associate
             "start": 0
         })
         url = f"https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search?{params}"
@@ -338,25 +344,26 @@ def fetch_live_linkedin_jobs(max_queries: int = 30) -> list:
         except urllib.error.HTTPError as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
             if e.code == 429:
-                time.sleep(1.5)
+                rate_limited.set()
         except Exception as e:
             print(f"[LiveCollector] Notice while querying LinkedIn '{q}': {e}")
         finally:
-            time.sleep(1.2)
+            time.sleep(2.0)
 
         return live_jobs
 
-    from concurrent.futures import ThreadPoolExecutor
     seen, live_jobs = set(), []
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        for results in executor.map(fetch_query, queries):
-            for job in results:
-                if job['url'] not in seen:
-                    seen.add(job['url'])
-                    live_jobs.append(job)
+    for query in queries:
+        for job in fetch_query(query):
+            if job['url'] not in seen:
+                seen.add(job['url'])
+                live_jobs.append(job)
+        if rate_limited.is_set():
+            break
 
-    # The search card's f_E filter is not evidence of the employer's requirements.
-    # Only keep postings whose public detail page provides an actual description.
+    # Search terms discover candidates; the public detail page determines eligibility.
+    from concurrent.futures import ThreadPoolExecutor
+
     def enrich(job):
         try:
             req = urllib.request.Request(job['url'], headers=HEADERS)
@@ -388,7 +395,7 @@ def fetch_live_linkedin_jobs(max_queries: int = 30) -> list:
         except (OSError, ValueError, TypeError):
             return None
 
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         verified = [job for job in executor.map(enrich, live_jobs) if job is not None]
     return sorted(verified, key=lambda job: job['hours_ago'])
 
@@ -472,16 +479,17 @@ def fetch_live_jsearch_jobs() -> list:
         "entry level data analyst India",
         "junior data scientist India",
         "machine learning intern India",
-        "AI engineer fresher India",
+        "AI engineer India",
         "associate AI product manager India",
         "analytics management trainee India",
         "data science project coordinator entry level India",
-        "strategy analyst fresher India",
-        "marketing analyst fresher India",
-        "operations analyst fresher India",
-        "people analytics analyst fresher India",
-        "financial analytics analyst fresher India",
-        "supply chain analytics analyst fresher India",
+        "strategy analyst India",
+        "marketing analyst India",
+        "operations analyst India",
+        "people analytics analyst India",
+        "financial analyst India",
+        "finance analyst India",
+        "supply chain analytics analyst India",
     )
     live_jobs = []
     for query in queries:
@@ -517,10 +525,15 @@ def fetch_live_jsearch_jobs() -> list:
             description = html_lib.unescape(job.get("job_description") or "")
             required_experience = job.get("job_required_experience") or {}
             years = required_experience.get("required_experience_in_months")
+            if isinstance(years, (int, float)) and years > 0:
+                continue
+            no_experience_required = (
+                required_experience.get("no_experience_required") is True
+                or years == 0
+            )
             is_entry_level = (
                 _is_entry_level_listing(title, "", description)
-                or required_experience.get("no_experience_required") is True
-                or (isinstance(years, (int, float)) and years <= 12)
+                or no_experience_required
             )
             if not title or not is_entry_level:
                 continue
@@ -560,8 +573,13 @@ def fetch_live_jsearch_jobs() -> list:
                 "source_domain": "jsearch.p.rapidapi.com",
                 "job_publisher": job.get("job_publisher"),
                 "seniority": "junior",
+                "min_years_experience": 0 if no_experience_required else None,
                 "location_unverified": location_unverified,
-                "raw_description": f"{title} at {company}. {description[:1000]}",
+                "raw_description": (
+                    f"{title} at {company}. "
+                    f"{'No experience required. ' if no_experience_required else ''}"
+                    f"{description[:1000]}"
+                ),
                 "is_remote": remote,
                 "is_post": False
             })
@@ -654,6 +672,8 @@ def fetch_live_adzuna_jobs() -> list:
         "operations analyst",
         "people analytics analyst",
         "financial analytics analyst",
+        "financial analyst",
+        "finance analyst",
         "supply chain analyst",
     )
     live_jobs = []
@@ -980,6 +1000,7 @@ def collect_and_score_all_live_jobs(
     include_himalayas: bool = True,
     include_adzuna: bool = True,
     include_jsearch: bool = True,
+    include_linkedin: bool = True,
 ) -> list:
     """
     Runs multi-source live collection (LinkedIn, Naukri, Unstop, Indeed, Remotive, Jobicy),
@@ -997,7 +1018,7 @@ def collect_and_score_all_live_jobs(
     from collectors.multi_channel_collector import fetch_all_channel_jobs, is_unverified_rss_job
     raw_company = fetch_company_jobs()
     raw_unstop = fetch_live_unstop_jobs()
-    raw_linkedin = fetch_live_linkedin_jobs()
+    raw_linkedin = fetch_live_linkedin_jobs() if include_linkedin else []
     raw_multi_channel = fetch_all_channel_jobs()
     raw_remotive = fetch_live_remotive_jobs() if include_remotive else []
     raw_jobicy = fetch_live_jobicy_jobs()

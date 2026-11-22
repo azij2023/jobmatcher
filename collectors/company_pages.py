@@ -2,7 +2,7 @@
 Indian Companies Direct Career Sites & Official ATS Collector
 TargetMatch AI - Direct Requisition Engine
 
-Fetches employer requisitions with requirements up to four years from public
+Fetches employer requisitions with fresher signals and requirements up to two years from public
 Greenhouse, Lever, Ashby and SmartRecruiters feeds. Unavailable boards return
 no results. Dates, descriptions and application URLs come from employer records.
 """
@@ -12,7 +12,11 @@ import urllib.parse
 import json
 import re
 from matching.management_roles import is_entry_management_title
-from matching.experience import exceeds_experience_cap
+from matching.experience import (
+    DEFAULT_MAX_EXPERIENCE_YEARS,
+    exceeds_experience_cap,
+    meets_fresher_experience_rule,
+)
 import datetime
 import html as html_lib
 
@@ -74,7 +78,8 @@ ROLE_KEYWORDS = [
     "strategy analyst", "business strategy analyst", "corporate strategy analyst",
     "marketing analyst", "marketing analytics", "operations analyst", "operations analytics",
     "hr analytics", "human resources analytics", "people analytics", "workforce analytics",
-    "talent analytics", "financial analytics", "finance analytics", "financial data analyst",
+    "talent analytics", "financial analytics", "finance analytics", "financial analyst",
+    "finance analyst", "financial planning analyst", "financial data analyst",
     "finance data analyst", "supply chain analyst", "supply chain analytics", "logistics analyst",
     "inventory analyst", "demand planning analyst", "supply planning analyst",
     "ml engineer", "business analyst", "product manager i", "associate product manager", "apm"
@@ -90,7 +95,7 @@ def is_relevant_role(title: str) -> bool:
     t = title.lower()
     if any(bad in t for bad in EXCLUDE_TITLES):
         return False
-    if exceeds_experience_cap(t, 4):
+    if exceeds_experience_cap(t, DEFAULT_MAX_EXPERIENCE_YEARS):
         return False
     # If title contains 'manager', only allow APM, Product Manager I, or Decision Science / Analytics Manager
     if "manager" in t and not is_entry_management_title(t):
@@ -152,7 +157,7 @@ def _make_job(company_info, title, location, url, description, published, time_s
         return None
     description = _plain_text(description)
     text = f"{title} {description}".lower()
-    if not description or exceeds_experience_cap(text, 4):
+    if not description or not meets_fresher_experience_rule(text):
         return None
     loc = (location or "").lower()
     if not any(city in loc for city in ("india", "bengaluru", "bangalore", "mumbai", "delhi", "noida", "gurugram", "gurgaon", "hyderabad", "pune", "chennai", "kolkata", "ahmedabad", "kochi")):

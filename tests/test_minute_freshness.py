@@ -9,7 +9,9 @@ class MinuteFreshnessTests(unittest.TestCase):
         for minutes in (1, 5, 30, 59):
             with self.subTest(minutes=minutes):
                 before = datetime.datetime.now(datetime.timezone.utc)
-                job = parse_linkedin_post_text(f'Hiring a data scientist fresher. Posted {minutes} minutes ago')
+                job = parse_linkedin_post_text(
+                    f'Hiring a data scientist fresher, 0 years experience required. Posted {minutes} minutes ago'
+                )
                 after = datetime.datetime.now(datetime.timezone.utc)
                 self.assertAlmostEqual(job['hours_ago'], minutes / 60)
                 posted = datetime.datetime.fromisoformat(job['posted_at'].replace('Z', '+00:00'))

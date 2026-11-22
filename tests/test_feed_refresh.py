@@ -40,7 +40,37 @@ class FeedFreshnessTests(unittest.TestCase):
         from urllib.parse import parse_qs, urlsplit
         params = parse_qs(urlsplit(request.call_args.args[0].full_url).query)
         self.assertEqual(params['sortBy'], ['DD'])
-        self.assertEqual(params['f_TPR'], ['r172800'])
+        self.assertEqual(params['f_TPR'], ['r432000'])
+        self.assertNotIn('f_E', params)
+
+    def test_linkedin_stops_searching_after_rate_limit(self):
+        from urllib.error import HTTPError
+
+        with patch(
+            'collectors.live_job_collector.urllib.request.urlopen',
+            side_effect=HTTPError('https://www.linkedin.com/jobs-guest', 429, 'Too Many Requests', {}, None),
+        ) as request, patch('collectors.live_job_collector.time.sleep'):
+            self.assertEqual(fetch_live_linkedin_jobs(max_queries=3), [])
+
+        self.assertEqual(request.call_count, 1)
+
+    def test_pipeline_respects_linkedin_hourly_cooldown(self):
+        last_sync = datetime.datetime.now(datetime.timezone.utc).isoformat()
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / 'docs').mkdir()
+            (root / 'data.json').write_text(
+                json.dumps({'jobs': [], 'last_linkedin_sync': last_sync}),
+                encoding='utf-8',
+            )
+            (root / 'profile.json').write_text('{}', encoding='utf-8')
+            with patch.object(hourly_pipeline, 'ROOT_DIR', folder), \
+                 patch.object(hourly_pipeline, 'collect_and_score_all_live_jobs', return_value=[]) as collect:
+                hourly_pipeline.run_hourly_sync()
+
+            self.assertFalse(collect.call_args.kwargs['include_linkedin'])
+            refreshed = json.loads((root / 'data.json').read_text(encoding='utf-8'))
+            self.assertEqual(refreshed['last_linkedin_sync'], last_sync)
 
     def test_pipeline_keeps_empty_feed_empty_and_never_injects_samples(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -65,7 +95,7 @@ class FeedFreshnessTests(unittest.TestCase):
                 'source_type': 'LinkedIn',
                 'seniority': 'junior',
                 'role_category': 'Data Science',
-                'raw_description': 'Junior data science role in Bengaluru.',
+                'raw_description': 'Fresher data science role; 0-2 years experience in Bengaluru.',
                 'posted_at': now,
                 'hours_ago': 1,
                 'semantic_skill_gap': {},

@@ -8,7 +8,11 @@ founders, recruiters, and tech leads on LinkedIn feeds and posts.
 
 import re
 import datetime
-from matching.experience import experience_requirement_ranges, exceeds_experience_cap
+from matching.experience import (
+    experience_requirement_ranges,
+    has_explicit_zero_experience_signal,
+    meets_fresher_experience_rule,
+)
 
 INDIA_CITIES = [
     "bengaluru", "bangalore", "hyderabad", "pune", "gurgaon", "gurugram",
@@ -118,8 +122,10 @@ def parse_linkedin_post_text(text: str, author: str = "", post_url: str = "") ->
 
     # 4. Detect Experience & Fresher Eligibility
     experience_ranges = experience_requirement_ranges(lower)
-    min_years = experience_ranges[0][0] if experience_ranges else 0
-    is_fresher = not exceeds_experience_cap(lower, 4)
+    min_years = experience_ranges[0][0] if experience_ranges else (
+        0 if has_explicit_zero_experience_signal(lower) else None
+    )
+    is_fresher = meets_fresher_experience_rule(lower)
 
     # 5. Detect Email or Application Link
     email_match = re.search(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+", clean_text)
