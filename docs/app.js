@@ -894,8 +894,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function renderJobs() {
+    let hiddenByHistory = 0;
     let filtered = jobs.filter(job => {
-      if (isJobApplied(job) || isJobRejected(job) || isJobSpam(job)) return false;
       // Shortlist filter
       if (currentFilter.onlySaved) {
         const jId = getJobId(job);
@@ -1034,6 +1034,11 @@ document.addEventListener("DOMContentLoaded", () => {
         return false; // Strictly exclude full-time jobs from internships view
       }
 
+      if (isJobApplied(job) || isJobRejected(job) || isJobSpam(job)) {
+        hiddenByHistory++;
+        return false;
+      }
+
       return true;
     });
 
@@ -1099,6 +1104,8 @@ document.addEventListener("DOMContentLoaded", () => {
           emptyDesc.textContent = "Click the ★ star on any job card to bookmark roles you want to save and track.";
         } else if (jobs.length === 0) {
           emptyDesc.textContent = "Listings appear here after the scheduled feeds return jobs with a source-provided posting date. Collection is scheduled every 5 minutes. New listings depend on source availability.";
+        } else if (hiddenByHistory > 0) {
+          emptyDesc.textContent = "Listings matching these filters may already be in Applied Jobs, Rejected Jobs, or Spam. Check those tabs and restore any role marked by mistake.";
         } else if (currentFilter.maxAgeHours <= 24) {
           emptyDesc.textContent = `No jobs found within the past ${currentFilter.maxAgeHours}h window. Try expanding to Anytime or clearing your search.`;
         } else {
