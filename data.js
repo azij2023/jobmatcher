@@ -678,6 +678,142 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   },
   "jobs": [
     {
+      "role_type": "AI Engineer Intern",
+      "role_category": "ML Engineering",
+      "seniority": "intern",
+      "min_years_experience": 0,
+      "max_years_experience": null,
+      "required_skills": [
+        "python",
+        "machine_learning",
+        "llm",
+        "git",
+        "api",
+        "communication",
+        "ai_project"
+      ],
+      "nice_to_have": [
+        "openai_api",
+        "anthropic_api",
+        "gemini_api",
+        "langchain",
+        "llamaindex",
+        "hugging_face",
+        "sql",
+        "fastapi",
+        "streamlit",
+        "gradio",
+        "github_profile"
+      ],
+      "domain": "Artificial Intelligence",
+      "analysis_method": "llm",
+      "analysis_cached": false,
+      "title": "AI Engineer Intern",
+      "company": "RecruitBots AI",
+      "location": "Hyderabad, Telangana, India",
+      "score": 0.816,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-26T01:05:10Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 24.0284,
+      "relative_time": "1 days ago",
+      "url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
+      "naukri_url": "https://www.naukri.com/ai-engineer-intern-jobs-in-india",
+      "company_url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "company_job_verified": false,
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "is_internship": true,
+      "matched_skills": [
+        "python",
+        "machine_learning",
+        "git",
+        "communication"
+      ],
+      "missing_skills": [
+        "llm",
+        "api",
+        "ai_project"
+      ],
+      "description": "𝗛𝗼𝘄 𝘁𝗼 𝗔𝗽𝗽𝗹𝘆 Apply through LinkedIn Easy Apply, then login to https://candidate.recruitbots.ai/?utm_source=aiei-i-o-h More detailed instructions on onboarding. 𝗔𝗜 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝗻 Company: RecruitBots AI Location: Onsite · Hyderabad Experience: 0 years Type: Internship Salary: ₹15...",
+      "raw_description": "𝗛𝗼𝘄 𝘁𝗼 𝗔𝗽𝗽𝗹𝘆 Apply through LinkedIn Easy Apply, then login to https://candidate.recruitbots.ai/?utm_source=aiei-i-o-h More detailed instructions on onboarding. 𝗔𝗜 𝗘𝗻𝗴𝗶𝗻𝗲𝗲𝗿 𝗜𝗻𝘁𝗲𝗿𝗻 Company: RecruitBots AI Location: Onsite · Hyderabad Experience: 0 years Type: Internship Salary: ₹15–30k/month stipend 𝗔𝗯𝗼𝘂𝘁 𝘁𝗵𝗲 𝗿𝗼𝗹𝗲 We are looking for an AI Engineer Intern to join our team and get hands-on experience building real AI features with large language models, working from our Hyderabad office. This internship suits final-year students and recent graduates who want to learn by building and shipping work alongside experienced engineers. 𝗥𝗲𝘀𝗽𝗼𝗻𝘀𝗶𝗯𝗶𝗹𝗶𝘁𝗶𝗲𝘀 Assist in building AI features such as chatbots, document Q&A, and summarisation using LLM APIs. Write and test prompts and record what works and what does not. Build small RAG prototypes using embeddings and vector databases. Clean and prepare text data for AI pipelines. Test AI outputs for accuracy and report issues to the team. Write clean Python code and document your work. Present demos of your work to the team and take feedback. Learn from senior engineers through code reviews and regular guidance. 𝗥𝗲𝗾𝘂𝗶𝗿𝗲𝗱 𝗦𝗸𝗶𝗹𝗹𝘀 Final-year student or recent graduate in Computer Science, AI/ML, Data Science, IT, or a related field. Good Python programming skills. Basic understanding of machine learning and LLM concepts. At least one project, whether academic, personal, or open source, that uses AI or ML. Familiarity with Git and basic API concepts. Strong willingness to learn and take feedback. Good communication skills. 𝗚𝗼𝗼𝗱 𝘁𝗼 𝗛𝗮𝘃𝗲 Experience calling LLM APIs such as OpenAI, Anthropic, or Gemini. Familiarity with LangChain, LlamaIndex, or Hugging Face. Basic knowledge of SQL or FastAPI. Demo apps built with Streamlit or Gradio. A GitHub profile showing your projects. 𝗘𝗱𝘂𝗰𝗮𝘁𝗶𝗼𝗻 Pursuing or recently completed B.Tech, B.E., M.Tech, MCA, or BSc in Computer Science, AI/ML, Data Science, or a related field. Strong projects may be considered in place of a directly related degree. 𝗪𝗵𝗮𝘁 𝗪𝗲'𝗿𝗲 𝗟𝗼𝗼𝗸𝗶𝗻𝗴 𝗙𝗼𝗿 Curious learners who build projects without being asked. People who take feedback well and improve quickly. Attention to detail and care for code quality. Interest in growing into a full-time AI engineer.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "method": "template",
+        "fit_percentage": "92% Core Match",
+        "gap_percentage": "8% Skill Gap",
+        "gaps": [
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For RecruitBots AI's AI Engineer Intern: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "analysis_model": "openai/gpt-oss-20b",
+      "skill_match_rate": 0.57,
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Intern+RecruitBots+AI&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
+          "Naukri": "https://www.naukri.com/ai-engineer-intern-jobs-in-india?k=AI+Engineer+Intern+RecruitBots+AI",
+          "Indeed India": "https://in.indeed.com/jobs?q=AI+Engineer+Intern+RecruitBots+AI&l=India&fromage=1",
+          "Foundit": "https://www.foundit.in/srp/results?query=AI+Engineer+Intern+RecruitBots+AI&locations=India",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-ai-engineer-intern-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
+          "Shine": "https://www.shine.com/job-search/ai-engineer-intern-jobs-in-india",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=AI+Engineer+Intern+RecruitBots+AI"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=AI+Engineer+Intern&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=AI+Engineer+Intern+RecruitBots+AI",
+          "Cutshort": "https://cutshort.io/jobs?query=AI+Engineer+Intern",
+          "Hirist": "https://www.hirist.tech/search?keyword=AI+Engineer+Intern&exp=0-2",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=AI+Engineer+Intern"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/ai-engineer-intern-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=AI+Engineer+Intern",
+          "LetsIntern": "https://www.letsintern.com/internships/ai-engineer-intern-internships",
+          "Apna": "https://apna.co/jobs?q=AI+Engineer+Intern"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=AI+Engineer+Intern",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-ai-engineer-intern-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=AI+Engineer+Intern",
+          "Remotive": "https://remotive.com/remote-jobs?search=AI+Engineer+Intern",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=AI+Engineer+Intern",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=RecruitBots+AI+careers"
+      }
+    },
+    {
       "role_type": "data analyst internship",
       "role_category": "Data Science",
       "seniority": "intern",
@@ -699,7 +835,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-25T06:44:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 34.6737,
+      "hours_ago": 42.3765,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1827401",
       "direct_job_url": "https://unstop.com/internships/1827401",
@@ -812,7 +948,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-25T04:58:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 36.4451,
+      "hours_ago": 44.1479,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1827101",
       "direct_job_url": "https://unstop.com/internships/1827101",
@@ -904,6 +1040,147 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       }
     },
     {
+      "role_type": "growth_and_strategy_analyst",
+      "role_category": "strategy / programs",
+      "seniority": "junior",
+      "min_years_experience": 0,
+      "max_years_experience": 2,
+      "required_skills": [
+        "generative_ai",
+        "advanced_search_tools",
+        "prompt_engineering",
+        "microsoft_excel",
+        "data_manipulation",
+        "spreadsheet_management",
+        "business_modelling",
+        "formatting",
+        "communication_skills"
+      ],
+      "nice_to_have": [
+        "basic_designing_skills",
+        "presentation_tools",
+        "documentation_skills",
+        "report_preparation_skills",
+        "analytical_skills",
+        "problem_solving",
+        "information_organisation"
+      ],
+      "domain": "business",
+      "analysis_method": "llm",
+      "analysis_cached": false,
+      "title": "Growth and Strategy Analyst",
+      "company": "Sisir Radar Private Limited",
+      "location": "Kolkata, West Bengal, India",
+      "score": 0.649,
+      "tier": 6,
+      "category": "Strategy / Programs",
+      "priority": "Primary",
+      "badge": "6",
+      "posted_at": "2026-11-25T01:05:20Z",
+      "posted_at_source": "relative_time",
+      "hours_ago": 48.0257,
+      "relative_time": "2 days ago",
+      "url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
+      "direct_job_url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
+      "linkedin_url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
+      "naukri_url": "https://www.naukri.com/growth-and-strategy-analyst-jobs-in-india",
+      "company_url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
+      "source_type": "LinkedIn",
+      "source_domain": "linkedin.com",
+      "company_job_verified": false,
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "is_internship": false,
+      "matched_skills": [],
+      "missing_skills": [
+        "generative_ai",
+        "advanced_search_tools",
+        "prompt_engineering",
+        "microsoft_excel",
+        "data_manipulation",
+        "spreadsheet_management",
+        "business_modelling",
+        "formatting",
+        "communication_skills"
+      ],
+      "description": "Key Responsibilities ● AI-Driven Business Research: Leverage advanced AI platforms and specialised research tools to systematically scan, extract, and synthesise high-volume technical documentation, industry resources, and commercial datasets. ● Meticulous Data Management: Source...",
+      "raw_description": "Key Responsibilities ● AI-Driven Business Research: Leverage advanced AI platforms and specialised research tools to systematically scan, extract, and synthesise high-volume technical documentation, industry resources, and commercial datasets. ● Meticulous Data Management: Source, clean, organise, and structure data from internal databases and external repositories with a high degree of accuracy, identifying discrepancies and maintaining data integrity. ● Commercial Writing & Documentation: Convert complex research findings into precise, well-structured business briefs, executive summaries, reports, and presentations for leadership and decision-making. ● Data Analysis & Reporting: Analyse information, identify trends, interpret data, and present meaningful insights to support business decisions. ● Spreadsheet Management: Maintain, organise, and manage spreadsheets, ensuring accurate data entry, formatting, tracking, and reporting. Requirements ● Education: Bachelor's or Master's degree in Commerce or Economics preferred. Candidates with academic backgrounds in Mathematics, Physics, or Chemistry may also be considered. ● Experience: 0–2 years of experience in corporate analytics, a startup, business research, or a related environment. Prior exposure to deep-tech, aerospace, or defence is advantageous. ● AI Literacy: Familiarity with generative AI platforms, advanced search tools, and prompt engineering for research and workflow optimisation. ● Technical Skills: Good to advanced proficiency in Microsoft Excel, including data manipulation, spreadsheet management, business modelling, and formatting. ● Communication Skills: Strong verbal and written communication skills, with the ability to communicate ideas clearly and professionally. ● Personality & Professionalism: A confident, presentable, and professional personality with a proactive approach to work and the ability to interact effectively with different stakeholders. Good to Have ● Basic designing skills and familiarity with tools used for creating professional presentations, reports, and business documents. ● Strong documentation and report preparation skills. ● Hands-on experience in creating, managing, and maintaining spreadsheets. ● Good analytical and problem-solving abilities. ● Ability to organise large volumes of information and present it in a structured, easy-to-understand format.",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": null,
+      "end_date": null,
+      "semantic_skill_gap": {
+        "method": "template",
+        "fit_percentage": "95% Core Match",
+        "gap_percentage": "5% Skill Gap",
+        "gaps": [
+          {
+            "skill": "3-Statement Financial & Unit Economics Modeling",
+            "impact": "High Impact",
+            "category": "Financial Analysis",
+            "action": "Build a dynamic Excel DCF / Unit Economics model tracking CAC, LTV, payback period, and contribution margin."
+          },
+          {
+            "skill": "Market Sizing & TAM Estimation (Top-Down/Bottom-Up)",
+            "impact": "Medium Impact",
+            "category": "Market Intelligence",
+            "action": "Calculate Total Addressable Market (TAM) for a new vertical with verifiable census and commerce benchmarks."
+          },
+          {
+            "skill": "Executive Board Deck & Memo Synthesis",
+            "impact": "High Impact",
+            "category": "Executive Communication",
+            "action": "Draft an executive 5-slide strategy proposal recommending a market expansion with risk mitigation scenarios."
+          }
+        ],
+        "bridge_roadmap": "For Sisir Radar Private Limited's Growth and Strategy Analyst: Create an end-to-end merchant growth unit economics model in Excel with automated sensitivity tables and a 5-slide strategy synthesis deck.",
+        "interview_talk_track": "I bridge data pipelines and executive decision-making by distilling complex transactional metrics into clear unit economics, sensitivity curves, and strategic board presentations."
+      },
+      "analysis_model": "openai/gpt-oss-20b",
+      "skill_match_rate": 0.0,
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Growth+and+Strategy+Analyst+Sisir+Radar+Private+Limited&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
+          "Naukri": "https://www.naukri.com/growth-and-strategy-analyst-jobs-in-india?k=Growth+and+Strategy+Analyst+Sisir+Radar+Private+Limited",
+          "Indeed India": "https://in.indeed.com/jobs?q=Growth+and+Strategy+Analyst+Sisir+Radar+Private+Limited&l=India&fromage=1",
+          "Foundit": "https://www.foundit.in/srp/results?query=Growth+and+Strategy+Analyst+Sisir+Radar+Private+Limited&locations=India",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-growth-and-strategy-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
+          "Shine": "https://www.shine.com/job-search/growth-and-strategy-analyst-jobs-in-india",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Growth+and+Strategy+Analyst+Sisir+Radar+Private+Limited"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Growth+and+Strategy+Analyst&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Growth+and+Strategy+Analyst+Sisir+Radar+Private+Limited",
+          "Cutshort": "https://cutshort.io/jobs?query=Growth+and+Strategy+Analyst",
+          "Hirist": "https://www.hirist.tech/search?keyword=Growth+and+Strategy+Analyst&exp=0-2",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Growth+and+Strategy+Analyst"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/growth-and-strategy-analyst-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Growth+and+Strategy+Analyst",
+          "LetsIntern": "https://www.letsintern.com/internships/growth-and-strategy-analyst-internships",
+          "Apna": "https://apna.co/jobs?q=Growth+and+Strategy+Analyst"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Growth+and+Strategy+Analyst",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-growth-and-strategy-analyst-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Growth+and+Strategy+Analyst",
+          "Remotive": "https://remotive.com/remote-jobs?search=Growth+and+Strategy+Analyst",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Growth+and+Strategy+Analyst",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Sisir+Radar+Private+Limited+careers"
+      }
+    },
+    {
       "role_type": "internship",
       "role_category": "data science",
       "seniority": "intern",
@@ -925,7 +1202,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T17:15:01Z",
       "posted_at_source": "published_at",
-      "hours_ago": 48.1615,
+      "hours_ago": 55.8643,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1826166",
       "direct_job_url": "https://unstop.com/internships/1826166",
@@ -1037,7 +1314,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-24T14:18:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 51.1071,
+      "hours_ago": 58.8098,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1813142",
       "direct_job_url": "https://unstop.com/internships/1813142",
@@ -1151,7 +1428,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T13:41:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 51.7243,
+      "hours_ago": 59.427,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1826454",
       "direct_job_url": "https://unstop.com/internships/1826454",
@@ -1263,7 +1540,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-24T11:36:13Z",
       "posted_at_source": "published_at",
-      "hours_ago": 53.8082,
+      "hours_ago": 61.5109,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1812989",
       "direct_job_url": "https://unstop.com/internships/1812989",
@@ -1377,7 +1654,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T06:56:47Z",
       "posted_at_source": "published_at",
-      "hours_ago": 58.4654,
+      "hours_ago": 66.1682,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1824395",
       "direct_job_url": "https://unstop.com/internships/1824395",
@@ -1490,7 +1767,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-22T16:46:08Z",
       "posted_at_source": "published_at",
-      "hours_ago": 96.6429,
+      "hours_ago": 104.3457,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1823388",
       "direct_job_url": "https://unstop.com/internships/1823388",
@@ -1603,7 +1880,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T13:53:36Z",
       "posted_at_source": "published_at",
-      "hours_ago": 99.5185,
+      "hours_ago": 107.2212,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1775184",
       "direct_job_url": "https://unstop.com/internships/1775184",
@@ -1726,7 +2003,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T12:26:13Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 100.9749,
+      "hours_ago": 108.6776,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
@@ -1876,7 +2153,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T10:26:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 102.9754,
+      "hours_ago": 110.6782,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
@@ -2020,7 +2297,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T05:52:21Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 107.5393,
+      "hours_ago": 115.242,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
@@ -2128,19 +2405,19 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     }
   ],
   "stats": {
-    "total_jobs_evaluated": 12,
-    "primary_matches": 11,
-    "secondary_matches": 1,
+    "total_jobs_evaluated": 14,
+    "primary_matches": 12,
+    "secondary_matches": 2,
     "adjacent_matches": 0,
-    "full_time_matches": 1,
-    "internship_matches": 11,
-    "last_sync": "2026-11-26T17:24:42Z"
+    "full_time_matches": 2,
+    "internship_matches": 12,
+    "last_sync": "2026-11-27T01:06:55Z"
   },
-  "total_jobs": 12,
-  "last_updated": "2026-11-26T17:24:42Z",
-  "last_remotive_sync": "2026-11-26T17:23Z",
-  "last_himalayas_sync": "2026-11-26T17:23Z",
-  "last_adzuna_sync": "2026-11-26T17:23Z",
-  "last_jsearch_sync": "2026-11-26T17:23Z",
-  "last_linkedin_sync": "2026-11-26T17:23Z"
+  "total_jobs": 14,
+  "last_updated": "2026-11-27T01:06:55Z",
+  "last_remotive_sync": "2026-11-27T01:04Z",
+  "last_himalayas_sync": "2026-11-27T01:04Z",
+  "last_adzuna_sync": "2026-11-27T01:04Z",
+  "last_jsearch_sync": "2026-11-27T01:04Z",
+  "last_linkedin_sync": "2026-11-27T01:04Z"
 };
