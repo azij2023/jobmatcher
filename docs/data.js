@@ -678,6 +678,123 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   },
   "jobs": [
     {
+      "role_type": "ai engineer internship",
+      "role_category": "ml_engineering",
+      "seniority": "intern",
+      "domain": "artificial_intelligence",
+      "min_years_experience": 0,
+      "max_years_experience": null,
+      "required_skills": [
+        "rust"
+      ],
+      "nice_to_have": [],
+      "analysis_method": "llm",
+      "analysis_model": "openai/gpt-oss-20b",
+      "analysis_cached": false,
+      "title": "Rust AI Engineer Internship",
+      "company": "Amund AI",
+      "location": "India",
+      "score": 0.568,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-26T18:31:01Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 15.1041,
+      "relative_time": "15 hours ago",
+      "url": "https://unstop.com/internships/1829641",
+      "direct_job_url": "https://unstop.com/internships/1829641",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Rust+AI+Engineer+Internship+Amund+AI&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
+      "naukri_url": "https://www.naukri.com/rust-ai-engineer-internship-jobs-in-india",
+      "company_url": "https://unstop.com/internships/1829641",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "company_job_verified": false,
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "is_internship": true,
+      "matched_skills": [],
+      "missing_skills": [
+        "rust"
+      ],
+      "description": "Rust AI Engineer Internship at Amund AI in India. Active hiring opportunity on Unstop (Deadline: 2026-12-10).",
+      "raw_description": "Rust AI Engineer Internship at Amund AI in India. Active hiring opportunity on Unstop (Deadline: 2026-12-10).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-12-10T00:00:00+05:30",
+      "end_date": "2026-12-10T00:00:00+05:30",
+      "semantic_skill_gap": {
+        "method": "template",
+        "fit_percentage": "70% Core Match",
+        "gap_percentage": "30% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For Amund AI's Rust AI Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "skill_match_rate": 0.0,
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Rust+AI+Engineer+Internship+Amund+AI&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
+          "Naukri": "https://www.naukri.com/rust-ai-engineer-internship-jobs-in-india?k=Rust+AI+Engineer+Internship+Amund+AI",
+          "Indeed India": "https://in.indeed.com/jobs?q=Rust+AI+Engineer+Internship+Amund+AI&l=India&fromage=1",
+          "Foundit": "https://www.foundit.in/srp/results?query=Rust+AI+Engineer+Internship+Amund+AI&locations=India",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-rust-ai-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
+          "Shine": "https://www.shine.com/job-search/rust-ai-engineer-internship-jobs-in-india",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Rust+AI+Engineer+Internship+Amund+AI"
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=Rust+AI+Engineer+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=Rust+AI+Engineer+Internship+Amund+AI",
+          "Cutshort": "https://cutshort.io/jobs?query=Rust+AI+Engineer+Internship",
+          "Hirist": "https://www.hirist.tech/search?keyword=Rust+AI+Engineer+Internship&exp=0-2",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Rust+AI+Engineer+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/rust-ai-engineer-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=Rust+AI+Engineer+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/rust-ai-engineer-internship-internships",
+          "Apna": "https://apna.co/jobs?q=Rust+AI+Engineer+Internship"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Rust+AI+Engineer+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-rust-ai-engineer-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Rust+AI+Engineer+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=Rust+AI+Engineer+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Rust+AI+Engineer+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Amund+AI+careers"
+      }
+    },
+    {
       "role_type": "AI Engineer Intern",
       "role_category": "ML Engineering",
       "seniority": "intern",
@@ -718,7 +835,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-26T01:05:10Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 24.0284,
+      "hours_ago": 32.5349,
       "relative_time": "1 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
@@ -835,8 +952,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-25T06:44:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 42.3765,
-      "relative_time": "1 days ago",
+      "hours_ago": 50.883,
+      "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1827401",
       "direct_job_url": "https://unstop.com/internships/1827401",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Sclaria&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
@@ -948,8 +1065,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-25T04:58:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 44.1479,
-      "relative_time": "1 days ago",
+      "hours_ago": 52.6544,
+      "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1827101",
       "direct_job_url": "https://unstop.com/internships/1827101",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+TalentCV&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
@@ -1078,7 +1195,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "6",
       "posted_at": "2026-11-25T01:05:20Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 48.0257,
+      "hours_ago": 56.5322,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
       "direct_job_url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
@@ -1202,7 +1319,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T17:15:01Z",
       "posted_at_source": "published_at",
-      "hours_ago": 55.8643,
+      "hours_ago": 64.3708,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1826166",
       "direct_job_url": "https://unstop.com/internships/1826166",
@@ -1314,7 +1431,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-24T14:18:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 58.8098,
+      "hours_ago": 67.3163,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1813142",
       "direct_job_url": "https://unstop.com/internships/1813142",
@@ -1428,7 +1545,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T13:41:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 59.427,
+      "hours_ago": 67.9335,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1826454",
       "direct_job_url": "https://unstop.com/internships/1826454",
@@ -1540,7 +1657,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-24T11:36:13Z",
       "posted_at_source": "published_at",
-      "hours_ago": 61.5109,
+      "hours_ago": 70.0174,
       "relative_time": "2 days ago",
       "url": "https://unstop.com/internships/1812989",
       "direct_job_url": "https://unstop.com/internships/1812989",
@@ -1654,8 +1771,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T06:56:47Z",
       "posted_at_source": "published_at",
-      "hours_ago": 66.1682,
-      "relative_time": "2 days ago",
+      "hours_ago": 74.6747,
+      "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1824395",
       "direct_job_url": "https://unstop.com/internships/1824395",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+Internship+Druze+Analytics&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
@@ -1767,7 +1884,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-22T16:46:08Z",
       "posted_at_source": "published_at",
-      "hours_ago": 104.3457,
+      "hours_ago": 112.8522,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1823388",
       "direct_job_url": "https://unstop.com/internships/1823388",
@@ -1880,7 +1997,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T13:53:36Z",
       "posted_at_source": "published_at",
-      "hours_ago": 107.2212,
+      "hours_ago": 115.7277,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1775184",
       "direct_job_url": "https://unstop.com/internships/1775184",
@@ -2003,7 +2120,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T12:26:13Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 108.6776,
+      "hours_ago": 117.1841,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-scientist-at-jobsphere-4493185822",
@@ -2153,7 +2270,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-22T10:26:11Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 110.6782,
+      "hours_ago": 119.1847,
       "relative_time": "4 days ago",
       "url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
       "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-zetheta-algorithms-private-limited-4493185447",
@@ -2262,162 +2379,22 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
         },
         "direct_company_portal": "https://www.google.com/search?q=Zetheta+Algorithms+Private+Limited+careers"
       }
-    },
-    {
-      "role_type": "data analyst intern",
-      "role_category": "data science",
-      "seniority": "intern",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [
-        "microsoft_excel",
-        "google_sheets",
-        "sql",
-        "python",
-        "power_bi",
-        "tableau",
-        "data_cleaning",
-        "data_visualization",
-        "data_analysis",
-        "communication",
-        "analytical_skills",
-        "problem_solving"
-      ],
-      "nice_to_have": [],
-      "domain": "technology",
-      "analysis_method": "llm",
-      "analysis_cached": true,
-      "title": "Data Analyst",
-      "company": "JobSPhere",
-      "location": "India",
-      "score": 0.781,
-      "tier": 2,
-      "category": "Data Science",
-      "priority": "Primary",
-      "badge": "🥈",
-      "posted_at": "2026-11-22T05:52:21Z",
-      "posted_at_source": "relative_time",
-      "hours_ago": 115.242,
-      "relative_time": "4 days ago",
-      "url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
-      "direct_job_url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
-      "linkedin_url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
-      "naukri_url": "https://www.naukri.com/data-analyst-jobs-in-india",
-      "company_url": "https://in.linkedin.com/jobs/view/data-analyst-at-jobsphere-4493156515",
-      "source_type": "LinkedIn",
-      "source_domain": "linkedin.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": false,
-      "matched_skills": [
-        "sql",
-        "python",
-        "power_bi",
-        "communication",
-        "problem_solving"
-      ],
-      "missing_skills": [
-        "microsoft_excel",
-        "google_sheets",
-        "tableau",
-        "data_cleaning",
-        "data_visualization",
-        "data_analysis",
-        "analytical_skills"
-      ],
-      "description": "Data Analyst Company: JobSPhere Location: Remote Employment Type: Full-Time Compensation: Performance-Based, up to ₹30,000/- About the Company JobSPhere is a technology-focused organization committed to providing innovative IT and data-driven solutions. We help businesses leverag...",
-      "raw_description": "Data Analyst Company: JobSPhere Location: Remote Employment Type: Full-Time Compensation: Performance-Based, up to ₹30,000/- About the Company JobSPhere is a technology-focused organization committed to providing innovative IT and data-driven solutions. We help businesses leverage technology, analytics, and digital transformation to achieve their goals. About the Role JobSPhere is seeking a detail-oriented Data Analyst Intern to support data analysis and reporting activities. The selected candidate will work with datasets, develop meaningful visualizations, identify business trends, and transform raw data into valuable insights. Key Responsibilities Gather, organize, and clean data from multiple sources. Analyze datasets to identify trends and patterns. Develop dashboards and performance reports. Work with business data to identify improvement opportunities. Maintain data accuracy, consistency, and quality. Communicate analytical findings through reports and presentations. Support teams in making data-driven decisions. Eligibility Criteria Pursuing or holding a degree in Computer Science, Data Science, Statistics, Mathematics, or a related discipline. Basic understanding of data analysis concepts. Strong numerical, analytical, and problem-solving abilities. Willingness to learn new tools and technologies. Required Skills Proficiency in Microsoft Excel or Google Sheets. Working knowledge of SQL queries. Basic understanding of Python programming. Familiarity with Power BI or Tableau. Good analytical, communication, and organizational skills. Perks & Benefits Performance-based compensation up to ₹30,000/-. Opportunity to work on practical data analytics projects. Experience with industry-standard analytical tools. Professional learning and development. Exposure to real-world business challenges. Equal Opportunity JobSPhere is committed to providing equal opportunities to all applicants and fostering a collaborative, inclusive, and supportive work environment.",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": null,
-      "end_date": null,
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "78% Core Match",
-        "gap_percentage": "22% Skill Gap",
-        "gaps": [
-          {
-            "skill": "Causal Inference & Uplift Modeling",
-            "impact": "High Impact",
-            "category": "Experimentation",
-            "action": "Perform synthetic difference-in-differences or inverse probability weighting on a user churn dataset."
-          },
-          {
-            "skill": "A/B Testing Power Analysis & Sample Sizing",
-            "impact": "High Impact",
-            "category": "Product Analytics",
-            "action": "Simulate two-sample hypothesis testing in Python, calculating minimum detectable effect (MDE) and alpha/beta trade-offs."
-          },
-          {
-            "skill": "Advanced Feature Engineering & Imbalance",
-            "impact": "Medium Impact",
-            "category": "Modeling",
-            "action": "Implement SMOTE, Focal Loss, and Precision-Recall AUC curves for high-skew classification."
-          }
-        ],
-        "bridge_roadmap": "For JobSPhere's Data Analyst: Construct an end-to-end user behavioral experiment simulation notebook in Python & SQL with synthetic A/B test results and statistical significance testing.",
-        "interview_talk_track": "I bridge the gap between predictive modeling and business impact by designing controlled hypothesis tests and estimating counterfactual treatment effects beyond standard correlation."
-      },
-      "skill_match_rate": 0.42,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=Data+Analyst+JobSPhere&location=India&f_TPR=r86400&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/data-analyst-jobs-in-india?k=Data+Analyst+JobSPhere",
-          "Indeed India": "https://in.indeed.com/jobs?q=Data+Analyst+JobSPhere&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=Data+Analyst+JobSPhere&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-data-analyst-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/data-analyst-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=Data+Analyst+JobSPhere"
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=Data+Analyst&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=Data+Analyst+JobSPhere",
-          "Cutshort": "https://cutshort.io/jobs?query=Data+Analyst",
-          "Hirist": "https://www.hirist.tech/search?keyword=Data+Analyst&exp=0-4",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=Data+Analyst"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/data-analyst-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=Data+Analyst",
-          "LetsIntern": "https://www.letsintern.com/internships/data-analyst-internships",
-          "Apna": "https://apna.co/jobs?q=Data+Analyst"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=Data+Analyst",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-data-analyst-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=Data+Analyst",
-          "Remotive": "https://remotive.com/remote-jobs?search=Data+Analyst",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=Data+Analyst",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=JobSPhere+careers"
-      },
-      "analysis_model": "openai/gpt-oss-20b"
     }
   ],
   "stats": {
     "total_jobs_evaluated": 14,
-    "primary_matches": 12,
-    "secondary_matches": 2,
+    "primary_matches": 11,
+    "secondary_matches": 3,
     "adjacent_matches": 0,
-    "full_time_matches": 2,
-    "internship_matches": 12,
-    "last_sync": "2026-11-27T01:06:55Z"
+    "full_time_matches": 1,
+    "internship_matches": 13,
+    "last_sync": "2026-11-27T09:37:15Z"
   },
   "total_jobs": 14,
-  "last_updated": "2026-11-27T01:06:55Z",
-  "last_remotive_sync": "2026-11-27T01:04Z",
-  "last_himalayas_sync": "2026-11-27T01:04Z",
-  "last_adzuna_sync": "2026-11-27T01:04Z",
-  "last_jsearch_sync": "2026-11-27T01:04Z",
-  "last_linkedin_sync": "2026-11-27T01:04Z"
+  "last_updated": "2026-11-27T09:37:15Z",
+  "last_remotive_sync": "2026-11-27T09:36Z",
+  "last_himalayas_sync": "2026-11-27T09:36Z",
+  "last_adzuna_sync": "2026-11-27T09:36Z",
+  "last_jsearch_sync": "2026-11-27T09:36Z",
+  "last_linkedin_sync": "2026-11-27T09:36Z"
 };
