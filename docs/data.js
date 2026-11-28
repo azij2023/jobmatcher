@@ -678,6 +678,119 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
   },
   "jobs": [
     {
+      "role_type": "internship",
+      "role_category": "ml_engineering",
+      "seniority": "intern",
+      "domain": "artificial_intelligence",
+      "min_years_experience": 0,
+      "max_years_experience": null,
+      "required_skills": [],
+      "nice_to_have": [],
+      "analysis_method": "llm",
+      "analysis_model": "openai/gpt-oss-20b",
+      "analysis_cached": true,
+      "title": "AI Engineer Internship",
+      "company": "Vitrina A.I.",
+      "location": "India",
+      "score": 0.848,
+      "tier": 8,
+      "category": "ML Engineering",
+      "priority": "Secondary",
+      "badge": "8",
+      "posted_at": "2026-11-28T09:21:28Z",
+      "posted_at_source": "published_at",
+      "hours_ago": 0.2723,
+      "relative_time": "16 minutes ago",
+      "url": "https://unstop.com/internships/1830654",
+      "direct_job_url": "https://unstop.com/internships/1830654",
+      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+Vitrina+A.I.&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
+      "naukri_url": "https://www.naukri.com/ai-engineer-internship-jobs-in-india",
+      "company_url": "https://unstop.com/internships/1830654",
+      "source_type": "Unstop",
+      "source_domain": "unstop.com",
+      "company_job_verified": false,
+      "job_publisher": null,
+      "location_unverified": false,
+      "is_fresher": true,
+      "is_internship": true,
+      "matched_skills": [],
+      "missing_skills": [],
+      "description": "AI Engineer Internship at Vitrina A.I. in India. Active hiring opportunity on Unstop (Deadline: 2026-12-11).",
+      "raw_description": "AI Engineer Internship at Vitrina A.I. in India. Active hiring opportunity on Unstop (Deadline: 2026-12-11).",
+      "contact_email": null,
+      "outreach_dm": null,
+      "is_post": false,
+      "post_author": null,
+      "deadline": "2026-12-11T00:00:00+05:30",
+      "end_date": "2026-12-11T00:00:00+05:30",
+      "semantic_skill_gap": {
+        "method": "template",
+        "fit_percentage": "85% Core Match",
+        "gap_percentage": "15% Skill Gap",
+        "gaps": [
+          {
+            "skill": "FastAPI REST Serving & Latency Optimization",
+            "impact": "High Impact",
+            "category": "Model Serving",
+            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
+          },
+          {
+            "skill": "Docker Containerization & Multi-Stage Builds",
+            "impact": "High Impact",
+            "category": "DevOps / Packaging",
+            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
+          },
+          {
+            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
+            "impact": "Medium Impact",
+            "category": "MLOps",
+            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
+          }
+        ],
+        "bridge_roadmap": "For Vitrina A.I.'s AI Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
+        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
+      },
+      "skill_match_rate": 1.0,
+      "multi_source_urls": {
+        "general_india": {
+          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+Vitrina+A.I.&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
+          "Naukri": "https://www.naukri.com/ai-engineer-internship-jobs-in-india?k=AI+Engineer+Internship+Vitrina+A.I.",
+          "Indeed India": "https://in.indeed.com/jobs?q=AI+Engineer+Internship+Vitrina+A.I.&l=India&fromage=1",
+          "Foundit": "https://www.foundit.in/srp/results?query=AI+Engineer+Internship+Vitrina+A.I.&locations=India",
+          "Glassdoor": "https://www.glassdoor.co.in/Job/india-ai-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
+          "Shine": "https://www.shine.com/job-search/ai-engineer-internship-jobs-in-india",
+          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=AI+Engineer+Internship+Vitrina+A.I."
+        },
+        "tech_startup": {
+          "Wellfound": "https://wellfound.com/jobs?role=AI+Engineer+Internship&location=India",
+          "Instahyre": "https://www.instahyre.com/jobs-search?search=AI+Engineer+Internship+Vitrina+A.I.",
+          "Cutshort": "https://cutshort.io/jobs?query=AI+Engineer+Internship",
+          "Hirist": "https://www.hirist.tech/search?keyword=AI+Engineer+Internship&exp=0-2",
+          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=AI+Engineer+Internship"
+        },
+        "internships_freshers": {
+          "Internshala": "https://internshala.com/internships/ai-engineer-internship-internship/",
+          "Unstop": "https://unstop.com/internships?keyword=AI+Engineer+Internship",
+          "LetsIntern": "https://www.letsintern.com/internships/ai-engineer-internship-internships",
+          "Apna": "https://apna.co/jobs?q=AI+Engineer+Internship"
+        },
+        "data_analytics": {
+          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=AI+Engineer+Internship",
+          "Kaggle Jobs": "https://www.kaggle.com/jobs",
+          "AIM Jobs": "https://analyticsindiamag.com/careers/",
+          "Data Elixir": "https://dataelixir.com/jobs"
+        },
+        "remote_global": {
+          "RemoteOK": "https://remoteok.com/remote-ai-engineer-internship-jobs",
+          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=AI+Engineer+Internship",
+          "Remotive": "https://remotive.com/remote-jobs?search=AI+Engineer+Internship",
+          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=AI+Engineer+Internship",
+          "Otta": "https://app.otta.com/jobs"
+        },
+        "direct_company_portal": "https://www.google.com/search?q=Vitrina+A.I.+careers"
+      }
+    },
+    {
       "role_type": "ai_product_evaluator",
       "role_category": "product",
       "seniority": "intern",
@@ -698,8 +811,8 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "5",
       "posted_at": "2026-11-28T08:09:52Z",
       "posted_at_source": "published_at",
-      "hours_ago": 0.047,
-      "relative_time": "2 minutes ago",
+      "hours_ago": 1.4656,
+      "relative_time": "1 hours ago",
       "url": "https://unstop.com/internships/1812989",
       "direct_job_url": "https://unstop.com/internships/1812989",
       "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Product+Evaluator+Internship+Oxyzen&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
@@ -791,119 +904,6 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "analysis_model": "openai/gpt-oss-20b"
     },
     {
-      "role_type": "internship",
-      "role_category": "ml_engineering",
-      "seniority": "intern",
-      "domain": "artificial_intelligence",
-      "min_years_experience": 0,
-      "max_years_experience": null,
-      "required_skills": [],
-      "nice_to_have": [],
-      "analysis_method": "llm",
-      "analysis_model": "openai/gpt-oss-20b",
-      "analysis_cached": true,
-      "title": "AI Engineer Internship",
-      "company": "Vitrina A.I.",
-      "location": "India",
-      "score": 0.848,
-      "tier": 8,
-      "category": "ML Engineering",
-      "priority": "Secondary",
-      "badge": "8",
-      "posted_at": "2026-11-28T07:09:06Z",
-      "posted_at_source": "published_at",
-      "hours_ago": 1.0598,
-      "relative_time": "1 hours ago",
-      "url": "https://unstop.com/internships/1830654",
-      "direct_job_url": "https://unstop.com/internships/1830654",
-      "linkedin_url": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+Vitrina+A.I.&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
-      "naukri_url": "https://www.naukri.com/ai-engineer-internship-jobs-in-india",
-      "company_url": "https://unstop.com/internships/1830654",
-      "source_type": "Unstop",
-      "source_domain": "unstop.com",
-      "company_job_verified": false,
-      "job_publisher": null,
-      "location_unverified": false,
-      "is_fresher": true,
-      "is_internship": true,
-      "matched_skills": [],
-      "missing_skills": [],
-      "description": "AI Engineer Internship at Vitrina A.I. in India. Active hiring opportunity on Unstop (Deadline: 2026-12-11).",
-      "raw_description": "AI Engineer Internship at Vitrina A.I. in India. Active hiring opportunity on Unstop (Deadline: 2026-12-11).",
-      "contact_email": null,
-      "outreach_dm": null,
-      "is_post": false,
-      "post_author": null,
-      "deadline": "2026-12-11T00:00:00+05:30",
-      "end_date": "2026-12-11T00:00:00+05:30",
-      "semantic_skill_gap": {
-        "method": "template",
-        "fit_percentage": "85% Core Match",
-        "gap_percentage": "15% Skill Gap",
-        "gaps": [
-          {
-            "skill": "FastAPI REST Serving & Latency Optimization",
-            "impact": "High Impact",
-            "category": "Model Serving",
-            "action": "Wrap a scikit-learn or ONNX model in an async FastAPI service with request validation & batching."
-          },
-          {
-            "skill": "Docker Containerization & Multi-Stage Builds",
-            "impact": "High Impact",
-            "category": "DevOps / Packaging",
-            "action": "Write an optimized Dockerfile with minimal image size and non-root security principles."
-          },
-          {
-            "skill": "Model Registry & Drift Monitoring (MLflow / Evidently)",
-            "impact": "Medium Impact",
-            "category": "MLOps",
-            "action": "Track model artifacts in MLflow and log data drift metrics on incoming inference batches."
-          }
-        ],
-        "bridge_roadmap": "For Vitrina A.I.'s AI Engineer Internship: Deploy a containerized model inference microservice on Render or AWS ECS with a health check endpoint, Swagger docs, and GitHub Actions CI/CD.",
-        "interview_talk_track": "I focus on the entire lifecycle of applied models, building production-ready FastAPI endpoints with Docker, automated schema validation, and health monitoring."
-      },
-      "skill_match_rate": 1.0,
-      "multi_source_urls": {
-        "general_india": {
-          "LinkedIn": "https://www.linkedin.com/jobs/search/?keywords=AI+Engineer+Internship+Vitrina+A.I.&location=India&f_TPR=r432000&f_E=1%2C2%2C3",
-          "Naukri": "https://www.naukri.com/ai-engineer-internship-jobs-in-india?k=AI+Engineer+Internship+Vitrina+A.I.",
-          "Indeed India": "https://in.indeed.com/jobs?q=AI+Engineer+Internship+Vitrina+A.I.&l=India&fromage=1",
-          "Foundit": "https://www.foundit.in/srp/results?query=AI+Engineer+Internship+Vitrina+A.I.&locations=India",
-          "Glassdoor": "https://www.glassdoor.co.in/Job/india-ai-engineer-internship-jobs-SRCH_IL.0,5_IN115.htm?fromAge=1",
-          "Shine": "https://www.shine.com/job-search/ai-engineer-internship-jobs-in-india",
-          "TimesJobs": "https://www.timesjobs.com/candidate/job-search.html?searchType=personalizedSearch&from=submit&txtKeywords=AI+Engineer+Internship+Vitrina+A.I."
-        },
-        "tech_startup": {
-          "Wellfound": "https://wellfound.com/jobs?role=AI+Engineer+Internship&location=India",
-          "Instahyre": "https://www.instahyre.com/jobs-search?search=AI+Engineer+Internship+Vitrina+A.I.",
-          "Cutshort": "https://cutshort.io/jobs?query=AI+Engineer+Internship",
-          "Hirist": "https://www.hirist.tech/search?keyword=AI+Engineer+Internship&exp=0-2",
-          "YC Work at a Startup": "https://www.workatastartup.com/jobs?query=AI+Engineer+Internship"
-        },
-        "internships_freshers": {
-          "Internshala": "https://internshala.com/internships/ai-engineer-internship-internship/",
-          "Unstop": "https://unstop.com/internships?keyword=AI+Engineer+Internship",
-          "LetsIntern": "https://www.letsintern.com/internships/ai-engineer-internship-internships",
-          "Apna": "https://apna.co/jobs?q=AI+Engineer+Internship"
-        },
-        "data_analytics": {
-          "Analytics Vidhya": "https://jobs.analyticsvidhya.com/jobs?search=AI+Engineer+Internship",
-          "Kaggle Jobs": "https://www.kaggle.com/jobs",
-          "AIM Jobs": "https://analyticsindiamag.com/careers/",
-          "Data Elixir": "https://dataelixir.com/jobs"
-        },
-        "remote_global": {
-          "RemoteOK": "https://remoteok.com/remote-ai-engineer-internship-jobs",
-          "We Work Remotely": "https://weworkremotely.com/remote-jobs/search?term=AI+Engineer+Internship",
-          "Remotive": "https://remotive.com/remote-jobs?search=AI+Engineer+Internship",
-          "Working Nomads": "https://www.workingnomads.com/jobs?category=data&q=AI+Engineer+Internship",
-          "Otta": "https://app.otta.com/jobs"
-        },
-        "direct_company_portal": "https://www.google.com/search?q=Vitrina+A.I.+careers"
-      }
-    },
-    {
       "role_type": "ai engineer internship",
       "role_category": "ml_engineering",
       "seniority": "intern",
@@ -927,7 +927,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-26T18:31:01Z",
       "posted_at_source": "published_at",
-      "hours_ago": 37.6945,
+      "hours_ago": 39.1131,
       "relative_time": "1 days ago",
       "url": "https://unstop.com/internships/1829641",
       "direct_job_url": "https://unstop.com/internships/1829641",
@@ -1061,7 +1061,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "8",
       "posted_at": "2026-11-26T01:05:10Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 55.1253,
+      "hours_ago": 56.5439,
       "relative_time": "2 days ago",
       "url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
       "direct_job_url": "https://in.linkedin.com/jobs/view/ai-engineer-intern-at-recruitbots-ai-4494911060",
@@ -1178,7 +1178,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-25T06:44:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 73.4734,
+      "hours_ago": 74.892,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1827401",
       "direct_job_url": "https://unstop.com/internships/1827401",
@@ -1291,7 +1291,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-25T04:58:00Z",
       "posted_at_source": "published_at",
-      "hours_ago": 75.2448,
+      "hours_ago": 76.6634,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1827101",
       "direct_job_url": "https://unstop.com/internships/1827101",
@@ -1421,7 +1421,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "6",
       "posted_at": "2026-11-25T01:05:20Z",
       "posted_at_source": "relative_time",
-      "hours_ago": 79.1226,
+      "hours_ago": 80.5412,
       "relative_time": "3 days ago",
       "url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
       "direct_job_url": "https://in.linkedin.com/jobs/view/growth-and-strategy-analyst-at-sisir-radar-private-limited-4493016301",
@@ -1545,7 +1545,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T17:15:01Z",
       "posted_at_source": "published_at",
-      "hours_ago": 86.9612,
+      "hours_ago": 88.3798,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1826166",
       "direct_job_url": "https://unstop.com/internships/1826166",
@@ -1657,7 +1657,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥇",
       "posted_at": "2026-11-24T14:18:17Z",
       "posted_at_source": "published_at",
-      "hours_ago": 89.9067,
+      "hours_ago": 91.3253,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1813142",
       "direct_job_url": "https://unstop.com/internships/1813142",
@@ -1771,7 +1771,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T13:41:15Z",
       "posted_at_source": "published_at",
-      "hours_ago": 90.5239,
+      "hours_ago": 91.9426,
       "relative_time": "3 days ago",
       "url": "https://unstop.com/internships/1826454",
       "direct_job_url": "https://unstop.com/internships/1826454",
@@ -1884,7 +1884,7 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
       "badge": "🥈",
       "posted_at": "2026-11-24T06:56:47Z",
       "posted_at_source": "published_at",
-      "hours_ago": 97.2651,
+      "hours_ago": 98.6837,
       "relative_time": "4 days ago",
       "url": "https://unstop.com/internships/1824395",
       "direct_job_url": "https://unstop.com/internships/1824395",
@@ -1983,13 +1983,13 @@ window.JOB_MATCHER_DATA = window.JOB_DATA = {
     "adjacent_matches": 0,
     "full_time_matches": 1,
     "internship_matches": 10,
-    "last_sync": "2026-11-28T08:12:41Z"
+    "last_sync": "2026-11-28T09:37:48Z"
   },
   "total_jobs": 11,
-  "last_updated": "2026-11-28T08:12:41Z",
-  "last_remotive_sync": "2026-11-28T08:12Z",
-  "last_himalayas_sync": "2026-11-28T08:12Z",
-  "last_adzuna_sync": "2026-11-28T08:12Z",
-  "last_jsearch_sync": "2026-11-28T08:12Z",
-  "last_linkedin_sync": "2026-11-28T08:12Z"
+  "last_updated": "2026-11-28T09:37:48Z",
+  "last_remotive_sync": "2026-11-28T09:37Z",
+  "last_himalayas_sync": "2026-11-28T09:37Z",
+  "last_adzuna_sync": "2026-11-28T09:37Z",
+  "last_jsearch_sync": "2026-11-28T09:37Z",
+  "last_linkedin_sync": "2026-11-28T09:37Z"
 };
